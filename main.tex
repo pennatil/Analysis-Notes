@@ -1,0 +1,64 @@
+\documentclass[a4paper]{book}
+
+\input{Packages.tex}
+
+%Old Document setup { 
+%\begin{document}
+%\pagenumbering{Roman}% Remove page numbers (and reset to 1)
+%\clearpage
+%\pagestyle{fancy}
+%\cfoot{\thepage}
+%\renewcommand{\headrulewidth}{0pt}
+%\fancyhead[LE,RO]{}
+%\fancyhead[LO,RE]{\slshape \leftmark}
+%\tableofcontents
+
+%\clearpage
+%\pagenumbering{arabic}
+%}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{\slshape \leftmark}
+\fancyfoot[C]{\Roman{chapter}\,--\,\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\makeatletter
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \if@mainmatter
+    \fancyfoot[C]{\Roman{chapter}\,--\,\thepage}
+  \else
+    \fancyfoot[C]{\thepage}
+  \fi
+  \renewcommand{\headrulewidth}{0pt}
+}
+\makeatother
+
+\begin{document}
+
+\frontmatter
+%\tableofcontents
+
+\mainmatter
+
+\input{Chapter_1.tex}
+\clearpage
+\pagenumbering{arabic}
+\input{Chapter_2.tex}
+\clearpage
+\pagenumbering{arabic}
+\input{Chapter_3.tex}
+\clearpage
+\pagenumbering{arabic}
+\input{Chapter_4.tex}
+\clearpage
+\pagenumbering{arabic}
+\input{Chapter_5.tex}
+\clearpage
+\pagenumbering{arabic}
+\input{Chapter_6.tex}
+
+\end{document}

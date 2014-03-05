@@ -1,0 +1,96 @@
+\chapter{Reele Zahlen, Euklidische Räume und Komplexe Zahlen}
+\section{Elementare Zahlen}
+\todo{insert table for different Sets!! page 22 top}
+Viele gleichungen haben keine Lösung in $\mathbb{Q}$.
+\subsubsection*{Satz 2.1}
+Sei $p\in\mathbb{N}$ eine Primzahl. Dann hat $x^2=p$ keine Lösung in $\mathbb{Q}$
+\subsubsection*{Beweis}
+Zum Erinnerung zwei Natürlichen Zahlen $a$ und $b$ sind teilfrmd (oder relativ prim) wenn es keine Natürliche Zahl ausser der Eins gibt, die beiden Zahlen teilt. $$\left( (a,b)=1\right)\rightarrow\text{ grösste Gemeinsame Teiler}$$
+
+\subsubsection*{Indirekter Beweis}
+Wir nehmen an: es gibt $x=\frac{a}{b}\in \mathbb{Q}$ mit $x^2 =p$, wobei $a,b$ teilfremd und $\geq 1$ sind. Dann gilt $$a^2=pb^2$$ woraus folgt, dass $p$ $a$ teilt also ist $a=pk$, $k\in\mathbb{N}$ und somit $$a^2=p^2k^2=pb^2\Rightarrow pk^2=b^2$$ woraus folgt, dass $p$ $b$ teilt.
+
+\subsection{Die Reelen Zahlen}
+Wir werden jetzt das System von Axiomen beschreiben das die Menge der Reelen Zahlen ''eindeutig'' characterisiert. \\
+
+Die Menge $\mathbb{R}$ der Reelen Zahlen ist mit zwei Verknüpfungen ''$+$'' (Addition) und ''$\cdot$'' (Multiplikation) versehen sowie mit einer Ordnungsrelation $\leq$. Die axiome werden wie folgt gruppiert:
+\begin{enumerate}
+\item \textbf{$\left( \mathbb{R},+,\cdot\right)$ ist ein Koerper}\\
+Es gibt 2 Operationen (Zweistellige Verknüpfungen)
+\begin{itemize}
+\item $+:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}$\\
+$(a,b)\rightarrow a+b$
+\item $\times:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}$\\
+$(a,b)\rightarrow a\cdot b$
+\end{itemize}
+und 2 ausgezeichnete Element 0 und 1 in $\mathbb{R}$ die folgenden Eigenschaften haben:\\
+\begin{center}
+\begin{tabular}{l r l r l}
+Komutivität & A1) & $x+y=y+x$ & M1) & $x\cdot y=y\cdot x$ \\ 
+Assoziativität & A2) & $(x+y)+z=x+(y+z)$ & M2) & $(xy)z=x(yz)$ \\
+Neutrales Element & A3) & $x+0=x=0+x$ & M3) & $x\cdot 1=1\cdot x$\\
+Inverse Element & A4) & $\forall x\in\mathbb{R}, \exists y\in\mathbb{R}$ & M4) & $\forall x\in\mathbb{R}, x\not =0$ \\
+~&~& mit $x+y=0=y+x$ & ~& $ \exists y\in\mathbb{R}$ mit $xy=1=yx$
+\end{tabular}
+\end{center}
+\todo{resize table}
+und Die Multiplikation ist verträglich it der Addition im Sinne des Distributivitäts-Gesetz (D)$$\forall x,y,z\in\mathbb{R}:x(y+z)=xy+xz$$
+
+\begin{itemize}
+\item $( \mathbb{R},+)$ mit A1$\rightarrow$A4 ist eine Abelische Gruppe bezüglich der Addition
+\item  $( \mathbb{R},+,\cdot)$ mit A1$\rightarrow$A4, M1$\rightarrow$M4 und D ist ein Zahlkörper. 
+\end{itemize}
+
+\subsubsection*{Bemerkung 2.2}
+Eine Menge $G$ versetzen mit Verknüpfung $+$ und Neutrales Element $O$ die den obigen Eigenschaften A2$\rightarrow$A4 genügen heisst Gruppe.\\
+
+Eine enge $K$ versetzen mit Verknüpfung $+,\cdot$ und Elementen $0\not =1$ die den obigen Eigenschaften 
+A1$\rightarrow$A4, M1$\rightarrow$M4, D genügen heisst Körper. 
+
+\subsubsection*{Folgerung 2.3}
+Seien $a,b,c,d\in\mathbb{R}$ 
+\begin{enumerate}[i)]
+\item $a+b=a+c\Rightarrow b=c$ und $O$ is eindeutig, d.h. Falls $z\in\mathbb{R}$ der Eigenschaften $a+z=a$ $\forall a\in\mathbb{R}$ genügt, so folgt $z=0$
+\item $\forall a,b\mathbb{R}$, $\exists !$ (eindeutig bestimmtes) $x\in\mathbb{R}:a+x=b$. Wir schreiben $x=b-a$ und $0-a=-a$ ist das additive Inverse zu $a$
+\item $b-a=b+(-a)$
+\item $-(-a)=a$
+\item Falls $ab=ac$ und $a\not = 0\Rightarrow b=c$ und 1 ist eindeutig, d.h. falls $x\in\mathbb{R}$ der Eigenschaften $ax=a$ $\forall a\in\mathbb{R}$ genügt so folgt $x=1$
+\item $\forall a,b\in\mathbb{R}$, $a\not =0$, $\exists !x\in\mathbb{R}:ax=b$. Wir schreiben $x=\frac{b}{a}$ und $\frac{1}/{a}=a^{-1}$ ist das Multiplikativ Inverse zu $a$.
+\item Falls $a\not =0\Rightarrow {\left(a^{-1}\right)}^{-1}=a$ 
+\item $\forall a\in\mathbb{R}$, $a\cdot 0=0$
+\item Falls $ab=0$ dann folgt $a=0$ oder $b=0$
+\end{enumerate}
+\subsubsection*{Beweis 2.3}
+\begin{enumerate}[i)]
+\item Sei $a+b=a+c$\\ A4 $\Rightarrow\exists y\in\mathbb{R}:a+y=0$\\$a+b=a+c\Rightarrow y+(a+b)=y+(a+c)$\\$\Rightarrow (y+a)+b=(y+a)+c$\\$\Rightarrow 0+b=0+c \Rightarrow b=c$ \todo{add rules to top of arrows, page 26 top}\\
+Nehmen wir an, dass es $0'\in\mathbb{R}$ gibt so dass $x+0'=x$, $\forall x\in\mathbb{R}$, d.h. es gibt eine zweite neutrale Element für $+$.\\
+
+\noindent Dann $0+0'=0$ aber auch A3 $\Rightarrow 0+0=0\Rightarrow 0+0'=0+0\Rightarrow 0=0'$
+\item Seien $a,b\in\mathbb{R}$, und sei $y\in\mathbb{R}$ mit $a+y=0$. Definieren wir $x:=y+b\Rightarrow a+x=a+(y+b)=(a+y)+b=0+b=b$\\
+$\Rightarrow \exists$ mindestens eine Lösung der Gleichung $a+x=b$. Von i) folgt dass $x$ eindeutig bestimmt ist $a+x=b=a+x' \Rightarrow x=x'$
+\item Seien $x=b-a$, $y=b+(-a)$. Wir Wollen beweisen dass $x=y$.\\
+
+\noindent Aus i) wissen wir dass $b-a$ eine Lösung von $a+x=b$ $$y+a=\left( b+(-a)\right)+a=b+\left( (-a)+a\right)=b+0=0$$
+$\Rightarrow y$ ist auch eine Lösung.\\
+Weil die Lösung von $a+x=b$ ist eindeutig bestimmt, ist $y=x$
+\item
+\item
+\item
+\item
+\todo{ASK FOR BEWEISE; PAGE 27 TOP}
+\item $\forall a\in\mathbb{R}$, $a\cdot 0=0$\\
+$a\cdot 0=a(0+0)=a\cdot 0+a\cdot 0\Rightarrow a\cdot 0=0$
+\item $ab=0\Rightarrow a=0$ oder $b=0$\\
+Wir nehmen an: $a\not=0$ mit \todo{?multipli? page 27 middle to top} Inversen $a^{-1}$, ( $a^{-1}$ existiert mittels M4). So folgt $b=1\cdot b=\left( a^{-1}\cdot a\right)b=a^{-1}(a\cdot b)=a^{-1}\cdot 0=0$
+\end{enumerate}
+\item Ordnungsaxiome $\leq$\\
+Auf $\mathbb{R}$ gibt es eine Relation, $\leq$, genanten Ordnung, die folgenden Eigenschaften genügt
+\begin{enumerate}
+\item Reflexität: $\forall x\in\mathbb{R}$, $x\leq x$
+\item Transitivität: $\forall x,y,z\in\mathbb{R}$: $x\leq y\land y\leq z\Rightarrow x\leq z$
+\item Identivität: $\forall x,y\in\mathbb{R}$, $(x\leq y)$ und $(y\leq x)\Rightarrow x=y$
+\item Die Ordnung ist total: $\forall x,y\in\mathbb{R}$ gilt entweder $x\leq y$ oder $y\leq x$ 
+\end{enumerate}
+
+\end{enumerate}
+ 
