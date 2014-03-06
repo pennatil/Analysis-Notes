@@ -2,7 +2,7 @@
 %\todo{Remove COmment!!!!}
 %\begin{comment}
 
-\begin{enumerate}[I)]
+\begin{enumerate}[\indent I)]
 \item \begin{enumerate}[a)]
 \item Gegeben sei eine stetige Funktion $f : \lbrack a,b\rbrack \rightarrow \mathbb{R}$. Gesucht ist eine differenzierbare Funktion $F: \lbrack a,b\rbrack \rightarrow \mathbb{R}$ mit $$F'(t)=f(t), \forall t \in \lbrack a,b \rbrack$$
 \item Für Naturwissenschaft und technik ist die Folgende Verallgemeinung von a) wichtig:\\
@@ -211,7 +211,7 @@ Die Summe $$U(f,P):=\sum\limits_{i = 1}^n {(\mathop {{\text{Inf }}f}\limits_{[{x
 
 \subsubsection*{Bemerkung 6.2}
 Aus den Definitionen folgt direkt
-\begin{enumerate}[a)]
+\begin{enumerate}[\indent a)]
 \item Für eine feste Zerlegung $P$ gilt stets $U(f,P) \leq S(f,P,\xi) \leq O(f,P)$
 \item Für zwei Partitionen $P,Q \in P(I)$ gilt die ungleichung $P\subset Q \Rightarrow U(f,P) \leq U(f,Q) \leq O(f,Q)\leq O(f,P)$.
 \end{enumerate}
@@ -258,23 +258,23 @@ Ebenso beweist man $U(f,Q)\geq U(f,P)$. Damit ist b) für den Fall beweisen, das
 
 \subsubsection*{Beweis}
 Aus $$P\subset Q \Rightarrow U(f,P) \leq U(f,Q) \leq O(f,Q) \leq O(f,P)$$ folgt, dass die Zahl $O(f,Q)$ für jede Partition $Q\in P(I)$ eine obere Schranke für die Menge $\{ U(f,P)\mid P\in P(I)\}$ ist. Also folgt aus der Definition des Supremums als kleinste obere Schranke, das $\mathop {\sup {\text{ }}U}\limits_{P \in P(I)} (f,P) \le \mathop O(f,Q)$ ist. \\
-
+\newpage
 Diese Ungleichung gilt für jede Partition $Q\in P(I)$. Das heisst wiederum, dass die Zahl $\mathop {\sup {\text{ }}U}\limits_{P \in P(I)} (f,P)$ eine untere schranke füt die Menge $\{ O(f,Q)\mid Q \in P(I)\} $ ist.\\
 
 Also folgt aus der Definition der Infimum als grösste untere Schranke, dass die Gleichung $\mathop {\sup U}\limits_{P \in P(I)} (f,P) \le \mathop {\inf O}\limits_{Q \in P(I)} (f,Q)$ ist. Damit Lemma 6.3 ist bewiesen.
 \begin{framed}
 \centerline{\textbf{Definition 6.4}}
-\begin{enumerate}[1)]
+\begin{enumerate}[\indent 1)]
 \item Für beschränktes $f=\lbrack a,b \rbrack\rightarrow \mathbb{R}$ bezeichnen 
 $$\int\limits_{\underline{a}}^b {fdx = \sup \{ U(f,P):P \in P(I)\} }$$
-$$\int\limits_{a}^{\underline{b}} {fdx = \inf \{ O(f,P):P \in P(I)\} }$$
+$$\int\limits_{a}^{\overline{b}} {fdx = \inf \{ O(f,P):P \in P(I)\} }$$
 das Untere und Obere Integral von $f$.
-\item Ein solches $f$ heisst über $\lbrack a,b\rbrack$ \underline{Riemann - Integrabel} falls $$\int\limits_{\underline{a}}^b {fdx}  = \int\limits_a^{\underline{b}} {fdx} $$ In diesem Fall heisst $A = \int\limits_a^b {fdx} $ das \underline{Riemann Integral von $f$} über den Interval $\lbrack a,b\rbrack$
+\item Ein solches $f$ heisst über $\lbrack a,b\rbrack$ \underline{Riemann - Integrabel} falls $$\int\limits_{\underline{a}}^b {fdx}  = \int\limits_a^{\overline{b}} {fdx} $$ In diesem Fall heisst $A = \int\limits_a^b {fdx} $ das \underline{Riemann Integral von $f$} über den Interval $\lbrack a,b\rbrack$
 \end{enumerate}
 \end{framed}
 
 \subsubsection*{Beispiel 6.5}
-\begin{enumerate}[1)]
+\begin{enumerate}[\indent 1)]
 \item Sei $c\in \mathbb{R}$, $f:I\rightarrow \mathbb{R}$ die Konstante Funktion mit dem wert $c$, dass heisst $f(x)=x, \forall x\in I$. Dann gilt $$U(f,P)=O(f,P)=(b-a)c, \forall P\in P(I)$$ $\Rightarrow$ $f$ ist Riemann Integrierbar und $$\int\limits_a^b {fdx}  = \int\limits_a^b {cdx = c(b - a)} $$ In diesem einfachen Fall stimmt als unsere Definition mit der Interpretation des Flächeninhalts als Breite mal Höhe überein. Man beachte, dass die Konstante $c$ auch negative sein darf. 
 \item $f(x) = \left\{ {\begin{array}{*{20}{c}}
 {0{\text{ für }}x \ne {x_0}}\\
@@ -331,7 +331,7 @@ Sei $f:I\rightarrow\mathbb{R}$ eine beschränkte Funktion. Dann sind folgende Au
 Sei $f$ Riemann integrierbar, $A: = \int\limits_a^b {f(x)dx = \sup U(f,P) = \inf O(f,P)}$\\
 Nach definition von sup und inf folgt dass zwei Partitionen $P_1,P_2\in P(I)$ existieren, so dass 
 
-\begin{enumerate}[(i)]
+\begin{enumerate}[\indent $(i)$]
 \item $A-\frac{\varepsilon}{2}<U(f,P_1)$
 \item $O(f,P_2)<A+\frac{\varepsilon}{2}$
 \item $U(f,P_1) \leq U(f,Q) < O(f,Q) \leq O(f,P_2)$ 
@@ -347,8 +347,8 @@ $$(i),(ii),(iii) \Rightarrow A-\frac{\varepsilon}{2}<U(f,Q)\leq O(f,Q)<A+\frac{\
 $$\Rightarrow O(f,Q)-U(f,Q) < \varepsilon$$\\
 
 \noindent((b)$\Rightarrow$(a))\\
-Für alle $P\in P(I)$ $$0 \le \int\limits_a^{\underline{b}} {f(x)dx - \int\limits_{\underline{a}}^b {f(x)dx \le O(f,P) - U(f,P)} } $$ $$\inf O(f,P) - \sup U(f,P)$$
-Aus (b) folgt das $\forall\varepsilon>0$ $$0 < \int\limits_a^{\underline{b}} {f(x)dx - \int\limits_{\underline{a}}^b {f(x)dx < \varepsilon } } \Rightarrow \int\limits_a^{\underline{b}} {f(x)dx = \int\limits_{\underline{a}}^b {f(x)dx} } $$ $\Rightarrow f$ ist integrierbar.
+Für alle $P\in P(I)$ \[0 \le \underbrace {\int\limits_{\underline{a}}^b {f(x)dx} }_{\inf O(f,P)} - \underbrace {\int\limits_a^{\overline{b}} {f(x)dx} }_{\sup U(f,P)} \le O(f,P) - U(f,P)\]
+Aus (b) folgt das $\forall\varepsilon>0$ $$0 < \int\limits_a^{\overline{b}} {f(x)dx - \int\limits_{\underline{a}}^b {f(x)dx < \varepsilon } } \Rightarrow \int\limits_a^{\overline{b}} {f(x)dx = \int\limits_{\underline{a}}^b {f(x)dx} } $$ $\Rightarrow f$ ist integrierbar.
 
 \subsubsection*{Satz 6.7}
 \begin{enumerate}
@@ -364,12 +364,12 @@ Somit ist $f$ nach Riemannsche Kriterium integrierbar.
 
 \item Sei $f$ monoton wachsend, $P\in P(I)$ eine uniforme Partition mit $$x_i = a+\left(\frac{b-a}{n}\right)i, 0\leq i \leq n$$
 $$O(f,P) - U(f,P) = \sum\limits_{i = 0}^{n - 1} {(f({x_{i + 1}}) - f({x_i}))({x_{i + 1}} - {x_i})} $$$$ = \frac{{b - a}}{n}\sum\limits_{i = 0}^{n - 1} {(f({x_{i + 1}}) - f({x_i}))} $$ $$ = \frac{{b - a}}{n}(f(b) - f(a)) < \varepsilon $$
-Für jede $\varepsilon>0$, haben wir $\frac{{(b - a)(f(b) - f(a))}}{n} < \varepsilon$. Nach dem Riemannschem Kriterium ist $f$ Integrierbar. (Mon. fallend ist analog). 
+Für jede $\varepsilon>0$, haben wir $\frac{{(b - a)(f(b) - f(a))}}{n} < \varepsilon$. Nach dem Riemannschem Kriterium ist $f$ Integrierbar. (Monoton fallend ist analog). 
 \end{enumerate}
 
 \subsubsection*{Satz 6.8 (Riemannsche Summe)}
 Sei $f:I\rightarrow \mathbb{R}$ eine beschränkte Funktion. Folgende Aussagen sind äquivalent.
-\begin{enumerate}[I)]
+\begin{enumerate}[\indent I)]
 \item $f$ ist Riemann Integrierbar und $A: = \int\limits_a^b {f(x)dx} $
 \item Für jedes $\varepsilon>0$, existiert eine Zahl $\xi>0$, so dass für jede Partition $P_i=\{x_0,x_1,\dots,x_N\}$ von $I$ und alle $\xi_i,\dots,\xi_N \in \mathbb{R}$ gilt $$\mathop {\delta (P) < \delta }\limits_{{x_{k - 1}} \le {\xi _k} \le {x_k},\forall k}  \Rightarrow \left| {A - \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} } \right| < \varepsilon $$
 \end{enumerate}
@@ -490,7 +490,7 @@ $$M^{''}_{k}\left( f\right) =\sup _{I_k\in P''}f$$
 \subsubsection*{Satz 6.12}
 Seien $a\leq b\leq c$. Die funktion $f:\lbrack a,c\rbrack\rightarrow\mathbb{R}$ ist genau dann integrierbar falls beide Einschrankungen ${\left. f \right|_{[a,b]}}$ und ${\left. f \right|_{[b,c]}}$ integrierbar sind. In diesem Fall gilt \[\int\limits_a^c {f(x)dx = \int\limits_a^b {f(x)dx + \int\limits_b^c {f(x)dx} } } \]
 \subsubsection*{Konvention 6.13}
-\begin{enumerate}[1)]
+\begin{enumerate}[\indent 1)]
 \item Sei $f$ integrierbar auf einem interval $I$. Für $a\leq b$ in $I$ definiert man \[\int\limits_b^a {f(x)dx =  - \int\limits_a^b {f(x)dx} } \]
 Mit diesem Konvention gelten alle bisherigen Eigenschaften. z.B. \[\forall a,b,c \in I:\int\limits_a^c f  = \int\limits_a^b f  + \int\limits_b^c f \]
 \item \[\int\limits_a^a {f(x)dx = 0} \]
@@ -555,7 +555,7 @@ Wir setzen
 Wegen Satz 6.10
 \[m(b - a) \le \int\limits_a^b {f(x)dx \le M(b - a)} \]
 \[f({x_ - }) = m \le \frac{1}{{b - a}}\int\limits_a^b {f(x)dx \le M = f({x_ + })} \]
-Also $\frac{1}{{b - a}}\int\limits_a^b {f(x)dx \le M} $ für ein $M\in\lbrack m,M\rbrack$. Da $f$ stetig ist, wegen Zwischenwertsatz gibt es $\xi\in\lbrack a,b\rbrack$ mit $f(\xi ) = \frac{1}{{b - a}}\int\limits_a^b {f(x)dx} $. Nun kommt die erste Hauptsatz der Diff- und Differentialrechnung.\\
+Also $\frac{1}{{b - a}}\int\limits_a^b {f(x)dx \le M} $ für ein $M\in\lbrack m,M\rbrack$. Da $f$ stetig ist, wegen Zwischenwertsatz gibt es $\xi\in\lbrack a,b\rbrack$ mit $f(\xi ) = \frac{1}{{b - a}}\int\limits_a^b {f(x)dx} $. Nun kommt die erste Hauptsatz der Diff- und Integralrechnung.\\
 
 \subsubsection*{Satz 6.15 (Hauptsatz A)}
 Sei $f:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ eine stetige Funktion. Definiere für jeder $x\in\lbrack a,b\rbrack$ \[F(x): = \int\limits_x^b {f(t)dt} \]
@@ -575,13 +575,13 @@ Folgender Begriff ist dann naheliegend. \\
 
 \subsubsection*{Satz 6.17}
 Seien $I\subset \mathbb{R}$ ein beliebiges Interval und $F:I\rightarrow\mathbb{R}$ eine Stammfunktion von $f:I\rightarrow\mathbb{R}$. Dann gelten:
-\begin{enumerate}[(a)]
+\begin{enumerate}[\indent (a)]
 \item Die Funktion $F+c$ ist für jede Konstante $c\in\mathbb{R}$ ebenfalls eine Stammfunktion von $f$.
 \item Ist $G:I\rightarrow\mathbb{R}$ eine weitere Stammfunktion von $f$, so gibt es eine Konstante $c\in\mathbb{R}$ mit $G=F+c$
 \end{enumerate}
 
 \subsubsection*{Beweis}
-\begin{enumerate}[(a)]
+\begin{enumerate}[\indent (a)]
 \item Offenbar ist mit $F$ auch $F+c$ differenzierbar und es gilt $(F+c)'=F'=f$
 \item Da $F$ und $G$ Stammfunktionen von $f$ sind, gilt $F'=f, G'=f$. Also $(F-G)'=0$ und $F-G=\text{konstante Funktion}$. 
 \end{enumerate}
@@ -606,7 +606,7 @@ Insbesondere spielt es keine Rolle, welche Werte die Stammfunktion im Inneren de
 %\todo{Remove Comment!!}
 
 \subsubsection*{Beispiel 6.20}
-\renewcommand{\arraystretch}{1.8}
+\renewcommand{\arraystretch}{1.6}
 \begin{tabularx}{\textwidth}{|Y|Y|Y|}
 \hline
     Definitions Bereich & Funktion $f$                          & Stammfunktion $F$                                                      \\\hline\hline
@@ -668,7 +668,7 @@ $$ =  - \sin x\cos x + \int {(1 - {{\sin }^2}x)dx}$$
 $$ =  - \sin x\cos x + x - \int {{{\sin }^2}xdx} $$
 
 \[ \Rightarrow 2\int {{{\sin }^2}xdx = x - \sin x\cos x} \]
-\[ \Rightarrow \int {{{\sin }^2}xdx = \frac{1}{2}\left( {x - \sin x\cos x} +c \right)} \]
+\[ \Rightarrow \int {{{\sin }^2}xdx = \frac{1}{2}\left( {x - \sin x\cos x}  \right)} \]
 Andere möglichkeit:
 $$\cos 2x = 1-2\sin^2x=\cos^2x-\sin^2x=2\cos^2x-1$$
 $$\sin^2x=\frac{1}{2}(1-\cos 2x)$$
@@ -679,7 +679,7 @@ $$=\frac{1}{2}\left[ x-\frac{\sin 2x}{2}\right] +c$$
 $$\sin 2x =2\sin x\cos x$$
 \end{enumerate}
 
-\subsubsection*{Besipiel 6.23}
+\subsubsection*{Beispiel 6.23}
 \[\int\limits_0^{\pi /2} {{{(\sin x)}^{k + 1}}dx = \int\limits_0^{\pi /2} {\underbrace {{{(\sin x)}^k}}_u\underbrace {(\sin x)}_{v'}dx} } \]
 
 
@@ -717,7 +717,7 @@ Also:
 \[\frac{{{{({2^n}!)}^4}}}{{(2n + 1)}} \cdot \frac{2}{{{{((2n)!)}^2}}} \le \pi  \le \frac{{{{({2^n}n!)}^4}}}{{{{(2n!)}^2}}} \cdot \frac{2}{{2n}}\]
 \[ \Rightarrow \pi  = \mathop {\lim }\limits_{n \to \infty } \frac{1}{n}\frac{{{{({2^n}n!)}^4}}}{{{{(2n!)}^2}}}\text{\hspace{5mm} Wallische Formel.}\]
 
-\subsubsection*{Besipiel 6.24 (Stirlingsche Formel)}
+\subsubsection*{Beispiel 6.24 (Stirlingsche Formel)}
 Für $n\geq 2$ sei $\ln (n!) = \sum\limits_{k = 2}^n {\ln (k)} $. Wir zeigen dass man $\ln\left| k\right|$ sehr gut durch $\int\limits_{k - 1/2}^{k + 1/2} {\ln xdx} $ approximieren.\\
 
 Da $x\ln x-x$ Stammfunktion von $\ln(x)$ ist, folgt $\int\limits_{k - 1/2}^{k + 1/2} {\ln xdx}  = \left. {x\ln x - x} \right|_{k - 1/2}^{k + 1/2}$. Darin kommen also $\ln\left(k+\frac{1}{2}\right)$ sowie $\ln\left(k-\frac{1}{2}\right)$ vor. Wir benutzen nun Taylor:\\
@@ -753,7 +753,7 @@ Nun folgt:
 Ersetzen wir $\ln \left( {n + \frac{1}{2}} \right) = \ln n + \frac{1}{{2n}} - \frac{1}{{8{n^2}}} + {t_n}$ so folgt:
 
 \[(*) = \left( {n + \frac{1}{2}} \right)\ln n - n + \left( {n + \frac{1}{2}} \right)\left\{ {\frac{1}{{2n}} - \frac{1}{{8{n^2}}} + {t_n}} \right\} + \frac{1}{2}\]
-\[ = \left( {n + \frac{1}{2}} \right)\ln n - n + \frac{1}{2} - \frac{1}{{8{n^2}}} + n{t_n} + \frac{1}{{4n}} + \frac{1}{{16{n^2}}} + \frac{1}{2}{t_n} + \frac{1}{2}\]
+\[ = \left( {n + \frac{1}{2}} \right)\ln n - n + \frac{1}{2} - \frac{1}{{8{n^2}}} + n{t_n} + \frac{1}{{4n}} - \frac{1}{{16{n^2}}} + \frac{1}{2}{t_n} + \frac{1}{2}\]
 \[ = \left( {n + \frac{1}{2}} \right)\ln n - n + 1 + \frac{1}{{8n}} + n{t_n} - \frac{1}{{16{n^2}}} + \frac{1}{2}{t_n}\]
 
 Also:
@@ -777,7 +777,16 @@ Also $b=\sqrt{2\pi}$ womit
 \begin{framed}
 \[n! \approx \sqrt {2\pi n} {n^n}{e^{ - n}}\text{\hspace{10mm} Stirling's formel}\]
 \end{framed}
-
+\subsubsection*{Beispiel: Der Satz von Taylor}
+Die Taylor - Entwicklung eine Funktion $f\in C^{n+1}$ um $x_0$ erhält man durch $n-$fache partielle Integration:
+\[f(x) - f({x_0}) = \int\limits_{{x_0}}^x {f'(t)dt = } \int\limits_{{x_0}}^x {\underbrace {{{(x - t)}^0}}_{v'}\underbrace {f'(t)}_udt} \]
+\[ = (x - {x_0})f'({x_0}) + \int\limits_{{x_0}}^x {\underbrace {(x - t)'}_{v'}} \underbrace {f''(t)}_udt\]
+\[ = (x - {x_0})f'({x_0}) + \frac{{{{(x - {x_0})}^2}}}{2}f''({x_0}) + \frac{1}{2}\int\limits_{{x_0}}^x {{{(x - t)}^2}f'''(t)dt} \]
+$$\text{\vdots}$$
+\[ = \sum\limits_{k = 1}^n {{{(x - {x_0})}^k}\frac{{{f^{(k)}}({x_0})}}{{k!}}}  + \frac{1}{{n!}}\int\limits_{{x_0}}^x {{{(x - t)}^n}{f^{(n + 1)}}(t)dt} \]
+Aus Mittelwertsatz der Integralrechnung bekommt man die Lagrange Restgliedformel.
+\[\frac{1}{{n!}}\int\limits_{{x_0}}^x {{{(x - t)}^n}{f^{(n + 1)}}(t)dt}  = \frac{1}{{(n + 1)!}}{f^{n + 1}}(\xi ){(x - {x_0})^{n + 1}}\text{ für ein }\xi\in\lbrack x_0,x\rbrack\]
+\newpage
 \section{Methode der Substitution}
 Methode der Substitution ist eine Umkehrung der Kettenregel.
 \subsubsection*{Satz 6.25 (Substitutionsregel)}
@@ -808,7 +817,7 @@ gibt es im Prinzip zwei \todo{?lesarten? page 51 top}\\
 
 \noindent Mann kann sie entweder von links nach rechts oder von rechts nach links anwenden: 
 \begin{enumerate}
-\item (links$\rightarrow$rechts)\\
+\item (links $\rightarrow$ rechts)\\
 Liegt ein Integral explizit in der Form \[\int\limits_{{t_0}}^{{t_1}} {f\left( {g(t)} \right)g'(t)dt} \text{ vor,}\] so können wir die Substitutionsregel von links nach rechts abwende
 \subsubsection*{Beispiel}
 \begin{enumerate}
@@ -833,10 +842,10 @@ Ein integral liegt der Gestalt $\int\limits_\alpha ^\beta  {f(x)dx}$ mit gewisse
 \begin{enumerate}
 \item \[\int\limits_0^1 {\sqrt {1 - {x^2}} dx} \] Also $f(x)=\sqrt{1-x^2}$. Mit der Substituten $x=g(t)=\sin t, t\in \lbrack 0,\pi/2\rbrack, dx=\cos tdt$ ist dann $g(0)=0, g\left(\frac{\pi}{2}\right)=1$ und 
 \[\int\limits_0^1 {\sqrt {1 - {x^2}} } dx = \int\limits_{g(0)}^{g(\pi /2)} {f(x)dx = \int\limits_0^{\pi /2} {f\left( {g(t)} \right)g'(t)dt} } \]
-\[ = \int\limits_0^{\pi /2} {\sqrt {1 - {{\sin }^2}t} \cos tdt\mathop {{\rm{  }} = }\limits^{(*)} } \int\limits_0^{\pi /2} {{{\cos }^2}dt}  = \int\limits_0^{\pi /2} {\frac{1}{2}\left( {1 + \cos 2t} \right)dt} \]
+\[ = \int\limits_0^{\pi /2} {\sqrt {1 - {{\sin }^2}t} \cos tdt\mathop {{\rm{  }} = }\limits^{\text{(\textasteriskcentered )} }} \int\limits_0^{\pi /2} {{{\cos }^2}dt}  = \int\limits_0^{\pi /2} {\frac{1}{2}\left( {1 + \cos 2t} \right)dt} \]
 \[ = \left. {\frac{1}{2}\left( {t + \frac{{\sin 2t}}{2}} \right)} \right|_o^{\pi /2} = \frac{1}{2}\left. {\left( {t + \sin t\cos t} \right)} \right|_0^{\pi /2} = \frac{\pi }{2}\]
 
-mit \begin{enumerate}[$\left(\ast\right)$]
+mit \begin{enumerate}[(\textasteriskcentered )]
 \item $${\cos ^2}(t) = \frac{{1 + \cos 2t}}{2}$$
 \end{enumerate}
 
@@ -854,18 +863,18 @@ mit \begin{enumerate}[$\left(\ast\right)$]
 \[ = \frac{1}{2}\left( {\frac{{{u^3}}}{3} + 3u} \right) = \frac{u}{2}\left( {\frac{{{u^2}}}{3} + 3} \right) = \frac{{\sqrt {2x - 3} }}{2}\left[ {\frac{{2x - 3}}{3} + 3} \right] + C\]
 \[ = \sqrt {2x - 3} \left( {\frac{x}{3} + 1} \right) + C\]
 \end{enumerate}
-\item \subsubsection*{Beispiel: Flächeninhalt einer Ellipse}
+\subsubsection*{Beispiel: Flächeninhalt einer Ellipse}
 
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
-\begin{tikzpicture}[scale=0.8]
+\begin{tikzpicture}[scale=0.6]
 \draw (0,0) ellipse (3cm and 1cm);
 \draw[->] (-3.5,0)--(3.5,0);
 \draw[->] (0,-1.5)--(0,1.5);
-\draw	(1,0) node[anchor=south] {$a$};
-\draw	(0,0.75) node[anchor=west] {$b$};
-\draw	(-0.2,0) node[anchor=north] {$0$};
+\draw	(1.2,0) node[anchor=south] {$a$};
+\draw	(0,0.6) node[anchor=west] {$b$};
+\draw	(-0.2,0.1) node[anchor=north] {$0$};
 
 
 \end{tikzpicture}
@@ -882,8 +891,11 @@ $$y=b\sqrt{1-\frac{x^2}{a^2}}\text{ mit }x,y>0$$
 \end{figure}
 $$F=4\int ^{a}_{0}b\sqrt {1-\dfrac {x^{2}}{a^{2}}}dx$$
 mit $x=au$, $dx=adu$ $$F=4\int ^{1}_{0}b\sqrt {1-u^2}adu$$$$=4ab\int ^{1}_{0}\sqrt {1-u^2}du$$ mit $u=\sin t$, $du=\cos tdt$
-$$4ab\int ^{\pi /2}_{0}\sqrt {1-\sin^2t}\cos t dt$$$$=4ab\int ^{\pi /2}_{0}\cos ^{2}tdt=\left.\frac{4ab}{2}\left( t+\sin t\cos t\right) \right| ^{\pi /2}_{0}$$$$=\pi ab$$
+$$4ab\int ^{\pi /2}_{0}\sqrt {1-\sin^2t}\cos t dt$$$$=4ab\int ^{\pi /2}_{0}\cos ^{2}tdt=\left.\frac{4ab}{2}\left( t+\sin t\cos t\right) \right| ^{\pi /2}_{0}$$ $$=\pi ab$$
 \end{enumerate}  
+
+
+
 \section{Integration rationaler Funktionen (Partialbruchzerlegung)}
 Sei $R(x)=\frac{P(x)}{Q(x)}$ eine Rationale Funktion, d.h. $P,Q$ sind polynome mit reelen Koeffizienten. Die Partialbruchzerlegung ist eine Darstellung von $R(x)$ als summe von ''elementen'' rationale Funktionen. Sie basiert auf einem Korollar des Fundamentales Satzes der Algebra, das sagt, dass jedes reelle Polynom ein Produkt von linearen und quadratischen Polynomen mit $\mathbb{R}$ Koeffizienten. 
 
@@ -893,6 +905,7 @@ Sei $R(x)=\frac{P(x)}{Q(x)}$ eine rationale Funktion. Dann $$R(x)=P_1(x)+\sum ^{
 Die $\frac{1}{(x-a)}$, $\frac{bx+d}{\left( (x-\alpha )^2 +\beta ^2\right)^m}$ werden ''elementare rationale Funktionen'' genannt und wir wollen dafür Stammfunktionen bestimmen.
 
 \subsubsection*{Bemerkung}
+
 \begin{enumerate}
 \item Das Polynom $P_1(x)$ tritt nur auf, falls $\deg P>\deg Q$. In diesem Fall berechnet mann $p_1(x)$ mit Polynom division und es gilt $p(x)=P_1(x)-Q(x)+P_2(x)$ mit $\deg P_2 < \deg Q$
 \item Das nennerpolynom $Q(x)$ besitze
@@ -905,6 +918,7 @@ $$a_{ik}\text{\hspace{20mm}}k=1,\dots ,r_i\text{\hspace{10mm}}i=1,\dots,n$$
 $$\beta _{jl},\alpha _{jl}\text{\hspace{15mm}}l=1,\dots ,m_j\text{\hspace{10mm}}l=1,\dots,m$$
 Diese Parameter werden durch Koeffizientenvergleich berechnet, die rechte Seite wird dabei auf den \todo{?Haupt? page 58 bottom} gebracht.
 \end{enumerate}
+%%
 \subsubsection{Beispiel}
 $R(x)=\frac{1-x}{x^2(x^2+1)}$
 Ansatz: $$R(x)=\frac{a_1}{x}+\frac{a_2}{x^2}+\frac{b_1x+d_1}{x^2+1}$$$$\Rightarrow 1-x=x(x^2+1)a_1+a_2(x)(x^2+1)+x^2(b_1x+d_1$$
@@ -916,7 +930,7 @@ Partialbruchzerlegung:
 $$\frac{1-x}{x^2(x^2+1)}=-\frac{1}{x}+\frac{1}{x^2}+\frac{x-1}{x^2+1}$$
 \subsubsection*{Grundtypen der Integration rationaler Funktionen}
 \begin{itemize}
-\item \underline{Typ O:} Polynom: $$\int \sum a_{n}x^{n}dx=\sum a_{n}\dfrac {x^{n+1}}{n+1}+c$$
+\item \underline{Typ O:} Polynom:$$\int \sum a_{n}x^{n}dx=\sum a_{n}\dfrac {x^{n+1}}{n+1}+c$$
 \item \underline{Typ I:} Inverse Potenzen \[\int {\frac{{dx}}{{x - {x_0}}}r}  = \left\{ {\begin{array}{*{20}{c}}{\log \left| {x - {x_0}} \right| + c}&{{\text{für = 1}}}\\{\frac{1}{{(1 - r)}}\frac{1}{{{{(x - {x_0})}^{r - 1}}}}}&{{\text{für}} \ge {\rm{2}}}\end{array}} \right.\]
 
 \item \underline{Typ II:}
@@ -1021,4 +1035,37 @@ Aus \[\sum\limits_{k = 1}^{n - 1} {f(k) \ge \int\limits_1^n {f(x)dx} } \] folgt 
 Aus (\textasteriskcentered) folgt: \[f(0) \le \sum\limits_{k = 1}^\infty  {f(k)}  - \int\limits_1^\infty  {f(x)dx \le f(1)} \]
 
 \subsubsection*{Beispiel 6.31}%Page 68, top
+\begin{enumerate}
+\item $\sum {(s) = \sum\limits_{k = 1}^\infty  {\frac{1}{{{k^s}}}} } $ existiert für alle $s>1$ 
+$$\int\limits_1^\infty  {\frac{1}{{{x^s}}}dx}  = \mathop {\lim }\limits_{b \to \infty } \int\limits_1^b {{x^{ - s}}dx}  = \lim \left\{ {\begin{array}{*{20}{c}}{\log \left| b \right|}&{s = 1}\\{\left. {\frac{{{x^{ - s + 1}}}}{{1 - s}}} \right|_1^b}&{s > 1}\end{array}} \right. $$$$= \left\{ {\begin{array}{*{20}{c}}{\text{divergent falls }s = 1}\\{\text{konvergent gegen }\frac{1}{{s - 1}}}\end{array}} \right.$$
+und
+$$f(0) = 0 \le \sum\limits_{n = 1}^\infty  {{n^{ - s}}}  - \int\limits_1^\infty  {f(x)dx}  \le f(1) = 1$$$$ \Rightarrow \frac{1}{{s - 1}}\sum\limits_{n = 1}^\infty  {{n^{ - s}}}  \le 1 + \frac{1}{{s - 1}} = \frac{s}{{s - 1}}$$
+\item \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx}  =  - \int\limits_{ - \infty }^0 {x{e^{ - {x^2}}}dx}  + \int\limits_0^\infty  {x{e^{ - {x^2}}}dx}  = 2\int\limits_0^\infty  {x{e^{ - {x^2}}}dx} \]
+\[\int\limits_0^b {x{e^{ - {x^2}}}dx = \frac{1}{2}\int\limits_0^{{b^2}} {{e^{ - u}}du} }\text{\hspace{10mm} mit }u=x^2, du=2xdx \]
+\[ = \frac{1}{2}\left( {1 - {e^{ - {b^2}}}} \right) \to \frac{1}{2}\text{ für }b\rightarrow \infty\]
+Somit gilt \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx = 1} \]
+\item Wir haben die folgende einfache aber wichtige Beispiele
+\begin{enumerate}
+\item \[\int\limits_{ - \infty }^\infty  {\frac{{dx}}{{{x^s}}}}  = \left\{ {\begin{array}{*{20}{c}}{\begin{array}{*{20}{c}}{\frac{{{a^{1 - s}}}}{{s - 1}}}&\text{für}&{s > 1}\end{array}}\\{\begin{array}{*{20}{c}}\infty &{{\text{für}}}&{s \le 1}\end{array}}\end{array}} \right.\]
+
+\item Für alle $a<b$ und $s\in\mathbb{R}$ gilt \[\int\limits_a^b {\frac{{dx}}{{{{(x - a)}^s}}}}  = \left\{ {\begin{array}{*{20}{c}}{\begin{array}{*{20}{c}}{\frac{{{{(b - a)}^{1 - s}}}}{{1 - s}}}&\text{für}&{s < 1}\end{array}}\\{\begin{array}{*{20}{c}}\infty &{{\text{für}}}&{s \ge 1}\end{array}}\end{array}} \right.\]
+\end{enumerate}
+\end{enumerate}
+\subsubsection*{Satz 6.32 (Majorantenkriterium)}
+\begin{enumerate}[\indent a)]
+\item Sei $f:\lbrack a,\infty )\rightarrow\mathbb{R}$ stetig. Dann gilt $\forall x:\left| f(x)\right| <g(x)$ und $\int\limits_a^\infty  {g(x)}$ konvergent $\Rightarrow \int {f(x)dx} $ (absolut) konvergent.
+\item Weiterhin gilt folgende Umkehrung: $\forall x:0\leq g(x)\leq f(x)$ und $\int\limits_a^\infty  {g(x)}$ divergent $\Rightarrow \int\limits_a^\infty  {f(x)}$ divergent.
+\end{enumerate}
+
+\subsubsection*{Beispiel 6.33}
+\begin{enumerate}
+\item \[\int\limits_0^\infty  {\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{5/3}}}}dt}  < \int\limits_0^\infty  {\frac{{{t^2}}}{{{{\left( {6{t^2}} \right)}^{5/3}}}}dt}  < \int {\frac{c}{{{t^{4/3}}}}dt < \infty } \]
+$$\Rightarrow\int\limits_0^\infty  {\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{5/2}}}}dt} \text{ konvergiert}$$
+\item \[\int\limits_0^\infty  {\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{3/2}}}}dt} \]   
+\[\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{3/2}}}} > \frac{{{t^2}}}{{{{\left( {12{t^2}} \right)}^{3/2}}}} > \frac{c}{t}\text{\hspace{10mm}}z\geq 1\]
+\[\Rightarrow\int\limits_0^\infty  {\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{5/2}}}}} dt\text{ divergiert weil }\int\limits_0^\infty  {\frac{c}{t}} dt\text{ divergiert}\]
+\item Exponentialintegral:
+\[{E_i}(x): = \int\limits_{ - \infty }^\infty  {\frac{{{e^t}}}{t}dt} \text{ für }x<0\]
+Da $\mathop {\lim }\limits_{t \to  - \infty } t{e^t} = 0$, gibt es $c>0$ mit $\left| {t{e^t}} \right| \le c$, $\forall t\in\lbrack -\infty ,x\rbrack$, und somit gilt \[\left| {\frac{{{e^t}}}{t}} \right| = \left| {\frac{{t{e^t}}}{{{t^2}}}} \right| \le \frac{c}{{{t^2}}}\] Mit der Konvergenz des Integrals $\int\limits_{ - \infty }^x {\frac{1}{{{t^2}}}dt} $ folgt die (Absolut) Konvergenz des $E_i(x)$ für alle $x<0$
+\end{enumerate}
 
