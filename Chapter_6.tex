@@ -959,5 +959,66 @@ $$\Rightarrow \frac{9}{x^3-3x-2}=\frac{1}{x-2}+\frac{-x-4}{(x+1)^2}$$
 \section{Das Uneigentliche Integral}
 Sei $f$ eine unbeschränkte Funktion. Dann ist $f$ nicht R. Integrierbar, z.B. $\int\limits_0^1 {\frac{1}{{\sqrt x }}} dx$ hat keinen Sinn. Aber $\forall\varepsilon>0$ ist $\frac{1}{\sqrt{x}}\in\left[\varepsilon,1 \right]$ stetig also Integrierbar. Der Wert des Integral ist \[\int\limits_\varepsilon ^1 {\frac{1}{{\sqrt x }}} dx = \left. {2\sqrt x } \right|_\varepsilon ^1 = 2 - 2\sqrt \varepsilon  \] also existiert \[\mathop {\lim }\limits_{\varepsilon  \searrow 0} \int\limits_\varepsilon ^1 {\frac{1}{{\sqrt x }}} dx = 2\] Dies ist ein Beispiel von uneigentlichen R. Integral.
 
+\begin{framed}
+\centerline{\textbf{Definition 6.29}}
+\noindent Sei $f$ eine Funktion auf einem offenen Interval $(a,b$, deren Einschränkung auf jedes kompakte Teilinterval $\lbrack a',b'\rbrack$ integrierbar ist. Dann das uneigentliche Integral von $f$ von $a$ bis $b$ definiert als \[\int\limits_a^b {f(x)dx: = \mathop {\lim }\limits_{a' \searrow a} \mathop {\lim }\limits_{b' \nearrow b} } \int\limits_{a'}^{b'} {f(x)dx} \] falls diese Grenzwerte existieren ($a$ und $b$ können $\pm \infty$ sein)
+\end{framed}
 
+ \subsubsection*{Bemerkung 6.30}
+\begin{enumerate}
+\item Ist $f$ schon auf $\lbrack a,b\rbrack$ definiert und integrierbar, so existiert das Uneigentliche Integral und stimmt mit dem üblichen bestimmten Integral überein.
+\item Ist $f$ schon $\lbrack a,b)$ definiert und auf jedem kompakten Teilinterval der Form $\lbrack a,b'\rbrack$ integrierbar, so gilt schon  \[\int\limits_a^b {f(x)dx = \mathop {\lim }\limits_{b' \nearrow b} } \int\limits_a^b {f(x)dx} \]
+\subsubsection*{Beispiel}
+\[\int\limits_0^\infty  {{e^{ - x}}}  = \mathop {\lim }\limits_{b \to \infty } \int\limits_{{\rm{WHAT}}}^b {{e^{ - x}}dx}  = \lim \left( {\left. { - {e^{ - x}}} \right|_{{\rm{WHAT}}}^b} \right) = \mathop {\lim }\limits_{b \to \infty } \left( { - {e^{ - b}} + 1} \right) = 1\]
+\item Vorsicht: Die beiden Grenzwerte müssen im allgemeinen unabhängig voneinander genommen werden. 
+\subsubsection*{Beispiel}
+\[\int\limits_{ - b}^b {xdx = 0} \text{\hspace{10mm}}\forall b>0\text{, und daher}\]
+\[\mathop {\lim }\limits_{b \to \infty } \int\limits_{ - b}^b {xdx = \lim \left( {\frac{{{b^2}}}{2} - \frac{{{b^2}}}{2}} \right) = \mathop {\lim }\limits_{b \to \infty } 0 = 0} \]
+Die einzelnen Grenzwerte von $\int\limits_a^b {xdx} $ für $b\rightarrow \infty$ und $a\rightarrow -\infty$ existieren dagegen nicht \[\left( {\int\limits_a^b {xdx = \left. {\frac{{{x^2}}}{2}} \right|_a^b = \frac{{{b^2}}}{2} - \frac{{{a^2}}}{2}} } \right)\] und somit auch nicht das uneigentliche Integral $\int\limits_{ - \infty }^\infty  {xdx} $
+\item Alle Grundeigenschaften und Integrationstechniken für das bestimmte Integral gelten ebenso für das uneigentliche Integral. 
+\end{enumerate}
+Als Beispiel beweisen wir folgendes nützliches Konvergenzkriterium für Reihen
+\subsubsection*{Satz 6.30}
+Sei $f:\lbrack 1,\infty )\rightarrow \mathbb{R}$ monoton fallend. Dann konvergiert $\sum\limits_{k = 1}^\infty  {f(k)}$ genau dann wann $\int\limits_1^\infty  {f(x)dx} $ existiert. In diesem Fall gilt: \[0 \le \sum\limits_{k = 1}^\infty  {f(k)}  - \int\limits_1^\infty  {f(x)dx}  \le f(1)\]
+\subsubsection*{Beweis}
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+% horizontal axis
+\draw[->] (-0.5,0) -- (7.5,0) node[anchor=north] {};
+% labels
+\draw	(1,0) node[anchor=north] {1}
+		(2.5,0) node[anchor=north] {2}
+		(4,0) node[anchor=north] {3}
+		(5.5,0) node[anchor=north] {4}
+		(7,0) node[anchor=north] {5}
+		(0,3) node[anchor=east] {$f(2)$}
+		(0,4.2) node[anchor=east] {$f(1)$};
+		
+
+% vertical axis
+\draw[->] (0,-0.5) -- (0,5) node[anchor=east] {};
+% 3 columns
+\draw (1,0)--(1,4.2)--(2.5,4.2)--(2.5,3);
+\draw (2.5,0)--(2.5,3)--(4,3);
+\draw (4,0)--(4,3);
+\draw (4,2.12)--(5.5,2.12);
+\draw (5.5,2.12)--(5.5,1.6);
+\draw (5.5,0)--(5.5,1.6)--(7,1.6)--(7,0);
+
+\draw (0,5.2) parabola bend (7,1.42)(8,1.4);
+
+\draw[dotted, very thick](0,4.2)--(1,4.2)
+[dotted, very thick](0,3)--(2.5,3)
+[dotted, very thick](2.5,2.12)--(4,2.12)
+[dotted, very thick](4,1.6)--(5.5,1.6)
+[dotted, very thick](5.5,1.4)--(7,1.4);
+
+\end{tikzpicture}
+\end{center}
+
+$$f(1) + f(2) +  \ldots  + f(n - 1) \ge \int\limits_1^n {f(x)dx \ge f(2) +  \ldots f(n)} $$$$\sum\limits_{k = 1}^n {f(k) - f(n)}  = \sum\limits_{k = 1}^{n - 1} {f(x) \ge \int\limits_1^n {f(x)dx \ge \sum\limits_{k = 1}^{n - 1} {f(k + 1) = } \sum\limits_{k = 1}^n {f(x) - f(1)} } } $$$$\sum\limits_{k = 1}^n {f(k) - f(n) \ge \int\limits_1^n {f(x)dx \ge \sum\limits_{k = 1}^n {f(k) - f(1)} } } \text{\hspace{10mm}(\textasteriskcentered)} $$ $$\Rightarrow f(0) \le \sum\limits_{k = 1}^n {f(k) - \int\limits_1^n {f(x)dx \le f(1)} } $$
+Aus \[\sum\limits_{k = 1}^{n - 1} {f(k) \ge \int\limits_1^n {f(x)dx} } \] folgt das, \[\sum\limits_{k = 1}^\infty  {f(k) < \infty  \Rightarrow \int\limits_1^\infty  {f(x)dx < \infty } } \] und, aus \[\int\limits_1^n {f(x)dx \ge \sum\limits_{k = 1}^{n - 1} {f(k + 1)} } \] folgt dass \[\int\limits_1^\infty  {f(x)dx < \infty  \Rightarrow \sum\limits_{k = 1}^\infty  {f(k) < \infty } } \]
+Aus (\textasteriskcentered) folgt: \[f(0) \le \sum\limits_{k = 1}^\infty  {f(k)}  - \int\limits_1^\infty  {f(x)dx \le f(1)} \]
+
+\subsubsection*{Beispiel 6.31}%Page 68, top
 

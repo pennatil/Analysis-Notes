@@ -1,0 +1,17 @@
+TSWLatexianTemp*
+
+*.fdb_latexmk
+
+*.aux
+
+*.fls
+
+*.out
+
+*.synctex.gz
+
+*.toc
+
+*.log
+
+*.tcp
