@@ -18,8 +18,7 @@ Zerlege das Interval $\lbrack a,b\rbrack$ in kleine Teilintervalle $I_{1},\dots,
 \begin{center}
 \begin{tikzpicture}
 
-% horizontal axis
-\draw[->] (-0.5,0) -- (6.5,0) node[anchor=north] {};
+
 % labels
 \draw	(1,0) node[anchor=north] {a}
 		(6,0) node[anchor=north] {b};
@@ -32,7 +31,9 @@ Zerlege das Interval $\lbrack a,b\rbrack$ in kleine Teilintervalle $I_{1},\dots,
 \draw [fill=black!10](1,0) parabola bend (2,1) (3,0);
 \draw[fill=black!50] (3,0) parabola bend (3.5,-0.5) (4,0);
 \draw[fill=black!10] (4,0) parabola bend  (6,3) (6,0);
-\draw[dotted,very thick] (6,0)--(6,3);
+\draw[dotted,very thick,white] (6,0)--(6,3);
+% horizontal axis
+\draw[->] (-0.5,0) -- (6.5,0) node[anchor=north] {};
 \end{tikzpicture}
 \end{center}
 

@@ -1,6 +1,13 @@
 \chapter{Reele Zahlen, Euklidische Räume und Komplexe Zahlen}
 \section{Elementare Zahlen}
-\todo{insert table for different Sets!! page 22 top}
+\begin{tabular}{r l c c c}
+Naturzahl & $\mathbb{N}$&$=$& $\{0,1,2,\dots\}$& addieren und multiplizieren\\
+~& $\cap$ &~&~&~\\
+LOOK TODO & $\mathbb{Z}$&$=$& $\{\dots ,-2,-1,0,1,2,\dots\}$& subtrairen\\
+~& $\cap$ &~&~&~\\
+Rationalzahlen & $\mathbb{Q}$&$=$& $\left\{ {\left. {\frac{p}{q}} \right|p,q \in \mathbb{Z},q\not  = 0} \right\}$& dividieren\\
+\end{tabular}
+\todo{Before set Z, can't read, page 22}\\
 Viele gleichungen haben keine Lösung in $\mathbb{Q}$.
 \subsubsection*{Satz 2.1}
 Sei $p\in\mathbb{N}$ eine Primzahl. Dann hat $x^2=p$ keine Lösung in $\mathbb{Q}$
@@ -10,7 +17,7 @@ Zum Erinnerung zwei Natürlichen Zahlen $a$ und $b$ sind teilfrmd (oder relativ 
 \subsubsection*{Indirekter Beweis}
 Wir nehmen an: es gibt $x=\frac{a}{b}\in \mathbb{Q}$ mit $x^2 =p$, wobei $a,b$ teilfremd und $\geq 1$ sind. Dann gilt $$a^2=pb^2$$ woraus folgt, dass $p$ $a$ teilt also ist $a=pk$, $k\in\mathbb{N}$ und somit $$a^2=p^2k^2=pb^2\Rightarrow pk^2=b^2$$ woraus folgt, dass $p$ $b$ teilt.
 
-\subsection{Die Reelen Zahlen}
+\section{Die Reelen Zahlen}
 Wir werden jetzt das System von Axiomen beschreiben das die Menge der Reelen Zahlen ''eindeutig'' characterisiert. \\
 
 Die Menge $\mathbb{R}$ der Reelen Zahlen ist mit zwei Verknüpfungen ''$+$'' (Addition) und ''$\cdot$'' (Multiplikation) versehen sowie mit einer Ordnungsrelation $\leq$. Die axiome werden wie folgt gruppiert:
@@ -91,6 +98,81 @@ Auf $\mathbb{R}$ gibt es eine Relation, $\leq$, genanten Ordnung, die folgenden 
 \item Identivität: $\forall x,y\in\mathbb{R}$, $(x\leq y)$ und $(y\leq x)\Rightarrow x=y$
 \item Die Ordnung ist total: $\forall x,y\in\mathbb{R}$ gilt entweder $x\leq y$ oder $y\leq x$ 
 \end{enumerate}
-
+Die Ordnung ist konsistent mit $+$, und $\cdot$
+\begin{enumerate}
+\item $x\leq y\Rightarrow x+z\leq y+z$\hspace{10mm}$\forall x,y,z\in\mathbb{R}$
+\item $x,y\geq 0\Rightarrow xy\geq 0$
 \end{enumerate}
- 
+Mit $\leq$ hat man auch$\geq,<,>$. Wir Verzichten auf eine Auflistung aller Folgerungen und beschränken uns auf einzige wichtige Folgerungen.
+\subsubsection*{Folgerungen 2.4}
+\begin{enumerate}[i)]
+\item $x\leq 0$ und $y\leq 0 \Rightarrow xy\geq 0$
+\item $x\leq 0$ und $y\geq 0\Rightarrow xy\leq 0$
+\item $x\leq y$ und $z\geq 0\Rightarrow xz\leq yz$
+\item $1>0$
+\item $\forall x\in\mathbb{R}$\hspace{10mm}$x^2\geq 0$
+\item $0<1<2<3<\dots$
+\item $\forall x>0: x^{-1}>0$
+\end{enumerate}
+\{Annahme: $x^{-1}\leq 0$. Nach Multiplikation mit $x>0$ folgt (mittels ii) $1=x^{-1}\cdot x\leq 0\cdot x=0$\}
+\subsubsection*{Bemerkung 2.5}
+$\leq$ auf \todo{What? page 28 bottom} genügt den obigen Eigenschaften. Die entscheidende weitere Eigenschaft von $\mathbb{R}$ ist das.
+\item Ordnungsvollständigkeit\\
+Vollständigskeitaxiom:\todo{Check for layout issues with title}\\
+Seien $A,B\subset\mathbb{R}$ nicht leere Teilmenge von $\mathbb{R}$, so dass $a\leq b$ für alle $a\in A,b\in B$. Dann gibt es $c\in\mathbb{R}$ mit $a\leq c\leq b$\hspace{5mm} $\forall a\in A,b\in B$
+\subsubsection*{Bemerkung 2.6}
+\todo{What? page 29 bottom} erfüllt dieses Eigenschaft nicht!\\
+
+
+Seien $$A=\{x\in\mathbb{Q}\mid x\geq 0, x^2\leq 2\}$$ $$B=\{y\in Q\mid y\geq 0, y^2 \geq 2\}$$ 
+
+Dann gilt $a\leq b$ $\forall a\in A$ $b\in B$. ABer ein $c\in\mathbb{Q}$, mit $a\leq c\leq b$ würde dann $c^2=2$ erfüllen! In Satz 2.1 haben wir gesehen dass $x^2=p$ keine Lösung in $\mathbb{Q}$ hat. \\
+
+Wir definieren jetzt für $x,y\in\mathbb{R}$ \[\max \{ x,y\}  = \left\{ {\begin{array}{*{20}{c}}{x\text{ falls }y \le x}\\{y\text{ falls }x \le y}\end{array}} \right.\] Insbesondere ist der Absolutbetrag einer zahl $x\in\mathbb{R}, \left| x \right|$ $$\left| x \right|:\max \{x,-x\}$$ Für diesen gilt folgender Wichtiger Satz
+\subsubsection*{Satz 2.7}
+\begin{enumerate}[i)]
+\item $\left| {x + y} \right| \le \left| x \right| + \left| y \right|$ (Dreiecks Ungleichung)
+\item $\left| {xy} \right| = \left| x \right|\left| y \right|$
+\end{enumerate}
+\subsubsection*{Beweis 2.7}
+\begin{enumerate}[i)]
+\item $x \le \left| x \right|, - x \le \left| x \right|$\\$y \le \left| y \right|, - y \le \left| y \right|$\\und $x+y\leq  \left| x \right| +  \left| y \right|, - (x + y) \le \left| x \right| + \left| y \right|$ \\ woraus $\left| {x + y} \right| \le \left| x \right| + \left| y \right|$ folgt
+\item ASK FOR BEWEIS\todo{ASK FOR BEWEIS}
+\end{enumerate}
+
+\subsubsection*{Satz (Young)}
+Für alle $a,b\in\mathbb{R}$. $\delta >0$ gilt $2\left| {ab} \right| \le \delta {a^2} + \frac{{{b^2}}}{\delta }$
+\end{enumerate}
+
+\section{Infimum und Supremum}
+In Zusammenhang mit der Ordnung führen wir einige Wichtige Definitionen ein:
+
+\begin{framed}
+\centerline{\textbf{\textbf{Definition 2.8}}}
+\noindent Sei $\Romanbar{X}\subset\mathbb{R}$ eine Teilmenge 
+\begin{enumerate}[\indent a)]
+\item $\Romanbar{X}$ ist nach oben beschränkt falls es $c\in\mathbb{R}$ gibt $x\leq c, \forall x\in X$. Jeder derartige $c$ heisst eine Obere Schranke für $\Romanbar{X}$.
+\item $\Romanbar{X}$ ist nach unten beschränkt, falls es $c\in\mathbb{R}$ gibt, mit $x\geq c$, $\forall x\in X$. Jeder derartige $c$ heisst untere Schranke für $\Romanbar{X}$.
+\item $X$ ist beschränkt falls es nach oben und unten beschränkt ist.
+\item Ein element $a\in\Romanbar{X}$ ist ein maximales Element (oder Maximum) von $\Romanbar{X}$ falls $x\leq a$, $\forall x\in\Romanbar{X}$. Falls ein Maximum (resp. minimum) existiert, wird es mit $\max\Romanbar{X}$ ($\min\Romanbar{X}$) bezeichnet. Falls $\Romanbar{X}$ keine obere schränke hat, ist $\Romanbar{X}$ nach oben unbeschränkt (analog für obere sch.).
+\end{enumerate}
+\end{framed}
+\subsubsection*{Beispiel 2.9}
+\begin{enumerate}
+\item $A=\{x\in\mathbb{R}\mid x>0\}$ ist nach oben unbeschränkt. $A$ ist nach unten beschränkt. Jedes \todo{WHAT? Page 32 top}$\leq 0$ ist eine untere Schranke. 
+\item $B=\lbrack 0,1\rbrack$ ist nach oben und nach unten beschränkt. \begin{itemize}
+\item 0 ist ein minimum von $B$
+\item 1 ist ein maximum von $B$ 
+\end{itemize}
+\item $C=\lbrack 0,1)$ ist nach oben und nach unten beschränkt, $0=\min(A)$. $C$ hat kein Maximum. 
+\end{enumerate}
+Folgender Satz ist von Zentraler Bedeutung und eine Folgerung der Ordnungsvollständigkeitaxiom.
+%Finished AN1Week2.pdf
+
+
+
+
+
+
+
+
