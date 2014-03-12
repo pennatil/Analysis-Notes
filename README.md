@@ -4,22 +4,46 @@ This repo contains all the handwritten notes from Professor Imamoglu's Analysis 
 
 Getting the material
 ====================
-Download the master branch, you will get a .zip file containing the latest PDF. The PDF might not be as up to date as the source files, if you wish to have the latest version, you have to build it yourself. Look at the Building section. 
+Download the master branch [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip "Master Archive"). Once done, unzip it and you will get a the latest PDF. The PDF might not be as up to date as the source files, if you wish to have the latest version, you have to build it yourself. Look at the Building section. 
 
 File Hierarchy
 ==============
-main.tex is the main file to compile, from there all of the chapters are included using the \input{''name of file''} command. Packages are included as well, and can be found in the file Packages.tex. This was done so to be able to have multiple main files for different output results. 
+main.tex is the main file to compile, from there all of the chapters are included using the \input{''name of file''} command. Packages are included as well, and can be found in the file Packages.tex. 
 
 Building
 ========
-First of all make sure you have a working Tex distribiution installed on your system. If you don't just google ''latex ''+ you OS, download and install. 
-Download the master Branch, unzip it and open the file Packages.tex. Make sure that you have all of these packages installed.
-if you use the terminal, navigate to the folder and build main.tex. If you use an ''IDE'', just open main.tex and create a pdf.
+This is only for people familiar with LaTex. If you have never used it before, just use the PDF included in the .zip archive!
 
+First of all make sure you have a working LaTex distribution installed on your system. If you don't just google ''latex ''+ you OS, download and install. 
+Download the master Branch, unzip it and open the file Packages.tex. Make sure that you have all of these packages installed.
+<ul>
+<li>If you use the terminal, navigate to the folder and build main.tex</li>
+<li>If you use an ''IDE'', just open main.tex and create a pdf using the export button (most of them have one)</li>
+</ul>
 Contributing
 ============
 If you wish to contribute to the notes, there are two ways:
-1. Fork the repo, make the changes, and then request a merge. Use this only if you are familiar with LaTex.
-2. Open an issue by using the issues tab on the right of this page. This is recommended if you have no experience with LaTex.
+<ul>
+<li>If you have no experience with LaTex or GitHub:
+<ol>
+<li>Make sure you have a GitHub account</li>
+<li>On the right side of this page, click on the "Issues" tab</li>
+<li>Open a new issue, stating:
+<ul>
+<li>Chapter + Page Number</li>
+<li>Issue found, plus the eventual correction</li>
+</ul>
+<li>Send the Issue, I will ususally just close the Issue and probably send you a message or email
+</ol>
+<li>If you are familiar with Latex and GitHub:
+<ol>
+<li>Fork the repo</li>
+<li>Make the changes, and commit them. Make sure to add details of what you changed exactly</li>
+<li>Once you are done, request a Merge</li>
+</ol>
+I will try to merge it as soon as possible, and once done I will probably send you a message or email
+</ol>
+</ul>
+Once you have used one of these methods, I will try to fix the problem/merge your solution as soon as I can!
 
  
