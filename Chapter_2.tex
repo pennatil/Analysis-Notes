@@ -54,7 +54,7 @@ Eine Menge $G$ versetzen mit Verknüpfung $+$ und Neutrales Element $O$ die den 
 Eine enge $K$ versetzen mit Verknüpfung $+,\cdot$ und Elementen $0\not =1$ die den obigen Eigenschaften 
 A1$\rightarrow$A4, M1$\rightarrow$M4, D genügen heisst Körper. 
 
-\subsubsection*{Folgerung 2.3}
+\subsubsection*{Folgerung 2.3}\todo{Add Big curly brackets to enum list, page 25}
 Seien $a,b,c,d\in\mathbb{R}$ 
 \begin{enumerate}[i)]
 \item $a+b=a+c\Rightarrow b=c$ und $O$ is eindeutig, d.h. Falls $z\in\mathbb{R}$ der Eigenschaften $a+z=a$ $\forall a\in\mathbb{R}$ genügt, so folgt $z=0$
@@ -128,7 +128,10 @@ Seien $$A=\{x\in\mathbb{Q}\mid x\geq 0, x^2\leq 2\}$$ $$B=\{y\in Q\mid y\geq 0, 
 
 Dann gilt $a\leq b$ $\forall a\in A$ $b\in B$. ABer ein $c\in\mathbb{Q}$, mit $a\leq c\leq b$ würde dann $c^2=2$ erfüllen! In Satz 2.1 haben wir gesehen dass $x^2=p$ keine Lösung in $\mathbb{Q}$ hat. \\
 
-Wir definieren jetzt für $x,y\in\mathbb{R}$ \[\max \{ x,y\}  = \left\{ {\begin{array}{*{20}{c}}{x\text{ falls }y \le x}\\{y\text{ falls }x \le y}\end{array}} \right.\] Insbesondere ist der Absolutbetrag einer zahl $x\in\mathbb{R}, \left| x \right|$ $$\left| x \right|:\max \{x,-x\}$$ Für diesen gilt folgender Wichtiger Satz
+Wir definieren jetzt für $x,y\in\mathbb{R}$ \[\max \{ x,y\}  = \left\{ {\begin{array}{*{20}{c}}
+{x\text{ falls }y \le x}\\
+{y\text{ falls }x \le y}
+\end{array}} \right.\] Insbesondere ist der Absolutbetrag einer zahl $x\in\mathbb{R}, \left| x \right|$ $$\left| x \right|:\max \{x,-x\}$$ Für diesen gilt folgender Wichtiger Satz
 \subsubsection*{Satz 2.7}
 \begin{enumerate}[i)]
 \item $\left| {x + y} \right| \le \left| x \right| + \left| y \right|$ (Dreiecks Ungleichung)
@@ -167,9 +170,31 @@ In Zusammenhang mit der Ordnung führen wir einige Wichtige Definitionen ein:
 \item $C=\lbrack 0,1)$ ist nach oben und nach unten beschränkt, $0=\min(A)$. $C$ hat kein Maximum. 
 \end{enumerate}
 Folgender Satz ist von Zentraler Bedeutung und eine Folgerung der Ordnungsvollständigkeitaxiom.
-%Finished AN1Week2.pdf
 
+\subsubsection*{Satz 2.10}
+\begin{enumerate}[i)]
+\item Jede nicht leere nach oben beschränkte Teilmenge $A\subset B$ besitzt eine kleinste obere Schranke $c$. Die Kleinste obere schranke $c$ ist eindeutig bestimmt und heisst Supremum von $A$, mit $\sup A$ bezeichnet. 
+\item Jede nicht leere nach unten beschränkt Teilmenge $A\subset\mathbb{R}$ besitzt eine grösste untere Schranke $d$ und heisst Infimum von $A$, mit $\inf A$ bezeichnet.
+\end{enumerate}
+\subsubsection*{Beweis}
+\begin{enumerate}[i)]
+\item Sei $\emptyset\not=A\subset B$ nach oben beschränkt. Sei $B:=\{b\in\mathbb{R}\mid b$ ist obere Schranke für $A\}$. Dann $B\not=\emptyset$ und $a\leq b$, $\forall a\in A$ $b\in B$\\
 
+Mit Ordnungsvollständigkeit Axiom folgt die Existens eine Zahl $c\in\mathbb{R}$ mit $a\leq c\leq b$ $\forall a\in A$, $b\in B$.\\
+
+Es ist klar dass $c$ ist eine obere Schranke für $A$. Also $c\in B$. Da $c\leq b$ $\forall b\in B$, ist $c$ die kleinste obere Schranke für $A$. Hierdurch $c$ ist eindeutig bestimmt.\\
+
+(Seien $c$ und $c'$ zwei Supremum von $A$, $c$ ist die kleinste obere Schranke und $c'$ ist eine obere Schranke $\Rightarrow c\leq c'$. Das gleiche Argument mit $c$,$c'$ ausgetauscht liefert $c'\leq c$)
+\item Sei $A$ nach unten beschränkte, nicht leere Menge. Sei $-A:=\{ -x\mid x\in A\}$ die Menge der additive Inversen von $A$. Dann $-A\not=\emptyset$ und nach oben beschränkt. i) $\Rightarrow \exists s=\sup (-A)\Rightarrow -s$ ist das Infimum von $A$ 
+\end{enumerate}
+
+\subsubsection*{Korollar 2.11}
+\begin{enumerate}
+\item Falls $E\subset F$ und $F$ nach oben beschränkt ist, gilt $\sup E\leq \sup F$ 
+\item Falls $E\subset F$ und $F$ nach unten beschränkt ist, gilt $\inf F\leq \inf E$ 
+\item Falls $\forall x\in E$, $\forall y\in F$ gilt $x\leq y$ dann folgt $\sup E\leq\inf F$ 
+\item 
+\end{enumerate}
 
 
 

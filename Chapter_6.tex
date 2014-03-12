@@ -638,7 +638,7 @@ und die Ableitung ist (nach Kettenregel):
 \section{Partielle Integration}
 Da das Integration die Umkehrung von differenzieren ist, liefert jede Ableitungsregel eine für das Integrieren.\\
 
-Partielle Integration ist eine Umkehrung der Libnizschen Produktregel und besagt für unbestimmte bzw. das bestimmte Integral:
+Partielle Integration ist eine Umkehrung der Leibnizschen Produktregel und besagt für unbestimmte bzw. das bestimmte Integral:
 \[\begin{array}{c}
 (uv)' = u'v + uv'\\
  \Rightarrow \int {uv'}  = uv - \int {u'v}  + c
@@ -657,7 +657,7 @@ $\left\{\begin{array}{cc} f(x)=x & g'(x)=e^x \\ f'(x)=1 & g(x)=e^x\end{array}\ri
 \item $\int {\underbrace {{x^n}}_u\underbrace {{e^x}}_{v'}dx = {x^n}{e^x} - \int {n{x^{n - 1}}{e^x}dx} } $\\
 Durch Induktion über $n\in\mathbb{Z}^{\geq 0}$ folgert man daraus das Resultat \[\int {{x^n}{e^x}dx = {{( - 1)}^n}n!\sum\limits_{k = 0}^n {\frac{{{{( - x)}^k}}}{{k!}}{e^x} + c} } \]
 
-\item Partielle Integration eigret sich gut dazu, \todo{?Logar? page 40, top} zu eliminieren.\\
+\item Partielle Integration eignet sich gut dazu, Logarithmische terme zu eliminieren.\\
 Manchmal muss man dazu den Integranden erst künstich als Produkt schreiben
 \[\int {\log xdx = \int {\underbrace {(\log x)}_u\underbrace {(1)}_{v'}dx} } \]
 \[ = (\log x)x - \int {\frac{1}{x}} xdx = x\log x - x + c\]
@@ -698,34 +698,34 @@ $$ = \frac{{2n - 1}}{{2n}}\frac{{2n - 3}}{{2n - 2}} \ldots \frac{1}{2}\int\limit
 $$ = \frac{{(2n)(2n - 1)(2n - 2) \ldots 1}}{{{{\left[ {(2n)(2n - 2) \ldots 2} \right]}^2}}}\frac{\pi }{2}$$
 $$ = \frac{{(2n)!}}{{{{({2^n}n!)}^2}}}\frac{\pi }{2}$$
 
-Analog:
+\noindent Analog:
 \[\int\limits_0^{\pi /2} {{{(\sin x)}^{2n + 1}}dx = \frac{{{{({2^n}n!)}^2}}}{{(2n + 1)!}}} \]
 
-Beachte: der $\pi$-Term kommt im Zweiten Fall nicht vor!\\
+\noindent Beachte: der $\pi$-Term kommt im Zweiten Fall nicht vor!\\
 
-Dies benutzen wir wie folgt um ein ''Formel'' für $\pi$ aufzustellen.\\
+\noindent Dies benutzen wir wie folgt um ein ''Formel'' für $\pi$ aufzustellen.\\
 
-Für $0\leq x \leq\pi/2$:
+\noindent Für $0\leq x \leq\pi/2$:
 
 \[{(\sin x)^k} - {(\sin x)^{k + 1}} = {(\sin x)^k}\left[ {1 - \sin x} \right] \ge 0\]
-\[ \Rightarrow {(\sin x)^k} > {(\sin x)^{k + 1}}\text{\hspace{10mm}} \left( k\geq 0,0\leq x \leq \pi/2\right)\]
+\[ \Rightarrow {(\sin x)^k} \geq {(\sin x)^{k + 1}}\text{\hspace{10mm}} \left( k\geq 0,0\leq x \leq \pi/2\right)\]
 Also:
 \[\int\limits_0^{\pi /2} {{{(\sin x)}^{2n + 1}}dx \le \int\limits_0^{\pi /2} {{{(\sin x)}^{2n}}dx \le \int\limits_0^{\pi /2} {{{(\sin x)}^{2n - 1}}dx} } } \]
 d.h.
-\[\frac{{{{({2^n}!)}^2}}}{{(2n + 1)!}} \le \frac{{(2n)!}}{{{{({2^n}n!)}^2}}} \cdot \frac{\pi }{2} \le \frac{{{{\left( {{2^{n - 1}}(n - 1)!} \right)}^2}}}{{(2n - 1)!}}\]
+\[\frac{{{{({2^n} n!)}^2}}}{{(2n + 1)!}} \le \frac{{(2n)!}}{{{{({2^n}n!)}^2}}} \cdot \frac{\pi }{2} \le \frac{{{{\left( {{2^{n - 1}}(n - 1)!} \right)}^2}}}{{(2n - 1)!}}\]
 Also:
-\[\frac{{{{({2^n}!)}^4}}}{{(2n + 1)!}} \cdot \frac{2}{{(2n)!}} \le \pi  \le \frac{{{{({2^n}n!)}^4}}}{{{{(2n!)}^2}}} \cdot \frac{2}{{2n}}\]
+\[\frac{{{{({2^n}n!)}^4}}}{{(2n + 1)!}} \cdot \frac{2}{{(2n)!}} \le \pi  \le \frac{{{{({2^n}n!)}^4}}}{{{{(2n!)}^2}}} \cdot \frac{2}{{2n}}\]
 \[\frac{{{{({2^n}!)}^4}}}{{(2n + 1)}} \cdot \frac{2}{{{{((2n)!)}^2}}} \le \pi  \le \frac{{{{({2^n}n!)}^4}}}{{{{(2n!)}^2}}} \cdot \frac{2}{{2n}}\]
 \[ \Rightarrow \pi  = \mathop {\lim }\limits_{n \to \infty } \frac{1}{n}\frac{{{{({2^n}n!)}^4}}}{{{{(2n!)}^2}}}\text{\hspace{5mm} Wallische Formel.}\]
 
 \subsubsection*{Beispiel 6.24 (Stirlingsche Formel)}
-Für $n\geq 2$ sei $\ln (n!) = \sum\limits_{k = 2}^n {\ln (k)} $. Wir zeigen dass man $\ln\left| k\right|$ sehr gut durch $\int\limits_{k - 1/2}^{k + 1/2} {\ln xdx} $ approximieren.\\
+Für $n\geq 2$ sei $\ln (n!) = \sum\limits_{k = 2}^n {\ln (k)} $. Wir zeigen dass man kann $\ln\left| k\right|$ sehr gut durch $\int\limits_{k - 1/2}^{k + 1/2} {\ln xdx} $ approximieren.\\
 
-Da $x\ln x-x$ Stammfunktion von $\ln(x)$ ist, folgt $\int\limits_{k - 1/2}^{k + 1/2} {\ln xdx}  = \left. {x\ln x - x} \right|_{k - 1/2}^{k + 1/2}$. Darin kommen also $\ln\left(k+\frac{1}{2}\right)$ sowie $\ln\left(k-\frac{1}{2}\right)$ vor. Wir benutzen nun Taylor:\\
+\noindent Da $$x\ln x-x$$ Stammfunktion von $\ln(x)$ ist, folgt $$\int\limits_{k - 1/2}^{k + 1/2} {\ln xdx}  = \left. {x\ln x - x} \right|_{k - 1/2}^{k + 1/2}$$ Darin kommen also $\ln\left(k+\frac{1}{2}\right)$ sowie $\ln\left(k-\frac{1}{2}\right)$ vor. Wir benutzen nun Taylor:\\
 
-Falls $g(x)=\ln(x)$ sei $$g(x)=g(x_0)+g'(x_0)(x-x_0)+\frac{g''(x_0)}{2!}(x-x_0)^2+\frac{g^{(3)}(\xi)}{3!}(x-x_0)^3$$ mit $\xi$ \todo{?zusatzen? page 45 bottom} $x$ und $x_0$.\\
+\noindent Falls $g(x)=\ln(x)$ sei $$g(x)=g(x_0)+g'(x_0)(x-x_0)+\frac{g''(x_0)}{2!}(x-x_0)^2+\frac{g^{(3)}(\xi)}{3!}(x-x_0)^3$$ mit $\xi$ zwischen $x$ und $x_0$.\\
 
-Auf $\left. {\begin{array}{*{20}{c}}
+\noindent Auf $\left. {\begin{array}{*{20}{c}}
 {x = k + \frac{1}{2}}\\
 {{x_0} = k}
 \end{array}} \right\}$ aufgewendet ergibt:
@@ -733,7 +733,7 @@ Auf $\left. {\begin{array}{*{20}{c}}
 wobei $${t_k} = \frac{2}{{{\xi ^3}}}\frac{1}{{3!}}{\left( {\frac{1}{2}} \right)^3} = \frac{1}{{24{\xi ^3}}}$$
 \[\left| {{t_k}} \right| \le \frac{1}{{24{k^3}}}\text{\hspace{10mm}}\xi  \in \left[ {k,k + \frac{1}{2}} \right]\]
 
-Analog:
+\noindent Analog:
 \[\ln \left( {k - \frac{1}{2}} \right) = \ln k - \frac{1}{{2k}} - \frac{1}{{8{k^2}}} + {t'_k}\]
 
 \[\left| {{t'_k}} \right| \le \frac{1}{{24{\left(k-\frac{1}{2}\right)^3}}}\]
@@ -743,13 +743,11 @@ Also:
 $$ - \left[ {\left( {k - \frac{1}{2}} \right)\left( {\ln k - \frac{1}{{2k}} - \frac{1}{{8{k^2}}} + t{'_k}} \right) - \left( {k - \frac{1}{2}} \right)} \right]$$
 $$ = \ln k - \frac{1}{{8{k^2}}} + \left( {k + \frac{1}{2}} \right){t_k} - \left( {k - \frac{1}{2}} \right)t{'_k}$$
 $$ = \ln k + {r_k}\text{\hspace{10mm}}\left| {{r_k}} \right| \le \frac{c}{{{k^2}}}$$
+\noindent Nun folgt:
 
-
-Nun folgt:
-
-\[\ln n! = \sum\limits_{k = 2}^n {\ln k\mathop  = \limits^{( * )} \sum\limits_{k = 2}^n {\int\limits_{k - \frac{1}{2}}^{k + \frac{1}{2}} {\ln xdx} }  - \sum\limits_{k = 2}^n {{r_k}} } \text{\hspace{8mm} mit }( * )=\left( {\int\limits_{k - \frac{1}{2}}^{k + \frac{1}{2}} {\ln xdx = \ln k + {r_k}} } \right) \]
+\[\ln n! = \sum\limits_{k = 2}^n {\ln k\mathop  = \limits^{( * )} \sum\limits_{k = 2}^n {\int\limits_{k - \frac{1}{2}}^{k + \frac{1}{2}} {\ln xdx} }  - \sum\limits_{k = 2}^n {{r_k}} } \text{\hspace{4mm} mit }( * )=\left( {\int\limits_{k - \frac{1}{2}}^{k + \frac{1}{2}} {\ln xdx = \ln k + {r_k}} } \right) \]
 \[ = \underbrace {\int\limits_1^{n + \frac{1}{2}} {\ln xdx} }_{( * )} - \int\limits_1^{\frac{3}{2}} {\ln xdx - \sum\limits_{k = 2}^n {{r_k}} } \]
-\[( * ) = \int\limits_1^{n + \frac{1}{2}} {\ln xdx = \left. {x\ln x - 1} \right|_1^{n + \frac{1}{2}}}  = \left( {n + \frac{1}{2}} \right)\ln \left( {n + \frac{1}{2}} \right) - \left( {n + \frac{1}{2}} \right) + 1\]
+\[( * ) = \int\limits_1^{n + \frac{1}{2}} {\ln xdx = \left. {x\ln x - x} \right|_1^{n + \frac{1}{2}}}  = \left( {n + \frac{1}{2}} \right)\ln \left( {n + \frac{1}{2}} \right) - \left( {n + \frac{1}{2}} \right) + 1\]
 \[ = \left( {n + \frac{1}{2}} \right)\ln \left( {n + \frac{1}{2}} \right) - n + \frac{1}{2}\]
 Ersetzen wir $\ln \left( {n + \frac{1}{2}} \right) = \ln n + \frac{1}{{2n}} - \frac{1}{{8{n^2}}} + {t_n}$ so folgt:
 
@@ -757,10 +755,10 @@ Ersetzen wir $\ln \left( {n + \frac{1}{2}} \right) = \ln n + \frac{1}{{2n}} - \f
 \[ = \left( {n + \frac{1}{2}} \right)\ln n - n + \frac{1}{2} - \frac{1}{{8{n^2}}} + n{t_n} + \frac{1}{{4n}} - \frac{1}{{16{n^2}}} + \frac{1}{2}{t_n} + \frac{1}{2}\]
 \[ = \left( {n + \frac{1}{2}} \right)\ln n - n + 1 + \frac{1}{{8n}} + n{t_n} - \frac{1}{{16{n^2}}} + \frac{1}{2}{t_n}\]
 
-Also:
+\noindent Also:
 \[\ln (n!) = n\ln n + \frac{1}{2}\ln n - n + {a_n}\]
 wobei
-\[{a_n} = \underbrace {\frac{1}{{4n}} + \left( {n + \frac{1}{2}} \right)\left( { - \frac{1}{{8{n^2}}} + {t_n}} \right)}_{\mathop  \downarrow \limits_0 } + \sum\limits_{k = 2}^n {{r_k} - \int\limits_1^{\frac{3}{2}} {\ln xdx} } \]
+\[{a_n} = {\frac{1}{{4n}} + \left( {n + \frac{1}{2}} \right)\left( { - \frac{1}{{8{n^2}}} + {t_n}} \right)} + \sum\limits_{k = 2}^n {{r_k} - \int\limits_1^{\frac{3}{2}} {\ln xdx} } \]
 und $\left| {{r_k}} \right| \le \frac{c}{{{k^2}}} \Rightarrow \sum\limits_{k = 2}^n {{r_k}} $ konvergiert.\\
 
 \noindent Sei $a:=\lim a_n$, $b=e^a$ und $b_n=e^{a_n}$. Also:
@@ -772,7 +770,7 @@ folgt
 
 \[b = \lim {b_n} = \mathop {\lim }\limits_{n \to \infty } \frac{{{b_n}^2}}{{{b_{2n}}}} = \lim {\left( {\frac{{n!}}{{\sqrt n {n^n}{e^{ - n}}}}} \right)^2}\left( {\frac{{\sqrt {2n} {{(2n)}^{2n}}{e^{2n}}}}{{(2n)!}}} \right)\]
 \[ = \mathop {\lim }\limits_{n \to \infty } \frac{{{{(n!)}^2}}}{{(2n)!}}\sqrt {\frac{2}{n}} \frac{{{{(2n)}^{2n}}}}{{{n^{2n}}}} = \mathop {\lim }\limits_{n \to \infty } \frac{{{{(n!)}^2}}}{{(2n)!}}\sqrt {\frac{2}{n}} {2^{2n}} = \mathop {\lim }\limits_{n \to \infty } \frac{{{{({2^n}n!)}^n}}}{{(2n)!}} \cdot \frac{{\sqrt 2 }}{{\sqrt n }}\]
-\[ = \sqrt {2n} \]
+\[ = \sqrt {2\pi} \]
 
 Also $b=\sqrt{2\pi}$ womit 
 \begin{framed}
@@ -796,7 +794,7 @@ Sei
 \item $f:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ stetig
 \item $g:\lbrack\alpha,\beta\rbrack\rightarrow\mathbb{R}$ der klasse $C'$
 \end{itemize}
-so wie $t_0\leq t_1$ in  $\lbrack\alpha,\beta\rbrack$ so dass \todo{Formula unreadable, is C and $C'$ subset??}.
+Sowie $t_0\leq t_1$ in $\lbrack\alpha,\beta\rbrack$ so dass $g\left(\lbrack t_0, t_1\rbrack\right)\subset\lbrack a,b\rbrack$.
 Dann gilt 
 \[\int\limits_{g({t_0})}^{g({t_1})} {f(x)dx = \int\limits_{{t_0}}^{{t_1}} {f\left( {g\left( t \right)} \right)g'\left( t \right)dt} } \]
 
@@ -811,11 +809,10 @@ d.h. $F\circ g$ ist eine Stammfunktion für $f(g(t))g'(t)$. Woraus mit dem Haupt
 
 \subsubsection*{Korollar 6.26}
 \[\int {f(x)dx = \int {f\left( {g(t)} \right)} g'(t)dt + C} \]
-Dies Formel bedeutet folgenden: Die folgende Seite als Funktion von $x$ ist gleich der rechten Seite als Funktion von $t$ vermöge der Relation $$x=g(t)$$$$dx=g'(t)dt$$
+Dies Formel bedeutet folgenden: Die Linke Seite als Funktion von $x$ ist gleich der rechten Seite als Funktion von $t$ vermöge der Relation $$x=g(t)$$$$dx=g'(t)dt$$
 Für die Substitutionsregel 
 \[\int\limits_{{t_0}}^{{t_1}} {f\left( {g(t)} \right)g'(t)dt = \int\limits_{g({t_0})}^{g({t_1})} {f(x)dx} } \]
-gibt es im Prinzip zwei \todo{?lesarten? page 51 top}\\
-
+gibt es im Prinzip zwei lesarten.
 \noindent Mann kann sie entweder von links nach rechts oder von rechts nach links anwenden: 
 \begin{enumerate}
 \item (links $\rightarrow$ rechts)\\
@@ -839,12 +836,12 @@ Liegt ein Integral explizit in der Form \[\int\limits_{{t_0}}^{{t_1}} {f\left( {
 \end{enumerate}
 \item (rechts $\rightarrow$ links)\\
 Ein integral liegt der Gestalt $\int\limits_\alpha ^\beta  {f(x)dx}$ mit gewissen Grenzen $\alpha,\beta\in\mathbb{R}$ vor, das schwer zu berechnen scheint, versucht man dann mittels geeigneten Substitution $x=g(t)$, dieses Integral umzuformulieren, so dass die Substitutionsregel anwendbar ist, wobei $g(t_0)=\alpha$ und $g(t_1)=\beta$ gelten muss. 
-\subsubsection*{Beispiel}
+\subsubsection*{Beispiel 6.26}
 \begin{enumerate}
 \item \[\int\limits_0^1 {\sqrt {1 - {x^2}} dx} \] Also $f(x)=\sqrt{1-x^2}$. Mit der Substituten $x=g(t)=\sin t, t\in \lbrack 0,\pi/2\rbrack, dx=\cos tdt$ ist dann $g(0)=0, g\left(\frac{\pi}{2}\right)=1$ und 
 \[\int\limits_0^1 {\sqrt {1 - {x^2}} } dx = \int\limits_{g(0)}^{g(\pi /2)} {f(x)dx = \int\limits_0^{\pi /2} {f\left( {g(t)} \right)g'(t)dt} } \]
 \[ = \int\limits_0^{\pi /2} {\sqrt {1 - {{\sin }^2}t} \cos tdt\mathop {{\rm{  }} = }\limits^{\text{(\textasteriskcentered )} }} \int\limits_0^{\pi /2} {{{\cos }^2}dt}  = \int\limits_0^{\pi /2} {\frac{1}{2}\left( {1 + \cos 2t} \right)dt} \]
-\[ = \left. {\frac{1}{2}\left( {t + \frac{{\sin 2t}}{2}} \right)} \right|_o^{\pi /2} = \frac{1}{2}\left. {\left( {t + \sin t\cos t} \right)} \right|_0^{\pi /2} = \frac{\pi }{2}\]
+\[ = \left. {\frac{1}{2}\left( {t + \frac{{\sin 2t}}{2}} \right)} \right|_0^{\pi /2} = \frac{1}{2}\left. {\left( {t + \sin t\cos t} \right)} \right|_0^{\pi /2} = \frac{\pi }{2}\]
 
 mit \begin{enumerate}[(\textasteriskcentered )]
 \item $${\cos ^2}(t) = \frac{{1 + \cos 2t}}{2}$$
@@ -898,31 +895,31 @@ $$4ab\int ^{\pi /2}_{0}\sqrt {1-\sin^2t}\cos t dt$$$$=4ab\int ^{\pi /2}_{0}\cos 
 
 
 \section{Integration rationaler Funktionen (Partialbruchzerlegung)}
-Sei $R(x)=\frac{P(x)}{Q(x)}$ eine Rationale Funktion, d.h. $P,Q$ sind polynome mit reelen Koeffizienten. Die Partialbruchzerlegung ist eine Darstellung von $R(x)$ als summe von ''elementen'' rationale Funktionen. Sie basiert auf einem Korollar des Fundamentales Satzes der Algebra, das sagt, dass jedes reelle Polynom ein Produkt von linearen und quadratischen Polynomen mit $\mathbb{R}$ Koeffizienten. 
+Sei $R(x)=\frac{P(x)}{Q(x)}$ eine Rationale Funktion, d.h. $P,Q$ sind polynome mit reelen Koeffizienten. Die Partialbruchzerlegung ist eine Darstellung von $R(x)$ als summe von ''elementaren'' rationale Funktionen. Sie basiert auf einem Korollar des Fundamentales Satzes der Algebra, das sagt, dass jedes reelle Polynom ein Produkt von linearen und quadratischen Polynomen mit $\mathbb{R}$ Koeffizienten. 
 
 \subsubsection*{Satz 6.27}
-Sei $R(x)=\frac{P(x)}{Q(x)}$ eine rationale Funktion. Dann $$R(x)=P_1(x)+\sum ^{n}_{i=1}R_{i}\left( x\right) +\sum ^{n}_{j=1}S_{j}\left( x\right) $$ wobei $P_1=$ polynom $$R_{i}\left( x\right) =\dfrac {a_{i1}}{\left( x-x_{i}\right) }+\dfrac {a_{i2}}{\left( x-x_{i}\right) ^{2}}+\ldots +\dfrac {a_{ir_{i}}}{{\left( x-x_{i}\right)}^{r_i} }$$  $$S_{j}\left( x\right) =\dfrac {b_{j1}x+{d_{j1}}}{\left( \left(x-\alpha_{j}\right)^2+{\beta_{j}}^2\right) }+\dfrac {b_{j2}x+{d_{j2}}}{\left( \left(x-\alpha_{j}\right)^2+{\beta_{j}}^2\right)^2 }+\ldots +\dfrac {b_{j m_j}x+{d_{j m_j}}}{\left( \text{\hspace{8mm}}\right)^{m_j} }$$
+Sei $R(x)=\frac{P(x)}{Q(x)}$ eine rationale Funktion. Dann $$R(x)=P_1(x)+\sum ^{n}_{i=1}R_{i}\left( x\right) +\sum ^{m}_{j=1}S_{j}\left( x\right) $$ wobei $P_1=$ polynom $$R_{i}\left( x\right) =\dfrac {a_{i1}}{\left( x-x_{i}\right) }+\dfrac {a_{i2}}{\left( x-x_{i}\right) ^{2}}+\ldots +\dfrac {a_{ir_{i}}}{{\left( x-x_{i}\right)}^{r_i} }$$  $$S_{j}\left( x\right) =\dfrac {b_{j1}x+{d_{j1}}}{\left( \left(x-\alpha_{j}\right)^2+{\beta_{j}}^2\right) }+\dfrac {b_{j2}x+{d_{j2}}}{\left( \left(x-\alpha_{j}\right)^2+{\beta_{j}}^2\right)^2 }+\ldots +\dfrac {b_{j m_j}x+{d_{j m_j}}}{\left( \left(x-\alpha_{j}\right)^2+{\beta_{j}}^2\right)^{m_j} }$$
 
 Die $\frac{1}{(x-a)}$, $\frac{bx+d}{\left( (x-\alpha )^2 +\beta ^2\right)^m}$ werden ''elementare rationale Funktionen'' genannt und wir wollen dafür Stammfunktionen bestimmen.
 
 \subsubsection*{Bemerkung}
 
 \begin{enumerate}
-\item Das Polynom $P_1(x)$ tritt nur auf, falls $\deg P>\deg Q$. In diesem Fall berechnet mann $p_1(x)$ mit Polynom division und es gilt $p(x)=P_1(x)-Q(x)+P_2(x)$ mit $\deg P_2 < \deg Q$
+\item Das Polynom $P_1(x)$ tritt nur auf, falls $\deg P>\deg Q$. In diesem Fall berechnet mann $P_1(x)$ mit Polynom division und es gilt $p(x)=P_1(x)-Q(x)+P_2(x)$ mit $\deg P_2 < \deg Q$
 \item Das nennerpolynom $Q(x)$ besitze
 \begin{itemize}
-\item Die reelen Nullstellen $x_i$ mit Vielfachkeit $r$\todo{$r$ or $r_i$? page 58 top}
-\item Die Komplexe Nullstellen $z_j=\alpha _j+i\beta_j$ mit Vielfachkeit $m_j$ und damit komplex Konjugierte Nullstellen $\overline{z_j}=\alpha _j-i\beta _j$
+\item Die reelen Nullstellen $x_i$ mit Vielfachheit $r_i$
+\item Die Komplexe Nullstellen $z_j=\alpha _j+i\beta_j$ mit Vielfachheit $m_j$ und damit komplex Konjugierte Nullstellen $\overline{z_j}=\alpha _j-i\beta _j$
 \end{itemize}
 \item Unbekannte Parameter, die bestimmt werden müssen
 $$a_{ik}\text{\hspace{20mm}}k=1,\dots ,r_i\text{\hspace{10mm}}i=1,\dots,n$$
-$$\beta _{jl},\alpha _{jl}\text{\hspace{15mm}}l=1,\dots ,m_j\text{\hspace{10mm}}l=1,\dots,m$$
-Diese Parameter werden durch Koeffizientenvergleich berechnet, die rechte Seite wird dabei auf den \todo{?Haupt? page 58 bottom} gebracht.
+$$\beta _{jl},\alpha _{jl}\text{\hspace{15mm}}l=1,\dots ,m_j\text{\hspace{10mm}}j=1,\dots,m$$
+Diese Parameter werden durch Koeffizientenvergleich berechnet, die rechte Seite wird dabei auf den Hauptnenner gebracht.
 \end{enumerate}
 %%
 \subsubsection{Beispiel}
 $R(x)=\frac{1-x}{x^2(x^2+1)}$
-Ansatz: $$R(x)=\frac{a_1}{x}+\frac{a_2}{x^2}+\frac{b_1x+d_1}{x^2+1}$$$$\Rightarrow 1-x=x(x^2+1)a_1+a_2(x)(x^2+1)+x^2(b_1x+d_1$$
+Ansatz: $$R(x)=\frac{a_1}{x}+\frac{a_2}{x^2}+\frac{b_1x+d_1}{x^2+1}$$$$\Rightarrow 1-x=x(x^2+1)a_1+a_2(x^2+1)+x^2(b_1x+d_1)$$
 Ausmultiplizieren:
 $$1-x=(a_1+b_1)x^3+(a_2+d_1)x^2+a_1x+a_2$$
 Koeffizientenvergleich:
@@ -932,16 +929,25 @@ $$\frac{1-x}{x^2(x^2+1)}=-\frac{1}{x}+\frac{1}{x^2}+\frac{x-1}{x^2+1}$$
 \subsubsection*{Grundtypen der Integration rationaler Funktionen}
 \begin{itemize}
 \item \underline{Typ O:} Polynom:$$\int \sum a_{n}x^{n}dx=\sum a_{n}\dfrac {x^{n+1}}{n+1}+c$$
-\item \underline{Typ I:} Inverse Potenzen \[\int {\frac{{dx}}{{x - {x_0}}}r}  = \left\{ {\begin{array}{*{20}{c}}{\log \left| {x - {x_0}} \right| + c}&{{\text{für = 1}}}\\{\frac{1}{{(1 - r)}}\frac{1}{{{{(x - {x_0})}^{r - 1}}}}}&{{\text{für}} \ge {\rm{2}}}\end{array}} \right.\]
+\item \underline{Typ I:} Inverse Potenzen \[\int {\frac{{dx}}{{(x - {x_0})}^r}}  = \left\{ {\begin{array}{*{20}{c}}
+{\log \left| {x - {x_0}} \right| + c}&{{\text{für = 1}}}\\
+{\frac{1}{{(1 - r)}}\frac{1}{{{{(x - {x_0})}^{r - 1}}}}}&{{\text{für}} \ge {\rm{2}}}
+\end{array}} \right.\]
 
 \item \underline{Typ II:}
 $$\int { \dfrac {bx+d}{\left[ \left( x-\alpha \right) ^{2}+\beta ^{2}\right] ^{m}}dx}$$
 Substitution: $x-\alpha =\beta t$, $dx=\beta dt$ ergibt $$\int {\dfrac {b\lbrack \beta t+\alpha\rbrack +d}{(t^2 +1)^m \beta ^{2m}} \beta dt}$$ Dies hat die allgemeine Form $$\int{\frac{ct+b}{(t^2+1)^m}dt}=c\int{\frac{t}{(t^2 +1)^m}dt}+\int{\frac{b}{(t^2 +1)^m} dt}$$
 $$\int{\frac{t}{(t^2 +1)^m}dt}\text{\hspace{10mm} mit }t^2+1=u, 2t dt=du$$
-$$=\frac{1}{2}\int{\frac{du}{u^m}} = \left\{ {\begin{array}{*{20}{c}}{\frac{{{u^{ - m + 1}}}}{{2(1 - m)}}}&{{\rm{m}} \ge 2}\\{\frac{1}{2}\ln \left| u \right|}&{m = 1}\end{array}} \right. = \left\{ {\begin{array}{*{20}{c}}{\frac{1}{{2(1 - m)}}\frac{1}{{({t^2} + 1)}}(1 - m)}&{{\rm{m}} \ge 2}\\{\frac{1}{2}\ln \left| {1 + {t^2}} \right|}&{m = 1}\end{array}} \right.$$
-
-$$\int{\frac{dt}{(t^2 +1)^m}}$$
-$$\text{Für $m=1$:\hspace{10mm}}\int{\frac{dt}{(t^2 +1)}}=\arctan t$$
+$$=\frac{1}{2}\int{\frac{du}{u^m}} = \left\{ {\begin{array}{*{20}{c}}
+{\frac{{{u^{ - m + 1}}}}{{2(1 - m)}}}&{{\rm{, }}m \ge 2}\\
+{\frac{1}{2}\ln \left| u \right|}&{\text{, }m = 1}
+\end{array}} \right. = \left\{ {\begin{array}{*{20}{c}}
+{\frac{1}{{2(1 - m)}}\frac{1}{{({t^2} + 1)}}(1 - m)}&{{\rm{, }}m \ge 2}\\
+{\frac{1}{2}\ln \left| {1 + {t^2}} \right|}&{\text{, }m = 1}
+\end{array}} \right.$$
+Sei 
+$$I_m :=\int{\frac{dt}{(t^2 +1)^m}}$$
+$$\text{Für $m=1$:\hspace{10mm}}I_1=\int{\frac{dt}{(t^2 +1)}}=\arctan t + C$$
 $$\text{Für $m\geq1$:\hspace{10mm}}I_m:=\int{\frac{dt}{(t^2 +1)^m}}$$
 Partielle Integration ergibt:
 \[{I_m}: = \int {\underbrace 1_{v'} \cdot \frac{1}{{\underbrace {{{({t^2} + 1)}^m}}_u}}dt}  = \frac{t}{{{{({t^2} + 1)}^m}}} + \int {\frac{{t \cdot 2m \cdot t}}{{{{({t^2} + 1)}^{m + 1}}}}dt} \]
@@ -949,23 +955,23 @@ $$=\frac{t}{(t^2 +1)^m} + 2m\int{\frac{t^2 +1-1}{(t^2 +1)^{m+1}}dt}$$
 $$\frac{t}{(t^2 +1)^m}+2m\int{\frac{1}{(t^2 +1)^m}dt}-2m\int{\frac{1}{(t^2 +1)^{m+1}}dt}$$
 $$\Rightarrow I_m=\frac{t}{(t^2 +1)^m}+2m\{ I_m - I_{m+1} \}$$
 woraus $$I_{m+1}=\frac{1}{2m}\left[\frac{t}{(t^2 +1)^m} + \left(\frac{2m-1}{2m}\right)I_m\right]$$
-z.B.$$I_2=\int{\frac{dt}{(t^2 +1)^2}}=\frac{1}{4}\left[ \frac{t}{(t^2 +1)^2}+\frac{3}{4}I_1\right]$$
-$$=\frac{1}{4}\lbrack \frac{t}{(t^2 +1)^2}+\frac{3}{4}\arctan t\rbrack$$
+z.B.$$I_2=\int{\frac{dt}{(t^2 +1)^2}}=\frac{1}{2}\left[ \frac{t}{(t^2 +1)}+\frac{1}{2}I_1\right]$$
+$$=\frac{1}{2}\left[ \frac{t}{(t^2 +1)^2}+\frac{1}{2}\arctan t\right] + C$$
 \end{itemize}
 \subsubsection*{Beispiel 6.28}
 \begin{enumerate}
 \item $$\frac{1}{x^2 -3x -4}=\frac{1}{(x-4)(x+1)}=\frac{A}{x-4}+\frac{B}{x+1}$$
 $$\Rightarrow A(x+1)+B(x-4)=1$$
-$$@x=4\Rightarrow A\cdot 5=1\Rightarrow A=\frac{1}{5}$$
-$$@x=-1\Rightarrow B\cdot (-5)=1\Rightarrow B=-\frac{1}{5}$$
+$$x=4\Rightarrow A\cdot 5=1\Rightarrow A=\frac{1}{5}$$
+$$x=-1\Rightarrow B\cdot (-5)=1\Rightarrow B=-\frac{1}{5}$$
 \[\int {\frac{1}{{{x^2} - 3x - 4}}dx = \frac{1}{5}\int {\left( {\frac{1}{{x - 4}} - \frac{1}{{x + 1}}} \right)dx = \frac{1}{5}} } \ln \left| {\frac{{x - 4}}{{x + 1}}} \right| + c\]
 \item \[\frac{9}{{{x^3} - 3x - 2}} = \frac{9}{{(x - 2){{(x + 1)}^2}}} = \frac{A}{{x - 2}} + \frac{{Bx + C}}{{{{(x + 1)}^2}}}\]
 \[A{(x + 1)^2} + (Bx + C)(x - 2) = 9\]
 
-$$@x=-1\Rightarrow(-B+C)(-3)=9$$
-$$@x=2\Rightarrow A(9)=9\Rightarrow A=1$$
+$$x=-1\Rightarrow(-B+C)(-3)=9$$
+$$x=2\Rightarrow A(9)=9\Rightarrow A=1$$
 $$x=0\Rightarrow A+C(-2)=9\Rightarrow -2C=8\Rightarrow C=-4$$
-$$(-B+C)=3\Rightarrow B=C+3=-1$$
+$$(-B+C)=-3\Rightarrow B=C+3=-1$$
 $$\Rightarrow \frac{9}{x^3-3x-2}=\frac{1}{x-2}+\frac{-x-4}{(x+1)^2}$$
 \[\int {\frac{9}{{{x^3} - 3x - 2}}dx = \int {\left( {\frac{1}{{x - 2}} + \frac{{ - x - 1}}{{{{(x + 1)}^2}}} - \frac{3}{{{{(x + 1)}^2}}}} \right)dx} } \]
 \[ = \ln \left| {x - 2} \right| - \ln \left| {x + 1} \right| + \frac{3}{{x + 1}} + c\]
@@ -976,7 +982,7 @@ Sei $f$ eine unbeschränkte Funktion. Dann ist $f$ nicht R. Integrierbar, z.B. $
 
 \begin{framed}
 \centerline{\textbf{Definition 6.29}}
-\noindent Sei $f$ eine Funktion auf einem offenen Interval $(a,b$, deren Einschränkung auf jedes kompakte Teilinterval $\lbrack a',b'\rbrack$ integrierbar ist. Dann das uneigentliche Integral von $f$ von $a$ bis $b$ definiert als \[\int\limits_a^b {f(x)dx: = \mathop {\lim }\limits_{a' \searrow a} \mathop {\lim }\limits_{b' \nearrow b} } \int\limits_{a'}^{b'} {f(x)dx} \] falls diese Grenzwerte existieren ($a$ und $b$ können $\pm \infty$ sein)
+\noindent Sei $f$ eine Funktion auf einem offenen Interval $(a,b)$, deren Einschränkung auf jedes kompakte Teilinterval $\lbrack a',b'\rbrack$ integrierbar ist. Dann das uneigentliche Integral von $f$ von $a$ bis $b$ definiert als \[\int\limits_a^b {f(x)dx: = \mathop {\lim }\limits_{a' \searrow a} \mathop {\lim }\limits_{b' \nearrow b} } \int\limits_{a'}^{b'} {f(x)dx} \] falls diese Grenzwerte existieren ($a$ und $b$ können $\pm \infty$ sein)
 \end{framed}
 
  \subsubsection*{Bemerkung 6.30}
@@ -984,7 +990,7 @@ Sei $f$ eine unbeschränkte Funktion. Dann ist $f$ nicht R. Integrierbar, z.B. $
 \item Ist $f$ schon auf $\lbrack a,b\rbrack$ definiert und integrierbar, so existiert das Uneigentliche Integral und stimmt mit dem üblichen bestimmten Integral überein.
 \item Ist $f$ schon $\lbrack a,b)$ definiert und auf jedem kompakten Teilinterval der Form $\lbrack a,b'\rbrack$ integrierbar, so gilt schon  \[\int\limits_a^b {f(x)dx = \mathop {\lim }\limits_{b' \nearrow b} } \int\limits_a^b {f(x)dx} \]
 \subsubsection*{Beispiel}
-\[\int\limits_0^\infty  {{e^{ - x}}}  = \mathop {\lim }\limits_{b \to \infty } \int\limits_{{\rm{WHAT}}}^b {{e^{ - x}}dx}  = \lim \left( {\left. { - {e^{ - x}}} \right|_{{\rm{WHAT}}}^b} \right) = \mathop {\lim }\limits_{b \to \infty } \left( { - {e^{ - b}} + 1} \right) = 1\]
+\[\int\limits_0^\infty  {{e^{ - x}}}  = \mathop {\lim }\limits_{b \to \infty } \int\limits_{{0}}^b {{e^{ - x}}dx}  = \lim \left( {\left. { - {e^{ - x}}} \right|_{{0}}^b} \right) = \mathop {\lim }\limits_{b \to \infty } \left( { - {e^{ - b}} + 1} \right) = 1\]
 \item Vorsicht: Die beiden Grenzwerte müssen im allgemeinen unabhängig voneinander genommen werden. 
 \subsubsection*{Beispiel}
 \[\int\limits_{ - b}^b {xdx = 0} \text{\hspace{10mm}}\forall b>0\text{, und daher}\]
@@ -994,7 +1000,7 @@ Die einzelnen Grenzwerte von $\int\limits_a^b {xdx} $ für $b\rightarrow \infty$
 \end{enumerate}
 Als Beispiel beweisen wir folgendes nützliches Konvergenzkriterium für Reihen
 \subsubsection*{Satz 6.30}
-Sei $f:\lbrack 1,\infty )\rightarrow \mathbb{R}$ monoton fallend. Dann konvergiert $\sum\limits_{k = 1}^\infty  {f(k)}$ genau dann wann $\int\limits_1^\infty  {f(x)dx} $ existiert. In diesem Fall gilt: \[0 \le \sum\limits_{k = 1}^\infty  {f(k)}  - \int\limits_1^\infty  {f(x)dx}  \le f(1)\]
+Sei $f:\lbrack 1,\infty )\rightarrow \mathbb{R}_+$ monoton fallend. Dann konvergiert $\sum\limits_{k = 1}^\infty  {f(k)}$ genau dann wann $\int\limits_1^\infty  {f(x)dx} $ existiert. In diesem Fall gilt: \[0 \le \sum\limits_{k = 1}^\infty  {f(k)}  - \int\limits_1^\infty  {f(x)dx}  \le f(1)\]
 \subsubsection*{Beweis}
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
@@ -1031,30 +1037,54 @@ Sei $f:\lbrack 1,\infty )\rightarrow \mathbb{R}$ monoton fallend. Dann konvergie
 \end{tikzpicture}
 \end{center}
 
-$$f(1) + f(2) +  \ldots  + f(n - 1) \ge \int\limits_1^n {f(x)dx \ge f(2) +  \ldots f(n)} $$$$\sum\limits_{k = 1}^n {f(k) - f(n)}  = \sum\limits_{k = 1}^{n - 1} {f(x) \ge \int\limits_1^n {f(x)dx \ge \sum\limits_{k = 1}^{n - 1} {f(k + 1) = } \sum\limits_{k = 1}^n {f(x) - f(1)} } } $$$$\sum\limits_{k = 1}^n {f(k) - f(n) \ge \int\limits_1^n {f(x)dx \ge \sum\limits_{k = 1}^n {f(k) - f(1)} } } \text{\hspace{10mm}(\textasteriskcentered)} $$ $$\Rightarrow f(0) \le \sum\limits_{k = 1}^n {f(k) - \int\limits_1^n {f(x)dx \le f(1)} } $$
+
+$$f(1) + f(2) +  \ldots  + f(n - 1) \ge \int\limits_1^n {f(x)dx \ge f(2) +  \ldots f(n)} $$
+$$\sum\limits_{k = 1}^n {f(k) - f(n)}  = \sum\limits_{k = 1}^{n - 1} {f(x) \ge \int\limits_1^n {f(x)dx \ge \sum\limits_{k = 1}^{n - 1} {f(k + 1) = } \sum\limits_{k = 1}^n {f(x) - f(1)} } } $$
+$$\sum\limits_{k = 1}^n {f(k) - f(n) \ge \int\limits_1^n {f(x)dx \ge \sum\limits_{k = 1}^n {f(k) - f(1)} } } \text{\hspace{10mm}(\textasteriskcentered)} $$
+ $$\Rightarrow 0<f(n) \le \sum\limits_{k = 1}^n {f(k) - \int\limits_1^n {f(x)dx \le f(1)} } $$
 Aus \[\sum\limits_{k = 1}^{n - 1} {f(k) \ge \int\limits_1^n {f(x)dx} } \] folgt das, \[\sum\limits_{k = 1}^\infty  {f(k) < \infty  \Rightarrow \int\limits_1^\infty  {f(x)dx < \infty } } \] und, aus \[\int\limits_1^n {f(x)dx \ge \sum\limits_{k = 1}^{n - 1} {f(k + 1)} } \] folgt dass \[\int\limits_1^\infty  {f(x)dx < \infty  \Rightarrow \sum\limits_{k = 1}^\infty  {f(k) < \infty } } \]
-Aus (\textasteriskcentered) folgt: \[f(0) \le \sum\limits_{k = 1}^\infty  {f(k)}  - \int\limits_1^\infty  {f(x)dx \le f(1)} \]
+Aus (\textasteriskcentered) folgt: \[0<f(n) \le \sum\limits_{k = 1}^\infty  {f(k)}  - \int\limits_1^\infty  {f(x)dx \le f(1)} \]
 
 \subsubsection*{Beispiel 6.31}%Page 68, top
 \begin{enumerate}
 \item $\sum {(s) = \sum\limits_{k = 1}^\infty  {\frac{1}{{{k^s}}}} } $ existiert für alle $s>1$ 
-$$\int\limits_1^\infty  {\frac{1}{{{x^s}}}dx}  = \mathop {\lim }\limits_{b \to \infty } \int\limits_1^b {{x^{ - s}}dx}  = \lim \left\{ {\begin{array}{*{20}{c}}{\log \left| b \right|}&{s = 1}\\{\left. {\frac{{{x^{ - s + 1}}}}{{1 - s}}} \right|_1^b}&{s > 1}\end{array}} \right. $$$$= \left\{ {\begin{array}{*{20}{c}}{\text{divergent falls }s = 1}\\{\text{konvergent gegen }\frac{1}{{s - 1}}}\end{array}} \right.$$
+$$\int\limits_1^\infty  {\frac{1}{{{x^s}}}dx}  = \mathop {\lim }\limits_{b \to \infty } \int\limits_1^b {{x^{ - s}}dx}  = \lim \left\{ {\begin{array}{*{20}{c}}
+{\log \left| b \right|}&{s = 1}\\
+{\left. {\frac{{{x^{ - s + 1}}}}{{1 - s}}} \right|_1^b}&{s > 1}
+\end{array}} \right. $$$$= \left\{ {\begin{array}{*{20}{c}}
+{\text{divergent falls }s = 1}\\
+{\text{konvergent gegen }\frac{1}{{s - 1}}}
+\end{array}} \right.$$
 und
-$$f(0) = 0 \le \sum\limits_{n = 1}^\infty  {{n^{ - s}}}  - \int\limits_1^\infty  {f(x)dx}  \le f(1) = 1$$$$ \Rightarrow \frac{1}{{s - 1}}\sum\limits_{n = 1}^\infty  {{n^{ - s}}}  \le 1 + \frac{1}{{s - 1}} = \frac{s}{{s - 1}}$$
+$$0 \le \sum\limits_{n = 1}^\infty  {{n^{ - s}}}  - \int\limits_1^\infty  {f(x)dx}  \le f(1) = 1$$$$ \Rightarrow \frac{1}{{s - 1}}\sum\limits_{n = 1}^\infty  {{n^{ - s}}}  \le 1 + \frac{1}{{s - 1}} = \frac{s}{{s - 1}}$$
 \item \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx}  =  - \int\limits_{ - \infty }^0 {x{e^{ - {x^2}}}dx}  + \int\limits_0^\infty  {x{e^{ - {x^2}}}dx}  = 2\int\limits_0^\infty  {x{e^{ - {x^2}}}dx} \]
 \[\int\limits_0^b {x{e^{ - {x^2}}}dx = \frac{1}{2}\int\limits_0^{{b^2}} {{e^{ - u}}du} }\text{\hspace{10mm} mit }u=x^2, du=2xdx \]
 \[ = \frac{1}{2}\left( {1 - {e^{ - {b^2}}}} \right) \to \frac{1}{2}\text{ für }b\rightarrow \infty\]
 Somit gilt \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx = 1} \]
 \item Wir haben die folgende einfache aber wichtige Beispiele
 \begin{enumerate}
-\item \[\int\limits_{ - \infty }^\infty  {\frac{{dx}}{{{x^s}}}}  = \left\{ {\begin{array}{*{20}{c}}{\begin{array}{*{20}{c}}{\frac{{{a^{1 - s}}}}{{s - 1}}}&\text{für}&{s > 1}\end{array}}\\{\begin{array}{*{20}{c}}\infty &{{\text{für}}}&{s \le 1}\end{array}}\end{array}} \right.\]
+\item \[\int\limits_{ a }^\infty  {\frac{{dx}}{{{x^s}}}}  = \left\{ {\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+{\frac{{{a^{1 - s}}}}{{s - 1}}}&\text{für}&{s > 1}
+\end{array}}\\
+{\begin{array}{*{20}{c}}
+\infty &{{\text{für}}}&{s \le 1}
+\end{array}}
+\end{array}} \right.\]
 
-\item Für alle $a<b$ und $s\in\mathbb{R}$ gilt \[\int\limits_a^b {\frac{{dx}}{{{{(x - a)}^s}}}}  = \left\{ {\begin{array}{*{20}{c}}{\begin{array}{*{20}{c}}{\frac{{{{(b - a)}^{1 - s}}}}{{1 - s}}}&\text{für}&{s < 1}\end{array}}\\{\begin{array}{*{20}{c}}\infty &{{\text{für}}}&{s \ge 1}\end{array}}\end{array}} \right.\]
+\item Für alle $a<b$ und $s\in\mathbb{R}$ gilt \[\int\limits_a^b {\frac{{dx}}{{{{(x - a)}^s}}}}  = \left\{ {\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+{\frac{{{{(b - a)}^{1 - s}}}}{{1 - s}}}&\text{für}&{s < 1}
+\end{array}}\\
+{\begin{array}{*{20}{c}}
+\infty &{{\text{für}}}&{s \ge 1}
+\end{array}}
+\end{array}} \right.\]
 \end{enumerate}
 \end{enumerate}
 \subsubsection*{Satz 6.32 (Majorantenkriterium)}
 \begin{enumerate}[\indent a)]
-\item Sei $f:\lbrack a,\infty )\rightarrow\mathbb{R}$ stetig. Dann gilt $\forall x:\left| f(x)\right| <g(x)$ und $\int\limits_a^\infty  {g(x)}$ konvergent $\Rightarrow \int {f(x)dx} $ (absolut) konvergent.
+\item Sei $f:\lbrack a,\infty )\rightarrow\mathbb{R}$ stetig. Dann gilt $$\forall x:\left| f(x)\right| <g(x)$$ und $\int\limits_a^\infty  {g(x)}$ konvergent $\Rightarrow \int {f(x)dx} $ (absolut) konvergent.
 \item Weiterhin gilt folgende Umkehrung: $\forall x:0\leq g(x)\leq f(x)$ und $\int\limits_a^\infty  {g(x)}$ divergent $\Rightarrow \int\limits_a^\infty  {f(x)}$ divergent.
 \end{enumerate}
 
@@ -1063,10 +1093,10 @@ Somit gilt \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx 
 \item \[\int\limits_0^\infty  {\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{5/3}}}}dt}  < \int\limits_0^\infty  {\frac{{{t^2}}}{{{{\left( {6{t^2}} \right)}^{5/3}}}}dt}  < \int {\frac{c}{{{t^{4/3}}}}dt < \infty } \]
 $$\Rightarrow\int\limits_0^\infty  {\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{5/2}}}}dt} \text{ konvergiert}$$
 \item \[\int\limits_0^\infty  {\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{3/2}}}}dt} \]   
-\[\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{3/2}}}} > \frac{{{t^2}}}{{{{\left( {12{t^2}} \right)}^{3/2}}}} > \frac{c}{t}\text{\hspace{10mm}}z\geq 1\]
+\[\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{3/2}}}} > \frac{{{t^2}}}{{{{\left( {12{t^2}} \right)}^{3/2}}}} > \frac{c}{t}\text{\hspace{10mm}}t\geq 1\]
 \[\Rightarrow\int\limits_0^\infty  {\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{5/2}}}}} dt\text{ divergiert weil }\int\limits_0^\infty  {\frac{c}{t}} dt\text{ divergiert}\]
 \item Exponentialintegral:
-\[{E_i}(x): = \int\limits_{ - \infty }^\infty  {\frac{{{e^t}}}{t}dt} \text{ für }x<0\]
+\[{E_i}(x): = \int\limits_{ - \infty }^x  {\frac{{{e^t}}}{t}dt} \text{ für }x<0\]
 Da $\mathop {\lim }\limits_{t \to  - \infty } t{e^t} = 0$, gibt es $c>0$ mit $\left| {t{e^t}} \right| \le c$, $\forall t\in\lbrack -\infty ,x\rbrack$, und somit gilt \[\left| {\frac{{{e^t}}}{t}} \right| = \left| {\frac{{t{e^t}}}{{{t^2}}}} \right| \le \frac{c}{{{t^2}}}\] Mit der Konvergenz des Integrals $\int\limits_{ - \infty }^x {\frac{1}{{{t^2}}}dt} $ folgt die (Absolut) Konvergenz des $E_i(x)$ für alle $x<0$
 \end{enumerate}
 
