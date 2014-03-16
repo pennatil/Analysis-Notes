@@ -1,13 +1,22 @@
 \documentclass[]{article}
 \input{Packages.tex}
+
 \begin{document}
 
-\begin{tabular}{r l c c c}
-Naturzahl & $\mathbb{N}$&$=$& $\{0,1,2,\dots\}$& addieren und multiplizieren\\
-~& $\cap$ &~&~&~\\
-LOOK TODO & $\mathbb{Z}$&$=$& $\{\dots ,-2,-1,0,1,2,\dots\}$& subtrairen\\
-~& $\cap$ &~&~&~\\
-Rationalzahlen & $\mathbb{Q}$&$=$& $\left\{ {\left. {\frac{p}{q}} \right|p,q \in \mathbb{Z},q\not  = 0} \right\}$& dividieren\\
-\end{tabular}
-\todo{Before set Z, can't read, page 22}
+\begin{center}
+\begin{tikzpicture}
+\node[circle,fill=black,inner sep=1.5mm] (a) at (0,0) {};
+\draw[<->](-2,0)--(-2,2);
+\draw[->] (0,0) -- (0,1.5);
+\draw[->] (0,0) -- (0,-1.5);
+\draw[] (-2.5,2) -- (0.5,2);
+\draw[dotted, very thick] (-2,0) -- (0,0);
+\node[] at (-2.5,0){$x(t)$};
+\node[] at (1.3,2){$x(0)=0$};
+\node[] at (0.5,0){$m$};
+\node[] at (0.5,1.4){$a\dot x(t)$};
+\node[] at (0,-1.7){$mg$};
+\end{tikzpicture}
+\end{center}
+
 \end{document}

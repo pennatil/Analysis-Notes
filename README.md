@@ -26,14 +26,14 @@ If you wish to contribute to the notes, there are two ways:
 <ul>
 <li>If you have no experience with LaTex or GitHub:
 <ol>
-<li>Make sure you have a GitHub account</li>
+<li>Make sure you have a GitHub account, otherwise create one. Please use the same name as your ETHZ account, makes m life much easier if I have to contact you.</li>
 <li>On the right side of this page, click on the "Issues" tab</li>
-<li>Open a new issue, stating:
+<li>Check if no one else has posted the same Issue. If no one has, Open a new issue, stating:
 <ul>
 <li>Chapter + Page Number</li>
-<li>Issue found, plus the eventual correction</li>
+<li>Issue found, plus the eventual correction(s)</li>
 </ul>
-<li>Send the Issue, I will probably just close the Issue and send you a message or email.
+<li>Send the Issue, I will probably just close the Issue and send you a message or email once I have corrected the problem.
 </ol>
 <li>If you are familiar with Latex and GitHub:
 <ol>
