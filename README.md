@@ -4,22 +4,33 @@ This repo contains all the handwritten notes from Professor Imamoglu's Analysis 
 
 Getting the material
 ====================
-Download the master branch [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip "Master Archive"). Once done, unzip it and you will get a the latest PDF. The PDF might not be as up to date as the source files, if you wish to have the latest version, you have to build it yourself. Look at the Building section. 
-
-File Hierarchy
-==============
-main.tex is the main file to compile, from there all of the chapters are included using the \input{''name of file''} command. Packages are included as well, and can be found in the file Packages.tex. 
+In order to get the material, there are two ways:
+<ol>
+<li>Get a PDF file, containing all of the notes. This version might not be as up to date as the source files, but it is usually corrected and checked. Use this option of you are not familiar with LaTex or GitHub</li>
+<li>Typeset (Build) it yourself from source. This is in order to have the latest version available, kind of like beta for software. (WARNING: MIGHT CONTAIN ERRORS IN THE TEXT)</li>
+</ol>
+<ul>
+<li>For option 1</li>
+<ol>
+<li>Download the .zip archive <a href="https://github.com/pennatil/Analysis-Notes/archive/master.zip">here</a></li>
+<li>Unzip it, you will find a folder named "Notes", open it</li>
+<li>Look for a PDF file named "main.pdf". Move it and rename it if you like</li>
+<li>You can now delete the "Notes" folder</li>
+</ol>
+<li>For Option 2</li>
+<ol><li>Take a look at the "Building" section in this document</li></ol></ul>
 
 Building
 ========
 This is only for people familiar with LaTex. If you have never used it before, just use the PDF included in the .zip archive!
 
 First of all make sure you have a working LaTex distribution installed on your system. If you don't just google ''latex ''+ your OS, download and install. 
-Download the master Branch, unzip it and open the file Packages.tex. Make sure that you have all of these packages installed.
+Download the master Branch, unzip it and open the file Packages.tex. Make sure that you have all of these packages installed (especially if you are on linux).
 <ul>
-<li>If you use the terminal, navigate to the folder and build main.tex</li>
+<li>If you use the terminal, navigate to the folder and build main.tex. Build it at least 2 times!!</li>
 <li>If you use an ''IDE'', just open main.tex and create a pdf using the export button (most of them have one)</li>
 </ul>
+
 Contributing
 ============
 If you wish to contribute to the notes, there are two ways:
