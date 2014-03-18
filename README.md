@@ -10,15 +10,19 @@ In order to get the material, there are two ways:
 <li>Typeset (Build) it yourself from source. This is in order to have the latest version available, kind of like beta for software. (WARNING: MIGHT CONTAIN ERRORS IN THE TEXT)</li>
 </ol>
 <ul>
-<li>For option 1</li>
-<ol>
-<li>Download the .zip archive <a href="https://github.com/pennatil/Analysis-Notes/archive/master.zip">here</a></li>
-<li>Unzip it, you will find a folder named "Notes", open it</li>
-<li>Look for a PDF file named "main.pdf". Move it and rename it if you like</li>
-<li>You can now delete the "Notes" folder</li>
-</ol>
-<li>For Option 2</li>
-<ol><li>Take a look at the "Building" section in this document</li></ol></ul>
+  <li>For option 1</li>
+    <ol>
+      <li>Download the .zip archive <a href="https://github.com/pennatil/Analysis-Notes/archive/master.zip">here</a></li>
+      <li>Unzip it, you will find a folder named "Notes", open it</li>
+      <li>Look for a PDF file named "main.pdf". Move it and rename it if you like</li>
+      <li>You can now delete the "Notes" folder</li>
+    </ol>
+  <li>For Option 2</li>
+    <ol>
+      <li>Take a look at the "Building" section in this document</li>
+    </ol>
+</ul>
+
 
 Building
 ========
