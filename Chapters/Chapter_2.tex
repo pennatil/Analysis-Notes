@@ -193,8 +193,95 @@ Es ist klar dass $c$ ist eine obere Schranke für $A$. Also $c\in B$. Da $c\leq 
 \item Falls $E\subset F$ und $F$ nach oben beschränkt ist, gilt $\sup E\leq \sup F$ 
 \item Falls $E\subset F$ und $F$ nach unten beschränkt ist, gilt $\inf F\leq \inf E$ 
 \item Falls $\forall x\in E$, $\forall y\in F$ gilt $x\leq y$ dann folgt $\sup E\leq\inf F$ 
-\item 
+\item Seien $E,F\not=\emptyset$, $E,F,\subset\mathbb{R}$, $h\in\mathbb{R}$, $h>0$ \todo{page is clipped, page 34 bottom}
+\begin{enumerate}[(i)]
+\item Falls $E$ ein sup. besitzt $\Rightarrow \exists x\in E$ mit $x>\sup E$\todo{can't read, is it E-h? page 34 bottom}
+\item Falls $E$ ein Inf besitzt $\Rightarrow \exists y\in : y<\inf E+h$. Das Supremum, $\sup\Romanbar{X}=\sigma$ der Menge $\Romanbar{X}$ ist folgendermassen characterisiert: Es gibt in $\Romanbar{X}$ keine Zahlen $>\sigma$; aber für jede Toleranz $h>0$ gibt es in $\Romanbar{X}$ Zahlen $>\sigma -h$ \missingfigure{page 34.1 Inf week 3 an1}Es gibt in $\Romanbar{X}$ keine Zahlen $<\inf\Romanbar{X}=$\todo{faded color, can't read, page 34.1 middle to bottom} aber für jede Toleranz $h>0$ gibt es in $\Romanbar{X}$ Zahlen $<\inf \Romanbar{X}+h$
+\item Sei $E+F=\{ e+f:e\in E,f\in F\}$. Falls $E$ und $F$ ein Sup. besitzen $\Rightarrow E+F$ besitzt ein Sup und $\sup (E+F)=\sup(E)+\sup(F)$. (Analog mit Inf.) 
 \end{enumerate}
+\end{enumerate}
+\subsubsection*{Beweis}
+\todo{Ask for full Beweis!!}
+\subsubsection*{Beispiel}
+\begin{enumerate}
+\item $E=(+\infty,2)\subset F(-\infty,4\rbrack$\\
+$\sup E=2, \sup F=4=\max F$\\
+$E$ hat kein Max: $\sup E\leq \sup F$
+\item $G:\lbrack 4,5)\subset H=(3,6)$\\
+$\min E=\inf G=4\geq \inf H=3$
+\item $K=(3,\infty)$, $E=(-\infty,2)$\\
+$\forall x\in E$, $y\in K$ gilt $x\leq y$\\
+$2=\sup E\leq 3=\inf K$
+\item $A\{\sin x\mid x\in\mathbb{R}\}$\\
+$\inf S=-1=\min A$\\
+$\sup A=1=\max A$
+\item $A=\{\left( 1+\frac{1}{n}\right)^n\mid n\in\mathbb{N} \}$. Wir werden sehen dass $A$ ist nach unten und nach unten beschränkt. \\
+$\inf A=\min A=2$, $\sup A=e=2.718\dots$
+\underline{Vereinbarung}\todo{Check for better layout}\\
+Für nach oben unbeschränkte Mengen $A\not=\emptyset$ setzen wir $\sup A=\infty$ unendlich. Analog fèr nach unten unbeschränkte Menge $\emptyset\not= A$ setzen wir $\inf A=-\infty$ 
+\end{enumerate}
+Die Folgende Satz zeigt wie die Ordnungsvollständigkeit von $\mathbb{R}$ die Lösbarkeit gewisser Gleichungen in $\mathbb{R}$ garantiert.
+
+\subsubsection*{Satz 2.12}
+Für jedes $x>0$ gibt es genau ein $y>0$ mit $y^2=x$. Diese Lösung wird mit $\sqrt{x}$ bezeichnet.\\
+
+(Im Allgemein: Für jedes $x>0$ und $n\geq 1$, $n\in\mathbb{R}$ gibt es genau ein $y>0$ mit $y^2=0$. Diese Lösung wird mit $\sqrt[n]{x}$ bezeichnet)
+\subsubsection*{Beweis}
+Sei $x>1$, und $A:=\{ z\in\mathbb{R}\mid z>0$ mit $z^2\leq x\}$. Dann ist $A$ nach oben beschränkt und $A\not=\emptyset (1\in A)$. \todo{Not sure, page 35 bottom}$\Rightarrow A$ besitzt ein Supremum. \\
+Sei $y:=\sup A$. Wir zeigen dass $y^2=x$
+\begin{itemize}
+    \item Schnitt 1: Annahme $y^2<x$. \\ 
+    Sei $0\leq h\leq 1$.  Wir nehmen $$\left( y+h\right)^2=y^2+2hy+h^2$$
+    $$=y^2+h(2y+h)$$
+    $$\leq y^2+h(2y+1)$$
+    $$=y^2 +h\left( (y+1)^2 -y^2\right)$$
+    Weil $y^2<x$ ist, $\frac{x-y^2}{(y+1)^2-y^2}>0$ und daher gibt es $h\in\mathbb{R}$, $h>0$, $h\leq\frac{x-y^2}{(y+1)^2-y^2}$ (sei $h=\min \{1,\frac{x-y^2}{2x+1}\}$)\\
+    
+    Für solche $h$ gilt $$(y+h)^2\leq y^2 + \left( \frac{x-y^2}{(y+1)^2-y^2}\right)\left( (y+1)^2 -y^2\right)=$$\todo{chopped result, page 35.1} Also $y+h\in A$ und $y+h>y$. Ein widerspruch: $y$ ist eine obere schranke für $A$, d.h., $z<y$\\$\Rightarrow y^2\geq x$ Analog beweist man $y^2\leq x$
+    \item Schnitt 2: Annahme $y^2>x$\\
+    Sei $h=\frac{y^2-x}{2y}\not=0$ 
+    $$(y-h)^2=y^2-2hy+h^2>y^2-2hy=y^2 -(y^2-=x$$\todo{Chopped, page 35.2 top}
+    $\Rightarrow y-h$ ist eine Obere Schranke für $A$
+    $$\left( \forall z \in A, z^2\leq x\text{\newline Da }(y-h)^2>x \text{ ist, } (y-h)^2>x\geq z^2\text{\newline Damit } y-h>z, \forall z \in A\right)$$\todo{break into three lines, page 35.2}
+    Aber $y-h<y$, wiederspruch zur Minimalität von y.
+\end{itemize}
+Falls $0<x<1$, dann $\frac{1}{x}>1$\\
+$\Rightarrow \exists u\in\mathbb{R}$, mit $u^2=\frac{1}{x}$\\
+Somit $\left( \frac{1}{u}\right)^2=x$ und $y=\frac{1}{u}$ ist eine Lösung von $y^2=x$.\\
+
+Zum Abschluss dieses Themas erwähren wir noch eine Wichtige Eigenschaft der Reelen Zahlen
+
+\subsubsection*{Satz 2.13 (Archimedische Eigenschaft)}
+Zu jeder Zahl $0<b\in\mathbb{R}$ gibt es ein $n\in\mathbb{N}$ mit $b<n$.
+\subsubsection*{Beweis (Indirekt)}
+Andernfalls gibt es $b\in\mathbb{R}$ mit $n\leq b$, $\forall n\in\mathbb{N}$ $$\left( \lnot\left(\exists n\in\mathbb{N}:b<n\right)=\left(\forall n\in\mathbb{N}:b\geq n\right)\right)$$
+Dann ist $b$ eine obere Schranke für $\mathbb{N}$ und es existiert $c=\sup\mathbb{N}\in\mathbb{R}$. Mit $n\in\mathbb{R}$ ist jedoch auch $n+1\in\mathbb{N}$.\\
+Also: $n+1\leq c$, $\forall n\in\mathbb{N}$. Somit folgt $n\leq c-1$, $\forall n\in\mathbb{N}$ ein widerspruch zur minimalität von \todo{Chopped content, page 36 bottom}.
+
+\subsubsection*{Korollar 2.14}
+\begin{enumerate}
+    \item Seien $x>0$ und $y\in\mathbb{R}$ gegeben. Dann gibt es $n\in\mathbb{Z}$ mit $y<nx$
+    \item Falls $x,y,a\in\mathbb{R}$ die ungleichkeiten $a\leq x\leq a+\frac{y}{n}$, $\forall n\in\mathbb{N}$ erfüllen, ist $x=a$.
+\end{enumerate}
+\subsubsection*{Beweis}
+
+\begin{enumerate}
+    \item ASK FOR BEWEIS\todo{Ask for beweis}
+    \item $a<x\Rightarrow x-a>0\Rightarrow \exists n\in\mathbb{N}$\\
+$\Rightarrow x>a+\frac{y}{n}$ Widerspruch
+\end{enumerate}
+Wir wissen dass gewisse Gleichungen in $\mathbb{R}$ Lösbar ist: z.B. $y^2=a$, $\forall a>0$. Aber man kann nicht alle GLeichugen in $\mathbb{R}$ lösen, z.B. $x^2+1=0$. Da für alle $x\in\mathbb{R}$, $x^2>0$, ist $x^2=-1$ nicht lösbar. Um eine Lösung für diese Gleichung zu finden, müssen wir die komplexen Zahlen betrachten.\\
+
+\noindent Zuerst, werden wir die Euklidischen Räume $\mathbb{R}^n$ einführen
+\section{Euklidische Räume}
+Von der Mengentheorie können wir die Kartesische Produkt zweier Mengen; es Lässt sich ohne schwierigkeiten zu endlichen Familien $A_1,\dots ,A_n$ verallgemeinen; nähmlich $$A_1\times\dots\times A_n:=\{\left(x_1,\dots ,x_n\right):x_i\in A_i \}$$ ist die Menge der geordneten $n-$tuple von Elementen aus $A_1,\dots ,A_n$.\\
+
+Für beliebige $n\geq 1$ betrachten wir $\mathbb{R}^n:=\underbrace{\mathbb{R}\times\dots\times\mathbb{R}}$\todo{Add n-mal to underbrace}  und untersuchen Seine Struktur. Auf $\mathbb{R}^n$ haben wir zwei Verknüpfungen
+\begin{itemize}
+    \item $+:\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}^n$ Addition.
+\end{itemize}
+
+
 
 
 

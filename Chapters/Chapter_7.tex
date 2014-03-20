@@ -126,16 +126,23 @@ Die Lösung ist $$y(x)=c_1e^{-4x}+c_2e^{-6x}$$
 \section{Inhomogene DGL}
 Bisher haben wir nur Homogene Lineare DGL mit konstanten Koeffizienten betrachtet. Sehr oft treten auch Zusatzterme in den Gleichung auf. Wir haben der Folgende Allgemeine Satz für die Lösungsstruktur linearer DGL
 \subsubsection*{Satz 7.7}
-Die allgemeine Lösung einer inhomogenen DGL $$y^{(n)}+a_{n-1}y^{(n-1)}+\dots +a_1y'+a_0y=b(x)$$ ist die Summe einer ''spezielle'' Lösung der inhomogenen DGL und der allgemeinen Lösung der zugehörigen homogenen DGL $$\underbrace {{y_A}(x)}_{\scriptstyle{\text{Allgemeine Losung }}\hfill\atop\scriptstyle{\text{der inhomogene DGL}}\hfill} = \underbrace {{y_S}(x)}_{\scriptstyle{\text{Spezielle Losung }}\hfill\atop\scriptstyle{\text{der inhomogene DGL}}\hfill} + \underbrace {{y_{AH}}(x)}_{\scriptstyle{\text{Allgemeine Losung }}\hfill\atop\scriptstyle{\text{der Homogene DGL}}\hfill}$$
+Die allgemeine Lösung einer inhomogenen DGL $$y^{(n)}+a_{n-1}y^{(n-1)}+\dots +a_1y'+a_0y=b(x)$$ ist die Summe einer ''spezielle'' Lösung der inhomogenen DGL und der allgemeinen Lösung der zugehörigen homogenen DGL $$\underbrace {{y_A}(x)}_{\scriptstyle{\text{Allgemeine Losung }}\hfill\atop
+\scriptstyle{\text{der inhomogene DGL}}\hfill} = \underbrace {{y_S}(x)}_{\scriptstyle{\text{Spezielle Losung }}\hfill\atop
+\scriptstyle{\text{der inhomogene DGL}}\hfill} + \underbrace {{y_{AH}}(x)}_{\scriptstyle{\text{Allgemeine Losung }}\hfill\atop
+\scriptstyle{\text{der Homogene DGL}}\hfill}$$
 \subsubsection*{Besipiel}
 $$y''+y=\sin x$$
 Um diese inhomogene DGL zu lösen, benötigen wir die allgemeine Lösung der zugehörigen homogene DGL $y''+y=0$$$p(\lambda)=\lambda^2+1=0\Rightarrow y_{AH}(x)=c_1\sin x+c_2\cos x$$ Nun wird noch eine spezielle Lösung der inhomogene DGL $y''+y=\sin x$ benötigt. Wir verifizieren dass $y(x)=-\frac{1}{2}x\cos x$ eine derartige Lösung ist
 $$y'(x)=-\frac{1}{2}\cos x+\frac{1}{2}x\sin x$$
 $$y''(x)=\frac{1}{2}\sin x+\frac{1}{2}\sin x+\frac{1}{2}x\cos x=\sin x+\frac{1}{2}x\cos x$$
-$$y''(x)+y(x)=\sin x+\frac{1}{2}x\cos x-\frac{1}{2}x\cos x=\sin x$$ Die allgemeine Lösung der inhomogenes DGL ist damit $$y(x) = \underbrace { - \frac{1}{2}x\cos x}_{\scriptstyle{\text{Spezielle Losung }}\hfill\atop\scriptstyle{\text{der inhomogene DGL}}\hfill} + \underbrace {{c_1}\sin x + {c_2}\cos x}_{\scriptstyle{\text{Allgemeine Losung }}\hfill\atop\scriptstyle{\text{der Homogene DGL}}\hfill}$$
+$$y''(x)+y(x)=\sin x+\frac{1}{2}x\cos x-\frac{1}{2}x\cos x=\sin x$$ Die allgemeine Lösung der inhomogenes DGL ist damit $$y(x) = \underbrace { - \frac{1}{2}x\cos x}_{\scriptstyle{\text{Spezielle Losung }}\hfill\atop
+\scriptstyle{\text{der inhomogene DGL}}\hfill} + \underbrace {{c_1}\sin x + {c_2}\cos x}_{\scriptstyle{\text{Allgemeine Losung }}\hfill\atop
+\scriptstyle{\text{der Homogene DGL}}\hfill}$$
 \subsubsection*{Bemerkung}
 Man kann als Speziell Lösung der inhomogenes DGL auch $$y(x)=-\frac{1}{2}x\cos x+5\sin x$$ wählen. Dann gilt auch hier $y''+y=\sin x$. Die allgemeine Lösung der inhomogenes DGL 
-$$y(x) = \underbrace { - \frac{1}{2}x\cos x + 5\sin x}_{\scriptstyle{\text{Spezielle Lösung }}\hfill\atop\scriptstyle{\text{inhomogenes DGL}}\hfill} + \underbrace {{k_1}\sin x + {k_2}\cos x}_{\scriptstyle{\text{Allgemeine Lösung }}\hfill\atop\scriptstyle{\text{homogenes DGL}}\hfill}$$ Sie unterscheidet sich nicht von der Lösung $$y(x)=-\frac{1}{2}x\cos x+c_1\sin x+c_2\cos x$$$$c_1=5+k$$
+$$y(x) = \underbrace { - \frac{1}{2}x\cos x + 5\sin x}_{\scriptstyle{\text{Spezielle Lösung }}\hfill\atop
+\scriptstyle{\text{inhomogenes DGL}}\hfill} + \underbrace {{k_1}\sin x + {k_2}\cos x}_{\scriptstyle{\text{Allgemeine Lösung }}\hfill\atop
+\scriptstyle{\text{homogenes DGL}}\hfill}$$ Sie unterscheidet sich nicht von der Lösung $$y(x)=-\frac{1}{2}x\cos x+c_1\sin x+c_2\cos x$$$$c_1=5+k$$
 \subsubsection*{Frage:}
 Wie kann man eine spezielle Lösung finden?
 \subsubsection*{Antwort:}
@@ -147,20 +154,35 @@ Zur Lösung der inhomogenes DGL kann man in vielen Fällen einen so genannte ''A
 \begin{enumerate}
 \item Wir betrachten die DGL $$y''+y'-6y=3e^{-4x}$$Die Zugehörige homogenes DGL $$y''+y'-6y=0$$$$p(\lambda)=\lambda^2+\lambda-6=0\text{\hspace{5mm}}\lambda_{1,2}=2,-3$$ Die Allgemeine Lösung der Homogenes DGL ist $$y(x)=c_1e^{-3x}+c_2e^{2x}$$ Zur Lösung der inhomogenes DGL verwenden wir einen ''Ansatz vom Typ der Rechten Seite'', gehen also davon aus, dass die spezielle Lösung der inhomogenes DGL die ähnliche Gestalt hat (als die Störfunktion) $$y_s(x)=Ke^{-4x}$$Für die Ableitungen des Ansatzes haben wir $$y_s'(x)=-4Ke^{-4x}$$$$y''_s(x)=16Ke^{-4x}$$Eingesetzt in die homogenes DGL ergibt sich $$y''+y'-6y=16Ke^{-4x}-4Ke^{-4x}-6Ke^{-4x}=6Ke^{-4x}=3e^{-4x}$$Also $6K=3\Rightarrow K=\frac{1}{2}$. Damit ist $y_s(x)=\frac{1}{2}e^{-4x}$ und die allgemeine Lösung der DGL $$y(x)=\frac{1}{2}e^{-4x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\mathbb{R}$$
 \item $$y''+y'-6y=50\sin x$$ Wählen wir als ''Ansatz vom Typ der rechten Seite''
-$${y_s}(x) = {K_1}\sin x + {K_2}\cos x$$$$y{'_s}(x) = {K_1}\cos x - {K_2}\sin x$$$$y'{'_s}(x) =  - {K_1}\sin x - {K_2}\cos x$$$$y'' + y' - 6y =  - {K_1}\sin x - {K_2}\cos x + {K_1}\cos x - {K_2}\sin x + 6{K_1}\sin x + 6{K_2}\cos x$$$$ = ( - 7{K_1} - {K_2})\sin x + ( - 7{K_2} + {K_1})\cos x$$$$ = 50\sin x$$$$ \Rightarrow  - 7{K_2} + {K_1} = 0 \Rightarrow {K_1} = 7{K_2}$$$$ - 7{K_1} - {K_2} = 50 \Rightarrow  - 49{K_2} - {K_2} = 50$$$$ \Rightarrow {K_2} =  - 1,{K_1} =  - 7$$
+
+$${y_s}(x) = {K_1}\sin x + {K_2}\cos x$$
+$$y{'_s}(x) = {K_1}\cos x - {K_2}\sin x$$
+$$y'{'_s}(x) =  - {K_1}\sin x - {K_2}\cos x$$
+$$y'' + y' - 6y =  - {K_1}\sin x - {K_2}\cos x + {K_1}\cos x - {K_2}\sin x + 6{K_1}\sin x + 6{K_2}\cos x$$
+$$ = ( - 7{K_1} - {K_2})\sin x + ( - 7{K_2} + {K_1})\cos x$$
+$$ = 50\sin x$$
+$$ \Rightarrow  - 7{K_2} + {K_1} = 0 \Rightarrow {K_1} = 7{K_2}$$
+$$ - 7{K_1} - {K_2} = 50 \Rightarrow  - 49{K_2} - {K_2} = 50$$
+$$ \Rightarrow {K_2} =  - 1,{K_1} =  - 7$$
 $$y_s(x)=-7\sin x-\cos x$$
 Damit ist die allgemeine Lösung der inhomogenes DGL $$y(x)=-7\sin x-\cos x+c_1e^{-3x}+c_2e^{2x}$$
 \end{enumerate}
 Ein problem ergibt sich, wenn als Störfunktion eine Lösung der homogenes DGL erscheint:
 \begin{enumerate}[\indent 3.]
 \item $$y''+y'-6y=e^{2x}$$''Der Ansatz vom Typ der rechten Seite''$$y(x)=Ke^{2x}$$ führt nicht weiter da dieser Ansatz eingesetzt in homogenes DGL 0 ergeben muss und nicht $e^{2x}$. Wir führen nun der Ansatz
-$$y(x)=Kxe^{2x}$$$$y'(x) = K{e^{2x}} + 2Kx{e^{2x}}$$$$y''(x) = 2K{e^{2x}} + 2K{e^{2x}} + 4Kx{e^{2x}}$$$$y'' + y' - 6y = 4Kx{e^{2x}} + 4Kx{e^{2x}} + K{e^{2x}} + 2Kx{e^{2x}} - 6Kx{e^{2x}}$$$$ = 5K{e^{2x}} = 10{e^{2x}}$$
+$$y(x)=Kxe^{2x}$$
+$$y'(x) = K{e^{2x}} + 2Kx{e^{2x}}$$
+$$y''(x) = 2K{e^{2x}} + 2K{e^{2x}} + 4Kx{e^{2x}}$$
+$$y'' + y' - 6y = 4Kx{e^{2x}} + 4Kx{e^{2x}} + K{e^{2x}} + 2Kx{e^{2x}} - 6Kx{e^{2x}}$$
+$$ = 5K{e^{2x}} = 10{e^{2x}}$$
 $$\Rightarrow K=2$$
 Der Ansatz führte also auf die Lösung $$y_s(x)=2xe^{2x}$$
 Ingesamt: $$y(x)=2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\mathbb{R}$$
 \item $$y''+y=\sin x$$$$y_H=c_1\sin x+c_2\cos x$$
 Für die Spezielle Lösung zu finden, wählen wir den Ansatz vom Typ der rechten Seite
-$${y_s}(x) = x\left( {{K_1}\sin x + {K_2}\cos x} \right)$$$$y{'_s}(x) = \left( {{K_1}\sin x + {K_2}\cos x} \right) + x\left( {{K_1}\cos x - {K_2}\sin x} \right)$$$$y'{'_s}(x) = {K_1}\cos x - {K_2}\sin x + {K_1}\cos x - {K_2}\sin x + x\left( { - {K_1}\sin x - {K_2}\cos x} \right)$$
+$${y_s}(x) = x\left( {{K_1}\sin x + {K_2}\cos x} \right)$$
+$$y{'_s}(x) = \left( {{K_1}\sin x + {K_2}\cos x} \right) + x\left( {{K_1}\cos x - {K_2}\sin x} \right)$$
+$$y'{'_s}(x) = {K_1}\cos x - {K_2}\sin x + {K_1}\cos x - {K_2}\sin x + x\left( { - {K_1}\sin x - {K_2}\cos x} \right)$$
 Eingesetzt in die DGL ergibt sich
 $$y'{'_s}(x) + y(x) = 2{K_1}\cos x - 2{K_2} - x({K_1}\sin x + {K_2}\cos x) + x({K_1}\sin x + {K_2}\cos x)$$
 $$=2K_1\cos x-2K_2 \sin x=\sin x$$
@@ -168,3 +190,85 @@ $$\Rightarrow 2K_1=0, -2K_2=1\Rightarrow K_1=-\frac{1}{2}$$
 $$\Rightarrow y_s(x)=-\frac{1}{2}x\cos x$$
 $$y_A=-\frac{1}{2}x\cos x+c_1 \sin x+c_2\cos x$$
 \end{enumerate}
+Zur Lösung der Inhomogene Differentialgleichung mit konstanten Koeffizienten, kann man einen ''Ansatz vom Typ der rechten Seite'' wählen. Die Idee ist dass die Lösungsfunktion und Störfunktion ähnlich sind.
+
+\renewcommand{\arraystretch}{1.6}
+\begin{tabularx}{\textwidth}{|Y|Y|}
+\hline
+Störfunktion & Ansatz für Lösung $y_s(x)$  \\\hline\hline
+$P_n(x)$        & $Q_n(x)=a_nx^n+\dots+a_0$  \\ [1.5ex]\hline
+$Ke^{ax}$        & $Ke^{ax}$  \\ [1.5ex]\hline
+$A\sin bx$        & $K_1\sin bx +K_2\cos bx $  \\ [1.5ex]
+$A\cos bx$        & ~  \\ [1.5ex]\hline
+$Ae^{\alpha x}\sin \beta x$        & $K_1e^{\alpha x}\sin\beta x+K_2 e^{\alpha x}\cos\beta x$  \\ [1.5ex]
+$Be^{\alpha x}\cos \beta x$        & ~  \\ [1.5ex]\hline
+$P_n(x)e^{\alpha x}\sin\beta x$        & $e^{\alpha x}\lbrack R_n(x)\sin\beta x+S_n(x)\cos\beta x\rbrack$  \\ [1.5ex]\hline
+ \end{tabularx}\\
+
+wobei $P_n,Q_n,S_n,R_n$ Polynome von Grad $n$ sind.
+\subsubsection*{Bemerkung 7.9}
+\begin{enumerate}
+\item \todo{Where is the end of this list??}Liegt eine Linearkombination der Störfunktion vor, so hat man auch als Ansatz eine entsprechende Linearkombination zu wählen. Dies ist Superprinzip
+\subsubsection*{Beispiel}
+Die DGL $y''+y'-6y=50\sin x$ hat die spezielle Lösung $$y_s(x)=-7\sin x-\cos x$$ und die DGL $y''+y'-6y=10e^{2x}$ hat die spezielle Lösung $$y_s(x)=2xe^{2x}$$Die DGL $y''+y'-6y=50\sin x+10e^{2x}$ hat die spezielle Lösung $$y_s(x)=-7\sin x-\cos x+2xe^{2x}$$ Die allgemenine Lösung $$y(x)=-7\sin x -\cos x+2xe^{2x}+c_1e^{-3x}+c_2e^{2x}$$
+\subsection*{Superpositionsprinzip}\todo{not sure about positioning, check later}
+Ist $y_1(c)$ eine spezielle Lösung der L. Differentialgleichung $$y^{(n)}(x)+a_{n-1}(x)y^{(n-1)}(x)+\dots +a_0(x)y=b_1(x)$$ und $y_2(x)$ eine spezielle Lösung der LDGL $$y^n(x)+\dots +a_0(x)y=b_2(x)$$ dann ist $y_1(x)+y_2(x)$ eine Spezielle Lösung der DGL $$y^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\dots+a_0(x)y=b_1(x)+b_2(x)$$
+\item Falls $\lambda=\alpha +i\beta$ ($\beta$ kann null sein) eine $m-$fache Nullstelle der characteristichen Polynoms von (Resonanzfall) $$(H)\hspace{10mm}y^n(x)+a_ny^{(n-1)}+\dots +a_0=0$$\todo{check centering of formula}so muss man den Ansatz für $y_s(x)$mit dem Faktor $x^m$ multiplizieren.
+\subsubsection*{Beispiel}
+$y''+y=\sin x$ hat die spezielle Lösung $y_s=-\frac{1}{2}x\cos x$
+\missingfigure{Page 97}
+\subsection*{Zusatzbedingungen einer DGL. Anfangs und Randbedingungen}
+Die in der allgemeinen Lösung einer DGL $n-$ter Ordnung auftretenden parameter lassen sich durch Zusatzbedingungen festlegen. Physikalische sinnvolle Zusatzbedingungen werden maist in der Form von Anfangsbedingungen oder Randbedingungen vorgegeben. \\
+
+Durch Vorgabe von derartigen Bedingungen eliminiert man die Parameter aus der allgemeinen Lösung der DGL und erhölt damit eine partikuläre Lösung.
+\subsubsection*{Besipiel 7.10}
+Freifall mit Reibung 
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\node[circle,fill=black,inner sep=1.5mm] (a) at (0,0) {};
+\draw[<->](-2,0)--(-2,2);
+\draw[->] (0,0) -- (0,1.5);
+\draw[->] (0,0) -- (0,-1.5);
+\draw[] (-2.5,2) -- (0.5,2);
+\draw[dotted, very thick] (-2,0) -- (0,0);
+\node[] at (-2.7,0){$x(t)$};
+\node[] at (1.7,2){$x(0)=0$};
+\node[] at (1,0){$m$};
+\node[] at (1,1.2){$a\dot x(t)$};
+\node[] at (0,-1.8){$mg$};
+\end{tikzpicture}
+\end{center}
+$m\ddot{x}=mg-a\dot{x}$. Anfangsbedingungen: $x(0)=0; v(0)=\dot{x}(0)=0$
+$$mx''(t)+ax'(t)=mg$$
+$$(H)\hspace{10mm}mx''(t)+ax'(t)=0$$
+$$p(\lambda)=m\lambda^2+a\lambda=0\Rightarrow \lambda=0,\lambda=-\frac{a}{m}$$
+$$x_h(t)=c_1+c_2e^{-\frac{a}{m}t}$$
+Für die spezielle Lösung, wählen wir als Ansatz $x_s(t)=kt$ \todo{Add big bracket page 99}
+$$x'(t)=k\hspace{10mm}x''(t)=0$$
+$$mx''(t)+ax'(t)=ak=mg\Rightarrow k=\frac{mg}{a}$$
+Allgemeine Lösung 
+$$x(t)=x_h(t)+x_s(t)=c_1+c_2e^{-\frac{a}{m}t}+\frac{mg}{a}t$$
+Anfangsbedingungen
+$$x(0)=0=c_1+c_2=0$$
+$$x'(t)=c_2\left(-\frac{a}{m}\right)e^{-\frac{a}{m}t}+\frac{mg}{a}=0$$
+$$x'(0)=0\Rightarrow c_2\left( -\frac{a}{m}\right) +\frac{mg}{a}=0$$
+$$c_2=\frac{m^2g}{a^2}\hspace{10mm}c_1=-\frac{m^2g}{a^2}$$
+$$\Rightarrow x(t)=-\frac{m^2g}{a^2}+\frac{m^2g}{a^2}e^{-\frac{a}{m}t}+\frac{mg}{a}t$$
+$$x(t)=\frac{mg}{a}t-\frac{m^2g}{a^2}\left[ 1-e^{-\frac{a}{m}t}\right]$$
+\end{enumerate}
+Eine partihuläre Lösung einer DGL $n-$ter Ordnung $$y'{(n)}+a_nx^{n-1}+\dots+a_0=b(x)$$ kann man aus der allgemeine Lösung \todo{do y and x have anything on top?? page 101 top}
+$$y(x)=y(x,c_1,c_2,\dots,c_n)$$ der DGL erhalten
+\begin{itemize}
+\item Durch die Vorgabe von Anfangsbedingungen 
+$$y(x_0)=A_0$$
+$$y'(x_0)=A_1$$
+$$y^{(n-1)}(x_0)=A_n$$
+(Funktionswert und weitere Ableitungen bis zur $(n-1)-$ten an einer speziellen stelle $x_0$.
+\item Durch die Vorgabe von Randbedingungen 
+$$y(x_1)=B_1, y(x_2)=B_2, \dots, y(x_n)=B_n$$ Funktionswerte an $n$ verschiedene Stellen
+\end{itemize}
+\subsubsection*{Beispiel 7.11}
+Lineares Federpendel:
+$$mx''(t)+K_1x=0, \omega^2=\frac{K}{m}$$
+$$x''(t)+\omega^2x=0\hspace{10mm}(H)$$
+%page 102, top
