@@ -5,17 +5,11 @@
 
 \begin{center}
 \begin{tikzpicture}
-\node[circle,fill=black,inner sep=1.5mm] (a) at (0,0) {};
-\draw[<->](-2,0)--(-2,2);
-\draw[->] (0,0) -- (0,1.5);
-\draw[->] (0,0) -- (0,-1.5);
-\draw[] (-2.5,2) -- (0.5,2);
-\draw[dotted, very thick] (-2,0) -- (0,0);
-\node[] at (-2.5,0){$x(t)$};
-\node[] at (1.3,2){$x(0)=0$};
-\node[] at (0.5,0){$m$};
-\node[] at (0.5,1.4){$a\dot x(t)$};
-\node[] at (0,-1.7){$mg$};
+\draw[->](-0.5,0)--(3.5*pi,0);
+\draw[->](0,-3.5)--(0,3.5);
+\draw [smooth,black,domain=0:3.2*pi] plot (\x, {-0.5*\x *cos(\x r)});
+\draw(0,0)--(3.2*pi,5);
+\draw(0,0)--(3.2*pi,-5);
 \end{tikzpicture}
 \end{center}
 
