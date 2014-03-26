@@ -196,7 +196,50 @@ Es ist klar dass $c$ ist eine obere Schranke für $A$. Also $c\in B$. Da $c\leq 
 \item Seien $E,F\not=\emptyset$, $E,F,\subset\mathbb{R}$, $h\in\mathbb{R}$, $h>0$ \todo{page is clipped, page 34 bottom}
 \begin{enumerate}[(i)]
 \item Falls $E$ ein sup. besitzt $\Rightarrow \exists x\in E$ mit $x>\sup E$\todo{can't read, is it E-h? page 34 bottom}
-\item Falls $E$ ein Inf besitzt $\Rightarrow \exists y\in : y<\inf E+h$. Das Supremum, $\sup\Romanbar{X}=\sigma$ der Menge $\Romanbar{X}$ ist folgendermassen characterisiert: Es gibt in $\Romanbar{X}$ keine Zahlen $>\sigma$; aber für jede Toleranz $h>0$ gibt es in $\Romanbar{X}$ Zahlen $>\sigma -h$ \missingfigure{page 34.1 Inf week 3 an1}Es gibt in $\Romanbar{X}$ keine Zahlen $<\inf\Romanbar{X}=$\todo{faded color, can't read, page 34.1 middle to bottom} aber für jede Toleranz $h>0$ gibt es in $\Romanbar{X}$ Zahlen $<\inf \Romanbar{X}+h$
+\item Falls $E$ ein Inf besitzt $\Rightarrow \exists y\in : y<\inf E+h$. Das Supremum, $\sup\Romanbar{X}=\sigma$ der Menge $\Romanbar{X}$ ist folgendermassen charakterisiert: Es gibt in $\Romanbar{X}$ keine Zahlen $>\sigma$; aber für jede Toleranz $h>0$ gibt es in $\Romanbar{X}$ Zahlen $>\sigma -h$ 
+
+
+\begin{center}
+\begin{tikzpicture}
+
+\draw [black] (0.5,-0.1) rectangle (2,0.1); 
+\draw [black] (2.5,-0.1) rectangle (2.8,0.1); 
+\draw [black] (3.5,-0.1) rectangle (3.8,0.1); 
+\draw [black] (3.9,-0.1) rectangle (4.2,0.1); 
+\draw [black] (4.5,-0.1) rectangle (4.9,0.1); 
+\draw [black] (4.95,-0.1) rectangle (5.35,0.1); 
+\draw(5.35,0.5)--(5.35,-0.5);
+\draw(5.7,0.5)--(5.7,-0.5);
+\draw [black] (5.35,-0.1) rectangle (5.55,0.1); 
+\draw [black] (5.58,-0.1) rectangle (5.68,0.1); 
+\node[anchor=west,scale=0.7] at (5.8,-0.3){$\sigma =\sup M$};
+
+\draw [black,decorate,decoration={brace,amplitude=2pt,mirror},xshift=0.4pt,yshift=-0.4pt](5.35,-0.5) -- (5.7,-0.5) node[black,midway,yshift=-8] {\footnotesize $h$};
+\draw[](0,0)--(6,0);
+
+\draw[](0,-2)--(6,-2);
+
+\begin{scope}[yscale=1,xscale=-1,xshift=-170]
+\draw [black] (0.5,-2.1) rectangle (2,-1.9); 
+\draw [black] (2.5,-2.1) rectangle (2.8,-1.9); 
+\draw [black] (3.5,-2.1) rectangle (3.8,-1.9); 
+\draw [black] (3.9,-2.1) rectangle (4.2,-1.9); 
+\draw [black] (4.5,-2.1) rectangle (4.9,-1.9); 
+\draw [black] (4.95,-2.1) rectangle (5.35,-1.9); 
+\draw [black] (5.35,-2.1) rectangle (5.55,-1.9); 
+\draw [black] (5.58,-2.1) rectangle (5.68,-1.9); 
+\end{scope}
+\draw(0.625,-1.5)--(0.625,-2.5);
+\draw(0.295,-1.5)--(0.295,-2.5);
+\draw(5.7,0.5)--(5.7,-0.5);
+
+\draw [black,decorate,decoration={brace,amplitude=2pt,mirror},xshift=0.4pt,yshift=-0.4pt](0.295,-2.5) -- (0.625,-2.5) node[black,midway,yshift=-8] {\footnotesize Inf F};
+\end{tikzpicture}
+\end{center}
+
+
+
+Es gibt in $\Romanbar{X}$ keine Zahlen $<\inf\Romanbar{X}=$\todo{faded color, can't read, page 34.1 middle to bottom} aber für jede Toleranz $h>0$ gibt es in $\Romanbar{X}$ Zahlen $<\inf \Romanbar{X}+h$
 \item Sei $E+F=\{ e+f:e\in E,f\in F\}$. Falls $E$ und $F$ ein Sup. besitzen $\Rightarrow E+F$ besitzt ein Sup und $\sup (E+F)=\sup(E)+\sup(F)$. (Analog mit Inf.) 
 \end{enumerate}
 \end{enumerate}
@@ -277,9 +320,241 @@ Wir wissen dass gewisse Gleichungen in $\mathbb{R}$ Lösbar ist: z.B. $y^2=a$, $
 Von der Mengentheorie können wir die Kartesische Produkt zweier Mengen; es Lässt sich ohne schwierigkeiten zu endlichen Familien $A_1,\dots ,A_n$ verallgemeinen; nähmlich $$A_1\times\dots\times A_n:=\{\left(x_1,\dots ,x_n\right):x_i\in A_i \}$$ ist die Menge der geordneten $n-$tuple von Elementen aus $A_1,\dots ,A_n$.\\
 
 Für beliebige $n\geq 1$ betrachten wir $\mathbb{R}^n:=\underbrace{\mathbb{R}\times\dots\times\mathbb{R}}$\todo{Add n-mal to underbrace}  und untersuchen Seine Struktur. Auf $\mathbb{R}^n$ haben wir zwei Verknüpfungen
+\begin{enumerate}
+    \item $+:\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}^n$ Addition.\\
+$\left( {\underbrace {\left( {{x_1}, \ldots ,{x_n}} \right)}_x,\underbrace {\left( {{y_1}, \ldots ,{y_n}} \right)}_y} \right) \to \underbrace {\left( {{x_1} + {y_1}, \ldots ,{x_n} + {y_n}} \right)}_{{\text{Komponentenweise Addition}}}$. Dann ist $\left( \mathbb{R}^n,+\right)$ eine Abelische Gruppe, mit $0:=(0,\dots,0)$ aln neutrales Element
+\item $\cdot:\mathbb{R}\times\mathbb{R}^n\rightarrow\mathbb{R}^n$ Skalarmultiplikation.\\
+$(\lambda,x)\rightarrow\lambda\cdot x:=(\lambda x_1,\dots,\lambda x_n)$. Dann gelten die folgende Eigenschaften: $\forall x,y\in\mathbb{R}^n,\forall \alpha,\beta\in\mathbb{R}$ 
+\begin{enumerate}
+\item Distributivität: $\left( \alpha+\beta\right) x=\alpha x+\beta x$
+\item Distributivität: $\alpha\left(x+y\right) = \alpha x+\alpha y$
+\item Assoziativität: $\left( \alpha\beta\right) x=\alpha\left( \beta\right) x$
+\item Einzelelement: $1\cdot x=x$
+\end{enumerate}
+\end{enumerate}
+
+\begin{framed}
+\centerline{\textbf{Definition 2.15}}
+\noindent Eine Menge $\mathbb{V}$ ,it $+,\cdot$ und $0\in\mathbb{V}$ so dass $\left(\mathbb{V},+\right)$ eine Abelische Gruppe mit Neutralen Element 0 ist und zudem (a)-(d) gelten nennt sich ein Vektorraum über den Körper $\mathbb{R}$ und seine Elemente heissen Vektoren
+\end{framed}
+Also ist $\mathbb{R}^n$ ein Vektorraum. In der Linearen Algebra führt man dann Begriffe wie Basis usw. ein. Die Standard basis von $\mathbb{R}^n$ ist die Menge $\{e_1,e_2,\dots,e_n \}$ wobei $e_i:=\{0,\dots,0,1,\dots,0\}$ \\
+
+Jeder Vektor $x=\left(x_1,\dots,x_n \right)\in\mathbb{R}$ besitzt eine eindeutige Darstellung $x=\sum x_ie_i$ bezüglich der Standardbasis.
+
+\begin{framed}
+\centerline{\textbf{Definition 2.16}}
+\begin{enumerate}
+\item Das Skalarprodukt zweier Vektoren $x=\left(x_1,\dots,x_n \right),y=\left(y_1,\dots,y_n \right)$ ist die durch \[ < x,y > : = \sum\limits_{i = 1}^n {{x_i}{y_i}} \] definierte reele Zahl\\ $<\cdot,\cdot>=\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}$ (orthogonal)
+\item Falls $<x,y>=0$ heissen $x$ und $y$ senkrecht aufeinander. $<\cdot,\cdot>$ besitzt folgende Eigenschaften
+\begin{enumerate}
+\item Symmetrie: $<x,y>=<y,x>$
+\item Linearität: $<x,\alpha y+\beta z>=\alpha <x,y>+\beta <x,z>$
+\item Positivität: $<x,x>\geq 0$ mit Gleicheit genau dann wenn $x=0$
+\end{enumerate}
+\end{enumerate}
+\end{framed}
+
+\begin{framed}
+\centerline{\textbf{Definition 2.17}}
+\noindent Die Norm $\left|\left| x\right|\right|$ eines Vektors ist: $$\left|\left|x\right|\right| := \sqrt{<x,x>}=\sqrt{\sum\limits_{i = 1}^n {{x_i}}}$$ wird oft als Länge interpretiert.
+\subsubsection*{Beispiel 2.18}
 \begin{itemize}
-    \item $+:\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}^n$ Addition.
+    \item
+
+$\left|\left|(1,2)\right|\right|=\sqrt{1+4}$ 
+
+
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+\draw[->](-0.5,0)--(3,0);
+\draw[->](0,-0.5)--(0,3);
+\draw(1,0)--(1,2);
+\draw(-0.2,1)--(0.2,1);
+\draw(-0.2,2)--(0.2,2);
+\draw(1,-0.2)--(1,0.22);
+\draw(2,-0.2)--(2,0.2);
+\node[anchor=west] at (1,2){$(1,2)$};
+\node[anchor=east] at (-0.2,2){$2$};
+\node[anchor=east] at (-0.2,1){$1$};
+\node[anchor=north] at (1,-0.2){$1$};
+\node[anchor=north] at (2,-0.2){$2$};
+
+\node[circle,fill=black,inner sep=1] (a) at (1,2) {};
+\end{tikzpicture}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+    \item $\left|\left|(1,1,1)\right|\right|=\sqrt{3}$
+\begin{center}
+\begin{tikzpicture}[scale=1,smooth,
+                        line cap=round,line join=round]
+    %% Define coordinate labels.
+    % t(op) and b(ottom) layers
+    \path \foreach \layer/\direction in {b/{0,0,0},t/{0,1,0}} {
+        (\direction)
+        \foreach \point/\label in {{0,0,0}/ll,{1,0,0}/lr,{1,0,-1}/ur,{0,0,-1}/ul} {
+            +(\point) coordinate (\layer\label)
+        }
+        ($(\layer ll)!0.5!(\layer ur)$) coordinate (\layer md)
+    };
+
+    % Put text next to the labels as requested.
+    % Funilly enough we need to set fill opacity to 1.
+
+
+    % Draw left cube.
+    \fill (0,0,-1) circle (1pt);
+    \foreach \direction in {(0,0,1),(0,1,0),(1,0,0)} {
+        %\draw[dashed,black] (bul) -- + \direction;
+    }
+    \draw (bll) -- (blr) -- (tlr) -- (tll) -- cycle;
+    \draw (blr) -- (bur) -- (tur) -- (tlr) -- cycle;
+    \draw (tll) -- (tlr) -- (tur) -- (tul) -- cycle;
+    \foreach \point in {bll,blr,bur,tll,tlr,tul,tur} {
+        \fill[fill opacity=1] (\point) circle (1pt);
+    }
+\draw[->](0,0,-1)--(0,0,1);
+\draw[->](0,0,-1)--(0,2,-1);
+\draw[->](0,0,-1)--(2,0,-1);
+\draw[->,thick](2.2,1.5,1)--(1.1,1,0);
+\node[anchor=west,scale=0.8] at (2.2,1.5,1){$(1,1,1)$};
+
+    \end{tikzpicture}
+\end{center}
+
+    \item $\left|\left|e_i\right|\right|=1$, $<e_i,e_j>=0$. $e_i \perp e_j$\\
+$\{e_1,e_2,\dots,e_n\}$ ist eine orthonormale Basis. Sie sind orthogonal und auf Länge 1 normiert.
 \end{itemize}
+\end{framed}
+Die erste wichtige Eigenschaft eines Skalaprodukts ist
+\subsubsection*{Satz 2.19 (Cauchy-Schwarz)}
+$\forall x,y\in\mathbb{R}^n$ gilt $\left| <x,y>\right| \leq \left|\left| x\right|\right| \left|\left| y\right|\right|$ und $$\left| <x,y>\right|=\left|\left| x\right|\right| \left|\left| y\right|\right|\Leftrightarrow \exists\lambda\in\mathbb{R}: x=\lambda y$$
+
+Die Euklidische Norm hat die Eigenschaften
+\subsubsection*{Satz 2.20}
+\begin{itemize}
+    \item $\left|\left| \alpha x\right|\right|=\left|\alpha\right|\left|\left| x\right|\right|$ (Homogenität)
+    \item $\left|\left| x+y\right|\right| \leq \left|\left| x\right|\right| + \left|\left| y\right|\right|$ (Dreiecks Ungleichung)
+\end{itemize}
+
+\subsubsection*{Beweis}
+\begin{itemize}
+    \item ASK FOR BEWEIS \todo{ASK FOR BEWEIS}
+    \item $${\left|\left| x+y\right|\right|}^2=<x+y,x+y>$$
+$$=<x,x+y>+<y,x+y>$$
+$$<x,x>+<x,y>+<y,x>+<y,y>$$
+$$<x,x>+2<x,y>+<y,y>$$
+$$\leq {\left|\left| x \right|\right|}^2 + 2\left( <x,y>\right) + {\left|\left| y \right|\right|}^2$$
+$$\leq {\left|\left| x \right|\right|}^2 + 2{\left|\left| y \right|\right|}  {\left|\left| x \right|\right|} + {\left|\left| x \right|\right|}^2$$
+\end{itemize}
+
+\section{Die Komplexen Zahlen}
+Da für alle $x\in\mathbb{R}$ $x^2\geq 0$, gibt es $\sqrt{-1}$ nicht als reelle Zahl. Seit 18 Jahrhundert haben Mathematiker mit Ausdrücke $a+b\sqrt{-1}$, $a,b\in\mathbb{R}$ gerechnet und auf sie die in $\mathbb{R}$ geltenden Rechnenregel angewendt, z.B. $$\left( 1+2\sqrt{-1}\right)\left( 1-2\sqrt{-1}\right) = 1^2 + 2^2\left( \sqrt{-1}\right)^2$$
+Allgemein:
+$$\left( a+b\sqrt{-1} \right)\left( c+d\sqrt{-1}\right) = ac + ad\sqrt{-1} + bc\sqrt{-1}+bd\sqrt{-1}$$
+$$=\left( ac-bd\right)+\left(ad+bc\right)\sqrt{-1}$$
+Das Problem ist hier, dass $\sqrt{-1}$ keinen präzisen Mathematisches Sinn hat und dass deshalb auch nicht klar ist, was ''$+$'' in ''$a+b\sqrt{-1}$'' heissen soll. \\
+
+\noindent Das Problem is wie folgt gelöst:\\
+
+Als model von ''$a+b\sqrt{-1}$'', $\mathbb{C}$, nehmen wir $\mathbb{R}^2$. Wir haben schon eine Addition von vektoren und das neutral Element \todo{Chopped content, page 42 middle}. Wir definieren dann die Multiplikation $$\mathbb{R}^2 \times\mathbb{R}^2 \rightarrow \mathbb{R}^2$$ $$(x,y)\rightarrow x\cdot y $$
+wobei $x\cdot y=(ac-bd,ad+bc)$, $x=(a,b)$, $y=(c,d)$. Dann erfüllen ''$+$'' und ''$\cdot$'' folgende Eigenschaften:
+\begin{itemize}
+\item Assos: $\left((a,b)(c,d)\right)(e,f)=(a,b)\left((c,d)(e,f) \right)$
+\item Neutrales Element: $(1,0)(a,b)=(a,b)$
+\item Kommutativ: $(a,b)(c,d)=(c,d)(a,b)$
+\item Inverses Element $\forall (a,b)\not = (0,0)$ in $\mathbb{R}^2$ $\exists(x,y)\in\mathbb{R}^2$ mit $(a,b)(x,y)=(1,0)$
+\item DIstributivität: $\left( (a,b)+(c,d)\right)\cdot (e,f)=(a,b)(e,f)+(c,d)(e,f)$
+\end{itemize}
+
+\begin{framed}
+\centerline{\textbf{Definition 2.21}}
+\noindent Der Körper der komplexen Zahlen $\mathbb{C}$ ist $\mathbb{R}^2$ versehen mit ''$+$'',''$\cdot$'', $0=(0,0)$ und $(1,0)=1$
+\end{framed}
+
+\subsubsection*{Bemerkung 2.22}
+$z^2+1=0$ hat in $\mathbb{C}$ eine Lösung. Nämlich ist $(0,1)(0,1)=(-1,0)=-(1,0)=1$. Wir führen für $(0,1)$ die Bezeichnung ''$i$'' ein, das heisst Imaginäre Einheit.\\
+
+Also ist $i^2=-1$. Jede komplexe Zahl $z=(x,y)$ lässt sich dann wie folgt darstellen:  $$z=(x,y)=(x,0)+(0,y)=x(1,0)+y(0,1)=x\cdot 1+ y\cdot i$$
+In der Rechnungen lässt man oft das 1 in $x\cdot 1$ fallen und schreibt $z=x+yi$
+\begin{framed}
+\centerline{\textbf{Definition 2.22}}
+\begin{enumerate}
+\item Sei $z=x+iy\in\mathbb{C}$
+\begin{itemize}
+\item Re $z:=x$ heisst der Realteil
+\item Im $z:=y$ heisst der Imaginärteil 
+\end{itemize}
+\item Die zu: $z=x+iy$ konjugierte Zahl ist $\overline{z}=x-iy$
+\item Wir definieren die Norm von $z$ als $\left|\left| z\right|\right|=\sqrt{x^2+y^2}$
+\end{enumerate}
+\end{framed}
+\subsubsection*{Satz 2.23}
+\begin{enumerate}[\indent (i)]
+\item $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$
+\item $\overline{z_1\cdot z_2}=\overline{z_1}\cdot\overline{z_2}$
+\item $z\cdot\overline{z}={\left|\left| z\right|\right|}^2\cdot 1$
+\item ${\left|\left| z_1\cdot z_2\right|\right|}={\left|\left| z_1\right|\right|}\cdot{\left|\left| z_2\right|\right|}$
+\end{enumerate}
+\subsubsection*{Beweis}
+ASK FOR BEWEIS \todo{ASK FOR BEWEIS}
+\subsubsection*{Abkürzung}
+$\left| z\right| := \left|\left| z \right|\right|$
+\subsubsection*{Bemerkung 2.24}
+Wir können $\mathbb{R}$ in $\mathbb{C}$ ''einbetten'' mittels $\mathbb{R}\ni x\rightarrow (x,0)\in\mathbb{C}$. Sei $\mathbb{C}_0=\{ (x,y)\in\mathbb{C}\mid y=0 \}=\{ (x,0)\mid x\in\mathbb{R}\}$. Der Abbildung $f:\mathbb{R}\rightarrow\mathbb{C}_0$, $x\rightarrow (x,0)$ist eine Bijektion.\\
+
+Diese Identifikation (von $\mathbb{R}$ und $\mathbb{C}_0$ ist verträglich mit den operationen in $\mathbb{R}$ und in $\mathbb{C}$, d.h.
+$$f(x+y)=f(x)+f(y)$$
+$$f(xy)=f(x)f(y)$$
+\subsubsection*{Polarform}\todo{Not sure if this should be a title}
+Als Polarkoordinaten in die Ebene führen wir $(r,\phi)$ ein
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\begin{center}
+\begin{tikzpicture}
+\draw[->](-0.5,0)--(3.5,0);
+\draw[->](0,-0.5)--(0,2);
+\draw[](0,0)--(2.5,1.5);
+\node[anchor=west] at (2.5,1.5){$z=(x,y)$};
+\node[anchor=west] at (1,1){$r$};
+\node[anchor=west] at (1,0.3){$\phi$};
+ \draw [domain=0:31] plot ({cos(\x)}, {sin(\x)});
+
+\node[circle,fill=black,inner sep=1] (a) at (2.5,1.5) {};
+\end{tikzpicture}
+\end{center}
+
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+$x=r\cos\phi$\hspace{5mm} $y=r\sin\phi$\\
+$z=r\left( \cos\phi + i\sin\phi\right)$\\
+$r=\left| z\right|$
+\vspace{9mm}
+\end{minipage}
+\end{figure}
+
+\begin{framed}
+\centerline{\textbf{Definition}}
+\noindent Wir definieren (nach Euler)$$e^{i\phi}:=\cos\phi+ i\sin\phi$$$$z=re^{i\phi}=\left| z\right|e^{i\phi}$$
+\end{framed}
+
+%page 45 bottom
+
+
+
+
+
+
 
 
 

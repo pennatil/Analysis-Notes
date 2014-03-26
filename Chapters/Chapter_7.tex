@@ -283,7 +283,10 @@ $$(H)\hspace{10mm}mx''(t)+ax'(t)=0$$
 $$p(\lambda)=m\lambda^2+a\lambda=0\Rightarrow \lambda=0,\lambda=-\frac{a}{m}$$
 $$x_h(t)=c_1+c_2e^{-\frac{a}{m}t}$$
 Für die spezielle Lösung, wählen wir als Ansatz $x_s(t)=kt$
-\[\left( \begin{array}{l}b(t) = mg = {\text{ konstant, aber  }}{e^{0 \cdot t}} = 1 = {\text{ konstant}}\\{\text{ist eine Lösung der }}(H)\end{array} \right)\]
+\[\left( \begin{array}{l}
+b(t) = mg = {\text{ konstant, aber  }}{e^{0 \cdot t}} = 1 = {\text{ konstant}}\\
+{\text{ist eine Lösung der }}(H)
+\end{array} \right)\]
 $$x'(t)=k\hspace{10mm}x''(t)=0$$
 $$mx''(t)+ax'(t)=ak=mg\Rightarrow k=\frac{mg}{a}$$
 Allgemeine Lösung 
@@ -367,7 +370,9 @@ $$y_h(x)=Ke^{5x} \text{ Hom. Lösung}$$
 $$A(x)=5x$$
 Spez. Lösung: Sei $U(x)$ stammfunktion von $(4x-3)e^{-5x}$. Dann ist die spezielle Lösung $$e^{5x}U(x)=e^{5x}\int{(4x-3)e^{-5x}dx}$$
 $$ \int {\underbrace {(4x - 3)}_u\underbrace {{e^{ - 5x}}}_{v'}dx} $$
-$$\mathop = \limits^{P.I.} (4x - 3)\frac{{{e^{ - 5x}}}}{{ - 5}} + \frac{4}{5}\int {{e^{ - 5x}}dx}$$$$ = \left[ {\left( {\frac{{4x - 3}}{{ - 5}}} \right) - \frac{4}{{25}}} \right]{e^{ - 5x}}$$$$ = \left( {\frac{{ - 4x}}{{ - 5}} + \frac{{11}}{{25}}} \right){e^{ - 5x}}$$
+$$\mathop = \limits^{P.I.} (4x - 3)\frac{{{e^{ - 5x}}}}{{ - 5}} + \frac{4}{5}\int {{e^{ - 5x}}dx}$$
+$$ = \left[ {\left( {\frac{{4x - 3}}{{ - 5}}} \right) - \frac{4}{{25}}} \right]{e^{ - 5x}}$$
+$$ = \left( {\frac{{ - 4x}}{{ - 5}} + \frac{{11}}{{25}}} \right){e^{ - 5x}}$$
 $$\Rightarrow \text{ Spezielle Lösung: }y_s(x)=e^{5x}\cdot U(x)=\frac{-4x}{5}+\frac{11}{25}$$
 Allgemeine Lösung: $$y(x)=Ke^{5x}-\frac{4x}{5}+\frac{11}{25}$$
 \end{enumerate}
@@ -381,7 +386,19 @@ Ein einfaches Verfahren, so genannte ''separation der Variablen'' lässt sich an
 
 \subsubsection*{Beispiel 7.17}
 \begin{enumerate}
-\item $$y'=2xy$$\[\begin{array}{l}\begin{array}{*{20}{c}}{\frac{{dy}}{{dx}} = 2xy}\\{}\end{array}\begin{array}{*{20}{c}} \Rightarrow \\ \downarrow \end{array}\begin{array}{*{20}{c}}{\frac{{dy}}{y} = 2xdx}\\{}\end{array}\\{\text{trennen formel }}x{\text{ bzw }}y{\text{ - Terme}}\end{array}\]
+\item $$y'=2xy$$\[\begin{array}{l}
+\begin{array}{*{20}{c}}
+{\frac{{dy}}{{dx}} = 2xy}\\
+{}
+\end{array}\begin{array}{*{20}{c}}
+ \Rightarrow \\
+ \downarrow 
+\end{array}\begin{array}{*{20}{c}}
+{\frac{{dy}}{y} = 2xdx}\\
+{}
+\end{array}\\
+{\text{trennen formel }}x{\text{ bzw }}y{\text{ - Terme}}
+\end{array}\]
 Jetzt Integrieren wir auf beiden Seiten $$\int{\frac{dy}{y}}=\int{2xdx}$$$$\ln\left| y\right|=x^2+c$$Da wir an der Lösung $y$ interessiert sind und nicht am Logarithmus davon, wenden wir die Exponentialfunktion an $$\left| y\right|=e^{x^2+c}=e^ce^{x^2}$$
 Links und rechts stehen nur \todo{can't understand, page 110 middle} Grösse. Wenn wir aber auf der Rechten Seite nicht nur positive konstante $e^c>0$ zulassen, sondern irgendwelche Konstanten $K\in\mathbb{R}$ so erhalten wir $$y(x)=Ke^{x^2}$$
 \item $$y'=1+y^2\text{ ist separierbar}$$
