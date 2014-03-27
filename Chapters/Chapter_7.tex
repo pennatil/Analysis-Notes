@@ -5,7 +5,7 @@ $$\left( y'(t)\right)^2=y(t)+2$$
 Hängt die gesuchte Funktion in der DGL nur von einer einzigen variablen ab, so spricht man von einer ''gewöhnliche DGL''.\\
 
 \noindent Hängt hingegen die gesuchte Funktion von mehrere Variabeln ab, d.h. kommen partielle Ableitungen in der Differentialgleichung vor, so liegt eine ''Partielle DGL'' vor. Viele physikalische Prozesse lassen sich oft durch Differenzialgleichungen bescreiben.
-\subsubsection*{Besipiel}
+\subsubsection*{Beispiel}
 \begin{enumerate}
 \item Ein lineares Federpendel wird durch folgende DGL beschrieben $$m\frac{d^2x}{dt^2}=-Kx\text{\hspace{10mm} mit K = Federkonstante}$$
 \begin{center}
@@ -105,7 +105,7 @@ $x^{k-1}e^{\alpha x}\cos\left(\beta x\right)$&\hspace{10mm}&$x^{k-1}e^{\alpha x}
 2$k$ linear unabhängige Lösungen der DGL \[\left( {{e^{\left( {\alpha  + i\beta } \right)x}} = {e^{\alpha x}} \cdot {e^{i\beta x}} = {e^{\alpha x}}\cos \left( {\beta x} \right) + i{e^{\alpha x}}\sin \left( {\beta x} \right)} \right)\]
 \end{enumerate}
 
-\subsubsection*{Besipiel 7.6}
+\subsubsection*{Beispiel 7.6}
 \begin{enumerate}
 \item $$y''-y=0$$
 $$p(\lambda)=\lambda^2-1=0=(\lambda-1)(\lambda+1)$$
@@ -130,7 +130,7 @@ Die allgemeine Lösung einer inhomogenen DGL $$y^{(n)}+a_{n-1}y^{(n-1)}+\dots +a
 \scriptstyle{\text{der inhomogene DGL}}\hfill} = \underbrace {{y_S}(x)}_{\scriptstyle{\text{Spezielle Losung }}\hfill\atop
 \scriptstyle{\text{der inhomogene DGL}}\hfill} + \underbrace {{y_{AH}}(x)}_{\scriptstyle{\text{Allgemeine Losung }}\hfill\atop
 \scriptstyle{\text{der Homogene DGL}}\hfill}$$
-\subsubsection*{Besipiel}
+\subsubsection*{Beispiel}
 $$y''+y=\sin x$$
 Um diese inhomogene DGL zu lösen, benötigen wir die allgemeine Lösung der zugehörigen homogene DGL $y''+y=0$$$p(\lambda)=\lambda^2+1=0\Rightarrow y_{AH}(x)=c_1\sin x+c_2\cos x$$ Nun wird noch eine spezielle Lösung der inhomogene DGL $y''+y=\sin x$ benötigt. Wir verifizieren dass $y(x)=-\frac{1}{2}x\cos x$ eine derartige Lösung ist
 $$y'(x)=-\frac{1}{2}\cos x+\frac{1}{2}x\sin x$$
@@ -150,7 +150,7 @@ Zur Lösung der inhomogenes DGL kann man in vielen Fällen einen so genannte ''A
 
 \noindent z.B.: ist die Störfunktion ein Polynom, so nimmt man an, dass die spezielle Lösung auch ein polynom sein wird. Ist die Störfunktion ein exponentialfunktion so nimmt man an, dass die Lösung auch ein exponentialfunktion sein wird.
 
-\subsubsection*{Besipiel 7.8}
+\subsubsection*{Beispiel 7.8}
 \begin{enumerate}
 \item Wir betrachten die DGL $$y''+y'-6y=3e^{-4x}$$Die Zugehörige homogenes DGL $$y''+y'-6y=0$$$$p(\lambda)=\lambda^2+\lambda-6=0\text{\hspace{5mm}}\lambda_{1,2}=2,-3$$ Die Allgemeine Lösung der Homogenes DGL ist $$y(x)=c_1e^{-3x}+c_2e^{2x}$$ Zur Lösung der inhomogenes DGL verwenden wir einen ''Ansatz vom Typ der Rechten Seite'', gehen also davon aus, dass die spezielle Lösung der inhomogenes DGL die ähnliche Gestalt hat (als die Störfunktion) $$y_s(x)=Ke^{-4x}$$Für die Ableitungen des Ansatzes haben wir $$y_s'(x)=-4Ke^{-4x}$$$$y''_s(x)=16Ke^{-4x}$$Eingesetzt in die homogenes DGL ergibt sich $$y''+y'-6y=16Ke^{-4x}-4Ke^{-4x}-6Ke^{-4x}=6Ke^{-4x}=3e^{-4x}$$Also $6K=3\Rightarrow K=\frac{1}{2}$. Damit ist $y_s(x)=\frac{1}{2}e^{-4x}$ und die allgemeine Lösung der DGL $$y(x)=\frac{1}{2}e^{-4x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\mathbb{R}$$
 \item $$y''+y'-6y=50\sin x$$ Wählen wir als ''Ansatz vom Typ der rechten Seite''
@@ -260,7 +260,7 @@ Inhomogene mit $b(x)=-\frac{1}{2}x\cos x$
 Die in der allgemeinen Lösung einer DGL $n-$ter Ordnung auftretenden parameter lassen sich durch Zusatzbedingungen festlegen. Physikalische sinnvolle Zusatzbedingungen werden maist in der Form von Anfangsbedingungen oder Randbedingungen vorgegeben. \\
 
 Durch Vorgabe von derartigen Bedingungen eliminiert man die Parameter aus der allgemeinen Lösung der DGL und erhölt damit eine partikuläre Lösung.
-\subsubsection*{Besipiel 7.10}
+\subsubsection*{Beispiel 7.10}
 Freifall mit Reibung 
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
@@ -352,7 +352,7 @@ Seien $A(x)$ eine Stammfunktion von $a(x)$ und $U(x)$ ein Stammfunktion von $be^
 \subsubsection*{Korollar 7.14}
 Die Allgemeine Lösung von LDGL $y'=ay+b$ ist durch $y(x)=e^{A(x)}\int{b(x)e^{-A(x)} dx}+Ke^{A(x)}$ gegeben wobei $K\in\mathbb{R}$, $A(x)$ eine Stammfunktion von $a(x)$
 
-\subsubsection*{Besipiel 7.15}
+\subsubsection*{Beispiel 7.15}
 \begin{enumerate}
 \item $$xy'-2y=2x^4$$
 $$\Rightarrow y' = \underbrace {\frac{2}{x}}_{a(x)}y + \underbrace {2{x^3}}_{b(x)}$$

@@ -419,7 +419,7 @@ $\left|\left|(1,2)\right|\right|=\sqrt{1+4}$
     \draw (blr) -- (bur) -- (tur) -- (tlr) -- cycle;
     \draw (tll) -- (tlr) -- (tur) -- (tul) -- cycle;
     \foreach \point in {bll,blr,bur,tll,tlr,tul,tur} {
-        \fill[fill opacity=1] (\point) circle (1pt);
+        \fill[fill opacity=1] (\point) circle (2pt);
     }
 \draw[->](0,0,-1)--(0,0,1);
 \draw[->](0,0,-1)--(0,2,-1);
@@ -547,11 +547,71 @@ $r=\left| z\right|$
 \centerline{\textbf{Definition}}
 \noindent Wir definieren (nach Euler)$$e^{i\phi}:=\cos\phi+ i\sin\phi$$$$z=re^{i\phi}=\left| z\right|e^{i\phi}$$
 \end{framed}
+\todo{Where does the definition end??}
 
-%page 45 bottom
+\noindent Aus die \todo{??Additions?? page 45 bottom}
+\begin{itemize}
+\item $\cos(\phi+\psi)=\cos\phi\cos\psi -\sin\psi\sin\phi$
+\item $\sin(\phi+\psi)=\sin\phi\cos\psi + \cos\phi\sin\psi$
+\end{itemize}
 
+In der Ebene $\mathbb{R}^2$ stehen uns neben den kartesischen koordinaten $x,y$ noch die Polarkoordinaten $r,\phi$ zur Verfügung. Für beliebiges $z=x+iy\not=0$
+\begin{center}
+\begin{tikzpicture}
+\draw[](0,-3)--(0,3);
+\draw[](-3,0)--(3,0);
+\draw[](0,0)--(2.5,1.8);
+\draw (0,0) circle (2);
 
+\draw[fill=black] (0,2) circle (0.05)
+(2,0) circle (0.05)
+(-2,0) circle (0.05)
+(0,-2) circle (0.05)
+(2.5,1.8)circle (0.05)
+(1.62,1.157)circle (0.05);
+\draw [black,decorate,decoration={brace,amplitude=2pt},xshift=0pt,yshift=2pt](0,0) -- (2.5,1.8) node[black,midway,yshift=4,xshift=-4] {\footnotesize $r$};
+\node[anchor=west,scale=0.7] at (2.5,1.8){$z=x+iy=re^{i\phi}$};
+\node[anchor=north,scale=0.7] at (0.5,-2){$e^{3i\frac{\pi}{2}}$};
+\node[anchor=north,scale=0.7] at (2.5,0){$1=e^{0}$};
+\node[anchor=north,scale=0.7] at (-2.5,0){$-1=e^{i\pi}$};
+\node[anchor=south,scale=0.7] at (0.5,2){$i=e^{i\frac{\pi}{2}}$};
 
+\node[anchor=west,scale=0.7] at (1.7,1.157){$\cos\phi + i\sin\phi$};
+ \draw [domain=0:35] plot ({cos(\x)}, {sin(\x)});
+\node[anchor=west,scale=0.7] at (0.5,0.25){$\phi$};
+\node[anchor=west,scale=0.7] at (5,0.25){$r=\left| z\right|$};
+\node[anchor=west,scale=0.7] at (5,-0.25){$\phi=\arg z$ - Das argument von z};
+\end{tikzpicture}
+\end{center}
+$$e^{i\phi}=1\Leftrightarrow \phi=2k\pi$$
+$$\cos\phi + i\sin\phi =1 \Leftrightarrow\cos\phi =1 \text{ und }\sin\phi=0$$
+$$\hspace{14mm}\Leftrightarrow\phi = 2k\pi, k\in\mathbb{Z}$$
+\[{e^{i\theta }} \cdot {e^{i\phi }} = \left( {\cos \theta  + i\sin \theta } \right)\left( {\cos \phi  + i\sin \phi } \right)\]
+\[=\underbrace {\cos \theta \cos \phi  - \sin \theta \sin \phi }_{\cos \left( {\theta  + \phi } \right)} + i\underbrace {\left( {\cos \theta \sin \phi  + \sin \theta \cos \phi } \right)}_{\sin \left( {\theta  + \phi } \right)}\]
+$$=e^{i(\theta + \phi)}$$
+folgt $e^{i\phi}e^{i\psi}=e^{i(\phi+\psi)}$\\
+
+Somit folgt für $z=re^{i\theta}$, $\omega=se^{i\phi}$ $\in\mathbb{C}$ die einfache Darstellung $z\omega=rse^{i(\theta + \phi)}$, $$\frac{z}{\omega}=\left( \frac{r}{s}\right)e^{i(\theta-\phi)}$$
+Die Polare Darstellung ist in Berechnungen sehr nützlich, insbesondere um das Produkt und die Division zu berechnen
+
+\subsubsection*{Beispiel}
+\begin{enumerate}
+\item $$z=1+i=\sqrt{2}e^{i\frac{\pi}{4}}$$
+$$\omega=\sqrt{3}-i=2e^{-i\frac{\pi}{6}}$$
+$$\frac{\left(\sqrt{3}-i\right)^3}{(1+i)^2}=\frac{\omega^3}{z^4}=\frac{8e^{-i\frac{\pi}{2}}}{4e^{i\pi}}=2e^{-\frac{3\pi}{2}i}=2e^{\frac{\pi}{2}i}=2i$$
+\item Die Polarform ist auch sehr nützlich um die wurzel einer Komplexen Zahl zu berechnen. Sei $\omega\in\mathbb{C}$, $n\in\mathbb{N}$. Wir möchten die Gleichung $z^n=\omega$ lösen. 
+$$\omega=\left|\omega\right| e^{i\phi}$$
+$$z^n=\omega=\left|\omega\right| e^{i\theta}\Rightarrow z=\left| \omega\right|^\frac{1}{n}e^{i\frac{\left(\theta + 2k\pi\right)}{n}}$$
+$$=\left| \omega\right| e^{i(\theta +2k\pi}$$
+\subsubsection*{Beispiel}\todo{is this inside the other Beispiel or out??}
+$$z^3=1\Rightarrow z^3=\left( e^{2\pi i k}\right)^\frac{1}{3} \in \{e^{i\pi\frac{2k}{3}}: k=0,1,2\} = \{1,e^{2i\frac{\pi}{3}},e^{4i\frac{\pi}{3}} \}$$
+Allgemein Formel der Einheitswurfel $z=\{ e^{i\frac{2\pi k}{n}}:k=0,1,\dots,n-1\}$
+\subsubsection*{Bemerkung}
+\begin{enumerate}
+\item Es gibt keine mit der Körperoperationen verträgliche Ordnung con $\mathbb{C}$
+\item Hingegen ist $\mathbb{C}$ im Untershied zu $\mathbb{R}$ algebraisch vollständig. Nicht nur die Gleichung $x^2+1=0$ hat in $\mathbb{C}$ eine Lösung, sondern es gilt der Fundamental Satz der Algebra. Es sagt, dass jedes Polynom $p(z)=z^n+a_{n-1}z^{n-1}+\dots+a_0$ vom Grad $n\geq 1$ hat in $\mathbb{C}$ genau $n$ Nullstellen.
+\end{enumerate}
+\end{enumerate}
 
 
 
