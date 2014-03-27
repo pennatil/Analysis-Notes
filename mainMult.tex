@@ -1,0 +1,77 @@
+%In order to use it, cd to the folder containing this file with the terminal, and type "pdflatex --shell-escape mainMult.tex" without the quotes
+
+
+\documentclass[a4paper]{book}
+\input{Packages.tex}
+\ifx\conditionmacro\undefined
+  \immediate\write18{%
+    pdflatex --jobname="\jobname1"
+    "\gdef\string\conditionmacro{1}\string\input\space\jobname"
+  }%
+  \immediate\write18{%
+    pdflatex --jobname="\jobname2"
+    "\gdef\string\conditionmacro{2}\string\input\space\jobname"
+  }%
+  \immediate\write18{%
+    pdflatex --jobname="\jobname3"
+    "\gdef\string\conditionmacro{3}\string\input\space\jobname"
+  }%
+  \immediate\write18{%
+    pdflatex --jobname="\jobname4"
+    "\gdef\string\conditionmacro{4}\string\input\space\jobname"
+  }%
+  \immediate\write18{%
+    pdflatex --jobname="\jobname5"
+    "\gdef\string\conditionmacro{5}\string\input\space\jobname"
+  }%
+  \immediate\write18{%
+    pdflatex --jobname="\jobname6"
+    "\gdef\string\conditionmacro{6}\string\input\space\jobname"
+  }%
+\immediate\write18{%
+    pdflatex --jobname="\jobname7"
+    "\gdef\string\conditionmacro{7}\string\input\space\jobname"
+  }%
+
+  \expandafter\stop
+\fi
+\input{FancyStyling.tex}
+\begin{document}
+\mainmatter
+%generate Chapter 1
+\ifnum\conditionmacro=1 
+\setcounter{chapter}{0}
+\input{Chapters/Chapter_1.tex}
+\fi 
+
+\ifnum\conditionmacro=2
+\setcounter{chapter}{1}
+\input{Chapters/Chapter_2.tex}
+\fi
+
+\ifnum\conditionmacro=3
+\setcounter{chapter}{2}
+\input{Chapters/Chapter_3.tex}
+\fi
+
+\ifnum\conditionmacro=4
+\setcounter{chapter}{3}
+\input{Chapters/Chapter_4.tex}
+\fi
+
+\ifnum\conditionmacro=5
+\setcounter{chapter}{4}
+\input{Chapters/Chapter_5.tex}
+\fi
+
+\ifnum\conditionmacro=6
+\setcounter{chapter}{5}
+\input{Chapters/Chapter_6.tex}
+\fi
+
+\ifnum\conditionmacro=7
+\setcounter{chapter}{6}
+\input{Chapters/Chapter_7.tex}
+\fi
+
+\end{document}
