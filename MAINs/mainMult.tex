@@ -2,7 +2,7 @@
 
 
 \documentclass[a4paper]{book}
-\input{Packages.tex}
+\input{../Others/Packages.tex}
 \ifx\conditionmacro\undefined
   \immediate\write18{%
     pdflatex --jobname="\jobname1"
@@ -35,43 +35,43 @@
 
   \expandafter\stop
 \fi
-\input{FancyStyling.tex}
+\input{../Others/FancyStyling.tex}
 \begin{document}
 \mainmatter
 %generate Chapter 1
 \ifnum\conditionmacro=1 
 \setcounter{chapter}{0}
-\input{Chapters/Chapter_1.tex}
+\input{../Chapters/Chapter_1.tex}
 \fi 
 
 \ifnum\conditionmacro=2
 \setcounter{chapter}{1}
-\input{Chapters/Chapter_2.tex}
+\input{../Chapters/Chapter_2.tex}
 \fi
 
 \ifnum\conditionmacro=3
 \setcounter{chapter}{2}
-\input{Chapters/Chapter_3.tex}
+\input{../Chapters/Chapter_3.tex}
 \fi
 
 \ifnum\conditionmacro=4
 \setcounter{chapter}{3}
-\input{Chapters/Chapter_4.tex}
+\input{../Chapters/Chapter_4.tex}
 \fi
 
 \ifnum\conditionmacro=5
 \setcounter{chapter}{4}
-\input{Chapters/Chapter_5.tex}
+\input{../Chapters/Chapter_5.tex}
 \fi
 
 \ifnum\conditionmacro=6
 \setcounter{chapter}{5}
-\input{Chapters/Chapter_6.tex}
+\input{../Chapters/Chapter_6.tex}
 \fi
 
 \ifnum\conditionmacro=7
 \setcounter{chapter}{6}
-\input{Chapters/Chapter_7.tex}
+\input{../Chapters/Chapter_7.tex}
 \fi
 
 \end{document}
