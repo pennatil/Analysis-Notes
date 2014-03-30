@@ -81,7 +81,7 @@ Für allgemeine beschränkte Funktionen kann man nun wie in II) vorgehen.
 		(2.5,0) node[anchor=north] {$x_1$}
 		(4.5,0) node[anchor=north] {$x_2$}
 		(5.5,0) node[anchor=north] {$x_3$}
-		(7,0) node[anchor=north] {$b=x$};
+		(7,0) node[anchor=north] {$b=x_n$};
 
 % vertical axis
 \draw[->] (0,-0.5) -- (0,5) node[anchor=east] {};
@@ -108,7 +108,6 @@ Für allgemeine beschränkte Funktionen kann man nun wie in II) vorgehen.
 
 \end{tikzpicture}
 \end{center}
-\todo{subscript of b=?}
 
 Wir wählen eine Aufteilung (Zerlegung, Einteilung, Partition) des Intervals $I=\lbrack a,b\rbrack$ in endlich viele Teilintervale. \\
 
@@ -419,11 +418,19 @@ Wir bezeichnen die Menge aller Riemann integrierbaren Funktionen $f:I\rightarrow
 ist ein Unterraum von $R(I)$ $$C(I)\subset R(I)\subset F(I)$$
 \subsubsection*{Beweis 6.9}
 \begin{enumerate}
-\item Setze $h:=\alpha f + \beta g$ und sei $\varepsilon>0$ beliebig gegeben. Da $f$ und $g$ integrierbar sind, existieren wegen Riem. Kriterium (Satz 6.6).\\ Partitionen $P_1$ und $P_2 \in P(I)$ mit \[O(f,{P_1}) - U(f,{P_1}) < \frac{\varepsilon }{{(\left| \alpha  \right| + \left| \beta  \right|)}}\] und  \[O(g,{P_2}) - U(g,{P_2}) < \frac{\varepsilon }{{(\left| \alpha  \right| + \left| \beta  \right|)}}\] Aus der Definition von $h$ folgt zunächst \[\left| {h(x) - h(y)} \right| \le \left| \alpha  \right|\left| {f(x) - f(y)} \right| + \left| \beta  \right|\left| {g(x) - g(y)} \right|\] Mit der verfeinerte Partition $P:=P_1\cup P_2$ ergibt sich unter Verwendung von $\left( \textasteriskcentered\right)$, wobei 
+\item Setze $h:=\alpha f + \beta g$ und sei $\varepsilon>0$ beliebig gegeben. Da $f$ und $g$ integrierbar sind, existieren wegen Riem. Kriterium (Satz 6.6).\\ Partitionen $P_1$ und $P_2 \in P(I)$ mit \[O(f,{P_1}) - U(f,{P_1}) < \frac{\varepsilon }{{(\left| \alpha  \right| + \left| \beta  \right|)}}\] und  \[O(g,{P_2}) - U(g,{P_2}) < \frac{\varepsilon }{{(\left| \alpha  \right| + \left| \beta  \right|)}}\] Aus der Definition von $h$ folgt zunächst \[\left| {h(x) - h(y)} \right| \le \left| \alpha  \right|\left| {f(x) - f(y)} \right| + \left| \beta  \right|\left| {g(x) - g(y)} \right|\] Mit der verfeinerte Partition $P:=P_1\cup P_2$ ergibt sich unter Verwendung von (\textasteriskcentered), wobei 
 
-\begin{enumerate}[(\textasteriskcentered)]
-\item $\text{\hspace{10mm}}\mathop {\sup h(x)}\limits_{x \in I}  - \mathop {\inf h(x)}\limits_{x \in I}  = \sup \{ h(x) - h(y)\mid x,y \in I\}$ 
-\end{enumerate}
+
+\[
+\mathop {\sup h(x)}\limits_{x \in I}  - \mathop {\inf h(x)}\limits_{x \in I}  = \sup \{ h(x) - h(y)\mid x,y \in I\}\tag{\textasteriskcentered}
+\] 
+
+
+
+
+% \begin{enumerate}[(\textasteriskcentered)]
+% \item $\text{\hspace{10mm}}\mathop {\sup h(x)}\limits_{x \in I}  - \mathop {\inf h(x)}\limits_{x \in I}  = \sup \{ h(x) - h(y)\mid x,y \in I\}$ 
+% \end{enumerate}
 
 Für beschränkte funktion $h$ auf einen intervall $I$ gilt
 \[O(h,P) - U(h,P) = \sum\limits_{k = 1}^n {(\mathop {\sup h}\limits_{[{x_{k - 1}},{x_k}]}  - \mathop {\inf h}\limits_{[{x_{k + 1}},{x_k}]} )({x_k} - {x_{k - 1}})} \]
@@ -843,9 +850,12 @@ Ein integral liegt der Gestalt $\int\limits_\alpha ^\beta  {f(x)dx}$ mit gewisse
 \[ = \int\limits_0^{\pi /2} {\sqrt {1 - {{\sin }^2}t} \cos tdt\mathop {{\rm{  }} = }\limits^{\text{(\textasteriskcentered )} }} \int\limits_0^{\pi /2} {{{\cos }^2}dt}  = \int\limits_0^{\pi /2} {\frac{1}{2}\left( {1 + \cos 2t} \right)dt} \]
 \[ = \left. {\frac{1}{2}\left( {t + \frac{{\sin 2t}}{2}} \right)} \right|_0^{\pi /2} = \frac{1}{2}\left. {\left( {t + \sin t\cos t} \right)} \right|_0^{\pi /2} = \frac{\pi }{2}\]
 
-mit \begin{enumerate}[(\textasteriskcentered )]
-\item $${\cos ^2}(t) = \frac{{1 + \cos 2t}}{2}$$
-\end{enumerate}
+mit 
+
+\[
+{\cos ^2}(t) = \frac{{1 + \cos 2t}}{2} \tag{\textasteriskcentered}
+\]
+
 
 \item \[\begin{array}{*{20}{c}}
 {\int {\frac{x}{{\sqrt {2x - 3} }}dx} }&{\left\{ {\begin{array}{*{20}{l}}

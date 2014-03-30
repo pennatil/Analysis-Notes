@@ -13,5 +13,69 @@ Eine Folge wird dann meistens mit $(a_n)_{n\geq 1}$, daher mit der geordneten Bi
 \item $a_n=\frac{1}{n}$, $n\geq 1$
 \item $a_1=0.9$, $a_2=0.99$, \dots, ${a_n} = 0.\underbrace {99 \ldots 9}_{n-\text{mal}}$
 \item $a_n=\left( 1+\frac{1}{n}\right)^n$, $n\geq 1$
-\item (Rekursiv) Sei $d>0$ eine reelle Zahl
+\item (Rekursiv) Sei $d>0$ eine reelle Zahl $a_1,\dots, a_{n+1}:=\frac{1}{2}\left( a_n + \frac{d}{a_n}\right), n\geq 1$\\
+z.B. $d=2,a_1=1,a_2=\frac{3}{2},a_3=\frac{17}{12},a_4=\dots$
+\item Fibonacci Zahlen. $a_1=1,a_2=2, a_{n+1}=a_n+a_{n-1}\hspace{5mm}\forall n\geq 2$
 \end{enumerate}
+
+\begin{framed}
+\centerline{\textbf{Definition 3.3}}
+\noindent Eine Folge $(a_n)_{n\geq 1}$ heisst beschränkt falls die Teilmenge $\{a_n:n\geq 1\}\subseteq\mathbb{R}$ beschränkt ist. d.h. Es gibt $c\in\mathbb{R} (c\geq 0)$ so dass $\left| a_n\right| \leq c, \forall n\geq 1$ 
+\end{framed}
+
+\section{Grenzwert oder Limes eine Folge. Ein zentraler Begriff}
+\begin{framed}
+\centerline{\textbf{Definition 3.4}}
+\noindent Eine Folge $(a_n)\geq 1$ konvergiert gegen $a$ wann für jedes $\varepsilon>0$ ein Index $N(\varepsilon)\geq 1$ gilt so dass $$  \left| a_n-a\right| <\varepsilon, \forall n>N(\varepsilon)$$ 
+\end{framed}
+
+\begin{framed}
+\centerline{\textbf{Definition 3.4 (Version 2)}}
+\noindent Eine Folge $(a_n)_{n\geq 1}$ konvergiert gegen $a\in\mathbb{R}$ falls für jedes $\varepsilon>0$ die Menge der Indizen $n\geq 1$ für welcher $a_n\not\in (a-\varepsilon,a+\varepsilon)$ endlich ist.\\
+
+\centerline{$\left( \forall\varepsilon>0, \#\{ n\in\mathbb{N}\mid a_n\not\in (a-\varepsilon,a+\varepsilon)\} <\infty\right)$}
+\end{framed}
+
+\subsection*{Equivalenz beider Definitionen}\todo{Is this supposed to be a title?}
+\begin{enumerate}
+
+\item[(2)] $\Rightarrow(1)$ \\Sei für  $\varepsilon>0$ $$M(\varepsilon):=\{ n\in\mathbb{N}\mid a_n\not\in (a-\varepsilon,a+\varepsilon)\}=\{n\in\mathbb{N}\mid \left| a_n-a \right|\geq \varepsilon\}$$
+Da $M(\varepsilon)$ endlich ist, ist es nach oben beschränkt. Es  gibt also $N(\varepsilon)\in\mathbb{N}$ so dass $\forall n\in M(\varepsilon)$, $n\leq N(\varepsilon)-1$. Insbesondere gilt $\forall n\geq N(\varepsilon)$, $n\not\in M(\varepsilon)$ und daher $\left| a_n-a\right|<\varepsilon$.
+\item[(1)] $\Rightarrow(2)$ $$M(\varepsilon)=\{ n:\left| a_n-a\right| \geq \varepsilon\} \subset \left[ 0,N(\varepsilon)-1 \right]$$ Also endlich.
+\end{enumerate}
+
+\noindent Falls die Eigenschaften in Definition 3.4 zutrifft, dann schreibt man\[a = \mathop {\lim }\limits_{n \to \infty } {a_n}{\text{ oder }}{a_n}\mathop  \to \limits_{n \to \infty } a\] Die Zahl $a$ nennt sich Grenzwert oder Limes der Folge $(a_n)_{n\geq 1}$. Eine Folge heisst konvergent falls sie einen Limes besitzt, andernfalls heisst sie divergent.
+
+\subsubsection*{Bemerkung 3.5}
+\begin{enumerate}
+\item Falls $(a_n)_{n\geq 1}$ konvergent ist der Limes eindeutig bestimmt
+\subsubsection*{Beweis}
+Seien $a$ und $b$ Grenzwerte von $(a_n)_{n\geq 1}$. Sei $\varepsilon = \left| \frac{b-a}{3}\right|>0$, dann gibt es $N_1,N_2$ so dass $$\left| a_n-a\right| <\varepsilon\hspace{10mm}\forall n>N_1$$$$\left| a_n-b\right| <\varepsilon\hspace{10mm}\forall n>N_2$$
+Also$ \forall n\geq \max\{ N_1,N_2\}$ $$(a-b)\cong\left| (a-a_n)+(a_n-b)\right| < 2\varepsilon=\frac{2}{3}\left|b-a\right|$$
+\subsection*{Binomischen Lehrsatz}
+Für beliebige Zahlen $a,b$ und $n\in\mathbb{N}$ ist \[{\left( {a + b} \right)^n} = \sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}n\\k\end{array}} \right){a^{n - k}}{b^k}} \]
+\item Falls $(a_n)_{n\geq 1}$ konvergent ist, $\{a_n:n\geq 1\}$ beschränkt: Sei $\varepsilon=1$, $\lim a_n=a$ und $N_0$ mit $$\left| a_n-a\right| \leq 1\hspace{10mm} \forall n>N_0$$ Dann ist $\forall n$ $\left| a_n\right| \geq \max\{\left| a\right| +1,\left| a_j\right|, 1\leq j\leq N_0  \}$
+\end{enumerate}
+\subsubsection*{Beispiel 3.6}
+\begin{enumerate}
+\item Sei $a_n=\frac{1}{n}, n\geq 1$. Dann gilt $\lim a_n=0$ 
+\begin{itemize}
+\item Sei $\varepsilon>0$. Dann $\frac{1}{\varepsilon}>0$. Sei $n_0\in\mathbb{N}$, $n_0\geq 1$ mit $n_0>\frac{1}{\varepsilon}$ (Archimedische Eigenschaft, Satz 2.13)\\
+Dann gilt für alle 
+\end{itemize}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
