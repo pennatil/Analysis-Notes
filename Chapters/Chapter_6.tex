@@ -5,14 +5,14 @@
 \begin{enumerate}[\indent I)]
 \item \begin{enumerate}[a)]
 \item Gegeben sei eine stetige Funktion $f : \lbrack a,b\rbrack \rightarrow \mathbb{R}$. Gesucht ist eine differenzierbare Funktion $F: \lbrack a,b\rbrack \rightarrow \mathbb{R}$ mit $$F'(t)=f(t), \forall t \in \lbrack a,b \rbrack$$
-\item Für Naturwissenschaft und technik ist die Folgende Verallgemeinung von a) wichtig:\\
+\item Für Naturwissenschaft und Technik ist die folgende Verallgemeinerung von a) wichtig:\\
 Sei $f:\lbrack a,b\rbrack \times \mathbb{R} \rightarrow \mathbb{R}$ gegeben. Gesucht ist eine differenzierbare Funktion $\varphi : \lbrack a,b\rbrack \rightarrow \mathbb{R}$ mit $$\varphi ' (t)=f(t,\varphi (t)), t\in \lbrack a,b \rbrack$$ Man nennt ein solches $\varphi$ eine Lösung der Differentialgleichung $$y'=f(x,y)$$
 \end{enumerate}
 \item Viele in der Natur und Ingenieurwissenschaften auftretenden Grössen benötigen zu ihrer exakten Definition einen Grenzprozess der Folgenden art: \\
-Wirkt eine konstante Kraft f längs eines weges der Länge $s$, und zwar längs der $x$-Achse vom Punkt $a$ bis zum Punkt $b:=a+s$, so versteht man unter der von der Konstanten Kraft f geleisteten Arbeit das Produkt f$\times s=$f$(b-a)$. \\
+Wirkt eine konstante Kraft f längs eines Weges der Länge $s$, und zwar längs der $x$-Achse vom Punkt $a$ bis zum Punkt $b:=a+s$, so versteht man unter der von der konstanten Kraft f geleisteten Arbeit das Produkt f$\times s=$f$(b-a)$. \\
 Ist die Kraft f jedoch örtlich variable, d.h. $f:\lbrack a,b\rbrack \rightarrow \mathbb{R}$ eine Funktion des Ortes $x \in \lbrack a,b\rbrack$, so wird man folgendermasse vorgehen.\\
 
-Zerlege das Interval $\lbrack a,b\rbrack$ in kleine Teilintervalle $I_{1},\dots, I_{n}$. Wähle in jedem Interval $I_{k}:=\lbrack x_{k-1}, x_{k}\rbrack$ einen punkt $\xi$ aus. Man wird dann die ''Riemannische Summe'' $$A \sim  \sum\limits_{k = 1}^n {f({\xi_k})({x_k} - {x_{k - 1}})} $$  als Näherung für die gesuchte Arbeit A ansehen. Hierzu wird man insbesondere dann berechtigt sein, wenn man mit jeder genüge feinen zerlegung des Intervals I, einem festen wert A beliebig nahe kommt. 
+Zerlege das Interval $\lbrack a,b\rbrack$ in kleine Teilintervalle $I_{1},\dots, I_{n}$. Wähle in jedem Interval $I_{k}:=\lbrack x_{k-1}, x_{k}\rbrack$ einen Punkt $\xi$ aus. Man wird dann die ''Riemannsche Summe'' $$A \sim  \sum\limits_{k = 1}^n {f({\xi_k})({x_k} - {x_{k - 1}})} $$  als Näherung für die gesuchte Arbeit $A$ ansehen. Hierzu wird man insbesondere dann berechtigt sein, wenn man mit jeder genügend feinen Zerlegung des Intervals $I$, einem festen Wert $A$ beliebig nahe kommt. 
 
 \item Sei $f: \lbrack a,b\rbrack \rightarrow \lbrack 0,\infty\rbrack$ eine (stetige) Funktion. Gesucht ist eine vernünftige Definition des Flächeninhalts A des Gebietes zwischen der $x$-Achse und dem Graphen von $f$
 \begin{center}
@@ -37,9 +37,9 @@ Zerlege das Interval $\lbrack a,b\rbrack$ in kleine Teilintervalle $I_{1},\dots,
 \end{tikzpicture}
 \end{center}
 
-Dies ist sehr einfach, wenn die Funktion $f$ überall den konstanten wert $f(x)=c$ hat für eine feste reelle Zahl $c\in \mathbb{R}$. In diesem Fall ist die Fläche unter dem Graphen von $f$ ein Rechteck und wir definieren dessen Flächeninhalt einfach als Breite mal Höhe, also das Product $A=(b-a)c$. Man beachte, dass die zahl $c$ auch negativ sein darf und dann ist auch A negativ.\\
+Dies ist sehr einfach, wenn die Funktion $f$ überall den konstanten Wert $f(x)=c$ hat für eine feste reelle Zahl $c\in \mathbb{R}$. In diesem Fall ist die Fläche unter dem Graphen von $f$ ein Rechteck und wir definieren dessen Flächeninhalt einfach als Breite mal Höhe, also das Produkt $A=(b-a)c$. Man beachte, dass die Zahl $c$ auch negativ sein darf und dann ist auch A negativ.\\
 
-Eine Einfache Formel ergibt sich auch für eine Funktion, die sich aus konstanten Funktionen auf endlich vielen Teilintervalle von $\lbrack a,b\rbrack$ zusammensetzen lässt.
+Eine einfache Formel ergibt sich auch für eine Funktion, die sich aus konstanten Funktionen auf endlich vielen Teilintervalle von $\lbrack a,b\rbrack$ zusammensetzen lässt.
 
 \begin{center}
 \begin{tikzpicture}
@@ -111,17 +111,18 @@ Für allgemeine beschränkte Funktionen kann man nun wie in II) vorgehen.
 
 Wir wählen eine Aufteilung (Zerlegung, Einteilung, Partition) des Intervals $I=\lbrack a,b\rbrack$ in endlich viele Teilintervale. \\
 
-Aus jedem dieser Teilinterval $I_k$ ersetzen $f$ durch eine Funktion die auf diesem Teilinterval konstant ist und in einem noch zu klärenden Sinn nicht allzu stark von $f$ abweicht. Dann bilden wir die Summe der Flächeninhalte der auf diese Weise erhalteren Rechtecke. Diese Summe ist als Näherungswert für das gewünschte Fläche zu verstehen. \\
+Aus jedem dieser Teilintervalle $I_k$ ersetzen wir $f$ durch eine Funktion die auf diesem Teilinterval konstant ist und in einem noch zu klärenden Sinn nicht allzu stark von $f$ abweicht. Dann bilden wir die Summe der Flächeninhalte der auf diese Weise erhaltenen Rechtecke. Diese Summe ist als Näherungswert für die gewünschte Fläche zu verstehen. \\
 
-Um den genauen Wert der Fläche festzulegen bilden wir immer feiner zerlegungen des Intervals. Es ist dann das Grenzwertverhalten der diesen Summen zu unterstehen. 
+Um den genauen Wert der Fläche festzulegen bilden wir immer feinere Zerlegungen des Intervalls. Es ist dann das Grenzwertverhalten der diesen Summen zu untersuchen. 
 \end{enumerate}
-\section{Riemann Integral}
+\section{Riemann Integral: Definition, elementare Eigenschaften}
 \begin{enumerate}
 \item Sei $f: \lbrack a,b\rbrack\rightarrow\mathbb{R}$ eine beschränkte Funktion.\\
 
 \begin{framed}
 \centerline{\textbf{Definition 6.1}}
-\noindent Eine Partition (oder Zerlegung, Einteilung, Unterteilung) eines Intervals $\lbrack a,b\rbrack$ ist eine endliche Menge $P=\{a=x_0,x_1.\dots,x_n=b \}, x_0 < x_1 < x_2 < \dots < x_n$ \\
+\noindent Eine Partition (oder Zerlegung, Einteilung, Unterteilung) eines Intervalls $\lbrack a,b\rbrack$ ist eine endliche Menge $P=\{a=x_0,x_1.\dots,x_n=b \}\\
+x_0 < x_1 < x_2 < \dots < x_n$ \\
 $P(I):=\{P\subset I \mid a,b\in P, P \text{ ist endlich}\}$ die Menge alle Partitionen \begin{center}
 \begin{tikzpicture}
 %axis
@@ -146,7 +147,7 @@ $P(I):=\{P\subset I \mid a,b\in P, P \text{ ist endlich}\}$ die Menge alle Parti
 \end{center}
 \end{framed}
 
-Die Freiheit der zerlegung $P$ ist dabei definiert durch $$\delta (P):=max(x_i - x_{i-1}), 1\leq i \leq n$$ d.h. $\delta (P)$ ist die Länge des grössten Teilintervals $I_i:=\lbrack x_i,x_{i-1}\rbrack , k=i,\dots,n$
+Die Feinheit der Zerlegung $P$ ist dabei definiert durch $$\delta (P):=max(x_i - x_{i-1}), 1\leq i \leq n$$ d.h. $\delta (P)$ ist die Länge des grössten Teilintervalls $I_i:=\lbrack x_i,x_{i-1}\rbrack , k=i,\dots,n$
 
 \item Wahl $\xi_i$ von Zwischenpunkten  $x_{i-1} \leq \xi_i  \leq x_i, 1\leq i \leq n$.\\
 Jede Summe der Form $$S(f,P,\xi):=\sum\limits_{T = i}^n {f({\xi _i})} ({x_i} - {x_{i - 1}})$$ nennt man eine \textbf{Riemannsche Summe} der Zerlegung P und $\xi$.\\
@@ -213,13 +214,13 @@ Die Summe $$U(f,P):=\sum\limits_{i = 1}^n {(\mathop {{\text{Inf }}f}\limits_{[{x
 Aus den Definitionen folgt direkt
 \begin{enumerate}[\indent a)]
 \item Für eine feste Zerlegung $P$ gilt stets $U(f,P) \leq S(f,P,\xi) \leq O(f,P)$
-\item Für zwei Partitionen $P,Q \in P(I)$ gilt die ungleichung $P\subset Q \Rightarrow U(f,P) \leq U(f,Q) \leq O(f,Q)\leq O(f,P)$.
+\item Für zwei Partitionen $P,Q \in P(I)$ gilt die Ungleichung $P\subset Q \Rightarrow U(f,P) \leq U(f,Q) \leq O(f,Q)\leq O(f,P)$.
 \end{enumerate}
 
 \subsubsection*{Beweis} 
-Um dies zu verstehen, ist es nützlich, den Fall zu betrachten, dass die Zerlegung $Q$ genau einen punkt mehr enthält als $P$.\\
+Um dies zu verstehen, ist es nützlich, den Fall zu betrachten, dass die Zerlegung $Q$ genau einen Punkt mehr enthält als $P$.\\
 
-Sei $P=\{x_0,\dots ,x_N\}$ und $Q=P\cup \{\xi\}$, wobei $\xi$ ein neuer Unterteilungspunkt, also nicht gleich einem der elemente von $P$ ist. Dann gibt es genau ein $l\in \{ 1,\dots,N\}$ so dass $x_{l-1}<\xi <x_l$ ist. Damit erhält man $$(\mathop {\sup {\text{ }}f}\limits_{[{x_{l - 1}},\xi ]} )(\xi  - {x_{l - 1}}) + (\mathop {\sup {\text{ }}f}\limits_{[\xi ,{x_l}]} )({x_l} - \xi ) \le (\mathop {\sup {\text{ }}f}\limits_{[{x_{l - 1}},{x_l}]} )({x_l} - {x_{l - 1}})$$
+Sei $P=\{x_0,\dots ,x_N\}$ und $Q=P\cup \{\xi\}$, wobei $\xi$ ein neuer Unterteilungspunkt, also nicht gleich einem der Elemente von $P$ ist. Dann gibt es genau ein $l\in \{ 1,\dots,N\}$ so dass $x_{l-1}<\xi <x_l$ ist. Damit erhält man $$(\mathop {\sup {\text{ }}f}\limits_{[{x_{l - 1}},\xi ]} )(\xi  - {x_{l - 1}}) + (\mathop {\sup {\text{ }}f}\limits_{[\xi ,{x_l}]} )({x_l} - \xi ) \le (\mathop {\sup {\text{ }}f}\limits_{[{x_{l - 1}},{x_l}]} )({x_l} - {x_{l - 1}})$$
 
 
 \begin{center}
@@ -252,16 +253,16 @@ Sei $P=\{x_0,\dots ,x_N\}$ und $Q=P\cup \{\xi\}$, wobei $\xi$ ein neuer Untertei
 
 Addiert man dazu alle Summanden in $$O(f,P)=\sum\limits_i {(\mathop {\sup {\text{ }}f}\limits_{[{x_{i - 1}},{x_i}]} )({x_i} - {x_{i - 1}})} $$
 mit $t\neq l$ so ergibt sich die Ungleichung $$O(f,Q)\leq O(f,P)$$
-Ebenso beweist man $U(f,Q)\geq U(f,P)$. Damit ist b) für den Fall beweisen, dass $Q$ genau ein Element mehr als $P$ enthält. Der allgemeine Fall lässt sich hierauf leicht durch vollständige Induktion zurückführen. 
+Ebenso beweist man $U(f,Q)\geq U(f,P)$. Damit ist b) für den Fall bewiesen, dass $Q$ genau ein Element mehr als $P$ enthält. Der allgemeine Fall lässt sich hierauf leicht durch vollständige Induktion zurückführen. 
 
 \subsubsection*{Lemma 6.3} Sei $f:I:=\lbrack a,b \rbrack \rightarrow \mathbb{R}$ eine beschränkte Funktion. Dann gilt $$\mathop {\sup {\text{ }}U}\limits_{P \in P(I)} (f,P) \le \mathop {\inf {\text{ }}O}\limits_{P \in P(I)} (f,P)$$
 
 \subsubsection*{Beweis}
-Aus $$P\subset Q \Rightarrow U(f,P) \leq U(f,Q) \leq O(f,Q) \leq O(f,P)$$ folgt, dass die Zahl $O(f,Q)$ für jede Partition $Q\in P(I)$ eine obere Schranke für die Menge $\{ U(f,P)\mid P\in P(I)\}$ ist. Also folgt aus der Definition des Supremums als kleinste obere Schranke, das $\mathop {\sup {\text{ }}U}\limits_{P \in P(I)} (f,P) \le \mathop O(f,Q)$ ist. \\
+Aus $$P\subset Q \Rightarrow U(f,P) \leq U(f,Q) \leq O(f,Q) \leq O(f,P)$$ folgt, dass die Zahl $O(f,Q)$ für jede Partition $Q\in P(I)$ eine obere Schranke für die Menge $\{ U(f,P)\mid P\in P(I)\}$ ist. Also folgt aus der Definition des Supremums als kleinste obere Schranke, dass $\mathop {\sup {\text{ }}U}\limits_{P \in P(I)} (f,P) \le \mathop O(f,Q)$ ist. \\
 \newpage
-Diese Ungleichung gilt für jede Partition $Q\in P(I)$. Das heisst wiederum, dass die Zahl $\mathop {\sup {\text{ }}U}\limits_{P \in P(I)} (f,P)$ eine untere schranke füt die Menge $\{ O(f,Q)\mid Q \in P(I)\} $ ist.\\
+Diese Ungleichung gilt für jede Partition $Q\in P(I)$. Das heisst wiederum, dass die Zahl $\mathop {\sup {\text{ }}U}\limits_{P \in P(I)} (f,P)$ eine untere Schranke für die Menge $\{ O(f,Q)\mid Q \in P(I)\} $ ist.\\
 
-Also folgt aus der Definition der Infimum als grösste untere Schranke, dass die Gleichung $\mathop {\sup U}\limits_{P \in P(I)} (f,P) \le \mathop {\inf O}\limits_{Q \in P(I)} (f,Q)$ ist. Damit Lemma 6.3 ist bewiesen.
+Also folgt aus der Definition der Infimums als grösste untere Schranke, dass die Gleichung $\mathop {\sup U}\limits_{P \in P(I)} (f,P) \le \mathop {\inf O}\limits_{Q \in P(I)} (f,Q)$ ist. Damit ist Lemma 6.3 bewiesen.
 \begin{framed}
 \centerline{\textbf{Definition 6.4}}
 \begin{enumerate}[\indent 1)]
@@ -275,7 +276,7 @@ das Untere und Obere Integral von $f$.
 
 \subsubsection*{Beispiel 6.5}
 \begin{enumerate}[\indent 1)]
-\item Sei $c\in \mathbb{R}$, $f:I\rightarrow \mathbb{R}$ die Konstante Funktion mit dem wert $c$, dass heisst $f(x)=x, \forall x\in I$. Dann gilt $$U(f,P)=O(f,P)=(b-a)c, \forall P\in P(I)$$ $\Rightarrow$ $f$ ist Riemann Integrierbar und $$\int\limits_a^b {fdx}  = \int\limits_a^b {cdx = c(b - a)} $$ In diesem einfachen Fall stimmt als unsere Definition mit der Interpretation des Flächeninhalts als Breite mal Höhe überein. Man beachte, dass die Konstante $c$ auch negative sein darf. 
+\item Sei $c\in \mathbb{R}$, $f:I\rightarrow \mathbb{R}$ die konstante Funktion mit dem Wert $c$, das heisst $f(x)=c, \forall x\in I$. Dann gilt $$U(f,P)=O(f,P)=(b-a)c, \forall P\in P(I)$$ $\Rightarrow$ $f$ ist Riemann integrierbar und $$\int\limits_a^b {fdx}  = \int\limits_a^b {cdx = c(b - a)} $$ In diesem einfachen Fall stimmt unsere Definition mit der Interpretation des Flächeninhalts als Breite mal Höhe überein. Man beachte, dass die Konstante $c$ auch negativ sein darf. 
 \item $f(x) = \left\{ {\begin{array}{*{20}{c}}
 {0{\text{ für }}x \ne {x_0}}\\
 {1{\text{ für }}x = {x_0}}
@@ -308,7 +309,7 @@ das Untere und Obere Integral von $f$.
 
 Dann ist f integrierbar mit $$\int\limits_a^b {f(x)dx = 0}$$ denn es gilt $U(f,P)=0$ und $0<O(f,P) \leq 2\delta(P), \forall P$.\\
 
-$O(f,P)$ kann, durch geeignete Wahl der Partition,beliebig klein gewählt werden. z.B. $P_n=\{a,a+\frac{{(b - a)}}{n},\dots,b\} \Rightarrow \delta (P)=\frac{b-a}{n}, \mathop {\inf O}\limits_{P \in P(I)} (f,P) = 0$
+$O(f,P)$ kann, durch geeignete Wahl der Partition beliebig klein gewählt werden. z.B. $P_n=\{a,a+\frac{{(b - a)}}{n},\dots,b\} \Rightarrow \delta (P)=\frac{b-a}{n}, \mathop {\inf O}\limits_{P \in P(I)}(f,P) = 0$
 
 \item $f(x): = \left\{ {\begin{array}{*{20}{c}}
 {1{\text{ für }}x \in [a,b]\backslash \;Q}\\
@@ -317,10 +318,10 @@ $O(f,P)$ kann, durch geeignete Wahl der Partition,beliebig klein gewählt werden
 \\
 
 Dann gilt $U(f,P)=0$ und $O(f,P)=1, \forall P\in P(I)$\\
-$\Rightarrow f$ ist nicht integrierbar. 
+$\Rightarrow f$ ist nicht integrierbar. (f ist beschränkt aber nicht integrierbar)
 \end{enumerate}
 
-\subsubsection*{Satz 6.6 (Riemannsches Kriterium für integrierbarkeit)}
+\subsubsection*{Satz 6.6 (Riemannsches Kriterium für Integrierbarkeit)}
 Sei $f:I\rightarrow\mathbb{R}$ eine beschränkte Funktion. Dann sind folgende Aussagen äquivalent
 \begin{enumerate}
 \item $f(x)$ ist integrierbar über $\lbrack a,b\rbrack$
