@@ -34,16 +34,17 @@ done
 
 rm -f *.out *.log *.aux
 
-mkdir "$BASEDIR/Output"
+mkdir -p "$BASEDIR/Output"
 
 
 
 
-mv mainMult1.pdf $BASEDIR/Output/Kapitel\ 1\ -\ Logik\ und\ Unterlagen\ -\ Analysis\ I.pdf
-mv mainMult2.pdf $BASEDIR/Output/Kapitel\ 2\ -\ Reele\ Zahlen,\ Euklidische\ Räume\ und\ Komplexe\ Zahlen\ -\ Analysis\ I.pdf
-mv mainMult3.pdf $BASEDIR/Output/Kapitel\ 3\ -\ Folgen\ und\ Reihen\ \(Der\ Limes\ Begriff\)\ -\ Analysis\ I.pdf
-mv mainMult4.pdf $BASEDIR/Output/Kapitel\ 4\ -\ Chapter\ 4\ -\ Analysis\ I.pdf
-mv mainMult5.pdf $BASEDIR/Output/Kapitel\ 5\ -\ Chapter\ 5\ -\ Analysis\ I.pdf
-mv mainMult6.pdf $BASEDIR/Output/Kapitel\ 6\ -\ Integration\ -\ Analysis\ II.pdf
-mv mainMult7.pdf $BASEDIR/Output/Kapitel\ 7\ -\ Gewöhnliche\ Differenzialgleichungen\ -\ Analysis\ II.pdf
+
+mv mainMult1.pdf "$BASEDIR/Output/Kapitel 1 - Logik und Unterlagen - Analysis I.pdf"
+mv mainMult2.pdf "$BASEDIR/Output/Kapitel 2 - Reele Zahlen, Euklidische Räume und Komplexe Zahlen - Analysis I.pdf"
+mv mainMult3.pdf "$BASEDIR/Output/Kapitel 3 - Folgen und Reihen (Der Limes Begriff) - Analysis I.pdf"
+mv mainMult4.pdf "$BASEDIR/Output/Kapitel 4 - Chapter 4 - Analysis I.pdf"
+mv mainMult5.pdf "$BASEDIR/Output/Kapitel 5 - Chapter 5 - Analysis I.pdf"
+mv mainMult6.pdf "$BASEDIR/Output/Kapitel 6 - Integration - Analysis II.pdf"
+mv mainMult7.pdf "$BASEDIR/Output/Kapitel 7 - Gewöhnliche Differenzialgleichungen - Analysis II.pdf"
 
