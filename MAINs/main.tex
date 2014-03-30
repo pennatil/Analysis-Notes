@@ -1,39 +1,40 @@
 \documentclass[a4paper]{book}
 
-\input{../Others/Packages.tex}
+\input{../Others/Packages.tex}%PAckages file, can be found in Others/Packages.tex
 
-\input{../Others/FancyStyling.tex}
-
-
+\input{../Others/FancyStyling.tex}%styling settings, can be found in folder Others
 \begin{document}
 
 \frontmatter
-%\tableofcontents
+\tableofcontents
 
 
 \mainmatter
-
-%\input{../Chapters/Chapter_1.tex}
-%\clearpage
+%include Chapter 1
+\input{../Chapters/Chapter_1.tex}
+\clearpage
 %\pagenumbering{arabic}
+%include Chapter 2
 %\input{../Chapters/Chapter_2.tex}
 %\clearpage
 %\pagenumbering{arabic}
-\input{../Chapters/Chapter_3.tex}
-\clearpage
-\pagenumbering{arabic}
+%include Chapter 3
+%\input{../Chapters/Chapter_3.tex}
+%\clearpage
+%\pagenumbering{arabic}
+%include Chapter 4
 %\input{../Chapters/Chapter_4.tex}
 %\clearpage
 %\pagenumbering{arabic}
+%include Chapter 5
 %\input{../Chapters/Chapter_5.tex}
-%
 %\clearpage
 %\pagenumbering{arabic}
-%
+%include Chapter 6
 %\input{../Chapters/Chapter_6.tex}
 %\clearpage
 %\pagenumbering{arabic}
-%\setcounter{chapter}{6}%used in order to produce the correct chapter number
+%include Chapter 7
 %\input{../Chapters/Chapter_7.tex}
 %\clearpage
 %\pagenumbering{arabic}
