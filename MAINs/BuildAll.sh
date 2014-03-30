@@ -28,11 +28,11 @@ BASEDIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 cd "$BASEDIR/MAINs/"
 for i in {1..3}
 do
-   pdflatex --shell-escape mainMult.tex
+   pdflatex main.tex
 done
 
 
-rm -f *.out *.log *.aux
+rm -f *.out *.log *.aux *.toc
 
 mkdir -p "$BASEDIR/Output"
 
@@ -40,16 +40,10 @@ mkdir -p "$BASEDIR/Output"
 
 
 
-mv mainMult1.pdf "$BASEDIR/Output/Kapitel 1 - Logik und Unterlagen - Analysis I.pdf"
-mv mainMult2.pdf "$BASEDIR/Output/Kapitel 2 - Reele Zahlen, Euklidische Räume und Komplexe Zahlen - Analysis I.pdf"
-mv mainMult3.pdf "$BASEDIR/Output/Kapitel 3 - Folgen und Reihen (Der Limes Begriff) - Analysis I.pdf"
-mv mainMult4.pdf "$BASEDIR/Output/Kapitel 4 - Chapter 4 - Analysis I.pdf"
-mv mainMult5.pdf "$BASEDIR/Output/Kapitel 5 - Chapter 5 - Analysis I.pdf"
-mv mainMult6.pdf "$BASEDIR/Output/Kapitel 6 - Integration - Analysis II.pdf"
-mv mainMult7.pdf "$BASEDIR/Output/Kapitel 7 - Gewöhnliche Differenzialgleichungen - Analysis II.pdf"
+mv main.pdf "$BASEDIR/Output/Notizien - Analysis I:II.pdf"
 
 { # your 'try' block
-    growlnotify "Finished Generating Chapter Files"  -m "They can be found in the Output folder"
+    growlnotify "Finished Generating Main"  -m "Can be found in the Output folder"
 } || {
 	echo "Could not send Notification!"
 }
