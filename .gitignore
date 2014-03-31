@@ -20,3 +20,7 @@ TSWLatexianTemp*
 PlayAround.tex
 
 PlayAround.tex
+
+*.sublime-project
+
+*.sublime-workspace

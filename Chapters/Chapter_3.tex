@@ -53,7 +53,10 @@ Da $M(\varepsilon)$ endlich ist, ist es nach oben beschränkt. Es  gibt also $N(
 Seien $a$ und $b$ Grenzwerte von $(a_n)_{n\geq 1}$. Sei $\varepsilon = \left| \frac{b-a}{3}\right|>0$, dann gibt es $N_1,N_2$ so dass $$\left| a_n-a\right| <\varepsilon\hspace{10mm}\forall n>N_1$$$$\left| a_n-b\right| <\varepsilon\hspace{10mm}\forall n>N_2$$
 Also$ \forall n\geq \max\{ N_1,N_2\}$ $$(a-b)\cong\left| (a-a_n)+(a_n-b)\right| < 2\varepsilon=\frac{2}{3}\left|b-a\right|$$
 \subsection*{Binomischen Lehrsatz}
-Für beliebige Zahlen $a,b$ und $n\in\mathbb{N}$ ist \[{\left( {a + b} \right)^n} = \sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}n\\k\end{array}} \right){a^{n - k}}{b^k}} \]
+Für beliebige Zahlen $a,b$ und $n\in\mathbb{N}$ ist \[{\left( {a + b} \right)^n} = \sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}
+n\\
+k
+\end{array}} \right){a^{n - k}}{b^k}} \]
 \item Falls $(a_n)_{n\geq 1}$ konvergent ist, $\{a_n:n\geq 1\}$ beschränkt: Sei $\varepsilon=1$, $\lim a_n=a$ und $N_0$ mit $$\left| a_n-a\right| \leq 1\hspace{10mm} \forall n>N_0$$ Dann ist $\forall n$ $\left| a_n\right| \geq \max\{\left| a\right| +1,\left| a_j\right|, 1\leq j\leq N_0  \}$
 \end{enumerate}
 \subsubsection*{Beispiel 3.6}
@@ -66,20 +69,43 @@ Dann gilt für alle $n\geq n_0$, $\frac{1}{\varepsilon}<n_0\leq n \Rightarrow \l
 \item Sei $0<q<1$ und $a_n:=q^n$, $n 1$\todo{Cannot read, page 54 top}. Dann gilt $\lim a_n=0$ ($a_n$ konvergiert gegen 0)
 \subsubsection*{Beweis}
 Zu beweisen $$\forall \varepsilon > 0, \exists N_0=N_0(\varepsilon)\in N$$\todo{Should it be $\in\mathbb{R}$??}$$\forall n\geq N_0:q^n <\varepsilon$$
-Die Idee ist zu zeigen dass $\frac{1}{q^n}$ sehr Gross wird und deswegen $q^n$ sehr klein wird. Setzen wir $\frac{1}{q}=1+\delta$ mit $\delta>0$ $\left( 1<1\Rightarrow \frac{1}{q}>1\right)$ %page 54, middle
+Die Idee ist zu zeigen dass $\frac{1}{q^n}$ sehr Gross wird und deswegen $q^n$ sehr klein wird. Setzen wir $\frac{1}{q}=1+\delta$ mit $\delta>0$ $\left( 1<1\Rightarrow \frac{1}{q}>1\right)$%CHECK FROM HERE
+ $$\frac{1}{q^n}=\left( \frac{1}{q}\right)^n=\left( 1+\delta\right)^n=1+n\delta +\left( {\begin{array}{*{20}{c}}
+n\\
+2
+\end{array}} \right) \delta^2+\dots+\delta^n\geq 1+n\delta>n\delta, \forall n\in\mathbb{N}$$
+also $$0<q^n<\frac{1}{n\delta}, \forall n\in\mathbb{N}$$
+Sei jetzt $\varepsilon >0$, wähle $N_0=N_0(\varepsilon)$ mit $\frac{1}{\varepsilon\delta}<N_0\Rightarrow \frac{1}{N_0\delta}<\varepsilon$
+$$\forall n>N_0\hspace{5mm}0<q^n\leq\frac{1}{n\delta}<\frac{1}{N_0\delta}<\varepsilon$$
+\item $\sqrt[n]{n}$, $\lim a_n=1$. Klar: $n\geq 1$ also $\sqrt[n]{n}\geq 1$\\
+Gegeben ein $\varepsilon>0$, wollen wir $n$ so gross wählen, dass $$\sqrt[n]{n}-1 <\varepsilon$$ das heisst, $n<\left( 1+\varepsilon \right)^n$. Wir entwickeln $$\left( 1+\varepsilon\right)^n=1+n\varepsilon+\left( {\begin{array}{*{20}{c}}n\\2\end{array}} \right) \varepsilon^2 + \dots +\varepsilon^n$$\todo{can't read last element of the expansion}
+$\varepsilon$ ist klein aber fixiert.\\
+
+Für $n$ sehr gross wird $1+n\varepsilon$ nie grösser als $n$ sein. Wir versuchen unsere Glück mit \[\left( {\begin{array}{*{20}{c}}n\\2\end{array}} \right){\varepsilon ^2}{\text{ term}}\] 
+\[\left( {\begin{array}{*{20}{c}}n\\2\end{array}} \right){\varepsilon ^2} = \frac{{n(n - 1)}}{2}\varepsilon \] Wir benutzen also $( 1+\varepsilon )^n\geq \frac{n(n-1)}{2}\varepsilon^2$. Wir wollen $n$ so wählen dass \[\frac{{n(n - 1)}}{2}{\varepsilon ^2} > n\] d.h. $n-1>\frac{2}{\varepsilon^2}$ oder $n>1+\frac{2}{\varepsilon^2}$\\
+
+Setzen wir $N_0:=\left( 1+\frac{2}{\varepsilon^2}\right)+1$. Dann gilt für $\forall n>N_0$ $$(1+\varepsilon)^n > n \geq 1$$
+$$\Rightarrow 1\leq \sqrt[n]{n}\leq 1+\varepsilon$$
+$$\Rightarrow -\varepsilon<0\leq\sqrt[n]{n}-1\leq\varepsilon\Rightarrow \left| \sqrt[n]{n}-1\right| <\varepsilon, \forall n>N_0$$
+\item Nicht alle Folgen sind konvergent. Es gibt zwei verschiedene Verhältnissen einer divergenten Folge $$a_n=(-1)^n \Rightarrow \{1,-1,\dots \}\text{ beschränkt aber nicht konvergent}$$
+\item $a_n=n$ unbeschränkt, divergent.
 \end{enumerate}
 
+\subsubsection*{Beispiel 3.7}
+Seien $p\in\mathbb{N}$, $0<q<1$. Dann gilt $\lim\limits_{n\rightarrow\infty}n^p q^n=0$. Dass heisst Exponentialfunktionen wächst schneller als jede Potenz (Wann $x$ genügend Gross ist, $a^x>x^b$)
 
+\subsubsection*{Beweis}
+Der Trick ist folgender \[{n^p}{q^n} = {\left( {{n^{\frac{p}{n}}} \cdot q} \right)^n} = {\left( {{{\left( {\sqrt[n]{n}} \right)}^p}{{\left( {{q^{\frac{1}{p}}}} \right)}^p}} \right)^n}\] Wir werden Beispiel 3.6 (2.),(3.) benutzen. \\(d.h. $\lim\sqrt[n]{n}=1 \hspace{10mm}\lim r^n=0, 0<r<1$) \\
 
+Da $\lim\sqrt[n]{n}=1$, $\forall\eta >0$, $\exists N_0(\eta)$ $$\sqrt[n]{n}<1+\eta, n>N_0(\eta)$$
+Wir wählen $\eta >0$ so dass ${q^{\frac{1}{p}}} = \frac{1}{{{{\left( {1 + \eta } \right)}^2}}}$. Dann
+$$\sqrt[n]{n}\cdot q^{\frac{1}{p}}\leq\frac{\left( 1+\eta\right)}{\left( 1+\eta\right)^2}=\frac{1}{1+\eta}\hspace{10mm} \forall n>N_0\left(\eta\right)$$
+Wobei $$\forall n>N_0\left(\eta\right)$$$$a_n=\left( \sqrt[n]{n}q^{\frac{1}{p}}\right)^{pn}<r^n$$ mit $$r:=\left( \frac{1}{1+\eta}\right)^p, r<1$$
+Sei jetzt $\varepsilon>0$. Da $\lim r^n=0$, $\exists N_1=N_1(\varepsilon)$, $\forall n>N_1(\varepsilon)$, $r^n<\varepsilon$\\
 
+\noindent Für $n>\max\{N_0\left(\eta\right), N_1(\varepsilon)\}$, $a_n<r^n<\varepsilon \Rightarrow \lim a_n=\lim n^pq^n=0$ 
 
-
-
-
-
-
-
-
-
-
-
+\section{Konvergenzkriterien}
+Mit konvergenten Folgen kann man \todo{Can't read, page 59 top} wie folgender Satz zeigt.
+\subsubsection*{Satz 3.8}
+Seien

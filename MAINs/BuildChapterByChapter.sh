@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # My first Script
 
 # echo "Hello World!"
