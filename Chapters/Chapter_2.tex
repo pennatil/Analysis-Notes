@@ -31,16 +31,22 @@ $(a,b)\rightarrow a+b$
 $(a,b)\rightarrow a\cdot b$
 \end{itemize}
 und 2 ausgezeichnete Element 0 und 1 in $\mathbb{R}$ die folgenden Eigenschaften haben:\\
-\begin{center}
+
 \begin{tabular}{l r l r l}
-Komutivität & A1) & $x+y=y+x$ & M1) & $x\cdot y=y\cdot x$ \\ 
-Assoziativität & A2) & $(x+y)+z=x+(y+z)$ & M2) & $(xy)z=x(yz)$ \\
-Neutrales Element & A3) & $x+0=x=0+x$ & M3) & $x\cdot 1=1\cdot x$\\
-Inverse Element & A4) & $\forall x\in\mathbb{R}, \exists y\in\mathbb{R}$ & M4) & $\forall x\in\mathbb{R}, x\not =0$ \\
-~&~& mit $x+y=0=y+x$ & ~& $ \exists y\in\mathbb{R}$ mit $xy=1=yx$
+Komutivität & A1) & $x+y=y+x$  \\ 
+Assoziativität & A2) & $(x+y)+z=x+(y+z)$  \\
+Neutrales Element & A3) & $x+0=x=0+x$ \\
+Inverse Element & A4) & $\forall x\in\mathbb{R}, \exists y\in\mathbb{R}$ mit $x+y=0=y+x$
 \end{tabular}
-\end{center}
-\todo{resize table}
+
+\begin{tabular}{l r l r l}
+Komutivität  & M1) & $x\cdot y=y\cdot x$ \\ 
+Assoziativität  & M2) & $(xy)z=x(yz)$ \\
+Neutrales Element  & M3) & $x\cdot 1= x =1\cdot x$\\
+Inverse Element  & M4) & $\forall x\in\mathbb{R}, x\not =0$  $ \exists y\in\mathbb{R}$ mit $xy=1=yx$
+\end{tabular}
+\\
+
 und Die Multiplikation ist verträglich it der Addition im Sinne des Distributivitäts-Gesetz (D)$$\forall x,y,z\in\mathbb{R}:x(y+z)=xy+xz$$
 
 \begin{itemize}
@@ -53,23 +59,32 @@ Eine Menge $G$ versetzen mit Verknüpfung $+$ und Neutrales Element $O$ die den 
 
 Eine enge $K$ versetzen mit Verknüpfung $+,\cdot$ und Elementen $0\not =1$ die den obigen Eigenschaften 
 A1$\rightarrow$A4, M1$\rightarrow$M4, D genügen heisst Körper. 
+\newpage
+\subsubsection*{Folgerung 2.3}
+Seien $a,b,c,d\in\mathbb{R}$\\
 
-\subsubsection*{Folgerung 2.3}\todo{Add Big curly brackets to enum list, page 25}
-Seien $a,b,c,d\in\mathbb{R}$ 
+$\left.\begin{minipage}{10.5cm} 
 \begin{enumerate}[i)]
 \item $a+b=a+c\Rightarrow b=c$ und $O$ is eindeutig, d.h. Falls $z\in\mathbb{R}$ der Eigenschaften $a+z=a$ $\forall a\in\mathbb{R}$ genügt, so folgt $z=0$
 \item $\forall a,b\mathbb{R}$, $\exists !$ (eindeutig bestimmtes) $x\in\mathbb{R}:a+x=b$. Wir schreiben $x=b-a$ und $0-a=-a$ ist das additive Inverse zu $a$
 \item $b-a=b+(-a)$
 \item $-(-a)=a$
-\item Falls $ab=ac$ und $a\not = 0\Rightarrow b=c$ und 1 ist eindeutig, d.h. falls $x\in\mathbb{R}$ der Eigenschaften $ax=a$ $\forall a\in\mathbb{R}$ genügt so folgt $x=1$
-\item $\forall a,b\in\mathbb{R}$, $a\not =0$, $\exists !x\in\mathbb{R}:ax=b$. Wir schreiben $x=\frac{b}{a}$ und $\frac{1}/{a}=a^{-1}$ ist das Multiplikativ Inverse zu $a$.
-\item Falls $a\not =0\Rightarrow {\left(a^{-1}\right)}^{-1}=a$ 
-\item $\forall a\in\mathbb{R}$, $a\cdot 0=0$
-\item Falls $ab=0$ dann folgt $a=0$ oder $b=0$
+\end{enumerate}
+\end{minipage}\right\rbrace$ A
+$\left.\begin{minipage}{10.5cm} 
+\begin{enumerate}
+\item[v)] Falls $ab=ac$ und $a\not = 0\Rightarrow b=c$ und 1 ist eindeutig, d.h. falls $x\in\mathbb{R}$ der Eigenschaften $ax=a$ $\forall a\in\mathbb{R}$ genügt so folgt $x=1$
+\item[vi)] $\forall a,b\in\mathbb{R}$, $a\not =0$, $\exists !x\in\mathbb{R}:ax=b$. Wir schreiben $x=\frac{b}{a}$ und $\frac{1}{a}=a^{-1}$ ist das Multiplikativ Inverse zu $a$.
+\item[vii)] Falls $a\not =0\Rightarrow {\left(a^{-1}\right)}^{-1}=a$ 
+\end{enumerate}
+\end{minipage}\right\rbrace$ M
+\begin{enumerate}
+\item[viii)] $\forall a\in\mathbb{R}$, $a\cdot 0=0$
+\item[ix)] Falls $ab=0$ dann folgt $a=0$ oder $b=0$
 \end{enumerate}
 \subsubsection*{Beweis 2.3}
-\begin{enumerate}[i)]
-\item Sei $a+b=a+c$\\ A4 $\Rightarrow\exists y\in\mathbb{R}:a+y=0$\\$a+b=a+c\Rightarrow y+(a+b)=y+(a+c)$\\$\Rightarrow (y+a)+b=(y+a)+c$\\$\Rightarrow 0+b=0+c \Rightarrow b=c$ \todo{add rules to top of arrows, page 26 top}\\
+\begin{enumerate}
+\item Sei $a+b=a+c$\\ A4 $\Rightarrow\exists y\in\mathbb{R}:a+y=0$\\$a+b=a+c\Rightarrow y+(a+b)=y+(a+c)$\\$\mathop  \Rightarrow \limits^{A2} (y+a)+b=(y+a)+c$\\$\Rightarrow 0+b=0+c \mathop  \Rightarrow \limits^{A3} b=c$\\
 Nehmen wir an, dass es $0'\in\mathbb{R}$ gibt so dass $x+0'=x$, $\forall x\in\mathbb{R}$, d.h. es gibt eine zweite neutrale Element für $+$.\\
 
 \noindent Dann $0+0'=0$ aber auch A3 $\Rightarrow 0+0=0\Rightarrow 0+0'=0+0\Rightarrow 0=0'$
@@ -285,7 +300,7 @@ Sei $y:=\sup A$. Wir zeigen dass $y^2=x$
     Sei $h=\frac{y^2-x}{2y}\not=0$ 
     $$(y-h)^2=y^2-2hy+h^2>y^2-2hy=y^2 -(y^2-=x$$\todo{Chopped, page 35.2 top}
     $\Rightarrow y-h$ ist eine Obere Schranke für $A$
-    $$\left( \forall z \in A, z^2\leq x\text{\newline Da }(y-h)^2>x \text{ ist, } (y-h)^2>x\geq z^2\text{\newline Damit } y-h>z, \forall z \in A\right)$$\todo{break into three lines, page 35.2}
+    $$\left( \forall z \in A, z^2\leq x\text{. Da }(y-h)^2>x \text{ ist, } (y-h)^2>x\geq z^2\text{. Damit } y-h>z, \forall z \in A\right)$$
     Aber $y-h<y$, wiederspruch zur Minimalität von y.
 \end{itemize}
 Falls $0<x<1$, dann $\frac{1}{x}>1$\\
@@ -319,7 +334,7 @@ Wir wissen dass gewisse Gleichungen in $\mathbb{R}$ Lösbar ist: z.B. $y^2=a$, $
 \section{Euklidische Räume}
 Von der Mengentheorie können wir die Kartesische Produkt zweier Mengen; es Lässt sich ohne schwierigkeiten zu endlichen Familien $A_1,\dots ,A_n$ verallgemeinen; nähmlich $$A_1\times\dots\times A_n:=\{\left(x_1,\dots ,x_n\right):x_i\in A_i \}$$ ist die Menge der geordneten $n-$tuple von Elementen aus $A_1,\dots ,A_n$.\\
 
-Für beliebige $n\geq 1$ betrachten wir $\mathbb{R}^n:=\underbrace{\mathbb{R}\times\dots\times\mathbb{R}}$\todo{Add n-mal to underbrace}  und untersuchen Seine Struktur. Auf $\mathbb{R}^n$ haben wir zwei Verknüpfungen
+Für beliebige $n\geq 1$ betrachten wir$ \mathbb{R}^n: = \underbrace {\mathbb{R} \times  \ldots  \times \mathbb{R} }_{n - {\text{mal}}}$ und untersuchen Seine Struktur. Auf $\mathbb{R}^n$ haben wir zwei Verknüpfungen
 \begin{enumerate}
     \item $+:\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}^n$ Addition.\\
 $\left( {\underbrace {\left( {{x_1}, \ldots ,{x_n}} \right)}_x,\underbrace {\left( {{y_1}, \ldots ,{y_n}} \right)}_y} \right) \to \underbrace {\left( {{x_1} + {y_1}, \ldots ,{x_n} + {y_n}} \right)}_{{\text{Komponentenweise Addition}}}$. Dann ist $\left( \mathbb{R}^n,+\right)$ eine Abelische Gruppe, mit $0:=(0,\dots,0)$ aln neutrales Element

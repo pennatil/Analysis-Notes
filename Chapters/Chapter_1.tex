@@ -20,7 +20,7 @@ Seien $A,B$ Aussagen
 \subsubsection*{Folgerung (eine wahre implikation)}
 \begin{itemize}
 \item Aus $A$ folgt $B$ wird mit $\Rightarrow$ bezeichnet
-\item Wenn $A$, dann $B$ wird mit \todo{WHAT??}
+\item Wenn $A$, dann $B$ wird mit \todo{Cannot read, page 2 middle}
 \item Die negation der Aussage $A$ wird mit $\lnot A$ bezeichnet
 \item $A$ ist equivalent zu $B$ wird mit $A\Leftrightarrow B$ bezeichnet
 \item $\left(A\Rightarrow B\right)\land \left( B\Rightarrow A\right)$ $A$ wahr genau dann, wenn $B$ wahr ist.
@@ -39,18 +39,20 @@ Falls $A\Rightarrow B$, so kann $A$ nicht wahr sein wenn $B$ falsch ist (weil $A
 \section{Prinzip des Indirekten Beweises}
 Zum Beweis der Aussage $A\Rightarrow B$ genügt es die Aussage $\lnot B\Rightarrow\lnot A$ zu zeigen, oder: die Annahme $A\land\lnot B$ zum Wiederspruch zu führen.
 
-\subsection*{Indirekten Beweis}\todo{Might require an enumerated list}
+\subsection*{Indirekten Beweis}
 Man fügt $\lnot B$ als Annahme hinzu und kommt nach einer Kette von erlaubten schlüssen zu einer falschen Aussage.\\
 
-Hieraus schliesst man, dass das zusatzannahme $\lnot B$ nicht wahr ist. 
+\noindent Hieraus schliesst man, dass das zusatzannahme $\lnot B$ nicht wahr ist. 
 
 \subsubsection*{Beispiel 1.1}
-$A=\text{''jede natürliche Zahl } n \text{ hat einen Nachfolger } n+1\text{''}$\\
-$B=\text{''es gibt keine grösste Naturliche Zahl''}$\\
+\begin{itemize}
+\item $A=\text{''jede natürliche Zahl } n \text{ hat einen Nachfolger } n+1\text{''}$
+\item $B=\text{''es gibt keine grösste Naturliche Zahl''}$
+\end{itemize}
 
-Wir beweisen dass aus $A$ folgt $B$. Nehmen wir an, dass $A$ wahr und $B$ falsch ist. \\
+\noindent Wir beweisen dass aus $A$ folgt $B$. Nehmen wir an, dass $A$ wahr und $B$ falsch ist. \\
 
-$\lnot B=$ es gibt eine grösste Natürliche zahl$N_0''$ d.h $N_0>l$ für jedes $l \in \mathbb{N}$.\\
+\noindent $\lnot B=$ es gibt eine grösste Natürliche zahl$N_0''$ d.h $N_0>l$ für jedes $l \in \mathbb{N}$.\\
 
 Mittels der Aussage $A$ wissen wir dass $N_0$ einen Nachfolger $N_0 +1$ hat. Dann $N_0+1>N_0$. Dass ist ober ein Wiederspruch.
 \begin{framed}
@@ -96,7 +98,7 @@ Sie stellen alle Dominosteinen eine nach der andere. Falls der erste Dominostein
 \item Für alle $n\geq 1$ gilt: $$1+3+5+\dots (2n-1)=n^2\text{\indent\indent}A(n)$$ Beweis mittels Vollständige Induktion
 \begin{enumerate}[i)]
 \item $A(i)$ lautet $1=1^2$ und gilt.
-\item Sei $n\geq 1$. Annahme: so gilt $A(n)$. Die Linke Seite der Identität $A(n+1)$ ist \[1+3+\dots (2n-1)+(2n+1)=n^{2}+(2n+1)=(n+1)^2\] womit $A(n+1)$ bewiesen ist.\todo{ERRORE!!!!!!!!!}
+\item Sei $n\geq 1$. Annahme: so gilt $A(n)$. Die Linke Seite der Identität $A(n+1)$ ist \[1+3+\dots (2n-1)+(2n+1)=n^{2}+(2n+1)=(n+1)^2\] womit $A(n+1)$ bewiesen ist.
 \end{enumerate}
 \item Als zweite Beispiel für Vollständige Induktion beweisen wir den Fundamental Satz von Euklid:
 \subsubsection*{Satz 1.4}
@@ -120,14 +122,16 @@ Nehmen wir an das gegenteil ''$\mathbb{P}$ ist endlich'', d.h. $\mathbb{P}=\{p_1
 \subsection*{Teilbarkeit}
 \subsubsection{Formale Definition}
 Eine Ganze Zahl $a$ teilt eine ganze Zahl $b$ genau dann, wenn es eine ganze Zahl $n$ gibt, für die $an=b$ ist. \\
-
+\todo{Please fill out the table}
+\begin{center}
 \begin{tabular}{l|l}
-Man sagt dann & Man schreibt \\\hline
+Man sagt dann & Man schreibt \\\hline 
 $a$ teilt $b$ & $a\mid b$\\
 $a$ ist teiler von $b$ & ~\\
 $b$ ist teilbar durch $a$ & ~\\
 $b$ ist Vielfaches durch $a$ & ~\\
 \end{tabular}
+\end{center}
 
 \subsubsection*{Eigenschaften der Teilbarkeit}
 \begin{itemize}
@@ -146,9 +150,9 @@ So erhalten wir einen Wiederspruch
 \end{enumerate}
 
 \subsubsection*{Bemerkung}
-Letztes mal haben wir gesagt jedes element von $A$ ist auch Element von $B$ ($\forall x,x\in A\Rightarrow x\in B$) wird mit $A\subset B$ ($A$ ist in $B$ enthalten, $A$ ist Teilmenge von $B$) bezeichnet. Falls $A\subset B$ und eine Element $b\in B$ gibt mit $b\not\in A$ sagen wir $A$ ist eine ''eigentliche Teilmenge'' von $B$. Manchmal schreiben wir $A\subset B$\todo{Aggiungere un notequal sotto al simbolo in} in diesem Fall. \\
+Letztes mal haben wir gesagt jedes element von $A$ ist auch Element von $B$ ($\forall x,x\in A\Rightarrow x\in B$) wird mit $A\subset B$ ($A$ ist in $B$ enthalten, $A$ ist Teilmenge von $B$) bezeichnet. Falls $A\subset B$ und eine Element $b\in B$ gibt mit $b\not\in A$ sagen wir $A$ ist eine ''eigentliche Teilmenge'' von $B$. Manchmal schreiben wir $A\mathop  \subset \limits_{\not  = } B$ in diesem Fall. \\
 
-Es gibt viele Bücher, mit der Folgenden Notation: jedes element von $A$ ist ein element von $B$ wird mit $\subseteq$ bezeichnet. Und wenn $A\subseteq$ und $A\not =B$ dann benutzen sie $A\subset B$ statt \todo{guardare ultimo todo}. $A=B$ falls $x\in A\Leftrightarrow x\in B$. 
+Es gibt viele Bücher, mit der Folgenden Notation: jedes element von $A$ ist ein element von $B$ wird mit $A\subseteq B$ bezeichnet. Und wenn $A\subseteq B$ und $A\not =B$ dann benutzen sie $A\subset B$ statt $A\mathop  \subset \limits_{\not  = } B$. $A=B$ falls $x\in A\Leftrightarrow x\in B$. 
 
 \subsubsection*{Satz}
 $A=B \Leftrightarrow A\subset B$ und $B\subset A$ 

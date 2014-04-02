@@ -32,6 +32,10 @@
     pdflatex --jobname="\jobname7"
     "\gdef\string\conditionmacro{7}\string\input\space\jobname"
   }%
+\immediate\write18{%
+    pdflatex --jobname="\jobname8"
+    "\gdef\string\conditionmacro{8}\string\input\space\jobname"
+  }%
 
   \expandafter\stop
 \fi
@@ -94,4 +98,8 @@
 \input{../Chapters/Chapter_7.tex}
 \fi
 
+\ifnum\conditionmacro=8
+\setcounter{chapter}{7}
+\input{../Chapters/Chapter_8.tex}
+\fi
 \end{document}

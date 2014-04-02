@@ -47,6 +47,7 @@ mv mainMult4.pdf "$BASEDIR/Output/Kapitel 4 - Chapter 4 - Analysis I.pdf"
 mv mainMult5.pdf "$BASEDIR/Output/Kapitel 5 - Chapter 5 - Analysis I.pdf"
 mv mainMult6.pdf "$BASEDIR/Output/Kapitel 6 - Integration - Analysis II.pdf"
 mv mainMult7.pdf "$BASEDIR/Output/Kapitel 7 - Gewöhnliche Differenzialgleichungen - Analysis II.pdf"
+mv mainMult8.pdf "$BASEDIR/Output/Kapitel 8 - Differenzialrechnung in R^n - Analysis II.pdf"
 
 { # your 'try' block
     growlnotify "Finished Generating Chapter Files"  -m "They can be found in the Output folder"
