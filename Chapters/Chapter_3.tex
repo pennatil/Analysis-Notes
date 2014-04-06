@@ -78,11 +78,20 @@ also $$0<q^n<\frac{1}{n\delta}, \forall n\in\mathbb{N}$$
 Sei jetzt $\varepsilon >0$, wähle $N_0=N_0(\varepsilon)$ mit $\frac{1}{\varepsilon\delta}<N_0\Rightarrow \frac{1}{N_0\delta}<\varepsilon$
 $$\forall n>N_0\hspace{5mm}0<q^n\leq\frac{1}{n\delta}<\frac{1}{N_0\delta}<\varepsilon$$
 \item $\sqrt[n]{n}$, $\lim a_n=1$. Klar: $n\geq 1$ also $\sqrt[n]{n}\geq 1$\\
-Gegeben ein $\varepsilon>0$, wollen wir $n$ so gross wählen, dass $$\sqrt[n]{n}-1 <\varepsilon$$ das heisst, $n<\left( 1+\varepsilon \right)^n$. Wir entwickeln $$\left( 1+\varepsilon\right)^n=1+n\varepsilon+\left( {\begin{array}{*{20}{c}}n\\2\end{array}} \right) \varepsilon^2 + \dots +\varepsilon^n$$\todo{can't read last element of the expansion}
+Gegeben ein $\varepsilon>0$, wollen wir $n$ so gross wählen, dass $$\sqrt[n]{n}-1 <\varepsilon$$ das heisst, $n<\left( 1+\varepsilon \right)^n$. Wir entwickeln $$\left( 1+\varepsilon\right)^n=1+n\varepsilon+\left( {\begin{array}{*{20}{c}}
+n\\
+2
+\end{array}} \right) \varepsilon^2 + \dots +\varepsilon^n$$\todo{can't read last element of the expansion}
 $\varepsilon$ ist klein aber fixiert.\\
 
-Für $n$ sehr gross wird $1+n\varepsilon$ nie grösser als $n$ sein. Wir versuchen unsere Glück mit \[\left( {\begin{array}{*{20}{c}}n\\2\end{array}} \right){\varepsilon ^2}{\text{ term}}\] 
-\[\left( {\begin{array}{*{20}{c}}n\\2\end{array}} \right){\varepsilon ^2} = \frac{{n(n - 1)}}{2}\varepsilon \] Wir benutzen also $( 1+\varepsilon )^n\geq \frac{n(n-1)}{2}\varepsilon^2$. Wir wollen $n$ so wählen dass \[\frac{{n(n - 1)}}{2}{\varepsilon ^2} > n\] d.h. $n-1>\frac{2}{\varepsilon^2}$ oder $n>1+\frac{2}{\varepsilon^2}$\\
+Für $n$ sehr gross wird $1+n\varepsilon$ nie grösser als $n$ sein. Wir versuchen unsere Glück mit \[\left( {\begin{array}{*{20}{c}}
+n\\
+2
+\end{array}} \right){\varepsilon ^2}{\text{ term}}\] 
+\[\left( {\begin{array}{*{20}{c}}
+n\\
+2
+\end{array}} \right){\varepsilon ^2} = \frac{{n(n - 1)}}{2}\varepsilon \] Wir benutzen also $( 1+\varepsilon )^n\geq \frac{n(n-1)}{2}\varepsilon^2$. Wir wollen $n$ so wählen dass \[\frac{{n(n - 1)}}{2}{\varepsilon ^2} > n\] d.h. $n-1>\frac{2}{\varepsilon^2}$ oder $n>1+\frac{2}{\varepsilon^2}$\\
 
 Setzen wir $N_0:=\left( 1+\frac{2}{\varepsilon^2}\right)+1$. Dann gilt für $\forall n>N_0$ $$(1+\varepsilon)^n > n \geq 1$$
 $$\Rightarrow 1\leq \sqrt[n]{n}\leq 1+\varepsilon$$
