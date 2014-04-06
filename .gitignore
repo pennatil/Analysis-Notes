@@ -15,9 +15,8 @@ TSWLatexianTemp*
 *.log
 
 *.tcp
-.dropbox
 
-PlayAround.tex
+.dropbox
 
 PlayAround.tex
 
@@ -25,10 +24,6 @@ PlayAround.tex
 
 *.sublime-workspace
 
-Output/Kapitel 2 - Reele Zahlen, Euklidische Räume und Komplexe Zahlen - Analysis I.pdf
+mainMobile.tex
 
-Output/Kapitel 7 - Gewöhnliche Differenzialgleichungen - Analysis II.pdf
-
-Output/Kapitel 7 - Gewöhnliche Differenzialgleichungen - Analysis II.pdf
-
-Output/Kapitel 7 - Gewöhnliche Differenzialgleichungen - Analysis II.pdf
+AutomatedRun.sh
