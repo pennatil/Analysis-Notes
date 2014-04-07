@@ -15,17 +15,30 @@ Funktion in mehreren variablen sind ein bisschen komplizierter als Funktionen in
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{x \to 0}\\{y = 0}\end{array}} \frac{{x \cdot y}}{{{x^2} + {y^2}}} = 0 = f(0,0)\]
+\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{x \to 0}\\
+{y = 0}
+\end{array}} \frac{{x \cdot y}}{{{x^2} + {y^2}}} = 0 = f(0,0)\]
 \end{minipage}
 \hspace{0.5cm}
 \begin{minipage}[b]{0.45\linewidth}
 \centering
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{y \to 0}\\{x = 0}\end{array}} \frac{{x \cdot y}}{{{x^2} + {y^2}}} = 0 = f(0,0)\]
+\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{y \to 0}\\
+{x = 0}
+\end{array}} \frac{{x \cdot y}}{{{x^2} + {y^2}}} = 0 = f(0,0)\]
 \end{minipage}
 \end{figure}
 
 Aber der Limes entlang der Gerade $y=mx$ 
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{x \to 0}\\{y \to 0}\\{y = mx}\end{array}} f(x,mx) = \mathop {\lim }\limits_{x \to 0} \frac{{m{x^2}}}{{(1 + {m^2}){x^2}}} = \mathop {\frac{m}{{1 + {m^2}}}}\limits_{\begin{array}{*{20}{c}} \downarrow \\{{\text{Hängt von }} m {\text{ ab}}}\end{array}} \]
+\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{x \to 0}\\
+{y \to 0}\\
+{y = mx}
+\end{array}} f(x,mx) = \mathop {\lim }\limits_{x \to 0} \frac{{m{x^2}}}{{(1 + {m^2}){x^2}}} = \mathop {\frac{m}{{1 + {m^2}}}}\limits_{\begin{array}{*{20}{c}}
+ \downarrow \\
+{{\text{Hängt von }} m {\text{ ab}}}
+\end{array}} \]
 und $\frac{m}{1+m^2}\not=0$, falls $m\not=0$. Eine funktion $f(x,y)$ an der stelle $(x_0,y_0)$ ist stetig wenn der limes $\mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} f(x,y)$ in jeder Richtung der gleichen wert haben. 
 \begin{framed}
 \centerline{\textbf{Definition 8.1}}
@@ -62,11 +75,17 @@ Hierbei gilt $x=r\cos\theta$, $y=r\sin\theta$, wobei $r=$ länge des Vektors $(x
 \end{itemize}
 sind stetig, da sie aus Steigen Funktionen zusammengesetzt.
 
-\item \[f(x,y) = \left\{ {\begin{array}{*{20}{c}}{\frac{{{x^2}y}}{{{x^2} + {y^2}}}}&{{\text{für}}}&{{\text{(x,y)}}\not  = (0,0)}\\0&{{\text{für}}}&{{\text{(x,y)}}= (0,0)}\end{array}} \right.\]
+\item \[f(x,y) = \left\{ {\begin{array}{*{20}{c}}
+{\frac{{{x^2}y}}{{{x^2} + {y^2}}}}&{{\text{für}}}&{{\text{(x,y)}}\not  = (0,0)}\\
+0&{{\text{für}}}&{{\text{(x,y)}}= (0,0)}
+\end{array}} \right.\]
 Für $(x,y)\not=(0,0)$ ist $f$ als Quotient von steiger Funktionen stetig. Es verbleibt $f$ im Punkt $(0,0)$ zu untersuchen. Da \[\left| {\frac{{{x^2}}}{{{x^2} + {y^2}}}} \right| \le 1\] $$ 0<\left| f(x,y)\right| <\left| y\right|$$ \[f(x,y) = \frac{{{x^2}y}}{{{x^2} + {y^2}}} = \frac{{\left( {{r^2}{{\cos }^2}\theta } \right)\left( {r\sin \theta } \right)}}{{{r^2}\left( {{{\cos }^2}\theta  + {{\sin }^2}\theta } \right)}} = r{\cos ^2}\theta \sin \theta \] 
 \[\mathop {\lim }\limits_{r \to 0} f(r,\theta ) = \mathop {\lim }\limits_{r \to 0} r{\cos ^2}\theta \sin \theta  = 0\]
 \item Wir können nochmals die Stetigkeit der Funktion 
-\[f(x,y) = \left\{ {\begin{array}{*{20}{c}}{\frac{{{x^2}y}}{{{x^2} + {y^2}}}}&{{\text{für}}}&{{\text{(x,y)}}\not  = (0,0)}\\0&{{\text{für}}}&{{\text{(x,y)}}= (0,0)}\end{array}} \right.\] mittels Polarkoordinaten untersuchen $$f(x,y)=\frac{r^2\cos\theta\sin\theta}{r^2}=\cos\theta\sin\theta$$ \[\mathop {\lim }\limits_{r \to 0} f(x,y) = \cos \theta \sin \theta \] hängt von $\theta$ ab. $$\Rightarrow f\text{ in (0,0) nicht stetig}$$
+\[f(x,y) = \left\{ {\begin{array}{*{20}{c}}
+{\frac{{{x^2}y}}{{{x^2} + {y^2}}}}&{{\text{für}}}&{{\text{(x,y)}}\not  = (0,0)}\\
+0&{{\text{für}}}&{{\text{(x,y)}}= (0,0)}
+\end{array}} \right.\] mittels Polarkoordinaten untersuchen $$f(x,y)=\frac{r^2\cos\theta\sin\theta}{r^2}=\cos\theta\sin\theta$$ \[\mathop {\lim }\limits_{r \to 0} f(x,y) = \cos \theta \sin \theta \] hängt von $\theta$ ab. $$\Rightarrow f\text{ in (0,0) nicht stetig}$$
 
 \subsubsection*{Bemerkung}\todo{is this supposed to be inside the list or out??}
 Eine trickreiche Variante Grenzwerte zu berechnen, ergibt sich durch substitution, d.h. man berechnet den Grenzwert \[\mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} f\left( {g(x,y)} \right)\] indem man zunächst $t=g(x,y)$ setzt und den Grenzwert \[{t_0} = \mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} g(x,y)\] bestimmt. Dann ist \[\mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} f\left( {g(x,y)} \right) = \mathop {\lim }\limits_{t \to {t_0}} f(t)\] 
@@ -85,8 +104,29 @@ Sei $$f:\mathbb{R}^2\rightarrow \mathbb{R}$$$$(x,y)\rightarrow \left(x^2+xy\righ
 
 \begin{framed}
 \centerline{\textbf{Definition 8.2}}
-\noindent Die Funktion $f:\Omega\subset\mathbb{R}^n\rightarrow\mathbb{R}$ heisst an der stelle $x_0\in\Omega$ in Richtung $e_i$ (oder nach $x^i$) partielle differenzierbar falls der limes \[\frac{{\partial f}}{{\partial {x^i}}}({x_0}) = {f_{{x^i}}}({x_0}): =  - \mathop {\lim }\limits_{\begin{array}{*{20}{c}}{h \to 0}\\{h\not  = 0}\end{array}} \frac{{f({x_0} + h{e_i}) - f({x_0})}}{h}\]
-\[ = \mathop {\lim }\limits_{\begin{array}{*{20}{c}}{h \to 0}\\{h\not  = 0}\end{array}} \frac{{f\left( {{x_0}^1,{x_0}^2, \ldots ,{x_0}^i + h,{x_0}^{i + 1}, \ldots ,{x_0}^n} \right) - f\left( {{x_0}^1, \ldots ,{x_0}^n} \right)}}{h}\]
-existiert %Page 121
+\noindent Die Funktion $f:\Omega\subset\mathbb{R}^n\rightarrow\mathbb{R}$ heisst an der stelle $x_0\in\Omega$ in Richtung $e_i$ (oder nach $x^i$) partielle differenzierbar falls der limes \[\frac{{\partial f}}{{\partial {x^i}}}({x_0}) = {f_{{x^i}}}({x_0}): =  - \mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{h \to 0}\\
+{h\not  = 0}
+\end{array}} \frac{{f({x_0} + h{e_i}) - f({x_0})}}{h}\]
+\[ = \mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{h \to 0}\\
+{h\not  = 0}
+\end{array}} \frac{{f\left( {{x_0}^1,{x_0}^2, \ldots ,{x_0}^i + h,{x_0}^{i + 1}, \ldots ,{x_0}^n} \right) - f\left( {{x_0}^1, \ldots ,{x_0}^n} \right)}}{h}\]
+existiert 
 \end{framed}
+\subsubsection*{Bemerkung 8.3}
+\missingfigure{page 121, middle}
+Sei $f:\mathbb{R}^2\rightarrow\mathbb{R}, \left(x_0^1,x_0^2\right)\in\mathbb{R}^2$
+
+
+
+
+
+
+
+
+
+
+
+
 
