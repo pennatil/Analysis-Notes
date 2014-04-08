@@ -2,9 +2,9 @@
 Eine Gleichung, in der Ableitungen einer gesuchte Funktionen auftreten, nennt man Differentialgleichung.
 $$y'(t)=y+y^2$$
 $$\left( y'(t)\right)^2=y(t)+2$$
-Hängt die gesuchte Funktion in der DGL nur von einer einzigen variablen ab, so spricht man von einer ''gewöhnliche DGL''.\\
+Hängt die gesuchte Funktion in der DGL nur von einer einzigen variablen ab, so spricht man von einer ``gewöhnliche DGL''.\\
 
-\noindent Hängt hingegen die gesuchte Funktion von mehrere Variabeln ab, d.h. kommen partielle Ableitungen in der Differentialgleichung vor, so liegt eine ''Partielle DGL'' vor. Viele physikalische Prozesse lassen sich oft durch Differenzialgleichungen bescreiben.
+\noindent Hängt hingegen die gesuchte Funktion von mehrere Variabeln ab, d.h. kommen partielle Ableitungen in der Differentialgleichung vor, so liegt eine ``Partielle DGL'' vor. Viele physikalische Prozesse lassen sich oft durch Differenzialgleichungen bescreiben.
 \subsubsection*{Beispiel}
 \begin{enumerate}
 \item Ein lineares Federpendel wird durch folgende DGL beschrieben $$m\frac{d^2x}{dt^2}=-Kx\text{\hspace{10mm} mit K = Federkonstante}$$
@@ -126,7 +126,7 @@ Die Lösung ist $$y(x)=c_1e^{-4x}+c_2e^{-6x}$$
 \section{Inhomogene DGL}
 Bisher haben wir nur Homogene Lineare DGL mit konstanten Koeffizienten betrachtet. Sehr oft treten auch Zusatzterme in den Gleichung auf. Wir haben der Folgende Allgemeine Satz für die Lösungsstruktur linearer DGL
 \subsubsection*{Satz 7.7}
-Die allgemeine Lösung einer inhomogenen DGL $$y^{(n)}+a_{n-1}y^{(n-1)}+\dots +a_1y'+a_0y=b(x)$$ ist die Summe einer ''spezielle'' Lösung der inhomogenen DGL und der allgemeinen Lösung der zugehörigen homogenen DGL $$\underbrace {{y_A}(x)}_{\scriptstyle{\text{Allgemeine Losung }}\hfill\atop
+Die allgemeine Lösung einer inhomogenen DGL $$y^{(n)}+a_{n-1}y^{(n-1)}+\dots +a_1y'+a_0y=b(x)$$ ist die Summe einer ``spezielle'' Lösung der inhomogenen DGL und der allgemeinen Lösung der zugehörigen homogenen DGL $$\underbrace {{y_A}(x)}_{\scriptstyle{\text{Allgemeine Losung }}\hfill\atop
 \scriptstyle{\text{der inhomogene DGL}}\hfill} = \underbrace {{y_S}(x)}_{\scriptstyle{\text{Spezielle Losung }}\hfill\atop
 \scriptstyle{\text{der inhomogene DGL}}\hfill} + \underbrace {{y_{AH}}(x)}_{\scriptstyle{\text{Allgemeine Losung }}\hfill\atop
 \scriptstyle{\text{der Homogene DGL}}\hfill}$$
@@ -146,14 +146,14 @@ $$y(x) = \underbrace { - \frac{1}{2}x\cos x + 5\sin x}_{\scriptstyle{\text{Spezi
 \subsubsection*{Frage:}
 Wie kann man eine spezielle Lösung finden?
 \subsubsection*{Antwort:}
-Zur Lösung der inhomogenes DGL kann man in vielen Fällen einen so genannte ''Ansatz vom Typ der rechten Seite'' wählen. Hier geht man davon aus, dass die Lösung die gleiche Gestalt wie die Störfunktion haben wird.\\
+Zur Lösung der inhomogenes DGL kann man in vielen Fällen einen so genannte ``Ansatz vom Typ der rechten Seite'' wählen. Hier geht man davon aus, dass die Lösung die gleiche Gestalt wie die Störfunktion haben wird.\\
 
 \noindent z.B.: ist die Störfunktion ein Polynom, so nimmt man an, dass die spezielle Lösung auch ein polynom sein wird. Ist die Störfunktion ein exponentialfunktion so nimmt man an, dass die Lösung auch ein exponentialfunktion sein wird.
 
 \subsubsection*{Beispiel 7.8}
 \begin{enumerate}
-\item Wir betrachten die DGL $$y''+y'-6y=3e^{-4x}$$Die Zugehörige homogenes DGL $$y''+y'-6y=0$$$$p(\lambda)=\lambda^2+\lambda-6=0\text{\hspace{5mm}}\lambda_{1,2}=2,-3$$ Die Allgemeine Lösung der Homogenes DGL ist $$y(x)=c_1e^{-3x}+c_2e^{2x}$$ Zur Lösung der inhomogenes DGL verwenden wir einen ''Ansatz vom Typ der Rechten Seite'', gehen also davon aus, dass die spezielle Lösung der inhomogenes DGL die ähnliche Gestalt hat (als die Störfunktion) $$y_s(x)=Ke^{-4x}$$Für die Ableitungen des Ansatzes haben wir $$y_s'(x)=-4Ke^{-4x}$$$$y''_s(x)=16Ke^{-4x}$$Eingesetzt in die homogenes DGL ergibt sich $$y''+y'-6y=16Ke^{-4x}-4Ke^{-4x}-6Ke^{-4x}=6Ke^{-4x}=3e^{-4x}$$Also $6K=3\Rightarrow K=\frac{1}{2}$. Damit ist $y_s(x)=\frac{1}{2}e^{-4x}$ und die allgemeine Lösung der DGL $$y(x)=\frac{1}{2}e^{-4x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\mathbb{R}$$
-\item $$y''+y'-6y=50\sin x$$ Wählen wir als ''Ansatz vom Typ der rechten Seite''
+\item Wir betrachten die DGL $$y''+y'-6y=3e^{-4x}$$Die Zugehörige homogenes DGL $$y''+y'-6y=0$$$$p(\lambda)=\lambda^2+\lambda-6=0\text{\hspace{5mm}}\lambda_{1,2}=2,-3$$ Die Allgemeine Lösung der Homogenes DGL ist $$y(x)=c_1e^{-3x}+c_2e^{2x}$$ Zur Lösung der inhomogenes DGL verwenden wir einen ``Ansatz vom Typ der Rechten Seite'', gehen also davon aus, dass die spezielle Lösung der inhomogenes DGL die ähnliche Gestalt hat (als die Störfunktion) $$y_s(x)=Ke^{-4x}$$Für die Ableitungen des Ansatzes haben wir $$y_s'(x)=-4Ke^{-4x}$$$$y''_s(x)=16Ke^{-4x}$$Eingesetzt in die homogenes DGL ergibt sich $$y''+y'-6y=16Ke^{-4x}-4Ke^{-4x}-6Ke^{-4x}=6Ke^{-4x}=3e^{-4x}$$Also $6K=3\Rightarrow K=\frac{1}{2}$. Damit ist $y_s(x)=\frac{1}{2}e^{-4x}$ und die allgemeine Lösung der DGL $$y(x)=\frac{1}{2}e^{-4x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\mathbb{R}$$
+\item $$y''+y'-6y=50\sin x$$ Wählen wir als ``Ansatz vom Typ der rechten Seite''
 
 $${y_s}(x) = {K_1}\sin x + {K_2}\cos x$$
 $$y{'_s}(x) = {K_1}\cos x - {K_2}\sin x$$
@@ -190,7 +190,7 @@ $$\Rightarrow 2K_1=0, -2K_2=1\Rightarrow K_1=-\frac{1}{2}$$
 $$\Rightarrow y_s(x)=-\frac{1}{2}x\cos x$$
 $$y_A=-\frac{1}{2}x\cos x+c_1 \sin x+c_2\cos x$$
 \end{enumerate}
-Zur Lösung der Inhomogene Differentialgleichung mit konstanten Koeffizienten, kann man einen ''Ansatz vom Typ der rechten Seite'' wählen. Die Idee ist dass die Lösungsfunktion und Störfunktion ähnlich sind.
+Zur Lösung der Inhomogene Differentialgleichung mit konstanten Koeffizienten, kann man einen ``Ansatz vom Typ der rechten Seite'' wählen. Die Idee ist dass die Lösungsfunktion und Störfunktion ähnlich sind.
 
 \renewcommand{\arraystretch}{1.6}
 \begin{tabularx}{\textwidth}{|Y|Y|}
@@ -382,7 +382,7 @@ Allgemeine Lösung: $$y(x)=Ke^{5x}-\frac{4x}{5}+\frac{11}{25}$$
 \centerline{\textbf{Definition 7.16}}
 \noindent Eine separierbare DGL ist eine der Form $$y'=f(x)g(y)$$
 \end{framed}
-Ein einfaches Verfahren, so genannte ''separation der Variablen'' lässt sich anwenden, wenn die DGL separierbar ist. Der ''trick'': Wir trennen die Terme voneinander und dann integrieren. Dabei ist es hilfreich $y'=\frac{dy}{dx}$ zu schreiben und formel $dy$ bzw. $dx$ als Zähler bzw. Nenner des Bruches aufzufassen
+Ein einfaches Verfahren, so genannte ``separation der Variablen'' lässt sich anwenden, wenn die DGL separierbar ist. Der ``trick'': Wir trennen die Terme voneinander und dann integrieren. Dabei ist es hilfreich $y'=\frac{dy}{dx}$ zu schreiben und formel $dy$ bzw. $dx$ als Zähler bzw. Nenner des Bruches aufzufassen
 
 \subsubsection*{Beispiel 7.17}
 \begin{enumerate}
