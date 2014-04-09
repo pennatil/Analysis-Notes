@@ -248,10 +248,24 @@ f\left( x \right) - f\left( {{x_0}} \right) = &\left\{ {f\left( {{x^1},{x^2},{x^
 + &\left\{ {f\left( {{x^1},{x^2},x_0^3} \right) - f\left( {{x^1},x_0^2,x_0^3} \right)} \right\}\\
 + &\left\{ {f\left( {{x^1},x_0^2,x_0^3} \right) - f\left( {x_0^1,x_0^2,x_0^3} \right)} \right\}
 \end{align*}
-Nach dem MWS der DR gilt: %page 132
-
-
-
+Nach dem MWS der DR gilt: \[f\left( {{x^1},x_0^2,x_0^3} \right) - f\left( {x_0^1,x_0^2,x_0^3} \right) = \frac{{\partial f}}{{\partial {x^1}}}\left( {{\xi ^1},x_0^2,x_0^3} \right)\left( x^1-x_0^1\right)\] 
+wobei $\xi^1$ zwischen $x_0^1$ und $x^1$. Analog: 
+\[f\left( {{x^1},{x^2},x_0^3} \right) - f\left( {{x^1},x_0^2,x_0^3} \right) = \frac{{\partial f}}{{\partial {x^2}}}\left( {{x^1},{\xi ^2},x_0^3} \right)\left( {{x^2} - x_0^2} \right)\] wobei $\xi^2\in\left(x_0^2,x^2\right)$ 
+und \[f\left( {{x^1},{x^2},{x^3}} \right) - f\left( {{x^1},{x^2},x_0^3} \right) = \frac{{\partial f}}{{\partial {x^3}}}\left( {{x^1},{x^2},{\xi ^3}} \right)\left( {{x^3} - x_0^3} \right)\]
+Eingesetz in dem Ausdrucke für $f(x)-f(x_0)$ ergibt: 
+\begin{align*}
+f\left( x \right) - f\left( {{x_0}} \right) = &\frac{{\partial f}}{{\partial {x^1}}}\left( {{\xi ^1},x_0^2,x_0^3} \right)\left( {{x^1} - x_0^1} \right)\\
++ &\frac{{\partial f}}{{\partial {x^2}}}\left( {{x^1},{\xi ^2},x_0^3} \right)\left( {{x^2} - x_0^2} \right)\\ + &\frac{{\partial f}}{{\partial {x^3}}}\left( {{x^1},{x^2},{\xi ^3}} \right)\left( {{x^3} - x_0^3} \right)
+\end{align*}
+Also
+\[f\left( x \right) - f\left( {{x_0}} \right) = \sum\limits_{i = 1}^3 {\frac{{\partial f}}{{\partial {x^1}}}\left( {x_0^1,x_0^2,x_0^3} \right)\left( {{x^i} - x_0^i} \right)}  + R\left( {{x_0},x} \right)\]
+Wobei 
+\begin{align*}
+R\left( {{x_0},x} \right) = &\left( {\frac{{\partial f}}{{\partial {x^1}}}\left( {{\xi ^1},x_0^2,x_0^3} \right) - \frac{{\partial f}}{{\partial {x^1}}}\left( {x_0^1,x_0^2,x_0^3} \right)} \right)\left( {{x^1} - x_0^1} \right)\\
+ + &\left( {\frac{{\partial f}}{{\partial {x^2}}}\left( {{x^1},{\xi ^2},x_0^3} \right) - \frac{{\partial f}}{{\partial {x^2}}}\left( {x_0^1,x_0^2,x_0^3} \right)} \right)\left( {{x^2} - x_0^2} \right)\\
+ + &\left( {\frac{{\partial f}}{{\partial {x^3}}}\left( {{x^1},{x^2},{\xi ^3}} \right) - \frac{{\partial f}}{{\partial {x^3}}}\left( {x_0^1,x_0^2,x_0^3} \right)} \right)\left( {{x^3} - x_0^3} \right)
+\end{align*}
+%page 134 top
 
 
 
