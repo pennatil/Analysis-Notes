@@ -28,7 +28,8 @@ Since these documents are still a very early version, they might contain a few (
 		3. Check if no one else has posted the same Issue. If no one has, open a new issue, stating:
 	 		 * Chapter + Page Number
 	 		 * Issue found, plus the eventual correction(s)
-		4. Send the Issue, I will probably just close the Issue and send you a message or email once I have corrected the problem.
+	 		 * Tag: Add a tag that best classifies the issue
+		4. Post the issue, it will be corrected ASAP.
 	* If you are familiar with Latex and GitHub:
 		1. Fork the repo. Help [here](https://help.github.com/articles/fork-a-repo)
 		2. Make the changes, and commit them to your forked repo. Make sure to add detailed comments explaining what you changed, makes my life a lot easier when merging!
@@ -41,7 +42,7 @@ I will not take into consideration emails containing corrections. Please use the
 <a name="Building"></a>
 Building
 ========
-This is only recommended to people with experience with LaTex, since the files might still contain bugs and errors that have to be ironed out. I will not answer emails asking for help if the files do not build! If you are not sure, just use the PDF inside the .zip archive (Take a look at [Getting the material](#Getting the material)).
+This is only recommended to people with experience with LaTex, since the files might still contain bugs and errors that have to be ironed out. I will not answer emails asking for help if the files do not build! If you are not sure, just use the PDFs inside the .zip archive (Take a look at [Getting the material](#Getting the material)).
 
 1. Make sure you have a working Tex distribution installed on your system. If you don't:
 	* Mac OS: [MacteX](http://tug.org/mactex/)
