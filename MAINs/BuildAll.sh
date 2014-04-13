@@ -40,10 +40,10 @@ mkdir -p "$BASEDIR/Output"
 
 
 
-mv main.pdf "$BASEDIR/Output/Notizien - Analysis I:II.pdf"
+mv main.pdf "$BASEDIR/Output/Notizien - Analysis I&II.pdf"
 
 { # your 'try' block
     growlnotify "Finished Generating Main"  -m "Can be found in the Output folder"
 } || {
-	echo "Could not send Notification!"
+	echo "#### FINISHED GENERATING MAIN, CAN BE FOUND IN THE OUTPUT FOLDER ####"
 }
