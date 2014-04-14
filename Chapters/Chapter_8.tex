@@ -265,61 +265,48 @@ R\left( {{x_0},x} \right) = &\left( {\frac{{\partial f}}{{\partial {x^1}}}\left(
  + &\left( {\frac{{\partial f}}{{\partial {x^2}}}\left( {{x^1},{\xi ^2},x_0^3} \right) - \frac{{\partial f}}{{\partial {x^2}}}\left( {x_0^1,x_0^2,x_0^3} \right)} \right)\left( {{x^2} - x_0^2} \right)\\
  + &\left( {\frac{{\partial f}}{{\partial {x^3}}}\left( {{x^1},{x^2},{\xi ^3}} \right) - \frac{{\partial f}}{{\partial {x^3}}}\left( {x_0^1,x_0^2,x_0^3} \right)} \right)\left( {{x^3} - x_0^3} \right)
 \end{align*}
-%page 134 top
+Also
+\[\left| {R\left( {x,{x_0}} \right)} \right| < \left| {x - {x_0}} \right|\underbrace {\left\{ {\left| {\left(  \ldots  \right)} \right| + \left| {\left(  \ldots  \right)} \right| + \left| {\left(  \ldots  \right)} \right|} \right\}}_{\scriptstyle \to 0{\text{ mit }}x \to {x_0}\hfill\atop\scriptstyle{\text{weil }}\frac{{\partial f}}{{\partial {x^i}}}{\text{ stetig sind}}\hfill}\]
+Also $\lim\frac{R\left( x,x_0\right)}{\left( x-x_0\right)}=0$ und $f(x)$ ist differenzierbar.
 
+\subsubsection*{Beispiel 8.10}
+Polynome auf $\mathbb{R}^n$ sind von Klasse $C!$. Für jedes Multindex $\alpha=\left(\alpha_0,\dots , \alpha_n\right)\in\mathbb{N}^n$ definieren wir die Monomialfunktion \[{x^\alpha }: = {\left( {{x^0}} \right)^{{\alpha _0}}}{\left( {{x^1}} \right)^{{\alpha _1}}} \ldots {\left( {{x^n}} \right)^{{\alpha _n}}}\] Ein polynom von Grad $\leq N$ ist dann gegeben durch \[p(x) = \sum\limits_{\left| \alpha  \right| \le N} {{a_\alpha }{x^\alpha }} \] wobei $\left| \alpha  \right| = {\alpha _0} +  \ldots  + {\alpha _n}$
+\todo[inline]{Pages 135.1 - 135.2 are a zusammenfassung, not sure if needed to be included}
+\section{Differentiationsregeln}
+Ganz analog zum eindimensionalen Fall gelten folgende Differentiationsregeln
 
+\subsubsection*{Satz 8.11}
+Sei $\Omega\subset\mathbb{R}^n$, sowie $f,g:\Omega\rightarrow\mathbb{R}$ an der Stelle $x_0\in\Omega$ differenzierbar. Dann gilt \begin{enumerate}
+\item $d\left( {f + g} \right)\left( {{x_0}} \right) = df\left( {{x_0}} \right) + dg\left( {{x_0}} \right)$
+\item $d\left( {fg} \right)\left( {{x_0}} \right) = g\left( {{x_0}} \right)df\left( {{x_0}} \right) + f\left( {{x_0}} \right)dg\left( {{x_0}} \right)$
+\item Falls $g\left( x_0\right)\not=0$ \[d\left( {\frac{f}{g}} \right)\left( {{x_0}} \right) = \frac{{g\left( {{x_0}} \right)df\left( {{x_0}} \right) - f\left( {{x_0}} \right)dg\left( {{x_0}} \right)}}{{{{\left( {g\left( {{x_0}} \right)} \right)}^2}}}\]
+\end{enumerate}
+Beweis ist der selbe wie in Dim=1. Für die Kettenregel gibt es mehrere variationen 
 
+\subsubsection*{Satz 8.12 (Kettenregel, 1. Version)}
+Sei $g:\Omega\rightarrow\mathbb{R}$ in $x_0\in\Omega\subset\mathbb{R}^n$ differenzierbar, sowie $f\mathbb{R}\rightarrow\mathbb{R}$ an der stelle $g\left( x_0\right)\in\mathbb{R}$ differenzierbar. Dann gilt \[d\left( {f \circ g} \right)\left( {{x_0}} \right) = f'\left( {g\left( {{x_0}} \right)} \right) \cdot dg\left( {{x_0}} \right)\]
 
+\missingfigure{page 137, middle}
 
+\subsubsection*{Beweis}
+$g$ an der Stelle $x_0$ differenzierbar 
+\[ \Rightarrow g\left( x \right) - g\left( {{x_0}} \right)\mathop  = \limits^A dg\left( {{x_0}} \right)\left( {x - {x_0}} \right) + {R_g}\left( {x - {x_0}} \right)\]
+mit \[\frac{{{R_g}\left( {x - {x_0}} \right)}}{{\left( {x - {x_0}} \right)}}\mathop  \to \limits_{x \to {x_0}} 0 \Rightarrow \frac{{g\left( x \right) - g\left( {{x_0}} \right)}}{{\left| {x - {x_0}} \right|}}\mathop  \le \limits^B C = \max \left[ {\frac{{\partial g}}{{\partial {x^i}}}\left( {{x_0}} \right)} \right]\] $f$ in $g\left( x_0\right)$ differenzierbar 
+\[f\left( {g\left( x \right)} \right) - f\left( {g\left( {{x_0}} \right)} \right)\mathop  = \limits^C f'\left( {g\left( {{x_0}} \right)} \right)\left[ {g(x) - g\left( {{x_0}} \right)} \right] + {R_f}\left( {g\left( x \right),g\left( {{x_0}} \right)} \right)\]
+Woraus folgt:
+\begin{align*}
+f\left( {g\left( x \right)} \right) - f\left( {g\left( {{x_0}} \right)} \right) = & f'\left( {g\left( {{x_0}} \right)} \right)\left[ {dg\left( {{x_0}} \right)\left( {x - {x_0}} \right) + {R_g}\left( {x,{x_0}} \right)} \right]\\ + & {R_f}\left( {g\left( {{x_0}} \right),g\left( x \right)} \right)
+\end{align*}
 
+Aus B folgt:
+\[\frac{{{R_f}\left( {g\left( {{x_0}} \right),g\left( x \right)} \right)}}{{x - {x_0}}} = \underbrace {\underbrace {\frac{{{R_f}\left( {g\left( {{x_0}} \right) - g\left( x \right)} \right)}}{{\left| {g\left( x \right) - g\left( {{x_0}} \right)} \right|}}}_{\begin{array}{*{20}{c}} \downarrow \\0\end{array}} \cdot \underbrace {\frac{{\left| {g\left( x \right) - g\left( {{x_0}} \right)} \right|}}{{\left| {x - {x_0}} \right|}}}_{\mathop  \le \limits^B C}}_{\begin{array}{*{20}{c}} \downarrow \\0\end{array}}\]
+d.h.
+\[f\left( {g\left( x \right)} \right) - f\left( {g\left( {{x_0}} \right)} \right) = \left( {f'\left( {g\left( {{x_0}} \right)} \right) \cdot dg\left( {{x_0}} \right)} \right)\left( {x - {x_0}} \right) + {R_{f \circ g}}\left( {x,{x_0}} \right)\]
+wobei
+\[{R_{f \circ g}}\left( {x,{x_0}} \right) = f'\left( {g\left( {{x_0}} \right)} \right){R_g}\left( {x,{x_0}} \right) + {R_f}\left( {g\left( {{x_0}} \right),g\left( x \right)} \right)\]
+und 
+\[\frac{{{R_{f \circ g}}\left( {x,{x_0}} \right)}}{{x - {x_0}}} = \underbrace {f'\left( {g\left( {{x_0}} \right)} \right)\frac{{{R_g}\left( {x,{x_0}} \right)}}{{\left( {x - {x_0}} \right)}}}_{ \downarrow 0} + \underbrace {\frac{{{R_f}\left( {g\left( {{x_0}} \right),g\left( x \right)} \right)}}{{x - {x_0}}}}_{ \downarrow 0}\]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\subsubsection*{Beispiel 8.13}
+%Page 139 very top
 
