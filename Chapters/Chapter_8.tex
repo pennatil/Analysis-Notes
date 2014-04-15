@@ -201,12 +201,18 @@ mit
  R\left( {x,y} \right) = &\left[ {\frac{{\partial f}}{{\partial x}}\left( {\xi ,y} \right) - \frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right)} \right]\left( {x - {x_0}} \right) \\
  + &\left[ {\frac{{\partial f}}{{\partial y}}\left( {{x_0},\eta } \right) - \frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)} \right]\left( {y - {y_0}} \right)
 \end{align*}
-Wegen die Stetigkeit der Funktionen \[\frac{{\partial f}}{{\partial x}}\left( {x,y} \right) = {e^y}\hspace{5mm}\text{und}\hspace{5mm}\frac{{\partial f}}{{\partial y}}\left( {x,y} \right) = x{e^y}\] können wir den ``Fehler'' $R\left( x,y\right)$ leicht abschätzen \[\frac{{\left| {R\left( {x,y} \right)} \right|}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}} \le \mathop {\sup }\limits_{\begin{array}{*{20}{c}}{\left| {\xi  - {x_0}} \right| < \left| {x - {x_0}} \right|}\\{\left| {\eta  - {y_0}} \right| < \left| {y - {y_0}} \right|}\end{array}} \left( {\left| {{e^y} - {e^{{y_0}}}} \right| + \left| {{x_0}} \right|\left| {{e^\eta } - {e^{{y_0}}}} \right|} \right)\]
+Wegen die Stetigkeit der Funktionen \[\frac{{\partial f}}{{\partial x}}\left( {x,y} \right) = {e^y}\hspace{5mm}\text{und}\hspace{5mm}\frac{{\partial f}}{{\partial y}}\left( {x,y} \right) = x{e^y}\] können wir den ``Fehler'' $R\left( x,y\right)$ leicht abschätzen \[\frac{{\left| {R\left( {x,y} \right)} \right|}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}} \le \mathop {\sup }\limits_{\begin{array}{*{20}{c}}
+{\left| {\xi  - {x_0}} \right| < \left| {x - {x_0}} \right|}\\
+{\left| {\eta  - {y_0}} \right| < \left| {y - {y_0}} \right|}
+\end{array}} \left( {\left| {{e^y} - {e^{{y_0}}}} \right| + \left| {{x_0}} \right|\left| {{e^\eta } - {e^{{y_0}}}} \right|} \right)\]
 Für $\left( x,y\right)\rightarrow\left( x_0,y_0\right)$, $\left( x,y\right)\not=\left( x_0,y_0\right)$: d.h. es gilt \[\frac{{R\left( {x,y} \right)}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}} \to 0\] 
 d.h. es gilt \[\frac{{f\left( {x,y} \right) - f\left( {{x_0},{y_0}} \right) - \frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right)\left( {x - {x_0}} \right) - \frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)\left( {y - {y_0}} \right)}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}}\mathop  \to \limits_{\left( {x,y} \right) \to \left( {{x_0},{y_0}} \right)} 0\]
  d.h. $f\left( x,y\right)$ ist \todo{can't read, page 130 bottom} differenzierbar und 
 \[df\left( {{x_0},{y_0}} \right) = \left( {\frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right),\frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)} \right)\]
-\item Die Funktion \[f\left( {x,y} \right) = \left\{ {\begin{array}{*{20}{c}}{\frac{{{x^3}y}}{{{x^2} + {y^2}}}}&{\left( {x,y} \right)\not  = \left( {0,0} \right)}\\0&{\left( {x,y} \right) = \left( {0,0} \right)}\end{array}} \right.\] ist in $\left( 0,0\right)$ differenzierbar. \\
+\item Die Funktion \[f\left( {x,y} \right) = \left\{ {\begin{array}{*{20}{c}}
+{\frac{{{x^3}y}}{{{x^2} + {y^2}}}}&{\left( {x,y} \right)\not  = \left( {0,0} \right)}\\
+0&{\left( {x,y} \right) = \left( {0,0} \right)}
+\end{array}} \right.\] ist in $\left( 0,0\right)$ differenzierbar. \\
 
 Wir haben schon gesehen dass $\frac{\partial f}{\partial x}\left( 0,0\right)=0$ und $\frac{\partial f}{\partial y}\left( 0,0\right)=0$. Dann gilt \[\frac{{\left| R \right|}}{{\left| {\left( {x,y} \right)} \right|}} = \frac{{\left| {f\left( {x,y} \right) - f\left( {0,0} \right) - \frac{{\partial f}}{{\partial x}}\left( {0,0} \right)\left( {x - 0} \right) - \frac{{\partial f}}{{\partial y}}\left( {0,0} \right)\left( {y - 0} \right)} \right|}}{{\left| {\left( {x - 0,y - 0} \right)} \right|}}\] \[ = \frac{{\left| {f\left( {x,y} \right) - 0 - 0 - 0} \right|}}{{\left| {\left( {x,y} \right)} \right|}} = \frac{{\left| {f\left( {x,y} \right)} \right|}}{{\left| {\left( {x,y} \right)} \right|}}\] 
 Zum untersuchen ist 
@@ -227,7 +233,10 @@ $f$ an der Stelle $x_0$ differenzierbar \[\Rightarrow f\left( {{x_0} + h{e_i}} \
 Da $\left( dx^i\right)_{i=1,\dots,n}$ die zur $\left( e_j\right)_{1\leq j\leq n}$ duale Basis ist \[{d_{{x_0}}}f = \sum\limits_{i = 1}^n {\frac{{\partial f}}{{\partial {x^i}}}\left( {{x_0}} \right)d{x^i} = \left( {\frac{{\partial f}}{{\partial {x^1}}}\left( {{x_0}} \right),\frac{{\partial f}}{{\partial {x^2}}}\left( {{x_0}} \right), \ldots ,\frac{{\partial f}}{{\partial {x^n}}}\left( {{x_0}} \right)} \right)} \]
 
 \subsubsection*{Beispiel}
-Die Funktion \[f\left( {x,y} \right) = \left\{ {\begin{array}{*{20}{c}}{\frac{{xy}}{{{x^2} + {y^2}}}}&{\left( {x,y} \right)\not  = \left( {0,0} \right)}\\0&{\left( {x,y} \right) = \left( {0,0} \right)}\end{array}} \right.\] ist in $\left( 0,0\right)$ nicht differenzierbar ($f$ ist  in $\left( 0,0\right)$ nicht stetig)
+Die Funktion \[f\left( {x,y} \right) = \left\{ {\begin{array}{*{20}{c}}
+{\frac{{xy}}{{{x^2} + {y^2}}}}&{\left( {x,y} \right)\not  = \left( {0,0} \right)}\\
+0&{\left( {x,y} \right) = \left( {0,0} \right)}
+\end{array}} \right.\] ist in $\left( 0,0\right)$ nicht differenzierbar ($f$ ist  in $\left( 0,0\right)$ nicht stetig)
 
 \subsubsection*{Satz 8.7}
 Falls $f:\Omega\rightarrow\mathbb{R}$ in $x_0\in\Omega\subset\mathbb{R}$ differenzierbar, ist sie in $x_0$ auch stetig.
@@ -266,7 +275,8 @@ R\left( {{x_0},x} \right) = &\left( {\frac{{\partial f}}{{\partial {x^1}}}\left(
  + &\left( {\frac{{\partial f}}{{\partial {x^3}}}\left( {{x^1},{x^2},{\xi ^3}} \right) - \frac{{\partial f}}{{\partial {x^3}}}\left( {x_0^1,x_0^2,x_0^3} \right)} \right)\left( {{x^3} - x_0^3} \right)
 \end{align*}
 Also
-\[\left| {R\left( {x,{x_0}} \right)} \right| < \left| {x - {x_0}} \right|\underbrace {\left\{ {\left| {\left(  \ldots  \right)} \right| + \left| {\left(  \ldots  \right)} \right| + \left| {\left(  \ldots  \right)} \right|} \right\}}_{\scriptstyle \to 0{\text{ mit }}x \to {x_0}\hfill\atop\scriptstyle{\text{weil }}\frac{{\partial f}}{{\partial {x^i}}}{\text{ stetig sind}}\hfill}\]
+\[\left| {R\left( {x,{x_0}} \right)} \right| < \left| {x - {x_0}} \right|\underbrace {\left\{ {\left| {\left(  \ldots  \right)} \right| + \left| {\left(  \ldots  \right)} \right| + \left| {\left(  \ldots  \right)} \right|} \right\}}_{\scriptstyle \to 0{\text{ mit }}x \to {x_0}\hfill\atop
+\scriptstyle{\text{weil }}\frac{{\partial f}}{{\partial {x^i}}}{\text{ stetig sind}}\hfill}\]
 Also $\lim\frac{R\left( x,x_0\right)}{\left( x-x_0\right)}=0$ und $f(x)$ ist differenzierbar.
 
 \subsubsection*{Beispiel 8.10}
@@ -299,7 +309,13 @@ f\left( {g\left( x \right)} \right) - f\left( {g\left( {{x_0}} \right)} \right) 
 \end{align*}
 
 Aus B folgt:
-\[\frac{{{R_f}\left( {g\left( {{x_0}} \right),g\left( x \right)} \right)}}{{x - {x_0}}} = \underbrace {\underbrace {\frac{{{R_f}\left( {g\left( {{x_0}} \right) - g\left( x \right)} \right)}}{{\left| {g\left( x \right) - g\left( {{x_0}} \right)} \right|}}}_{\begin{array}{*{20}{c}} \downarrow \\0\end{array}} \cdot \underbrace {\frac{{\left| {g\left( x \right) - g\left( {{x_0}} \right)} \right|}}{{\left| {x - {x_0}} \right|}}}_{\mathop  \le \limits^B C}}_{\begin{array}{*{20}{c}} \downarrow \\0\end{array}}\]
+\[\frac{{{R_f}\left( {g\left( {{x_0}} \right),g\left( x \right)} \right)}}{{x - {x_0}}} = \underbrace {\underbrace {\frac{{{R_f}\left( {g\left( {{x_0}} \right) - g\left( x \right)} \right)}}{{\left| {g\left( x \right) - g\left( {{x_0}} \right)} \right|}}}_{\begin{array}{*{20}{c}}
+ \downarrow \\
+0
+\end{array}} \cdot \underbrace {\frac{{\left| {g\left( x \right) - g\left( {{x_0}} \right)} \right|}}{{\left| {x - {x_0}} \right|}}}_{\mathop  \le \limits^B C}}_{\begin{array}{*{20}{c}}
+ \downarrow \\
+0
+\end{array}}\]
 d.h.
 \[f\left( {g\left( x \right)} \right) - f\left( {g\left( {{x_0}} \right)} \right) = \left( {f'\left( {g\left( {{x_0}} \right)} \right) \cdot dg\left( {{x_0}} \right)} \right)\left( {x - {x_0}} \right) + {R_{f \circ g}}\left( {x,{x_0}} \right)\]
 wobei
@@ -308,5 +324,52 @@ und
 \[\frac{{{R_{f \circ g}}\left( {x,{x_0}} \right)}}{{x - {x_0}}} = \underbrace {f'\left( {g\left( {{x_0}} \right)} \right)\frac{{{R_g}\left( {x,{x_0}} \right)}}{{\left( {x - {x_0}} \right)}}}_{ \downarrow 0} + \underbrace {\frac{{{R_f}\left( {g\left( {{x_0}} \right),g\left( x \right)} \right)}}{{x - {x_0}}}}_{ \downarrow 0}\]
 
 \subsubsection*{Beispiel 8.13}
-%Page 139 very top
+Sei $h:\mathbb{R}^2\rightarrow\mathbb{R}$ $$h(x,y)=e^{xy}$$ $h= f\circ g$ wobei $g(x,y)=xy$, $f(t)=e^t$. Dann ist einerseits \[dh\left( {x,y} \right) = \left( {\frac{{\partial h}}{{\partial x}},\frac{{\partial h}}{{\partial y}}} \right) = \left( {y{e^{xy}},x{e^{xy}}} \right)\] anderseits nach Kettenregel 
+\[dh\left( {x,y} \right) = d\left( {f \circ g} \right)' = f'\left( {g\left( {x,y} \right)} \right) \cdot dg\left( {x,y} \right) = {e^{xy}} \cdot \left( {y,x} \right) = \left( {y{e^{xy}},x{e^{xy}}} \right)\]
+Für die nächste Kettenregel führen wir folgende Definition ein:
+
+\begin{framed}
+\centerline{\textbf{Definition 8.14}}
+\noindent Sei $\Omega \subset\mathbb{R}$ und $f=\left( f_1,\dots,f_n\right):\Omega\rightarrow\mathbb{R}^n$ eine Abbildung. Dann ist $f$ an der Stelle $x_0\in\mathbb{R}$ differenzierbar, falls jede Komponentenfunktion $f_i$ an der Stelle $x_0$ differenzierbar ist. Wir definieren in diesem Fall \[f'\left( {{x_0}} \right): = \left( {{f_1}'\left( {{x_0}} \right),{f_2}'\left( {{x_0}} \right), \ldots ,{f_n}'\left( {{x_0}} \right)} \right)\]
+\end{framed}
+
+\subsubsection*{Bemerkung 8.15}
+$f'\left( x_0\right)$ kann als Geschwindigkeitsvektor im Punkt $f\left( x_0\right)$ aufgefasst werden.
+
+\subsubsection*{Satz 8.16 (Kettenregel 2. Version)}
+Sei $\Omega\subset\mathbb{R}^n$,$I\subset\mathbb{R}$. Sei $g:I\rightarrow\Omega$, $t\rightarrow\left( g_1(t), g_2(t),\dots, g_n(t)\right)$, an der Stelle $t_0\in I$ differenzierbar sowie $f:\Omega\rightarrow\mathbb{R}$ an der Stelle $g\left( t_0\right)$ differenzierbar. Dann gilt:
+\[\frac{d}{{dt}}\left( {f \circ g} \right)\left( {{t_0}} \right) = df\left( {g\left( {{t_0}} \right)} \right) \cdot g'\left( {{t_0}} \right)\]
+\begin{align*}
+d\left( {f \circ g} \right)\left( {{t_0}} \right) = &df\left( {g\left( {{t_0}} \right)} \right) \cdot dg\left( {{t_0}} \right)\\
+ = &\frac{{\partial f}}{{\partial {x^1}}}\left( {g\left( {{t_0}} \right)} \right) \cdot \frac{{d{g_1}}}{{dt}}\left( {{t_0}} \right) + \frac{{\partial f}}{{\partial {x^2}}}\left( {g\left( {{t_0}} \right)} \right) \cdot \frac{{d{g_2}}}{{dt}}\left( {{t_0}} \right)\\ & + \ldots  + \frac{{\partial f}}{{\partial {x^n}}}\left( {g\left( {{t_0}} \right)} \right) \cdot \frac{{d{g_n}}}{{dt}}\left( {{t_0}} \right)
+\end{align*}
+\missingfigure{page 141, middle}
+
+\subsubsection*{Beispiel 8.17}
+Die vier Grundrechenarten sind differenzierbare Funktionen von zwei variablen. Insbesondere gilt: 
+\begin{itemize}
+\item $a:\mathbb{R}^2\rightarrow\mathbb{R}$, $\left( x,y\right) \rightarrow x+y$ \[da\left( {x,y} \right) = \left( {\frac{{\partial a}}{{\partial x}},\frac{{\partial a}}{{\partial y}}} \right) = \left( {1,1} \right)\]
+\item $m:\mathbb{R}^2\rightarrow \mathbb{R}$, $\left( x,y\right) \rightarrow x\cdot y$ \[dm\left( {x,y} \right) = \left( {y,x} \right)\]
+\end{itemize}
+Setzt man diese beiden Funktionen in die obige Kettenregel ein, so erhält man die aus der Analysis I bekannte Summen und Produktregel: 
+$$g:\mathbb{R}\rightarrow\mathbb{R}^2, t\rightarrow \left( g_1(t),g_2(t)\right)$$
+\[\frac{d}{{dt}}\left( {{g_1} + {g_2}} \right) = \frac{d}{{dt}}\left( {a \circ g} \right) = \left( {1,1} \right) \cdot \left( {\frac{{d{g_1}}}{{dt}},\frac{{d{g_2}}}{{dt}}} \right) = 1\cdot \frac{{d{g_1}}}{{dt}} + 1\cdot \frac{{d{g_2}}}{{dt}}\]
+und 
+\begin{align*}
+\frac{d}{{dt}}\left( {{g_1} \cdot {g_2}} \right) = \frac{d}{{dt}}\left( {m \circ g} \right) = &\left( {\left( {dm} \right)\left( {g(t)} \right)} \right) \cdot \left( {\frac{{dg}}{{dt}}} \right)\\ 
+= &\left( {{g_2}\left( t \right),{g_1}\left( t \right)} \right) \cdot \left( {\frac{{d{g_1}}}{{dt}},\frac{{d{g_2}}}{{dt}}} \right)\\ 
+= &\frac{{d{g_1}}}{{dt}} \cdot {g_2}\left( t \right) + \frac{{d{g_2}}}{{dt}} \cdot {g_1}\left( t \right)
+\end{align*}
+
+\subsubsection*{Beispiel 8.18}
+Sei $f:\Omega\rightarrow\mathbb{R}$ differenzierbar an der Stelle $x_0\in\Omega$ und sei $e\in\mathbb{R}^n\backslash\{ 0\}$; mit $\left| e\right|=1$. Betrachte die Gerade $g(t)=x_0+te$, $t\in\mathbb{R}$ durch $x_0$ mit Richtungsvektor 
+
+\missingfigure{page 143, top. ALSO ADD THE FORMULAS ON THE RIGHT PAGE USING A MINIPAGE}
+
+Dann ist die Funktion $f\circ g$ in einer Umgebung von $t_0=0$ definiert und nach Kettenregel $f\circ g$ an der Stelle $t_0=0$ differenzierbar mit 
+\[\frac{d}{{dt}}\left( {f \circ g} \right)\left( 0 \right) = df\left( {g\left( 0 \right)} \right)\frac{{dg}}{{dt}}\left( 0 \right) = df\left( {{x_0}} \right)\left( e \right) = \sum\limits_{i = 1}^n {\frac{{\partial f}}{{\partial {x^i}}}\left( {{x_0}} \right) \cdot {e^i}} \]
+$e=\left( e^1,\dots, e^n\right) $ und wird Richtungsableitung von $f$ in Richtung $e$ genannt; $\partial_ef\left( x_0\right)$ bezeichnet. Insbesondere gilt für $e=e_i$
+\[{\partial _{{e_i}}}f\left( {{x_0}} \right) = \frac{{\partial f}}{{\partial {x^i}}}\left( {{x_0}} \right) = df\left( {{x_0}} \right)\left( {{e_i}} \right)\]
+Geometrisch die Richtungsableitung von $f$ in Richtung $e$ ist genau die Steigung der Tangente zur Schnittkurve falls wir den Graph von $f$ mit einer zur Ebene $xy$ senkrecht Ebene durch $x_0+te$ scheiden.
+\missingfigure{page 144, middle}
 

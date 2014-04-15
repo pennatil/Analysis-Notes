@@ -1,9 +1,4 @@
 #!/bin/sh
-# My first Script
-
-# echo "Hello World!"
-# cd '/Users/Lucas/Desktop/Notes/MAINs/'
-# pdflatex --shell-escape '/Users/Lucas/Desktop/Notes/MAINs/mainMult.tex'
 
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$
