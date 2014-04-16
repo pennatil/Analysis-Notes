@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$
@@ -47,5 +47,5 @@ mv mainMult8.pdf "$BASEDIR/Output/Kapitel 8 - Differenzialrechnung in R^n - Anal
 { # your 'try' block
     growlnotify "Finished Generating Chapter Files"  -m "They can be found in the Output folder"
 } || {
-	echo -e "\n\n#### FINISHED GENERATING CHAPTER FILES, CAN BE FOUND IN THE OUTPUT FOLDER ####\n\n"
+	echo "#### FINISHED GENERATING CHAPTER FILES, CAN BE FOUND IN THE OUTPUT FOLDER ####"
 }
