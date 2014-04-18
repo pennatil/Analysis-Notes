@@ -165,16 +165,15 @@ Für alle $a,b\in\mathbb{R}$. $\delta >0$ gilt $2\left| {ab} \right| \le \delta 
 \section{Infimum und Supremum}
 In Zusammenhang mit der Ordnung führen wir einige Wichtige Definitionen ein:
 
-\begin{framed}
-\centerline{\textbf{\textbf{Definition 2.8}}}
-\noindent Sei $\Romanbar{X}\subset\mathbb{R}$ eine Teilmenge 
+\begin{definition}{2.8}
+Sei $\Romanbar{X}\subset\mathbb{R}$ eine Teilmenge 
 \begin{enumerate}[\indent a)]
 \item $\Romanbar{X}$ ist nach oben beschränkt falls es $c\in\mathbb{R}$ gibt $x\leq c, \forall x\in X$. Jeder derartige $c$ heisst eine Obere Schranke für $\Romanbar{X}$.
 \item $\Romanbar{X}$ ist nach unten beschränkt, falls es $c\in\mathbb{R}$ gibt, mit $x\geq c$, $\forall x\in X$. Jeder derartige $c$ heisst untere Schranke für $\Romanbar{X}$.
 \item $X$ ist beschränkt falls es nach oben und unten beschränkt ist.
 \item Ein element $a\in\Romanbar{X}$ ist ein maximales Element (oder Maximum) von $\Romanbar{X}$ falls $x\leq a$, $\forall x\in\Romanbar{X}$. Falls ein Maximum (resp. minimum) existiert, wird es mit $\max\Romanbar{X}$ ($\min\Romanbar{X}$) bezeichnet. Falls $\Romanbar{X}$ keine obere schränke hat, ist $\Romanbar{X}$ nach oben unbeschränkt (analog für obere sch.).
 \end{enumerate}
-\end{framed}
+\end{definition}
 \subsubsection*{Beispiel 2.9}
 \begin{enumerate}
 \item $A=\{x\in\mathbb{R}\mid x>0\}$ ist nach oben unbeschränkt. $A$ ist nach unten beschränkt. Jedes \todo{WHAT? Page 32 top}$\leq 0$ ist eine untere Schranke. 
@@ -347,17 +346,14 @@ $(\lambda,x)\rightarrow\lambda\cdot x:=(\lambda x_1,\dots,\lambda x_n)$. Dann ge
 \item Einzelelement: $1\cdot x=x$
 \end{enumerate}
 \end{enumerate}
-
-\begin{framed}
-\centerline{\textbf{Definition 2.15}}
-\noindent Eine Menge $\mathbb{V}$ ,it $+,\cdot$ und $0\in\mathbb{V}$ so dass $\left(\mathbb{V},+\right)$ eine Abelische Gruppe mit Neutralen Element 0 ist und zudem (a)-(d) gelten nennt sich ein Vektorraum über den Körper $\mathbb{R}$ und seine Elemente heissen Vektoren
-\end{framed}
+ 
+\begin{definition}{2.15}
+Eine Menge $\mathbb{V}$ ,it $+,\cdot$ und $0\in\mathbb{V}$ so dass $\left(\mathbb{V},+\right)$ eine Abelische Gruppe mit Neutralen Element 0 ist und zudem (a)-(d) gelten nennt sich ein Vektorraum über den Körper $\mathbb{R}$ und seine Elemente heissen Vektoren
+\end{definition}
 Also ist $\mathbb{R}^n$ ein Vektorraum. In der Linearen Algebra führt man dann Begriffe wie Basis usw. ein. Die Standard basis von $\mathbb{R}^n$ ist die Menge $\{e_1,e_2,\dots,e_n \}$ wobei $e_i:=\{0,\dots,0,1,\dots,0\}$ \\
 
 Jeder Vektor $x=\left(x_1,\dots,x_n \right)\in\mathbb{R}$ besitzt eine eindeutige Darstellung $x=\sum x_ie_i$ bezüglich der Standardbasis.
-
-\begin{framed}
-\centerline{\textbf{Definition 2.16}}
+\begin{definition}{2.16}
 \begin{enumerate}
 \item Das Skalarprodukt zweier Vektoren $x=\left(x_1,\dots,x_n \right),y=\left(y_1,\dots,y_n \right)$ ist die durch \[ < x,y > : = \sum\limits_{i = 1}^n {{x_i}{y_i}} \] definierte reele Zahl\\ $<\cdot,\cdot>=\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}$ (orthogonal)
 \item Falls $<x,y>=0$ heissen $x$ und $y$ senkrecht aufeinander. $<\cdot,\cdot>$ besitzt folgende Eigenschaften
@@ -367,11 +363,10 @@ Jeder Vektor $x=\left(x_1,\dots,x_n \right)\in\mathbb{R}$ besitzt eine eindeutig
 \item Positivität: $<x,x>\geq 0$ mit Gleicheit genau dann wenn $x=0$
 \end{enumerate}
 \end{enumerate}
-\end{framed}
+\end{definition}
 
-\begin{framed}
-\centerline{\textbf{Definition 2.17}}
-\noindent Die Norm $\left|\left| x\right|\right|$ eines Vektors ist: $$\left|\left|x\right|\right| := \sqrt{<x,x>}=\sqrt{\sum\limits_{i = 1}^n {{x_i}}}$$ wird oft als Länge interpretiert.
+\begin{definition}{2.17}
+Die Norm $\left|\left| x\right|\right|$ eines Vektors ist: $$\left|\left|x\right|\right| := \sqrt{<x,x>}=\sqrt{\sum\limits_{i = 1}^n {{x_i}}}$$ wird oft als Länge interpretiert.
 \subsubsection*{Beispiel 2.18}
 \begin{itemize}
     \item
@@ -448,7 +443,7 @@ $\left|\left|(1,2)\right|\right|=\sqrt{1+4}$
     \item $\left|\left|e_i\right|\right|=1$, $<e_i,e_j>=0$. $e_i \perp e_j$\\
 $\{e_1,e_2,\dots,e_n\}$ ist eine orthonormale Basis. Sie sind orthogonal und auf Länge 1 normiert.
 \end{itemize}
-\end{framed}
+\end{definition}
 Die erste wichtige Eigenschaft eines Skalaprodukts ist
 \subsubsection*{Satz 2.19 (Cauchy-Schwarz)}
 $\forall x,y\in\mathbb{R}^n$ gilt $\left| <x,y>\right| \leq \left|\left| x\right|\right| \left|\left| y\right|\right|$ und $$\left| <x,y>\right|=\left|\left| x\right|\right| \left|\left| y\right|\right|\Leftrightarrow \exists\lambda\in\mathbb{R}: x=\lambda y$$
@@ -490,18 +485,16 @@ wobei $x\cdot y=(ac-bd,ad+bc)$, $x=(a,b)$, $y=(c,d)$. Dann erfüllen ``$+$'' und
 \item DIstributivität: $\left( (a,b)+(c,d)\right)\cdot (e,f)=(a,b)(e,f)+(c,d)(e,f)$
 \end{itemize}
 
-\begin{framed}
-\centerline{\textbf{Definition 2.21}}
-\noindent Der Körper der komplexen Zahlen $\mathbb{C}$ ist $\mathbb{R}^2$ versehen mit ``$+$'',''$\cdot$'', $0=(0,0)$ und $(1,0)=1$
-\end{framed}
+\begin{definition}{2.21}
+Der Körper der komplexen Zahlen $\mathbb{C}$ ist $\mathbb{R}^2$ versehen mit ``$+$'',''$\cdot$'', $0=(0,0)$ und $(1,0)=1$
+\end{definition}
 
 \subsubsection*{Bemerkung 2.22}
 $z^2+1=0$ hat in $\mathbb{C}$ eine Lösung. Nämlich ist $(0,1)(0,1)=(-1,0)=-(1,0)=1$. Wir führen für $(0,1)$ die Bezeichnung ``$i$'' ein, das heisst Imaginäre Einheit.\\
 
 Also ist $i^2=-1$. Jede komplexe Zahl $z=(x,y)$ lässt sich dann wie folgt darstellen:  $$z=(x,y)=(x,0)+(0,y)=x(1,0)+y(0,1)=x\cdot 1+ y\cdot i$$
 In der Rechnungen lässt man oft das 1 in $x\cdot 1$ fallen und schreibt $z=x+yi$
-\begin{framed}
-\centerline{\textbf{Definition 2.22}}
+\begin{definition}{2.22}
 \begin{enumerate}
 \item Sei $z=x+iy\in\mathbb{C}$
 \begin{itemize}
@@ -511,7 +504,7 @@ In der Rechnungen lässt man oft das 1 in $x\cdot 1$ fallen und schreibt $z=x+yi
 \item Die zu: $z=x+iy$ konjugierte Zahl ist $\overline{z}=x-iy$
 \item Wir definieren die Norm von $z$ als $\left|\left| z\right|\right|=\sqrt{x^2+y^2}$
 \end{enumerate}
-\end{framed}
+\end{definition}
 \subsubsection*{Satz 2.23}
 \begin{enumerate}[\indent (i)]
 \item $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$
@@ -558,10 +551,9 @@ $r=\left| z\right|$
 \end{minipage}
 \end{figure}
 
-\begin{framed}
-\centerline{\textbf{Definition}}
-\noindent Wir definieren (nach Euler)$$e^{i\phi}:=\cos\phi+ i\sin\phi$$$$z=re^{i\phi}=\left| z\right|e^{i\phi}$$
-\end{framed}
+\begin{definition}{}
+Wir definieren (nach Euler)$$e^{i\phi}:=\cos\phi+ i\sin\phi$$$$z=re^{i\phi}=\left| z\right|e^{i\phi}$$
+\end{definition}
 \todo{Where does the definition end??}
 
 \noindent Aus die \todo{??Additions?? page 45 bottom}

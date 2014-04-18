@@ -55,11 +55,12 @@ Man fügt $\lnot B$ als Annahme hinzu und kommt nach einer Kette von erlaubten s
 \noindent $\lnot B=$ es gibt eine grösste Natürliche zahl$N_0''$ d.h $N_0>l$ für jedes $l \in \mathbb{N}$.\\
 
 Mittels der Aussage $A$ wissen wir dass $N_0$ einen Nachfolger $N_0 +1$ hat. Dann $N_0+1>N_0$. Dass ist ober ein Wiederspruch.
-\begin{framed}
-\centerline{\textbf{Definition 1.1}}
-\noindent Eine Menge ist eine Zusammenfassung verschiedener Objekte zu einem Ganzen.\\
+
+\begin{definition}{1.1}
+Eine Menge ist eine Zusammenfassung verschiedener Objekte zu einem Ganzen.\\
 Die Objekte werden Elemente der Menge genannt. 
-\end{framed}
+\end{definition}
+
 Sei $A$ eine Menge, dann ``$a$ ist element von $A$'' wird mit ``$a\in A$'' bezeichnet.\\
 Seien $A,B$ Mengen, dann ``jedes Element von $A$ ist ein Element von $B$'' wird mit ``$A\subset B$ bezeichnet, und man sagt ``$A$ ist in $B$ enthalten'' (oder $A$ ist teilmenge von $B$). \\
 
@@ -201,8 +202,10 @@ $A\cap \emptyset=\emptyset$; $A\cup \emptyset=A$\vspace{-4mm}
 \subsubsection*{Beweis}
 Übung \todo{Ask for correct beweis!!}
 
-\subsubsection*{Definition 1.7}
+\begin{definition}{1.7}
 Das Kartesische Produkt $A\times B$ der Mengen $A,B$ ist die Menge der geordneten Paare $(a,b)$ wobei $a\in A, b\in B$
+\end{definition}
+
 \subsubsection*{Beispiel}
 $\mathbb{Z}\times\mathbb{Z}=\{(a,b):a\in\mathbb{Z},b\in\mathbb{Z}\}$. Falls $\mathbb{Z}$ als ``eindimensionalen'' Gebilde dargestellt wird 
 
@@ -316,13 +319,16 @@ $$\neg\left(\forall x\in \mathbb{R}:x^2\geq 0\right)\Leftrightarrow\exists x\in\
 \end{enumerate}
 \section{Abbildungen}
 Seien $X,Y$ Mengen. 
-\subsubsection*{Definition 1.9}
+
+\begin{definition}{1.9}
 Eine Funktion oder Abbildung $f:X\rightarrow Y$ der Menge $X$ in die Menge $Y$ ist eine Vorschrift (ein Gesetz) die (das) jedem Element $x\in A$ genau ein Element $y=f(x)\in Y$ zuordnet. \\
 
 Es gibt verschiedene wichtige Objekte die in Zusammenhang mit einem Abbildung auftreten 
 $$X= \text{ Definitionsbereich von } f$$
 $$Y= \text{ Die Ziel Menge}$$
 $$f(x)=\{f(x)\mid x\in X\}\text{ ist das Bild von }f\text{ oder die Bildmenge}$$
+\end{definition}
+
 \subsubsection*{Beispiel 1.10}
 \begin{enumerate}
 \item (Identität) Für jede Menge $\Romanbar{X}$, ist $id_X : \Romanbar{X} \rightarrow\Romanbar{X}$ definiert durch $id_{\Romanbar{X}}(x)=x, \forall x\in X$ 
@@ -399,13 +405,14 @@ die Projektionen auf dem ersten respektiv zweiten Faktoren.
 \item $f:\mathbb{R}\rightarrow\mathbb{R}$\\
 $x\rightarrow x^2+x$
 \end{enumerate}
-\subsubsection*{Definition 1.11}
+\begin{definition}{1.11}
 Sei $f:X\rightarrow Y$ eine Abbildung
 \begin{enumerate}
 \item $f$ heisst injektiv falls auf $f(x_1)=f(x_2)$ stets $x_1=x_2$ folgt, falls jeder $y<\in Y$ höchstens ein Urbild hat.
 \item $f$ heisst surjektiv falls für jedes $y\in Y$ ein $x\in X$ gibt mit $f(x)=y$ $$\forall y\in Y, \exists x\in X:f(x)=y$$wenn jedes Element $y\in Y$ mindestens ein Urbild hat. 
 \item $f$ heisst bijektiv falls $f$ injektiv und surjektiv ist, d.h. falls jedes $y\in Y$ genau ein Urbild hat. 
 \end{enumerate}
+\end{definition}
 
 \todo{Pages from 17.1 to 17.4 seem repetition, ask to be sure (document week2)}
 
@@ -453,10 +460,11 @@ ist Injektive. $f(\mathbb{N})$ ist die Menge aller geraden Zahlen
 \end{figure}
 
 \todo{unreadeable, page 18}
-\begin{framed}
-\centerline{\textbf{Definition: Kardinalität}}
-\noindent Wir sagen zwei Mengen $X$ und $Y$ sind gleichmächtig falls eine bijektive Abbildung $f:X\rightarrow Y$ gibt.
-\end{framed}
+
+\begin{definition}{Kardinalität}
+Wir sagen zwei Mengen $X$ und $Y$ sind gleichmächtig falls eine bijektive Abbildung $f:X\rightarrow Y$ gibt.
+\end{definition}
+
 Mit dem ersten Contorschen Diagonalverfahren kann man die Rationalen zahlen abzählen, d.h.$ \mathbb{Q}$ und $\mathbb{N}$ sind gleichmächtig
 
 \begin{center}
@@ -572,10 +580,9 @@ Sei $f:A\rightarrow B$ eine beliebige Abbildung zwischen endliche Mengen. Falls 
 
 Mit Abbildungen kann man ``operieren''. Die wichstige Operation ist die Verkettung (oder komposition) zweier Abbildungen. 
 
-\begin{framed}
-\centerline{\textbf{Definition}}
+\begin{definition}
 \noindent Abbildungen $f:X\rightarrow $, $g:Y\rightarrow Z$ kann man miteinander ausführen. Dies ergibt eine neue Abbildung $$X\mathop  \to \limits^f Y\mathop  \to \limits^g Z$$ $$F:=g\circ f:X\rightarrow Z, x\rightarrow g\left( f(x)\right)   $$
-\end{framed}
+\end{definition}
 Zwei Funktionen $f$ und $g$ können verkettet werden wenn der Wertebereich der ersten Funktion mit dem Definitionsbereich der zweiten Funktion übereinstimmt. 
 
 \[\text{Man Sagt}\left\{ {\begin{array}{*{20}{c}}

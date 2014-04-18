@@ -119,9 +119,8 @@ Um den genauen Wert der Fläche festzulegen bilden wir immer feinere Zerlegungen
 \begin{enumerate}
 \item Sei $f: \lbrack a,b\rbrack\rightarrow\mathbb{R}$ eine beschränkte Funktion.\\
 
-\begin{framed}
-\centerline{\textbf{Definition 6.1}}
-\noindent Eine Partition (oder Zerlegung, Einteilung, Unterteilung) eines Intervalls $\lbrack a,b\rbrack$ ist eine endliche Menge $P=\{a=x_0,x_1.\dots,x_n=b \}\\
+\begin{definition}{6.1}
+Eine Partition (oder Zerlegung, Einteilung, Unterteilung) eines Intervalls $\lbrack a,b\rbrack$ ist eine endliche Menge $P=\{a=x_0,x_1.\dots,x_n=b \}\\
 x_0 < x_1 < x_2 < \dots < x_n$ \\
 $P(I):=\{P\subset I \mid a,b\in P, P \text{ ist endlich}\}$ die Menge alle Partitionen \begin{center}
 \begin{tikzpicture}
@@ -145,7 +144,7 @@ $P(I):=\{P\subset I \mid a,b\in P, P \text{ ist endlich}\}$ die Menge alle Parti
 	;
 \end{tikzpicture}
 \end{center}
-\end{framed}
+\end{definition}
 
 Die Feinheit der Zerlegung $P$ ist dabei definiert durch $$\delta (P):=max(x_i - x_{i-1}), 1\leq i \leq n$$ d.h. $\delta (P)$ ist die Länge des grössten Teilintervalls $I_i:=\lbrack x_i,x_{i-1}\rbrack , k=i,\dots,n$
 
@@ -263,8 +262,7 @@ Aus $$P\subset Q \Rightarrow U(f,P) \leq U(f,Q) \leq O(f,Q) \leq O(f,P)$$ folgt,
 Diese Ungleichung gilt für jede Partition $Q\in P(I)$. Das heisst wiederum, dass die Zahl $\mathop {\sup {\text{ }}U}\limits_{P \in P(I)} (f,P)$ eine untere Schranke für die Menge $\{ O(f,Q)\mid Q \in P(I)\} $ ist.\\
 
 Also folgt aus der Definition der Infimums als grösste untere Schranke, dass die Gleichung $\mathop {\sup U}\limits_{P \in P(I)} (f,P) \le \mathop {\inf O}\limits_{Q \in P(I)} (f,Q)$ ist. Damit ist Lemma 6.3 bewiesen.
-\begin{framed}
-\centerline{\textbf{Definition 6.4}}
+\begin{definition}{6.4}
 \begin{enumerate}[\indent 1)]
 \item Für beschränktes $f=\lbrack a,b \rbrack\rightarrow \mathbb{R}$ bezeichnen 
 $$\int\limits_{\underline{a}}^b {fdx = \sup \{ U(f,P):P \in P(I)\} }$$
@@ -272,7 +270,7 @@ $$\int\limits_{a}^{\overline{b}} {fdx = \inf \{ O(f,P):P \in P(I)\} }$$
 das Untere und Obere Integral von $f$.
 \item Ein solches $f$ heisst über $\lbrack a,b\rbrack$ \underline{Riemann - Integrabel} falls $$\int\limits_{\underline{a}}^b {fdx}  = \int\limits_a^{\overline{b}} {fdx} $$ In diesem Fall heisst $A = \int\limits_a^b {fdx} $ das \underline{Riemann Integral von $f$} über den Interval $\lbrack a,b\rbrack$
 \end{enumerate}
-\end{framed}
+\end{definition}
 
 \subsubsection*{Beispiel 6.5}
 \begin{enumerate}[\indent 1)]
@@ -576,10 +574,9 @@ Nun ist $\xi_h \rightarrow x$ für $h\rightarrow 0$. Da $f$ stetig ist $$f(\xi_h
 Damit erhalten wir \[F'(x) = \mathop {\lim }\limits_{h \to 0} \frac{{F(x + h) - F(x)}}{h} = \mathop {\lim }\limits_{h \to 0} \frac{1}{h}\int\limits_x^{x + h} {f(t)dt = } \mathop {\lim }\limits_{h \to 0} \frac{1}{h}(hf({\xi _h})) = f(x)\]
 Folgender Begriff ist dann naheliegend. \\
 
-\begin{framed}
-\centerline{\textbf{Definition 6.16}}
-\noindent Sei $f:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ eine Funktion. Ein Stammfunktion von $f$ (auf $a,b$) ist ein differenzierbare Funktion $F:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ mit $F'(x)=f(x)$.\\
-\end{framed}
+\begin{definition}{6.16}
+ Sei $f:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ eine Funktion. Ein Stammfunktion von $f$ (auf $a,b$) ist ein differenzierbare Funktion $F:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ mit $F'(x)=f(x)$.\\
+\end{definition}
 \noindent Wegen Satz 6.15, hat jede stetige Funktion mindestens eine Stammfunktion. Mit Ausnahme einer additiven Konstante, die beim Differenzieren ja wegfällt, ist die Stammfunktion auch eindeutig bestimmt. Dies ist der Inhalt des folgendes Satzes.\\
 
 \subsubsection*{Satz 6.17}
@@ -595,10 +592,9 @@ Seien $I\subset \mathbb{R}$ ein beliebiges Interval und $F:I\rightarrow\mathbb{R
 \item Da $F$ und $G$ Stammfunktionen von $f$ sind, gilt $F'=f, G'=f$. Also $(F-G)'=0$ und $F-G=\text{konstante Funktion}$. 
 \end{enumerate}
 
-\begin{framed}
-\centerline{\textbf{Definition 6.18}}
-\noindent Eine Stammfunktion von $f$ heisst auch unbestimmtes Integral von $f$ und wird bezeichnet mit $\int {f(x)dx} $. Mittels einer Stammfunktion lässt sich das Integral einer gegebenen Abbildung sehr leicht berechnen. Dies ist der Inhalt des Hauptsatz B.\\
-\end{framed}
+\begin{definition}{6.18}
+ Eine Stammfunktion von $f$ heisst auch unbestimmtes Integral von $f$ und wird bezeichnet mit $\int {f(x)dx} $. Mittels einer Stammfunktion lässt sich das Integral einer gegebenen Abbildung sehr leicht berechnen. Dies ist der Inhalt des Hauptsatz B.\\
+\end{definition}
 \subsubsection*{Satz 6.19 (Hauptsatz der Diff- und Integralberechnung Version B)}
 Sei $f:I\rightarrow\mathbb{R}$ eine stetige Funktion und $F$ eine beliebige Stammfunktion von $f$. Dann gilt \[\int\limits_a^b {f(x)dx = F(b) - F(a): = \left. {F(x)} \right|_a^b}\text{,\indent}\forall a,b\in I \]
 
@@ -991,10 +987,9 @@ $$\Rightarrow \frac{9}{x^3-3x-2}=\frac{1}{x-2}+\frac{-x-4}{(x+1)^2}$$
 \section{Das Uneigentliche Integral}
 Sei $f$ eine unbeschränkte Funktion. Dann ist $f$ nicht R. Integrierbar, z.B. $\int\limits_0^1 {\frac{1}{{\sqrt x }}} dx$ hat keinen Sinn. Aber $\forall\varepsilon>0$ ist $\frac{1}{\sqrt{x}}\in\left[\varepsilon,1 \right]$ stetig also Integrierbar. Der Wert des Integral ist \[\int\limits_\varepsilon ^1 {\frac{1}{{\sqrt x }}} dx = \left. {2\sqrt x } \right|_\varepsilon ^1 = 2 - 2\sqrt \varepsilon  \] also existiert \[\mathop {\lim }\limits_{\varepsilon  \searrow 0} \int\limits_\varepsilon ^1 {\frac{1}{{\sqrt x }}} dx = 2\] Dies ist ein Beispiel von uneigentlichen R. Integral.
 
-\begin{framed}
-\centerline{\textbf{Definition 6.29}}
-\noindent Sei $f$ eine Funktion auf einem offenen Interval $(a,b)$, deren Einschränkung auf jedes kompakte Teilinterval $\lbrack a',b'\rbrack$ integrierbar ist. Dann das uneigentliche Integral von $f$ von $a$ bis $b$ definiert als \[\int\limits_a^b {f(x)dx: = \mathop {\lim }\limits_{a' \searrow a} \mathop {\lim }\limits_{b' \nearrow b} } \int\limits_{a'}^{b'} {f(x)dx} \] falls diese Grenzwerte existieren ($a$ und $b$ können $\pm \infty$ sein)
-\end{framed}
+\begin{definition}{6.29}
+Sei $f$ eine Funktion auf einem offenen Interval $(a,b)$, deren Einschränkung auf jedes kompakte Teilinterval $\lbrack a',b'\rbrack$ integrierbar ist. Dann das uneigentliche Integral von $f$ von $a$ bis $b$ definiert als \[\int\limits_a^b {f(x)dx: = \mathop {\lim }\limits_{a' \searrow a} \mathop {\lim }\limits_{b' \nearrow b} } \int\limits_{a'}^{b'} {f(x)dx} \] falls diese Grenzwerte existieren ($a$ und $b$ können $\pm \infty$ sein)
+\end{definition}
 
  \subsubsection*{Bemerkung 6.30}
 \begin{enumerate}

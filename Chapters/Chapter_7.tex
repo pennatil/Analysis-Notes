@@ -58,10 +58,10 @@ $$\Rightarrow f(t)=Ke^{-\alpha t}\text{ mit }K={e^{t}}^C$$
 \end{enumerate}
 Alle 3 Beispiele sind Lineare DGL mit konstanten Koeffizienten. 
 \section{Lineare DGL mit konstante Koeffizienten} 
-\begin{framed}
-\centerline{\textbf{Definition 7.1}}
-\noindent Eine lineare Differentialgleichung $n-$ter Ordnung hat die Gestalt \[{y^{(n)}} + {a_{n - 1}}(x){y^{(n - 1)}} +  \ldots  + {a_1}(x)y' + {a_0}(x)y = b(x)\] mit $a_i(x),i=0,\dots,n-1, b(x)$ Funktionen. 
-\end{framed} \todo{Where is the end of the definition??}
+
+\begin{definition}{7.1}
+Eine lineare Differentialgleichung $n-$ter Ordnung hat die Gestalt \[{y^{(n)}} + {a_{n - 1}}(x){y^{(n - 1)}} +  \ldots  + {a_1}(x)y' + {a_0}(x)y = b(x)\] mit $a_i(x),i=0,\dots,n-1, b(x)$ Funktionen. 
+\end{definition} \todo{Where is the end of the definition??}
 Ist das so genannte Störfunktion $b(x)$ konstant gleich 0, so heisst die DGL homogen, andernfalls inhomogen. Im Falle $a_i(x)=a_i$ Konstanten, heisst die LDG, LDG mit Konstanten koeffizioenten. \\
 
 In diesem Abschnitt betrachten wir DGL mit konstanten Koeffizienten. Eine DGL ist genau dann linear wenn alle Potenzen der gesuchte Funktion und deren Ableitung(en) nur mit Potenz 1 vorkommen.
@@ -74,10 +74,9 @@ z.B.:
 \end{itemize}
 
 \noindent Zum nächst betrachten wir Homogene LDG mit konstanten Koeffizienten. Sei $$y^{(n)}+a_{n-1}y^{(n-1)}+\dots+a_0=0\text{\hspace{10mm}(H)}$$ wobei $a_i\in\mathbb{R}$ $i=0,\dots,n-1$
-\begin{framed}
-\centerline{\textbf{Definition 7.2}}
-\noindent Das charakteristische Polynom der Gleichung (H) ist gegeben durch $$p(t):=t^n+a_{n-1}t^{n-1}+\dots+a_0$$
-\end{framed} 
+\begin{definition}{7.2}
+Das charakteristische Polynom der Gleichung (H) ist gegeben durch $$p(t):=t^n+a_{n-1}t^{n-1}+\dots+a_0$$
+\end{definition} 
 \subsubsection*{Lemma 7.3}
 Die Funktion $y(x)=e^{\lambda x}$ ist genau dann Lösung von (H) falls $p(\lambda)=0$ 
 \subsubsection*{Beweis}
@@ -378,10 +377,9 @@ Allgemeine Lösung: $$y(x)=Ke^{5x}-\frac{4x}{5}+\frac{11}{25}$$
 \end{enumerate}
 
 \section{Separierbare DGL}
-\begin{framed}
-\centerline{\textbf{Definition 7.16}}
-\noindent Eine separierbare DGL ist eine der Form $$y'=f(x)g(y)$$
-\end{framed}
+\begin{definition}{7.16}
+Eine separierbare DGL ist eine der Form $$y'=f(x)g(y)$$
+\end{definition}
 Ein einfaches Verfahren, so genannte ``separation der Variablen'' lässt sich anwenden, wenn die DGL separierbar ist. Der ``trick'': Wir trennen die Terme voneinander und dann integrieren. Dabei ist es hilfreich $y'=\frac{dy}{dx}$ zu schreiben und formel $dy$ bzw. $dx$ als Zähler bzw. Nenner des Bruches aufzufassen
 
 \subsubsection*{Beispiel 7.17}

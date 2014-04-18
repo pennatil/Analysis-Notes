@@ -40,9 +40,8 @@ Aber der Limes entlang der Gerade $y=mx$
 {{\text{Hängt von }} m {\text{ ab}}}
 \end{array}} \]
 und $\frac{m}{1+m^2}\not=0$, falls $m\not=0$. Eine funktion $f(x,y)$ an der stelle $(x_0,y_0)$ ist stetig wenn der limes $\mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} f(x,y)$ in jeder Richtung der gleichen wert haben. 
-\begin{framed}
-\centerline{\textbf{Definition 8.1}}
-\noindent Sei $\Omega\subset\mathbb{R}^n$, $f:\Omega \rightarrow\mathbb{R}$, $a\in\Omega$
+\begin{definition}{8.1}
+Sei $\Omega\subset\mathbb{R}^n$, $f:\Omega \rightarrow\mathbb{R}$, $a\in\Omega$
 \begin{enumerate}
 \item $f$ hat den Grenzwert $c\in\mathbb{R}$, d.h $$\lim\limits_{x\rightarrow a} f(x)=c$$ ween es zu jeder (Beliebig kleinen) Schranke $\varepsilon>0$, eine $\delta$-umgebung \[{B_\delta }(a): = \left\{ {x \in \mathbb{R}^n}\mid\left| {x - a} \right| < \delta  \right\}\] gibt, so dass $\left| {f(x) - a} \right| < \varepsilon$ für alle $x\in\Omega\cap B_\delta (a), x\not=a$ gilt
 \item $f$ heisst in $a\in\Omega$ stetig, wenn $\mathop {\lim }\limits_{x \to a} f'(x) = f(a)$ gilt.
@@ -51,7 +50,7 @@ und $\frac{m}{1+m^2}\not=0$, falls $m\not=0$. Eine funktion $f(x,y)$ an der stel
 Die Summe, das Produkt, der Quotient (Nenner ungleich Null) stetiger Funktion sind stetig.\\
 
 $f$ besitzt keinen Grenzwert in $x_0$ wenn sich bei Annäherungen an $x_0$ auf verschiedenen Kurven (z.b. Geraden) verschiedene oder keine Grenzwert ergeben.
-\end{framed}
+\end{definition}
 
 \subsection*{Sandwichlemma}
 Sei $f,g,h$ funktionen wobei $g<f<h$. Wenn $\mathop {\lim }\limits_{x \to a} g = L = \mathop {\lim }\limits_{x \to a} h$ gilt, dann ergibt $\lim\limits_{x\rightarrow a}f=L$.\\
@@ -102,9 +101,8 @@ Sei $$f:\mathbb{R}^2\rightarrow \mathbb{R}$$$$(x,y)\rightarrow \left(x^2+xy\righ
 
 \noindent Sei $e_i:=\left( 0,\dots,0,1,0,\dots,0\right)$ der $i-$te Basisvektor von $\mathbb{R}^n$
 
-\begin{framed}
-\centerline{\textbf{Definition 8.2}}
-\noindent Die Funktion $f:\Omega\subset\mathbb{R}^n\rightarrow\mathbb{R}$ heisst an der stelle $x_0\in\Omega$ in Richtung $e_i$ (oder nach $x^i$) partielle differenzierbar falls der limes \[\frac{{\partial f}}{{\partial {x^i}}}({x_0}) = {f_{{x^i}}}({x_0}): =  - \mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+\begin{definition}{8.2}
+Die Funktion $f:\Omega\subset\mathbb{R}^n\rightarrow\mathbb{R}$ heisst an der stelle $x_0\in\Omega$ in Richtung $e_i$ (oder nach $x^i$) partielle differenzierbar falls der limes \[\frac{{\partial f}}{{\partial {x^i}}}({x_0}) = {f_{{x^i}}}({x_0}): =  - \mathop {\lim }\limits_{\begin{array}{*{20}{c}}
 {h \to 0}\\
 {h\not  = 0}
 \end{array}} \frac{{f({x_0} + h{e_i}) - f({x_0})}}{h}\]
@@ -112,8 +110,8 @@ Sei $$f:\mathbb{R}^2\rightarrow \mathbb{R}$$$$(x,y)\rightarrow \left(x^2+xy\righ
 {h \to 0}\\
 {h\not  = 0}
 \end{array}} \frac{{f\left( {{x_0}^1,{x_0}^2, \ldots ,{x_0}^i + h,{x_0}^{i + 1}, \ldots ,{x_0}^n} \right) - f\left( {{x_0}^1, \ldots ,{x_0}^n} \right)}}{h}\]
-existiert 
-\end{framed}
+existiert
+\end{definition}
 \subsubsection*{Bemerkung 8.3}
 \missingfigure{page 121, middle}
 Sei $f:\mathbb{R}^2\rightarrow\mathbb{R}, \left(x_0^1,x_0^2\right)\in\mathbb{R}^2$. Wir betrachten die scharen von $f$ $$f(\cdot ,x_0^2):\mathbb{R}\rightarrow \mathbb{R}$$ und $$f(x_0^1,\cdot ):\mathbb{R}\rightarrow\mathbb{R}$$ $\frac{\partial f}{\partial x^1}$, $\frac{\partial f}{\partial x^2}$ sind die Ansteig der Tangente zur entsprechende schrittkurven
@@ -173,10 +171,9 @@ $A=\left( A_1,\dots,A_n\right)$ für die Darstellung einer Lineare Abbildung $A:
 {{x^n}}
 \end{array}} \right) = \sum {{A_i}{x^i}} \]
 
-\begin{framed}
-\centerline{\textbf{Definition 8.4}}
-\noindent Die Funktion $f:\Omega\rightarrow\mathbb{R}$ heisst an der Stelle $x_0\in\Omega\subset\mathbb{R}^n$ differenzierbar falls eine lineare Abbildung $A:\mathbb{R}^n\rightarrow\mathbb{R}$ gibt so dass \[f(x) = f\left( {{x_0}} \right) + A\left( {x - {x_0}} \right) + R\left( {{x_0},x} \right)\] wobei $\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} = 0$
-\end{framed}
+\begin{definition}{8.4}
+Die Funktion $f:\Omega\rightarrow\mathbb{R}$ heisst an der Stelle $x_0\in\Omega\subset\mathbb{R}^n$ differenzierbar falls eine lineare Abbildung $A:\mathbb{R}^n\rightarrow\mathbb{R}$ gibt so dass \[f(x) = f\left( {{x_0}} \right) + A\left( {x - {x_0}} \right) + R\left( {{x_0},x} \right)\] wobei $\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} = 0$
+\end{definition}
 In diesem fall heisst $A$ der Differential an der Stelle $x_0$ und wird mit $\mathop {df}\limits_{{x_0}} $ bezeichnet, d.h. $f$ ist total differenzierbar in $x_0=\left( x_0^1,\dots,x_0^n\right)$ falls reelle Zahlen $A_1,\dots,A_n$ existieren so dass gilt \[f(x) = f\left( {{x_0}} \right) + {A_1}\left( {{x^1} - x_0^1} \right) + {A_2}\left( {{x^2} - x_0^2} \right) +  \ldots  + {A_n}\left( {{x^n} - x_0^n} \right) + R\left( {x,{x_0}} \right)\] mit $\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} = 0$
 
 \subsubsection*{Bemerkung: Geometrische Interpretation}
@@ -243,10 +240,9 @@ Falls $f:\Omega\rightarrow\mathbb{R}$ in $x_0\in\Omega\subset\mathbb{R}$ differe
 
 \subsubsection*{Beweis}
 Folgt aus der Definition
-\begin{framed}
-\centerline{\textbf{Definition 8.8}}
-\noindent $f:\Omega\rightarrow\mathbb{R}$ heisst von der Klasse $C'$, $\left( f\in C'\left(\Omega\right)\right)$ falls $f$ an jeder Stelle $x_0\in\Omega$ und in jede Richtung $e_i$ partielle differenzierbar ist und die Funktionen $x\rightarrow\frac{\partial f}{\partial x^i}\left(x\right)$ für jedes $1\leq i\leq n$ auf $\Omega$ stetig sind
-\end{framed}
+\begin{definition}{8.8}
+$f:\Omega\rightarrow\mathbb{R}$ heisst von der Klasse $C'$, $\left( f\in C'\left(\Omega\right)\right)$ falls $f$ an jeder Stelle $x_0\in\Omega$ und in jede Richtung $e_i$ partielle differenzierbar ist und die Funktionen $x\rightarrow\frac{\partial f}{\partial x^i}\left(x\right)$ für jedes $1\leq i\leq n$ auf $\Omega$ stetig sind
+\end{definition}
 \subsubsection*{Satz 8.9}
 Sei $f\in C'\left(\Omega\right)$. Dann ist $f$ an jeder Stelle $x_0\in\Omega$ differenzierbar. 
 
@@ -328,10 +324,9 @@ Sei $h:\mathbb{R}^2\rightarrow\mathbb{R}$ $$h(x,y)=e^{xy}$$ $h= f\circ g$ wobei 
 \[dh\left( {x,y} \right) = d\left( {f \circ g} \right)' = f'\left( {g\left( {x,y} \right)} \right) \cdot dg\left( {x,y} \right) = {e^{xy}} \cdot \left( {y,x} \right) = \left( {y{e^{xy}},x{e^{xy}}} \right)\]
 Für die nächste Kettenregel führen wir folgende Definition ein:
 
-\begin{framed}
-\centerline{\textbf{Definition 8.14}}
-\noindent Sei $\Omega \subset\mathbb{R}$ und $f=\left( f_1,\dots,f_n\right):\Omega\rightarrow\mathbb{R}^n$ eine Abbildung. Dann ist $f$ an der Stelle $x_0\in\mathbb{R}$ differenzierbar, falls jede Komponentenfunktion $f_i$ an der Stelle $x_0$ differenzierbar ist. Wir definieren in diesem Fall \[f'\left( {{x_0}} \right): = \left( {{f_1}'\left( {{x_0}} \right),{f_2}'\left( {{x_0}} \right), \ldots ,{f_n}'\left( {{x_0}} \right)} \right)\]
-\end{framed}
+\begin{definition}{8.14}
+Sei $\Omega \subset\mathbb{R}$ und $f=\left( f_1,\dots,f_n\right):\Omega\rightarrow\mathbb{R}^n$ eine Abbildung. Dann ist $f$ an der Stelle $x_0\in\mathbb{R}$ differenzierbar, falls jede Komponentenfunktion $f_i$ an der Stelle $x_0$ differenzierbar ist. Wir definieren in diesem Fall \[f'\left( {{x_0}} \right): = \left( {{f_1}'\left( {{x_0}} \right),{f_2}'\left( {{x_0}} \right), \ldots ,{f_n}'\left( {{x_0}} \right)} \right)\]
+\end{definition}
 
 \subsubsection*{Bemerkung 8.15}
 $f'\left( x_0\right)$ kann als Geschwindigkeitsvektor im Punkt $f\left( x_0\right)$ aufgefasst werden.
