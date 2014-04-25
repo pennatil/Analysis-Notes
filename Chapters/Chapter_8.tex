@@ -367,4 +367,48 @@ $e=\left( e^1,\dots, e^n\right) $ und wird Richtungsableitung von $f$ in Richtun
 \[{\partial _{{e_i}}}f\left( {{x_0}} \right) = \frac{{\partial f}}{{\partial {x^i}}}\left( {{x_0}} \right) = df\left( {{x_0}} \right)\left( {{e_i}} \right)\]
 Geometrisch die Richtungsableitung von $f$ in Richtung $e$ ist genau die Steigung der Tangente zur Schnittkurve falls wir den Graph von $f$ mit einer zur Ebene $xy$ senkrecht Ebene durch $x_0+te$ scheiden.
 \missingfigure{page 144, middle}
+Für den Mittelwertsatz der DR - zu verallgemeinen benützen wir folgenden Begriffen:
+\begin{definition}{8.19}
+Eine Menge $K\subset \mathbb{R}^n$ ist genau dann Konvex falls für jede Paar von Punkten $x,y\in K$ die Menge $K$ auch das segment $$\left( 1-t\right) x+ty\hspace{10mm} t\in\lbrack 0,y\rbrack$$ mit endpunkt $x,y$ enthält
+\missingfigure{Page 145, middle}
+\end{definition}
+\subsubsection*{Satz 8.20}
+Sei $\Omega\subset\mathbb{R}^n$ konvex $f:\Omega\rightarrow\mathbb{R}$ differenzierbar, $x_0,x_1\in\Omega$ sowie $x_t:=\left( 1-t\right) x_0+tx_1$\todo{is it $tx_1$ or $tx$, ?? page 145 middle}. Dann gibt es $\vartheta\in\lbrack 0,1\rbrack$ mit \[f\left( {{x_1}} \right) - f\left( {{x_0}} \right) = df\left( {{x_{i\vartheta }}} \right)\left( {{x_1} - {x_0}} \right)\]
 
+\subsubsection*{Beweis}
+Sei $g\left( t\right) = \left( 1-t\right) x_0+tx_1=x_t$. Dann ist $t\rightarrow \left( f\circ g\right)(t)$ auf $\left[ 0,1\right]$ stetig und in $\left( 0,1\right)$ differenzierbar. Also gibt es $\vartheta\in\left( 0,1\right)$ mit (nach MWS der DS einer variable) \[f\left( {{x_i}} \right) - f\left( {{x_0}} \right) = \left( {f \circ g} \right)(1) - \left( {f \circ g} \right)(0) = \left( {f \circ g} \right)'\left( \vartheta  \right)\left( {1 - 0} \right)\] Nur ist \[\left( {f \circ g} \right)'\left( \vartheta  \right) = df\left( {g\left( \vartheta  \right) \cdot \frac{{dg}}{{dt}}\left( \vartheta  \right)} \right)\] \todo{Is the formula done or does it continue on a new line, page 146 top}
+%\[\left( {df} \right)\left( {{x_\vartheta }} \right)\left( { - {x_0} + {x_1}} \right)\]
+Die Kettenregel wird auch angewandelt um Integrale mit Parametern zu studieren. Ein Beispiel davon ist:
+
+\subsubsection*{Beispiel}
+Sei $h:\mathbb{R}^2\rightarrow\mathbb{R}$, $\left( s,t\right)\rightarrow h\left(s,t \right)$. Wir nehmen an, $h$ ist stetig, $\frac{\partial h}{\partial t}$ existiert und ist uf ganz $\mathbb{R}^2$ stetig. Sei 
+\[u(t) = \int\limits_a^{b(t)} {h(s,t)ds} {\text{, }}b(t) \in\subset '\left( \mathbb{R} \right){\text{, }}a \in\mathbb{R}\]\todo{Is it $C'$ or $\subset '$?? page 146 middle}
+
+\subsubsection*{Satz 8.21}
+Sei $h(s,t)$ eine stetige differenzierbare Funktion von zwei variablen und $b(t)$ differenzierbare Funktion eine variable. Dann ist die Funktion \[u(t): = \int\limits_a^{b(t)} {h(s,t)ds} \] wo definiert, differenzierbar mit der Ableitung \[u'(t): = h\left( {b(t),t} \right) \cdot b'(t) + \int\limits_a^{b(t)} {\frac{{\partial h}}{{\partial t}}\left( {s,t} \right)ds} \]
+\subsubsection*{Korollar 8.22}
+Sei $h=h\left( s,t\right) :\mathbb{R}^2\rightarrow\mathbb{R}$ stetig, und $\frac{\partial h}{\partial t}$ existiert und auf ganz $\mathbb{R}^2$ stetig. Sei \[u(t) = \int\limits_0^t {h\left( {s,t} \right)ds} \] Dann \[u(t) \in  \subset '\left( \mathbb{R}\right)\text{ und }u'(t) = h\left( {t,t} \right) + \int\limits_0^t {\frac{{\partial h}}{{\partial t}}\left( {s,t} \right)ds} \]
+
+\subsubsection*{Beweis}
+Setze $b(t)=t$, $a=0$ in Satz 8.21.
+
+\subsubsection*{Korollar 8.23}
+Sei $h:\mathbb{R}^2\rightarrow\mathbb{R}$ eine stetige Funktion mit Stetiger partieller Ableitung $\frac{\partial h}{\partial t}$. Dann ist die Funktion \[u(t): = \int\limits_a^b {h(s,t)ds} \] differenzierbar mit Ableitung \[u'(t): = \int\limits_a^b {\frac{{\partial h}}{{\partial t}}(s,t)ds} \] 
+
+\subsubsection*{Beweis}
+Setze $b(t)=b$, in Satz 8.20
+
+\subsubsection*{Bemerkung 8.24}
+Mit Korollar 8.23 kann man bestimmte Integrale berechnen, auch wenn die zugehörige unbestimmten Integrale nicht elementar darstellbar sind
+\subsubsection*{Beispiel 8.25}
+Berechne das integral \[\int\limits_0^1 {\frac{{{x^5} - 1}}{{\log x}}} dx\] Sei \[u\left( \alpha  \right): = \int\limits_0^1 {\frac{{{x^\alpha } - 1}}{{\log x}}dx} \] Für $\alpha \geq 0$ erfüllt $u\left(\alpha\right)$ die Voraussetzungen des Satzes. Wir berechnen \[u'\left( \alpha  \right) = \int\limits_0^1 {\frac{\partial }{{\partial \alpha }}\left( {\frac{{{x^\alpha } - 1}}{{\log x}}} \right)dx}  = \int\limits_0^1 {\frac{{{x^\alpha }\log x}}{{\log x}}dx = \int\limits_0^1 {{x^\alpha }dx}  = \left. {\frac{{{x^{\alpha  + 1}}}}{{\alpha  + 1}}} \right|_0^{x = 1} = } \frac{1}{{\alpha  + 1}}\] 
+Daraus folgt aus Fundamentales Satz der Integral Rechnung \[u\left( \alpha  \right) = \int {u'\left( \alpha  \right)d\alpha  = \int {\frac{{d\alpha }}{{\alpha  + 1}} = \log \left( {\alpha  + 1} \right)} }  + C\]
+Für eine noch zu bestimmende Konstante $C$. Aber
+\[u\left( 0 \right) = \int\limits_0^1 {0dx = 0 \Rightarrow C = 0} \]
+\[ \Rightarrow \int\limits_0^1 {\frac{{{x^\alpha } - 1}}{{\log x}}dx = \log \left( {\alpha  + 1} \right)} \]
+\[ \Rightarrow \int\limits_0^1 {\frac{{{x^5} - 1}}{{\log x}}dx = \log 6} \]
+
+\subsubsection*{Beweis Satz 8.21 (Idee)}
+Sei \[f\left( {x,y} \right) = \int\limits_a^x {h\left( {s,y} \right)ds}:\mathbb{R}^2\rightarrow\mathbb{R} \]
+\[g\left( t \right) = \left( {\begin{array}{*{20}{c}}{b\left( t \right)}\\t\end{array}} \right):\mathbb{R}\rightarrow\mathbb{R}^2\text{, }g'\left( t \right) = \left( {\begin{array}{*{20}{c}}{b'\left( t \right)}\\1\end{array}} \right)\]
+Dann \[u(t) = \left( {f \circ g} \right)(t) = f\left( {b(t),t} \right) = \int\limits_a^{b(t)} {h(s,t)ds} \]

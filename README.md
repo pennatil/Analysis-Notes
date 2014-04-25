@@ -49,15 +49,17 @@ This is only recommended to people with experience with LaTex, since the files m
     * Windows: [MikTeX](http://miktex.org/download) or [TexLive](https://www.tug.org/texlive/acquire-netinstall.html) (Recommended)
     * Linux: [TexLive](https://www.tug.org/texlive/quickinstall.html) (or simply <code>sudo apt-get install texlive-full</code>)
 2. Download the master Branch [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip)
+3. Generate the files
 	* If you want to use a program with a GUI:
 	  1. Navigate to the "MAINs" folder, and open "main.tex" using TexWorks (Right-click->open with...)
 	  2. On the top left, select "pdfLaTex" from the dropdown menu
 	  3. Click on the green arrow, this will start the building process. Repeat this step at least 2 times!!
-	  4. Navigate to the Notes folder, you will find a PDF file named "main.pdf". Move it and rename it wherever you like.
+	  4. You should now have a "main.pdf" file in your "MAINs" Folder.
     * If you want to use the terminal (Linux and Mac only):
-	    1. <code>cd path/to/MAINs/folder/</code> (e.g. <code>cd /Users/Waldo/Desktop/Notes/MAINs/</code>)
-   	    2. There are 2 scripts that take care of building the files, and cleaning up. <code>BuildAll.sh</code> builds 1 pdf with all the notes, while <code>BuildChapterByChapter.sh</code> builds a file for each chapter. choose which one you want to use, and follow the commands.
-		3. If it is the first time that you run this script, type <code>sudo chmod 755 nameOfScript.sh</code> (Where nameOfScript.sh is either BuildAll.sh or BuildChapterByChapter.sh. This command grants permission to the script to run)
-		4. Afterwards, <code>./nameOfScript.sh</code>
-		5. You will find a folder called "Output" inside the Notes folder, with the output file(s).
+	    1. <code>cd path/to/Scripts/folder/</code> (e.g. <code>cd /Users/Waldo/Desktop/Notes/Scripts/</code>)
+   	    2. There are 2 scripts that take care of building the files, and cleaning up. <code>BuildAll.sh</code> builds 1 pdf with all the notes, while <code>BuildChapterByChapter.sh</code> builds a file for each chapter. choose which one you want to use.
+		3. If it is the first time that you run this script, type <code>sudo chmod 755 nameOfScript.sh</code> (Where <code>nameOfScript.sh</code> is either <code>BuildAll.sh</code> or <code>BuildChapterByChapter.sh</code>. This command grants permission to the script to run)
+		4. Afterwards, type <code>./nameOfScript.sh</code> and press enter.
+		5. Wait until the process is done.
+		6. You will find a folder called "Output" inside the Notes folder, with the output file(s).
 
