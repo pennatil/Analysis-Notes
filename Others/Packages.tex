@@ -1,7 +1,6 @@
 \usepackage{enumerate}%used for custom enumerates
 \usepackage{amsmath}%Math package
 \usepackage{amssymb}%Math Package
-\usepackage{todonotes}%Notes to add throughout the document
 \usepackage[utf8]{inputenc}%for the umlaut
 \usepackage[german]{babel}%localized string of Chapter and other keywords
 \usepackage{framed}%Framed used for the definitions
@@ -15,14 +14,15 @@
 \DeclareMathOperator{\arccosh}{arccosh}%Defined here since it doesn't exist
 \DeclareMathOperator{\arcsinh}{arcsinh}%Defined here since it doesn't exist
 \DeclareMathOperator{\arctanh}{arctanh}%Defined here since it doesn't exist
-\usepackage{fancyhdr}
-\usepackage{float}
+\usepackage{fancyhdr}%Styling package used to dispaly custom headers, as well as custom chapter numbering in page numbering
+\usepackage{float}%Used to position images in specified places
 \pgfplotsset{compat=newest}%used for the pgfplots
 \usetikzlibrary{decorations.pathmorphing,patterns}
 \usepackage[bookmarks,bookmarksdepth=2]{hyperref}%Depth of index in pdf program
-\usepackage{verbatim}%used for multiline comments, can be removed at the end
 \usetikzlibrary{calc} %required for cube drawing in chapter 2
 \usetikzlibrary{patterns,decorations.pathreplacing}%required for underbrace in tikz
 
-
+% THESE PACKAGES ARE EDITING HELPERS, PROVIDING TOOLS FOR WHEN EDITING. THEY CAN BE DISABLED WHEN DONE
 %\usepackage{showframe}%used to show margins in the preview, deactivate at the end
+\usepackage{verbatim}%used for multiline comments, can be removed at the end
+\usepackage{todonotes}%Notes to add throughout the document

@@ -412,3 +412,96 @@ Für eine noch zu bestimmende Konstante $C$. Aber
 Sei \[f\left( {x,y} \right) = \int\limits_a^x {h\left( {s,y} \right)ds}:\mathbb{R}^2\rightarrow\mathbb{R} \]
 \[g\left( t \right) = \left( {\begin{array}{*{20}{c}}{b\left( t \right)}\\t\end{array}} \right):\mathbb{R}\rightarrow\mathbb{R}^2\text{, }g'\left( t \right) = \left( {\begin{array}{*{20}{c}}{b'\left( t \right)}\\1\end{array}} \right)\]
 Dann \[u(t) = \left( {f \circ g} \right)(t) = f\left( {b(t),t} \right) = \int\limits_a^{b(t)} {h(s,t)ds} \]
+Nach Hauptsatz der Integral Rechnung $f$ ist nach $x$ partielle differenzierbar und $\frac{\partial f}{\partial x}=h(x,y)$. Man muss zeigen das $f$ ist nach $y$ partielle differenzierbar mit \[\frac{{\partial f}}{{\partial y}}(x,y) = \int\limits_a^x {\frac{{\partial h(s,y)}}{{\partial x}}ds} \]
+Dann ergibt die Kettenregel
+\begin{align*}
+u'(t) = &\frac{d}{{dt}}\left( {f \circ g} \right)(t) = \left( {\frac{{\partial f}}{{\partial x}}\left( {g(t)} \right),\frac{{\partial f}}{{\partial y}}\left( {g(t)} \right)} \right) \cdot \frac{{dg}}{{dt}}\\
+= &\left( {h\left( {b(t),t} \right),\left( {\int\limits_a^x {\frac{{\partial h(s,y)}}{{\partial y}}ds} } \right)h\left( {b(t),t} \right)} \right)\left( {\begin{array}{*{20}{c}}{b'(t)}\\1\end{array}} \right)\\
+= &\left( {h\left( {b(t),t} \right),\int\limits_a^{b(t)} {\frac{{\partial h}}{{\partial y}}(s,t)ds} } \right)\left( {\begin{array}{*{20}{c}}{b'(t)}\\1\end{array}} \right)\\
+= & h\left( {b(t),t} \right) \cdot b'(t) + \int\limits_a^{b(t)} {\frac{{\partial h}}{{\partial t}}(s,t)ds}
+\end{align*}
+\section{Differentialformen und Vektorfelder}
+Sei $L\left(\mathbb{R}^n,\mathbb{R}\right)$ der Raum der linearen Abbildungen von $\mathbb{R}^n$ nach $\mathbb{R}$. Falls $f:\Omega\subset\mathbb{R}^n\rightarrow\mathbb{R}$ eine Funktion ist, die in jedem Punkt differenzierbar ist, dann ist $df(x)\in L\left(\mathbb{R}^n,\mathbb{R}\right)$ und man erhält eine Abbildung
+\begin{align*}
+\Omega &\rightarrow L\left(\mathbb{R}^n,\mathbb{R}\right)\\
+x_0 &\rightarrow df\left(x_0\right) = \left( {\frac{{\partial f}}{{\partial {x^1}}}\left( {{x_0}} \right), \ldots ,\frac{{\partial f}}{{\partial {x^n}}}\left( {{x_0}} \right)} \right)\\
+& \hspace{16mm}=  \frac{{\partial f}}{{\partial {x^1}}}\left( {{x_0}} \right)d{x^1} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}\left( {{x_0}} \right)d{x^n}
+\end{align*}
+Dies ist ein Beispiel von $1-$form
+
+\begin{definition}{8.26}
+Eine Differentialform vom Grad 1 (auch ``$1-$Form'') auf $\Omega$ ist eine Abbildung $$\lambda :\Omega\rightarrow L\left(\mathbb{R}^n,\mathbb{R}\right)$$
+\end{definition}
+\subsubsection*{Beispiel 8.27}
+\begin{enumerate}
+\item Seien $x^i:\mathbb{R}^n\rightarrow\mathbb{R}$ die Koordinatenfunktionen $1\leq i\leq n$. Für jedes $x_0\in\mathbb{R}^n$ ist $dx^i\left(x_0\right)\in L\left( \mathbb{R}^n,\mathbb{R}\right)$; dies führt zur $1-$Form
+\begin{align*}
+dx^i:\mathbb{R}^n&\rightarrow L\left( \mathbb{R}^n,\mathbb{R}\right)\\
+x_0 &\rightarrow dx^i\left( x_0\right)
+\end{align*}
+Für jedes $x_0\in\mathbb{R}^n$, gilt $dx^i\left(e_j\right)=\delta_{ij}$ also bilden $dx^1\left( x_0\right),\dots,dx^n\left( x_0\right)$ eine Basis für $L\left(\mathbb{R}^n,\mathbb{R}\right)$, $\forall x\in\mathbb{R}^n$.\\
+
+Eine beliebig $1-$Form $\lambda :\mathbb{R}^n\rightarrow L\left(\mathbb{R}^n,\mathbb{R}\right)$ lässt sich dann eindeutig wie folgt darstellen \[\lambda \left( {{x_0}} \right) = \sum\limits_{i = 1}^n {{\lambda _i}\left( {{x_0}} \right)d{x^i}\left( {{x_0}} \right)} \] wobei $\lambda_i:\mathbb{R}^n\rightarrow\mathbb{R}$ Funktionen sind.
+\item Für jedes $f\in\subset'\left(\Omega\right)$\todo{Is it $C'$ or $\subset'$?? page 152.1 top} ist das differential $df$ eine $1-Form$ \[df = \frac{{\partial f}}{{\partial {x^1}}}d{x^1} + \frac{{\partial f}}{{\partial {x^2}}}d{x^2} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}d{x^n}\]
+\item Der Ausdrück $\lambda\left(x,y,z\right)=3dx+5zdy+xdz$ definiert ein $1-$Form auf $\mathbb{R}^3$ mit 
+\begin{align*}
+& \lambda_1\left(x,y,z\right)=3\\
+& \lambda_2\left(x,y,z\right)=5z\\
+& \lambda_3\left(x,y,z\right)=x
+\end{align*}
+\end{enumerate}
+\begin{definition}{8.28}
+Ein Vektorfeld auf $\Omega\subset\mathbb{R}^n$ ist eine Abbildung $v:\Omega\rightarrow\mathbb{R}^n$
+\end{definition}\todo[inline]{Does the definition include the examples? page 153 top}
+
+\subsubsection*{Beispiel}
+\begin{enumerate}
+\item \begin{align*}
+v:\mathbb{R}^2 &\rightarrow\mathbb{R}^2\\
+\left( x,y\right) &\rightarrow\left( 2xy,x^2\right)
+\end{align*}
+\missingfigure{page 153, middle}
+\item $v\left( x,y\right) = \left( -y,x\right)$
+\missingfigure{Page 153, bottom}
+\end{enumerate}
+\subsubsection*{Bemerkung 8.29}
+Sei $<,>$ das übliche Skalarprodukt auf $\mathbb{R}^n$, d.h. \[ < x,y > : = \sum\limits_{i = 1}^n {{x^i}{y^i}} \]
+Mittels $<,>$ kann man von $1-$Formen zu Vektorfelder und umgekehrt übergehen. Dies geht wie folgt:
+\begin{enumerate}
+\item Sei $v:\Omega\rightarrow\mathbb{R}^n$ ein Vektorfeld. Dann definieren wir $\forall x\in\Omega$, $\omega\in\mathbb{R}^n$
+$$\lambda (x)(\omega):= < v(x),\omega >$$ Offensichtlich $\lambda (x)\in\left( \mathbb{R}^n, \mathbb{R}\right)$ und somit ist 
+\begin{align*}
+\lambda : \Omega &\rightarrow L\left(\mathbb{R}^n, \mathbb{R}\right) \\
+x &\rightarrow\lambda (x): \mathbb{R}^n \rightarrow\mathbb{R}\\
+&\hspace{17.5mm}\omega \rightarrow <v(x),\omega >
+\end{align*}
+eine $1-$Form auf $\Omega$
+\end{enumerate}
+\underline{Umgekehrt}
+\begin{enumerate}[\indent 2.]
+\item Sei $\lambda :\Omega\rightarrow L\left(\mathbb{R}^n,\mathbb{R}\right)$ $1-$Form und $\lambda (x): = \sum\limits_{i = 1}^n {{\lambda _i}(x)d{x^i}} $ wie oben.\\
+
+Wir definieren 
+\begin{align*}
+v:\Omega &\rightarrow\mathbb{R}^n\\
+x &\rightarrow \left( \lambda _1(x),\lambda _2(x),\dots,\lambda _n(x) \right)
+\end{align*}
+dann ist $v$ ein Vektorfeld und $$\lambda (x)(\omega)= < v(x),\omega>$$ Sei $\omega = \omega^1e_1+\omega^2 e_2 + \dots + \omega^n e_n$. Dann
+\begin{align*}
+\lambda (x)(\omega ) = & \sum\limits_{i = 1}^n {{\lambda _i}(x)d{x^i}(\omega )}\\
+= & \sum\limits_{i = 1}^n {{\lambda _i}(x)d{x^i}\left( {{\omega ^1}{e_1} + {\omega ^2}{e_2} +  \ldots  + {\omega ^n}{e_n}} \right)}\\
+ = & \sum\limits_{i = 1}^n {{\lambda _i}(x)\left( {{\omega ^1}d{x^i}\left( {{e_1}} \right) + {\omega ^i}d{x^i}\left( {{e_i}} \right) +  \ldots  + {\omega ^n}d{x^i}\left( {{e_n}} \right)} \right)} \\
+\begin{array}{*{20}{c}}{d{x^i}{{\left( {{e_j}} \right)}_{ij}}}& \leftarrow \end{array} = & \sum\limits_{i = 1}^n {{\lambda _i}(x){\omega ^i}}  = \left( {{\lambda _i}(x), \ldots ,{\lambda _n}(x)} \right) \cdot \left( {{\omega ^1}, \ldots ,{\omega ^n}} \right)\\
+ = & < v(x),\omega  > 
+\end{align*}
+Diese Diskussion können wir auf das Differential einer Funktion anwenden
+\end{enumerate}
+
+\begin{definition}{8.30}
+Sei $f\in\subset'\left(\Omega\right)$, das durch $$< v(x),\omega >:=df(x)(\omega ), \omega\in\mathbb{R}^n$$ definierte Vektorfeld heisst Gradientenfeld von $f$ und wird mit $v(x)=\nabla f(x)$ oder grad$f$ bezeichnet. \\
+
+Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\mathbb{R}^n$ folgt die Darstellung 
+\[\nabla f(x) = \left( {\begin{array}{*{20}{c}}{\frac{{\partial f}}{{\partial {x^1}}}(x)}\\ \vdots \\{\frac{{\partial f}}{{\partial {x^n}}}(x)}\end{array}} \right),\forall x \in \Omega \]
+(Oben nehmen wir $\lambda (x): = df(x) = \sum {\frac{{\partial f}}{{\partial {x^i}}}{r^i}{x^i}} $, Bemerkung 8.29, 2.)
+\end{definition}
+%Page 157
