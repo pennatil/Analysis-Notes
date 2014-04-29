@@ -410,14 +410,26 @@ Für eine noch zu bestimmende Konstante $C$. Aber
 
 \subsubsection*{Beweis Satz 8.21 (Idee)}
 Sei \[f\left( {x,y} \right) = \int\limits_a^x {h\left( {s,y} \right)ds}:\mathbb{R}^2\rightarrow\mathbb{R} \]
-\[g\left( t \right) = \left( {\begin{array}{*{20}{c}}{b\left( t \right)}\\t\end{array}} \right):\mathbb{R}\rightarrow\mathbb{R}^2\text{, }g'\left( t \right) = \left( {\begin{array}{*{20}{c}}{b'\left( t \right)}\\1\end{array}} \right)\]
+\[g\left( t \right) = \left( {\begin{array}{*{20}{c}}
+{b\left( t \right)}\\
+t
+\end{array}} \right):\mathbb{R}\rightarrow\mathbb{R}^2\text{, }g'\left( t \right) = \left( {\begin{array}{*{20}{c}}
+{b'\left( t \right)}\\
+1
+\end{array}} \right)\]
 Dann \[u(t) = \left( {f \circ g} \right)(t) = f\left( {b(t),t} \right) = \int\limits_a^{b(t)} {h(s,t)ds} \]
 Nach Hauptsatz der Integral Rechnung $f$ ist nach $x$ partielle differenzierbar und $\frac{\partial f}{\partial x}=h(x,y)$. Man muss zeigen das $f$ ist nach $y$ partielle differenzierbar mit \[\frac{{\partial f}}{{\partial y}}(x,y) = \int\limits_a^x {\frac{{\partial h(s,y)}}{{\partial x}}ds} \]
 Dann ergibt die Kettenregel
 \begin{align*}
 u'(t) = &\frac{d}{{dt}}\left( {f \circ g} \right)(t) = \left( {\frac{{\partial f}}{{\partial x}}\left( {g(t)} \right),\frac{{\partial f}}{{\partial y}}\left( {g(t)} \right)} \right) \cdot \frac{{dg}}{{dt}}\\
-= &\left( {h\left( {b(t),t} \right),\left( {\int\limits_a^x {\frac{{\partial h(s,y)}}{{\partial y}}ds} } \right)h\left( {b(t),t} \right)} \right)\left( {\begin{array}{*{20}{c}}{b'(t)}\\1\end{array}} \right)\\
-= &\left( {h\left( {b(t),t} \right),\int\limits_a^{b(t)} {\frac{{\partial h}}{{\partial y}}(s,t)ds} } \right)\left( {\begin{array}{*{20}{c}}{b'(t)}\\1\end{array}} \right)\\
+= &\left( {h\left( {b(t),t} \right),\left( {\int\limits_a^x {\frac{{\partial h(s,y)}}{{\partial y}}ds} } \right)h\left( {b(t),t} \right)} \right)\left( {\begin{array}{*{20}{c}}
+{b'(t)}\\
+1
+\end{array}} \right)\\
+= &\left( {h\left( {b(t),t} \right),\int\limits_a^{b(t)} {\frac{{\partial h}}{{\partial y}}(s,t)ds} } \right)\left( {\begin{array}{*{20}{c}}
+{b'(t)}\\
+1
+\end{array}} \right)\\
 = & h\left( {b(t),t} \right) \cdot b'(t) + \int\limits_a^{b(t)} {\frac{{\partial h}}{{\partial t}}(s,t)ds}
 \end{align*}
 \section{Differentialformen und Vektorfelder}
@@ -491,7 +503,9 @@ dann ist $v$ ein Vektorfeld und $$\lambda (x)(\omega)= < v(x),\omega>$$ Sei $\om
 \lambda (x)(\omega ) = & \sum\limits_{i = 1}^n {{\lambda _i}(x)d{x^i}(\omega )}\\
 = & \sum\limits_{i = 1}^n {{\lambda _i}(x)d{x^i}\left( {{\omega ^1}{e_1} + {\omega ^2}{e_2} +  \ldots  + {\omega ^n}{e_n}} \right)}\\
  = & \sum\limits_{i = 1}^n {{\lambda _i}(x)\left( {{\omega ^1}d{x^i}\left( {{e_1}} \right) + {\omega ^i}d{x^i}\left( {{e_i}} \right) +  \ldots  + {\omega ^n}d{x^i}\left( {{e_n}} \right)} \right)} \\
-\begin{array}{*{20}{c}}{d{x^i}{{\left( {{e_j}} \right)}_{ij}}}& \leftarrow \end{array} = & \sum\limits_{i = 1}^n {{\lambda _i}(x){\omega ^i}}  = \left( {{\lambda _i}(x), \ldots ,{\lambda _n}(x)} \right) \cdot \left( {{\omega ^1}, \ldots ,{\omega ^n}} \right)\\
+\begin{array}{*{20}{c}}
+{d{x^i}{{\left( {{e_j}} \right)}_{ij}}}& \leftarrow 
+\end{array} = & \sum\limits_{i = 1}^n {{\lambda _i}(x){\omega ^i}}  = \left( {{\lambda _i}(x), \ldots ,{\lambda _n}(x)} \right) \cdot \left( {{\omega ^1}, \ldots ,{\omega ^n}} \right)\\
  = & < v(x),\omega  > 
 \end{align*}
 Diese Diskussion können wir auf das Differential einer Funktion anwenden
@@ -501,7 +515,34 @@ Diese Diskussion können wir auf das Differential einer Funktion anwenden
 Sei $f\in\subset'\left(\Omega\right)$, das durch $$< v(x),\omega >:=df(x)(\omega ), \omega\in\mathbb{R}^n$$ definierte Vektorfeld heisst Gradientenfeld von $f$ und wird mit $v(x)=\nabla f(x)$ oder grad$f$ bezeichnet. \\
 
 Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\mathbb{R}^n$ folgt die Darstellung 
-\[\nabla f(x) = \left( {\begin{array}{*{20}{c}}{\frac{{\partial f}}{{\partial {x^1}}}(x)}\\ \vdots \\{\frac{{\partial f}}{{\partial {x^n}}}(x)}\end{array}} \right),\forall x \in \Omega \]
+\[\nabla f(x) = \left( {\begin{array}{*{20}{c}}
+{\frac{{\partial f}}{{\partial {x^1}}}(x)}\\
+ \vdots \\
+{\frac{{\partial f}}{{\partial {x^n}}}(x)}
+\end{array}} \right),\forall x \in \Omega \]
 (Oben nehmen wir $\lambda (x): = df(x) = \sum {\frac{{\partial f}}{{\partial {x^i}}}{r^i}{x^i}} $, Bemerkung 8.29, 2.)
 \end{definition}
-%Page 157
+\subsubsection*{Satz 8.31}
+Sei $f\in\subset '\left(\Omega\right)$ und $x_0\in\Omega$. Dann gibt $\nabla f\left(x_0\right)$ die Richtung und $\left| \nabla f\left(x_0\right)\right|$ den Betrag des Steilsten Anstiegen von $f$ an der Stelle $x_0$
+\subsubsection*{Beweis}
+Aus der Definition des Gradientenfeld folgt $\forall e\in\mathbb{R}^n$, unit Vektor $\mid\mid e\mid\mid =1$ $$df\left(x_0\right)\left( e\right)=< \nabla f\left( x_0\right) ,e >$$
+\todo{Add arrow pointing down for description of function, page 157 middle}
+Mit Cauchy-Schwarz folgt 
+$$<\nabla f\left( x_0\right)>\leq\left|\left|\nabla f\left( x_0\right)\right|\right|\left|\left| e\right|\right| = \left|\left| \nabla f\left( x_0\right)\right|\right|$$
+mit Gleichkeit genau dann wann $e$ ein positives vielfachen von $\nabla f\left( x_0\right)$ ist, nähmlich $$e=\frac{\nabla f\left( x_0\right)}{\left| \nabla f\left( x_0\right)\right|}$$ $$\Rightarrow df\left( x_0\right) e \leq \left| \nabla f\left( x_0\right)\right|$$
+mit gleicheit für $e=\frac{\nabla f\left( x_0\right)}{\left| \nabla f\left( x_0\right)\right|}$
+%END BEWEIS
+$\nabla f\left( x_0\right)\not= 0\Rightarrow \nabla f\left( x_0\right)$ zeigt die Richtung an, in der $f$ am schnellsten wächst.\\
+
+\noindent \underline{Geometrische Interpretation}
+Sei $f:\mathbb{R}^n\rightarrow\mathbb{R}, C'$. Für jedes $s\in\mathbb{R}$ wird $f^{-1}(s)=\left\{ x\in\mathbb{R}^n\mid f(x)=s\right\}$ Niveaufläche genannt.
+
+\subsubsection*{Beispiel}
+\begin{enumerate}
+    \item \begin{align*}
+ f:\mathbb{R}^3 &\rightarrow\mathbb{R}\\
+ \left( x,y,z\right) &\rightarrow x^2 +y^2 +z^2
+ \end{align*}
+dann ist $f^{-1}(s)=$ Sphäre mit Zenter $O$ und Radius $\sqrt{s}$
+\item $f\left( x,y\right) = xy$ ist ein Hyperbolischer Parabolid mit Niveaulinien \missingfigure{page 158, bottom, use minipage} $f:\mathbb{R}^n \rightarrow\mathbb{R}$. Nun sei $x_o\in\Omega$ mit $f\left( x_0\right) = s$, i.e. $x_0 \in f^{-1} (s)$
+\end{enumerate}

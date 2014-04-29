@@ -62,4 +62,8 @@ This is only recommended to people with experience with LaTex, since the files m
 		4. Afterwards, type <code>./nameOfScript.sh</code> and press enter.
 		5. Wait until the process is done.
 		6. You will find a folder called "Output" inside the Notes folder, with the output file(s).
+		
+Disclaimer
+==========
+The following documents, as well as any other file contained in this repository (like scripts, etc.) are given as is, meaning I take NO RESPONSIBILITY if something happens to your computer, or if the information contained in the documents is not accurate. 
 
