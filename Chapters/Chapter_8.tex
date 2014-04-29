@@ -544,5 +544,15 @@ Sei $f:\mathbb{R}^n\rightarrow\mathbb{R}, C'$. Für jedes $s\in\mathbb{R}$ wird 
  \left( x,y,z\right) &\rightarrow x^2 +y^2 +z^2
  \end{align*}
 dann ist $f^{-1}(s)=$ Sphäre mit Zenter $O$ und Radius $\sqrt{s}$
-\item $f\left( x,y\right) = xy$ ist ein Hyperbolischer Parabolid mit Niveaulinien \missingfigure{page 158, bottom, use minipage} $f:\mathbb{R}^n \rightarrow\mathbb{R}$. Nun sei $x_o\in\Omega$ mit $f\left( x_0\right) = s$, i.e. $x_0 \in f^{-1} (s)$
+\item $f\left( x,y\right) = xy$ ist ein Hyperbolischer Parabolid mit Niveaulinien \missingfigure{page 158, bottom, use minipage} $f:\mathbb{R}^n \rightarrow\mathbb{R}$. Nun sei $x_0\in\Omega$ mit $f\left( x_0\right) = s$, i.e. $x_0 \in f^{-1} (s)$. Sei $\gamma :\lbrack -1,1\rbrack\rightarrow \mathbb{R}^n$ ein diff. kurve durch $x_0$ mit $\gamma\lbrack -1,1\rbrack\subset f^{-1}(s)$, $\gamma (0)=x_0$
+\missingfigure{page 159, middle} 
+Dann gilt $f\left( \gamma (t)\right)=s$, $\forall t\in\lbrack -1,1\rbrack$ und es folgt aus Kettenregel
+\[\begin{array}{l}%Find if there is a better way to do this\frac{d}{{dt}}\left( {f\left( {\gamma (t)} \right)} \right) = \frac{d}{{dt}}(s) = 0\\\hspace{5mm} \Downarrow \\df\left( {\gamma (t)} \right) \cdot \gamma '(t) = 0 =  < \nabla f\left( {\gamma (t)} \right),\gamma '(t) > \end{array}\]
+Insbesondere $0=df\left(\gamma (0)\right)\cdot\gamma'(0)= < \nabla f\left( x_0\right),\gamma'(0) >$ d.h. $\nabla f\left( x_0\right)$ steht senkrecht zur Niveauflache von $f$ durch $x_0$
+\subsubsection*{Beispiel}
+Sei $f(x,y)=\frac{x^2-y^2}{2}$, $x,y\in\mathbb{R}^2$ $$\nabla f(x,y)=(x,-y)$$ Sei $\left( x_0,y_0\right) = (1,-1)$ $$\nabla f(1,-1)=(1,1)\hspace{10mm} \left( \nabla f(1,-1)\right) = \sqrt{2}$$ $$\frac{\nabla f}{\left| \nabla f\right|}(1,-1)=\frac{1}{\sqrt{2}}(1,1)$$
+\item Im Punkt $P$ biegt der Bergweg ab; nach Südosten geht er mit 25\% steigung berg an, nach Süden mit 20\% Gefälle berg ab. Der wanderer im Nebel möchte über die Wiese möglichst rascht zum Gipfel. In welche Richtung muss er gehen und wie steil ist es dorthin?\\
+
+Wir legen die Koordinatensystem so, dass die $x-$Achse nach Osten und die $y-$Achse nach Norden zeigt, und setzen voraus, dass die Höhenfunktion $h$ differenzierbar ist. Wir wollen ihren Gradienten in $P$ $\nabla h(P)$ bestimmen. Noch Voraussetzung hat $h$ die beiden Richtungsableitungen $$dh\left( P\right)\left( v_1\right)=0.25\hspace{10mm}dh\left( P\right)\left(  v_2\right)=-0.2$$ wobei $$v_1=\left( \frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\right)\hspace{10mm}v_2=(0,-1)$$\missingfigure{page 161, top}
+%page 161 top
 \end{enumerate}
