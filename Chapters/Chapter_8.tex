@@ -1,4 +1,4 @@
-\chapter{Differentialrechnung in $\mathbb{R}^n$}
+\chapter{Differentialrechnung in $\mathbb{R}^{\lowercase{n}}$}
 \section{Partielle Ableitungen und Differential}
 Wie kann man die Begriffe der \todo{Missing content?? page 113 top} Differentialrechnung auf Funktionen $f:\Omega \subset \mathbb{R}^n\rightarrow\mathbb{R}$ erweitern?\\
 
@@ -520,7 +520,7 @@ Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\mathbb{R}^n$ folgt die Darst
  \vdots \\
 {\frac{{\partial f}}{{\partial {x^n}}}(x)}
 \end{array}} \right),\forall x \in \Omega \]
-(Oben nehmen wir $\lambda (x): = df(x) = \sum {\frac{{\partial f}}{{\partial {x^i}}}{r^i}{x^i}} $, Bemerkung 8.29, 2.)
+\centerline{(Oben nehmen wir $\lambda (x): = df(x) = \sum {\frac{{\partial f}}{{\partial {x^i}}}{r^i}{x^i}} $, Bemerkung 8.29, 2.)}
 \end{definition}
 \subsubsection*{Satz 8.31}
 Sei $f\in\subset '\left(\Omega\right)$ und $x_0\in\Omega$. Dann gibt $\nabla f\left(x_0\right)$ die Richtung und $\left| \nabla f\left(x_0\right)\right|$ den Betrag des Steilsten Anstiegen von $f$ an der Stelle $x_0$
@@ -547,12 +547,131 @@ dann ist $f^{-1}(s)=$ Sphäre mit Zenter $O$ und Radius $\sqrt{s}$
 \item $f\left( x,y\right) = xy$ ist ein Hyperbolischer Parabolid mit Niveaulinien \missingfigure{page 158, bottom, use minipage} $f:\mathbb{R}^n \rightarrow\mathbb{R}$. Nun sei $x_0\in\Omega$ mit $f\left( x_0\right) = s$, i.e. $x_0 \in f^{-1} (s)$. Sei $\gamma :\lbrack -1,1\rbrack\rightarrow \mathbb{R}^n$ ein diff. kurve durch $x_0$ mit $\gamma\lbrack -1,1\rbrack\subset f^{-1}(s)$, $\gamma (0)=x_0$
 \missingfigure{page 159, middle} 
 Dann gilt $f\left( \gamma (t)\right)=s$, $\forall t\in\lbrack -1,1\rbrack$ und es folgt aus Kettenregel
-\[\begin{array}{l}%Find if there is a better way to do this\frac{d}{{dt}}\left( {f\left( {\gamma (t)} \right)} \right) = \frac{d}{{dt}}(s) = 0\\\hspace{5mm} \Downarrow \\df\left( {\gamma (t)} \right) \cdot \gamma '(t) = 0 =  < \nabla f\left( {\gamma (t)} \right),\gamma '(t) > \end{array}\]
+\[\begin{array}{l}%Find if there is a better way to do this
+\frac{d}{{dt}}\left( {f\left( {\gamma (t)} \right)} \right) = \frac{d}{{dt}}(s) = 0\\
+\hspace{5mm} \Downarrow \\
+df\left( {\gamma (t)} \right) \cdot \gamma '(t) = 0 =  < \nabla f\left( {\gamma (t)} \right),\gamma '(t) > 
+\end{array}\]
 Insbesondere $0=df\left(\gamma (0)\right)\cdot\gamma'(0)= < \nabla f\left( x_0\right),\gamma'(0) >$ d.h. $\nabla f\left( x_0\right)$ steht senkrecht zur Niveauflache von $f$ durch $x_0$
 \subsubsection*{Beispiel}
 Sei $f(x,y)=\frac{x^2-y^2}{2}$, $x,y\in\mathbb{R}^2$ $$\nabla f(x,y)=(x,-y)$$ Sei $\left( x_0,y_0\right) = (1,-1)$ $$\nabla f(1,-1)=(1,1)\hspace{10mm} \left( \nabla f(1,-1)\right) = \sqrt{2}$$ $$\frac{\nabla f}{\left| \nabla f\right|}(1,-1)=\frac{1}{\sqrt{2}}(1,1)$$
 \item Im Punkt $P$ biegt der Bergweg ab; nach Südosten geht er mit 25\% steigung berg an, nach Süden mit 20\% Gefälle berg ab. Der wanderer im Nebel möchte über die Wiese möglichst rascht zum Gipfel. In welche Richtung muss er gehen und wie steil ist es dorthin?\\
 
 Wir legen die Koordinatensystem so, dass die $x-$Achse nach Osten und die $y-$Achse nach Norden zeigt, und setzen voraus, dass die Höhenfunktion $h$ differenzierbar ist. Wir wollen ihren Gradienten in $P$ $\nabla h(P)$ bestimmen. Noch Voraussetzung hat $h$ die beiden Richtungsableitungen $$dh\left( P\right)\left( v_1\right)=0.25\hspace{10mm}dh\left( P\right)\left(  v_2\right)=-0.2$$ wobei $$v_1=\left( \frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\right)\hspace{10mm}v_2=(0,-1)$$\missingfigure{page 161, top}
-%page 161 top
+\begin{align*}
+dh \left( P\right) \left( v_1\right) = &\left( \frac{\partial h}{\partial x}\left(P\right), \frac{\partial h}{\partial y}\left(P\right)\right)\cdot v_1\\
+= & \frac{\partial h}{\partial x}\left(P\right)\frac{1}{\sqrt{2}} +\frac{\partial h}{\partial y}\left( P\right) \left(-\frac{1}{\sqrt{2}}\right) = \frac{1}{4}\\
+dh \left( P\right) \left( v_2\right) = &\left( \frac{\partial h}{\partial x}\left(P\right)\right) (0) - \frac{\partial h}{\partial y}\left(P\right)(-1)=-\frac{1}{5}
+\end{align*}
+Durch Lösen des linearen Gleichungssystem folgen wir: 
+$$\frac{\partial h}{\partial x}\left( P\right) = \frac{\sqrt{2}}{4}+\frac{1}{5}, \frac{\partial h}{\partial y}\left( P\right) = \frac{1}{5}$$
+Die Richtung des Gradients ist somit $$ \nabla h\left( P \right) = \arctan{\frac{\frac{1}{5}}{\frac{\sqrt{2}}{4}+ \frac{1}{5}}}=19.86 degrees$$\todo{add arg at the beginning of the equation using special command, as well as tilde on top of equal sign}
+und die Steigung in diese Richtung ist 
+$$\left| \nabla h\left( P\right) \right| = \sqrt{\left( \frac{\sqrt{2}}{4}+\frac{1}{5}\right)^2 + \left( \frac{1}{5}\right)^2} = 0.59 = 59\%$$ \todo{add tilde on top of second to last equal sign}
+\end{enumerate}
+
+\section{Wegintegrale}
+Wir haben gesehen in Bemerkung 8.29 dass Mittels das übliche SKalarprodukt $<,>$ kann man von $1-$Formen zu Vektorfelder und umgekehrt übergehen. \\
+
+In diesem Kapitel werden wir das ``Wegintegral'' von $1-$Formen oder \todo{can't read, page 162 middle} von Vektorfelder längs eine Kurve studieren. Dazu untersuchen wir zunächst Kurven in $\mathbb{R}^n$
+
+\subsection*{Parameterdarstellung einer Kurve}
+Sei $\gamma\subset\mathbb{R}^n$ eine Kurve. Eine Parameterdarstellung (PD) von $\gamma$ ist eine Funktion 
+\begin{align*}
+\gamma : I=\lbrack a,b\rbrack &\rightarrow\mathbb{R}^n\\
+t &\rightarrow \gamma (t)
+\end{align*}
+wobei $\gamma\left( t\right)$ ein Punkt $\gamma$ ist und jeder Punkt auf $\gamma$ kann als $\gamma\left( t\right)$ dargestellt werden
+$$\gamma\left( t\right) = \left( \gamma_1 (t),\dots,\gamma_n (t)\right)$$
+Die positive Orientierung von $\gamma$ ist die Richtung mit der die Kurve durchgelaufen wird
+\subsubsection*{Besipiel 8.32}
+\begin{enumerate}
+\item $$\gamma (t)=\left( a_1 +b_1 t,a_2 +b_2 t,a_3 +b_3 t\right)\text{, }t\in\mathbb{R}$$
+ist die Parameterdarstellung einer Gerade durch den Punkt $a=\left( a_1,a_2,a_3\right)$ und parallel zum Vektor $\left( b_1,b_2,b_3\right)$
+\missingfigure{page 163, middle}
+\item $\gamma (t)=\left( a\cos t,b\sin t\right)$ ist eine Parameter Darstellung eine Ellipse
+\missingfigure{Page 163, bottom}
+\item $\gamma_1 (t)=\left( a\cos t,b\sin t, ct\right)$, $t\in\lbrack 0,2\pi\rbrack$ ist eine Parameterdarstellung einer elliptische Helix 
+\missingfigure{Page 164 top}
+$\gamma_2 (t)=\left( a\cos t,-b\sin t, c(2\pi -t)\right)$, $t\in\lbrack 0,2\pi\rbrack$ ist Parameterdarstellung der gleichen Kurve wobei die Orientierung umgekehrt ist 
+\missingfigure{page 164, middle}
+Der Tangentenvektor zur Kurve an der Stelle $\gamma (t)$ ist $\gamma' (t)$ $$\gamma'(t)=\left( \gamma_1'(t),\gamma_2'(t),\dots, \gamma_n'(t)\right)$$
+\todo{Do I have to include the example?? page 164 bottom}
+\end{enumerate}
+
+\begin{definition}{8.33}
+Das Wegintegral von $\vartheta$ langs $\gamma$ 
+\[\int\limits_\gamma  {vd\vec s}  = \int\limits_\gamma  {v(\gamma )d\gamma : = \int\limits_a^b { < v\left( {\gamma \left( t \right)} \right),\gamma '(t) > dt} } \] ${vd\vec s}=\gamma'(t)dt$ heisst gerichtetes Längeelement
+\end{definition}
+\subsubsection*{Beispiel 8.34}
+Ein einführendes Beispiel: Sei ein Massenpunkt, der sich unter den Einfluss eines Kraftfeldes $F:\mathbb{R}^2\rightarrow\mathbb{R}$ bewegt.\\
+
+Wenn der Massenpunkt durch eine Konstante Kraft $\overrightarrow F $ längs einer Geraden um den Vektor $\vec s$ verschoben. \\
+
+Die dabei verrichtete Arbeit ist definitionsgemäss das Skalar Produkt aus dem Kraftvektor $\overrightarrow F $ und dem Verschiebungsvektor $\vec s$.
+\missingfigure{Page 166, top}
+
+\noindent\underline{Allgemeinen Fall}\\
+Verschiebungs längs einer Kurve $\gamma$ in einem Kraftfeld $F=\left( P(x,y),Q(x,y)\right)$ 
+\missingfigure{Page 166, bottom}
+$\Delta W= F\cdot \Delta (\gamma)=$ Kraftkomponente entlang des Weges mal züruckgelagter weg. \\
+
+Da sich Betrag und Richtung der Kraft sowie der jeweilige Winkel zum Weg vom Punkt zu Punkt ändern, gilt das zur Berechnung notwendige Skalarprodukt näherungsweise jeweils nur für ein Wegelement $\overrightarrow\Delta r$. Die Berechnung der Arbeit erfolgt daher in folgender Weise. 
+\begin{enumerate}[\indent a)]
+\item Zerlegung des Weges in Teilabschnitte $$\Delta \gamma_1=\gamma (t_{i+1})-\gamma(t_i)=\frac{\Delta \gamma}{\Delta t}\cdot \Delta t$$
+\item Ermittlung der Arbeit \todo{can't read, page 167 middle} Kraft: \[F\left( {\gamma \left( {{t_i}} \right)} \right) = F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right)\]
+\item Berechnen der Arbeit je Teilabschnitt-Skalarprodukt \[\Delta {W_i} = F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right) \cdot \Delta {\gamma _i}\]
+\item Aufsummeren der Teil-Arbeit \[W \approx \sum {\Delta {W_i} = \sum {F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right)} }  \cdot \underbrace {\Delta \gamma }_{\frac{{\Delta \gamma }}{{\Delta t}} \cdot \Delta t}\]
+\item Durch Verkleinerung des Wegelementes enthält man den exakten Wert der geleisteten Arbeit
+\begin{align*}
+W = &\int\limits_a^b {F\left( {\gamma \left( t \right)} \right)}  \cdot \gamma '\left( t \right)dt\\
+ = &\int\limits_a^b { < F\left( {\gamma \left( t \right)} \right)} ,\gamma '\left( t \right) > dt
+\end{align*}
+\end{enumerate} 
+\subsubsection*{Bemerkung 8.35}
+Wir können das Wegintegral auch mit Differentialformen formulieren. Sei 
+\begin{align*}
+v:\Omega &\rightarrow\mathbb{R}^n\\
+x &\rightarrow\left( v^i(x)\right)_{i=1}^n
+\end{align*}
+ein stetiges Vektorfeld ($v^i(x):\mathbb{R}^n\rightarrow\mathbb{R}$ stetig) dann ist durch $\lambda (x)(\omega):=< v(x),\omega >$ definierte $\lambda (x)\in L\left( \mathbb{R}^n,\mathbb{R}\right)$ eine $1-$Form
+\begin{align*}
+\int\limits_\gamma  {vd\vec s}  = &\int\limits_a^b { < v\left( {\gamma (t)} \right),\gamma '(t) > dt}\\
+ = &\int\limits_a^b {\lambda \left( {\gamma \left( t \right)} \right)\left( {\gamma '\left( t \right)} \right)dt} 
+\end{align*}
+
+\noindent\underline{Umgekehrt}\\
+
+\noindent Sei $\lambda :\Omega\rightarrow L\left( \mathbb{R}^n,\mathbb{R}\right)$ eine $1-$Form die in Folgende Sinne stetig ist: \\
+
+Sei 
+\begin{align*}
+\gamma :\lbrack a,b\rbrack &\rightarrow\Omega\\
+t &\rightarrow\left( \gamma^1 (t), \gamma^2 (t),\dots ,\gamma^n (t) \right)
+\end{align*}
+ein $C'-$weg. Dann ist 
+\begin{align*}
+\lbrack a,b\rbrack \rightarrow &\mathbb{R}\\
+t\rightarrow &\lambda\left( \gamma (t)\right)\left( \gamma' (t)\right)\\
+& = \sum{\lambda_i\left(\gamma(t)\right)\cdot\frac{d\gamma^i}{dt}(t)}
+\end{align*}
+eine Stetige Funktion somit ist das Integral $\int\limits_a^b {\lambda \left( {\gamma \left( t \right)} \right)\left( {\gamma '\left( t \right)} \right)dt} $ wohl definiert. 
+
+\begin{definition}{8.36}
+Das Wegintegral von $\gamma\in L\left( \mathbb{R}^n,\mathbb{R}\right)$ längs $\gamma$ ist \[\int\limits_\gamma  \lambda  : = \int\limits_a^b {\lambda \left( {\gamma (t)} \right)\left( {\gamma '(t)} \right)dt} \]
+\end{definition}
+
+\subsubsection*{Beispiel 8.37}
+\begin{enumerate}
+\item Sei $\gamma\in C'\left(\lbrack 0,2\pi\rbrack =\mathbb{R}^2\right)$ mit 
+\[\begin{array}{*{20}{c}}{\gamma (t) = \left( {\begin{array}{*{20}{c}}{\cos t}\\{\sin t}\end{array}} \right)}&{}\\{}&{0 \le t \le 2\pi }\\{\gamma '(t) = \left( {\begin{array}{*{20}{c}}{ - \sin t}\\{\cos t}\end{array}} \right)}&{}\end{array}\]
+eine Parametrisierung des Einheitskreises $\lambda = \lambda (x,y)$ die $1-$Form mit $$\lambda (x,y)=-ydx+xdy\hspace{10mm}(x,y)\in\mathbb{R}^2$$
+Dann gilt 
+\begin{align*}
+\int\limits_\gamma  \lambda   = &\int\limits_0^{2\pi } {\underbrace {\left( { - \sin t,\cos t} \right)}_{\lambda (\gamma (t))} \cdot \underbrace {\left( {\begin{array}{*{20}{c}}{ - \sin t}\\{\cos t}\end{array}} \right)}_{\gamma '(t)}dt} \\
+= &\int\limits_0^{2\pi } {\left( {{{\sin }^2}t + {{\cos }^2}t} \right)dt}  = 2\pi 
+\end{align*}
+%page 170, very top (continue list at number 2)
+
+
 \end{enumerate}
