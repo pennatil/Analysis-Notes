@@ -5,6 +5,7 @@
 \input{../Others/Packages.tex}
 \input{../Others/CustomEnvironments.tex}
 \ifx\conditionmacro\undefined
+%========================================== BEGIN PART 1========================================
   \immediate\write18{%
     pdflatex --jobname="\jobname1"
     "\gdef\string\conditionmacro{1}\string\input\space\jobname"
@@ -37,7 +38,7 @@
     pdflatex --jobname="\jobname8"
     "\gdef\string\conditionmacro{8}\string\input\space\jobname"
   }%
-
+%========================================== END PART 1========================================
   \expandafter\stop
 \fi
 
@@ -63,7 +64,7 @@
 
 \begin{document}
 \mainmatter
-%generate Chapter 1
+%========================================== BEGIN PART 2========================================
 \ifnum\conditionmacro=1 
 \setcounter{chapter}{0}
 \input{../Chapters/Chapter_1.tex}
@@ -103,4 +104,6 @@
 \setcounter{chapter}{7}
 \input{../Chapters/Chapter_8.tex}
 \fi
+
+%========================================== END PART 1========================================
 \end{document}
