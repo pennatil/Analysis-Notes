@@ -671,7 +671,158 @@ Dann gilt
 \int\limits_\gamma  \lambda   = &\int\limits_0^{2\pi } {\underbrace {\left( { - \sin t,\cos t} \right)}_{\lambda (\gamma (t))} \cdot \underbrace {\left( {\begin{array}{*{20}{c}}{ - \sin t}\\{\cos t}\end{array}} \right)}_{\gamma '(t)}dt} \\
 = &\int\limits_0^{2\pi } {\left( {{{\sin }^2}t + {{\cos }^2}t} \right)dt}  = 2\pi 
 \end{align*}
-%page 170, very top (continue list at number 2)
+\item Sei $\gamma (x,y)=3x^2ydx + \left( x^3+1\right)dy$. Wir betrachten die Kurvenintegral längs verschiederer Wege
+\missingfigure{page 170 top, add formulas as well using a minipage}
+\begin{align*}
+&\int\limits_{{\gamma _1}} \lambda   = \int {3{x^2}ydx + \left( {{x^3} + 1} \right)dy}  = \int\limits_0^1 {\left( {3{t^3} + \left( {{t^3} + 1} \right)} \right)dt = 2}\\
+&\int\limits_\gamma  \lambda   = \int\limits_0^1 {\left( {3{t^4} + \left( {{t^3} + 1} \right) \cdot 2t} \right)dt = 2}  
+\end{align*}
+\subsubsection*{Bemerkung}\todo{is  this inside the enumerated list or out?? page 170 bottom}
+Sei $f(x,y)=x^3y+y$. Dann ist  $$df(x+y)=3x^2ydx+\left( x^3+1\right) dy$$ und $$f(1,1)-f(0,0)=(1+1)-(0,0)=2$$
+Wir können der Begriff des Wegintegrals auf Wege zu erweitern die Stückweise $C'$ sind. Ein Stückweise $C'-$Weg ist eine Stetige Abbildung $\gamma :\lbrack a,b\rbrack\rightarrow\mathbb{R}^n$ mit einer Unterteilung des Intervals 
+$$a=a_0 < a_1 < a_2 < \dots <a_n = b$$ 
+so dass \[{\left. \gamma  \right|_{\left[ {{a_i},{a_{i + 1}}} \right]}} = \left[ {{a_i},{a_{i + 1}}} \right] \to \mathbb{R}^n \] $C'$ ist.\\
 
-
+\noindent d.h. $t\rightarrow\gamma'(t)$ ist auf $\left( a_i, a_{i+1}\right)$ stetig und erweitert sich stetig auf $\lbrack a_i, a_{i+1}\rbrack$
+\subsubsection*{Beispiel}\todo{is  this inside the enumerated list or out?? page 171 middle}
+\missingfigure{Page 171 bottom}
+Dann definiert man
+\[\int\limits_\gamma  \lambda  : = \sum\limits_{t = 0}^{n - 1} {\int\limits_{{{\left. \gamma  \right|}_{\left[ {{a_i},{a_{i + 1}}} \right]}}} \lambda  } \]
+Jetzt werden wir einzige Grundlegenden Eigenschaften des Wegintegrals herleiten. 
 \end{enumerate}
+
+\subsubsection*{Satz 8.38}
+Eigenschaften des Wegintegrals
+\begin{enumerate}[\indent E1)]
+\item Das Wegintegral $\int\limits_\gamma  \lambda  $ ist unabhängig von einer orientierungsverhaltenden umparametrisierung. \\
+D.h. Sei $\gamma :\lbrack a,b\rbrack\rightarrow\Omega$, $C'$ und $\varphi :\lbrack a',b'\rbrack\rightarrow\lbrack a,b\rbrack$, $C'$ mit $\varphi\left( a'\right)=a$, $\varphi\left( b'\right)=b$, $\varphi'\left( t\right) >0$ $\forall t\in\lbrack a', b'\rbrack$. Dann ist 
+\begin{align*}
+\int\limits_{\gamma  \circ \varphi } \lambda   = &\int\limits_{a'}^{b'} {\lambda \left( {\gamma \left( {\varphi (t)} \right)} \right)\left( {\gamma  \circ \varphi } \right)'(t)dt} \\
+ = &\int\limits_{a'}^{b'} {\lambda \left( {\gamma \left( {\varphi (t)} \right)} \right)\gamma '\left( {\varphi (t)} \right)\varphi '(t)dt} \\
+ = &\int\limits_a^b {\lambda \left( {\gamma \left( s \right)} \right)\gamma '\left( s \right)ds = \int\limits_\gamma  \lambda  } 
+\end{align*}
+Geometrisch heisst dies, dass $\int\limits_\gamma  \lambda$ nur vom Bild $\gamma\left( \lbrack a,b\rbrack\right)$ mit vorgegebenen Durchlaufsinn abhängt
+\item Seien $\gamma_1:\lbrack a_1,b_1\rbrack\rightarrow\Omega$ und $\gamma_2:\lbrack a_2,b_2\rbrack\rightarrow\Omega$ zwei Wege mit $\gamma_1\left( b_1\right)=\gamma_2\left(a_2\right)$ 
+\missingfigure{Page 173, middle to top}
+Wir definieren $\gamma_1+\gamma_2$ der Weg der durch aneinanderhängen von $\gamma_1$ mit $\gamma_2$ entsteht, d.h.
+\[{\gamma _1} + {\gamma _2} = \left\{ {\begin{array}{*{20}{c}}{{\gamma _1}(t)}&{t \in \left[ {{a_1},{b_1}} \right]}\\{{\gamma _2}\left( {t - {b_1} + {a_2}} \right)}&{t \in \left[ {{b_1},{b_1} + {b_2} - {a_2}} \right]}\end{array}} \right.\]
+Dann gilt \[\int\limits_{{\gamma _1} + {\gamma _2}} \lambda   = \int\limits_{{\gamma _1}} \lambda   + \int\limits_{{\gamma _2}} \lambda  \]
+\item Sei $\gamma:\lbrack a,b\rbrack\rightarrow\Omega$ ein Weg. Dann sei $-\gamma:\lbrack a,b\rbrack\rightarrow\Omega$ der Gleiche Weg aber im entgegengesetzen Durchlaufsinn, d.h. $\left( -\gamma\right) (t)=\gamma\left( -t+a+b\right)$ 
+\missingfigure{page 174, middle to top}
+Dann gilt \[\int\limits_{ - \gamma } \lambda   =  - \int\limits_\gamma  \lambda  \]
+\item Sei $f:\Omega\rightarrow\mathbb{R}$ eine $C'-$Funktion, sowie $\gamma:\lbrack a,b\rbrack\rightarrow\Omega$ Stückweise $C'$. Dann gilt \[\int\limits_\gamma  {df}  = f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)\]
+$\gamma$ ist $C'$, dann ist 
+\begin{align*}
+\int\limits_\gamma  {df}  = & \int\limits_a^b {df\left( {\gamma \left( t \right)} \right)\gamma '\left( t \right)dt} \\
+\mathop  = & \int\limits_a^b {\frac{d}{{dt}}\left( {f \circ \gamma } \right)\left( t \right)dt}\\ 
+ = &\left( {f \circ \gamma } \right)\left( b \right) - \left( {f \circ \gamma } \right)\left( a \right)\\
+ = & f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)
+\end{align*}
+Mittels den Wegintegrals können wir die $C'-$Funktionen charakterisieren deren Differentialverschwinden.
+\end{enumerate}
+
+\subsubsection*{Satz 8.39}
+Sei $\Omega$ ``Offen'' und \todo{Can't read, page 175 middle} $\left( C'-\right)$Wegzusammenhängend. Sei $f\in C'\left(\Omega\right)$ falls $df(x)=0$, $\forall x\in\Omega$ so ist $f$ konstant.
+\subsubsection*{Beweis}
+$\Omega$ wegzusammenhängend heisst dass zu je zwei Punkten $x,y\in\Omega$ gibt es in $C'-$Weg $\gamma :\lbrack 0,1\rbrack\rightarrow\gamma$ mit $\gamma(0)=x$ und $\gamma(1)=y$, $\gamma\left(\lbrack 0,1\rbrack\right)\subset\Omega$. Dann folgt
+\begin{align*}
+f(y)-f(x)=& f\left(\gamma(1)\right)-f\left(\gamma(0)\right)\\
+= &\int\limits_{\gamma} df = 0
+\end{align*}
+$\Rightarrow f(y)=f(x)$, $\forall x,y\in\Omega\Rightarrow f$ ist konstant.\\
+
+\noindent\underline{Frage:} Wann ist eine $1-$Form $\lambda$, von der form $\lambda = df$, d.h. differential einer Funktion? d.h. gegeben eine $1-$Form $\lambda$, gibt es eine Funktion $f:\Omega\rightarrow\mathbb{R}$ s.d. $df=\lambda$\\
+
+Wenn ein $f:\Omega\rightarrow\mathbb{R}$ gibt so dass $df=\lambda$, heisst $f$ ein Potential. (Potential ist wie ein Stammfunktion für ein $1-$Form). Mittels Wegintegral,stellen wir jetzt ein Kriterium
+
+\subsubsection*{Satz 8.30}
+Sei $\lambda\in\Omega\rightarrow L\left( \mathbb{R}^n,\mathbb{R}\right)$ eine Stetige $1-$Form. Folgende Aussage sind äquivalent
+\begin{enumerate}
+\item Es gibt $f\in C'\left( \Omega\right)$ mit $df=\Omega$
+\item Für je zwei Stückweise $C'-$Wege $\gamma_i=\lbrack a_i,b_i\rbrack\rightarrow\Omega$ mit selben Anfangs und Endpunkten (d.h. $\gamma_1\left( a_1\right)=\gamma_2\left(a_2\right)$, $\gamma_1\left( b_1\right)=\gamma_2\left(b_2\right)$) gilt \[\int\limits_{{\gamma _1}} \lambda   = \int\limits_{{\gamma _2}} \lambda  \]
+\item Für jede geschlossene $C'$Weg $\gamma$ gilt \[\int\limits_\gamma  \lambda   = 0\]
+\end{enumerate} 
+
+\subsubsection*{Beweis} \todo{FIX: indentation is wrong, try to fix it}
+\begin{enumerate}
+\item[$(1)\Rightarrow (2)$:] Folgt aus E4) 
+\item[$(2)\Leftrightarrow (3)$:] Klar
+\item[$(2)\Rightarrow (1)$:] Sei $p_0\in\Omega$; für jedes $x\in\Omega$. Sei $\gamma:\lbrack 0,1\rbrack\rightarrow\Omega$ Stückweise $C'$ mit $\gamma(0)=p_0$, $\gamma(1)=x$. Definiere $f(x): = \int\limits_\gamma  \lambda $.\\
+
+Dann ist $f$ nach Annahme (2) Wohldefiniert (d.h. unabhängig von dem Weg von $p_0$ nach $x$) (Wir können $f$ auch mit $\int\limits_{{p_0}}^x \lambda  $ bezeichnen)
+\end{enumerate}
+
+\subsubsection*{Behauptung}
+$f\in C'\left( \Omega\right)$ und $df=\lambda$. Um zu zeigen dass $df=\lambda$ müssen wir zeigen dass für $x,x_0\in\Omega$
+$$f\left(x\right)-f\left(x_0\right)=\lambda\left(x_0\right)\left( x-x_0\right)+R\left( x,x_0\right)$$ mit $\frac{R\left( x,x_0\right)}{\left| x-x_0\right|}\rightarrow 0$.\\
+
+\noindent Sei $x_0\in\mathbb{R}$. Sei $\gamma_1:\lbrack -1,0\rbrack\rightarrow\Omega$ ein Weg von $p_0$ nach $x_0$. Dann gilt \[\int\limits_{{\gamma _1}} \lambda   = f\left( {{x_0}} \right)\]
+Sei
+\begin{align*}
+\gamma_x:\lbrack 0,1\rbrack &\rightarrow\Omega\\
+t &\rightarrow (1-t)x_0+tx
+\end{align*}
+\missingfigure{Page 178 bottom}
+Um $\gamma^x\left( \lbrack 0,1\rbrack\right)\subset\Omega$ zu garantieren, nehmen wir $r>0$ so dass $B_r\left( x_0\right)\subset\Omega$ und nehmen an, dass $x\in B_r\left( x_0\right)$. Dann ist
+\[f(x) = \int\limits_{{\gamma _1} + {\gamma _x}} \lambda   = \int\limits_{{\gamma _1}} \lambda   + \int\limits_{{\gamma _x}} \lambda   = f\left( {{x_0}} \right) + \int\limits_{{\gamma ^x}} \lambda  \]
+Nun ist
+\begin{align*}
+\int\limits_{{\gamma ^x}} \lambda   = &\int\limits_0^1 {\lambda \left( {{\gamma _x}\left( t \right)} \right){\gamma _x}'\left( t \right)} dt\\
+ = &\int\limits_0^1 {\lambda \left( {{\gamma _x}\left( t \right)} \right)\left( {x - {x_0}} \right)} dt\\
+ = &\lambda \left( {{x_0}} \right)\left( {x - {x_0}} \right) + \int\limits_0^1 {\left( {\lambda \left( {{\gamma ^x}\left( t \right)} \right) - \lambda \left( {{x_0}} \right)} \right)\left( {x - {x_0}} \right)dt} 
+\end{align*}
+
+Sei $\lambda  = \sum {{\lambda ^i}d{x^i}} $ dann ist obigen Integral gleich 
+\begin{align*}
+&\sum {\int\limits_0^1 {\left[ {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right]\left( {{x^i} - x_0^i} \right)dt} }\\
+ \le &\sum {{{\left( {\int\limits_0^1 {{{\left[ {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right]}^2}} } \right)}^{\frac{1}{2}}}} \left| {x - {x_0}} \right| 
+\end{align*}
+Also $f\left( x \right) - f\left( {{x_0}} \right) = \lambda \left( {{x_0}} \right)\left( {x - {x_0}} \right) + R\left( {x,{x_0}} \right)$, wobei 
+\[\frac{{R\left( {x - {x_0}} \right)}}{{\left| {x - {x_0}} \right|}} \le {\left( {\sum\limits_{i = 1}^n {{{\left( {\int\limits_0^1 {\left( {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right)dt} } \right)}^2}} } \right)^{\frac{1}{2}}}\]
+Aus stetigkeit der \todo{Can't read, page 179 bottom} folgt das
+\[\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} \to 0\]
+
+\subsubsection*{Beispiel 8.31}
+\begin{enumerate}
+\item Sei $\lambda = 2xy^2dx+2x^2ydy$. \\
+
+\noindent\underline{Ansatz:} $$f\left(x,y\right)=\int\limits_{\gamma_{\left( x,y\right)}}\lambda$$
+wobei $\gamma_{\left( x,y\right)}\left(t\right)=\left(t_x,t_y\right)$, $t\in\left( 0,1\right)$. Dann ist
+ 
+\begin{align*}
+\int\limits_\gamma  \lambda   = &\int\limits_0^1 {\lambda \left( {tx,ty} \right)\left( {x,y} \right)dt} \\
+= &\int\limits_0^1 {\left[ {2\left( {tx} \right){{\left( {ty} \right)}^2} \cdot x + 2{{\left( {tx} \right)}^2}\left( {ty} \right) \cdot y} \right]dt} \\
+= & 4{x^2}{y^2}\int\limits_0^1 {{t^3}} dt = {x^2}{y^2}
+\end{align*}
+und $df\left( x,y\right)=2xy^2dx+2x^2ydy$.\\
+
+\noindent\underline{Oder:} Ansatz: 
+$$df:\lambda \Rightarrow\frac{\partial f}{\partial x}=  2xy^2, \frac{\partial f}{\partial y}=  2x^2y$$
+$$\Rightarrow \frac{\partial f}{\partial x}=2xy^2 \Rightarrow f\left( x,y \right) = \int 2xy^2 dx =  x^2y^2+C\left( y\right)$$
+$$\Rightarrow\frac{\partial f}{\partial y}=2x^2y+\frac{d}{dy}C\left(y\right)=2x^2y \Rightarrow \frac{d}{dy}C\left( y\right) =  0 \Rightarrow C\left( y\right) = \text{ Konstant}$$
+$$\Rightarrow f\left( x,y\right)=  x^2y^2+C$$
+\end{enumerate}\todo{Where is number 2?? page 180}
+Analog wie für $1-$Formen kann man Satz 8.30 für Vektorfelder Formulieren
+
+\begin{definition}{8.32}
+Ein Vektorfeld $v:\Omega\rightarrow\mathbb{R}^n$ heisst konservative falls $\forall\gamma:\lbrack 0,1\rbrack\rightarrow\Omega$ geschlossen $$\int\limits_\gamma v ds=0$$
+\end{definition}
+Aus Satz 8.30 Folgt
+\subsubsection*{Satz 8.33}
+Für eine Stetige Vektorfeld $v:\Omega\rightarrow\mathbb{R}^n$ sind folgende Aussagen equivalent
+\begin{enumerate}
+\item $v$ ist Konservative
+\item Es gibt $f\in C'\left( \Omega\right)$ mit $v=\nabla f$. In diesem Fall heisst $v$ Potentialfeld mit dem Potential $f$.
+\end{enumerate}
+
+Im Nächsten Kapitel, mittels höhere Partielle Ableitungen, erhalten wir eine einfach zu \todo{can't understand, page 182 top} notwendige Bedingung für ein Konservatives Vektorfeld. Wir werden sehen dass
+\[v = {\left( {{v^i}} \right)_{1 \le i \le n}} \in C'\left( {\Omega ,\mathbb{R}^n} \right)\text{ konservative }\]
+$$\Rightarrow \frac{\partial v^i}{\partial x^j}=\frac{\partial v^j}{\partial x^i}\hspace{5mm}1\leq i,j\leq n$$
+
+\section{Höhere Ableitungen}
+\begin{definition}{8.44}
+$f:\Omega\rightarrow\mathbb{R}$, $\Omega\subset\mathbb{R}^n$ $f\in C'\left( \Omega\right)$ heisst von Klasse $C^2$ falls $\frac{\partial f}{\partial x^i}\in C'{\left( \Omega\right)}_{1\leq i\leq n}$
+\end{definition}\todo{Where does the definition end? page 183 top}
+Für beliebiges $m$, die Funktion $f\in C'\left( \omega\right)$ heisst von der Klasse $C^m$, $f\in C^m\left( \omega\right)$ falls $\frac{\partial f}{\partial x^i}\in C^{m-1}\left( \Omega\right)$, $1\leq i\leq n$\\
+
+%page 183, middle
