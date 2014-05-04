@@ -5,6 +5,20 @@ do
    pdflatex --shell-escape mainMult.tex
 done
 rm -f *.out *.log *.aux
+
+
+#Activate them individually once a certain file is final!
+mkdir -p "../Final Documents"
+# cp mainMult1.pdf "../Final Documents/Kapitel 1 - Logik und Unterlagen - Analysis I.pdf"
+# cp mainMult2.pdf "../Final Documents/Kapitel 2 - Reele Zahlen, Euklidische Raeume und Komplexe Zahlen - Analysis I.pdf"
+# cp mainMult3.pdf "../Final Documents/Kapitel 3 - Folgen und Reihen (Der Limes Begriff) - Analysis I.pdf"
+# cp mainMult4.pdf "../Final Documents/Kapitel 4 - Chapter 4 - Analysis I.pdf"
+# cp mainMult5.pdf "../Final Documents/Kapitel 5 - Chapter 5 - Analysis I.pdf"
+cp mainMult6.pdf "../Final Documents/Kapitel 6 - Integration - Analysis II.pdf"
+# cp mainMult7.pdf "../Final Documents/Kapitel 7 - Gewoehnliche Differenzialgleichungen - Analysis II.pdf"
+# cp mainMult8.pdf "../Final Documents/Kapitel 8 - Differenzialrechnung in R^n - Analysis II.pdf"
+
+
 mkdir -p "../Output"
 mv mainMult1.pdf "../Output/Kapitel 1 - Logik und Unterlagen - Analysis I.pdf"
 mv mainMult2.pdf "../Output/Kapitel 2 - Reele Zahlen, Euklidische Raeume und Komplexe Zahlen - Analysis I.pdf"

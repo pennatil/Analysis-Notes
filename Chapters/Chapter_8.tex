@@ -743,8 +743,8 @@ Sei $\lambda\in\Omega\rightarrow L\left( \mathbb{R}^n,\mathbb{R}\right)$ eine St
 \item Für jede geschlossene $C'$Weg $\gamma$ gilt \[\int\limits_\gamma  \lambda   = 0\]
 \end{enumerate} 
 
-\subsubsection*{Beweis} \todo{FIX: indentation is wrong, try to fix it}
-\begin{enumerate}
+\subsubsection*{Beweis}
+\begin{enumerate}[align=left]
 \item[$(1)\Rightarrow (2)$:] Folgt aus E4) 
 \item[$(2)\Leftrightarrow (3)$:] Klar
 \item[$(2)\Rightarrow (1)$:] Sei $p_0\in\Omega$; für jedes $x\in\Omega$. Sei $\gamma:\lbrack 0,1\rbrack\rightarrow\Omega$ Stückweise $C'$ mit $\gamma(0)=p_0$, $\gamma(1)=x$. Definiere $f(x): = \int\limits_\gamma  \lambda $.\\
@@ -825,4 +825,35 @@ $f:\Omega\rightarrow\mathbb{R}$, $\Omega\subset\mathbb{R}^n$ $f\in C'\left( \Ome
 \end{definition}\todo{Where does the definition end? page 183 top}
 Für beliebiges $m$, die Funktion $f\in C'\left( \omega\right)$ heisst von der Klasse $C^m$, $f\in C^m\left( \omega\right)$ falls $\frac{\partial f}{\partial x^i}\in C^{m-1}\left( \Omega\right)$, $1\leq i\leq n$\\
 
-%page 183, middle
+Für eine $f\in C^2\left( \Omega\right)$, die Funktionen \[\frac{{{\partial ^2}f}}{{\partial {x^i}\partial {x^j}}}: = \frac{\partial }{{\partial {x^i}}}\left( {\frac{{\partial f}}{{\partial {x^j}}}} \right)\] heissen die zweiten partiellen Ableitungen von $f$.\\
+
+Analog definiert man die $m-$ten partielle Ableitungen von $f$ oder partielle Ableitungen vom Grad $m$ für jedes $m>0$ (Für $f\in C^m \left(\Omega\right)$)
+
+\subsubsection*{Satz 8.45}
+Sei $f\in C^2\left(\Omega\right)$. Dann gilt
+\begin{align*}
+\frac{{{\partial ^2}f}}{{\partial {x^i}\partial {x^j}}} = &\frac{\partial }{{\partial {x^i}}}\left( {\frac{{\partial f}}{{\partial {x^j}}}} \right)\\
+ = &\frac{\partial }{{\partial {x^j}}}\left( {\frac{\partial }{{\partial {x^i}}}f} \right) = \frac{{{\partial ^2}f}}{{\partial {x^j}{x^i}}}
+\end{align*}
+Im Allgemein
+\subsubsection*{Satz 8.46}
+Für jede $C^k-$Funktion sind alle Partielle Ableitungen vom Grad $\leq k$ von der Reihenfolge der Ableitungen unabhängig. Von Satz 8.35 erhalten wir folgende notwendige Bedingung für konservativität
+
+\subsubsection*{Korollar 8.47}
+Sei $v:\Omega\rightarrow\mathbb{R}^n$, $v={\left( v^i\right)}_{1\leq i \leq n}$ ein $C'-$Vektorfeld. Falls $v$ konservativ ist, folgt 
+\[\frac{{\partial {v^i}}}{{\partial {x^j}}} = \frac{{\partial {v^j}}}{{\partial {x^i}}}\hspace{5mm}1 \le i,j \le n\]
+
+\subsubsection*{Beweis}
+Nach voraussetzung gibt es $f\in C'\left( \Omega\right)$ mit $v^i(x)=\frac{\partial f}{\partial x^i}$. Da nun $v^i \in C'$, $1\leq i\leq n$ folgt $f\in C^2\left( \Omega\right)$. Woraus 
+\[\frac{{\partial {v^i}}}{{\partial {x^j}}} = \frac{\partial }{{\partial {x^j}}}\left( {\frac{{\partial f}}{{\partial {x^i}}}} \right) = \frac{\partial }{{\partial {x^i}}}\left( {\frac{{\partial f}}{{\partial {x^j}}}} \right) = \frac{\partial }{{\partial {x^i}}}{v^j}\]
+folgt. 
+
+\subsubsection*{Beispiel 8.48}
+\begin{enumerate}
+\item \[v\left( {x,y} \right) = \left( {\begin{array}{*{20}{c}}{4x{y^2}}\\{2y}\end{array}} \right)\]
+Es gilt %page 185 bottom
+\end{enumerate}
+
+
+
+

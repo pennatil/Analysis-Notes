@@ -6,6 +6,12 @@ do
 done
 
 rm -f *.out *.log *.aux *.toc
+
+#Activate these lines once the document is final!
+# mkdir -p "../Final Documents"
+# cp main.pdf "../Final\ Documents/Notizien - Analysis I&II.pdf"
+
+
 mkdir -p "../Output"
 mv main.pdf "../Output/Notizien - Analysis I&II.pdf"
 { # your 'try' block
