@@ -1,6 +1,15 @@
 Analysis I/II Notes
 ===================
-This repo contains all the handwritten notes from Professor Imamoglu's Analysis I/II class for CS at ETHZ. 
+This repo contains all the handwritten notes from Professor Imamoglu's Analysis I/II class for CS at ETHZ. Although this page should clarify most of your doubts, you can <a href="mailto:pennatil@student.ethz.ch">email me</a> and I will try to help you. Please avoid questions regarding LaTex (installation, usage, can't compile) as the sections below are pretty self explanatory. 
+
+If you wish to help, there are a few things left to complete. Also, take a look at the [Contributing](#Contributing) section below.
+
+TODO:
+* Spell check chapters that are done
+* Finish chapters 3 through 5
+* Continue new chapters as new material comes in
+* Type up the Tipps from both semester (find source material)
+* Be done by the end of the current Semester
 
 <a name="Getting the material"></a>
 Getting the material
@@ -17,6 +26,8 @@ In order to get the material, there are two ways:
   4. Get the files you need
 * Typeset (Build) it yourself from source. Take a look at the [Building](#Building) section
 
+New PDFs are generated on an (almost) daily basis, so if you are not familiar with LaTex, just get the files from the "Output" folder.
+
 <a name="Contributing"></a>
 Contributing
 ============
@@ -31,7 +42,7 @@ Since these documents are still a very early version, they might contain a few (
 	 		 * Title: Chapter + Page Number
 	 		 * Message: Issue found, plus the eventual correction(s)
 	 		 * Tag: Add a tag that best classifies the issue
-	 	   (If you are not sure, take a look at the sample!)
+	 		 * If you are not sure, take a look at the sample here [here](https://github.com/pennatil/Analysis-Notes/issues/4)
 		4. Post the issue, it will be corrected ASAP.
 	* If you are familiar with Latex and GitHub:
 		1. Fork the repo. Help [here](https://help.github.com/articles/fork-a-repo)
