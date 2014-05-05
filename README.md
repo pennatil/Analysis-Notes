@@ -8,12 +8,14 @@ Getting the material
 
 In order to get the material, there are two ways:
 
-* Get a .zip file, containing all of the notes. This version might not be as up to date as the source files, but it is usually corrected and checked. Use this option of you are not familiar with LaTex or GitHub
+* Get a .zip file, containing all of the notes, as well as the source files. This package contains Final chapters, as well as those that are in progress. 
   1. Download the .zip archive [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip)
   2. Unzip it, you will find a folder named "Notes", open it
-  3. Find a folder named "Output"
+  3. There are two folders you have to pay attention to:
+  	* Final chapters: Those files that are complete and final, are saved here.  
+	* Output: Everything is included in here, as well as incomplete files. 
   4. Get the files you need
-* Typeset (Build) it yourself from source. This is in order to have the latest version available (like bleeding edge)**(WARNING: MIGHT CONTAIN ERRORS IN THE TEXT)**. Take a look at the [Building](#Building) section
+* Typeset (Build) it yourself from source. Take a look at the [Building](#Building) section
 
 <a name="Contributing"></a>
 Contributing
@@ -24,30 +26,31 @@ Since these documents are still a very early version, they might contain a few (
 1. Correct mistakes you find in the notes
     * If you have no experience with LaTex or GitHub:
     	1. Make sure you have a GitHub account, otherwise create one [here](https://github.com/join). Please use the same name as your ETHZ account, makes my life much easier if I have to contact you.
-		2. On the right side of this page, click on the "Issues" tab
+		2. On the right side of this page, click on the ["Issues"](https://github.com/pennatil/Analysis-Notes/issues) tab
 		3. Check if no one else has posted the same Issue. If no one has, open a new issue, stating:
-	 		 * Chapter + Page Number
-	 		 * Issue found, plus the eventual correction(s)
+	 		 * Title: Chapter + Page Number
+	 		 * Message: Issue found, plus the eventual correction(s)
 	 		 * Tag: Add a tag that best classifies the issue
+	 	   (If you are not sure, take a look at the sample!)
 		4. Post the issue, it will be corrected ASAP.
 	* If you are familiar with Latex and GitHub:
 		1. Fork the repo. Help [here](https://help.github.com/articles/fork-a-repo)
 		2. Make the changes, and commit them to your forked repo. Make sure to add detailed comments explaining what you changed, makes my life a lot easier when merging!
 		3. Once you are done, request a Merge. Help [here](https://help.github.com/articles/using-pull-requests)
-2. Type up what's left of the notes
-	* Only for people familiar with LaTex and GitHub. In this case, <a href="mailto:pennatil@student.ethz.ch?subject=I%20want%20to%20help!">contact me</a>.
+2. Type up what's left of the notes. 
+	* Only for people familiar with LaTex and GitHub. Please, do not start typing away, <a href="mailto:pennatil@student.ethz.ch?subject=I%20want%20to%20help!">email me</a> first so that we can avoid two people doing the same work.
 
 I will not take into consideration emails containing corrections. Please use the "Issues" tab so to keep track of every change.
 
 <a name="Building"></a>
 Building
 ========
-This is only recommended to people with experience with LaTex, since the files might still contain bugs and errors that have to be ironed out. I will not answer emails asking for help if the files do not build! If you are not sure, just use the PDFs inside the .zip archive (Take a look at [Getting the material](#Getting the material)).
+This is only recommended to people with experience with LaTex, since the files might still contain bugs and errors that have to be ironed out. I will not answer emails asking for help if the files do not build! If you are not sure, just use the PDFs inside the .zip archive (Take a look at [Getting the material](#Getting the material)). If you are installing LaTex from scratch, make sure you install the full release with all the packages!
 
 1. Make sure you have a working Tex distribution installed on your system. If you don't:
 	* Mac OS: [MacteX](http://tug.org/mactex/)
     * Windows: [MikTeX](http://miktex.org/download) or [TexLive](https://www.tug.org/texlive/acquire-netinstall.html) (Recommended)
-    * Linux: [TexLive](https://www.tug.org/texlive/quickinstall.html) (or simply <code>sudo apt-get install texlive-full</code>)
+    * Linux: [TexLive](https://www.tug.org/texlive/quickinstall.html) (Ubuntu: <code>sudo apt-get install texlive-full</code>)
 2. Download the master Branch [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip)
 3. Generate the files
 	* If you want to use a program with a GUI:
