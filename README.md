@@ -2,7 +2,9 @@ Analysis I/II Notes
 ===================
 This repo contains all the handwritten notes from Professor Imamoglu's Analysis I/II class for CS at ETHZ. Although this page should clarify most of your doubts, you can <a href="mailto:pennatil@student.ethz.ch">email me</a> and I will try to help you. Please avoid questions regarding LaTex (installation, usage, can't compile) as the sections below are pretty self explanatory. 
 
-If you wish to help, there are a few things left to complete. Also, take a look at the [Contributing](#Contributing) section below.
+This repository will always contain the latest files (PDFs as well), which will be updated when progress is made. As of right now, i do NOT recommend you print out things in a final form (booklet, color,...) since they might change from one day to another. Once I am done, you will receive an email with the final files. 
+
+If you wish to help (highly appreciated), there are a few things left to complete. For more details on how, take a look at the [Contributing](#Contributing) section below.
 
 TODO:
 * Spell check chapters that are done
@@ -32,9 +34,9 @@ New PDFs are generated on an (almost) daily basis, so if you are not familiar wi
 Contributing
 ============
 
-Since these documents are still a very early version, they might contain a few (if not more) mistakes. Also, not everything has been yet typed up. You can help in two ways: 
+Since these documents are still a very early version, they might contain a few (if not more) mistakes. Also, not everything has been yet typed up, as well as corrected. Even if you have no experience with LaTex, you can correct spelling mistakes or else. You can help in two ways: 
 
-1. Correct mistakes you find in the notes
+1. Correct mistakes you find in the notes (spelling, math, ...)
     * If you have no experience with LaTex or GitHub:
     	1. Make sure you have a GitHub account, otherwise create one [here](https://github.com/join). Please use the same name as your ETHZ account, makes my life much easier if I have to contact you.
 		2. On the right side of this page, click on the ["Issues"](https://github.com/pennatil/Analysis-Notes/issues) tab
@@ -42,12 +44,13 @@ Since these documents are still a very early version, they might contain a few (
 	 		 * Title: Chapter + Page Number
 	 		 * Message: Issue found, plus the eventual correction(s)
 	 		 * Tag: Add a tag that best classifies the issue
-	 		 * If you are not sure, take a look at the sample here [here](https://github.com/pennatil/Analysis-Notes/issues/4)
+	 		 * If you are not sure, take a look at the sample [here](https://github.com/pennatil/Analysis-Notes/issues/4)
 		4. Post the issue, it will be corrected ASAP.
 	* If you are familiar with Latex and GitHub:
-		1. Fork the repo. Help [here](https://help.github.com/articles/fork-a-repo)
-		2. Make the changes, and commit them to your forked repo. Make sure to add detailed comments explaining what you changed, makes my life a lot easier when merging!
-		3. Once you are done, request a Merge. Help [here](https://help.github.com/articles/using-pull-requests)
+		1. First, check if someone has posted the same issue. If yes, mention it in your merge request (point 4.)
+		2. Fork the repo. Help [here](https://help.github.com/articles/fork-a-repo)
+		3. Make the changes, and commit them to your forked repo. Make sure to add detailed comments explaining what you changed, makes my life a lot easier when merging!
+		4. Once you are done, request a Merge. Help [here](https://help.github.com/articles/using-pull-requests)
 2. Type up what's left of the notes. 
 	* Only for people familiar with LaTex and GitHub. Please, do not start typing away, <a href="mailto:pennatil@student.ethz.ch?subject=I%20want%20to%20help!">email me</a> first so that we can avoid two people doing the same work.
 
