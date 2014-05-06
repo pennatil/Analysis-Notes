@@ -331,7 +331,7 @@ Sei $\Omega \subset\mathbb{R}$ und $f=\left( f_1,\dots,f_n\right):\Omega\rightar
 \subsubsection*{Bemerkung 8.15}
 $f'\left( x_0\right)$ kann als Geschwindigkeitsvektor im Punkt $f\left( x_0\right)$ aufgefasst werden.
 
-\subsubsection*{Satz 8.16 (Kettenregel 2. Version)}
+\subsubsection*{Satz 8.16 (Kettenregel, 2. Version)}
 Sei $\Omega\subset\mathbb{R}^n$,$I\subset\mathbb{R}$. Sei $g:I\rightarrow\Omega$, $t\rightarrow\left( g_1(t), g_2(t),\dots, g_n(t)\right)$, an der Stelle $t_0\in I$ differenzierbar sowie $f:\Omega\rightarrow\mathbb{R}$ an der Stelle $g\left( t_0\right)$ differenzierbar. Dann gilt:
 \[\frac{d}{{dt}}\left( {f \circ g} \right)\left( {{t_0}} \right) = df\left( {g\left( {{t_0}} \right)} \right) \cdot g'\left( {{t_0}} \right)\]
 \begin{align*}
@@ -851,9 +851,79 @@ folgt.
 \subsubsection*{Beispiel 8.48}
 \begin{enumerate}
 \item \[v\left( {x,y} \right) = \left( {\begin{array}{*{20}{c}}{4x{y^2}}\\{2y}\end{array}} \right)\]
-Es gilt %page 185 bottom
+Es gilt $\frac{\partial v'}{\partial y}=8xy$, $\frac{\partial v^2}{dx}=2$. Also ist $v$ nicht konservativ
+\item Sei $\Omega = \left\{ \left( x,y\right) \in\mathbb{R}^2:\left( x,y\right) \not= (0,0) \right\} = \mathbb{R}^2\backslash\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \rightarrow\mathbb{R}^2$ mindestens $C'$. Ausserdem \[\frac{{\partial v'}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C: 
+\missingfigure{page 186, middle. Also add the formula describing $C(t)$ using a minipage}
+\begin{align*}
+\int\limits_C vds  = & \int\limits_0^{2\pi } { < v\left( {C\left( t \right)} \right),C'\left( t \right) > dt} \\
+= & \int\limits_0^{2\pi } \left( -\sin t,\cos t\right)\cdot  \left( {\begin{array}{*{20}{c}}{ - \sin t}\\{\cos t}\end{array}} \right) dt\\
+= & \int\limits_0^{2\pi } \left( \sin^2 t+\cos^2 t\right) dt=2\pi\not= 0\\
+\Rightarrow &\text{ $v$ auf $\Omega$ ist nicht konservativ!}
+\end{align*}
+Jetzt betrachten wir $\Omega'=\left\{ \left( x,y\right) \mid x>0 \right\}$ \todo{can't understand image on page 187, top} und führen Polarkoordinaten ein $$x=r\cos\theta, y=r\sin\theta\hspace{10mm} -\frac{\pi}{2}<\theta <\frac{\pi}{2}$$
+Dann ist $\tan\theta = \frac{y}{x}$ und $$\theta=\arctan\frac{y}{x}$$
+Wir betrachten $\theta:\Omega'\rightarrow\mathbb{R}$ als ein Funktion der Variabeln $x,y$ und berechnen 
+\begin{align*}
+\frac{{\partial \theta }}{{\partial x}} = & \frac{1}{{1 + {{\left( {\frac{y}{x}} \right)}^2}}}\left( { - \frac{y}{{{x^2}}}} \right) =  - \frac{y}{{{x^2} + {y^2}}}\\
+\frac{{\partial \theta }}{{\partial x}} = & \frac{x}{{{x^2} + {y^2}}}
+\end{align*}
+Also gilt 
+$$\nabla \theta\left( x,y\right) = v\left( x,y\right)$$
+$$v\left( x,y\right) \in\Omega'$$
+$$\Rightarrow\text{ $v$ ist konservative auf $\Omega$}$$
+Das heisst konservativität ist eine Eigenschaft zugleich des Vektorfeldes $v$ \underline{v} der Region $\Omega$
 \end{enumerate}
 
+\begin{definition}{8.49}
+Eine offene Menge $\Omega\subset\mathbb{R}^n$ heisst einfach zusammenhängend falls 
+\begin{enumerate}
+\item $\Omega$ ist stückweise $C'-$Wegzusammenhängend
+\item Jeder Stückweise $C'-$Weg in $\Omega$ kann stetig innerhalb $\Omega$ auf einen Punkt zusammengezogen werden 
+\end{enumerate}
+Die Region $\Omega=\mathbb{R}\backslash\{ 0\}$ ist nicht einfach zu $\Omega' = \left\{ \left( x,y\right) \mid x>0\right\}$ ist es aber.
+\end{definition}
 
+\subsubsection*{Satz 8.50}
+Sei $\Omega\in\mathbb{R}^2$ beschränkt zusammenhängend sowie einfachzusammenhängend, sei $v\in C'\left( \Omega:\mathbb{R}^2\right)$ Vektorfeld. Dann sind äquivalent 
+\begin{enumerate}
+\item $v$ ist konservativ
+\item $\frac{\partial v_1}{\partial y}=\frac{\partial v_2}{\partial x}$
+\end{enumerate}
 
+\subsection*{Taylorentwicklung und der lokale Verhalten von $C^m-$Funktionen}\todo[inline]{Not sure how big of a title...}
+Wir werden jetzt ein Verallgemeinerung der $1.$ Variablen Taylorentwicklung herleiten. \\
 
+Sei $f:\mathbb{R}^n\rightarrow\mathbb{R}$ eine $C^m-$Funktion sowie $x_0,x_1\in\mathbb{R}^n$. (Allgemein könnte man $\mathbb{R}^n$ durch eine offene konvexe Menge ersetzen)\\
+
+\noindent Sei
+\begin{align*} 
+\varphi:\mathbb{R} &\rightarrow\mathbb{R}^n\\
+t & \rightarrow \left( 1-t\right) x_0+x_1
+\end{align*}
+Dann ist $g:=f\circ\varphi:\mathbb{R}\rightarrow\mathbb{R}$ eine \todo[inline]{Dont know where this actually fits: $\left( g(0)=f=\left( x_0\right), g(1)=f\left( x_1\right)\right)$}$C^m-$Funktion und (nach Taylor \todo{can't read, page 189 bottom} von Funktionen $1-$variable) es gibt $\xi\in (0,1)$ so dass 
+
+\[
+g\left( {} \right) = g\left( 0 \right) + g'\left( 0 \right) +  \ldots  + \frac{{{g^{\left( {m - 1} \right)}}\left( 0 \right)}}{{\left( {m - 1} \right)!}} + \frac{{{g^{\left( m \right)}}\left( \xi  \right)}}{{m!}}\tag{\textasteriskcentered\label{Chap8Equation,Taylor}}
+\] 
+\todo[inline]{can't read between brackets before equal sign, page 190 very top}
+Jetzt berechnen wir $g^{(i)}(t)$ im Funktion von $f$ und seinem Ableitungen. Für $g'(t)$ benutzen wir die Kettenregel:
+$$g'(t)=df\left( \varphi (t)\right) \cdot\varphi' (t)$$ mit \[\varphi '(t) = {x_1} - {x_0} = \left( {{x_1}' - {x_0}',{x_1}^2 - {x_0}^2, \ldots ,{x_1}^n - {x_0}^n} \right)\] Erhalten wir:
+
+\begin{align*}
+g'(t) = & \sum\limits_{i = 1}^n {\frac{{\partial f}}{{\partial {x^i}}}\left( {\varphi (t)} \right)\left( {x_1^i - x_0^i} \right)}  = \nabla f\left( {\varphi (t)} \right) \cdot \left( {{x_1} - {x_0}} \right)\\
+g'(0) = & \sum\limits_{i = 1}^n {\frac{{\partial f}}{{\partial {x^i}}}\left( {x_0} \right)\left( {x_1^i - x_0^i} \right)}  = \nabla f\left( {x_0} \right) \cdot \left( {{x_1} - {x_0}} \right)
+\end{align*}
+Jetzt berechnen wir $g^{(2)}(t)$:\[{g^{(2)}}(t) = \frac{d}{{dt}}\left( {g'\left( t \right)} \right) = \sum\limits_{i = 1}^n {\frac{d}{{dt}}\left( {\frac{{\partial f}}{{\partial {x^i}}}\left( {\varphi \left( t \right)} \right)} \right)} \left( {x_1^i - x_0^i} \right)\]
+Analog gilt:
+\[\frac{d}{{dt}}\left( {\frac{{\partial f}}{{\partial {x^i}}}\left( {\varphi \left( t \right)} \right)} \right) = \sum\limits_{j = 1}^n {\frac{{{\partial ^2}f}}{{\partial {x^j}\partial {{\text{x}}^i}}}\left( {\varphi \left( t \right)} \right)\left( {x_1^j - x_0^j} \right)} \]
+Eingesetzt gilt: 
+\begin{align*}
+{g^{(2)}}(t) = & \sum\limits_{i = 1}^n {\sum\limits_{j = 1}^n {\left( {\frac{{{\partial ^2}f}}{{\partial {x^j}\partial {x^i}}}\left( {\varphi (t)} \right)} \right)} } \left( {x_1^i - x_0^i} \right)\left( {x_1^j - x_0^j} \right)\\
+{g^{(2)}}(0) = & \sum\limits_{i,j = 1}^n {\left( {\frac{{{\partial ^2}f}}{{\partial {x^j}\partial {x^i}}}\left( {{x_0}} \right)} \right)} \left( {x_1^i - x_0^i} \right)\left( {x_1^j - x_0^j} \right)
+\end{align*}
+Daraus schliesst man induktive das
+\[{g^{(k)}}(t) = \sum\limits_{{i_1},{i_2}, \ldots ,{i_k} = 1}^n {\left( {\frac{{{\partial ^k}f}}{{\partial {x^{{i_1}}} \ldots \partial {x^{{i_k}}}}}\left( {\varphi (t)} \right)} \right)} \prod\limits_{l = 1}^k {\left( {x_1^{{i_l}} - x_0^{{i_l}}} \right)} \]
+Eingesetzt in (\textasteriskcentered) (s.\pageref{Chap8Equation,Taylor}) ergibt \todo[inline]{MISSING CONTENT?? page 191 bottom}
+
+\subsubsection*{Satz 8.51}
+%page 192, very top
