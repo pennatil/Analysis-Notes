@@ -50,19 +50,20 @@ wobei $f(t)=$ die noch vorhandeden Masse eines Stoffes. Pro zeiteinheit zerfalle
 Sei $m$ eine Massepunkt der Unter Einfluss der Schwerkraft fällt. Es kann auch ein Reibungskraft geben. \\
 
 Die grösse der Reibungskraft ist proportional zur Geschwindigkeit. Dann ist, nach der zweiten Newtonische Gesetzt \[m\ddot x = mg - a\dot x\text{\hspace{10mm}}v=\frac{dx}{dt}\]
-Beim 2., haben wir schon letze Semester gesehen dass $$\frac{df(t)}{dt}=-\alpha f$$ als eine Lösung $Ke^{-\alpha t}$, $K\in\mathbb{R}$
-$$f'=-\alpha t\Rightarrow \frac{f'}{f}=-\alpha$$
+Beim Beispiel 2., haben wir schon letze Semester gesehen dass $$\frac{df(t)}{dt}=-\alpha f$$ als eine Lösung $Ke^{-\alpha t}$, $K\in\mathbb{R}$, hat 
+$$f'=-\alpha f\Rightarrow \frac{f'}{f}=-\alpha$$
 $$\int{\frac{f'(t)}{f(t)}dt}=-\int{\alpha dt}$$
 $$\ln\left| f(t)\right|=-\alpha t+C$$
-$$\Rightarrow f(t)=Ke^{-\alpha t}\text{ mit }K={e^{t}}^C$$
+$$\Rightarrow f(t)=Ke^{-\alpha t}\text{ mit }K={e^C}$$
 \end{enumerate}
 Alle 3 Beispiele sind Lineare DGL mit konstanten Koeffizienten. 
 \section{Lineare DGL mit konstante Koeffizienten} 
 
 \begin{definition}{7.1}
-Eine lineare Differentialgleichung $n-$ter Ordnung hat die Gestalt \[{y^{(n)}} + {a_{n - 1}}(x){y^{(n - 1)}} +  \ldots  + {a_1}(x)y' + {a_0}(x)y = b(x)\] mit $a_i(x),i=0,\dots,n-1, b(x)$ Funktionen. 
-\end{definition} \todo{Where is the end of the definition??}
-Ist das so genannte Störfunktion $b(x)$ konstant gleich 0, so heisst die DGL homogen, andernfalls inhomogen. Im Falle $a_i(x)=a_i$ Konstanten, heisst die LDG, LDG mit Konstanten koeffizioenten. \\
+Eine lineare Differentialgleichung $n-$ter Ordnung hat die Gestalt \[{y^{(n)}} + {a_{n - 1}}(x){y^{(n - 1)}} +  \ldots  + {a_1}(x)y' + {a_0}(x)y = b(x)\] mit $a_i(x),i=0,\dots,n-1, b(x)$ Funktionen. \\
+
+Ist das so genannte Störfunktion $b(x)$ konstant gleich 0, so heisst die DGL homogen, andernfalls inhomogen. Im Falle $a_i(x)=a_i$ Konstanten, heisst die LDG, LDG mit Konstanten koeffizienten. 
+\end{definition}
 
 In diesem Abschnitt betrachten wir DGL mit konstanten Koeffizienten. Eine DGL ist genau dann linear wenn alle Potenzen der gesuchte Funktion und deren Ableitung(en) nur mit Potenz 1 vorkommen.
 z.B.:
@@ -75,7 +76,7 @@ z.B.:
 
 \noindent Zum nächst betrachten wir Homogene LDG mit konstanten Koeffizienten. Sei $$y^{(n)}+a_{n-1}y^{(n-1)}+\dots+a_0=0\text{\hspace{10mm}(H)}$$ wobei $a_i\in\mathbb{R}$ $i=0,\dots,n-1$
 \begin{definition}{7.2}
-Das charakteristische Polynom der Gleichung (H) ist gegeben durch $$p(t):=t^n+a_{n-1}t^{n-1}+\dots+a_0$$
+Das \underline{charakteristische Polynom} der Gleichung (H) ist gegeben durch $$p(t):=t^n+a_{n-1}t^{n-1}+\dots+a_0$$
 \end{definition} 
 \subsubsection*{Lemma 7.3}
 Die Funktion $y(x)=e^{\lambda x}$ ist genau dann Lösung von (H) falls $p(\lambda)=0$ 
@@ -87,7 +88,7 @@ Also mit $$=y^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\dots+a_0=(\lambda ^n+a_{n-1}\lambda 
 $$\Leftrightarrow \lambda^n+a_{n-1}\lambda^{n-1}+\dots +a_0=p(\lambda)=0$$
 
 \subsubsection*{Satz 7.4}
-Sei $p(\lambda ) = \prod\limits_{i = 1}^l {{{(\lambda  - {\lambda _i})}^{{m_i}}}} $ mit $\lambda _j\in\mathbb{C}$, $\lambda_i\not=\lambda_j (i\not=j)$. Dann ist jede Lösung der zugehörigen HDGL darstellbar als Linearkombination der $n$ linear unabhängigen Funktionen $y_{ik}(x)=x^ke^{\lambda_ix}$, \todo{Can't understand limits, page 81 bottom}
+Sei $p(\lambda ) = \prod\limits_{i = 1}^l {{{(\lambda  - {\lambda _i})}^{{m_i}}}} $ mit $\lambda _j\in\mathbb{C}$, $\lambda_i\not=\lambda_j (i\not=j)$. Dann ist jede Lösung der zugehörigen HDGL darstellbar als Linearkombination der $n$ linear unabhängigen Funktionen $y_{ik}(x)=x^ke^{\lambda_ix}$, $1\leq i\leq l$, $0\leq k\leq m_i$.
 
 \subsubsection*{Bemerkung 7.5}
 \begin{enumerate}
@@ -114,7 +115,7 @@ $$p(\lambda)=\lambda^2+1=(\lambda+1)(\lambda-1)$$
 $$y(x)=c_1\cos x+c_2\sin x$$
 \item $$y^{(4)}+2y^{(2)}+y=0$$
 $$p(\lambda)=\lambda^4+2\lambda^2+1=0=(\lambda^2+1)^2=(\lambda-i)^2(\lambda+i)^2$$
-Also, $\cos x, \sin x, x\cos x,x\sin x$ sind Lösungen. \todo{is there  subscript like $y_1(x)$?? page 84 middle}$$y(x)=c_1\cos x+c_2 x\cos x+c_3\sin x+c_4 x\sin x$$
+Also, $\cos x, \sin x, x\cos x,x\sin x$ sind Lösungen. $$y(x)=c_1\cos x+c_2 x\cos x+c_3\sin x+c_4 x\sin x$$
 \item $$y^{(4)}-y=0$$
 $$p(\lambda)=t^4-1=(t^2-1)(t^2+1)=(t+1)(t-1)(t+i)(t-i)$$
 $$y(x)=c_1e^x+c_2e^{-x}+c_3\sin x+c_4\cos x$$
@@ -176,7 +177,7 @@ $$y'' + y' - 6y = 4Kx{e^{2x}} + 4Kx{e^{2x}} + K{e^{2x}} + 2Kx{e^{2x}} - 6Kx{e^{2
 $$ = 5K{e^{2x}} = 10{e^{2x}}$$
 $$\Rightarrow K=2$$
 Der Ansatz führte also auf die Lösung $$y_s(x)=2xe^{2x}$$
-Ingesamt: $$y(x)=2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\mathbb{R}$$
+Insgesamt: $$y(x)=2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\mathbb{R}$$
 \item $$y''+y=\sin x$$$$y_H=c_1\sin x+c_2\cos x$$
 Für die Spezielle Lösung zu finden, wählen wir den Ansatz vom Typ der rechten Seite
 $${y_s}(x) = x\left( {{K_1}\sin x + {K_2}\cos x} \right)$$
@@ -207,10 +208,10 @@ $P_n(x)e^{\alpha x}\sin\beta x$        & $e^{\alpha x}\lbrack R_n(x)\sin\beta x+
 wobei $P_n,Q_n,S_n,R_n$ Polynome von Grad $n$ sind.
 \subsubsection*{Bemerkung 7.9}
 \begin{enumerate}
-\item \todo{Where is the end of this list??}Liegt eine Linearkombination der Störfunktion vor, so hat man auch als Ansatz eine entsprechende Linearkombination zu wählen. Dies ist Superprinzip
+\item \todo{end of this list? }Liegt eine Linearkombination der Störfunktion vor, so hat man auch als Ansatz eine entsprechende Linearkombination zu wählen. Dies ist Superpositionsprinzip
 \subsubsection*{Beispiel}
 Die DGL $y''+y'-6y=50\sin x$ hat die spezielle Lösung $$y_s(x)=-7\sin x-\cos x$$ und die DGL $y''+y'-6y=10e^{2x}$ hat die spezielle Lösung $$y_s(x)=2xe^{2x}$$Die DGL $y''+y'-6y=50\sin x+10e^{2x}$ hat die spezielle Lösung $$y_s(x)=-7\sin x-\cos x+2xe^{2x}$$ Die allgemenine Lösung $$y(x)=-7\sin x -\cos x+2xe^{2x}+c_1e^{-3x}+c_2e^{2x}$$
-\subsection*{Superpositionsprinzip}\todo{Does this have to be in the enumerated list or outside??}
+\subsubsection*{Superpositionsprinzip:}
 Ist $y_1(c)$ eine spezielle Lösung der L. Differentialgleichung $$y^{(n)}(x)+a_{n-1}(x)y^{(n-1)}(x)+\dots +a_0(x)y=b_1(x)$$ und $y_2(x)$ eine spezielle Lösung der LDGL $$y^n(x)+\dots +a_0(x)y=b_2(x)$$ dann ist $y_1(x)+y_2(x)$ eine Spezielle Lösung der DGL $$y^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\dots+a_0(x)y=b_1(x)+b_2(x)$$
 \item Falls $\lambda=\alpha +i\beta$ ($\beta$ kann null sein) eine $m-$fache Nullstelle der characteristichen Polynoms von (Resonanzfall) $$(H)\hspace{10mm}y^n(x)+a_ny^{(n-1)}+\dots +a_0=0$$so muss man den Ansatz für $y_s(x)$mit dem Faktor $x^m$ multiplizieren.
 \subsubsection*{Beispiel}
@@ -224,11 +225,11 @@ $y''+y=\sin x$ hat die spezielle Lösung $y_s=-\frac{1}{2}x\cos x$
 \begin{tikzpicture}[scale=0.3]
 \draw[->](-0.5,0)--(3.5*pi,0);
 \draw[->](0,-3.5)--(0,3.5);
-\draw[white](-0.5,-0.5)--(-0.5,-7.5);%needed in order to push up the picture
+\draw[white](-0.5,-0.5)--(-0.5,-7);%needed in order to push up the picture
 \draw [smooth,black,domain=-1/2*pi:3*pi] plot (\x, {cos(\x r)});
+\node[] at (1.75*pi,-6) {$\cos x$};
 \end{tikzpicture}
 \end{center}
-
 \end{minipage}
 \hspace{0.5cm}
 \begin{minipage}[b]{0.45\linewidth}
@@ -240,9 +241,10 @@ $y''+y=\sin x$ hat die spezielle Lösung $y_s=-\frac{1}{2}x\cos x$
 \draw [smooth,black,domain=0:3.2*pi] plot (\x, {-0.5*\x *cos(\x r)});
 \draw(0,0)--(3.2*pi,5);
 \draw(0,0)--(3.2*pi,-5);
+\node[] at (1.75*pi,-6) {$-\frac{1}{2}x\cos x$};
 \end{tikzpicture}
 \end{center}
-Inhomogene mit $b(x)=-\frac{1}{2}x\cos x$
+
 \end{minipage}
 \end{figure}
 
@@ -256,9 +258,9 @@ Inhomogene mit $b(x)=-\frac{1}{2}x\cos x$
 
 
 \subsection*{Zusatzbedingungen einer DGL. Anfangs und Randbedingungen}
-Die in der allgemeinen Lösung einer DGL $n-$ter Ordnung auftretenden parameter lassen sich durch Zusatzbedingungen festlegen. Physikalische sinnvolle Zusatzbedingungen werden maist in der Form von Anfangsbedingungen oder Randbedingungen vorgegeben. \\
+Die in der allgemeinen Lösung einer DGL $n-$ter Ordnung auftretenden parameter lassen sich durch Zusatzbedingungen festlegen. Physikalische sinnvolle Zusatzbedingungen werden meist in der Form von Anfangsbedingungen oder Randbedingungen vorgegeben. \\
 
-Durch Vorgabe von derartigen Bedingungen eliminiert man die Parameter aus der allgemeinen Lösung der DGL und erhölt damit eine partikuläre Lösung.
+Durch Vorgabe von derartigen Bedingungen eliminiert man die Parameter aus der allgemeinen Lösung der DGL und erhält damit eine partikuläre Lösung.
 \subsubsection*{Beispiel 7.10}
 Freifall mit Reibung 
 \begin{center}
@@ -298,7 +300,7 @@ $$c_2=\frac{m^2g}{a^2}\hspace{10mm}c_1=-\frac{m^2g}{a^2}$$
 $$\Rightarrow x(t)=-\frac{m^2g}{a^2}+\frac{m^2g}{a^2}e^{-\frac{a}{m}t}+\frac{mg}{a}t$$
 $$x(t)=\frac{mg}{a}t-\frac{m^2g}{a^2}\left[ 1-e^{-\frac{a}{m}t}\right]$$
 \end{enumerate}
-Eine partihuläre Lösung einer DGL $n-$ter Ordnung $$y'{(n)}+a_nx^{n-1}+\dots+a_0=b(x)$$ kann man aus der allgemeine Lösung \todo{do y and x have anything on top?? page 101 top}
+Eine partikuläre Lösung einer DGL $n-$ter Ordnung $$y^{(n)}{(x)}+a_{n-1}(x)+\dots+a_0 y(x)=b(x)$$ kann man aus der allgemeine Lösung 
 $$y(x)=y(x,c_1,c_2,\dots,c_n)$$ der DGL erhalten
 \begin{itemize}
 \item Durch die Vorgabe von Anfangsbedingungen 
@@ -331,7 +333,9 @@ Also $x_p(t)=\cos\omega t+\sin\omega t$
 \section{Lineare DGL erster Ordnung (mit allgemeinen koeffizienten)}
 Die LDGL hat allgemeine Form $$y'(x)=a(x)y+b(x)$$ $b(x)$ - inhomogene Term.\\
 
-\noindent Und $y'(x)=a(x)y$ ist die zugehörige homogene Gleichung. Lösung von $y'(x)=a(x)y$: $$\frac{y'(x)}{y(x)}=a(x)$$
+\noindent Und $y'(x)=a(x)y$ ist die zugehörige homogene Gleichung. \\
+
+\noindent Lösung von $y'(x)=a(x)y$: $$\frac{y'(x)}{y(x)}=a(x)$$
 d.h. $\left( \ln y(x)\right)'=a(x)$. Sei $A(x)$ eine Stammfunktion von $a(x)$, so ist $$\ln y(x)=A(x)+c$$ Also $y(x)=e^{A(x)}\cdot e^c=Ke^{A(x)}$
 \subsubsection*{Satz 7.12} 
 Die allgemeine Lösung von $y'=ay$ ist $y(x)=Ke^{A(x)}$ wobei $K\in\mathbb{R}$ und $A'(x)=a(x)$
@@ -342,8 +346,8 @@ $$e^{A(x)}=e^{\ln x^2}=x^2$$
 $$\Rightarrow\text{ Lösung von }y'(x)=\frac{2}{x}y \Rightarrow y(x)=Kx^2$$
 Jetzt suchen wir eine spezielle Lösung von $y'=a(x)y+b(x)$ 
 \subsubsection*{Ansatz}
-$y=uv$ wobei $u,v$ Funktionen sind. Dann ist $$y'=u'v+uv'$$ und $$a(x)y+b(x)=u'v+uv'$$$$a(uv)+b=u'v+uv'$$$$\Rightarrow u'v+u\lbrack v'-av\rbrack =b$$
-Jetzt wählen wit $v$ o dass $$v'-av=0$$ d.h. $v=e^{A(x)}$. Dann ist $u'v=b$ d.h. $u'=be^{-A(x)}$ d.h. $u$ ist eine Stammfunktion von $be^{-A(x)}$
+$y=uv$ wobei $u,v$ Funktionen sind. Dann ist $$y'=u'v+uv'$$ und $$a(x)y+b(x)=ay+b=u'v+uv'$$$$a(uv)+b=u'v+uv'$$$$\Rightarrow u'v+u\lbrack v'-av\rbrack =b$$
+Jetzt wählen wit $v$ so dass $$v'-av=0$$, d.h. $$v=e^{A(x)}$$ Dann ist $u'v=b$ d.h. $u'=be^{-A(x)}$ d.h. $u$ ist eine Stammfunktion von $be^{-A(x)}$
 
 \subsubsection*{Satz 7.13}
 Seien $A(x)$ eine Stammfunktion von $a(x)$ und $U(x)$ ein Stammfunktion von $be^{-A(x)}$. Dann ist $y(x)=e^{A(x)}$. $U$ Lösung von $y'=a(x)y+b(x)$
@@ -357,12 +361,14 @@ Die Allgemeine Lösung von LDGL $y'=ay+b$ ist durch $y(x)=e^{A(x)}\int{b(x)e^{-A
 $$\Rightarrow y' = \underbrace {\frac{2}{x}}_{a(x)}y + \underbrace {2{x^3}}_{b(x)}$$
 $$A(x)=2\ln\left| x \right|=\ln x^2$$
 $$Ke^{A(x)}=Kx^2\text{ ist die Lösung von homogene DGL }y'=ay$$
-Wir bestimmen jetzt die Stammfunktion von $$b(x)=e^{-A(x)}=2x^3e^{-\ln \left| x\right|}$$
+Wir bestimmen jetzt die Stammfunktion von $$b(x)\cdot e^{-A(x)}=2x^3e^{-\ln (x)^2}=2x^3 x^{-2}=2x$$
 $$2\frac{x^3}{x^2}=2x$$
-Also ein Stammfunktion: $\int{2xdx=x^2}$ und $x^2e^{A(x)}=x^4$. Somit ist die Allgemeine Lösung $$y(x)=x^4+Kx^2$$
+Also ein Stammfunktion von $b(x)e^{-Ax}$ ist  $\int{2xdx=x^2}$ und $x^2e^{A(x)}=x^4$. Somit ist die Allgemeine Lösung $$y(x)=x^4+Kx^2$$
 \item $$y'=4x+5y-3$$
 \[y' - \underbrace 5_ay = \underbrace {4x - 3}_b\]
-LDGL mit konstanten koeffizienten. Störfunktion $4x-3$. Homog: $$y'-5y=0$$
+LDGL mit konstanten koeffizienten. Störfunktion ist  $4x-3$.\\
+
+\noindent HDGL: $$y'-5y=0$$
 $$\frac{y'}{y}=5$$
 $$\ln y(x)=5x+c$$
 $$y_h(x)=Ke^{5x} \text{ Hom. Lösung}$$
@@ -398,13 +404,13 @@ Ein einfaches Verfahren, so genannte ``separation der Variablen'' lässt sich an
 {\text{trennen formel }}x{\text{ bzw }}y{\text{ - Terme}}
 \end{array}\]
 Jetzt Integrieren wir auf beiden Seiten $$\int{\frac{dy}{y}}=\int{2xdx}$$$$\ln\left| y\right|=x^2+c$$Da wir an der Lösung $y$ interessiert sind und nicht am Logarithmus davon, wenden wir die Exponentialfunktion an $$\left| y\right|=e^{x^2+c}=e^ce^{x^2}$$
-Links und rechts stehen nur \todo{can't understand, page 110 middle} Grösse. Wenn wir aber auf der Rechten Seite nicht nur positive konstante $e^c>0$ zulassen, sondern irgendwelche Konstanten $K\in\mathbb{R}$ so erhalten wir $$y(x)=Ke^{x^2}$$
+Links und rechts stehen nur positive Grösse. Wenn wir aber auf der Rechten Seite nicht nur positive konstante $e^c>0$ zulassen, sondern irgendwelche Konstanten $K\in\mathbb{R}$ so erhalten wir $$y(x)=Ke^{x^2}$$
 \item $$y'=1+y^2\text{ ist separierbar}$$
 $$\int{\frac{dy}{1+y^2}=\int{dx}}$$
 $$\Rightarrow \arctan y=x+c \Leftrightarrow y=\tan(x+c)$$
 \end{enumerate}
 \subsubsection*{Bemerkung 7.18}
-$y'=f(x)g(x)$ hat die Konstante Lösungen $y=y_0$ für alle $y_0$ mit $g(y_0)=0$. Der fall $g(y)=0$ muss gesondert betrachten werden. 
+$y'=f(x)g(x)$ hat die Konstante Lösungen $y=y_0$ für alle $y_0$ mit $g(y_0)=0$. Der fall $g(y)=0$ muss gesondert betrachtet werden. 
 \begin{enumerate}
 \item[3.] $$\left| x\right|, \left| y\right|<1,y'=\sqrt{\frac{1-y^2}{1-x^2}}$$
 hat keine Konstante Lösungen 
@@ -415,20 +421,3 @@ $$=x\cos c\pm\sqrt{1-x^2}\sin c$$
 $$=ax+b\sqrt{1-x^2}$$
 wobei $a,b\in\mathbb{R}$ mit $a^2+b^2=1$. Rückeinsetzen in die DGL liefert die Zusatzbedingung $$y'=a-\frac{bx}{\sqrt{1-x^2}}>0,\hspace{5mm} (1+y^2>0)$$
 \end{enumerate}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

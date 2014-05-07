@@ -925,5 +925,32 @@ Daraus schliesst man induktive das
 \[{g^{(k)}}(t) = \sum\limits_{{i_1},{i_2}, \ldots ,{i_k} = 1}^n {\left( {\frac{{{\partial ^k}f}}{{\partial {x^{{i_1}}} \ldots \partial {x^{{i_k}}}}}\left( {\varphi (t)} \right)} \right)} \prod\limits_{l = 1}^k {\left( {x_1^{{i_l}} - x_0^{{i_l}}} \right)} \]
 Eingesetzt in (\textasteriskcentered) (s.\pageref{Chap8Equation,Taylor}) ergibt \todo[inline]{MISSING CONTENT?? page 191 bottom}
 
-\subsubsection*{Satz 8.51}
-%page 192, very top
+\subsubsection*{Satz 8.51(Taylor entwicklung)}
+\begin{align*}f\left( {{x_1}} \right) = & f\left( {{x_0}} \right) + \sum\limits_{i = 1}^n {\frac{{\partial f}}{{\partial x'}}\left( {{x_0}} \right)\left( {x_1^i - x_0^i} \right) +  \ldots } \\ + & \frac{1}{{\left( {m - 1} \right)!}}\sum\limits_{{i_1}, \ldots ,{i_{m - 1}} = 1}^n {\frac{{{\partial ^{m - 1}}f}}{{\partial {x^{{i_1}}} \ldots \partial {x^{{i_{m - 1}}}}}}\left( {{x_0}} \right)\prod\limits_{l = 1}^{\left( {m - 1} \right)} {\left( {x_1^{{i_l}} - x_0^{{i_l}}} \right)} } \\ + & \frac{1}{{m!}}\sum\limits_{{i_1}, \ldots ,{i_m} = 1}^n {\frac{{{\partial ^m}f}}{{\partial {x^{{i_1}}} \ldots \partial {x^{{i_m}}}}}\left( {{x_\xi }} \right)\prod\limits_{l = 1}^m {\left( {x_1^{{i_l}} - x_0^{{i_l}}} \right)} } \end{align*}
+mit eine Zahl $\xi\in\left( 0,1\right)$, $x_\xi = \left( 1-\xi\right)x_0+\xi x_1$.
+
+\subsubsection*{Bemerkung 8.52}
+Insbesondere für $m=2$ erhalten wir für $f$ die quadratische Näherung
+\begin{align*}
+f\left( {{x_1}} \right) = & f\left( {{x_0}} \right) + \nabla f\left( {{x_0}} \right)\left( {{x_1} - {x_0}} \right)\\
+ + &\frac{1}{2}\sum\limits_{i,j = 1}^2 {\frac{{{\partial ^2}f}}{{\partial {x^i}\partial {x^j}}}\left( {{x_0}} \right)\left( {x_1^i - x_0^i} \right)} \left( {x_1^j - x_0^j} \right) + {r_2}\left( {f,{x_1},{x_0}} \right)
+\end{align*}
+mit Fehler 
+$$\frac{r_2\left( f,y_1,x_0\right)}{\left| x_1-x_0\right|}\rightarrow 0, \left( x_1\rightarrow x_0\right)$$
+
+\begin{definition}{8.53}
+Die Matrix der Zweiten partiellen Ableitungen heisst die Hesse - Matrix von $f$, und mit $\Hess(f)$ oder $\nabla^2 f$ bezeichnet
+\begin{align*}
+\Hess(f)= & \nabla^2 f:=\left( \frac{\partial^2 f}{\partial x^i\cdot\partial x^j}\right)_{i,j=1\dots n}\\
+ = & \left( {\begin{array}{*{20}{c}}{\frac{{{\partial ^2}f}}{{\partial x'\partial x'}}}&{\frac{{{\partial ^2}f}}{{\partial x'\partial {x^2}}}}& \ldots &{\frac{{{\partial ^2}f}}{{\partial x'\partial {x^n}}}}\\{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial x'}}}&{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial {x^2}}}}& \ldots &{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial {x^n}}}}\\ \vdots & \vdots & \ddots & \vdots \\{\frac{{{\partial ^2}f}}{{\partial {x^n}\partial x'}}}& \ldots & \ldots &{\frac{{{\partial ^2}f}}{{\partial {x^n}\partial {x^n}}}}\end{array}} \right)
+\end{align*}
+\end{definition}
+Seien $\nabla f,x_1-x_0$ Zeilenvektoren und sei $\left( x-x_0\right)^t$ der zu $x_1-x_0$ transponierte Spaltenvektor . Dann wird die Taylorentwicklung von Grad 2 äquivalent zu 
+
+\begin{align*}
+f(x) % page 194, middle
+\end{align*}
+
+
+
+
