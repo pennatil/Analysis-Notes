@@ -4,7 +4,24 @@ This repo contains all the handwritten notes from Professor Imamoglu's Analysis 
 
 This repository will always contain the latest files (PDFs as well), which will be updated when progress is made. As of right now, i do NOT recommend you print out things in a final form (booklet, color,...) since they might change from one day to another. Once I am done, you will receive an email with the final files. 
 
-If you wish to help (highly appreciated), there are a few things left to complete. For more details on how, take a look at the [Contributing](#Contributing) section below.
+If you wish to help (highly appreciated), there are a few things left to complete (take a look at the [Status](#Status) section). For more details on how, take a look at the [Contributing](#Contributing) section below.
+
+<a name="Status"></a>
+Status
+======
+| Chapter |  Typed up?  | Finished drawings? | Spellchecked? |      Math checked?      | Done? |
+|:-------:|:-----------:|:------------------:|:-------------:|:-----------------------:|:-----:|
+|    1    |     Yes     |         Yes        |       No      | Waiting for corrections |   No  |
+|    2    |     Yes(*)    |         Yes        |       No      | Waiting for corrections |   No  |
+|    3    | In Progress |          -         |       No      |            No           |   No  |
+|    4    |      No     |          -         |       -       |            -            |   No  |
+|    5    |      No     |          -         |       -       |            -            |   No  |
+|    6    |     Yes     |         Yes        |       No      |           Yes           |   No  |
+|    7    |     Yes     |         Yes        |       No      | Waiting for corrections |   No  |
+|    8    |     Yes     |          -         |       No      | Waiting for corrections |   No  |
+|    9    | In Progress |          -         |       -       |            -            |   No  |
+
+(*) Might still be missing some content, which will be added once the corerctions are made.
 
 TODO:
 * Spell check chapters that are done

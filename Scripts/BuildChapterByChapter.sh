@@ -17,6 +17,7 @@ mkdir -p "../Final Documents"
 cp mainMult6.pdf "../Final Documents/Kapitel 6 - Integration - Analysis II.pdf"
 # cp mainMult7.pdf "../Final Documents/Kapitel 7 - Gewoehnliche Differenzialgleichungen - Analysis II.pdf"
 # cp mainMult8.pdf "../Final Documents/Kapitel 8 - Differenzialrechnung in R^n - Analysis II.pdf"
+# cp mainMult9.pdf "../Final Documents/Kapitel 9 - Integration in R^n - Analysis II.pdf"
 
 
 mkdir -p "../Output"
@@ -28,6 +29,7 @@ mv mainMult5.pdf "../Output/Kapitel 5 - Differentialrechnung auf R - Analysis I.
 mv mainMult6.pdf "../Output/Kapitel 6 - Integration - Analysis II.pdf"
 mv mainMult7.pdf "../Output/Kapitel 7 - Gewoehnliche Differenzialgleichungen - Analysis II.pdf"
 mv mainMult8.pdf "../Output/Kapitel 8 - Differenzialrechnung in R^n - Analysis II.pdf"
+mv mainMult9.pdf "../Output/Kapitel 9 - Integration in R^n - Analysis II.pdf"
 
 
 
