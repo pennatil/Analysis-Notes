@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "../MAINs"
+cd "../Tex/MAINs"
 for i in {1..3}
 do
    pdflatex main.tex
@@ -12,8 +12,8 @@ rm -f *.out *.log *.aux *.toc
 # cp main.pdf "../Final\ Documents/Notizien - Analysis I&II.pdf"
 
 
-mkdir -p "../Output"
-mv main.pdf "../Output/Notizien - Analysis I&II.pdf"
+mkdir -p "../../PDF/Work in Progress"
+mv main.pdf "../../PDF/Work in Progress/Notizien - Analysis I&II.pdf"
 { # your 'try' block
     growlnotify "Finished Generating Main"  -m "Can be found in the Output folder"
 } || {

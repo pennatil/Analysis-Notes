@@ -38,11 +38,12 @@ In order to get the material, there are two ways:
 
 * Get a .zip file, containing all of the notes, as well as the source files. This package contains Final chapters, as well as those that are in progress. 
   1. Download the .zip archive [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip)
-  2. Unzip it, you will find a folder named "Notes", open it
-  3. There are two folders you have to pay attention to:
-  	* Final chapters: Those files that are complete and final, are saved here.  
-	* Output: Everything is included in here, as well as incomplete files. 
-  4. Get the files you need
+  2. Unzip it, you will find a folder named "Analysis-Notes-master", open it
+  3. Open the "PDF" Folder
+  4. There are two folders you have to pay attention to:  
+      * Final chapters: Those files that are complete and final, are saved here.  
+	  * Work in Progress: Everything is included in here, as well as incomplete files. 
+  5. Get the files you need
 * Typeset (Build) it yourself from source. Take a look at the [Building](#Building) section
 
 New PDFs are generated on an (almost) daily basis, so if you are not familiar with LaTex, just get the files from the "Output" folder.
@@ -85,12 +86,12 @@ This is only recommended to people with experience with LaTex, since the files m
 2. Download the master Branch [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip)
 3. Generate the files
 	* If you want to use a program with a GUI:
-	  1. Navigate to the "MAINs" folder, and open "main.tex" using TexWorks (Right-click->open with...)
+	  1. Navigate to the "Tex/MAINs" folder, and open "main.tex" using TexWorks (Right-click->open with...)
 	  2. On the top left, select "pdfLaTex" from the dropdown menu
 	  3. Click on the green arrow, this will start the building process. Repeat this step at least 2 times!!
 	  4. You should now have a "main.pdf" file in your "MAINs" Folder.
     * If you want to use the terminal (Linux and Mac only):
-	    1. <code>cd path/to/Scripts/folder/</code> (e.g. <code>cd /Users/Waldo/Desktop/Notes/Scripts/</code>)
+	    1. <code>cd path/to/Scripts/folder/</code> (e.g. <code>cd /Users/Waldo/Desktop/Analysis-Notes-master/Scripts/</code>)
    	    2. There are 2 scripts that take care of building the files, and cleaning up. <code>BuildAll.sh</code> builds 1 pdf with all the notes, while <code>BuildChapterByChapter.sh</code> builds a file for each chapter. choose which one you want to use.
 		3. If it is the first time that you run this script, type <code>sudo chmod 755 nameOfScript.sh</code> (Where <code>nameOfScript.sh</code> is either <code>BuildAll.sh</code> or <code>BuildChapterByChapter.sh</code>. This command grants permission to the script to run)
 		4. Afterwards, type <code>./nameOfScript.sh</code> and press enter.

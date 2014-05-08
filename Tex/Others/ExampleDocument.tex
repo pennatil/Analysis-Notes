@@ -1,0 +1,43 @@
+\documentclass[a4paper]{book}
+
+\input{../Others/Packages.tex}
+\input{../Others/CustomEnvironments.tex}
+
+\begin{document}
+%The following generates a new chapter
+\chapter{Title of a chapter}
+
+%Subchapter
+\section{Title of the section}
+%Definition
+\begin{definition}{1.1}
+This is the environment for the definition. It can also contain equations, like so:
+\[\frac{{ - b \pm \sqrt {{b^2} - 4ac} }}{{2a}}\]
+\end{definition}
+
+%Beweis
+\subsubsection*{Beweis 1.2}
+This is the text for a beweis. This will be substituted with a custom environment, but for now just use this method. DO NOT FORGET THE ``*''
+
+%Bemerkung
+\subsubsection*{Bemerkung 1.3}
+Just like for the Beweis.\\
+
+\noindent When typing up math formulas, there are 2 ways:
+\begin{enumerate}
+\item Inline Mode: Use a single $\$$ symbol to display an equation like this: $3x^2+6$
+\item Math mode: Use $\$\$$ symbols as delimiters, to display an equation like this: $$3x^2+6$$
+\end{enumerate}
+
+
+%Lining up multiple lines:
+In order to line up multiple lines, use the ``align*'' environment to have such a result: 
+\begin{align*}
+	f(x) & =3(x+2)\\	
+	& = 3x+6
+\end{align*}
+Feel free to move the ``\&'' around, as this is the marker used to line up the equations. 
+
+
+\end{document}
+
