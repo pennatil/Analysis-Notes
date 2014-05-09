@@ -1,2 +1,138 @@
 \chapter{Integration in $\mathbb{R}^{\lowercase{n}}$}
-%Page 207, top
+Im Eindimensionalen hatten wir mit dem Integral $$\int\limits_a^b f(x)dx$$ den Flächeninhalt unter dem Graphen von $f$ berechnet. Wir suchen nach eine Verallgemeinerung mit der \todo{can't understand word, page 207 middle} z.B. Volumen unter dem Graphen einer Funktion von zwei Variablen berechnen kann
+\missingfigure{page 207, middle}
+\underline{Erinnerung:} Bestimmtes Riemann-Integral einen Funktion $f(x)$ über einem Interval $\lbrack a,b\rbrack:$ 
+$$I=\int\limits_a^b f(x)dx$$ Das Integral $I$ war als Grenzwert von Riemannscher Ober und Untersumme definiert (falls diese Grenzwert jeweils existieren und übereinstimmten).\\
+
+Konstruktionsprinzip für Bereichsintegrale ist Analog. Aber die Definitionsbereich $D$ ist komplizierter. Wir betrachten zunächst den Fall zweier Variabler, $n=2$, und einen Definitionsbereich $D\subset\mathbb{R}^2$ der Form
+$$D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack\subset\mathbb{R}^2$$
+d.h. $D$ ist ein kompakter Quader (Rechteck). Sei $f:D\rightarrow\mathbb{R}$ eine beschränkte Funktion.
+
+\begin{definition}{9.1}
+Mann nennt $Z=\left\{ \left( x_0,x_1,\dots,x_n\right), \left( y_0,y_1,\dots,y_m\right)\right\}$ eine Zerlegung des Quaders $D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack$ falls gilt 
+\begin{align*}
+a_1&=x_0 < x_1\dots <x_n=b_1\\
+a_2&=y_0 < y_1\dots <y_m=b_2
+\end{align*}
+\begin{enumerate}
+\item WHERE IS NUMBER 1??
+\item Die Feinheit einer Zerlegung $Z\in Z\left( D\right)$ ist \[\left\| Z \right\|: = \mathop {\max }\limits_{i,j} \left\{ {\left| {{x_{i + 1}} - {x_i}} \right|,\left| {{y_{j + 1}} - {y_j}} \right|} \right\}\]
+\item Für eine vorgegebene Zerlegung $Z$, nennt man die Mengen \[{Q_{ij}}: = \left[ {{x_i},{x_{i + 1}}} \right] \times \left[ {{y_j},{y_{j + 1}}} \right]\] die Teilquader der Zerlegung $Z$. Das Volumen des Teilquaders $Q_{ij}$ ist \[\text{vol}\left( {{Q_{ij}}} \right): = \left( {{x_{i + 1}} - {x_i}} \right)\left( {{y_{j + 1}} - {y_j}} \right)\]
+\item Für beliebige Punkte $\xi_{ij}\in Q_{ij}$ der Jeweiligen Teilquader nennt man \[{R_f}\left( Z \right): = \sum\limits_{i,j} {f\left( {{\xi _{ij}}} \right){\text{vol}}\left( {{Q_i}j} \right)} \] eine Riemannsche Summe zur Zerlegung $Z$ 
+\item Analog zum Integral einer Variablen heissen für eine Zerlegung $Z$ 
+\begin{align*}
+{U_f}\left( Z \right): =&\sum\limits_{i,j} {\mathop {\inf }\limits_{\Romanbar{X}\in Q_{ij}} } f\left(\Romanbar{X}\right){\text{vol}}\left( {{Q_i}j} \right)\\
+{O_f}\left( Z \right): =&\sum\limits_{i,j} {\mathop {\sup }\limits_{\Romanbar{X}\in Q_{ij}} } f\left(\Romanbar{X}\right){\text{vol}}\left( {{Q_i}j} \right)
+\end{align*}
+die Riemannsche Untersumme bzw. Riemannsche Obersumme con $f\left( x\right)$
+\end{enumerate}
+\end{definition}
+\subsubsection*{Bemerkung 9.2}
+\begin{enumerate}
+\item Es gilt $$U_f\left( Z\right)\leq R_f\left( Z\right)\leq O_f\left( Z\right)$$ d.h. eine Riemannsche Summe zur Zerlegung $Z$ liegt stets zwischen der Unter und Obersumme dieser Zerlegung. 
+\item Entsteht eine Zerlegung $Z_2$ aus der Zerlegung $Z_1$ durch Hinzunahme weiterer zwischenpunkte $x_i$ oder/und $y_j$ so gilt 
+\begin{align*}
+U_f\left( Z_2\right)&\geq U_f\left( Z_1\right)\text{ und }\\
+O_f\left( Z_2\right)&\leq O_f\left( Z_1\right)
+\end{align*}
+Für zwei beliebige Zerlegungen $Z_1,Z_2$ gilt stets $$U_f\left( Z_1\right)\leq O_f\left( Z_2\right)$$
+\missingfigure{Page 211 bottom}
+\end{enumerate}
+\begin{definition}{9.3}
+Sei $f:D\rightarrow\mathbb{R}$ beschränkt 
+\begin{enumerate}
+\item Riemannsche Unterintegral bsz. Riemannsche Oberintegral der Funktion $f\left( x\right)$ über $D$ ist 
+\begin{align*}
+{U_f}&: = \sup \left\{ {{U_f}\left( z \right):z \in Z\left( D \right)} \right\}: = \int\limits_{\underline{D}} {f(x)d\mu } \\
+{O_f}&: = \inf \left\{ {{O_f}\left( z \right):z \in Z\left( D \right)} \right\}: = \int\limits_D^ -  {f(x)d\mu } 
+\end{align*}
+\item Die Funktion $f(x)$ nennt man Riemann - integrierbar über $D$, falls Unter und Oberintegral übereinstimmen. Das Riemann Integral von $f(x)$ über $D$ ist \[\int\limits_D {f(x)d\mu  = \int\limits_D^ -  {f(x)d\mu  = } \int\limits_{\underline{D}} {f(x)d\mu } } \]
+\end{enumerate}
+\end{definition}
+
+\subsubsection*{Bemerkung}
+In höheren Dimensionen, $n >2$, ist die Vorgehensweise analog. Schreibweise: Für $n=2$, $n=3$
+\[\int\limits_D {f\left( {x,y} \right)d\mu {\text{ bzw. }}} \int\limits_D {f\left( {x,y,z} \right)d\mu } \]
+oder auch 
+\[\int\limits_D {f\left( {x,y} \right)dxdy{\text{ bzw. }}} \int\limits_D {f\left( {x,y,z} \right)dxdydz} \]
+oder 
+\[\int\limits_D {fdxdy{\text{ bzw. }}} \int\limits_D {fdxdydz} \]
+
+\subsubsection*{Satz 9.4 (Elementare Eigenschaften des Integrals)}
+\begin{enumerate}
+\item \underline{Linearität:} Seien $f,g: D\rightarrow\mathbb{R}$ beschränkt und R integrabel, $\beta,\alpha\in\mathbb{R}$. Dann sind $\alpha f$, $f+g$ R - Integrabel
+$$\int\limits_D {\left( {\alpha f + \beta g} \right)d\mu  = \alpha \int\limits_D {fd\mu }  + \beta \int\limits_D {gd\mu } } $$
+\item \underline{Monotonie:} Gilt $f(x)\leq g(x)$, $\forall x\in D$, so folgt \[\int\limits_D {fd\mu }  \le \int\limits_D {gd\mu } \]
+\item\underline{Positivität:} Gilt für alle $x\in D$, $f(x)\geq 0$ (d.h. $f(x)$ ist nichtnegativ), so folgt \[\int\limits_D {fd\mu }  \ge 0\]
+\item \underline{Abschätzung} \[\left| {\int\limits_D {f(x)d\mu } } \right| \le \mathop {\sup }\limits_{x \in D} \left| {f(x)} \right|{\text{vol}}\left( D \right)\]
+\item Sind $D_1,d_2,D$ Quader, $D=D_1\cup D_2$ und $\text{vol}\left( D_1\cap D_2\right)=0$, so ist $f$ genau dann über $D$ integrierbar, falls $f$ über $D_1$ und über $D_2$ integrierbar ist und es gilt \[\int\limits_D {fd\mu }  = \int\limits_{{D_1}} {fd\mu }  + \int\limits_{{D_2}} {fd\mu } \](Gebietsadditivität)
+\end{enumerate}
+
+\section{Der Satz von Fubini}
+\todo[inline]{According to the notes it should be 9.2, which one is right??}
+Wie kann man das R - Integral konkret berechnen? Der Satz von Fubini hilft uns.
+
+\subsubsection*{Satz 9.5 (Satz von Fubini)}
+Sei $Q=\lbrack a,b\rbrack\times \lbrack c,d\rbrack\in\mathbb{R}^2$ und sei $f\in C\degree\left( Q\right)$. Dann gilt \[\int\limits_Q {fd\mu }  = \int\limits_a^b {\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx = \int\limits_c^d {\left( {\int\limits_a^b {f\left( {x,y} \right)dx} } \right)dy} } \]
+d.h. das Integral von $f$ über $Q$ kann iterativ durch $1-$Dimensionale Integration bestimmt werden 
+
+\subsubsection*{Beispiel 9.6}
+\begin{enumerate}
+\item Sei $f\left( x,y\right)=2x+2yx$, $Q=\lbrack 0,1\rbrack\times\lbrack -2,2\rbrack$
+\begin{align*}\int\limits_Q {fd\mu }  =&\int\limits_{ - 2}^2 {\left( {\int\limits_0^1 {\left( {2x + 2yx} \right)dx} } \right)dy} \\=&\int\limits_{ - 2}^2 {\left( {\left. {{x^2} + y{x^2}} \right|_0^1} \right)dy} \\=&\int\limits_{ - 2}^2 {\left( {1 + y} \right)dy}  = \left. {y + \frac{{{y^2}}}{2}} \right|_{ - 2}^2 = 4
+\end{align*}
+\underline{Oder:}
+\begin{align*}&\int\limits_0^1 {\left( {\int\limits_{ - 2}^2 {\left( {2x + 2yx} \right)dy} } \right)dx} \\ =&\int\limits_0^1 {\left( {\left. {2xy + {y^2}x} \right|_{ - 2}^2} \right)dx} \\ =&\int\limits_0^1 {\left[ {\left( {4x + 4x} \right) - \left( { - 4x + 4x} \right)} \right]dx} \\ =&\int\limits_0^1 {8xdx}  = \left. {4{x^2}} \right|_0^1 = 4
+\end{align*}
+\item \begin{align*}&\int\limits_0^1 {\int\limits_0^{2\pi } {\left( {{e^x}\sin y} \right)dy} dx} \\=&\int\limits_0^1 {\left( {\left. { - {e^x}\cos y} \right|_0^{2\pi }} \right)dx} \\
+=&\int\limits_0^1 0 dx = 0\end{align*}
+\underline{Oder:}
+\begin{align*}&\int\limits_0^{2\pi } {\left( {\int\limits_0^1 {{e^x}\sin ydx} } \right)dy} \\=&\int\limits_0^{2\pi } {\left( {\left. {\sin y{e^x}} \right|_0^1} \right)dy} \\=&\int\limits_0^{2\pi } {\left( {e - 1} \right)\sin ydy} \\
+=&\left. { - \left( {e - 1} \right)\cos y} \right|_0^{2\pi } = 0\end{align*}
+\end{enumerate}
+
+\subsection*{Geometrische Dehnung}\todo{Not sure about the text size...}
+\missingfigure{Page 218 top}
+In der Skizze ergibt sch als Volumen der markierten Schicht bei festem $x$ und sehr kleinen Dicke $dx$ näherungswege das Volumen \[\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx\] Das Aufaddieren sämtlicher Schichtvolumen entspricht gerader der Integration über die Variable $x$, d.h. für das gesuchte Volumen gilt \[V = \int\limits_a^b {\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx} \]
+Bis jetzt können wir nur Integrale über achsenparallel rechteckige bzw. quaderförmige Bereiche berechnen.\\
+
+Das reicht für viele praktische Aufgaben nicht aus. Meist ist der Integrationsbereich $D$ krummling oder zumindest anders begrenzt
+\missingfigure{Page 219 middle}
+Die meisten praktischen Aufgaben lassen sich auf die Integration über sogenannte Normalbereiche zurückführen.
+
+\begin{definition}{9.10}
+\begin{enumerate}
+\item Eine Teilmenge $D\subset\mathbb{R}^2$ heisst ein Normalbereich bezüglich der $x-$achse bzw. bezüglich der $y-$Achse falls es stetige Funktionen $g,h$ bzw. $\overline{g},\overline{h}$ gibt mit
+$$D=\left\{ \left( x,y\right)\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}$$ 
+bzw.
+$$D=\left\{ \left( x,y\right)\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}$$
+\end{enumerate}
+\end{definition}
+
+\subsubsection*{Beispiel}
+Kreise und Rechtecke sind Normalbereiche bzg. beider Achsen 
+\missingfigure{Page 220, top}
+Über Normalbereiche lässt sich sehr bequem integrieren 
+\missingfigure{Page 220 bottom}
+Die markierte Scheibe bei $y=$const. mit kleiner Dicke $dx$ besitzt näherungsweise das Volumen
+\[V(x) = \left( {\int\limits_{g(x)}^{f(x)} {f\left( {x,y} \right)dy} } \right)dx\]
+Nun braucht man $V(x)$ nur noch über $\lbrack a,b\rbrack$ zu integrieren\[V = \int\limits_a^b {\left( {\int\limits_{g(x)}^{h(x)} {f\left( {x,y} \right)dy} } \right)dx} \]
+
+\subsubsection*{Satz 9.11}
+\begin{enumerate}
+\item Ist $f(x)$ stetig auf einem Normalbereich $$D=\left\{ \left( x,y\right)\in\mathbb{R}^2\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}$$ 
+so gilt 
+\[\int\limits_D {f(x)d\mu  = \int\limits_a^b {\left( {\int\limits_{g(x)}^{h(x)} {f\left( {x,y} \right)dy} } \right)dx} } \]
+\item bzw. Falls $$D=\left\{ \left( x,y\right)\in\mathbb{R}^2\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}$$
+so gilt 
+\[\int\limits_D {f(x)d\mu  = \int\limits_{\overline{a}}^{\overline{b}} {\left( {\int\limits_{\overline{g}(x)}^{\overline{h}(x)} {f\left( {x,y} \right)dx} } \right)dy} } \]
+\end{enumerate}
+\subsubsection*{Beispiel 9.12}
+\begin{enumerate}
+\item Sei $f\left( x,y\right)=x-y$
+\missingfigure{Page 222, top}
+%Page 222, top
+\end{enumerate}
+
+
+
