@@ -30,7 +30,7 @@ Seien $A,B$ Aussagen
 Die Folgerung ist transitive. Wir wissen $A\Rightarrow B$ und $B\Rightarrow C$, dann wissen wir dass $A\Rightarrow C$.
 
 \subsection*{Prinzip der Mathematischen Beweises}
-Wir können ber eine Kette von Folgerungen $$A\Rightarrow B \Rightarrow C \dots \Rightarrow S$$
+Wir können ber eine Kette von Folgerungen \[A\Rightarrow B \Rightarrow C \dots \Rightarrow S\]
 einen mathematischen ``Satz'' $S$ aus einen annahme $A$ herleiten. (Ein Beweis ist eine Folge von Implikationen von Aussagen). 
 \subsubsection*{Kontroposition (Umkehrschluss)}
 $A\Rightarrow B$ ist gleichbedeutend mit $\lnot B\Rightarrow\lnot A$.\\
@@ -71,7 +71,7 @@ Falls zugleich $A\subset B$ und $B\subset A$ gilt, bezeichnet man $A$ und $B$ al
 	\item Die Menge $\mathbb{N}=\{0,1,2,\dots\}$ der Natürlichen zahlen.
 	\item Die leere Menge mit ``$\varnothing$'' bezeichnet. Sie ist in jeder Menge enthalten.
 	\item Die Menge $\mathbb{Z}=\{\dots,-2,-1,0,1,2,\dots\}$ aller ganze Zahlen.
-	\item Meistens werden Mengen nicht durch die Liste ihre Elemente gegeben, sondern durch bestimmte Eigenschaften ihrer Elemente definiert $$\mathbb{P}=\{2,3,4,5,7,11,13,\dots\}$$ die Menge aller Primzahlen $\mathbb{P}:\{p\in\mathbb{N}\mid\text{ $p$ primzahl}\}$
+	\item Meistens werden Mengen nicht durch die Liste ihre Elemente gegeben, sondern durch bestimmte Eigenschaften ihrer Elemente definiert \[\mathbb{P}=\{2,3,4,5,7,11,13,\dots\}\] die Menge aller Primzahlen $\mathbb{P}:\{p\in\mathbb{N}\mid\text{ $p$ primzahl}\}$
 \end{enumerate}
 \section{Zwei Prinzipen}
 Wir werden 2 Methoden des Beweises häufig benutzen.
@@ -96,7 +96,7 @@ Sie stellen alle Dominosteinen eine nach der andere. Falls der erste Dominostein
 
 \subsubsection*{Beispiel 1.3 (Induktion)}
 \begin{enumerate}
-\item Für alle $n\geq 1$ gilt: $$1+3+5+\dots (2n-1)=n^2\text{\indent\indent}A(n)$$ Beweis mittels Vollständige Induktion
+\item Für alle $n\geq 1$ gilt: \[1+3+5+\dots (2n-1)=n^2\text{\indent\indent}A(n)\] Beweis mittels Vollständige Induktion
 \begin{enumerate}[i)]
 \item $A(i)$ lautet $1=1^2$ und gilt.
 \item Sei $n\geq 1$. Annahme: so gilt $A(n)$. Die Linke Seite der Identität $A(n+1)$ ist \[1+3+\dots (2n-1)+(2n+1)=n^{2}+(2n+1)=(n+1)^2\] womit $A(n+1)$ bewiesen ist.
@@ -313,9 +313,9 @@ Seien $A_1 \dots A_k \subset x,k\in \mathbb{N}$. Es gilt
 \end{enumerate}
 \begin{enumerate}[($\ast$)]
 \item Wir haben gesehen dass wir manchmal eine Aussage verneinen müssen. Deshalb müssen wir lernen wie man Aussage mit Quantoren verneinen kann.
-$$\neg\left(\forall n:A(n)\right)\Leftrightarrow\left(\exists n:\neg A(n)\right)$$
-$$\neg\left(\exists n:A(n)\right)\Leftrightarrow\left(\forall n:\neg A(n)\right)$$
-$$\neg\left(\forall x\in \mathbb{R}:x^2\geq 0\right)\Leftrightarrow\exists x\in\mathbb{R}:x^2<0$$
+\[\neg\left(\forall n:A(n)\right)\Leftrightarrow\left(\exists n:\neg A(n)\right)\]
+\[\neg\left(\exists n:A(n)\right)\Leftrightarrow\left(\forall n:\neg A(n)\right)\]
+\[\neg\left(\forall x\in \mathbb{R}:x^2\geq 0\right)\Leftrightarrow\exists x\in\mathbb{R}:x^2<0\]
 \end{enumerate}
 \section{Abbildungen}
 Seien $X,Y$ Mengen. 
@@ -324,9 +324,9 @@ Seien $X,Y$ Mengen.
 Eine Funktion oder Abbildung $f:X\rightarrow Y$ der Menge $X$ in die Menge $Y$ ist eine Vorschrift (ein Gesetz) die (das) jedem Element $x\in A$ genau ein Element $y=f(x)\in Y$ zuordnet. \\
 
 Es gibt verschiedene wichtige Objekte die in Zusammenhang mit einem Abbildung auftreten 
-$$X= \text{ Definitionsbereich von } f$$
-$$Y= \text{ Die Ziel Menge}$$
-$$f(x)=\{f(x)\mid x\in X\}\text{ ist das Bild von }f\text{ oder die Bildmenge}$$
+\[X= \text{ Definitionsbereich von } f\]
+\[Y= \text{ Die Ziel Menge}\]
+\[f(x)=\{f(x)\mid x\in X\}\text{ ist das Bild von }f\text{ oder die Bildmenge}\]
 \end{definition}
 
 \subsubsection*{Beispiel 1.10}
@@ -409,7 +409,7 @@ $x\rightarrow x^2+x$
 Sei $f:X\rightarrow Y$ eine Abbildung
 \begin{enumerate}
 \item $f$ heisst injektiv falls auf $f(x_1)=f(x_2)$ stets $x_1=x_2$ folgt, falls jeder $y<\in Y$ höchstens ein Urbild hat.
-\item $f$ heisst surjektiv falls für jedes $y\in Y$ ein $x\in X$ gibt mit $f(x)=y$ $$\forall y\in Y, \exists x\in X:f(x)=y$$wenn jedes Element $y\in Y$ mindestens ein Urbild hat. 
+\item $f$ heisst surjektiv falls für jedes $y\in Y$ ein $x\in X$ gibt mit $f(x)=y$ \[\forall y\in Y, \exists x\in X:f(x)=y\]wenn jedes Element $y\in Y$ mindestens ein Urbild hat. 
 \item $f$ heisst bijektiv falls $f$ injektiv und surjektiv ist, d.h. falls jedes $y\in Y$ genau ein Urbild hat. 
 \end{enumerate}
 \end{definition}
@@ -581,7 +581,7 @@ Sei $f:A\rightarrow B$ eine beliebige Abbildung zwischen endliche Mengen. Falls 
 Mit Abbildungen kann man ``operieren''. Die wichstige Operation ist die Verkettung (oder komposition) zweier Abbildungen. 
 
 \begin{definition}
-\noindent Abbildungen $f:X\rightarrow $, $g:Y\rightarrow Z$ kann man miteinander ausführen. Dies ergibt eine neue Abbildung $$X\mathop  \to \limits^f Y\mathop  \to \limits^g Z$$ $$F:=g\circ f:X\rightarrow Z, x\rightarrow g\left( f(x)\right)   $$
+\noindent Abbildungen $f:X\rightarrow $, $g:Y\rightarrow Z$ kann man miteinander ausführen. Dies ergibt eine neue Abbildung \[X\mathop  \to \limits^f Y\mathop  \to \limits^g Z\] \[F:=g\circ f:X\rightarrow Z, x\rightarrow g\left( f(x)\right)   \]
 \end{definition}
 Zwei Funktionen $f$ und $g$ können verkettet werden wenn der Wertebereich der ersten Funktion mit dem Definitionsbereich der zweiten Funktion übereinstimmt. 
 
@@ -594,14 +594,14 @@ Zwei Funktionen $f$ und $g$ können verkettet werden wenn der Wertebereich der e
 \underline{Zu Beachten:}
 In dieser Notation steht die zuerst angewandte Abbildung rechts; das heisst bei $g\circ f$ wird zuerst die Funktion $f$ angewandt und dann die Funktion $g$. 
 \begin{itemize}
-\item Die Identische Abbildung verhölt sich bei der Komposition \todo{?neu?, page 19.2 top}, für eine Funktion $$f:X\rightarrow Y \text{ gilt also}$$
-$$f\circ id_X=f=id_Y \circ Y$$ wobei $$id_X:\Romanbar{X}\rightarrow\Romanbar{X}$$$$x\rightarrow x$$ $$id_Y :Y\rightarrow Y$$$$y\rightarrow y$$
+\item Die Identische Abbildung verhölt sich bei der Komposition \todo{?neu?, page 19.2 top}, für eine Funktion \[f:X\rightarrow Y \text{ gilt also}\]
+\[f\circ id_X=f=id_Y \circ Y\] wobei \[id_X:\Romanbar{X}\rightarrow\Romanbar{X}\]\[x\rightarrow x\] \[id_Y :Y\rightarrow Y\]\[y\rightarrow y\]
 
-\item Die Komposition von Funktionen ist associativ, d.h. für Funktionen $f,g,h$ gilt $$\left( h\circ g\right)\circ f=h\circ \left( g\circ f\right)$$
-\item Aber die Komposition von Funktionen ist im Allgemeinen nicht kommutativ! $$f\circ g\not= g\circ f$$
+\item Die Komposition von Funktionen ist associativ, d.h. für Funktionen $f,g,h$ gilt \[\left( h\circ g\right)\circ f=h\circ \left( g\circ f\right)\]
+\item Aber die Komposition von Funktionen ist im Allgemeinen nicht kommutativ! \[f\circ g\not= g\circ f\]
 Zum Beispiel:
-$$f:\mathbb{R}\rightarrow\mathbb{R}$$$$x\rightarrow x^2$$$$g:\mathbb{R}\rightarrow\mathbb{R}$$$$x\rightarrow x+1$$
-$$f\circ g=f\left( g(x)\right)=f(x+1)=(x+1)^2=x^2+2x+1$$$$g\circ f=g\left( f(x)\right)=g(x^2)=x^2+1$$
+\[f:\mathbb{R}\rightarrow\mathbb{R}\]\[x\rightarrow x^2\]\[g:\mathbb{R}\rightarrow\mathbb{R}\]\[x\rightarrow x+1\]
+\[f\circ g=f\left( g(x)\right)=f(x+1)=(x+1)^2=x^2+2x+1\]\[g\circ f=g\left( f(x)\right)=g(x^2)=x^2+1\]
 \end{itemize}
 
 \section{Die Inverse Abbildung (Umkehrfunktion)}
@@ -611,17 +611,17 @@ Die Inverse Funktion $g:Y\rightarrow X$, einer bijektiven Funktion $f:X\rightarr
 
  $g(y):=x$, eindeutig definierte $ x\in\Romanbar{X}$, mit $f(x)=y$. Dann ist definitionsgemäss $(g\circ f)(x)=x$, d.h. $g\circ f:id_{\Romanbar{X}}$. Die Eindeutig definierte Abbildung $g$ wird (auch) mit $f^{-1}$ bezeichnet und Inverse von $f$ genannt.\\
 
-Für $f\circ f^{-1}:$ Sei $y\in Y$ und sei $x$ mit $f(x)=y$. Dann ist $\left( f\circ f^{-1}\right)(y)=f\left(f^{-1}(y)\right)=f(x)=y$ $$f\circ f^{-1}=id_Y$$
+Für $f\circ f^{-1}:$ Sei $y\in Y$ und sei $x$ mit $f(x)=y$. Dann ist $\left( f\circ f^{-1}\right)(y)=f\left(f^{-1}(y)\right)=f(x)=y$ \[f\circ f^{-1}=id_Y\]
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
-\item $$f:\mathbb{R}\rightarrow\mathbb{R}$$$$x\rightarrow 2x+3$$ bijektive\\
-Umkehrfunktion ist gegeben durch $$f^{-1}:\mathbb{R}\rightarrow\mathbb{R}$$$$x\rightarrow\frac{x-3}{2}$$
-\item Sei $\mathbb{R}^+=\lbrack 0,\infty\rbrack$ die Menge der nichtnegativen reelen Zahlen und $$f:\mathbb{R}^+\rightarrow\mathbb{R}^+$$ mit $$x\rightarrow x^2$$
-Dann ist $f$ bijektive und die Umkehrfunktion $$f^{-1}:\mathbb{R}^+\rightarrow\mathbb{R}^+$$ ist gegeben durch $$x\rightarrow\sqrt{x}$$
+\item \[f:\mathbb{R}\rightarrow\mathbb{R}\]\[x\rightarrow 2x+3\] bijektive\\
+Umkehrfunktion ist gegeben durch \[f^{-1}:\mathbb{R}\rightarrow\mathbb{R}\]\[x\rightarrow\frac{x-3}{2}\]
+\item Sei $\mathbb{R}^+=\lbrack 0,\infty\rbrack$ die Menge der nichtnegativen reelen Zahlen und \[f:\mathbb{R}^+\rightarrow\mathbb{R}^+\] mit \[x\rightarrow x^2\]
+Dann ist $f$ bijektive und die Umkehrfunktion \[f^{-1}:\mathbb{R}^+\rightarrow\mathbb{R}^+\] ist gegeben durch \[x\rightarrow\sqrt{x}\]
 \end{enumerate}
 
 \underline{Verallgemenerungen}
-Falls $f:X\rightarrow Y$ injektive ist, kann man die Umkehrabbildung $$f^{-1}:f\left(\Romanbar{X}\right)\rightarrow\Romanbar{X}$$ definieren. Das heisst, die Funktion $f^{-1}$ erfüllt: wenn $f(x)=y$, dann $f^{-1}(y)=x$\\
+Falls $f:X\rightarrow Y$ injektive ist, kann man die Umkehrabbildung \[f^{-1}:f\left(\Romanbar{X}\right)\rightarrow\Romanbar{X}\] definieren. Das heisst, die Funktion $f^{-1}$ erfüllt: wenn $f(x)=y$, dann $f^{-1}(y)=x$\\
 
 \noindent Vorsicht: $f^{-1}\circ f=id_{\Romanbar{X}}$ aber $f\circ f^{-1}=id_{f\left(\Romanbar{X}\right)}$ und $f\circ f^{-1}=id_Y$ genau dann wenn $f(X)=Y$, d.h. $f$ bijektive ist.
