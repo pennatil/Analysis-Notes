@@ -1,98 +1,98 @@
-\chapter{Reele Zahlen, Euklidische Räume und Komplexe Zahlen}
+\chapter{Reelle Zahlen, Euklidische Räume und Komplexe Zahlen}
 \section{Elementare Zahlen}
 \begin{tabular}{r l c c c}
-Naturzahl & $\mathbb{N}$&$=$& $\{0,1,2,\dots\}$& addieren und multiplizieren\\
+Natürliche Zahlen & $\mathbb{N}$&$=$& $\{0,1,2,\dots\}$& addieren und multiplizieren\\
 ~& $\cap$ &~&~&~\\
-LOOK TODO & $\mathbb{Z}$&$=$& $\{\dots ,-2,-1,0,1,2,\dots\}$& subtrairen\\
+Ganze Zahlen & $\mathbb{Z}$&$=$& $\{\dots ,-2,-1,0,1,2,\dots\}$& subtrahieren\\
 ~& $\cap$ &~&~&~\\
-Rationalzahlen & $\mathbb{Q}$&$=$& $\left\{ {\left. {\frac{p}{q}} \right|p,q \in \mathbb{Z},q\not  = 0} \right\}$& dividieren\\
+Rationale Zahlen & $\mathbb{Q}$&$=$& $\left\{ {\left. {\frac{p}{q}} \right|p,q \in \mathbb{Z},q\not  = 0} \right\}$& dividieren\\
 \end{tabular}
 \todo{Before set Z, can't read, page 22}\\
-Viele gleichungen haben keine Lösung in $\mathbb{Q}$.
+Viele Gleichungen haben keine Lösung in $\mathbb{Q}$.
 \subsubsection*{Satz 2.1}
-Sei $p\in\mathbb{N}$ eine Primzahl. Dann hat $x^2=p$ keine Lösung in $\mathbb{Q}$
+Sei $p\in\mathbb{N}$ eine Primzahl. Dann hat $x^2=p$ keine Lösung in $\mathbb{Q}$.
 \subsubsection*{Beweis}
-Zum Erinnerung zwei Natürlichen Zahlen $a$ und $b$ sind teilfrmd (oder relativ prim) wenn es keine Natürliche Zahl ausser der Eins gibt, die beiden Zahlen teilt. \[\left( (a,b)=1\right)\rightarrow\text{ grösste Gemeinsame Teiler}\]
+Zum Erinnerung zwei Natürlichen Zahlen $a$ und $b$ sind teilfremd (oder relativ prim) wenn es keine natürliche Zahl ausser der Eins gibt, die beiden Zahlen teilt. \[\left( (a,b)=1\right)\rightarrow\text{ grösster gemeinsamer Teiler}\]
 
 \subsubsection*{Indirekter Beweis}
-Wir nehmen an: es gibt $x=\frac{a}{b}\in \mathbb{Q}$ mit $x^2 =p$, wobei $a,b$ teilfremd und $\geq 1$ sind. Dann gilt \[a^2=pb^2\] woraus folgt, dass $p$ $a$ teilt also ist $a=pk$, $k\in\mathbb{N}$ und somit \[a^2=p^2k^2=pb^2\Rightarrow pk^2=b^2\] woraus folgt, dass $p$ $b$ teilt.
+Wir nehmen an: es gibt $x=\frac{a}{b}\in \mathbb{Q}$ mit $x^2 =p$, wobei $a,b$ teilfremd und $\geq 1$ sind. Dann gilt \[a^2=pb^2\] woraus folgt, dass $p$ $a$ teilt, also ist $a=pk$, $k\in\mathbb{N}$ und somit \[a^2=p^2k^2=pb^2\Rightarrow pk^2=b^2\] woraus folgt, dass $p$ $b$ teilt.
 
-\section{Die Reelen Zahlen}
-Wir werden jetzt das System von Axiomen beschreiben das die Menge der Reelen Zahlen ``eindeutig'' characterisiert. \\
+\section{Die Reellen Zahlen}
+Wir werden jetzt das System von Axiomen beschreiben, das die Menge der reellen Zahlen ``eindeutig'' charakterisiert. \\
 
-Die Menge $\mathbb{R}$ der Reelen Zahlen ist mit zwei Verknüpfungen ``$+$'' (Addition) und ``$\cdot$'' (Multiplikation) versehen sowie mit einer Ordnungsrelation $\leq$. Die axiome werden wie folgt gruppiert:
+Die Menge $\mathbb{R}$ der reellen Zahlen ist mit zwei Verknüpfungen ``$+$'' (Addition) und ``$\cdot$'' (Multiplikation) versehen, sowie mit einer Ordnungsrelation $\leq$. Die axiome werden wie folgt gruppiert:
 \begin{enumerate}
 \item \textbf{$\left( \mathbb{R},+,\cdot\right)$ ist ein Koerper}\\
-Es gibt 2 Operationen (Zweistellige Verknüpfungen)
+Es gibt zwei Operationen (zweistellige Verknüpfungen)
 \begin{itemize}
 \item $+:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}$\\
 $(a,b)\rightarrow a+b$
 \item $\times:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}$\\
 $(a,b)\rightarrow a\cdot b$
 \end{itemize}
-und 2 ausgezeichnete Element 0 und 1 in $\mathbb{R}$ die folgenden Eigenschaften haben:\\
+und zwei ausgezeichnete Elemente 0 und 1 in $\mathbb{R}$, die folgenden Eigenschaften haben:\\
 
 \begin{tabular}{l r l r l}
-Komutivität & A1) & $x+y=y+x$  \\ 
+Kommutativität & A1) & $x+y=y+x$  \\
 Assoziativität & A2) & $(x+y)+z=x+(y+z)$  \\
 Neutrales Element & A3) & $x+0=x=0+x$ \\
-Inverse Element & A4) & $\forall x\in\mathbb{R}, \exists y\in\mathbb{R}$ mit $x+y=0=y+x$
+Inverses Element & A4) & $\forall x\in\mathbb{R}, \exists y\in\mathbb{R}$ mit $x+y=0=y+x$
 \end{tabular}
 
 \begin{tabular}{l r l r l}
-Komutivität  & M1) & $x\cdot y=y\cdot x$ \\ 
+Komutivität  & M1) & $x\cdot y=y\cdot x$ \\
 Assoziativität  & M2) & $(xy)z=x(yz)$ \\
 Neutrales Element  & M3) & $x\cdot 1= x =1\cdot x$\\
 Inverse Element  & M4) & $\forall x\in\mathbb{R}, x\not =0$  $ \exists y\in\mathbb{R}$ mit $xy=1=yx$
 \end{tabular}
 \\
 
-und Die Multiplikation ist verträglich it der Addition im Sinne des Distributivitäts-Gesetz (D)\[\forall x,y,z\in\mathbb{R}:x(y+z)=xy+xz\]
+und die Multiplikation ist verträglich mit der Addition im Sinne des Distributivitätsgesetz (D)\[\forall x,y,z\in\mathbb{R}:x(y+z)=xy+xz\]
 
 \begin{itemize}
-\item $( \mathbb{R},+)$ mit A1$\rightarrow$A4 ist eine Abelische Gruppe bezüglich der Addition
-\item  $( \mathbb{R},+,\cdot)$ mit A1$\rightarrow$A4, M1$\rightarrow$M4 und D ist ein Zahlkörper. 
+\item $( \mathbb{R},+)$ mit A1$\rightarrow$A4 ist eine Abelsche Gruppe bezüglich der Addition
+\item  $( \mathbb{R},+,\cdot)$ mit A1$\rightarrow$A4, M1$\rightarrow$M4 und D ist ein Zahlkörper.
 \end{itemize}
 
 \subsubsection*{Bemerkung 2.2}
-Eine Menge $G$ versetzen mit Verknüpfung $+$ und Neutrales Element $O$ die den obigen Eigenschaften A2$\rightarrow$A4 genügen heisst Gruppe.\\
+Eine Menge $G$, versetzt mit Verknüpfung $+$ und dem neutralen Element $0$, die den obigen Eigenschaften A2$\rightarrow$A4 genügt, heisst Gruppe.\\
 
-Eine enge $K$ versetzen mit Verknüpfung $+,\cdot$ und Elementen $0\not =1$ die den obigen Eigenschaften 
-A1$\rightarrow$A4, M1$\rightarrow$M4, D genügen heisst Körper. 
+Eine Menge $K$ versetzt mit Verknüpfung $+,\cdot$ und Elementen $0\not =1$, die den obigen Eigenschaften
+A1$\rightarrow$A4, M1$\rightarrow$M4, D genügt heisst Körper.
 \newpage
 \subsubsection*{Folgerung 2.3}
 Seien $a,b,c,d\in\mathbb{R}$\\
 
-$\left.\begin{minipage}{10.5cm} 
+$\left.\begin{minipage}{10.5cm}
 \begin{enumerate}[i)]
-\item $a+b=a+c\Rightarrow b=c$ und $O$ is eindeutig, d.h. Falls $z\in\mathbb{R}$ der Eigenschaften $a+z=a$ $\forall a\in\mathbb{R}$ genügt, so folgt $z=0$
+\item $a+b=a+c\Rightarrow b=c$ und $0$ ist eindeutig, d.h. falls $z\in\mathbb{R}$ der Eigenschaften $a+z=a$ $\forall a\in\mathbb{R}$ genügt, so folgt $z=0$
 \item $\forall a,b\mathbb{R}$, $\exists !$ (eindeutig bestimmtes) $x\in\mathbb{R}:a+x=b$. Wir schreiben $x=b-a$ und $0-a=-a$ ist das additive Inverse zu $a$
 \item $b-a=b+(-a)$
 \item $-(-a)=a$
 \end{enumerate}
 \end{minipage}\right\rbrace$ A
-$\left.\begin{minipage}{10.5cm} 
+$\left.\begin{minipage}{10.5cm}
 \begin{enumerate}
-\item[v)] Falls $ab=ac$ und $a\not = 0\Rightarrow b=c$ und 1 ist eindeutig, d.h. falls $x\in\mathbb{R}$ der Eigenschaften $ax=a$ $\forall a\in\mathbb{R}$ genügt so folgt $x=1$
-\item[vi)] $\forall a,b\in\mathbb{R}$, $a\not =0$, $\exists !x\in\mathbb{R}:ax=b$. Wir schreiben $x=\frac{b}{a}$ und $\frac{1}{a}=a^{-1}$ ist das Multiplikativ Inverse zu $a$.
-\item[vii)] Falls $a\not =0\Rightarrow {\left(a^{-1}\right)}^{-1}=a$ 
+\item[v)] Falls $ab=ac$ und $a\not = 0\Rightarrow b=c$ und 1 ist eindeutig, d.h. falls $x\in\mathbb{R}$ der Eigenschaften $ax=a$ $\forall a\in\mathbb{R}$ genügt, so folgt $x=1$
+\item[vi)] $\forall a,b\in\mathbb{R}$, $a\not =0$, $\exists !x\in\mathbb{R}:ax=b$. Wir schreiben $x=\frac{b}{a}$ und $\frac{1}{a}=a^{-1}$ ist das multiplikativ Inverse zu $a$.
+\item[vii)] Falls $a\not =0\Rightarrow {\left(a^{-1}\right)}^{-1}=a$
 \end{enumerate}
 \end{minipage}\right\rbrace$ M
 \begin{enumerate}
 \item[viii)] $\forall a\in\mathbb{R}$, $a\cdot 0=0$
-\item[ix)] Falls $ab=0$ dann folgt $a=0$ oder $b=0$
+\item[ix)] Falls $ab=0$, dann folgt $a=0$ oder $b=0$
 \end{enumerate}
 \subsubsection*{Beweis 2.3}
 \begin{enumerate}
 \item Sei $a+b=a+c$\\ A4 $\Rightarrow\exists y\in\mathbb{R}:a+y=0$\\$a+b=a+c\Rightarrow y+(a+b)=y+(a+c)$\\$\mathop  \Rightarrow \limits^{A2} (y+a)+b=(y+a)+c$\\$\Rightarrow 0+b=0+c \mathop  \Rightarrow \limits^{A3} b=c$\\
-Nehmen wir an, dass es $0'\in\mathbb{R}$ gibt so dass $x+0'=x$, $\forall x\in\mathbb{R}$, d.h. es gibt eine zweite neutrale Element für $+$.\\
+Nehmen wir an, dass es $0'\in\mathbb{R}$ gibt, so dass $x+0'=x$, $\forall x\in\mathbb{R}$, d.h. es gibt ein zweites neutrale Element für $+$.\\
 
 \noindent Dann $0+0'=0$ aber auch A3 $\Rightarrow 0+0=0\Rightarrow 0+0'=0+0\Rightarrow 0=0'$
 \item Seien $a,b\in\mathbb{R}$, und sei $y\in\mathbb{R}$ mit $a+y=0$. Definieren wir $x:=y+b\Rightarrow a+x=a+(y+b)=(a+y)+b=0+b=b$\\
-$\Rightarrow \exists$ mindestens eine Lösung der Gleichung $a+x=b$. Von i) folgt dass $x$ eindeutig bestimmt ist $a+x=b=a+x' \Rightarrow x=x'$
-\item Seien $x=b-a$, $y=b+(-a)$. Wir Wollen beweisen dass $x=y$.\\
+$\Rightarrow$ es gibt mindestens eine Lösung der Gleichung $a+x=b$. Von i) folgt, dass $x$ eindeutig bestimmt ist $a+x=b=a+x' \Rightarrow x=x'$
+\item Seien $x=b-a$, $y=b+(-a)$. Wir wollen beweisen, dass $x=y$.\\
 
-\noindent Aus i) wissen wir dass $b-a$ eine Lösung von $a+x=b$ \[y+a=\left( b+(-a)\right)+a=b+\left( (-a)+a\right)=b+0=0\]
+\noindent Aus i) wissen wir, dass $b-a$ eine Lösung von $a+x=b$ \[y+a=\left( b+(-a)\right)+a=b+\left( (-a)+a\right)=b+0=0\] ist
 $\Rightarrow y$ ist auch eine Lösung.\\
 Weil die Lösung von $a+x=b$ ist eindeutig bestimmt, ist $y=x$
 \item
@@ -106,19 +106,19 @@ $a\cdot 0=a(0+0)=a\cdot 0+a\cdot 0\Rightarrow a\cdot 0=0$
 Wir nehmen an: $a\not=0$ mit \todo{?multipli? page 27 middle to top} Inversen $a^{-1}$, ( $a^{-1}$ existiert mittels M4). So folgt $b=1\cdot b=\left( a^{-1}\cdot a\right)b=a^{-1}(a\cdot b)=a^{-1}\cdot 0=0$
 \end{enumerate}
 \item Ordnungsaxiome $\leq$\\
-Auf $\mathbb{R}$ gibt es eine Relation, $\leq$, genanten Ordnung, die folgenden Eigenschaften genügt
+Auf $\mathbb{R}$ gibt es eine Relation, $\leq$, genante Ordnung, die folgenden Eigenschaften genügt
 \begin{enumerate}
-\item Reflexität: $\forall x\in\mathbb{R}$, $x\leq x$
+\item Reflexivität: $\forall x\in\mathbb{R}$, $x\leq x$
 \item Transitivität: $\forall x,y,z\in\mathbb{R}$: $x\leq y\land y\leq z\Rightarrow x\leq z$
-\item Identivität: $\forall x,y\in\mathbb{R}$, $(x\leq y)$ und $(y\leq x)\Rightarrow x=y$
-\item Die Ordnung ist total: $\forall x,y\in\mathbb{R}$ gilt entweder $x\leq y$ oder $y\leq x$ 
+\item Identität: $\forall x,y\in\mathbb{R}$, $(x\leq y)$ und $(y\leq x)\Rightarrow x=y$
+\item Die Ordnung ist total: $\forall x,y\in\mathbb{R}$ gilt entweder $x\leq y$ oder $y\leq x$
 \end{enumerate}
 Die Ordnung ist konsistent mit $+$, und $\cdot$
 \begin{enumerate}
 \item $x\leq y\Rightarrow x+z\leq y+z$\hspace{10mm}$\forall x,y,z\in\mathbb{R}$
 \item $x,y\geq 0\Rightarrow xy\geq 0$
 \end{enumerate}
-Mit $\leq$ hat man auch$\geq,<,>$. Wir Verzichten auf eine Auflistung aller Folgerungen und beschränken uns auf einzige wichtige Folgerungen.
+Mit $\leq$ hat man auch$\geq,<,>$. Wir verzichten auf eine Auflistung aller Folgerungen und beschränken uns auf einige wichtigen Folgerungen.
 \subsubsection*{Folgerungen 2.4}
 \begin{enumerate}[i)]
 \item $x\leq 0$ und $y\leq 0 \Rightarrow xy\geq 0$
@@ -133,23 +133,23 @@ Mit $\leq$ hat man auch$\geq,<,>$. Wir Verzichten auf eine Auflistung aller Folg
 \subsubsection*{Bemerkung 2.5}
 $\leq$ auf \todo{What? page 28 bottom} genügt den obigen Eigenschaften. Die entscheidende weitere Eigenschaft von $\mathbb{R}$ ist das.
 \item Ordnungsvollständigkeit\\
-Vollständigskeitaxiom:\todo{Check for layout issues with title}\\
-Seien $A,B\subset\mathbb{R}$ nicht leere Teilmenge von $\mathbb{R}$, so dass $a\leq b$ für alle $a\in A,b\in B$. Dann gibt es $c\in\mathbb{R}$ mit $a\leq c\leq b$\hspace{5mm} $\forall a\in A,b\in B$
+Vollständigkeitsaxiom:\todo{Check for layout issues with title}\\
+Seien $A,B\subset\mathbb{R}$ nicht leere Teilmengen von $\mathbb{R}$, so dass $a\leq b$ für alle $a\in A,b\in B$. Dann gibt es $c\in\mathbb{R}$ mit $a\leq c\leq b$\hspace{5mm} $\forall a\in A,b\in B$
 \subsubsection*{Bemerkung 2.6}
 \todo{What? page 29 bottom} erfüllt dieses Eigenschaft nicht!\\
 
 
-Seien \[A=\{x\in\mathbb{Q}\mid x\geq 0, x^2\leq 2\}\] \[B=\{y\in Q\mid y\geq 0, y^2 \geq 2\}\] 
+Seien \[A=\{x\in\mathbb{Q}\mid x\geq 0, x^2\leq 2\}\] \[B=\{y\in Q\mid y\geq 0, y^2 \geq 2\}\]
 
-Dann gilt $a\leq b$ $\forall a\in A$ $b\in B$. ABer ein $c\in\mathbb{Q}$, mit $a\leq c\leq b$ würde dann $c^2=2$ erfüllen! In Satz 2.1 haben wir gesehen dass $x^2=p$ keine Lösung in $\mathbb{Q}$ hat. \\
+Dann gilt $a\leq b$ $\forall a\in A$ $b\in B$. Aber ein $c\in\mathbb{Q}$, mit $a\leq c\leq b$ würde dann $c^2=2$ erfüllen! In Satz 2.1 haben wir gesehen dass $x^2=p$ keine Lösung in $\mathbb{Q}$ hat. \\
 
 Wir definieren jetzt für $x,y\in\mathbb{R}$ \[\max \{ x,y\}  = \left\{ {\begin{array}{*{20}{c}}
 {x\text{ falls }y \le x}\\
 {y\text{ falls }x \le y}
-\end{array}} \right.\] Insbesondere ist der Absolutbetrag einer zahl $x\in\mathbb{R}, \left| x \right|$ \[\left| x \right|:\max \{x,-x\}\] Für diesen gilt folgender Wichtiger Satz
+\end{array}} \right.\] Insbesondere ist der Absolutbetrag einer Zahl $x\in\mathbb{R}, \left| x \right|$ \[\left| x \right|:\max \{x,-x\}\] Für diesen gilt folgender wichtiger Satz
 \subsubsection*{Satz 2.7}
 \begin{enumerate}[i)]
-\item $\left| {x + y} \right| \le \left| x \right| + \left| y \right|$ (Dreiecks Ungleichung)
+\item $\left| {x + y} \right| \le \left| x \right| + \left| y \right|$ (Dreiecksungleichung)
 \item $\left| {xy} \right| = \left| x \right|\left| y \right|$
 \end{enumerate}
 \subsubsection*{Beweis 2.7}
@@ -159,73 +159,73 @@ Wir definieren jetzt für $x,y\in\mathbb{R}$ \[\max \{ x,y\}  = \left\{ {\begin{
 \end{enumerate}
 
 \subsubsection*{Satz (Young)}
-Für alle $a,b\in\mathbb{R}$. $\delta >0$ gilt $2\left| {ab} \right| \le \delta {a^2} + \frac{{{b^2}}}{\delta }$
+Für alle $a,b\in\mathbb{R}$, $\delta >0$ gilt $2\left| {ab} \right| \le \delta {a^2} + \frac{{{b^2}}}{\delta }$
 \end{enumerate}
 
 \section{Infimum und Supremum}
-In Zusammenhang mit der Ordnung führen wir einige Wichtige Definitionen ein:
+Im Zusammenhang mit der Ordnung führen wir einige wichtige Definitionen ein:
 
 \begin{definition}{2.8}
-Sei $\Romanbar{X}\subset\mathbb{R}$ eine Teilmenge 
+Sei $\Romanbar{X}\subset\mathbb{R}$ eine Teilmenge
 \begin{enumerate}[\indent a)]
-\item $\Romanbar{X}$ ist nach oben beschränkt falls es $c\in\mathbb{R}$ gibt $x\leq c, \forall x\in X$. Jeder derartige $c$ heisst eine Obere Schranke für $\Romanbar{X}$.
-\item $\Romanbar{X}$ ist nach unten beschränkt, falls es $c\in\mathbb{R}$ gibt, mit $x\geq c$, $\forall x\in X$. Jeder derartige $c$ heisst untere Schranke für $\Romanbar{X}$.
+\item $\Romanbar{X}$ ist nach oben beschränkt, falls es $c\in\mathbb{R}$ gibt $x\leq c, \forall x\in X$. Jedes derartige $c$ heisst eine obere Schranke für $\Romanbar{X}$.
+\item $\Romanbar{X}$ ist nach unten beschränkt, falls es $c\in\mathbb{R}$ gibt, mit $x\geq c$, $\forall x\in X$. Jedes derartige $c$ heisst untere Schranke für $\Romanbar{X}$.
 \item $X$ ist beschränkt falls es nach oben und unten beschränkt ist.
-\item Ein element $a\in\Romanbar{X}$ ist ein maximales Element (oder Maximum) von $\Romanbar{X}$ falls $x\leq a$, $\forall x\in\Romanbar{X}$. Falls ein Maximum (resp. minimum) existiert, wird es mit $\max\Romanbar{X}$ ($\min\Romanbar{X}$) bezeichnet. Falls $\Romanbar{X}$ keine obere schränke hat, ist $\Romanbar{X}$ nach oben unbeschränkt (analog für obere sch.).
+\item Ein Element $a\in\Romanbar{X}$ ist ein maximales Element (oder Maximum) von $\Romanbar{X}$ falls $x\leq a$, $\forall x\in\Romanbar{X}$. Falls ein Maximum (bzw. Minimum) existiert, wird es mit $\max\Romanbar{X}$ ($\min\Romanbar{X}$) bezeichnet. Falls $\Romanbar{X}$ keine obere Schranke hat, ist $\Romanbar{X}$ nach oben unbeschränkt (analog für obere Schranke).
 \end{enumerate}
 \end{definition}
 \subsubsection*{Beispiel 2.9}
 \begin{enumerate}
-\item $A=\{x\in\mathbb{R}\mid x>0\}$ ist nach oben unbeschränkt. $A$ ist nach unten beschränkt. Jedes \todo{WHAT? Page 32 top}$\leq 0$ ist eine untere Schranke. 
+\item $A=\{x\in\mathbb{R}\mid x>0\}$ ist nach oben unbeschränkt. $A$ ist nach unten beschränkt. Jedes \todo{WHAT? Page 32 top}$\leq 0$ ist eine untere Schranke.
 \item $B=\lbrack 0,1\rbrack$ ist nach oben und nach unten beschränkt. \begin{itemize}
-\item 0 ist ein minimum von $B$
-\item 1 ist ein maximum von $B$ 
+\item 0 ist ein Minimum von $B$
+\item 1 ist ein Maximum von $B$
 \end{itemize}
-\item $C=\lbrack 0,1)$ ist nach oben und nach unten beschränkt, $0=\min(A)$. $C$ hat kein Maximum. 
+\item $C=\lbrack 0,1)$ ist nach oben und nach unten beschränkt, $0=\min(A)$. $C$ hat kein Maximum.
 \end{enumerate}
-Folgender Satz ist von Zentraler Bedeutung und eine Folgerung der Ordnungsvollständigkeitaxiom.
+Folgender Satz ist von zentraler Bedeutung und eine Folgerung des Ordnungsvollständigkeitsaxioms.
 
 \subsubsection*{Satz 2.10}
 \begin{enumerate}[i)]
-\item Jede nicht leere nach oben beschränkte Teilmenge $A\subset B$ besitzt eine kleinste obere Schranke $c$. Die Kleinste obere schranke $c$ ist eindeutig bestimmt und heisst Supremum von $A$, mit $\sup A$ bezeichnet. 
-\item Jede nicht leere nach unten beschränkt Teilmenge $A\subset\mathbb{R}$ besitzt eine grösste untere Schranke $d$ und heisst Infimum von $A$, mit $\inf A$ bezeichnet.
+\item Jede nicht leere, nach oben beschränkte Teilmenge $A\subset B$ besitzt eine kleinste obere Schranke $c$. Die kleinste obere Schranke $c$ ist eindeutig bestimmt und heisst Supremum von $A$ und wird mit $\sup A$ bezeichnet.
+\item Jede nicht leere, nach unten beschränkt Teilmenge $A\subset\mathbb{R}$ besitzt eine grösste untere Schranke $d$ und heisst Infimum von $A$ und wird mit $\inf A$ bezeichnet.
 \end{enumerate}
 \subsubsection*{Beweis}
 \begin{enumerate}[i)]
 \item Sei $\emptyset\not=A\subset B$ nach oben beschränkt. Sei $B:=\{b\in\mathbb{R}\mid b$ ist obere Schranke für $A\}$. Dann $B\not=\emptyset$ und $a\leq b$, $\forall a\in A$ $b\in B$\\
 
-Mit Ordnungsvollständigkeit Axiom folgt die Existens eine Zahl $c\in\mathbb{R}$ mit $a\leq c\leq b$ $\forall a\in A$, $b\in B$.\\
+Mit dem Ordnungsvollständigkeitsaxiom folgt die Existens einer Zahl $c\in\mathbb{R}$ mit $a\leq c\leq b$ $\forall a\in A$, $b\in B$.\\
 
-Es ist klar dass $c$ ist eine obere Schranke für $A$. Also $c\in B$. Da $c\leq b$ $\forall b\in B$, ist $c$ die kleinste obere Schranke für $A$. Hierdurch $c$ ist eindeutig bestimmt.\\
+Es ist klar, dass $c$ eine obere Schranke für $A$ ist. Also $c\in B$. Da $c\leq b$ $\forall b\in B$, ist $c$ die kleinste obere Schranke für $A$. Hiermit $c$ ist eindeutig bestimmt.\\
 
-(Seien $c$ und $c'$ zwei Supremum von $A$, $c$ ist die kleinste obere Schranke und $c'$ ist eine obere Schranke $\Rightarrow c\leq c'$. Das gleiche Argument mit $c$,$c'$ ausgetauscht liefert $c'\leq c$)
-\item Sei $A$ nach unten beschränkte, nicht leere Menge. Sei $-A:=\{ -x\mid x\in A\}$ die Menge der additive Inversen von $A$. Dann $-A\not=\emptyset$ und nach oben beschränkt. i) $\Rightarrow \exists s=\sup (-A)\Rightarrow -s$ ist das Infimum von $A$ 
+(Seien $c$ und $c'$ zwei Suprema von $A$, $c$ ist die kleinste obere Schranke und $c'$ ist eine obere Schranke $\Rightarrow c\leq c'$. Das gleiche Argument mit $c$,$c'$ vertauscht liefert $c'\leq c$)
+\item Sei $A$ eine nach unten beschränkte, nicht leere Menge. Sei $-A:=\{ -x\mid x\in A\}$ die Menge der additive Inversen von $A$. Dann $-A\not=\emptyset$ und nach oben beschränkt. \todo{limenet: Why enumerate for only one item??} i) $\Rightarrow \exists s=\sup (-A)\Rightarrow -s$ ist das Infimum von $A$
 \end{enumerate}
 
 \subsubsection*{Korollar 2.11}
 \begin{enumerate}
-\item Falls $E\subset F$ und $F$ nach oben beschränkt ist, gilt $\sup E\leq \sup F$ 
-\item Falls $E\subset F$ und $F$ nach unten beschränkt ist, gilt $\inf F\leq \inf E$ 
-\item Falls $\forall x\in E$, $\forall y\in F$ gilt $x\leq y$ dann folgt $\sup E\leq\inf F$ 
+\item Falls $E\subset F$ und $F$ nach oben beschränkt ist, gilt $\sup E\leq \sup F$
+\item Falls $E\subset F$ und $F$ nach unten beschränkt ist, gilt $\inf F\leq \inf E$
+\item Falls $\forall x\in E$, $\forall y\in F$ gilt $x\leq y$, dann folgt $\sup E\leq\inf F$
 \item Seien $E,F\not=\emptyset$, $E,F,\subset\mathbb{R}$, $h\in\mathbb{R}$, $h>0$ \todo{page is clipped, page 34 bottom}
 \begin{enumerate}[(i)]
-\item Falls $E$ ein sup. besitzt $\Rightarrow \exists x\in E$ mit $x>\sup E$\todo{can't read, is it E-h? page 34 bottom}
-\item Falls $E$ ein Inf besitzt $\Rightarrow \exists y\in : y<\inf E+h$. Das Supremum, $\sup\Romanbar{X}=\sigma$ der Menge $\Romanbar{X}$ ist folgendermassen charakterisiert: Es gibt in $\Romanbar{X}$ keine Zahlen $>\sigma$; aber für jede Toleranz $h>0$ gibt es in $\Romanbar{X}$ Zahlen $>\sigma -h$ 
+\item Falls $E$ ein Supremum besitzt $\Rightarrow \exists x\in E$ mit $x>\sup E$\todo{can't read, is it E-h? page 34 bottom}
+\item Falls $E$ ein Infimum besitzt $\Rightarrow \exists y\in : y<\inf E+h$. Das Supremum, $\sup\Romanbar{X}=\sigma$ der Menge $\Romanbar{X}$ ist folgendermassen charakterisiert: Es gibt in $\Romanbar{X}$ keine Zahlen $>\sigma$; aber für jede Toleranz $h>0$ gibt es in $\Romanbar{X}$ Zahlen $>\sigma -h$
 
 
 \begin{center}
 \begin{tikzpicture}
 
-\draw [black] (0.5,-0.1) rectangle (2,0.1); 
-\draw [black] (2.5,-0.1) rectangle (2.8,0.1); 
-\draw [black] (3.5,-0.1) rectangle (3.8,0.1); 
-\draw [black] (3.9,-0.1) rectangle (4.2,0.1); 
-\draw [black] (4.5,-0.1) rectangle (4.9,0.1); 
-\draw [black] (4.95,-0.1) rectangle (5.35,0.1); 
+\draw [black] (0.5,-0.1) rectangle (2,0.1);
+\draw [black] (2.5,-0.1) rectangle (2.8,0.1);
+\draw [black] (3.5,-0.1) rectangle (3.8,0.1);
+\draw [black] (3.9,-0.1) rectangle (4.2,0.1);
+\draw [black] (4.5,-0.1) rectangle (4.9,0.1);
+\draw [black] (4.95,-0.1) rectangle (5.35,0.1);
 \draw(5.35,0.5)--(5.35,-0.5);
 \draw(5.7,0.5)--(5.7,-0.5);
-\draw [black] (5.35,-0.1) rectangle (5.55,0.1); 
-\draw [black] (5.58,-0.1) rectangle (5.68,0.1); 
+\draw [black] (5.35,-0.1) rectangle (5.55,0.1);
+\draw [black] (5.58,-0.1) rectangle (5.68,0.1);
 \node[anchor=west,scale=0.7] at (5.8,-0.3){$\sigma =\sup M$};
 
 \draw [black,decorate,decoration={brace,amplitude=2pt,mirror},xshift=0.4pt,yshift=-0.4pt](5.35,-0.5) -- (5.7,-0.5) node[black,midway,yshift=-8] {\footnotesize $h$};
@@ -234,14 +234,14 @@ Es ist klar dass $c$ ist eine obere Schranke für $A$. Also $c\in B$. Da $c\leq 
 \draw[](0,-2)--(6,-2);
 
 \begin{scope}[yscale=1,xscale=-1,xshift=-170]
-\draw [black] (0.5,-2.1) rectangle (2,-1.9); 
-\draw [black] (2.5,-2.1) rectangle (2.8,-1.9); 
-\draw [black] (3.5,-2.1) rectangle (3.8,-1.9); 
-\draw [black] (3.9,-2.1) rectangle (4.2,-1.9); 
-\draw [black] (4.5,-2.1) rectangle (4.9,-1.9); 
-\draw [black] (4.95,-2.1) rectangle (5.35,-1.9); 
-\draw [black] (5.35,-2.1) rectangle (5.55,-1.9); 
-\draw [black] (5.58,-2.1) rectangle (5.68,-1.9); 
+\draw [black] (0.5,-2.1) rectangle (2,-1.9);
+\draw [black] (2.5,-2.1) rectangle (2.8,-1.9);
+\draw [black] (3.5,-2.1) rectangle (3.8,-1.9);
+\draw [black] (3.9,-2.1) rectangle (4.2,-1.9);
+\draw [black] (4.5,-2.1) rectangle (4.9,-1.9);
+\draw [black] (4.95,-2.1) rectangle (5.35,-1.9);
+\draw [black] (5.35,-2.1) rectangle (5.55,-1.9);
+\draw [black] (5.58,-2.1) rectangle (5.68,-1.9);
 \end{scope}
 \draw(0.625,-1.5)--(0.625,-2.5);
 \draw(0.295,-1.5)--(0.295,-2.5);
@@ -254,7 +254,7 @@ Es ist klar dass $c$ ist eine obere Schranke für $A$. Also $c\in B$. Da $c\leq 
 
 
 Es gibt in $\Romanbar{X}$ keine Zahlen $<\inf\Romanbar{X}=$\todo{faded color, can't read, page 34.1 middle to bottom} aber für jede Toleranz $h>0$ gibt es in $\Romanbar{X}$ Zahlen $<\inf \Romanbar{X}+h$
-\item Sei $E+F=\{ e+f:e\in E,f\in F\}$. Falls $E$ und $F$ ein Sup. besitzen $\Rightarrow E+F$ besitzt ein Sup und $\sup (E+F)=\sup(E)+\sup(F)$. (Analog mit Inf.) 
+\item Sei $E+F=\{ e+f:e\in E,f\in F\}$. Falls $E$ und $F$ ein Supremum besitzen $\Rightarrow E+F$ besitzt ein Supremum und $\sup (E+F)=\sup(E)+\sup(F)$. (Analog mit Infimum)
 \end{enumerate}
 \end{enumerate}
 \subsubsection*{Beweis}
@@ -263,7 +263,7 @@ Es gibt in $\Romanbar{X}$ keine Zahlen $<\inf\Romanbar{X}=$\todo{faded color, ca
 \begin{enumerate}
 \item $E=(+\infty,2)\subset F(-\infty,4\rbrack$\\
 $\sup E=2, \sup F=4=\max F$\\
-$E$ hat kein Max: $\sup E\leq \sup F$
+$E$ hat kein Maximum: $\sup E\leq \sup F$
 \item $G:\lbrack 4,5)\subset H=(3,6)$\\
 $\min E=\inf G=4\geq \inf H=3$
 \item $K=(3,\infty)$, $E=(-\infty,2)$\\
@@ -272,53 +272,53 @@ $2=\sup E\leq 3=\inf K$
 \item $A\{\sin x\mid x\in\mathbb{R}\}$\\
 $\inf S=-1=\min A$\\
 $\sup A=1=\max A$
-\item $A=\{\left( 1+\frac{1}{n}\right)^n\mid n\in\mathbb{N} \}$. Wir werden sehen dass $A$ ist nach unten und nach unten beschränkt. \\
+\item $A=\{\left( 1+\frac{1}{n}\right)^n\mid n\in\mathbb{N} \}$. Wir werden sehen, dass $A$ nach unten und nach oben beschränkt ist. \\
 $\inf A=\min A=2$, $\sup A=e=2.718\dots$
 \underline{Vereinbarung}\todo{Check for better layout}\\
-Für nach oben unbeschränkte Mengen $A\not=\emptyset$ setzen wir $\sup A=\infty$ unendlich. Analog fèr nach unten unbeschränkte Menge $\emptyset\not= A$ setzen wir $\inf A=-\infty$ 
+Für nach oben unbeschränkte Mengen $A\not=\emptyset$ setzen wir $\sup A=\infty$. Analog für nach unten unbeschränkte Menge $\emptyset\not= A$ setzen wir $\inf A=-\infty$
 \end{enumerate}
-Die Folgende Satz zeigt wie die Ordnungsvollständigkeit von $\mathbb{R}$ die Lösbarkeit gewisser Gleichungen in $\mathbb{R}$ garantiert.
+Der folgende Satz zeigt, wie die Ordnungsvollständigkeit von $\mathbb{R}$ die Lösbarkeit gewisser Gleichungen in $\mathbb{R}$ garantiert.
 
 \subsubsection*{Satz 2.12}
 Für jedes $x>0$ gibt es genau ein $y>0$ mit $y^2=x$. Diese Lösung wird mit $\sqrt{x}$ bezeichnet.\\
 
-(Im Allgemein: Für jedes $x>0$ und $n\geq 1$, $n\in\mathbb{R}$ gibt es genau ein $y>0$ mit $y^2=0$. Diese Lösung wird mit $\sqrt[n]{x}$ bezeichnet)
+(Im Allgemeinen: Für jedes $x>0$ und $n\geq 1$, $n\in\mathbb{R}$ gibt es genau ein $y>0$ mit $y^2=0$. Diese Lösung wird mit $\sqrt[n]{x}$ bezeichnet)
 \subsubsection*{Beweis}
 Sei $x>1$, und $A:=\{ z\in\mathbb{R}\mid z>0$ mit $z^2\leq x\}$. Dann ist $A$ nach oben beschränkt und $A\not=\emptyset (1\in A)$. \todo{Not sure, page 35 bottom}$\Rightarrow A$ besitzt ein Supremum. \\
-Sei $y:=\sup A$. Wir zeigen dass $y^2=x$
+Sei $y:=\sup A$. Wir zeigen, dass $y^2=x$
 \begin{itemize}
-    \item Schnitt 1: Annahme $y^2<x$. \\ 
-    Sei $0\leq h\leq 1$.  Wir nehmen \[\left( y+h\right)^2=y^2+2hy+h^2\]
+    \item Schnitt 1: Annahme $y^2<x$. \\
+    Sei $0\leq h\leq 1$.  Wir nehmen an: \[\left( y+h\right)^2=y^2+2hy+h^2\]
     \[=y^2+h(2y+h)\]
     \[\leq y^2+h(2y+1)\]
     \[=y^2 +h\left( (y+1)^2 -y^2\right)\]
     Weil $y^2<x$ ist, $\frac{x-y^2}{(y+1)^2-y^2}>0$ und daher gibt es $h\in\mathbb{R}$, $h>0$, $h\leq\frac{x-y^2}{(y+1)^2-y^2}$ (sei $h=\min \{1,\frac{x-y^2}{2x+1}\}$)\\
-    
-    Für solche $h$ gilt \[(y+h)^2\leq y^2 + \left( \frac{x-y^2}{(y+1)^2-y^2}\right)\left( (y+1)^2 -y^2\right)=\]\todo{chopped result, page 35.1} Also $y+h\in A$ und $y+h>y$. Ein widerspruch: $y$ ist eine obere schranke für $A$, d.h., $z<y$\\$\Rightarrow y^2\geq x$ Analog beweist man $y^2\leq x$
+
+    Für solche $h$ gilt \[(y+h)^2\leq y^2 + \left( \frac{x-y^2}{(y+1)^2-y^2}\right)\left( (y+1)^2 -y^2\right)=\]\todo{chopped result, page 35.1} Also $y+h\in A$ und $y+h>y$. Ein Widerspruch: $y$ ist eine obere Schranke für $A$, d.h., $z<y$\\$\Rightarrow y^2\geq x$ Analog beweist man $y^2\leq x$
     \item Schnitt 2: Annahme $y^2>x$\\
-    Sei $h=\frac{y^2-x}{2y}\not=0$ 
+    Sei $h=\frac{y^2-x}{2y}\not=0$
     \[(y-h)^2=y^2-2hy+h^2>y^2-2hy=y^2 -(y^2-=x\]\todo{Chopped, page 35.2 top}
-    $\Rightarrow y-h$ ist eine Obere Schranke für $A$
+    $\Rightarrow y-h$ ist eine obere Schranke für $A$
     \[\left( \forall z \in A, z^2\leq x\text{. Da }(y-h)^2>x \text{ ist, } (y-h)^2>x\geq z^2\text{. Damit } y-h>z, \forall z \in A\right)\]
-    Aber $y-h<y$, wiederspruch zur Minimalität von y.
+    Aber $y-h<y$, Widerspruch zur Minimalität von y.
 \end{itemize}
 Falls $0<x<1$, dann $\frac{1}{x}>1$\\
 $\Rightarrow \exists u\in\mathbb{R}$, mit $u^2=\frac{1}{x}$\\
 Somit $\left( \frac{1}{u}\right)^2=x$ und $y=\frac{1}{u}$ ist eine Lösung von $y^2=x$.\\
 
-Zum Abschluss dieses Themas erwähren wir noch eine Wichtige Eigenschaft der Reelen Zahlen
+Zum Abschluss dieses Themas erwähnen wir noch eine wichtige Eigenschaft der reellen Zahlen
 
 \subsubsection*{Satz 2.13 (Archimedische Eigenschaft)}
 Zu jeder Zahl $0<b\in\mathbb{R}$ gibt es ein $n\in\mathbb{N}$ mit $b<n$.
 \subsubsection*{Beweis (Indirekt)}
 Andernfalls gibt es $b\in\mathbb{R}$ mit $n\leq b$, $\forall n\in\mathbb{N}$ \[\left( \lnot\left(\exists n\in\mathbb{N}:b<n\right)=\left(\forall n\in\mathbb{N}:b\geq n\right)\right)\]
 Dann ist $b$ eine obere Schranke für $\mathbb{N}$ und es existiert $c=\sup\mathbb{N}\in\mathbb{R}$. Mit $n\in\mathbb{R}$ ist jedoch auch $n+1\in\mathbb{N}$.\\
-Also: $n+1\leq c$, $\forall n\in\mathbb{N}$. Somit folgt $n\leq c-1$, $\forall n\in\mathbb{N}$ ein widerspruch zur minimalität von \todo{Chopped content, page 36 bottom}.
+Also: $n+1\leq c$, $\forall n\in\mathbb{N}$. Somit folgt $n\leq c-1$, $\forall n\in\mathbb{N}$ ein Widerspruch zur Minimalität von \todo{Chopped content, page 36 bottom}.
 
 \subsubsection*{Korollar 2.14}
 \begin{enumerate}
     \item Seien $x>0$ und $y\in\mathbb{R}$ gegeben. Dann gibt es $n\in\mathbb{Z}$ mit $y<nx$
-    \item Falls $x,y,a\in\mathbb{R}$ die ungleichkeiten $a\leq x\leq a+\frac{y}{n}$, $\forall n\in\mathbb{N}$ erfüllen, ist $x=a$.
+    \item Falls $x,y,a\in\mathbb{R}$ die Ungleichheiten $a\leq x\leq a+\frac{y}{n}$, $\forall n\in\mathbb{N}$ erfüllen, ist $x=a$.
 \end{enumerate}
 \subsubsection*{Beweis}
 
@@ -327,18 +327,18 @@ Also: $n+1\leq c$, $\forall n\in\mathbb{N}$. Somit folgt $n\leq c-1$, $\forall n
     \item $a<x\Rightarrow x-a>0\Rightarrow \exists n\in\mathbb{N}$\\
 $\Rightarrow x>a+\frac{y}{n}$ Widerspruch
 \end{enumerate}
-Wir wissen dass gewisse Gleichungen in $\mathbb{R}$ Lösbar ist: z.B. $y^2=a$, $\forall a>0$. Aber man kann nicht alle GLeichugen in $\mathbb{R}$ lösen, z.B. $x^2+1=0$. Da für alle $x\in\mathbb{R}$, $x^2>0$, ist $x^2=-1$ nicht lösbar. Um eine Lösung für diese Gleichung zu finden, müssen wir die komplexen Zahlen betrachten.\\
+Wir wissen, dass gewisse Gleichungen in $\mathbb{R}$ lösbar sind: z.B. $y^2=a$, $\forall a>0$. Aber man kann nicht alle Gleichugen in $\mathbb{R}$ lösen, z.B. $x^2+1=0$. Da für alle $x\in\mathbb{R}$, $x^2>0$, ist $x^2=-1$ nicht lösbar. Um eine Lösung für diese Gleichung zu finden, müssen wir die komplexen Zahlen betrachten.\\
 
 \noindent Zuerst, werden wir die Euklidischen Räume $\mathbb{R}^n$ einführen
 \section{Euklidische Räume}
-Von der Mengentheorie können wir die Kartesische Produkt zweier Mengen; es Lässt sich ohne schwierigkeiten zu endlichen Familien $A_1,\dots ,A_n$ verallgemeinen; nähmlich \[A_1\times\dots\times A_n:=\{\left(x_1,\dots ,x_n\right):x_i\in A_i \}\] ist die Menge der geordneten $n-$tuple von Elementen aus $A_1,\dots ,A_n$.\\
+Mit der Mengentheorie können wir das kartesische Produkt zweier Mengen bilden; es lässt sich ohne Schwierigkeiten zu endlichen Familien $A_1,\dots ,A_n$ verallgemeinen; nämlich \[A_1\times\dots\times A_n:=\{\left(x_1,\dots ,x_n\right):x_i\in A_i \}\] ist die Menge der geordneten $n-$Tupel von Elementen aus $A_1,\dots ,A_n$.\\
 
-Für beliebige $n\geq 1$ betrachten wir$ \mathbb{R}^n: = \underbrace {\mathbb{R} \times  \ldots  \times \mathbb{R} }_{n - {\text{mal}}}$ und untersuchen Seine Struktur. Auf $\mathbb{R}^n$ haben wir zwei Verknüpfungen
+Für beliebige $n\geq 1$ betrachten wir $ \mathbb{R}^n: = \underbrace {\mathbb{R} \times  \ldots  \times \mathbb{R} }_{n - {\text{mal}}}$ und untersuchen dessen Struktur. Auf $\mathbb{R}^n$ haben wir zwei Verknüpfungen
 \begin{enumerate}
     \item $+:\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}^n$ Addition.\\
-$\left( {\underbrace {\left( {{x_1}, \ldots ,{x_n}} \right)}_x,\underbrace {\left( {{y_1}, \ldots ,{y_n}} \right)}_y} \right) \to \underbrace {\left( {{x_1} + {y_1}, \ldots ,{x_n} + {y_n}} \right)}_{{\text{Komponentenweise Addition}}}$. Dann ist $\left( \mathbb{R}^n,+\right)$ eine Abelische Gruppe, mit $0:=(0,\dots,0)$ aln neutrales Element
+$\left( {\underbrace {\left( {{x_1}, \ldots ,{x_n}} \right)}_x,\underbrace {\left( {{y_1}, \ldots ,{y_n}} \right)}_y} \right) \to \underbrace {\left( {{x_1} + {y_1}, \ldots ,{x_n} + {y_n}} \right)}_{{\text{Komponentenweise Addition}}}$. Dann ist $\left( \mathbb{R}^n,+\right)$ eine Abelsche Gruppe, mit $0:=(0,\dots,0)$ aln neutrales Element
 \item $\cdot:\mathbb{R}\times\mathbb{R}^n\rightarrow\mathbb{R}^n$ Skalarmultiplikation.\\
-$(\lambda,x)\rightarrow\lambda\cdot x:=(\lambda x_1,\dots,\lambda x_n)$. Dann gelten die folgende Eigenschaften: $\forall x,y\in\mathbb{R}^n,\forall \alpha,\beta\in\mathbb{R}$ 
+$(\lambda,x)\rightarrow\lambda\cdot x:=(\lambda x_1,\dots,\lambda x_n)$. Dann gelten die folgende Eigenschaften: $\forall x,y\in\mathbb{R}^n,\forall \alpha,\beta\in\mathbb{R}$
 \begin{enumerate}
 \item Distributivität: $\left( \alpha+\beta\right) x=\alpha x+\beta x$
 \item Distributivität: $\alpha\left(x+y\right) = \alpha x+\alpha y$
@@ -346,32 +346,32 @@ $(\lambda,x)\rightarrow\lambda\cdot x:=(\lambda x_1,\dots,\lambda x_n)$. Dann ge
 \item Einzelelement: $1\cdot x=x$
 \end{enumerate}
 \end{enumerate}
- 
+
 \begin{definition}{2.15}
-Eine Menge $\mathbb{V}$ ,it $+,\cdot$ und $0\in\mathbb{V}$ so dass $\left(\mathbb{V},+\right)$ eine Abelische Gruppe mit Neutralen Element 0 ist und zudem (a)-(d) gelten nennt sich ein Vektorraum über den Körper $\mathbb{R}$ und seine Elemente heissen Vektoren
+Eine Menge $\mathbb{V}$ mit $+,\cdot$ und $0\in\mathbb{V}$, so dass $\left(\mathbb{V},+\right)$ eine Abelsche Gruppe mit neutralem Element 0 ist und zudem (a)-(d) gelten, nennt sich ein Vektorraum über den Körper $\mathbb{R}$ und seine Elemente heissen Vektoren
 \end{definition}
-Also ist $\mathbb{R}^n$ ein Vektorraum. In der Linearen Algebra führt man dann Begriffe wie Basis usw. ein. Die Standard basis von $\mathbb{R}^n$ ist die Menge $\{e_1,e_2,\dots,e_n \}$ wobei $e_i:=\{0,\dots,0,1,\dots,0\}$ \\
+Also ist $\mathbb{R}^n$ ein Vektorraum. In der linearen Algebra führt man dann Begriffe wie Basis usw. ein. Die Standardbasis von $\mathbb{R}^n$ ist die Menge $\{e_1,e_2,\dots,e_n \}$ wobei $e_i:=\{0,\dots,0,1,\dots,0\}$ \\
 
 Jeder Vektor $x=\left(x_1,\dots,x_n \right)\in\mathbb{R}$ besitzt eine eindeutige Darstellung $x=\sum x_ie_i$ bezüglich der Standardbasis.
 \begin{definition}{2.16}
 \begin{enumerate}
-\item Das Skalarprodukt zweier Vektoren $x=\left(x_1,\dots,x_n \right),y=\left(y_1,\dots,y_n \right)$ ist die durch \[ < x,y > : = \sum\limits_{i = 1}^n {{x_i}{y_i}} \] definierte reele Zahl\\ $<\cdot,\cdot>=\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}$ (orthogonal)
+\item Das Skalarprodukt zweier Vektoren $x=\left(x_1,\dots,x_n \right),y=\left(y_1,\dots,y_n \right)$ ist die durch \[ < x,y > : = \sum\limits_{i = 1}^n {{x_i}{y_i}} \] definierte reelle Zahl\\ $<\cdot,\cdot>=\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}$ (orthogonal)
 \item Falls $<x,y>=0$ heissen $x$ und $y$ senkrecht aufeinander. $<\cdot,\cdot>$ besitzt folgende Eigenschaften
 \begin{enumerate}
 \item Symmetrie: $<x,y>=<y,x>$
 \item Linearität: $<x,\alpha y+\beta z>=\alpha <x,y>+\beta <x,z>$
-\item Positivität: $<x,x>\geq 0$ mit Gleicheit genau dann wenn $x=0$
+\item Positivität: $<x,x>\geq 0$ mit Gleicheit genau dann, wenn $x=0$
 \end{enumerate}
 \end{enumerate}
 \end{definition}
 
 \begin{definition}{2.17}
-Die Norm $\left|\left| x\right|\right|$ eines Vektors ist: \[\left|\left|x\right|\right| := \sqrt{<x,x>}=\sqrt{\sum\limits_{i = 1}^n {{x_i}}}\] wird oft als Länge interpretiert.
+Die Norm $\left|\left| x\right|\right|$ eines Vektors ist: \[\left|\left|x\right|\right| := \sqrt{<x,x>}=\sqrt{\sum\limits_{i = 1}^n {{x_i}}}\] und wird oft als Länge interpretiert.
 \subsubsection*{Beispiel 2.18}
 \begin{itemize}
     \item
 
-$\left|\left|(1,2)\right|\right|=\sqrt{1+4}$ 
+$\left|\left|(1,2)\right|\right|=\sqrt{1+4}$
 
 
 \begin{center}
@@ -441,7 +441,7 @@ $\left|\left|(1,2)\right|\right|=\sqrt{1+4}$
 \end{center}
 
     \item $\left|\left|e_i\right|\right|=1$, $<e_i,e_j>=0$. $e_i \perp e_j$\\
-$\{e_1,e_2,\dots,e_n\}$ ist eine orthonormale Basis. Sie sind orthogonal und auf Länge 1 normiert.
+$\{e_1,e_2,\dots,e_n\}$ ist eine orthonormale Basis. Die Vektoren einer einer orthogonalen Basis sind orthogonal zueinander und normiert (die Länge ist gleich 1).
 \end{itemize}
 \end{definition}
 Die erste wichtige Eigenschaft eines Skalaprodukts ist
@@ -452,7 +452,7 @@ Die Euklidische Norm hat die Eigenschaften
 \subsubsection*{Satz 2.20}
 \begin{itemize}
     \item $\left|\left| \alpha x\right|\right|=\left|\alpha\right|\left|\left| x\right|\right|$ (Homogenität)
-    \item $\left|\left| x+y\right|\right| \leq \left|\left| x\right|\right| + \left|\left| y\right|\right|$ (Dreiecks Ungleichung)
+    \item $\left|\left| x+y\right|\right| \leq \left|\left| x\right|\right| + \left|\left| y\right|\right|$ (Dreiecksungleichung)
 \end{itemize}
 
 \subsubsection*{Beweis}
@@ -467,22 +467,22 @@ Die Euklidische Norm hat die Eigenschaften
 \end{itemize}
 
 \section{Die Komplexen Zahlen}
-Da für alle $x\in\mathbb{R}$ $x^2\geq 0$, gibt es $\sqrt{-1}$ nicht als reelle Zahl. Seit 18 Jahrhundert haben Mathematiker mit Ausdrücke $a+b\sqrt{-1}$, $a,b\in\mathbb{R}$ gerechnet und auf sie die in $\mathbb{R}$ geltenden Rechnenregel angewendt, z.B. \[\left( 1+2\sqrt{-1}\right)\left( 1-2\sqrt{-1}\right) = 1^2 + 2^2\left( \sqrt{-1}\right)^2\]
+Da für alle $x\in\mathbb{R}$ $x^2\geq 0$, gibt es $\sqrt{-1}$ nicht als reelle Zahl. Seit dem 18. Jahrhundert haben Mathematiker mit Ausdrücken wie $a+b\sqrt{-1}$, $a,b\in\mathbb{R}$ gerechnet und auf sie die in $\mathbb{R}$ geltenden Rechnenregel angewendt, z.B. \[\left( 1+2\sqrt{-1}\right)\left( 1-2\sqrt{-1}\right) = 1^2 + 2^2\left( \sqrt{-1}\right)^2\]
 Allgemein:
 \[\left( a+b\sqrt{-1} \right)\left( c+d\sqrt{-1}\right) = ac + ad\sqrt{-1} + bc\sqrt{-1}+bd\sqrt{-1}\]
 \[=\left( ac-bd\right)+\left(ad+bc\right)\sqrt{-1}\]
-Das Problem ist hier, dass $\sqrt{-1}$ keinen präzisen Mathematisches Sinn hat und dass deshalb auch nicht klar ist, was ``$+$'' in ``$a+b\sqrt{-1}$'' heissen soll. \\
+Das Problem ist hier, dass $\sqrt{-1}$ keinen präzisen mathematisches Sinn hat und dass deshalb auch nicht klar ist, was ``$+$'' in ``$a+b\sqrt{-1}$'' heissen soll. \\
 
-\noindent Das Problem is wie folgt gelöst:\\
+\noindent Das Problem ist wie folgt gelöst:\\
 
-Als model von ``$a+b\sqrt{-1}$'', $\mathbb{C}$, nehmen wir $\mathbb{R}^2$. Wir haben schon eine Addition von vektoren und das neutral Element \todo{Chopped content, page 42 middle}. Wir definieren dann die Multiplikation \[\mathbb{R}^2 \times\mathbb{R}^2 \rightarrow \mathbb{R}^2\] \[(x,y)\rightarrow x\cdot y \]
+Als Modell von ``$a+b\sqrt{-1}$'', $\mathbb{C}$, nehmen wir $\mathbb{R}^2$. Wir haben schon die Addition von Vektoren und das neutrale Element \todo{Chopped content, page 42 middle}. Wir definieren dann die Multiplikation \[\mathbb{R}^2 \times\mathbb{R}^2 \rightarrow \mathbb{R}^2\] \[(x,y)\rightarrow x\cdot y \]
 wobei $x\cdot y=(ac-bd,ad+bc)$, $x=(a,b)$, $y=(c,d)$. Dann erfüllen ``$+$'' und ``$\cdot$'' folgende Eigenschaften:
 \begin{itemize}
-\item Assos: $\left((a,b)(c,d)\right)(e,f)=(a,b)\left((c,d)(e,f) \right)$
+\item Assoziativität: $\left((a,b)(c,d)\right)(e,f)=(a,b)\left((c,d)(e,f) \right)$
 \item Neutrales Element: $(1,0)(a,b)=(a,b)$
 \item Kommutativ: $(a,b)(c,d)=(c,d)(a,b)$
 \item Inverses Element $\forall (a,b)\not = (0,0)$ in $\mathbb{R}^2$ $\exists(x,y)\in\mathbb{R}^2$ mit $(a,b)(x,y)=(1,0)$
-\item DIstributivität: $\left( (a,b)+(c,d)\right)\cdot (e,f)=(a,b)(e,f)+(c,d)(e,f)$
+\item Distributivität: $\left( (a,b)+(c,d)\right)\cdot (e,f)=(a,b)(e,f)+(c,d)(e,f)$
 \end{itemize}
 
 \begin{definition}{2.21}
@@ -490,16 +490,16 @@ Der Körper der komplexen Zahlen $\mathbb{C}$ ist $\mathbb{R}^2$ versehen mit ``
 \end{definition}
 
 \subsubsection*{Bemerkung 2.22}
-$z^2+1=0$ hat in $\mathbb{C}$ eine Lösung. Nämlich ist $(0,1)(0,1)=(-1,0)=-(1,0)=1$. Wir führen für $(0,1)$ die Bezeichnung ``$i$'' ein, das heisst Imaginäre Einheit.\\
+$z^2+1=0$ hat in $\mathbb{C}$ eine Lösung. Nämlich ist $(0,1)(0,1)=(-1,0)=-(1,0)=1$. Wir führen für $(0,1)$ die Bezeichnung ``$i$'' ein, welches imaginäre Einheit heisst.\\
 
 Also ist $i^2=-1$. Jede komplexe Zahl $z=(x,y)$ lässt sich dann wie folgt darstellen:  \[z=(x,y)=(x,0)+(0,y)=x(1,0)+y(0,1)=x\cdot 1+ y\cdot i\]
-In der Rechnungen lässt man oft das 1 in $x\cdot 1$ fallen und schreibt $z=x+yi$
+In den Rechnungen lässt man oft das 1 in $x\cdot 1$ fallen und schreibt $z=x+yi$
 \begin{definition}{2.22}
 \begin{enumerate}
 \item Sei $z=x+iy\in\mathbb{C}$
 \begin{itemize}
 \item Re $z:=x$ heisst der Realteil
-\item Im $z:=y$ heisst der Imaginärteil 
+\item Im $z:=y$ heisst der Imaginärteil
 \end{itemize}
 \item Die zu: $z=x+iy$ konjugierte Zahl ist $\overline{z}=x-iy$
 \item Wir definieren die Norm von $z$ als $\left|\left| z\right|\right|=\sqrt{x^2+y^2}$
@@ -517,13 +517,13 @@ ASK FOR BEWEIS \todo{ASK FOR BEWEIS}
 \subsubsection*{Abkürzung}
 $\left| z\right| := \left|\left| z \right|\right|$
 \subsubsection*{Bemerkung 2.24}
-Wir können $\mathbb{R}$ in $\mathbb{C}$ ``einbetten'' mittels $\mathbb{R}\ni x\rightarrow (x,0)\in\mathbb{C}$. Sei $\mathbb{C}_0=\{ (x,y)\in\mathbb{C}\mid y=0 \}=\{ (x,0)\mid x\in\mathbb{R}\}$. Der Abbildung $f:\mathbb{R}\rightarrow\mathbb{C}_0$, $x\rightarrow (x,0)$ist eine Bijektion.\\
+Wir können $\mathbb{R}$ in $\mathbb{C}$ ``einbetten'' mittels $\mathbb{R}\ni x\rightarrow (x,0)\in\mathbb{C}$. Sei $\mathbb{C}_0=\{ (x,y)\in\mathbb{C}\mid y=0 \}=\{ (x,0)\mid x\in\mathbb{R}\}$. Die Abbildung $f:\mathbb{R}\rightarrow\mathbb{C}_0$, $x\rightarrow (x,0)$ist eine Bijektion.\\
 
-Diese Identifikation (von $\mathbb{R}$ und $\mathbb{C}_0$ ist verträglich mit den operationen in $\mathbb{R}$ und in $\mathbb{C}$, d.h.
+Diese Identifikation von $\mathbb{R}$ und $\mathbb{C}_0$ ist verträglich mit den Operationen in $\mathbb{R}$ und in $\mathbb{C}$, d.h.
 \[f(x+y)=f(x)+f(y)\]
 \[f(xy)=f(x)f(y)\]
 \subsubsection*{Polarform}\todo{Not sure if this should be a title}
-Als Polarkoordinaten in die Ebene führen wir $(r,\phi)$ ein
+Als Polarkoordinaten in der Ebene führen wir $(r,\phi)$ ein
 
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
@@ -562,7 +562,7 @@ Wir definieren (nach Euler)\[e^{i\phi}:=\cos\phi+ i\sin\phi\]\[z=re^{i\phi}=\lef
 \item $\sin(\phi+\psi)=\sin\phi\cos\psi + \cos\phi\sin\psi$
 \end{itemize}
 
-In der Ebene $\mathbb{R}^2$ stehen uns neben den kartesischen koordinaten $x,y$ noch die Polarkoordinaten $r,\phi$ zur Verfügung. Für beliebiges $z=x+iy\not=0$
+In der Ebene $\mathbb{R}^2$ stehen uns neben den kartesischen Koordinaten $x,y$ noch die Polarkoordinaten $r,\phi$ zur Verfügung. Für beliebiges $z=x+iy\not=0$
 \begin{center}
 \begin{tikzpicture}
 \draw[](0,-3)--(0,3);
@@ -599,24 +599,24 @@ In der Ebene $\mathbb{R}^2$ stehen uns neben den kartesischen koordinaten $x,y$ 
 folgt $e^{i\phi}e^{i\psi}=e^{i(\phi+\psi)}$\\
 
 Somit folgt für $z=re^{i\theta}$, $\omega=se^{i\phi}$ $\in\mathbb{C}$ die einfache Darstellung $z\omega=rse^{i(\theta + \phi)}$, \[\frac{z}{\omega}=\left( \frac{r}{s}\right)e^{i(\theta-\phi)}\]
-Die Polare Darstellung ist in Berechnungen sehr nützlich, insbesondere um das Produkt und die Division zu berechnen
+Die polare Darstellung ist in Berechnungen sehr nützlich, insbesondere um das Produkt und den Quotienten zu berechnen
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
 \item \[z=1+i=\sqrt{2}e^{i\frac{\pi}{4}}\]
 \[\omega=\sqrt{3}-i=2e^{-i\frac{\pi}{6}}\]
 \[\frac{\left(\sqrt{3}-i\right)^3}{(1+i)^2}=\frac{\omega^3}{z^4}=\frac{8e^{-i\frac{\pi}{2}}}{4e^{i\pi}}=2e^{-\frac{3\pi}{2}i}=2e^{\frac{\pi}{2}i}=2i\]
-\item Die Polarform ist auch sehr nützlich um die wurzel einer Komplexen Zahl zu berechnen. Sei $\omega\in\mathbb{C}$, $n\in\mathbb{N}$. Wir möchten die Gleichung $z^n=\omega$ lösen. 
+\item Die Polarform ist auch sehr nützlich um die Wurzel einer komplexen Zahl zu berechnen. Sei $\omega\in\mathbb{C}$, $n\in\mathbb{N}$. Wir möchten die Gleichung $z^n=\omega$ lösen.
 \[\omega=\left|\omega\right| e^{i\phi}\]
 \[z^n=\omega=\left|\omega\right| e^{i\theta}\Rightarrow z=\left| \omega\right|^\frac{1}{n}e^{i\frac{\left(\theta + 2k\pi\right)}{n}}\]
 \[=\left| \omega\right| e^{i(\theta +2k\pi}\]
 \subsubsection*{Beispiel}\todo{is this inside the other Beispiel or out??}
 \[z^3=1\Rightarrow z^3=\left( e^{2\pi i k}\right)^\frac{1}{3} \in \{e^{i\pi\frac{2k}{3}}: k=0,1,2\} = \{1,e^{2i\frac{\pi}{3}},e^{4i\frac{\pi}{3}} \}\]
-Allgemein Formel der Einheitswurfel $z=\{ e^{i\frac{2\pi k}{n}}:k=0,1,\dots,n-1\}$
+Allgemeine Formel der Einheitswurzel $z=\{ e^{i\frac{2\pi k}{n}}:k=0,1,\dots,n-1\}$
 \subsubsection*{Bemerkung}
 \begin{enumerate}
-\item Es gibt keine mit der Körperoperationen verträgliche Ordnung con $\mathbb{C}$
-\item Hingegen ist $\mathbb{C}$ im Untershied zu $\mathbb{R}$ algebraisch vollständig. Nicht nur die Gleichung $x^2+1=0$ hat in $\mathbb{C}$ eine Lösung, sondern es gilt der Fundamental Satz der Algebra. Es sagt, dass jedes Polynom $p(z)=z^n+a_{n-1}z^{n-1}+\dots+a_0$ vom Grad $n\geq 1$ hat in $\mathbb{C}$ genau $n$ Nullstellen.
+\item Es gibt keine mit den Körperoperationen verträgliche Ordnung in $\mathbb{C}$
+\item Hingegen ist $\mathbb{C}$ im Untershied zu $\mathbb{R}$ algebraisch vollständig. Nicht nur die Gleichung $x^2+1=0$ hat in $\mathbb{C}$ eine Lösung, sondern es gilt der fundamentale Satz der Algebra. Es sagt, dass jedes Polynom $p(z)=z^n+a_{n-1}z^{n-1}+\dots+a_0$ vom Grad $n\geq 1$ hat in $\mathbb{C}$ genau $n$ Nullstellen.
 \end{enumerate}
 \end{enumerate}
 
