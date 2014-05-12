@@ -1,17 +1,17 @@
 \chapter{Logik und Unterlagen}
 Im Laufendes Semester werden wir viele mathematische Beweise einführen. Heute werden wir uns mit der Mathematische Logik beschäftiges.\\
 
-In Mathematik stutzen wir uns auf gewisse Grundannahmen ``Axiome'', die wir als gegeben ansehen. Eine dieser Annahmen ist der 
+In Mathematik stossen wir uns auf gewisse Grundannahmen ``Axiome'', die wir als gegeben ansehen. Eine dieser Annahmen ist der 
 \subsection*{Satz von ausgeschlossenen Dritten}
-Eine zulässige mathematische Aussage ist entweder wahr oder falsch, jedoch nie beiden zugleich.
+Eine zulässige mathematische Aussage ist entweder wahr oder falsch, jedoch nie beides zugleich.
 \subsubsection*{Beispiel}
 \begin{enumerate}
 	\item $5<7$ Wahr
 	\item $4<2$ Falsch
 \end{enumerate}
-In der Wirklichen Welt ist es anders , z.B. ``Mathematik ist schön'', wahr oder falsch?\\
+In der wirklichen Welt ist es anders , z.B. ``Mathematik ist schön'', wahr oder falsch?\\
 
-Mit Aussagen kann man ``rechnen''. Wir führen nun ein Paar \todo{??gehäufige?? Page 1} Notationen der Logik ein:\\
+Mit Aussagen kann man ``rechnen''. Wir führen nun ein Paar geläufige Notationen der Logik ein:\\
 Seien $A,B$ Aussagen
 \begin{itemize}
 \item $A$ und $B$ wird mit $A\land B$ bezeichnet
@@ -20,39 +20,41 @@ Seien $A,B$ Aussagen
 \subsubsection*{Folgerung (eine wahre implikation)}
 \begin{itemize}
 \item Aus $A$ folgt $B$ wird mit $\Rightarrow$ bezeichnet
-\item Wenn $A$, dann $B$ wird mit \todo{Cannot read, page 2 middle}
-\item Die negation der Aussage $A$ wird mit $\lnot A$ bezeichnet
+\item Wenn $A$, dann auch $B$
+\item Die Negation der Aussage $A$ wird mit $\lnot A$ bezeichnet
 \item $A$ ist equivalent zu $B$ wird mit $A\Leftrightarrow B$ bezeichnet
 \item $\left(A\Rightarrow B\right)\land \left( B\Rightarrow A\right)$ $A$ wahr genau dann, wenn $B$ wahr ist.
 \end{itemize}
 
 \subsubsection*{Bemerkung}
-Die Folgerung ist transitive. Wir wissen $A\Rightarrow B$ und $B\Rightarrow C$, dann wissen wir dass $A\Rightarrow C$.
+Die Folgerung ist transitiv. Wenn wir wissen, dass $A\Rightarrow B$ und $B\Rightarrow C$, dann wissen wir dass $A\Rightarrow C$.
 
-\subsection*{Prinzip der Mathematischen Beweises}
+
+\subsection*{Prinzip des Mathematischen Beweises}
 Wir können ber eine Kette von Folgerungen \[A\Rightarrow B \Rightarrow C \dots \Rightarrow S\]
-einen mathematischen ``Satz'' $S$ aus einen annahme $A$ herleiten. (Ein Beweis ist eine Folge von Implikationen von Aussagen). 
-\subsubsection*{Kontroposition (Umkehrschluss)}
+einen mathematischen ``Satz'' $S$ aus einen Annahme $A$ herleiten. (Ein Beweis ist eine Folge von Implikationen von Aussagen). 
+\subsubsection*{Kontraposition (Umkehrschluss)}
+
 $A\Rightarrow B$ ist gleichbedeutend mit $\lnot B\Rightarrow\lnot A$.\\
 Falls $A\Rightarrow B$, so kann $A$ nicht wahr sein wenn $B$ falsch ist (weil $A$ wahr wäre, würde $B$ auch wahr sein).
 
 \section{Prinzip des Indirekten Beweises}
 Zum Beweis der Aussage $A\Rightarrow B$ genügt es die Aussage $\lnot B\Rightarrow\lnot A$ zu zeigen, oder: die Annahme $A\land\lnot B$ zum Wiederspruch zu führen.
 
-\subsection*{Indirekten Beweis}
-Man fügt $\lnot B$ als Annahme hinzu und kommt nach einer Kette von erlaubten schlüssen zu einer falschen Aussage.\\
+\subsection*{Indirekter Beweis}
+Man fügt $\lnot B$ als Annahme hinzu und kommt nach einer Kette von erlaubten Schlüssen zu einer falschen Aussage.\\
 
-\noindent Hieraus schliesst man, dass das zusatzannahme $\lnot B$ nicht wahr ist. 
+\noindent Daraus schliesst man, dass die Zusatzannahme $\lnot B$ nicht wahr ist. 
 
 \subsubsection*{Beispiel 1.1}
 \begin{itemize}
 \item $A=\text{''jede natürliche Zahl } n \text{ hat einen Nachfolger } n+1\text{''}$
-\item $B=\text{''es gibt keine grösste Naturliche Zahl''}$
+\item $B=\text{''es gibt keine grösste natürliche Zahl''}$
 \end{itemize}
 
 \noindent Wir beweisen dass aus $A$ folgt $B$. Nehmen wir an, dass $A$ wahr und $B$ falsch ist. \\
 
-\noindent $\lnot B=$ es gibt eine grösste Natürliche zahl$N_0''$ d.h $N_0>l$ für jedes $l \in \mathbb{N}$.\\
+\noindent $\lnot B=$ es gibt eine grösste natürliche zahl $N_0''$ d.h $N_0>l$ für jedes $l \in \mathbb{N}$.\\
 
 Mittels der Aussage $A$ wissen wir dass $N_0$ einen Nachfolger $N_0 +1$ hat. Dann $N_0+1>N_0$. Dass ist ober ein Wiederspruch.
 
@@ -61,76 +63,75 @@ Eine Menge ist eine Zusammenfassung verschiedener Objekte zu einem Ganzen.\\
 Die Objekte werden Elemente der Menge genannt. 
 \end{definition}
 
-Sei $A$ eine Menge, dann ``$a$ ist element von $A$'' wird mit ``$a\in A$'' bezeichnet.\\
-Seien $A,B$ Mengen, dann ``jedes Element von $A$ ist ein Element von $B$'' wird mit ``$A\subset B$ bezeichnet, und man sagt ``$A$ ist in $B$ enthalten'' (oder $A$ ist teilmenge von $B$). \\
+Sei $A$ eine Menge, dann wird ``$a$ ist element von $A$'' mit ``$a\in A$'' bezeichnet.\\
+Seien $A,B$ Mengen, dann wird ``jedes Element von $A$ ist ein Element von $B$'' mit ``$A\subset B$ bezeichnet, und man sagt ``$A$ ist in $B$ enthalten'' (oder $A$ ist eine Teilmenge von $B$). \\
 
-Falls zugleich $A\subset B$ und $B\subset A$ gilt, bezeichnet man $A$ und $B$ als gleich und schreibt $A=B$. 
+Falls zugleich $A\subset B$ und $B\subset A$ gilt, so sind $A$ und $B$ gleich und man schreibt $A=B$. 
 
 \subsubsection*{Beispiele 1.2}
 \begin{enumerate}
-	\item Die Menge $\mathbb{N}=\{0,1,2,\dots\}$ der Natürlichen zahlen.
+	\item Die Menge $\mathbb{N}=\{0,1,2,\dots\}$ der natürlichen Zahlen.
 	\item Die leere Menge mit ``$\varnothing$'' bezeichnet. Sie ist in jeder Menge enthalten.
 	\item Die Menge $\mathbb{Z}=\{\dots,-2,-1,0,1,2,\dots\}$ aller ganze Zahlen.
 	\item Meistens werden Mengen nicht durch die Liste ihre Elemente gegeben, sondern durch bestimmte Eigenschaften ihrer Elemente definiert \[\mathbb{P}=\{2,3,4,5,7,11,13,\dots\}\] die Menge aller Primzahlen $\mathbb{P}:\{p\in\mathbb{N}\mid\text{ $p$ primzahl}\}$
 \end{enumerate}
 \section{Zwei Prinzipen}
-Wir werden 2 Methoden des Beweises häufig benutzen.
+Wir werden die folgenden zwei Beweismethoden häufig benutzen.
 
  \subsection*{1. Prinzip des Indirekten Beweises}
 Zum Beweis der Aussage $A\Rightarrow B$ genügt es die Aussage $\lnot B\Rightarrow\lnot A$ zu zeigen, oder, die Annahme $A\land\lnot B$ zum Wiederspruch zu führen.
 \subsection*{2. Prinzip der Vollständigen Induktion}
-Sei für jedes $n\in\mathbb{N}$ eine Behauptung $A(n)$ gegeben. Soll die Behauptung für alle natürlichen Zahlen $n\in\mathbb{N}$ bewiessen werden so genügen dazu zwei Beweisschritte:
+Sei für jedes $n\in\mathbb{N}$ eine Behauptung $A(n)$ gegeben. Soll die Behauptung für alle natürlichen Zahlen $n\in\mathbb{N}$ bewiessen werden, so genügen dazu zwei Beweisschritte:
 \begin{enumerate}[i)]
 \item Der Beweis von $A(0)$
 \item Für jedes $n\in\mathbb{N}$, der Beweis von $A(n+1)$ unter der Voraussetzung, dass $A(n)$ gilt. 
 \end{enumerate}
-Oft Behauptungen nicht von $n=0$ antreten. \\
+Oft gelten aber Behauptungen nicht von $n=0$. \\
 Soll die Gültigkeit von $A(n)$ für alle $n\geq m$ bewiesen werden so genügen wieder zwei Schritte:
 \begin{enumerate}[i)]
 	\item Beweis von $A(m)$
 	\item Für jedes $n\geq m$ impliziert $A(n)$ die Behauptung $A(n+1)$
 \end{enumerate}
-Das Prinzip der Vollständige Induktion ist genau wie ein Dominoeffekt.\\
+Das Prinzip der Vollständigen Induktion ist genau wie ein Dominoeffekt.\\
 
-Sie stellen alle Dominosteinen eine nach der andere. Falls der erste Dominostein füllt ($A(1)$ wahr) und falls wir die Dominosteinen genug nebeneinander gestellt haben, so dass ein fallender Dominostein den nächsten trifft ($A(k)\Rightarrow A(k+1)$) dann wissen wir, dass alle Dominosteinen fallen. 
+Sie stellen alle Dominosteinen eine nach der andere. Falls der erste Dominostein fällt ($A(1)$ wahr) und falls wir die Dominosteine genug nah nebeneinander gestellt haben, so dass ein fallender Dominostein den nächsten trifft ($A(k)\Rightarrow A(k+1)$) dann wissen wir, dass alle Dominosteine fallen. 
 
 \subsubsection*{Beispiel 1.3 (Induktion)}
 \begin{enumerate}
-\item Für alle $n\geq 1$ gilt: \[1+3+5+\dots (2n-1)=n^2\text{\indent\indent}A(n)\] Beweis mittels Vollständige Induktion
+\item Für alle $n\geq 1$ gilt: \[A(n): \quad 1+3+5+\dots (2n-1)=n^2\] Beweis mittels Vollständige Induktion
 \begin{enumerate}[i)]
 \item $A(i)$ lautet $1=1^2$ und gilt.
-\item Sei $n\geq 1$. Annahme: so gilt $A(n)$. Die Linke Seite der Identität $A(n+1)$ ist \[1+3+\dots (2n-1)+(2n+1)=n^{2}+(2n+1)=(n+1)^2\] womit $A(n+1)$ bewiesen ist.
+\item Sei $n\geq 1$. Annahme: $A(n)$ gilt. Die Linke Seite der Identität $A(n+1)$ ist \[1+3+\dots +(2n-1)+(2n+1)=n^{2}+(2n+1)=(n+1)^2\] womit $A(n+1)$ bewiesen ist.
 \end{enumerate}
-\item Als zweite Beispiel für Vollständige Induktion beweisen wir den Fundamental Satz von Euklid:
+\item Als zweite Beispiel der vollständigen Induktion beweisen wir den Fundamentalsatz von Euklid:
 \subsubsection*{Satz 1.4}
-Jede Natürliche Zahl $n\geq 2$ ist ein Produkt von Primzahlen, dass bis auf die Reihenfolge der Faktoren eindeutig ist. Wir werden uns hier nicht mit der eindeutigkeit befessen.
+Jede natürliche Zahl $n\geq 2$ ist ein Produkt von Primzahlen, dass bis auf die Reihenfolge der Faktoren eindeutig ist. Wir werden uns hier nicht mit der Eindeutigkeit befassen.
 \subsubsection*{Beweis}
-Sei $A(n)$ die Aussage: Jede Natürliche Zahl $m$ mit $2\leq m\leq n$ ist ein Produkt von Primzahlen
+Sei $A(n)$ die Aussage: Jede natürliche Zahl $m$ mit $2\leq m\leq n$ ist ein Produkt von Primzahlen
 \begin{enumerate}[i)]
 \item $A(2)$ gilt denn $2$ ist Primzahl
 \item Sei $n\geq 2$. Wir nehmen an, dass $A(n)$ gilt. Für $n+1$ gibt es zwei Möglichkeiten
 \begin{enumerate}[a)]
 \item $n+1$ ist eine Primzahl und somit gilt $A(n+1)$ 
-\item $n+1$ ist keine Primzahl d.h. es gibt $2\leq a\leq n$ die $n+1$ teilt. Dann ist $b:=\frac{n+1}{a}$ auch ganz und zudem erfüllt $2\leq b\leq n$ . Aus $A(n)$ folgt dass sowohl $a$ wie $b$ ein Produkt von Primzahlen sind somit $n+1=ab$ ein product von Primzahlen ist. 
+\item $n+1$ ist keine Primzahl d.h. es gibt $2\leq a\leq n$ die $n+1$ teilt. Dann ist $b:=\frac{n+1}{a}$ auch ganz und zudem erfüllt $2\leq b\leq n$ . Aus $A(n)$ folgt, dass sowohl $a$ wie $b$ ein Produkt von Primzahlen sind. Somit ist auch $n+1=ab$ ein Produkt von Primzahlen. 
 \end{enumerate}
 \end{enumerate}
 \end{enumerate}
 \subsubsection*{Satz 1.5}
 Die Menge $\mathbb{P}$ der Primzahlen ist unendlich.
 \subsubsection*{Beweis}
-Nehmen wir an das gegenteil ``$\mathbb{P}$ ist endlich'', d.h. $\mathbb{P}=\{p_1,p_2,\dots,p_m\}$ n aufsteigender Folge; also $p_1=2,p_2=3,p_3=5,p_4=7,\dots$. Wir betrachten die Zahl $k=p_1\dots p_{m+1}$. Auf Satz 1.4 folgt dass so eine Primzahl $p_i$ (aus der liste $p_1\dots p_{m}$) gilt mit $p_i$ teilt $k$. Da $p_i$ offensichtlich $p_1\dots p_{m}$ teilt, folgt dass $p_i$ $k-p_1\dots p_{m}=1$ teilt. Das ist ein Widerspruch. 
+Nehmen wir das Gegenteil ``$\mathbb{P}$ ist endlich'' an, d.h. $\mathbb{P}=\{p_1,p_2,\dots,p_m\}$ in aufsteigender Folge; also $p_1=2,p_2=3,p_3=5,p_4=7,\dots$. Wir betrachten die Zahl $k=p_1 p_2\dots p_i \dots p_m+1$. Aus Satz 1.4 folgt, dass eine Primzahl $p_i$ (aus der Liste $\{p_1 ,\dots , p_{m}\}$) existiert, mit $p_i$ teilt $k$. Da $p_i$ offensichtlich $p_1 p_2\dots p_i \dots p_m$ teilt, folgt dass $p_i$ $k-p_1\dots p_{m}=1$ teilt. Das ist ein Widerspruch. 
 
 \subsection*{Teilbarkeit}
 \subsubsection{Formale Definition}
 Eine Ganze Zahl $a$ teilt eine ganze Zahl $b$ genau dann, wenn es eine ganze Zahl $n$ gibt, für die $an=b$ ist. \\
-\todo{Please fill out the table}
 \begin{center}
 \begin{tabular}{l|l}
-Man sagt dann & Man schreibt \\\hline 
+Man sagt dann (Synonyme) & Man schreibt \\\hline 
 $a$ teilt $b$ & $a\mid b$\\
-$a$ ist teiler von $b$ & ~\\
+$a$ ist Teiler von $b$ & ~\\
 $b$ ist teilbar durch $a$ & ~\\
-$b$ ist Vielfaches durch $a$ & ~\\
+$b$ ist Vielfaches von $a$ & ~\\
 \end{tabular}
 \end{center}
 
@@ -151,9 +152,9 @@ So erhalten wir einen Wiederspruch
 \end{enumerate}
 
 \subsubsection*{Bemerkung}
-Letztes mal haben wir gesagt jedes element von $A$ ist auch Element von $B$ ($\forall x,x\in A\Rightarrow x\in B$) wird mit $A\subset B$ ($A$ ist in $B$ enthalten, $A$ ist Teilmenge von $B$) bezeichnet. Falls $A\subset B$ und eine Element $b\in B$ gibt mit $b\not\in A$ sagen wir $A$ ist eine ``eigentliche Teilmenge'' von $B$. Manchmal schreiben wir $A\mathop  \subset \limits_{\not  = } B$ in diesem Fall. \\
+Letztes mal haben wir gesagt, dass jedes Element von $A$ ist auch Element von $B$ ($\forall x,x\in A\Rightarrow x\in B$) mit $A\subset B$ bezeichnet wird. Wir sagen auch $A$ ist in $B$ enthalten oder $A$ ist Teilmenge von $B$. Falls $A\subset B$ und eine Element $b\in B$ gibt mit $b\not\in A$ sagen wir $A$ ist eine ``eigentliche Teilmenge'' von $B$. Manchmal schreiben wir $A\mathop  \subset \limits_{\not  = } B$ in diesem Fall. \\
 
-Es gibt viele Bücher, mit der Folgenden Notation: jedes element von $A$ ist ein element von $B$ wird mit $A\subseteq B$ bezeichnet. Und wenn $A\subseteq B$ und $A\not =B$ dann benutzen sie $A\subset B$ statt $A\mathop  \subset \limits_{\not  = } B$. $A=B$ falls $x\in A\Leftrightarrow x\in B$. 
+Es gibt viele Bücher mit der folgenden Notation: jedes Element von $A$ ist ein Element von $B$ wird mit $A\subseteq B$ bezeichnet. Und wenn $A\subseteq B$ und $A\not =B$ dann benutzen sie $A\subset B$ statt $A\mathop  \subset \limits_{\not  = } B$. $A=B$ falls $x\in A\Leftrightarrow x\in B$. 
 
 \subsubsection*{Satz}
 $A=B \Leftrightarrow A\subset B$ und $B\subset A$ 
