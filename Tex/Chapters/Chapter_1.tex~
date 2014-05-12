@@ -29,12 +29,17 @@ Seien $A,B$ Aussagen
 \subsubsection*{Bemerkung}
 Die Folgerung ist transitiv. Wenn wir wissen, dass $A\Rightarrow B$ und $B\Rightarrow C$, dann wissen wir dass $A\Rightarrow C$.
 
-
-\subsection*{Prinzip des Mathematischen Beweises}
+<<<<<<< HEAD
+\subsection*{Prinzip der Mathematischen Beweises}
 Wir können ber eine Kette von Folgerungen \[A\Rightarrow B \Rightarrow C \dots \Rightarrow S\]
+einen mathematischen ``Satz'' $S$ aus einen annahme $A$ herleiten. (Ein Beweis ist eine Folge von Implikationen von Aussagen). 
+\subsubsection*{Kontroposition (Umkehrschluss)}
+=======
+\subsection*{Prinzip des Mathematischen Beweises}
+Wir können ber eine Kette von Folgerungen $$A\Rightarrow B \Rightarrow C \dots \Rightarrow S$$
 einen mathematischen ``Satz'' $S$ aus einen Annahme $A$ herleiten. (Ein Beweis ist eine Folge von Implikationen von Aussagen). 
 \subsubsection*{Kontraposition (Umkehrschluss)}
-
+>>>>>>> 7f0fe7d293eaa76707f53a321f7411a8f67db5a0
 $A\Rightarrow B$ ist gleichbedeutend mit $\lnot B\Rightarrow\lnot A$.\\
 Falls $A\Rightarrow B$, so kann $A$ nicht wahr sein wenn $B$ falsch ist (weil $A$ wahr wäre, würde $B$ auch wahr sein).
 
@@ -73,7 +78,11 @@ Falls zugleich $A\subset B$ und $B\subset A$ gilt, so sind $A$ und $B$ gleich un
 	\item Die Menge $\mathbb{N}=\{0,1,2,\dots\}$ der natürlichen Zahlen.
 	\item Die leere Menge mit ``$\varnothing$'' bezeichnet. Sie ist in jeder Menge enthalten.
 	\item Die Menge $\mathbb{Z}=\{\dots,-2,-1,0,1,2,\dots\}$ aller ganze Zahlen.
+<<<<<<< HEAD
 	\item Meistens werden Mengen nicht durch die Liste ihre Elemente gegeben, sondern durch bestimmte Eigenschaften ihrer Elemente definiert \[\mathbb{P}=\{2,3,4,5,7,11,13,\dots\}\] die Menge aller Primzahlen $\mathbb{P}:\{p\in\mathbb{N}\mid\text{ $p$ primzahl}\}$
+=======
+	\item Meistens werden Mengen nicht durch die Liste ihre Elemente gegeben, sondern durch bestimmte Eigenschaften ihrer Elemente definiert $$\mathbb{P}=\{2,3,4,5,7,11,13,\dots\}$$ die Menge aller Primzahlen $\mathbb{P}:\{p\in\mathbb{N}\mid\text{ $p$ Primzahl}\}$
+>>>>>>> 7f0fe7d293eaa76707f53a321f7411a8f67db5a0
 \end{enumerate}
 \section{Zwei Prinzipen}
 Wir werden die folgenden zwei Beweismethoden häufig benutzen.
@@ -98,7 +107,11 @@ Sie stellen alle Dominosteinen eine nach der andere. Falls der erste Dominostein
 
 \subsubsection*{Beispiel 1.3 (Induktion)}
 \begin{enumerate}
-\item Für alle $n\geq 1$ gilt: \[A(n): \quad 1+3+5+\dots (2n-1)=n^2\] Beweis mittels Vollständige Induktion
+<<<<<<< HEAD
+\item Für alle $n\geq 1$ gilt: \[1+3+5+\dots (2n-1)=n^2\text{\indent\indent}A(n)\] Beweis mittels Vollständige Induktion
+=======
+\item Für alle $n\geq 1$ gilt: $$ A(n): \quad 1+3+5+\dots+(2n-1)=n^2$$ Beweis mittels vollständiger Induktion
+>>>>>>> 7f0fe7d293eaa76707f53a321f7411a8f67db5a0
 \begin{enumerate}[i)]
 \item $A(i)$ lautet $1=1^2$ und gilt.
 \item Sei $n\geq 1$. Annahme: $A(n)$ gilt. Die Linke Seite der Identität $A(n+1)$ ist \[1+3+\dots +(2n-1)+(2n+1)=n^{2}+(2n+1)=(n+1)^2\] womit $A(n+1)$ bewiesen ist.
