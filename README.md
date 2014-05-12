@@ -11,17 +11,17 @@ Status
 ======
 | Chapter |  Typed up?  | Finished drawings? | Spellchecked? |      Math checked?      | Done? |
 |:-------:|:-----------:|:------------------:|:-------------:|:-----------------------:|:-----:|
-|    1    |     Yes     |         Yes        |       No      | Waiting for corrections |   No  |
+|    1    |     Yes     |         Yes        |       In Progress     | Waiting for corrections |   No  |
 |    2    |     Yes(*)    |         Yes        |       No      | Waiting for corrections |   No  |
 |    3    | In Progress |          -         |       No      |            No           |   No  |
 |    4    |      No     |          -         |       -       |            -            |   No  |
 |    5    |      No     |          -         |       -       |            -            |   No  |
 |    6    |     Yes     |         Yes        |       No      |           Yes           |   No  |
 |    7    |     Yes     |         Yes        |       No      | Waiting for corrections |   No  |
-|    8    |     Yes     |          -         |       No      | Waiting for corrections |   No  |
+|    8    |     Yes     |          In Progress         |       No      | Waiting for corrections |   No  |
 |    9    | In Progress |          -         |       -       |            -            |   No  |
 
-(*) Might still be missing some content, which will be added once the corerctions are made.
+(*) Might still be missing some content, which will be added once the corrections are made.
 
 TODO:
 * Spell check chapters that are done
