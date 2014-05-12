@@ -12,10 +12,10 @@ Viele gleichungen haben keine Lösung in $\mathbb{Q}$.
 \subsubsection*{Satz 2.1}
 Sei $p\in\mathbb{N}$ eine Primzahl. Dann hat $x^2=p$ keine Lösung in $\mathbb{Q}$
 \subsubsection*{Beweis}
-Zum Erinnerung zwei Natürlichen Zahlen $a$ und $b$ sind teilfrmd (oder relativ prim) wenn es keine Natürliche Zahl ausser der Eins gibt, die beiden Zahlen teilt. $$\left( (a,b)=1\right)\rightarrow\text{ grösste Gemeinsame Teiler}$$
+Zum Erinnerung zwei Natürlichen Zahlen $a$ und $b$ sind teilfrmd (oder relativ prim) wenn es keine Natürliche Zahl ausser der Eins gibt, die beiden Zahlen teilt. \[\left( (a,b)=1\right)\rightarrow\text{ grösste Gemeinsame Teiler}\]
 
 \subsubsection*{Indirekter Beweis}
-Wir nehmen an: es gibt $x=\frac{a}{b}\in \mathbb{Q}$ mit $x^2 =p$, wobei $a,b$ teilfremd und $\geq 1$ sind. Dann gilt $$a^2=pb^2$$ woraus folgt, dass $p$ $a$ teilt also ist $a=pk$, $k\in\mathbb{N}$ und somit $$a^2=p^2k^2=pb^2\Rightarrow pk^2=b^2$$ woraus folgt, dass $p$ $b$ teilt.
+Wir nehmen an: es gibt $x=\frac{a}{b}\in \mathbb{Q}$ mit $x^2 =p$, wobei $a,b$ teilfremd und $\geq 1$ sind. Dann gilt \[a^2=pb^2\] woraus folgt, dass $p$ $a$ teilt also ist $a=pk$, $k\in\mathbb{N}$ und somit \[a^2=p^2k^2=pb^2\Rightarrow pk^2=b^2\] woraus folgt, dass $p$ $b$ teilt.
 
 \section{Die Reelen Zahlen}
 Wir werden jetzt das System von Axiomen beschreiben das die Menge der Reelen Zahlen ``eindeutig'' characterisiert. \\
@@ -47,7 +47,7 @@ Inverse Element  & M4) & $\forall x\in\mathbb{R}, x\not =0$  $ \exists y\in\math
 \end{tabular}
 \\
 
-und Die Multiplikation ist verträglich it der Addition im Sinne des Distributivitäts-Gesetz (D)$$\forall x,y,z\in\mathbb{R}:x(y+z)=xy+xz$$
+und Die Multiplikation ist verträglich it der Addition im Sinne des Distributivitäts-Gesetz (D)\[\forall x,y,z\in\mathbb{R}:x(y+z)=xy+xz\]
 
 \begin{itemize}
 \item $( \mathbb{R},+)$ mit A1$\rightarrow$A4 ist eine Abelische Gruppe bezüglich der Addition
@@ -92,7 +92,7 @@ Nehmen wir an, dass es $0'\in\mathbb{R}$ gibt so dass $x+0'=x$, $\forall x\in\ma
 $\Rightarrow \exists$ mindestens eine Lösung der Gleichung $a+x=b$. Von i) folgt dass $x$ eindeutig bestimmt ist $a+x=b=a+x' \Rightarrow x=x'$
 \item Seien $x=b-a$, $y=b+(-a)$. Wir Wollen beweisen dass $x=y$.\\
 
-\noindent Aus i) wissen wir dass $b-a$ eine Lösung von $a+x=b$ $$y+a=\left( b+(-a)\right)+a=b+\left( (-a)+a\right)=b+0=0$$
+\noindent Aus i) wissen wir dass $b-a$ eine Lösung von $a+x=b$ \[y+a=\left( b+(-a)\right)+a=b+\left( (-a)+a\right)=b+0=0\]
 $\Rightarrow y$ ist auch eine Lösung.\\
 Weil die Lösung von $a+x=b$ ist eindeutig bestimmt, ist $y=x$
 \item
@@ -139,14 +139,14 @@ Seien $A,B\subset\mathbb{R}$ nicht leere Teilmenge von $\mathbb{R}$, so dass $a\
 \todo{What? page 29 bottom} erfüllt dieses Eigenschaft nicht!\\
 
 
-Seien $$A=\{x\in\mathbb{Q}\mid x\geq 0, x^2\leq 2\}$$ $$B=\{y\in Q\mid y\geq 0, y^2 \geq 2\}$$ 
+Seien \[A=\{x\in\mathbb{Q}\mid x\geq 0, x^2\leq 2\}\] \[B=\{y\in Q\mid y\geq 0, y^2 \geq 2\}\] 
 
 Dann gilt $a\leq b$ $\forall a\in A$ $b\in B$. ABer ein $c\in\mathbb{Q}$, mit $a\leq c\leq b$ würde dann $c^2=2$ erfüllen! In Satz 2.1 haben wir gesehen dass $x^2=p$ keine Lösung in $\mathbb{Q}$ hat. \\
 
 Wir definieren jetzt für $x,y\in\mathbb{R}$ \[\max \{ x,y\}  = \left\{ {\begin{array}{*{20}{c}}
 {x\text{ falls }y \le x}\\
 {y\text{ falls }x \le y}
-\end{array}} \right.\] Insbesondere ist der Absolutbetrag einer zahl $x\in\mathbb{R}, \left| x \right|$ $$\left| x \right|:\max \{x,-x\}$$ Für diesen gilt folgender Wichtiger Satz
+\end{array}} \right.\] Insbesondere ist der Absolutbetrag einer zahl $x\in\mathbb{R}, \left| x \right|$ \[\left| x \right|:\max \{x,-x\}\] Für diesen gilt folgender Wichtiger Satz
 \subsubsection*{Satz 2.7}
 \begin{enumerate}[i)]
 \item $\left| {x + y} \right| \le \left| x \right| + \left| y \right|$ (Dreiecks Ungleichung)
@@ -288,18 +288,18 @@ Sei $x>1$, und $A:=\{ z\in\mathbb{R}\mid z>0$ mit $z^2\leq x\}$. Dann ist $A$ na
 Sei $y:=\sup A$. Wir zeigen dass $y^2=x$
 \begin{itemize}
     \item Schnitt 1: Annahme $y^2<x$. \\ 
-    Sei $0\leq h\leq 1$.  Wir nehmen $$\left( y+h\right)^2=y^2+2hy+h^2$$
-    $$=y^2+h(2y+h)$$
-    $$\leq y^2+h(2y+1)$$
-    $$=y^2 +h\left( (y+1)^2 -y^2\right)$$
+    Sei $0\leq h\leq 1$.  Wir nehmen \[\left( y+h\right)^2=y^2+2hy+h^2\]
+    \[=y^2+h(2y+h)\]
+    \[\leq y^2+h(2y+1)\]
+    \[=y^2 +h\left( (y+1)^2 -y^2\right)\]
     Weil $y^2<x$ ist, $\frac{x-y^2}{(y+1)^2-y^2}>0$ und daher gibt es $h\in\mathbb{R}$, $h>0$, $h\leq\frac{x-y^2}{(y+1)^2-y^2}$ (sei $h=\min \{1,\frac{x-y^2}{2x+1}\}$)\\
     
-    Für solche $h$ gilt $$(y+h)^2\leq y^2 + \left( \frac{x-y^2}{(y+1)^2-y^2}\right)\left( (y+1)^2 -y^2\right)=$$\todo{chopped result, page 35.1} Also $y+h\in A$ und $y+h>y$. Ein widerspruch: $y$ ist eine obere schranke für $A$, d.h., $z<y$\\$\Rightarrow y^2\geq x$ Analog beweist man $y^2\leq x$
+    Für solche $h$ gilt \[(y+h)^2\leq y^2 + \left( \frac{x-y^2}{(y+1)^2-y^2}\right)\left( (y+1)^2 -y^2\right)=\]\todo{chopped result, page 35.1} Also $y+h\in A$ und $y+h>y$. Ein widerspruch: $y$ ist eine obere schranke für $A$, d.h., $z<y$\\$\Rightarrow y^2\geq x$ Analog beweist man $y^2\leq x$
     \item Schnitt 2: Annahme $y^2>x$\\
     Sei $h=\frac{y^2-x}{2y}\not=0$ 
-    $$(y-h)^2=y^2-2hy+h^2>y^2-2hy=y^2 -(y^2-=x$$\todo{Chopped, page 35.2 top}
+    \[(y-h)^2=y^2-2hy+h^2>y^2-2hy=y^2 -(y^2-=x\]\todo{Chopped, page 35.2 top}
     $\Rightarrow y-h$ ist eine Obere Schranke für $A$
-    $$\left( \forall z \in A, z^2\leq x\text{. Da }(y-h)^2>x \text{ ist, } (y-h)^2>x\geq z^2\text{. Damit } y-h>z, \forall z \in A\right)$$
+    \[\left( \forall z \in A, z^2\leq x\text{. Da }(y-h)^2>x \text{ ist, } (y-h)^2>x\geq z^2\text{. Damit } y-h>z, \forall z \in A\right)\]
     Aber $y-h<y$, wiederspruch zur Minimalität von y.
 \end{itemize}
 Falls $0<x<1$, dann $\frac{1}{x}>1$\\
@@ -311,7 +311,7 @@ Zum Abschluss dieses Themas erwähren wir noch eine Wichtige Eigenschaft der Ree
 \subsubsection*{Satz 2.13 (Archimedische Eigenschaft)}
 Zu jeder Zahl $0<b\in\mathbb{R}$ gibt es ein $n\in\mathbb{N}$ mit $b<n$.
 \subsubsection*{Beweis (Indirekt)}
-Andernfalls gibt es $b\in\mathbb{R}$ mit $n\leq b$, $\forall n\in\mathbb{N}$ $$\left( \lnot\left(\exists n\in\mathbb{N}:b<n\right)=\left(\forall n\in\mathbb{N}:b\geq n\right)\right)$$
+Andernfalls gibt es $b\in\mathbb{R}$ mit $n\leq b$, $\forall n\in\mathbb{N}$ \[\left( \lnot\left(\exists n\in\mathbb{N}:b<n\right)=\left(\forall n\in\mathbb{N}:b\geq n\right)\right)\]
 Dann ist $b$ eine obere Schranke für $\mathbb{N}$ und es existiert $c=\sup\mathbb{N}\in\mathbb{R}$. Mit $n\in\mathbb{R}$ ist jedoch auch $n+1\in\mathbb{N}$.\\
 Also: $n+1\leq c$, $\forall n\in\mathbb{N}$. Somit folgt $n\leq c-1$, $\forall n\in\mathbb{N}$ ein widerspruch zur minimalität von \todo{Chopped content, page 36 bottom}.
 
@@ -331,7 +331,7 @@ Wir wissen dass gewisse Gleichungen in $\mathbb{R}$ Lösbar ist: z.B. $y^2=a$, $
 
 \noindent Zuerst, werden wir die Euklidischen Räume $\mathbb{R}^n$ einführen
 \section{Euklidische Räume}
-Von der Mengentheorie können wir die Kartesische Produkt zweier Mengen; es Lässt sich ohne schwierigkeiten zu endlichen Familien $A_1,\dots ,A_n$ verallgemeinen; nähmlich $$A_1\times\dots\times A_n:=\{\left(x_1,\dots ,x_n\right):x_i\in A_i \}$$ ist die Menge der geordneten $n-$tuple von Elementen aus $A_1,\dots ,A_n$.\\
+Von der Mengentheorie können wir die Kartesische Produkt zweier Mengen; es Lässt sich ohne schwierigkeiten zu endlichen Familien $A_1,\dots ,A_n$ verallgemeinen; nähmlich \[A_1\times\dots\times A_n:=\{\left(x_1,\dots ,x_n\right):x_i\in A_i \}\] ist die Menge der geordneten $n-$tuple von Elementen aus $A_1,\dots ,A_n$.\\
 
 Für beliebige $n\geq 1$ betrachten wir$ \mathbb{R}^n: = \underbrace {\mathbb{R} \times  \ldots  \times \mathbb{R} }_{n - {\text{mal}}}$ und untersuchen Seine Struktur. Auf $\mathbb{R}^n$ haben wir zwei Verknüpfungen
 \begin{enumerate}
@@ -366,7 +366,7 @@ Jeder Vektor $x=\left(x_1,\dots,x_n \right)\in\mathbb{R}$ besitzt eine eindeutig
 \end{definition}
 
 \begin{definition}{2.17}
-Die Norm $\left|\left| x\right|\right|$ eines Vektors ist: $$\left|\left|x\right|\right| := \sqrt{<x,x>}=\sqrt{\sum\limits_{i = 1}^n {{x_i}}}$$ wird oft als Länge interpretiert.
+Die Norm $\left|\left| x\right|\right|$ eines Vektors ist: \[\left|\left|x\right|\right| := \sqrt{<x,x>}=\sqrt{\sum\limits_{i = 1}^n {{x_i}}}\] wird oft als Länge interpretiert.
 \subsubsection*{Beispiel 2.18}
 \begin{itemize}
     \item
@@ -446,7 +446,7 @@ $\{e_1,e_2,\dots,e_n\}$ ist eine orthonormale Basis. Sie sind orthogonal und auf
 \end{definition}
 Die erste wichtige Eigenschaft eines Skalaprodukts ist
 \subsubsection*{Satz 2.19 (Cauchy-Schwarz)}
-$\forall x,y\in\mathbb{R}^n$ gilt $\left| <x,y>\right| \leq \left|\left| x\right|\right| \left|\left| y\right|\right|$ und $$\left| <x,y>\right|=\left|\left| x\right|\right| \left|\left| y\right|\right|\Leftrightarrow \exists\lambda\in\mathbb{R}: x=\lambda y$$
+$\forall x,y\in\mathbb{R}^n$ gilt $\left| <x,y>\right| \leq \left|\left| x\right|\right| \left|\left| y\right|\right|$ und \[\left| <x,y>\right|=\left|\left| x\right|\right| \left|\left| y\right|\right|\Leftrightarrow \exists\lambda\in\mathbb{R}: x=\lambda y\]
 
 Die Euklidische Norm hat die Eigenschaften
 \subsubsection*{Satz 2.20}
@@ -458,24 +458,24 @@ Die Euklidische Norm hat die Eigenschaften
 \subsubsection*{Beweis}
 \begin{itemize}
     \item ASK FOR BEWEIS \todo{ASK FOR BEWEIS}
-    \item $${\left|\left| x+y\right|\right|}^2=<x+y,x+y>$$
-$$=<x,x+y>+<y,x+y>$$
-$$<x,x>+<x,y>+<y,x>+<y,y>$$
-$$<x,x>+2<x,y>+<y,y>$$
-$$\leq {\left|\left| x \right|\right|}^2 + 2\left( <x,y>\right) + {\left|\left| y \right|\right|}^2$$
-$$\leq {\left|\left| x \right|\right|}^2 + 2{\left|\left| y \right|\right|}  {\left|\left| x \right|\right|} + {\left|\left| x \right|\right|}^2$$
+    \item \[{\left|\left| x+y\right|\right|}^2=<x+y,x+y>\]
+\[=<x,x+y>+<y,x+y>\]
+\[<x,x>+<x,y>+<y,x>+<y,y>\]
+\[<x,x>+2<x,y>+<y,y>\]
+\[\leq {\left|\left| x \right|\right|}^2 + 2\left( <x,y>\right) + {\left|\left| y \right|\right|}^2\]
+\[\leq {\left|\left| x \right|\right|}^2 + 2{\left|\left| y \right|\right|}  {\left|\left| x \right|\right|} + {\left|\left| x \right|\right|}^2\]
 \end{itemize}
 
 \section{Die Komplexen Zahlen}
-Da für alle $x\in\mathbb{R}$ $x^2\geq 0$, gibt es $\sqrt{-1}$ nicht als reelle Zahl. Seit 18 Jahrhundert haben Mathematiker mit Ausdrücke $a+b\sqrt{-1}$, $a,b\in\mathbb{R}$ gerechnet und auf sie die in $\mathbb{R}$ geltenden Rechnenregel angewendt, z.B. $$\left( 1+2\sqrt{-1}\right)\left( 1-2\sqrt{-1}\right) = 1^2 + 2^2\left( \sqrt{-1}\right)^2$$
+Da für alle $x\in\mathbb{R}$ $x^2\geq 0$, gibt es $\sqrt{-1}$ nicht als reelle Zahl. Seit 18 Jahrhundert haben Mathematiker mit Ausdrücke $a+b\sqrt{-1}$, $a,b\in\mathbb{R}$ gerechnet und auf sie die in $\mathbb{R}$ geltenden Rechnenregel angewendt, z.B. \[\left( 1+2\sqrt{-1}\right)\left( 1-2\sqrt{-1}\right) = 1^2 + 2^2\left( \sqrt{-1}\right)^2\]
 Allgemein:
-$$\left( a+b\sqrt{-1} \right)\left( c+d\sqrt{-1}\right) = ac + ad\sqrt{-1} + bc\sqrt{-1}+bd\sqrt{-1}$$
-$$=\left( ac-bd\right)+\left(ad+bc\right)\sqrt{-1}$$
+\[\left( a+b\sqrt{-1} \right)\left( c+d\sqrt{-1}\right) = ac + ad\sqrt{-1} + bc\sqrt{-1}+bd\sqrt{-1}\]
+\[=\left( ac-bd\right)+\left(ad+bc\right)\sqrt{-1}\]
 Das Problem ist hier, dass $\sqrt{-1}$ keinen präzisen Mathematisches Sinn hat und dass deshalb auch nicht klar ist, was ``$+$'' in ``$a+b\sqrt{-1}$'' heissen soll. \\
 
 \noindent Das Problem is wie folgt gelöst:\\
 
-Als model von ``$a+b\sqrt{-1}$'', $\mathbb{C}$, nehmen wir $\mathbb{R}^2$. Wir haben schon eine Addition von vektoren und das neutral Element \todo{Chopped content, page 42 middle}. Wir definieren dann die Multiplikation $$\mathbb{R}^2 \times\mathbb{R}^2 \rightarrow \mathbb{R}^2$$ $$(x,y)\rightarrow x\cdot y $$
+Als model von ``$a+b\sqrt{-1}$'', $\mathbb{C}$, nehmen wir $\mathbb{R}^2$. Wir haben schon eine Addition von vektoren und das neutral Element \todo{Chopped content, page 42 middle}. Wir definieren dann die Multiplikation \[\mathbb{R}^2 \times\mathbb{R}^2 \rightarrow \mathbb{R}^2\] \[(x,y)\rightarrow x\cdot y \]
 wobei $x\cdot y=(ac-bd,ad+bc)$, $x=(a,b)$, $y=(c,d)$. Dann erfüllen ``$+$'' und ``$\cdot$'' folgende Eigenschaften:
 \begin{itemize}
 \item Assos: $\left((a,b)(c,d)\right)(e,f)=(a,b)\left((c,d)(e,f) \right)$
@@ -492,7 +492,7 @@ Der Körper der komplexen Zahlen $\mathbb{C}$ ist $\mathbb{R}^2$ versehen mit ``
 \subsubsection*{Bemerkung 2.22}
 $z^2+1=0$ hat in $\mathbb{C}$ eine Lösung. Nämlich ist $(0,1)(0,1)=(-1,0)=-(1,0)=1$. Wir führen für $(0,1)$ die Bezeichnung ``$i$'' ein, das heisst Imaginäre Einheit.\\
 
-Also ist $i^2=-1$. Jede komplexe Zahl $z=(x,y)$ lässt sich dann wie folgt darstellen:  $$z=(x,y)=(x,0)+(0,y)=x(1,0)+y(0,1)=x\cdot 1+ y\cdot i$$
+Also ist $i^2=-1$. Jede komplexe Zahl $z=(x,y)$ lässt sich dann wie folgt darstellen:  \[z=(x,y)=(x,0)+(0,y)=x(1,0)+y(0,1)=x\cdot 1+ y\cdot i\]
 In der Rechnungen lässt man oft das 1 in $x\cdot 1$ fallen und schreibt $z=x+yi$
 \begin{definition}{2.22}
 \begin{enumerate}
@@ -520,8 +520,8 @@ $\left| z\right| := \left|\left| z \right|\right|$
 Wir können $\mathbb{R}$ in $\mathbb{C}$ ``einbetten'' mittels $\mathbb{R}\ni x\rightarrow (x,0)\in\mathbb{C}$. Sei $\mathbb{C}_0=\{ (x,y)\in\mathbb{C}\mid y=0 \}=\{ (x,0)\mid x\in\mathbb{R}\}$. Der Abbildung $f:\mathbb{R}\rightarrow\mathbb{C}_0$, $x\rightarrow (x,0)$ist eine Bijektion.\\
 
 Diese Identifikation (von $\mathbb{R}$ und $\mathbb{C}_0$ ist verträglich mit den operationen in $\mathbb{R}$ und in $\mathbb{C}$, d.h.
-$$f(x+y)=f(x)+f(y)$$
-$$f(xy)=f(x)f(y)$$
+\[f(x+y)=f(x)+f(y)\]
+\[f(xy)=f(x)f(y)\]
 \subsubsection*{Polarform}\todo{Not sure if this should be a title}
 Als Polarkoordinaten in die Ebene führen wir $(r,\phi)$ ein
 
@@ -552,7 +552,7 @@ $r=\left| z\right|$
 \end{figure}
 
 \begin{definition}{}
-Wir definieren (nach Euler)$$e^{i\phi}:=\cos\phi+ i\sin\phi$$$$z=re^{i\phi}=\left| z\right|e^{i\phi}$$
+Wir definieren (nach Euler)\[e^{i\phi}:=\cos\phi+ i\sin\phi\]\[z=re^{i\phi}=\left| z\right|e^{i\phi}\]
 \end{definition}
 \todo{Where does the definition end??}
 
@@ -590,28 +590,28 @@ In der Ebene $\mathbb{R}^2$ stehen uns neben den kartesischen koordinaten $x,y$ 
 \node[anchor=west,scale=0.7] at (5,-0.25){$\phi=\arg z$ - Das argument von z};
 \end{tikzpicture}
 \end{center}
-$$e^{i\phi}=1\Leftrightarrow \phi=2k\pi$$
-$$\cos\phi + i\sin\phi =1 \Leftrightarrow\cos\phi =1 \text{ und }\sin\phi=0$$
-$$\hspace{14mm}\Leftrightarrow\phi = 2k\pi, k\in\mathbb{Z}$$
+\[e^{i\phi}=1\Leftrightarrow \phi=2k\pi\]
+\[\cos\phi + i\sin\phi =1 \Leftrightarrow\cos\phi =1 \text{ und }\sin\phi=0\]
+\[\hspace{14mm}\Leftrightarrow\phi = 2k\pi, k\in\mathbb{Z}\]
 \[{e^{i\theta }} \cdot {e^{i\phi }} = \left( {\cos \theta  + i\sin \theta } \right)\left( {\cos \phi  + i\sin \phi } \right)\]
 \[=\underbrace {\cos \theta \cos \phi  - \sin \theta \sin \phi }_{\cos \left( {\theta  + \phi } \right)} + i\underbrace {\left( {\cos \theta \sin \phi  + \sin \theta \cos \phi } \right)}_{\sin \left( {\theta  + \phi } \right)}\]
-$$=e^{i(\theta + \phi)}$$
+\[=e^{i(\theta + \phi)}\]
 folgt $e^{i\phi}e^{i\psi}=e^{i(\phi+\psi)}$\\
 
-Somit folgt für $z=re^{i\theta}$, $\omega=se^{i\phi}$ $\in\mathbb{C}$ die einfache Darstellung $z\omega=rse^{i(\theta + \phi)}$, $$\frac{z}{\omega}=\left( \frac{r}{s}\right)e^{i(\theta-\phi)}$$
+Somit folgt für $z=re^{i\theta}$, $\omega=se^{i\phi}$ $\in\mathbb{C}$ die einfache Darstellung $z\omega=rse^{i(\theta + \phi)}$, \[\frac{z}{\omega}=\left( \frac{r}{s}\right)e^{i(\theta-\phi)}\]
 Die Polare Darstellung ist in Berechnungen sehr nützlich, insbesondere um das Produkt und die Division zu berechnen
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
-\item $$z=1+i=\sqrt{2}e^{i\frac{\pi}{4}}$$
-$$\omega=\sqrt{3}-i=2e^{-i\frac{\pi}{6}}$$
-$$\frac{\left(\sqrt{3}-i\right)^3}{(1+i)^2}=\frac{\omega^3}{z^4}=\frac{8e^{-i\frac{\pi}{2}}}{4e^{i\pi}}=2e^{-\frac{3\pi}{2}i}=2e^{\frac{\pi}{2}i}=2i$$
+\item \[z=1+i=\sqrt{2}e^{i\frac{\pi}{4}}\]
+\[\omega=\sqrt{3}-i=2e^{-i\frac{\pi}{6}}\]
+\[\frac{\left(\sqrt{3}-i\right)^3}{(1+i)^2}=\frac{\omega^3}{z^4}=\frac{8e^{-i\frac{\pi}{2}}}{4e^{i\pi}}=2e^{-\frac{3\pi}{2}i}=2e^{\frac{\pi}{2}i}=2i\]
 \item Die Polarform ist auch sehr nützlich um die wurzel einer Komplexen Zahl zu berechnen. Sei $\omega\in\mathbb{C}$, $n\in\mathbb{N}$. Wir möchten die Gleichung $z^n=\omega$ lösen. 
-$$\omega=\left|\omega\right| e^{i\phi}$$
-$$z^n=\omega=\left|\omega\right| e^{i\theta}\Rightarrow z=\left| \omega\right|^\frac{1}{n}e^{i\frac{\left(\theta + 2k\pi\right)}{n}}$$
-$$=\left| \omega\right| e^{i(\theta +2k\pi}$$
+\[\omega=\left|\omega\right| e^{i\phi}\]
+\[z^n=\omega=\left|\omega\right| e^{i\theta}\Rightarrow z=\left| \omega\right|^\frac{1}{n}e^{i\frac{\left(\theta + 2k\pi\right)}{n}}\]
+\[=\left| \omega\right| e^{i(\theta +2k\pi}\]
 \subsubsection*{Beispiel}\todo{is this inside the other Beispiel or out??}
-$$z^3=1\Rightarrow z^3=\left( e^{2\pi i k}\right)^\frac{1}{3} \in \{e^{i\pi\frac{2k}{3}}: k=0,1,2\} = \{1,e^{2i\frac{\pi}{3}},e^{4i\frac{\pi}{3}} \}$$
+\[z^3=1\Rightarrow z^3=\left( e^{2\pi i k}\right)^\frac{1}{3} \in \{e^{i\pi\frac{2k}{3}}: k=0,1,2\} = \{1,e^{2i\frac{\pi}{3}},e^{4i\frac{\pi}{3}} \}\]
 Allgemein Formel der Einheitswurfel $z=\{ e^{i\frac{2\pi k}{n}}:k=0,1,\dots,n-1\}$
 \subsubsection*{Bemerkung}
 \begin{enumerate}

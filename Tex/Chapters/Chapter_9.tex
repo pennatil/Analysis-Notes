@@ -1,11 +1,11 @@
 \chapter{Integration in $\mathbb{R}^{\lowercase{n}}$}
-Im Eindimensionalen hatten wir mit dem Integral $$\int\limits_a^b f(x)dx$$ den Flächeninhalt unter dem Graphen von $f$ berechnet. Wir suchen nach eine Verallgemeinerung mit der \todo{can't understand word, page 207 middle} z.B. Volumen unter dem Graphen einer Funktion von zwei Variablen berechnen kann
+Im Eindimensionalen hatten wir mit dem Integral \[\int\limits_a^b f(x)dx\] den Flächeninhalt unter dem Graphen von $f$ berechnet. Wir suchen nach eine Verallgemeinerung mit der \todo{can't understand word, page 207 middle} z.B. Volumen unter dem Graphen einer Funktion von zwei Variablen berechnen kann
 \missingfigure{page 207, middle}
 \underline{Erinnerung:} Bestimmtes Riemann-Integral einen Funktion $f(x)$ über einem Interval $\lbrack a,b\rbrack:$ 
-$$I=\int\limits_a^b f(x)dx$$ Das Integral $I$ war als Grenzwert von Riemannscher Ober und Untersumme definiert (falls diese Grenzwert jeweils existieren und übereinstimmten).\\
+\[I=\int\limits_a^b f(x)dx\] Das Integral $I$ war als Grenzwert von Riemannscher Ober und Untersumme definiert (falls diese Grenzwert jeweils existieren und übereinstimmten).\\
 
 Konstruktionsprinzip für Bereichsintegrale ist Analog. Aber die Definitionsbereich $D$ ist komplizierter. Wir betrachten zunächst den Fall zweier Variabler, $n=2$, und einen Definitionsbereich $D\subset\mathbb{R}^2$ der Form
-$$D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack\subset\mathbb{R}^2$$
+\[D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack\subset\mathbb{R}^2\]
 d.h. $D$ ist ein kompakter Quader (Rechteck). Sei $f:D\rightarrow\mathbb{R}$ eine beschränkte Funktion.
 
 \begin{definition}{9.1}
@@ -29,13 +29,13 @@ die Riemannsche Untersumme bzw. Riemannsche Obersumme con $f\left( x\right)$
 \end{definition}
 \subsubsection*{Bemerkung 9.2}
 \begin{enumerate}
-\item Es gilt $$U_f\left( Z\right)\leq R_f\left( Z\right)\leq O_f\left( Z\right)$$ d.h. eine Riemannsche Summe zur Zerlegung $Z$ liegt stets zwischen der Unter und Obersumme dieser Zerlegung. 
+\item Es gilt \[U_f\left( Z\right)\leq R_f\left( Z\right)\leq O_f\left( Z\right)\] d.h. eine Riemannsche Summe zur Zerlegung $Z$ liegt stets zwischen der Unter und Obersumme dieser Zerlegung. 
 \item Entsteht eine Zerlegung $Z_2$ aus der Zerlegung $Z_1$ durch Hinzunahme weiterer zwischenpunkte $x_i$ oder/und $y_j$ so gilt 
 \begin{align*}
 U_f\left( Z_2\right)&\geq U_f\left( Z_1\right)\text{ und }\\
 O_f\left( Z_2\right)&\leq O_f\left( Z_1\right)
 \end{align*}
-Für zwei beliebige Zerlegungen $Z_1,Z_2$ gilt stets $$U_f\left( Z_1\right)\leq O_f\left( Z_2\right)$$
+Für zwei beliebige Zerlegungen $Z_1,Z_2$ gilt stets \[U_f\left( Z_1\right)\leq O_f\left( Z_2\right)\]
 \missingfigure{Page 211 bottom}
 \end{enumerate}
 \begin{definition}{9.3}
@@ -61,7 +61,7 @@ oder
 \subsubsection*{Satz 9.4 (Elementare Eigenschaften des Integrals)}
 \begin{enumerate}
 \item \underline{Linearität:} Seien $f,g: D\rightarrow\mathbb{R}$ beschränkt und R integrabel, $\beta,\alpha\in\mathbb{R}$. Dann sind $\alpha f$, $f+g$ R - Integrabel
-$$\int\limits_D {\left( {\alpha f + \beta g} \right)d\mu  = \alpha \int\limits_D {fd\mu }  + \beta \int\limits_D {gd\mu } } $$
+\[\int\limits_D {\left( {\alpha f + \beta g} \right)d\mu  = \alpha \int\limits_D {fd\mu }  + \beta \int\limits_D {gd\mu } } \]
 \item \underline{Monotonie:} Gilt $f(x)\leq g(x)$, $\forall x\in D$, so folgt \[\int\limits_D {fd\mu }  \le \int\limits_D {gd\mu } \]
 \item\underline{Positivität:} Gilt für alle $x\in D$, $f(x)\geq 0$ (d.h. $f(x)$ ist nichtnegativ), so folgt \[\int\limits_D {fd\mu }  \ge 0\]
 \item \underline{Abschätzung} \[\left| {\int\limits_D {f(x)d\mu } } \right| \le \mathop {\sup }\limits_{x \in D} \left| {f(x)} \right|{\text{vol}}\left( D \right)\]
@@ -103,9 +103,9 @@ Die meisten praktischen Aufgaben lassen sich auf die Integration über sogenannt
 \begin{definition}{9.10}
 \begin{enumerate}
 \item Eine Teilmenge $D\subset\mathbb{R}^2$ heisst ein Normalbereich bezüglich der $x-$achse bzw. bezüglich der $y-$Achse falls es stetige Funktionen $g,h$ bzw. $\overline{g},\overline{h}$ gibt mit
-$$D=\left\{ \left( x,y\right)\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}$$ 
+\[D=\left\{ \left( x,y\right)\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}\] 
 bzw.
-$$D=\left\{ \left( x,y\right)\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}$$
+\[D=\left\{ \left( x,y\right)\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}\]
 \end{enumerate}
 \end{definition}
 
@@ -120,10 +120,10 @@ Nun braucht man $V(x)$ nur noch über $\lbrack a,b\rbrack$ zu integrieren\[V = \
 
 \subsubsection*{Satz 9.11}
 \begin{enumerate}
-\item Ist $f(x)$ stetig auf einem Normalbereich $$D=\left\{ \left( x,y\right)\in\mathbb{R}^2\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}$$ 
+\item Ist $f(x)$ stetig auf einem Normalbereich \[D=\left\{ \left( x,y\right)\in\mathbb{R}^2\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}\] 
 so gilt 
 \[\int\limits_D {f(x)d\mu  = \int\limits_a^b {\left( {\int\limits_{g(x)}^{h(x)} {f\left( {x,y} \right)dy} } \right)dx} } \]
-\item bzw. Falls $$D=\left\{ \left( x,y\right)\in\mathbb{R}^2\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}$$
+\item bzw. Falls \[D=\left\{ \left( x,y\right)\in\mathbb{R}^2\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}\]
 so gilt 
 \[\int\limits_D {f(x)d\mu  = \int\limits_{\overline{a}}^{\overline{b}} {\left( {\int\limits_{\overline{g}(x)}^{\overline{h}(x)} {f\left( {x,y} \right)dx} } \right)dy} } \]
 \end{enumerate}
