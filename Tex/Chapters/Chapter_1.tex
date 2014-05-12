@@ -170,14 +170,14 @@ Sei $x\in B$, mittels $B\subset A$, haben wir $x\in A$ somit $x\in B \Rightarrow
 (\textasteriskcentered) und (\textasteriskcentered\textasteriskcentered) $\Rightarrow A=B$ per Definition. 
 
 \section{Mengeoperationen}
-Zunächst erinnern wir kurz an die Definitionen der Elementaren Operationen auf Mengen. \\
+Zunächst erinnern wir kurz an die Definitionen der elementaren Operationen auf Mengen. \\
 
 \noindent Seien $A$ und $B$ Mengen. Wir können dann daraus folgende Mengen bilden:
 
 \begin{itemize}
-\item Die Vereinigung: $A\cup B=\{x\mid x\in A \text{ oder } x\in B\}$
-\item Der Durchschnitt: $A\cap B=\{x\mid x\in A \text{ und } x\in B\}$
-\item Die Differenz: $A\backslash B=\{x\mid x\in A \text{ und } x\not\in B\}$
+\item Die Vereinigung: $A\cup B=\{x\mid x\in A \lor x\in B\}$
+\item Der Durchschnitt: $A\cap B=\{x\mid x\in A \land x\in B\}$
+\item Die Differenz: $A\backslash B=\{x\mid x\in A \land x\not\in B\}$
 \item Symmetrische Differenz: $A\bigtriangleup B=\left(A\backslash B\right) \cap \left(B\backslash A\right)=\left(A\cup B\right)\backslash\left(A\cap B\right)$
 \end{itemize}
 
@@ -191,7 +191,7 @@ $A\cap \emptyset=\emptyset$; $A\cup \emptyset=A$\vspace{-4mm}
 \begin{itemize}
     \item $\cup$ verhaltet sich wie $+$
     \item $\cap$ verhaltet sich wie Multiplikation
-    \item $\emptyset$ verhaltet sich wie Null element
+    \item $\emptyset$ verhaltet sich wie das Nullelement
 \end{itemize}
     \item $\left( A\cup B\right)\cup C=A\cup\left( B\cup C\right)$\\
     $\left( A\cap B\right)\cap C=A\cap\left( B\cap C\right)$
@@ -201,7 +201,16 @@ $A\cap \emptyset=\emptyset$; $A\cup \emptyset=A$\vspace{-4mm}
 
 
 \subsubsection*{Beweis}
-Übung \todo{Ask for correct beweis!!}
+Einerseits gilt
+\[
+(A \cup B) \cap C = \{x \in X: x \in A \cup B \} \land \{ x \in X: x \in C\}
+\]
+Andererseits $(A \cap C) \cup ( B \cap C) = \{ x \in X: x \in A \cap C \} \lor \{ x \in X : x \in B \cap C \}$. Daraus folgt
+\begin{align*}
+(A \cup B ) \cap C &\subseteq (A \cap C) \cup (B \cap C) \\
+(A \cap C ) \cup (B \cap C) &\subseteq (A \cup B) \cap C
+\end{align*}
+und somit sind die zwei Mengen gleich.
 
 \begin{definition}{1.7}
 Das Kartesische Produkt $A\times B$ der Mengen $A,B$ ist die Menge der geordneten Paare $(a,b)$ wobei $a\in A, b\in B$
@@ -301,17 +310,19 @@ Um die Operationen auf mehrere Mengen zu Verallgemeinern sind die folgenden Quan
 \end{enumerate}
 Sei nun $I$ eine beliebige Menge ($I$=Indexmenge) und sei für alle $i\in I$ eine Menge $A_i$ gegeben. Dann:
 \begin{itemize}
-\item $\mathop { \cup {A_i}}\limits_{i \in I} = \{x\mid \exists i\in I,x\in A_i\}$. Vereinigung besteht aus den Elementen $x$, für welche eine $i\in I$ gibt so dass $x$ zu $A_i$ gehört.
-\item  $\mathop { \cap {A_i}}\limits_{i \in I} = \{x\mid \forall i\in I,x\in A_i\}$. Durchschnitt. 
+\item $\mathop{\bigcup}\limits_{i \in I}{A_i} = \{x\mid \exists i\in I,x\in A_i\}$. Vereinigung besteht aus den Elementen $x$, für welche eine $i\in I$ gibt so dass $x$ zu $A_i$ gehört.
+\item  $\mathop{\bigcap}\limits_{i \in I}{A_i} = \{x\mid \forall i\in I,x\in A_i\}$. Durchschnitt. 
 \end{itemize}
-Wir \todo{?löhnen? page 15} noch das Kartesische Produkt endlich vieler Mengen $A_1 \dots A_n$ definiere \[{A_1} \times {A_n} = \prod\limits_{i = 1}^n {{A_i} = \{ ({x_1} \ldots {x_n})\mid {x_i} \in {A_i}} \} \]
+Wir können noch das Kartesische Produkt endlich vieler Mengen $A_1 \dots A_n$ definieren: \[{A_1} \times {A_n} = \prod\limits_{i = 1}^n {{A_i} = \{ ({x_1} \ldots {x_n})\mid {x_i} \in {A_i}} \} \]
 
 \subsubsection*{Satz 1.8}
-Seien $A_1 \dots A_k \subset x,k\in \mathbb{N}$. Es gilt
+Seien $A_1 \dots A_k \subset X, \; k\in \mathbb{N}$. Es gilt
 \begin{enumerate}
 \item \[{\left( {\bigcap\limits_{i = 1}^k {{A_i}} } \right)^c} = \bigcup\limits_{i = 1}^k {{A_i}^c} \]
 \item \[{\left( {\bigcup\limits_{i = 1}^k {{A_i}} } \right)^c} = \bigcap\limits_{i = 1}^k {{A_i}^c} \]
 \end{enumerate}
+\subsubsection*{Beweis}
+Siehe Analysis Serie 1, 1. Semester, Aufgabe 2.e).
 \begin{enumerate}[($\ast$)]
 \item Wir haben gesehen dass wir manchmal eine Aussage verneinen müssen. Deshalb müssen wir lernen wie man Aussage mit Quantoren verneinen kann.
 \[\neg\left(\forall n:A(n)\right)\Leftrightarrow\left(\exists n:\neg A(n)\right)\]
@@ -326,8 +337,8 @@ Eine Funktion oder Abbildung $f:X\rightarrow Y$ der Menge $X$ in die Menge $Y$ i
 
 Es gibt verschiedene wichtige Objekte die in Zusammenhang mit einem Abbildung auftreten 
 \[X= \text{ Definitionsbereich von } f\]
-\[Y= \text{ Die Ziel Menge}\]
-\[f(x)=\{f(x)\mid x\in X\}\text{ ist das Bild von }f\text{ oder die Bildmenge}\]
+\[Y= \text{ Die Zielmenge}\]
+\[f(x)=\{f(x)\mid x\in X\}\text{ ist das sog. Bild oder die Bildmenge von }f\]
 \end{definition}
 
 \subsubsection*{Beispiel 1.10}
