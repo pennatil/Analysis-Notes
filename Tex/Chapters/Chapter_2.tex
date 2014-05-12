@@ -12,7 +12,7 @@ Viele gleichungen haben keine Lösung in $\mathbb{Q}$.
 \subsubsection*{Satz 2.1}
 Sei $p\in\mathbb{N}$ eine Primzahl. Dann hat $x^2=p$ keine Lösung in $\mathbb{Q}$
 \subsubsection*{Beweis}
-Zum Erinnerung zwei Natürlichen Zahlen $a$ und $b$ sind teilfrmd (oder relativ prim) wenn es keine Natürliche Zahl ausser der Eins gibt, die beiden Zahlen teilt. \[\left( (a,b)=1\right)\rightarrow\text{ grösste Gemeinsame Teiler}\]
+Zum Erinnerung zwei Natürlichen Zahlen $a$ und $b$ sind teilfrmd (oder relativ prim) wenn es keine Natürliche Zahl ausser der Eins gibt, die beiden Zahlen teilt. \[\left( (a,b)=1\right)\to\text{ grösste Gemeinsame Teiler}\]
 
 \subsubsection*{Indirekter Beweis}
 Wir nehmen an: es gibt $x=\frac{a}{b}\in \mathbb{Q}$ mit $x^2 =p$, wobei $a,b$ teilfremd und $\geq 1$ sind. Dann gilt \[a^2=pb^2\] woraus folgt, dass $p$ $a$ teilt also ist $a=pk$, $k\in\mathbb{N}$ und somit \[a^2=p^2k^2=pb^2\Rightarrow pk^2=b^2\] woraus folgt, dass $p$ $b$ teilt.
@@ -25,10 +25,10 @@ Die Menge $\mathbb{R}$ der Reelen Zahlen ist mit zwei Verknüpfungen ``$+$'' (Ad
 \item \textbf{$\left( \mathbb{R},+,\cdot\right)$ ist ein Koerper}\\
 Es gibt 2 Operationen (Zweistellige Verknüpfungen)
 \begin{itemize}
-\item $+:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}$\\
-$(a,b)\rightarrow a+b$
-\item $\times:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}$\\
-$(a,b)\rightarrow a\cdot b$
+\item $+:\mathbb{R}\times\mathbb{R}\to\mathbb{R}$\\
+$(a,b)\mapsto a+b$
+\item $\times:\mathbb{R}\times\mathbb{R}\to\mathbb{R}$\\
+$(a,b)\mapsto a\cdot b$
 \end{itemize}
 und 2 ausgezeichnete Element 0 und 1 in $\mathbb{R}$ die folgenden Eigenschaften haben:\\
 
@@ -50,15 +50,15 @@ Inverse Element  & M4) & $\forall x\in\mathbb{R}, x\not =0$  $ \exists y\in\math
 und Die Multiplikation ist verträglich it der Addition im Sinne des Distributivitäts-Gesetz (D)\[\forall x,y,z\in\mathbb{R}:x(y+z)=xy+xz\]
 
 \begin{itemize}
-\item $( \mathbb{R},+)$ mit A1$\rightarrow$A4 ist eine Abelische Gruppe bezüglich der Addition
-\item  $( \mathbb{R},+,\cdot)$ mit A1$\rightarrow$A4, M1$\rightarrow$M4 und D ist ein Zahlkörper. 
+\item $( \mathbb{R},+)$ mit A1$\to$A4 ist eine Abelische Gruppe bezüglich der Addition
+\item  $( \mathbb{R},+,\cdot)$ mit A1$\to$A4, M1$\to$M4 und D ist ein Zahlkörper. 
 \end{itemize}
 
 \subsubsection*{Bemerkung 2.2}
-Eine Menge $G$ versetzen mit Verknüpfung $+$ und Neutrales Element $O$ die den obigen Eigenschaften A2$\rightarrow$A4 genügen heisst Gruppe.\\
+Eine Menge $G$ versetzen mit Verknüpfung $+$ und Neutrales Element $O$ die den obigen Eigenschaften A2$\to$A4 genügen heisst Gruppe.\\
 
 Eine enge $K$ versetzen mit Verknüpfung $+,\cdot$ und Elementen $0\not =1$ die den obigen Eigenschaften 
-A1$\rightarrow$A4, M1$\rightarrow$M4, D genügen heisst Körper. 
+A1$\to$A4, M1$\to$M4, D genügen heisst Körper. 
 \newpage
 \subsubsection*{Folgerung 2.3}
 Seien $a,b,c,d\in\mathbb{R}$\\
@@ -335,10 +335,10 @@ Von der Mengentheorie können wir die Kartesische Produkt zweier Mengen; es Läs
 
 Für beliebige $n\geq 1$ betrachten wir$ \mathbb{R}^n: = \underbrace {\mathbb{R} \times  \ldots  \times \mathbb{R} }_{n - {\text{mal}}}$ und untersuchen Seine Struktur. Auf $\mathbb{R}^n$ haben wir zwei Verknüpfungen
 \begin{enumerate}
-    \item $+:\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}^n$ Addition.\\
+    \item $+:\mathbb{R}^n\times\mathbb{R}^n\to\mathbb{R}^n$ Addition.\\
 $\left( {\underbrace {\left( {{x_1}, \ldots ,{x_n}} \right)}_x,\underbrace {\left( {{y_1}, \ldots ,{y_n}} \right)}_y} \right) \to \underbrace {\left( {{x_1} + {y_1}, \ldots ,{x_n} + {y_n}} \right)}_{{\text{Komponentenweise Addition}}}$. Dann ist $\left( \mathbb{R}^n,+\right)$ eine Abelische Gruppe, mit $0:=(0,\dots,0)$ aln neutrales Element
-\item $\cdot:\mathbb{R}\times\mathbb{R}^n\rightarrow\mathbb{R}^n$ Skalarmultiplikation.\\
-$(\lambda,x)\rightarrow\lambda\cdot x:=(\lambda x_1,\dots,\lambda x_n)$. Dann gelten die folgende Eigenschaften: $\forall x,y\in\mathbb{R}^n,\forall \alpha,\beta\in\mathbb{R}$ 
+\item $\cdot:\mathbb{R}\times\mathbb{R}^n\to\mathbb{R}^n$ Skalarmultiplikation.\\
+$(\lambda,x)\to\lambda\cdot x:=(\lambda x_1,\dots,\lambda x_n)$. Dann gelten die folgende Eigenschaften: $\forall x,y\in\mathbb{R}^n,\forall \alpha,\beta\in\mathbb{R}$ 
 \begin{enumerate}
 \item Distributivität: $\left( \alpha+\beta\right) x=\alpha x+\beta x$
 \item Distributivität: $\alpha\left(x+y\right) = \alpha x+\alpha y$
@@ -355,7 +355,7 @@ Also ist $\mathbb{R}^n$ ein Vektorraum. In der Linearen Algebra führt man dann 
 Jeder Vektor $x=\left(x_1,\dots,x_n \right)\in\mathbb{R}$ besitzt eine eindeutige Darstellung $x=\sum x_ie_i$ bezüglich der Standardbasis.
 \begin{definition}{2.16}
 \begin{enumerate}
-\item Das Skalarprodukt zweier Vektoren $x=\left(x_1,\dots,x_n \right),y=\left(y_1,\dots,y_n \right)$ ist die durch \[ < x,y > : = \sum\limits_{i = 1}^n {{x_i}{y_i}} \] definierte reele Zahl\\ $<\cdot,\cdot>=\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}$ (orthogonal)
+\item Das Skalarprodukt zweier Vektoren $x=\left(x_1,\dots,x_n \right),y=\left(y_1,\dots,y_n \right)$ ist die durch \[ < x,y > : = \sum\limits_{i = 1}^n {{x_i}{y_i}} \] definierte reele Zahl\\ $<\cdot,\cdot>=\mathbb{R}^n\times\mathbb{R}^n\to\mathbb{R}$ (orthogonal)
 \item Falls $<x,y>=0$ heissen $x$ und $y$ senkrecht aufeinander. $<\cdot,\cdot>$ besitzt folgende Eigenschaften
 \begin{enumerate}
 \item Symmetrie: $<x,y>=<y,x>$
@@ -475,7 +475,7 @@ Das Problem ist hier, dass $\sqrt{-1}$ keinen präzisen Mathematisches Sinn hat 
 
 \noindent Das Problem is wie folgt gelöst:\\
 
-Als model von ``$a+b\sqrt{-1}$'', $\mathbb{C}$, nehmen wir $\mathbb{R}^2$. Wir haben schon eine Addition von vektoren und das neutral Element \todo{Chopped content, page 42 middle}. Wir definieren dann die Multiplikation \[\mathbb{R}^2 \times\mathbb{R}^2 \rightarrow \mathbb{R}^2\] \[(x,y)\rightarrow x\cdot y \]
+Als model von ``$a+b\sqrt{-1}$'', $\mathbb{C}$, nehmen wir $\mathbb{R}^2$. Wir haben schon eine Addition von vektoren und das neutral Element \todo{Chopped content, page 42 middle}. Wir definieren dann die Multiplikation \[\mathbb{R}^2 \times\mathbb{R}^2 \to \mathbb{R}^2\] \[(x,y)\mapsto x\cdot y \]
 wobei $x\cdot y=(ac-bd,ad+bc)$, $x=(a,b)$, $y=(c,d)$. Dann erfüllen ``$+$'' und ``$\cdot$'' folgende Eigenschaften:
 \begin{itemize}
 \item Assos: $\left((a,b)(c,d)\right)(e,f)=(a,b)\left((c,d)(e,f) \right)$
@@ -517,7 +517,7 @@ ASK FOR BEWEIS \todo{ASK FOR BEWEIS}
 \subsubsection*{Abkürzung}
 $\left| z\right| := \left|\left| z \right|\right|$
 \subsubsection*{Bemerkung 2.24}
-Wir können $\mathbb{R}$ in $\mathbb{C}$ ``einbetten'' mittels $\mathbb{R}\ni x\rightarrow (x,0)\in\mathbb{C}$. Sei $\mathbb{C}_0=\{ (x,y)\in\mathbb{C}\mid y=0 \}=\{ (x,0)\mid x\in\mathbb{R}\}$. Der Abbildung $f:\mathbb{R}\rightarrow\mathbb{C}_0$, $x\rightarrow (x,0)$ist eine Bijektion.\\
+Wir können $\mathbb{R}$ in $\mathbb{C}$ ``einbetten'' mittels $\mathbb{R}\ni x\to (x,0)\in\mathbb{C}$. Sei $\mathbb{C}_0=\{ (x,y)\in\mathbb{C}\mid y=0 \}=\{ (x,0)\mid x\in\mathbb{R}\}$. Der Abbildung $f:\mathbb{R}\to\mathbb{C}_0$, $x\mapsto (x,0)$ist eine Bijektion.\\
 
 Diese Identifikation (von $\mathbb{R}$ und $\mathbb{C}_0$ ist verträglich mit den operationen in $\mathbb{R}$ und in $\mathbb{C}$, d.h.
 \[f(x+y)=f(x)+f(y)\]
