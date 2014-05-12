@@ -4,17 +4,17 @@
 
 \begin{enumerate}[\indent I)]
 \item \begin{enumerate}[a)]
-\item Gegeben sei eine stetige Funktion $f : \lbrack a,b\rbrack \rightarrow \mathbb{R}$. Gesucht ist eine differenzierbare Funktion $F: \lbrack a,b\rbrack \rightarrow \mathbb{R}$ mit \[F'(t)=f(t), \forall t \in \lbrack a,b \rbrack\]
+\item Gegeben sei eine stetige Funktion $f : \lbrack a,b\rbrack \to \mathbb{R}$. Gesucht ist eine differenzierbare Funktion $F: \lbrack a,b\rbrack \to \mathbb{R}$ mit \[F'(t)=f(t), \forall t \in \lbrack a,b \rbrack\]
 \item Für Naturwissenschaft und Technik ist die folgende Verallgemeinerung von a) wichtig:\\
-Sei $f:\lbrack a,b\rbrack \times \mathbb{R} \rightarrow \mathbb{R}$ gegeben. Gesucht ist eine differenzierbare Funktion $\varphi : \lbrack a,b\rbrack \rightarrow \mathbb{R}$ mit \[\varphi ' (t)=f(t,\varphi (t)), t\in \lbrack a,b \rbrack\] Man nennt ein solches $\varphi$ eine Lösung der Differentialgleichung \[y'=f(x,y)\]
+Sei $f:\lbrack a,b\rbrack \times \mathbb{R} \to \mathbb{R}$ gegeben. Gesucht ist eine differenzierbare Funktion $\varphi : \lbrack a,b\rbrack \to \mathbb{R}$ mit \[\varphi ' (t)=f(t,\varphi (t)), t\in \lbrack a,b \rbrack\] Man nennt ein solches $\varphi$ eine Lösung der Differentialgleichung \[y'=f(x,y)\]
 \end{enumerate}
 \item Viele in der Natur und Ingenieurwissenschaften auftretenden Grössen benötigen zu ihrer exakten Definition einen Grenzprozess der Folgenden art: \\
 Wirkt eine konstante Kraft f längs eines Weges der Länge $s$, und zwar längs der $x$-Achse vom Punkt $a$ bis zum Punkt $b:=a+s$, so versteht man unter der von der konstanten Kraft f geleisteten Arbeit das Produkt f$\times s=$f$(b-a)$. \\
-Ist die Kraft f jedoch örtlich variable, d.h. $f:\lbrack a,b\rbrack \rightarrow \mathbb{R}$ eine Funktion des Ortes $x \in \lbrack a,b\rbrack$, so wird man folgendermasse vorgehen.\\
+Ist die Kraft f jedoch örtlich variable, d.h. $f:\lbrack a,b\rbrack \to \mathbb{R}$ eine Funktion des Ortes $x \in \lbrack a,b\rbrack$, so wird man folgendermasse vorgehen.\\
 
 Zerlege das Interval $\lbrack a,b\rbrack$ in kleine Teilintervalle $I_{1},\dots, I_{n}$. Wähle in jedem Interval $I_{k}:=\lbrack x_{k-1}, x_{k}\rbrack$ einen Punkt $\xi$ aus. Man wird dann die ``Riemannsche Summe'' \[A \sim  \sum\limits_{k = 1}^n {f({\xi_k})({x_k} - {x_{k - 1}})} \]  als Näherung für die gesuchte Arbeit $A$ ansehen. Hierzu wird man insbesondere dann berechtigt sein, wenn man mit jeder genügend feinen Zerlegung des Intervals $I$, einem festen Wert $A$ beliebig nahe kommt. 
 
-\item Sei $f: \lbrack a,b\rbrack \rightarrow \lbrack 0,\infty\rbrack$ eine (stetige) Funktion. Gesucht ist eine vernünftige Definition des Flächeninhalts A des Gebietes zwischen der $x$-Achse und dem Graphen von $f$
+\item Sei $f: \lbrack a,b\rbrack \to \lbrack 0,\infty\rbrack$ eine (stetige) Funktion. Gesucht ist eine vernünftige Definition des Flächeninhalts A des Gebietes zwischen der $x$-Achse und dem Graphen von $f$
 \begin{center}
 \begin{tikzpicture}
 
@@ -117,7 +117,7 @@ Um den genauen Wert der Fläche festzulegen bilden wir immer feinere Zerlegungen
 \end{enumerate}
 \section{Riemann Integral: Definition, elementare Eigenschaften}
 \begin{enumerate}
-\item Sei $f: \lbrack a,b\rbrack\rightarrow\mathbb{R}$ eine beschränkte Funktion.\\
+\item Sei $f: \lbrack a,b\rbrack\to\mathbb{R}$ eine beschränkte Funktion.\\
 
 \begin{definition}{6.1}
 Eine Partition (oder Zerlegung, Einteilung, Unterteilung) eines Intervalls $\lbrack a,b\rbrack$ ist eine endliche Menge $P=\{a=x_0,x_1.\dots,x_n=b \}\\
@@ -254,7 +254,7 @@ Addiert man dazu alle Summanden in \[O(f,P)=\sum\limits_i {(\mathop {\sup {\text
 mit $t\neq l$ so ergibt sich die Ungleichung \[O(f,Q)\leq O(f,P)\]
 Ebenso beweist man $U(f,Q)\geq U(f,P)$. Damit ist b) für den Fall bewiesen, dass $Q$ genau ein Element mehr als $P$ enthält. Der allgemeine Fall lässt sich hierauf leicht durch vollständige Induktion zurückführen. 
 
-\subsubsection*{Lemma 6.3} Sei $f:I:=\lbrack a,b \rbrack \rightarrow \mathbb{R}$ eine beschränkte Funktion. Dann gilt \[\mathop {\sup {\text{ }}U}\limits_{P \in P(I)} (f,P) \le \mathop {\inf {\text{ }}O}\limits_{P \in P(I)} (f,P)\]
+\subsubsection*{Lemma 6.3} Sei $f:I:=\lbrack a,b \rbrack \to \mathbb{R}$ eine beschränkte Funktion. Dann gilt \[\mathop {\sup {\text{ }}U}\limits_{P \in P(I)} (f,P) \le \mathop {\inf {\text{ }}O}\limits_{P \in P(I)} (f,P)\]
 
 \subsubsection*{Beweis}
 Aus \[P\subset Q \Rightarrow U(f,P) \leq U(f,Q) \leq O(f,Q) \leq O(f,P)\] folgt, dass die Zahl $O(f,Q)$ für jede Partition $Q\in P(I)$ eine obere Schranke für die Menge $\{ U(f,P)\mid P\in P(I)\}$ ist. Also folgt aus der Definition des Supremums als kleinste obere Schranke, dass $\mathop {\sup {\text{ }}U}\limits_{P \in P(I)} (f,P) \le \mathop O(f,Q)$ ist. \\
@@ -264,7 +264,7 @@ Diese Ungleichung gilt für jede Partition $Q\in P(I)$. Das heisst wiederum, das
 Also folgt aus der Definition der Infimums als grösste untere Schranke, dass die Gleichung $\mathop {\sup U}\limits_{P \in P(I)} (f,P) \le \mathop {\inf O}\limits_{Q \in P(I)} (f,Q)$ ist. Damit ist Lemma 6.3 bewiesen.
 \begin{definition}{6.4}
 \begin{enumerate}[\indent 1)]
-\item Für beschränktes $f=\lbrack a,b \rbrack\rightarrow \mathbb{R}$ bezeichnen 
+\item Für beschränktes $f=\lbrack a,b \rbrack\to \mathbb{R}$ bezeichnen 
 \[\int\limits_{\underline{a}}^b {fdx = \sup \{ U(f,P):P \in P(I)\} }\]
 \[\int\limits_{a}^{\overline{b}} {fdx = \inf \{ O(f,P):P \in P(I)\} }\]
 das Untere und Obere Integral von $f$.
@@ -274,7 +274,7 @@ das Untere und Obere Integral von $f$.
 
 \subsubsection*{Beispiel 6.5}
 \begin{enumerate}[\indent 1)]
-\item Sei $c\in \mathbb{R}$, $f:I\rightarrow \mathbb{R}$ die konstante Funktion mit dem Wert $c$, das heisst $f(x)=c, \forall x\in I$. Dann gilt \[U(f,P)=O(f,P)=(b-a)c, \forall P\in P(I)\] $\Rightarrow$ $f$ ist Riemann integrierbar und \[\int\limits_a^b {fdx}  = \int\limits_a^b {cdx = c(b - a)} \] In diesem einfachen Fall stimmt unsere Definition mit der Interpretation des Flächeninhalts als Breite mal Höhe überein. Man beachte, dass die Konstante $c$ auch negativ sein darf. 
+\item Sei $c\in \mathbb{R}$, $f:I\to \mathbb{R}$ die konstante Funktion mit dem Wert $c$, das heisst $f(x)=c, \forall x\in I$. Dann gilt \[U(f,P)=O(f,P)=(b-a)c, \forall P\in P(I)\] $\Rightarrow$ $f$ ist Riemann integrierbar und \[\int\limits_a^b {fdx}  = \int\limits_a^b {cdx = c(b - a)} \] In diesem einfachen Fall stimmt unsere Definition mit der Interpretation des Flächeninhalts als Breite mal Höhe überein. Man beachte, dass die Konstante $c$ auch negativ sein darf. 
 \item $f(x) = \left\{ {\begin{array}{*{20}{c}}
 {0{\text{ für }}x \ne {x_0}}\\
 {1{\text{ für }}x = {x_0}}
@@ -320,7 +320,7 @@ $\Rightarrow f$ ist nicht integrierbar. (f ist beschränkt aber nicht integrierb
 \end{enumerate}
 
 \subsubsection*{Satz 6.6 (Riemannsches Kriterium für Integrierbarkeit)}
-Sei $f:I\rightarrow\mathbb{R}$ eine beschränkte Funktion. Dann sind folgende Aussagen äquivalent
+Sei $f:I\to\mathbb{R}$ eine beschränkte Funktion. Dann sind folgende Aussagen äquivalent
 \begin{enumerate}
 \item $f(x)$ ist integrierbar über $\lbrack a,b\rbrack$
 \item Für jedes $\varepsilon>0$ existiert eine Partition $Q\in P(I)$ mit \[O(f,Q)-U(f,Q)<\varepsilon\]
@@ -351,12 +351,12 @@ Aus (b) folgt das $\forall\varepsilon>0$ \[0 < \int\limits_a^{\overline{b}} {f(x
 
 \subsubsection*{Satz 6.7}
 \begin{enumerate}
-\item Jede Stetige Funktion $f:I\rightarrow \mathbb{R}$ ist R. Integrierbar.
+\item Jede Stetige Funktion $f:I\to \mathbb{R}$ ist R. Integrierbar.
 \item Jede Monotone Funktion ist R. Integrierbar.
 \end{enumerate}
 \subsubsection*{Beweis}
 \begin{enumerate}
-\item $f:I\rightarrow\mathbb{R}$ stetig, $I=\lbrack a,b\rbrack$ kompakt, $\Rightarrow f$ gleichmässig stetig.\\
+\item $f:I\to\mathbb{R}$ stetig, $I=\lbrack a,b\rbrack$ kompakt, $\Rightarrow f$ gleichmässig stetig.\\
 d.h. zu jedem $\varepsilon >0$. gibt es $\delta >0$ mit \[\left| {x - y} \right| < \delta  \Rightarrow \left| {f(x) - f(y)} \right| < \frac{\varepsilon }{{b - a}}\]
 Für eine $P\in P(I)$ mit Feinheit $\delta(P)<\delta$ gilt dann \[O(f,P)-U(f,P)=\sum\limits_{i = 1}^n {(\mathop {\sup f}\limits_{[{x_{i - 1}},{x_i}]}  - \mathop {\inf f}\limits_{[{x_{i - 1}},{x_i}]} )} ({x_{i - 1}} - {x_i}) \]
 \[\le \sum\limits_{i = 1}^n {\frac{\varepsilon }{{b - a}}({x_i} - {x_{i - 1}}) = \frac{\varepsilon }{{b - a}}\sum\limits_{i = 1}^n {({x_i} - {x_{i - 1}})} }  = \varepsilon \]
@@ -369,28 +369,28 @@ Für jede $\varepsilon>0$, haben wir $\frac{{(b - a)(f(b) - f(a))}}{n} < \vareps
 \end{enumerate}
 
 \subsubsection*{Satz 6.8 (Riemannsche Summe)}
-Sei $f:I\rightarrow \mathbb{R}$ eine beschränkte Funktion. Folgende Aussagen sind äquivalent.
+Sei $f:I\to \mathbb{R}$ eine beschränkte Funktion. Folgende Aussagen sind äquivalent.
 \begin{enumerate}[\indent I)]
 \item $f$ ist Riemann Integrierbar und $A: = \int\limits_a^b {f(x)dx} $
 \item Für jedes $\varepsilon>0$, existiert eine Zahl $\xi>0$, so dass für jede Partition $P_i=\{x_0,x_1,\dots,x_N\}$ von $I$ und alle $\xi_i,\dots,\xi_N \in \mathbb{R}$ gilt \[\mathop {\delta (P) < \delta }\limits_{{x_{k - 1}} \le {\xi _k} \le {x_k},\forall k}  \Rightarrow \left| {A - \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} } \right| < \varepsilon \]
 \end{enumerate}
-Dieser Satz lässt sich auch so formulieren: Eine beschränkte Funktion $f:I\rightarrow\mathbb{R}$ ist genau dann Riemann integrierbar wenn der Grenzwert \[\mathop {\mathop {\lim }\limits_{\delta (P) \to 0} }\limits_{{\xi _k} \in [{x_{k - 1}},{x_k}]} \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} \] und dann haben wir \[A=\int\limits_a^b {f(x)dx = \mathop {\lim }\limits_{\delta (P) \to 0} } S(f,P,\delta )\]
+Dieser Satz lässt sich auch so formulieren: Eine beschränkte Funktion $f:I\to\mathbb{R}$ ist genau dann Riemann integrierbar wenn der Grenzwert \[\mathop {\mathop {\lim }\limits_{\delta (P) \to 0} }\limits_{{\xi _k} \in [{x_{k - 1}},{x_k}]} \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} \] und dann haben wir \[A=\int\limits_a^b {f(x)dx = \mathop {\lim }\limits_{\delta (P) \to 0} } S(f,P,\delta )\]
 
 \subsubsection*{Beweis} Siehe D.Salomon: Das Riemannsche Integrale (Satz 3.1).
 \subsubsection*{Korollar 6.8}
-Seien $f:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ eine beschränkte und integrierbare Funktion. $\{ P^{(n)}\}$ eine Folge von Partitionen der Intervals $\lbrack a,b\rbrack$ mit $\delta(P^{(n)})\rightarrow 0$ für $n\rightarrow\infty$ und $\{\xi^{(n)}\}$ eine Feste Wahl von Zwischenpunkten zur Partition $P^{(n)}$. Dann ist
+Seien $f:\lbrack a,b\rbrack\to\mathbb{R}$ eine beschränkte und integrierbare Funktion. $\{ P^{(n)}\}$ eine Folge von Partitionen der Intervals $\lbrack a,b\rbrack$ mit $\delta(P^{(n)})\to 0$ für $n\to\infty$ und $\{\xi^{(n)}\}$ eine Feste Wahl von Zwischenpunkten zur Partition $P^{(n)}$. Dann ist
 \[\int\limits_a^b {f(x)dx = \mathop {\lim }\limits_{n \to \infty } S(f,{P^{(n)}},{\xi ^{(n)}})} \]
 \subsubsection*{Beweis}
 Wegen Satz 6.8 existiert zu jedem $\varepsilon>0$, ein $\delta>0$ derart, das für alle Partitionen $\delta(P)<\delta$ die Ungleichung 
 \[\left| {S(f,P,\xi ) - \int\limits_a^b {f(x)dx} } \right| < \varepsilon \]
 gilt und zwar bei beliebiger Wahl der Zwischenpunkten.\\
-Wegen  $\delta(P^{(n)})\rightarrow 0$ existiert ein $N\in\mathbb{N}$ mit $\delta(P^{(n)})<\delta$ für alle $n\geq N$.
+Wegen  $\delta(P^{(n)})\to 0$ existiert ein $N\in\mathbb{N}$ mit $\delta(P^{(n)})<\delta$ für alle $n\geq N$.
 Für jedes $n\geq N$ ist daher \[\left| {S(f,{P^{(n)}},\xi ) - \int\limits_a^b {f(x)dx} } \right| < \varepsilon \] voraus sich die Behauptung unmittelbar ergibt. 
 \subsubsection*{Beispiel}
 \[\int\limits_0^1 {({x^2} - x)dx = ?} \]
 $$f(x) = {x^2} - x \text{ stetig }\Rightarrow\text{ $f$ integrierbar}$$
 Wir wenden Korollar 6.8 an. Wir betrachten die Folge $\{ P^{(n)}\}$ von äquidistanten Partition des intervals $\lbrack 0,1\rbrack$ mit \[x_k^{(n)}: = \frac{k}{n},\text{\indent}\forall k = 0,1, \ldots ,n\]
-Dann $\delta(P^{(n)})=\frac{1}{n}\rightarrow 0$ für $n\rightarrow\infty$. Wir wählen die Zwischenpunkte 
+Dann $\delta(P^{(n)})=\frac{1}{n}\to 0$ für $n\to\infty$. Wir wählen die Zwischenpunkte 
 \[\xi _k^{(n)}: = \frac{k}{n},\text{\indent}\forall k = 1, \ldots ,n\]
 
 Die $\xi _k^{(n)}$ sind die rechten Endpunkte der Teilintervale $I_{k-1}:=\lbrack \frac{k-1}{n},\frac{k}{n}\rbrack$. Hiermit folgt
@@ -406,7 +406,7 @@ Die $\xi _k^{(n)}$ sind die rechten Endpunkte der Teilintervale $I_{k-1}:=\lbrac
 %%%%%%%%%%%%%%%%%%%%
 \subsection*{Eigenschaften des Integrals}
 \subsubsection*{Satz 6.9}
-Seien $a<c<b$ und $\alpha, \beta \in \mathbb{R}$ und $f,g:I=\lbrack a,b \rbrack\rightarrow\mathbb{R}$ zwei Reimann Integrierbare Funktionen. Dann gilt folgendes:
+Seien $a<c<b$ und $\alpha, \beta \in \mathbb{R}$ und $f,g:I=\lbrack a,b \rbrack\to\mathbb{R}$ zwei Reimann Integrierbare Funktionen. Dann gilt folgendes:
 \begin{enumerate}
 \item Die Funktion $\alpha f + \beta g$ ist integrierbar mit \[\int\limits_a^b {(\alpha f + \beta g)dx = \alpha \int\limits_a^b {f(x)dx + \beta \int\limits_a^b {g(x)dx} } } \]
 \item Wenn $f,g$ die Ungleichung $f(x)\leq g(x), \forall x\in\lbrack a,b\rbrack$ erfüllen, dann gilt \[\int\limits_a^b {f(x)dx \le \int\limits_a^b {g(x)dx} } \]
@@ -415,8 +415,8 @@ Seien $a<c<b$ und $\alpha, \beta \in \mathbb{R}$ und $f,g:I=\lbrack a,b \rbrack\
 \end{enumerate}
 
 \subsubsection*{Bemerkung 6.10}
-Wir bezeichnen die Menge aller Riemann integrierbaren Funktionen $f:I\rightarrow \mathbb{R}$ mit $R(I):=\{f:I\rightarrow\mathbb{R}\mid f$ R.Integrierbar $\}$. Nach Satz 6.9 i), ist dies ein reeler Vektorraum. $R(I)$ ist ein Unterraum des Vektorraumes aller reelwertigen Funktion \[F(I):=\{ f:I\rightarrow \mathbb{R}\}\]
-\[C(I):=\{ f:I\rightarrow\mathbb{R}\mid f \text{ stetig}\}\]
+Wir bezeichnen die Menge aller Riemann integrierbaren Funktionen $f:I\to \mathbb{R}$ mit $R(I):=\{f:I\to\mathbb{R}\mid f$ R.Integrierbar $\}$. Nach Satz 6.9 i), ist dies ein reeler Vektorraum. $R(I)$ ist ein Unterraum des Vektorraumes aller reelwertigen Funktion \[F(I):=\{ f:I\to \mathbb{R}\}\]
+\[C(I):=\{ f:I\to\mathbb{R}\mid f \text{ stetig}\}\]
 ist ein Unterraum von $R(I)$ \[C(I)\subset R(I)\subset F(I)\]
 \subsubsection*{Beweis 6.9}
 \begin{enumerate}
@@ -444,7 +444,7 @@ Nach Bmk. 6.2 $P_1\subset P$
 \[\Rightarrow U(f,P_1)<U(f,P)\] und \[O(f,P)<O(f,P_1)\]
 Dann \[-U(f,P)<-U(f,P_1)\] und \[O(f,P)-U(f,P)<O(f,P_1)-U(f,P_1)<\frac{\varepsilon}{(\left| \alpha  \right| + \left| \beta  \right|)}\]
 
-\item Seien $f,g:I\rightarrow\mathbb{R}$ integrierbar mit $f(x)\leq g(x), \forall x \in I$.\\
+\item Seien $f,g:I\to\mathbb{R}$ integrierbar mit $f(x)\leq g(x), \forall x \in I$.\\
 Die Funktion $h:=g-f$ ist wegen (1.) Integrierbar. Sei nur $P=\{x_0,x_1,\dots,x_n\}$ eine beliebige Partition von $\lbrack a,b\rbrack$ folgt dann $\inf h(x) \ge 0,\forall k = 0,1, \ldots ,n$ und daher \[U(h,P) = \sum\limits_P {(\inf h)({x_k} - {x_{k - 1}}) \ge 0} \]
 Was wiederum $\int\limits_{\underline{a}}^b {h(x)dx = \sup U(h,P) \ge 0} $ impliziert. \\
 Da $h$ aber integrierbar ist, folgt hieraus \[0 \le \int\limits_{\underline{a}}^b {h(x)dx = \int\limits_a^b {h(x)dx} } \]
@@ -480,7 +480,7 @@ Sei $f$ integrierbar über $\lbrack a,b \rbrack$. Dann gelten die Abschätzungen
 Für die Partition $P=\{ a,b\}$ von $\lbrack a,b\rbrack$ folgt sofort \[(b - a)\mathop {\inf }\limits_{[a,b]} f = U(f,P) \le \int\limits_a^b {f(x)dx < O(f,P) = (b - a)\mathop {\sup }\limits_{[a,b]} f} \]
 
 \subsubsection*{Satz 6.11}
-Sei $f:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ integrierbar. Dann ist $f$ auch auf jedem Teilinterval $\lbrack c,d\rbrack\subseteq\lbrack a,b\rbrack$ integrierbar. \\
+Sei $f:\lbrack a,b\rbrack\to\mathbb{R}$ integrierbar. Dann ist $f$ auch auf jedem Teilinterval $\lbrack c,d\rbrack\subseteq\lbrack a,b\rbrack$ integrierbar. \\
 
 \subsubsection*{Beweis}
 $f$ ist auf $\lbrack a,b\rbrack$ integrierbar wegen Satz 6.6.\\
@@ -498,7 +498,7 @@ und, analog
 \[M^{''}_{k}\left( f\right) =\sup _{I_k\in P''}f\]
 
 \subsubsection*{Satz 6.12}
-Seien $a\leq b\leq c$. Die funktion $f:\lbrack a,c\rbrack\rightarrow\mathbb{R}$ ist genau dann integrierbar falls beide Einschrankungen ${\left. f \right|_{[a,b]}}$ und ${\left. f \right|_{[b,c]}}$ integrierbar sind. In diesem Fall gilt \[\int\limits_a^c {f(x)dx = \int\limits_a^b {f(x)dx + \int\limits_b^c {f(x)dx} } } \]
+Seien $a\leq b\leq c$. Die funktion $f:\lbrack a,c\rbrack\to\mathbb{R}$ ist genau dann integrierbar falls beide Einschrankungen ${\left. f \right|_{[a,b]}}$ und ${\left. f \right|_{[b,c]}}$ integrierbar sind. In diesem Fall gilt \[\int\limits_a^c {f(x)dx = \int\limits_a^b {f(x)dx + \int\limits_b^c {f(x)dx} } } \]
 \subsubsection*{Konvention 6.13}
 \begin{enumerate}[\indent 1)]
 \item Sei $f$ integrierbar auf einem interval $I$. Für $a\leq b$ in $I$ definiert man \[\int\limits_b^a {f(x)dx =  - \int\limits_a^b {f(x)dx} } \]
@@ -509,7 +509,7 @@ Mit diesem Konvention gelten alle bisherigen Eigenschaften. z.B. \[\forall a,b,c
 In diesem Kapitel wird dem Zusammenhang zwischen Differentiation und Integration hergestellt. Zu diesem Zweck beginnen wir mit dem folgenden Satz, Mittelwertsatz der Integralrechnung. \\
 
 \subsubsection*{Satz 6.14 (Mws. der Integralrechnung)}
-Sei $f:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ eine stetige Funktion. Dann existiert ein $\xi\in\lbrack a,b\rbrack$ mit \[\int\limits_a^b {f(x)dx = f(\xi )(b - a)} \] 
+Sei $f:\lbrack a,b\rbrack\to\mathbb{R}$ eine stetige Funktion. Dann existiert ein $\xi\in\lbrack a,b\rbrack$ mit \[\int\limits_a^b {f(x)dx = f(\xi )(b - a)} \] 
 
 Geometrisch:
 
@@ -568,25 +568,25 @@ Wegen Satz 6.10
 Also $\frac{1}{{b - a}}\int\limits_a^b {f(x)dx \le M} $ für ein $M\in\lbrack m,M\rbrack$. Da $f$ stetig ist, wegen Zwischenwertsatz gibt es $\xi\in\lbrack a,b\rbrack$ mit $f(\xi ) = \frac{1}{{b - a}}\int\limits_a^b {f(x)dx} $. Nun kommt die erste Hauptsatz der Diff- und Integralrechnung.\\
 
 \subsubsection*{Satz 6.15 (Hauptsatz A)}
-Sei $f:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ eine stetige Funktion. Definiere für jeder $x\in\lbrack a,b\rbrack$ \[F(x): = \int\limits_x^b {f(t)dt} \]
-Dann ist $F:I\rightarrow\mathbb{R}$ differenzierbar und $F'(x)=f(x)\text{, }\forall x \in\lbrack a,b\rbrack$.\\
+Sei $f:\lbrack a,b\rbrack\to\mathbb{R}$ eine stetige Funktion. Definiere für jeder $x\in\lbrack a,b\rbrack$ \[F(x): = \int\limits_x^b {f(t)dt} \]
+Dann ist $F:I\to\mathbb{R}$ differenzierbar und $F'(x)=f(x)\text{, }\forall x \in\lbrack a,b\rbrack$.\\
 \subsubsection*{Beweis}
 Für jedes $h\neq 0$ ist \[\frac{{F(x + h) - F(x)}}{h} = \frac{1}{h}\left[ {\int\limits_a^{x + h} {f(t)dt}  - \int\limits_a^x {f(t)dt} } \right] \mathop  = \limits^{6.12}  \frac{1}{h}\int\limits_a^{x + h} {f(t)dt} \]
 Nach dem Mws der Integralrechnung existiert zu jedem solchen $h\neq 0$ ein Zwischenpunkt $\xi_h\in\lbrack x,x+h\rbrack$ (bzw. $\xi_h\in\lbrack x + h,x\rbrack$ falls $h<0$) mit \[\int\limits_x^{x + h} {f(t)dt = (h)f({\xi _h})} \]
-Nun ist $\xi_h \rightarrow x$ für $h\rightarrow 0$. Da $f$ stetig ist \[f(\xi_h)\rightarrow f(x) \text{ für } h\rightarrow 0\]
+Nun ist $\xi_h \to x$ für $h\to 0$. Da $f$ stetig ist \[f(\xi_h)\to f(x) \text{ für } h\to 0\]
 Damit erhalten wir \[F'(x) = \mathop {\lim }\limits_{h \to 0} \frac{{F(x + h) - F(x)}}{h} = \mathop {\lim }\limits_{h \to 0} \frac{1}{h}\int\limits_x^{x + h} {f(t)dt = } \mathop {\lim }\limits_{h \to 0} \frac{1}{h}(hf({\xi _h})) = f(x)\]
 Folgender Begriff ist dann naheliegend. \\
 
 \begin{definition}{6.16}
- Sei $f:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ eine Funktion. Ein Stammfunktion von $f$ (auf $a,b$) ist ein differenzierbare Funktion $F:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ mit $F'(x)=f(x)$.\\
+ Sei $f:\lbrack a,b\rbrack\to\mathbb{R}$ eine Funktion. Ein Stammfunktion von $f$ (auf $a,b$) ist ein differenzierbare Funktion $F:\lbrack a,b\rbrack\to\mathbb{R}$ mit $F'(x)=f(x)$.\\
 \end{definition}
 \noindent Wegen Satz 6.15, hat jede stetige Funktion mindestens eine Stammfunktion. Mit Ausnahme einer additiven Konstante, die beim Differenzieren ja wegfällt, ist die Stammfunktion auch eindeutig bestimmt. Dies ist der Inhalt des folgendes Satzes.\\
 
 \subsubsection*{Satz 6.17}
-Seien $I\subset \mathbb{R}$ ein beliebiges Interval und $F:I\rightarrow\mathbb{R}$ eine Stammfunktion von $f:I\rightarrow\mathbb{R}$. Dann gelten:
+Seien $I\subset \mathbb{R}$ ein beliebiges Interval und $F:I\to\mathbb{R}$ eine Stammfunktion von $f:I\to\mathbb{R}$. Dann gelten:
 \begin{enumerate}[\indent (a)]
 \item Die Funktion $F+c$ ist für jede Konstante $c\in\mathbb{R}$ ebenfalls eine Stammfunktion von $f$.
-\item Ist $G:I\rightarrow\mathbb{R}$ eine weitere Stammfunktion von $f$, so gibt es eine Konstante $c\in\mathbb{R}$ mit $G=F+c$
+\item Ist $G:I\to\mathbb{R}$ eine weitere Stammfunktion von $f$, so gibt es eine Konstante $c\in\mathbb{R}$ mit $G=F+c$
 \end{enumerate}
 
 \subsubsection*{Beweis}
@@ -599,11 +599,11 @@ Seien $I\subset \mathbb{R}$ ein beliebiges Interval und $F:I\rightarrow\mathbb{R
  Eine Stammfunktion von $f$ heisst auch unbestimmtes Integral von $f$ und wird bezeichnet mit $\int {f(x)dx} $. Mittels einer Stammfunktion lässt sich das Integral einer gegebenen Abbildung sehr leicht berechnen. Dies ist der Inhalt des Hauptsatz B.\\
 \end{definition}
 \subsubsection*{Satz 6.19 (Hauptsatz der Diff- und Integralberechnung Version B)}
-Sei $f:I\rightarrow\mathbb{R}$ eine stetige Funktion und $F$ eine beliebige Stammfunktion von $f$. Dann gilt \[\int\limits_a^b {f(x)dx = F(b) - F(a): = \left. {F(x)} \right|_a^b}\text{,\indent}\forall a,b\in I \]
+Sei $f:I\to\mathbb{R}$ eine stetige Funktion und $F$ eine beliebige Stammfunktion von $f$. Dann gilt \[\int\limits_a^b {f(x)dx = F(b) - F(a): = \left. {F(x)} \right|_a^b}\text{,\indent}\forall a,b\in I \]
 
 \subsubsection*{Beweis}
 Für $x\in I$ definieren wor \[F_0(x):=\int\limits_a^x {f(t)dt} \]
-Dann ist $F_0:I\rightarrow\mathbb{R}$ wegen Satz 6.15 eine (Spezielle) Stammfunktion von $f$ mit \[{F_0}(0) = 0\text{\indent}{F_0}(b) = \int\limits_c^b {f(t)dt} \]
+Dann ist $F_0:I\to\mathbb{R}$ wegen Satz 6.15 eine (Spezielle) Stammfunktion von $f$ mit \[{F_0}(0) = 0\text{\indent}{F_0}(b) = \int\limits_c^b {f(t)dt} \]
 Für die beliebige Stammfunktion $F$ gilt somit $F-F_0=c$ für eine Konstante $c\in\mathbb{R}$. Deshalb ist \[F(b) - F(a) = {F_0}(b) - {F_0}(a) = {F_0}(b) = \int\limits_a^b {f(t)dt} \] womit alles bewiesen ist. \\
 
 Der Satz 6.19 ist das zentrale Ergebnis und zur Berechnung konkreter Integral. Man Benötigt nur eine Stammfunktion uns hat von dieser lediglich die Differenz der Funktionswerte zwischen den beiden Endpunkten des Intervals $\lbrack a,b\rbrack$ zu bilden. 
@@ -652,7 +652,7 @@ Partielle Integration ist eine Umkehrung der Leibnizschen Produktregel und besag
 \end{array}\]
 
 \subsubsection*{Satz 6.21 (Partielle Integration)}
-Seien $f,g:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ zwei stetig differenzierbare Funktionen. Dann gilt 
+Seien $f,g:\lbrack a,b\rbrack\to\mathbb{R}$ zwei stetig differenzierbare Funktionen. Dann gilt 
 \[\int {f(x)g'(x)dx = f(x)g(x) - \int {f'(x)g(x)dx} } \]
 und
 \[\int\limits_a^b {f(x)g'(x)dx = \left. {f(x)g(x)} \right|_a^b - \int\limits_a^b {f'(x)g(x)dx} } \]
@@ -798,15 +798,15 @@ Methode der Substitution ist eine Umkehrung der Kettenregel.
 \subsubsection*{Satz 6.25 (Substitutionsregel)}
 Sei 
 \begin{itemize}
-\item $f:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ stetig
-\item $g:\lbrack\alpha,\beta\rbrack\rightarrow\mathbb{R}$ der klasse $C'$
+\item $f:\lbrack a,b\rbrack\to\mathbb{R}$ stetig
+\item $g:\lbrack\alpha,\beta\rbrack\to\mathbb{R}$ der klasse $C'$
 \end{itemize}
 Sowie $t_0\leq t_1$ in $\lbrack\alpha,\beta\rbrack$ so dass $g\left(\lbrack t_0, t_1\rbrack\right)\subset\lbrack a,b\rbrack$.
 Dann gilt 
 \[\int\limits_{g({t_0})}^{g({t_1})} {f(x)dx = \int\limits_{{t_0}}^{{t_1}} {f\left( {g\left( t \right)} \right)g'\left( t \right)dt} } \]
 
 \subsubsection*{Beweis}
-Sei $F:\lbrack a,b\rbrack\rightarrow\mathbb{R}$ eine Stammfunktion für $f$. Dann gilt (nach Hauptsatz B)
+Sei $F:\lbrack a,b\rbrack\to\mathbb{R}$ eine Stammfunktion für $f$. Dann gilt (nach Hauptsatz B)
 \[\int\limits_{g({t_0})}^{g({t_1})} {f(x)dx = F\left( {g({t_1})} \right)}  - F\left( {g({t_0})} \right)\]
 Nach der Kettenregel, haben wir
 \[(F \circ g)'(t) = F'(g(t))g'(t) = f(g(t))g'(t)\]
@@ -823,7 +823,7 @@ Für die Substitutionsregel
 gibt es im Prinzip zwei lesarten.
 \noindent Mann kann sie entweder von links nach rechts oder von rechts nach links anwenden: 
 \begin{enumerate}
-\item (links $\rightarrow$ rechts)\\
+\item (links $\to$ rechts)\\
 Liegt ein Integral explizit in der Form \[\int\limits_{{t_0}}^{{t_1}} {f\left( {g(t)} \right)g'(t)dt} \text{ vor,}\] so können wir die Substitutionsregel von links nach rechts abwende
 \subsubsection*{Beispiel}
 \begin{enumerate}
@@ -842,7 +842,7 @@ Liegt ein Integral explizit in der Form \[\int\limits_{{t_0}}^{{t_1}} {f\left( {
 \[ =  - \log \left| {\cos t} \right| + C\]
 
 \end{enumerate}
-\item (rechts $\rightarrow$ links)\\
+\item (rechts $\to$ links)\\
 Ein integral liegt der Gestalt $\int\limits_\alpha ^\beta  {f(x)dx}$ mit gewissen Grenzen $\alpha,\beta\in\mathbb{R}$ vor, das schwer zu berechnen scheint, versucht man dann mittels geeigneten Substitution $x=g(t)$, dieses Integral umzuformulieren, so dass die Substitutionsregel anwendbar ist, wobei $g(t_0)=\alpha$ und $g(t_1)=\beta$ gelten muss. 
 \subsubsection*{Beispiel 6.26}
 \begin{enumerate}
@@ -1008,12 +1008,12 @@ Sei $f$ eine Funktion auf einem offenen Interval $(a,b)$, deren Einschränkung a
 \subsubsection*{Beispiel}
 \[\int\limits_{ - b}^b {xdx = 0} \text{\hspace{10mm}}\forall b>0\text{, und daher}\]
 \[\mathop {\lim }\limits_{b \to \infty } \int\limits_{ - b}^b {xdx = \lim \left( {\frac{{{b^2}}}{2} - \frac{{{b^2}}}{2}} \right) = \mathop {\lim }\limits_{b \to \infty } 0 = 0} \]
-Die einzelnen Grenzwerte von $\int\limits_a^b {xdx} $ für $b\rightarrow \infty$ und $a\rightarrow -\infty$ existieren dagegen nicht \[\left( {\int\limits_a^b {xdx = \left. {\frac{{{x^2}}}{2}} \right|_a^b = \frac{{{b^2}}}{2} - \frac{{{a^2}}}{2}} } \right)\] und somit auch nicht das uneigentliche Integral $\int\limits_{ - \infty }^\infty  {xdx} $
+Die einzelnen Grenzwerte von $\int\limits_a^b {xdx} $ für $b\to \infty$ und $a\to -\infty$ existieren dagegen nicht \[\left( {\int\limits_a^b {xdx = \left. {\frac{{{x^2}}}{2}} \right|_a^b = \frac{{{b^2}}}{2} - \frac{{{a^2}}}{2}} } \right)\] und somit auch nicht das uneigentliche Integral $\int\limits_{ - \infty }^\infty  {xdx} $
 \item Alle Grundeigenschaften und Integrationstechniken für das bestimmte Integral gelten ebenso für das uneigentliche Integral. 
 \end{enumerate}
 Als Beispiel beweisen wir folgendes nützliches Konvergenzkriterium für Reihen
 \subsubsection*{Satz 6.30}
-Sei $f:\lbrack 1,\infty )\rightarrow \mathbb{R}_+$ monoton fallend. Dann konvergiert $\sum\limits_{k = 1}^\infty  {f(k)}$ genau dann wann $\int\limits_1^\infty  {f(x)dx} $ existiert. In diesem Fall gilt: \[0 \le \sum\limits_{k = 1}^\infty  {f(k)}  - \int\limits_1^\infty  {f(x)dx}  \le f(1)\]
+Sei $f:\lbrack 1,\infty )\to \mathbb{R}_+$ monoton fallend. Dann konvergiert $\sum\limits_{k = 1}^\infty  {f(k)}$ genau dann wann $\int\limits_1^\infty  {f(x)dx} $ existiert. In diesem Fall gilt: \[0 \le \sum\limits_{k = 1}^\infty  {f(k)}  - \int\limits_1^\infty  {f(x)dx}  \le f(1)\]
 \subsubsection*{Beweis}
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
@@ -1074,7 +1074,7 @@ und
 \[ \Rightarrow \frac{1}{{s - 1}}\sum\limits_{n = 1}^\infty  {{n^{ - s}}}  \le 1 + \frac{1}{{s - 1}} = \frac{s}{{s - 1}}\]
 \item \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx}  =  - \int\limits_{ - \infty }^0 {x{e^{ - {x^2}}}dx}  + \int\limits_0^\infty  {x{e^{ - {x^2}}}dx}  = 2\int\limits_0^\infty  {x{e^{ - {x^2}}}dx} \]
 \[\int\limits_0^b {x{e^{ - {x^2}}}dx = \frac{1}{2}\int\limits_0^{{b^2}} {{e^{ - u}}du} }\text{\hspace{10mm} mit }u=x^2, du=2xdx \]
-\[ = \frac{1}{2}\left( {1 - {e^{ - {b^2}}}} \right) \to \frac{1}{2}\text{ für }b\rightarrow \infty\]
+\[ = \frac{1}{2}\left( {1 - {e^{ - {b^2}}}} \right) \to \frac{1}{2}\text{ für }b\to \infty\]
 Somit gilt \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx = 1} \]
 \item Wir haben die folgende einfache aber wichtige Beispiele
 \begin{enumerate}
@@ -1099,7 +1099,7 @@ Somit gilt \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx 
 \end{enumerate}
 \subsubsection*{Satz 6.32 (Majorantenkriterium)}
 \begin{enumerate}[\indent a)]
-\item Sei $f:\lbrack a,\infty )\rightarrow\mathbb{R}$ stetig. Dann gilt \[\forall x:\left| f(x)\right| <g(x)\] und $\int\limits_a^\infty  {g(x)}$ konvergent $\Rightarrow \int {f(x)dx} $ (absolut) konvergent.
+\item Sei $f:\lbrack a,\infty )\to\mathbb{R}$ stetig. Dann gilt \[\forall x:\left| f(x)\right| <g(x)\] und $\int\limits_a^\infty  {g(x)}$ konvergent $\Rightarrow \int {f(x)dx} $ (absolut) konvergent.
 \item Weiterhin gilt folgende Umkehrung: $\forall x:0\leq g(x)\leq f(x)$ und $\int\limits_a^\infty  {g(x)}$ divergent $\Rightarrow \int\limits_a^\infty  {f(x)}$ divergent.
 \end{enumerate}
 
