@@ -1,7 +1,7 @@
 \chapter{Logik und Unterlagen}
-Im Laufendes Semester werden wir viele mathematische Beweise einführen. Heute werden wir uns mit der Mathematische Logik beschäftiges.\\
+Im Laufenden Semester werden wir viele mathematische Beweise einführen. Heute werden wir uns mit der Mathematische Logik beschäftigen. \\
 
-In Mathematik stossen wir uns auf gewisse Grundannahmen ``Axiome'', die wir als gegeben ansehen. Eine dieser Annahmen ist der 
+In der Mathematik stossen wir uns auf gewisse Grundannahmen ``Axiome'', die wir als gegeben ansehen. Eine dieser Annahmen ist der 
 \subsection*{Satz von ausgeschlossenen Dritten}
 Eine zulässige mathematische Aussage ist entweder wahr oder falsch, jedoch nie beides zugleich.
 \subsubsection*{Beispiel}
@@ -628,24 +628,30 @@ x &\mapsto x+1
 \[g\circ f=g\left( f(x)\right)=g(x^2)=x^2+1\]
 \end{itemize}
 
-\section{Die Inverse Abbildung (Umkehrfunktion)}
-Sei $f:X\to Y$ eine bijektiven Funktion. \\
+\section{Die inverse Abbildung (Umkehrfunktion)}
+Sei $f:X\to Y$ eine bijektive Funktion. \\
 
-Die Inverse Funktion $g:Y\to X$, einer bijektiven Funktion $f:X\to Y$ ist die Funktion, die jedem Element $y$ der Zielmenge seien eindeutig bestimmtes Urbildelement zuweist. Bei bijektiven Funktionen hat die Urbildmenge jedes Elements $y$ genau ein Element. \\
 
- $g(y)\defeq x$, eindeutig definiertes $ x\in\Romanbar{X}$, mit $f(x)=y$. Dann ist definitionsgemäss $(g\circ f)(x)=x$, d.h. $g\circ f:id_{\Romanbar{X}}$. Die eindeutig definierte Abbildung $g$ wird (auch) mit $f^{-1}$ bezeichnet und Umkehrfunktion von $f$ genannt.\\
+Die inverse Funktion $g:Y\to X$, einer bijektiven Funktion $f:X\to Y$ ist die Funktion, die jedem Element $y$ der Zielmenge seien eindeutig bestimmtes Urbildelement zuweist. (bei bijektiven Funktionen hat die Urbildmenge jedes Elements $y$ genau ein Element). \\
+
+ $g(y):=x$, eindeutig definiertes $ x\in\Romanbar{X}$, mit $f(x)=y$. Dann ist definitionsgemäss $(g\circ f)(x)=x$, d.h. $g\circ f:id_{\Romanbar{X}}$. Die eindeutig definierte Abbildung $g$ wird (auch) mit $f^{-1}$ bezeichnet und Umkehrfunktion von $f$ genannt.\\
 
 Für $f\circ f^{-1}:$ Sei $y\in Y$ und sei $x$ mit $f(x)=y$. Dann ist $\left( f\circ f^{-1}\right)(y)=f\left(f^{-1}(y)\right)=f(x)=y$ \[f\circ f^{-1}=id_Y\]
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
-\item \[f:\mathbb{R}\to\mathbb{R}\]\[x\mapsto 2x+3\] bijektive\\
-Umkehrfunktion ist gegeben durch \[f^{-1}:\mathbb{R}\to\mathbb{R}\]\[x\mapsto\frac{x-3}{2}\]
-\item Sei $\mathbb{R}^+=\lbrack 0,\infty\rbrack$ die Menge der nichtnegativen reelen Zahlen und \[f:\mathbb{R}^+\to\mathbb{R}^+\] mit \[x\mapsto x^2\]
-Dann ist $f$ bijektive und die Umkehrfunktion \[f^{-1}:\mathbb{R}^+\to\mathbb{R}^+\] ist gegeben durch \[x\mapsto\sqrt{x}\]
+\item \begin{align*} f:\mathbb{R}&\to\mathbb{R} \\
+x&\mapsto 2x+3 \end{align*}
+Die Funktion is bijektiv. \\
+Die Umkehrfunktion ist gegeben durch \begin{align*}f^{-1}:\mathbb{R}&\to\mathbb{R} \\
+x&\mapsto\frac{x-3}{2}\end{align*}
+\item Sei $\mathbb{R}^+=\lbrack 0,\infty\rbrack$ die Menge der nichtnegativen reellen Zahlen und \begin{align*}f:\mathbb{R}^+&\to\mathbb{R}^+ \\
+x&\mapsto x^2\end{align*}
+Dann ist $f$ bijektiv und die Umkehrfunktion  ist gegeben durch \begin{align*}f^{-1}:\mathbb{R}^+&\to\mathbb{R}^+ \\
+x&\mapsto\sqrt{x}\end{align*}
 \end{enumerate}
 
-\underline{Verallgemenerungen}
-Falls $f:X\to Y$ injektive ist, kann man die Umkehrabbildung \[f^{-1}:f\left(\Romanbar{X}\right)\to\Romanbar{X}\] definieren. Das heisst, die Funktion $f^{-1}$ erfüllt: wenn $f(x)=y$, dann $f^{-1}(y)=x$\\
+\textbf{Verallgemeinerungen}
+Falls $f:X\to Y$ \emph{injektiv} ist, kann man die Umkehrabbildung $f^{-1}:f\left(\Romanbar{X}\right)\to\Romanbar{X}$ definieren. Das heisst, die Funktion $f^{-1}$ erfüllt: wenn $f(x)=y$, dann ${f^{-1}(y)=x}$.\\
 
-\noindent Vorsicht: $f^{-1}\circ f=id_{\Romanbar{X}}$ aber $f\circ f^{-1}=id_{f\left(\Romanbar{X}\right)}$ und $f\circ f^{-1}=id_Y$ genau dann wenn $f(X)=Y$, d.h. $f$ bijektive ist.
+\noindent Vorsicht: $f^{-1}\circ f=id_{\Romanbar{X}}$ aber $f\circ f^{-1}=id_{f\left(\Romanbar{X}\right)}$ und $f\circ f^{-1}=id_Y$ nur genau dann wenn $f(X)=Y$, d.h. $f$ bijektiv ist.
