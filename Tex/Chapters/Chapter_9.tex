@@ -6,7 +6,7 @@ Im Eindimensionalen hatten wir mit dem Integral \[\int\limits_a^b f(x)dx\] den F
 
 Konstruktionsprinzip für Bereichsintegrale ist Analog. Aber die Definitionsbereich $D$ ist komplizierter. Wir betrachten zunächst den Fall zweier Variabler, $n=2$, und einen Definitionsbereich $D\subset\mathbb{R}^2$ der Form
 \[D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack\subset\mathbb{R}^2\]
-d.h. $D$ ist ein kompakter Quader (Rechteck). Sei $f:D\rightarrow\mathbb{R}$ eine beschränkte Funktion.
+d.h. $D$ ist ein kompakter Quader (Rechteck). Sei $f:D\to\mathbb{R}$ eine beschränkte Funktion.
 
 \begin{definition}{9.1}
 Mann nennt $Z=\left\{ \left( x_0,x_1,\dots,x_n\right), \left( y_0,y_1,\dots,y_m\right)\right\}$ eine Zerlegung des Quaders $D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack$ falls gilt 
@@ -39,7 +39,7 @@ Für zwei beliebige Zerlegungen $Z_1,Z_2$ gilt stets \[U_f\left( Z_1\right)\leq 
 \missingfigure{Page 211 bottom}
 \end{enumerate}
 \begin{definition}{9.3}
-Sei $f:D\rightarrow\mathbb{R}$ beschränkt 
+Sei $f:D\to\mathbb{R}$ beschränkt 
 \begin{enumerate}
 \item Riemannsche Unterintegral bsz. Riemannsche Oberintegral der Funktion $f\left( x\right)$ über $D$ ist 
 \begin{align*}
@@ -60,7 +60,7 @@ oder
 
 \subsubsection*{Satz 9.4 (Elementare Eigenschaften des Integrals)}
 \begin{enumerate}
-\item \underline{Linearität:} Seien $f,g: D\rightarrow\mathbb{R}$ beschränkt und R integrabel, $\beta,\alpha\in\mathbb{R}$. Dann sind $\alpha f$, $f+g$ R - Integrabel
+\item \underline{Linearität:} Seien $f,g: D\to\mathbb{R}$ beschränkt und R integrabel, $\beta,\alpha\in\mathbb{R}$. Dann sind $\alpha f$, $f+g$ R - Integrabel
 \[\int\limits_D {\left( {\alpha f + \beta g} \right)d\mu  = \alpha \int\limits_D {fd\mu }  + \beta \int\limits_D {gd\mu } } \]
 \item \underline{Monotonie:} Gilt $f(x)\leq g(x)$, $\forall x\in D$, so folgt \[\int\limits_D {fd\mu }  \le \int\limits_D {gd\mu } \]
 \item\underline{Positivität:} Gilt für alle $x\in D$, $f(x)\geq 0$ (d.h. $f(x)$ ist nichtnegativ), so folgt \[\int\limits_D {fd\mu }  \ge 0\]
@@ -79,16 +79,30 @@ d.h. das Integral von $f$ über $Q$ kann iterativ durch $1-$Dimensionale Integra
 \subsubsection*{Beispiel 9.6}
 \begin{enumerate}
 \item Sei $f\left( x,y\right)=2x+2yx$, $Q=\lbrack 0,1\rbrack\times\lbrack -2,2\rbrack$
-\begin{align*}\int\limits_Q {fd\mu }  =&\int\limits_{ - 2}^2 {\left( {\int\limits_0^1 {\left( {2x + 2yx} \right)dx} } \right)dy} \\=&\int\limits_{ - 2}^2 {\left( {\left. {{x^2} + y{x^2}} \right|_0^1} \right)dy} \\=&\int\limits_{ - 2}^2 {\left( {1 + y} \right)dy}  = \left. {y + \frac{{{y^2}}}{2}} \right|_{ - 2}^2 = 4
+\begin{align*}
+\int\limits_Q {fd\mu }  =&\int\limits_{ - 2}^2 {\left( {\int\limits_0^1 {\left( {2x + 2yx} \right)dx} } \right)dy} \\
+=&\int\limits_{ - 2}^2 {\left( {\left. {{x^2} + y{x^2}} \right|_0^1} \right)dy} \\
+=&\int\limits_{ - 2}^2 {\left( {1 + y} \right)dy}  = \left. {y + \frac{{{y^2}}}{2}} \right|_{ - 2}^2 = 4
 \end{align*}
 \underline{Oder:}
-\begin{align*}&\int\limits_0^1 {\left( {\int\limits_{ - 2}^2 {\left( {2x + 2yx} \right)dy} } \right)dx} \\ =&\int\limits_0^1 {\left( {\left. {2xy + {y^2}x} \right|_{ - 2}^2} \right)dx} \\ =&\int\limits_0^1 {\left[ {\left( {4x + 4x} \right) - \left( { - 4x + 4x} \right)} \right]dx} \\ =&\int\limits_0^1 {8xdx}  = \left. {4{x^2}} \right|_0^1 = 4
+\begin{align*}
+&\int\limits_0^1 {\left( {\int\limits_{ - 2}^2 {\left( {2x + 2yx} \right)dy} } \right)dx} \\
+ =&\int\limits_0^1 {\left( {\left. {2xy + {y^2}x} \right|_{ - 2}^2} \right)dx} \\
+ =&\int\limits_0^1 {\left[ {\left( {4x + 4x} \right) - \left( { - 4x + 4x} \right)} \right]dx} \\
+ =&\int\limits_0^1 {8xdx}  = \left. {4{x^2}} \right|_0^1 = 4
 \end{align*}
-\item \begin{align*}&\int\limits_0^1 {\int\limits_0^{2\pi } {\left( {{e^x}\sin y} \right)dy} dx} \\=&\int\limits_0^1 {\left( {\left. { - {e^x}\cos y} \right|_0^{2\pi }} \right)dx} \\
-=&\int\limits_0^1 0 dx = 0\end{align*}
+\item \begin{align*}
+&\int\limits_0^1 {\int\limits_0^{2\pi } {\left( {{e^x}\sin y} \right)dy} dx} \\
+=&\int\limits_0^1 {\left( {\left. { - {e^x}\cos y} \right|_0^{2\pi }} \right)dx} \\
+=&\int\limits_0^1 0 dx = 0
+\end{align*}
 \underline{Oder:}
-\begin{align*}&\int\limits_0^{2\pi } {\left( {\int\limits_0^1 {{e^x}\sin ydx} } \right)dy} \\=&\int\limits_0^{2\pi } {\left( {\left. {\sin y{e^x}} \right|_0^1} \right)dy} \\=&\int\limits_0^{2\pi } {\left( {e - 1} \right)\sin ydy} \\
-=&\left. { - \left( {e - 1} \right)\cos y} \right|_0^{2\pi } = 0\end{align*}
+\begin{align*}
+&\int\limits_0^{2\pi } {\left( {\int\limits_0^1 {{e^x}\sin ydx} } \right)dy} \\
+=&\int\limits_0^{2\pi } {\left( {\left. {\sin y{e^x}} \right|_0^1} \right)dy} \\
+=&\int\limits_0^{2\pi } {\left( {e - 1} \right)\sin ydy} \\
+=&\left. { - \left( {e - 1} \right)\cos y} \right|_0^{2\pi } = 0
+\end{align*}
 \end{enumerate}
 
 \subsection*{Geometrische Dehnung}\todo{Not sure about the text size...}
@@ -136,9 +150,13 @@ so gilt
  =&\int\limits_0^1 {\left( {\left. {xy - \frac{{{y^2}}}{2}} \right|_0^{\sqrt {1 - {x^2}} }} \right)} dx\\
 =&\int\limits_0^1 {\left( {x\sqrt {1 - {x^2}}  - \frac{{1 - {x^2}}}{2}} \right)dx}\\
 =&\int\limits_0^1 {x\sqrt {1 - {x^2}} } dx - \frac{1}{2}\int\limits_0^1 {1 - {x^2}dx}\\
- =&\frac{1}{2} - \frac{2}{3} = \frac{1}{3}\end{align*}
+ =&\frac{1}{2} - \frac{2}{3} = \frac{1}{3}
+\end{align*}
 \begin{align*}
-&\int\limits_0^1 {x\sqrt {1 - {x^2}} dx} \begin{array}{*{20}{c}}{u = 1 - {x^2}}\\{du =  - 2xdx}\end{array}\\
+&\int\limits_0^1 {x\sqrt {1 - {x^2}} dx} \begin{array}{*{20}{c}}
+{u = 1 - {x^2}}\\
+{du =  - 2xdx}
+\end{array}\\
 &=  - \frac{1}{2}\int\limits_0^1 {\sqrt u du}  = \left. { - \frac{1}{2} \cdot \frac{2}{3}{u^{\frac{3}{2}}}} \right|_0^1 = \frac{1}{3}\\
 &\int\limits_D {fd\mu  = \frac{1}{3} - \frac{1}{3} = 0} 
 \end{align*}
@@ -160,7 +178,10 @@ Zu Berechnung des Doppelintegrals zerlegen wir das Gebiet in Streifen parallel z
 \end{align*}
 \item Sei $D:$
 \missingfigure{Page 224 top}
-\[\int\limits_D {fd\mu } \mathop  = \limits_{\begin{array}{*{20}{c}} \downarrow \\ * \end{array}} \int\limits_{ - 1}^1 {\left( {\int\limits_{x = {y^2}}^1 {fdx} } \right)} dy\]
+\[\int\limits_D {fd\mu } \mathop  = \limits_{\begin{array}{*{20}{c}}
+ \downarrow \\
+ * 
+\end{array}} \int\limits_{ - 1}^1 {\left( {\int\limits_{x = {y^2}}^1 {fdx} } \right)} dy\]
 $$\text{(\textasteriskcentered $=$ Zerlegung des Gebietes in Streifen parallel zur $x-$achse)}$$
 oder mit Zerlegung in streifen parallel zur $y-$Achse
 \[\int\limits_D {fd\mu }  = \int\limits_{x = 0}^1 {\left( {\int\limits_{y =  - \sqrt x }^{y = \sqrt x } {f\left( {x,y} \right)dy} } \right)} dx\]
@@ -200,7 +221,7 @@ Eine Teilmenge $D\subset\mathbb{R}^3$ heisst Normalbereich, falls es eine Darste
 \end{definition}
 
 \subsubsection*{Satz 9.15}
-Sei $D\subset\mathbb{R}^3$ ein Normalbereich mit Darstellung wie oben, und $f:D\rightarrow\mathbb{R}$ stetig. Dann gilt \[\int\limits_D {fd\mu }  = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\int\limits_{\varphi \left( {x,y} \right)}^{\psi \left( {x,y} \right)} {f\left( {x,y,z} \right)dzdydx} } } \]
+Sei $D\subset\mathbb{R}^3$ ein Normalbereich mit Darstellung wie oben, und $f:D\to\mathbb{R}$ stetig. Dann gilt \[\int\limits_D {fd\mu }  = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\int\limits_{\varphi \left( {x,y} \right)}^{\psi \left( {x,y} \right)} {f\left( {x,y,z} \right)dzdydx} } } \]
 \missingfigure{Page 228, middle}
 $z=\varphi \left( {x,y} \right)$ und $z=\psi \left( {x,y} \right)$ stellen die ``Grund'' und Deckelfläche von $D$ dar. \\
 
