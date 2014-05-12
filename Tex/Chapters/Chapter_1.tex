@@ -322,7 +322,16 @@ Seien $A_1 \dots A_k \subset X, \; k\in \mathbb{N}$. Es gilt
 \item \[{\left( {\bigcup\limits_{i = 1}^k {{A_i}} } \right)^c} = \bigcap\limits_{i = 1}^k {{A_i}^c} \]
 \end{enumerate}
 \subsubsection*{Beweis}
-Siehe Analysis Serie 1, 1. Semester, Aufgabe 2.e).
+\begin{align*}
+{\left( {\bigcap\limits_{i = 1}^k {{A_i}} } \right)^c} =&\left\{ {x \in X:x\not  \in \bigcap\limits_{i = 1}^k {{A_i}} } \right\} = \left\{ {x \in X\exists i \in \left\{ {1, \ldots ,k} \right\}:x\not  \in {A_i}} \right\}\\
+=&\bigcup\limits_{i = 1}^k {\left\{ {x \in X:x\not  \in {A_i}} \right\}}  = \bigcup\limits_{i = 1}^k {A_i^c}
+\end{align*}
+und
+\begin{align*}
+{\left( {\bigcup\limits_{i = 1}^k {{A_i}} } \right)^c} =&\left\{ {x \in X:x\not  \in \bigcup\limits_{i = 1}^k {{A_i}} } \right\} = \left\{ {x \in X\forall i \in \left\{ {1, \ldots ,k} \right\}:x\not  \in {A_i}} \right\}\\
+=&\bigcap\limits_{i = 1}^k {\left\{ {x \in X:x\not  \in {A_i}} \right\}}  = \bigcap\limits_{i = 1}^k {A_i^c} 
+\end{align*}
+\noindent (Siehe Analysis Serie 1, 1. Semester, Aufgabe 2.e)
 \begin{enumerate}[($\ast$)]
 \item Wir haben gesehen dass wir manchmal eine Aussage verneinen müssen. Deshalb müssen wir lernen wie man Aussage mit Quantoren verneinen kann.
 \[\neg\left(\forall n:A(n)\right)\Leftrightarrow\left(\exists n:\neg A(n)\right)\]
