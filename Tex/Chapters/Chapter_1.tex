@@ -118,19 +118,18 @@ Sei $A(n)$ die Aussage: Jede natürliche Zahl $m$ mit $2\leq m\leq n$ ist ein Pr
 \subsubsection*{Satz 1.5}
 Die Menge $\mathbb{P}$ der Primzahlen ist unendlich.
 \subsubsection*{Beweis}
-Nehmen wir das Gegenteil ``$\mathbb{P}$ ist endlich'' an, d.h. $\mathbb{P}=\{p_1,p_2,\dots,p_m\}$ n aufsteigender Folge; also $p_1=2,p_2=3,p_3=5,p_4=7,\dots$. Wir betrachten die Zahl $k=p_1\dots p_{m+1}$. Auf Satz 1.4 folgt dass so eine Primzahl $p_i$ (aus der liste $p_1\dots p_{m}$) gilt mit $p_i$ teilt $k$. Da $p_i$ offensichtlich $p_1\dots p_{m}$ teilt, folgt dass $p_i$ $k-p_1\dots p_{m}=1$ teilt. Das ist ein Widerspruch. 
+Nehmen wir das Gegenteil ``$\mathbb{P}$ ist endlich'' an, d.h. $\mathbb{P}=\{p_1,p_2,\dots,p_m\}$ in aufsteigender Folge; also $p_1=2,p_2=3,p_3=5,p_4=7,\dots$. Wir betrachten die Zahl $k=p_1 p_2\dots p_i \dots p_m+1$. Aus Satz 1.4 folgt, dass eine Primzahl $p_i$ (aus der Liste $\{p_1 ,\dots , p_{m}\}$) existiert, mit $p_i$ teilt $k$. Da $p_i$ offensichtlich $p_1 p_2\dots p_i \dots p_m$ teilt, folgt dass $p_i$ $k-p_1\dots p_{m}=1$ teilt. Das ist ein Widerspruch. 
 
 \subsection*{Teilbarkeit}
 \subsubsection{Formale Definition}
 Eine Ganze Zahl $a$ teilt eine ganze Zahl $b$ genau dann, wenn es eine ganze Zahl $n$ gibt, für die $an=b$ ist. \\
-\todo{Please fill out the table}
 \begin{center}
 \begin{tabular}{l|l}
-Man sagt dann & Man schreibt \\\hline 
+Man sagt dann (Synonyme) & Man schreibt \\\hline 
 $a$ teilt $b$ & $a\mid b$\\
-$a$ ist teiler von $b$ & ~\\
+$a$ ist Teiler von $b$ & ~\\
 $b$ ist teilbar durch $a$ & ~\\
-$b$ ist Vielfaches durch $a$ & ~\\
+$b$ ist Vielfaches von $a$ & ~\\
 \end{tabular}
 \end{center}
 
@@ -151,9 +150,9 @@ So erhalten wir einen Wiederspruch
 \end{enumerate}
 
 \subsubsection*{Bemerkung}
-Letztes mal haben wir gesagt jedes element von $A$ ist auch Element von $B$ ($\forall x,x\in A\Rightarrow x\in B$) wird mit $A\subset B$ ($A$ ist in $B$ enthalten, $A$ ist Teilmenge von $B$) bezeichnet. Falls $A\subset B$ und eine Element $b\in B$ gibt mit $b\not\in A$ sagen wir $A$ ist eine ``eigentliche Teilmenge'' von $B$. Manchmal schreiben wir $A\mathop  \subset \limits_{\not  = } B$ in diesem Fall. \\
+Letztes mal haben wir gesagt, dass jedes Element von $A$ ist auch Element von $B$ ($\forall x,x\in A\Rightarrow x\in B$) mit $A\subset B$ bezeichnet wird. Wir sagen auch $A$ ist in $B$ enthalten oder $A$ ist Teilmenge von $B$. Falls $A\subset B$ und eine Element $b\in B$ gibt mit $b\not\in A$ sagen wir $A$ ist eine ``eigentliche Teilmenge'' von $B$. Manchmal schreiben wir $A\mathop  \subset \limits_{\not  = } B$ in diesem Fall. \\
 
-Es gibt viele Bücher, mit der Folgenden Notation: jedes element von $A$ ist ein element von $B$ wird mit $A\subseteq B$ bezeichnet. Und wenn $A\subseteq B$ und $A\not =B$ dann benutzen sie $A\subset B$ statt $A\mathop  \subset \limits_{\not  = } B$. $A=B$ falls $x\in A\Leftrightarrow x\in B$. 
+Es gibt viele Bücher mit der folgenden Notation: jedes Element von $A$ ist ein Element von $B$ wird mit $A\subseteq B$ bezeichnet. Und wenn $A\subseteq B$ und $A\not =B$ dann benutzen sie $A\subset B$ statt $A\mathop  \subset \limits_{\not  = } B$. $A=B$ falls $x\in A\Leftrightarrow x\in B$. 
 
 \subsubsection*{Satz}
 $A=B \Leftrightarrow A\subset B$ und $B\subset A$ 
