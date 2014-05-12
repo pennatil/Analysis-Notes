@@ -345,9 +345,12 @@ Seien $X,Y$ Mengen.
 Eine Funktion oder Abbildung $f:X\rightarrow Y$ der Menge $X$ in die Menge $Y$ ist eine Vorschrift (ein Gesetz) die (das) jedem Element $x\in A$ genau ein Element $y=f(x)\in Y$ zuordnet. \\
 
 Es gibt verschiedene wichtige Objekte die in Zusammenhang mit einem Abbildung auftreten 
-\[X= \text{ Definitionsbereich von } f\]
-\[Y= \text{ Die Zielmenge}\]
-\[f(x)=\{f(x)\mid x\in X\}\text{ ist das sog. Bild oder die Bildmenge von }f\]
+\begin{align*}X &= \text{ \emph{Definitionsbereich} oder \emph{Definitionsmenge} (domain)} \\
+Y&= \text{ \emph{Wertebereich} oder \emph{Zielmenge} (range)} \\
+f(x) &=\{f(x)\mid x\in X\}\text{ ist das sog. \emph{Bild} oder die \emph{Bildmenge}} \\
+f^{-1}(y) &= x\text{ heisst \emph{Urbild} von }y. \end{align*}
+Der \emph{Graph} einer Funktion $f$ ist die Menge aller Paare $(x, f(x))$ wobei $x$ alle Elemente der Menge $X$ durchläuft. Er ist eine Teilmenge von $X \times Y$.
+\[ Gr(f) \defeq \{ (x, f(x)) \mid x \in X\} \]
 \end{definition}
 
 \subsubsection*{Beispiel 1.10}
@@ -421,10 +424,9 @@ Es gibt verschiedene wichtige Objekte die in Zusammenhang mit einem Abbildung au
 $pr_x:$ & $X\times Y\rightarrow X $& ~ & $pr_y$: & $X\times Y\rightarrow Y$ \\
 ~& $(x,y)\rightarrow x$ & ~& ~& $(x,y)\rightarrow y$ \\
 \end{tabular}\\
-die Projektionen auf dem ersten respektiv zweiten Faktoren. 
-\item $f:\mathbb{R}\rightarrow\lbrack -1,1\rbrack$\\ $x\rightarrow \sin x$
-\item $f:\mathbb{R}\rightarrow\mathbb{R}$\\
-$x\rightarrow x^2+x$
+die Projektionen auf den ersten bzw. zweiten Faktoren. 
+\item Sinus \begin{align*} f:\mathbb{R}&\rightarrow\lbrack -1,1\rbrack \\ x &\rightarrow \sin x \end{align*}
+\item \begin{align*}f:\mathbb{R}&\rightarrow\mathbb{R} \\ x&\rightarrow x^2+x\end{align*}
 \end{enumerate}
 \begin{definition}{1.11}
 Sei $f:X\rightarrow Y$ eine Abbildung
@@ -435,36 +437,26 @@ Sei $f:X\rightarrow Y$ eine Abbildung
 \end{enumerate}
 \end{definition}
 
-\todo{Pages from 17.1 to 17.4 seem repetition, ask to be sure (document week2)}
-
-\subsubsection*{Beispiel 1.12}
-\todo{WRONG POSITION!!}
-\begin{figure}[ht]
-
-\begin{minipage}[b]{0.45\linewidth}
-\centering
+\begin{multicols}{2}
+[\subsubsection*{Beispiel 1.12}]
 \begin{enumerate}
-\item $id_{X}:X\rightarrow X$ bijektive.
-\item Eine konstante Abbildung $f:X\rightarrow X, x\rightarrow c$ ist 
+\item $id_{X}:X\rightarrow X$ bijektiv.
+\item Eine konstante Abbildung \\
+	$f:\Romanbar{X}\rightarrow X, x\rightarrow c$ ist 
 \begin{itemize}
-\item bijektive $\Leftrightarrow \Romanbar{X}=\{ c\}$
-\item surjektive $\Leftrightarrow \Romanbar{X}=\{ c\}$
+\item injektiv $\Leftrightarrow \Romanbar{X}=\{ c\}$
+\item surjektiv $\Leftrightarrow X=\{ c\}$
 \end{itemize}
 \item Die Projektionen 
 \begin{itemize}
 \item $pr_x : X\times Y\rightarrow X$ 
 \item $pr_y : X\times Y\rightarrow Y$ 
 \end{itemize}
-sind stets surjektive.
+sind stets surjektiv.
 \item $f:\mathbb{R}\rightarrow\lbrack -1,1\rbrack$ \\
 $x\rightarrow \sin x$\\
 Surjektiv, nicht injektiv
-\end{enumerate}
-\end{minipage}
-\hspace{0.5cm}
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\begin{enumerate}
+\columnbreak
 \item $f:\mathbb{R}\rightarrow\mathbb{R}$\\
 $x\rightarrow x^2$\\
 Nicht surjektiv\\
@@ -472,21 +464,16 @@ Nicht injektiv
 
 \item $f:\mathbb{N}\rightarrow\mathbb{N}$\\
 $n\rightarrow 2n$\\
-ist Injektive. $f(\mathbb{N})$ ist die Menge aller geraden Zahlen
-\item Eine Menge $A$ hat $n$ Elemente falls es eine bijektive $f:\{1,\dots,n\}\rightarrow A$ gibt. Die Zahl $n$ wird dann die Kardinalität von $A$ genannt und mit  bezeichnet, gelegentlich auch mit $\#A$ bezeichnet
-
-
+ist injektiv. $f(\mathbb{N})$ ist die Menge aller geraden Zahlen
+\item Eine Menge $A$ hat $n$ Elemente falls es eine bijektive ${f:\{1,\dots,n\}\rightarrow A}$ gibt. Die Zahl $n$ wird dann die Kardinalität von $A$ genannt und mit $|A|$, gelegentlich auch mit $\#A$ bezeichnet.
 \end{enumerate}
-\end{minipage}
-\end{figure}
-
-\todo{unreadeable, page 18}
+\end{multicols}
 
 \begin{definition}{Kardinalität}
 Wir sagen zwei Mengen $X$ und $Y$ sind gleichmächtig falls eine bijektive Abbildung $f:X\rightarrow Y$ gibt.
 \end{definition}
 
-Mit dem ersten Contorschen Diagonalverfahren kann man die Rationalen zahlen abzählen, d.h.$ \mathbb{Q}$ und $\mathbb{N}$ sind gleichmächtig
+Mit dem ersten Cantorschen Diagonalverfahren kann man die rationalen Zahlen abzählen, d.h.$ \mathbb{Q}$ und $\mathbb{N}$ sind gleichmächtig
 
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
