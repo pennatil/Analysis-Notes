@@ -10,7 +10,7 @@ rm -f *.out *.log *.aux
 #Activate them individually once a certain file is final!
 mkdir -p "../../PDF/Final Documents"
 # cp mainMult1.pdf "../../PDF/Final Documents/Kapitel 1 - Logik und Unterlagen - Analysis I.pdf"
-# cp mainMult2.pdf "../../PDF/Final Documents/Kapitel 2 - Reele Zahlen, Euklidische Raeume und Komplexe Zahlen - Analysis I.pdf"
+# cp mainMult2.pdf "../../PDF/Final Documents/Kapitel 2 - Reelle Zahlen, Euklidische Raeume und Komplexe Zahlen - Analysis I.pdf"
 # cp mainMult3.pdf "../../PDF/Final Documents/Kapitel 3 - Folgen und Reihen (Der Limes Begriff) - Analysis I.pdf"
 # cp mainMult4.pdf "../../PDF/Final Documents/Kapitel 4 - Stetigkeit - Analysis I.pdf"
 # cp mainMult5.pdf "../../PDF/Final Documents/Kapitel 5 - Differentialrechnung auf R - Analysis I.pdf"
@@ -22,7 +22,7 @@ cp mainMult6.pdf "../../PDF/Final Documents/Kapitel 6 - Integration - Analysis I
 
 mkdir -p "../../PDF/Work in Progress"
 mv mainMult1.pdf "../../PDF/Work in Progress/Kapitel 1 - Logik und Unterlagen - Analysis I.pdf"
-mv mainMult2.pdf "../../PDF/Work in Progress/Kapitel 2 - Reele Zahlen, Euklidische Raeume und Komplexe Zahlen - Analysis I.pdf"
+mv mainMult2.pdf "../../PDF/Work in Progress/Kapitel 2 - Reelle Zahlen, Euklidische Raeume und Komplexe Zahlen - Analysis I.pdf"
 mv mainMult3.pdf "../../PDF/Work in Progress/Kapitel 3 - Folgen und Reihen (Der Limes Begriff) - Analysis I.pdf"
 mv mainMult4.pdf "../../PDF/Work in Progress/Kapitel 4 - Stetigkeit - Analysis I.pdf"
 mv mainMult5.pdf "../../PDF/Work in Progress/Kapitel 5 - Differentialrechnung auf R - Analysis I.pdf"
