@@ -11,7 +11,7 @@ Status
 ======
 | Chapter |  Typed up?  | Finished drawings? | Spellchecked? |      Math checked?      | Done? |
 |:-------:|:-----------:|:------------------:|:-------------:|:-----------------------:|:-----:|
-|    1    |     Yes     |         Yes        |       In Progress     | Waiting for corrections |   No  |
+|    1    |     Yes     |         Yes        |       Yes     | Waiting for corrections |   No  |
 |    2    |     Yes(*)    |         Yes        |       Yes      | Waiting for corrections |   No  |
 |    3    | In Progress |          -         |       No      |            No           |   No  |
 |    4    |      No     |          -         |       -       |            -            |   No  |
