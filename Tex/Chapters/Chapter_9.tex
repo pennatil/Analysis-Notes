@@ -1,12 +1,12 @@
-\chapter{Integration in $\mathbb{R}^{\lowercase{n}}$}
+\chapter{Integration in $\R^{\lowercase{n}}$}
 Im Eindimensionalen hatten wir mit dem Integral \[\int\limits_a^b f(x)dx\] den Flächeninhalt unter dem Graphen von $f$ berechnet. Wir suchen nach eine Verallgemeinerung mit der \todo{can't understand word, page 207 middle} z.B. Volumen unter dem Graphen einer Funktion von zwei Variablen berechnen kann
 \missingfigure{page 207, middle}
 \underline{Erinnerung:} Bestimmtes Riemann-Integral einen Funktion $f(x)$ über einem Interval $\lbrack a,b\rbrack:$ 
 \[I=\int\limits_a^b f(x)dx\] Das Integral $I$ war als Grenzwert von Riemannscher Ober und Untersumme definiert (falls diese Grenzwert jeweils existieren und übereinstimmten).\\
 
-Konstruktionsprinzip für Bereichsintegrale ist Analog. Aber die Definitionsbereich $D$ ist komplizierter. Wir betrachten zunächst den Fall zweier Variabler, $n=2$, und einen Definitionsbereich $D\subset\mathbb{R}^2$ der Form
-\[D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack\subset\mathbb{R}^2\]
-d.h. $D$ ist ein kompakter Quader (Rechteck). Sei $f:D\to\mathbb{R}$ eine beschränkte Funktion.
+Konstruktionsprinzip für Bereichsintegrale ist Analog. Aber die Definitionsbereich $D$ ist komplizierter. Wir betrachten zunächst den Fall zweier Variabler, $n=2$, und einen Definitionsbereich $D\subset\R^2$ der Form
+\[D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack\subset\R^2\]
+d.h. $D$ ist ein kompakter Quader (Rechteck). Sei $f:D\to\R$ eine beschränkte Funktion.
 
 \begin{definition}{9.1}
 Mann nennt $Z=\left\{ \left( x_0,x_1,\dots,x_n\right), \left( y_0,y_1,\dots,y_m\right)\right\}$ eine Zerlegung des Quaders $D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack$ falls gilt 
@@ -39,7 +39,7 @@ Für zwei beliebige Zerlegungen $Z_1,Z_2$ gilt stets \[U_f\left( Z_1\right)\leq 
 \missingfigure{Page 211 bottom}
 \end{enumerate}
 \begin{definition}{9.3}
-Sei $f:D\to\mathbb{R}$ beschränkt 
+Sei $f:D\to\R$ beschränkt 
 \begin{enumerate}
 \item Riemannsche Unterintegral bsz. Riemannsche Oberintegral der Funktion $f\left( x\right)$ über $D$ ist 
 \begin{align*}
@@ -60,7 +60,7 @@ oder
 
 \subsubsection*{Satz 9.4 (Elementare Eigenschaften des Integrals)}
 \begin{enumerate}
-\item \underline{Linearität:} Seien $f,g: D\to\mathbb{R}$ beschränkt und R integrabel, $\beta,\alpha\in\mathbb{R}$. Dann sind $\alpha f$, $f+g$ R - Integrabel
+\item \underline{Linearität:} Seien $f,g: D\to\R$ beschränkt und R integrabel, $\beta,\alpha\in\R$. Dann sind $\alpha f$, $f+g$ R - Integrabel
 \[\int\limits_D {\left( {\alpha f + \beta g} \right)d\mu  = \alpha \int\limits_D {fd\mu }  + \beta \int\limits_D {gd\mu } } \]
 \item \underline{Monotonie:} Gilt $f(x)\leq g(x)$, $\forall x\in D$, so folgt \[\int\limits_D {fd\mu }  \le \int\limits_D {gd\mu } \]
 \item\underline{Positivität:} Gilt für alle $x\in D$, $f(x)\geq 0$ (d.h. $f(x)$ ist nichtnegativ), so folgt \[\int\limits_D {fd\mu }  \ge 0\]
@@ -73,7 +73,7 @@ oder
 Wie kann man das R - Integral konkret berechnen? Der Satz von Fubini hilft uns.
 
 \subsubsection*{Satz 9.5 (Satz von Fubini)}
-Sei $Q=\lbrack a,b\rbrack\times \lbrack c,d\rbrack\in\mathbb{R}^2$ und sei $f\in C\degree\left( Q\right)$. Dann gilt \[\int\limits_Q {fd\mu }  = \int\limits_a^b {\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx = \int\limits_c^d {\left( {\int\limits_a^b {f\left( {x,y} \right)dx} } \right)dy} } \]
+Sei $Q=\lbrack a,b\rbrack\times \lbrack c,d\rbrack\in\R^2$ und sei $f\in C\degree\left( Q\right)$. Dann gilt \[\int\limits_Q {fd\mu }  = \int\limits_a^b {\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx = \int\limits_c^d {\left( {\int\limits_a^b {f\left( {x,y} \right)dx} } \right)dy} } \]
 d.h. das Integral von $f$ über $Q$ kann iterativ durch $1-$Dimensionale Integration bestimmt werden 
 
 \subsubsection*{Beispiel 9.6}
@@ -116,7 +116,7 @@ Die meisten praktischen Aufgaben lassen sich auf die Integration über sogenannt
 
 \begin{definition}{9.10}
 \begin{enumerate}
-\item Eine Teilmenge $D\subset\mathbb{R}^2$ heisst ein Normalbereich bezüglich der $x-$achse bzw. bezüglich der $y-$Achse falls es stetige Funktionen $g,h$ bzw. $\overline{g},\overline{h}$ gibt mit
+\item Eine Teilmenge $D\subset\R^2$ heisst ein Normalbereich bezüglich der $x-$achse bzw. bezüglich der $y-$Achse falls es stetige Funktionen $g,h$ bzw. $\overline{g},\overline{h}$ gibt mit
 \[D=\left\{ \left( x,y\right)\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}\] 
 bzw.
 \[D=\left\{ \left( x,y\right)\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}\]
@@ -134,10 +134,10 @@ Nun braucht man $V(x)$ nur noch über $\lbrack a,b\rbrack$ zu integrieren\[V = \
 
 \subsubsection*{Satz 9.11}
 \begin{enumerate}
-\item Ist $f(x)$ stetig auf einem Normalbereich \[D=\left\{ \left( x,y\right)\in\mathbb{R}^2\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}\] 
+\item Ist $f(x)$ stetig auf einem Normalbereich \[D=\left\{ \left( x,y\right)\in\R^2\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}\] 
 so gilt 
 \[\int\limits_D {f(x)d\mu  = \int\limits_a^b {\left( {\int\limits_{g(x)}^{h(x)} {f\left( {x,y} \right)dy} } \right)dx} } \]
-\item bzw. Falls \[D=\left\{ \left( x,y\right)\in\mathbb{R}^2\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}\]
+\item bzw. Falls \[D=\left\{ \left( x,y\right)\in\R^2\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}\]
 so gilt 
 \[\int\limits_D {f(x)d\mu  = \int\limits_{\overline{a}}^{\overline{b}} {\left( {\int\limits_{\overline{g}(x)}^{\overline{h}(x)} {f\left( {x,y} \right)dx} } \right)dy} } \]
 \end{enumerate}
@@ -214,14 +214,14 @@ Wenn wir Aussen nach $y$ integrieren, brauchen wir keine Unterteilung
 \end{enumerate}
 
 \begin{definition}{9.14}
-Eine Teilmenge $D\subset\mathbb{R}^3$ heisst Normalbereich, falls es eine Darstellung 
+Eine Teilmenge $D\subset\R^3$ heisst Normalbereich, falls es eine Darstellung 
 \[D = \left\{ {\left. {\left( {x,y,z} \right) \in {R^3}} \right|a \le x \le b;g(x) < y < h(x);\varphi \left( {x,y} \right) \le z \le \psi \left( {x,y} \right)} \right\}\] gibt.\\
 
 (Vertauscht man die Rollen von $x,y$ und $z$ so entstehen weitere Mengen, die auch Normalbereiche genannt werden.)
 \end{definition}
 
 \subsubsection*{Satz 9.15}
-Sei $D\subset\mathbb{R}^3$ ein Normalbereich mit Darstellung wie oben, und $f:D\to\mathbb{R}$ stetig. Dann gilt \[\int\limits_D {fd\mu }  = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\int\limits_{\varphi \left( {x,y} \right)}^{\psi \left( {x,y} \right)} {f\left( {x,y,z} \right)dzdydx} } } \]
+Sei $D\subset\R^3$ ein Normalbereich mit Darstellung wie oben, und $f:D\to\R$ stetig. Dann gilt \[\int\limits_D {fd\mu }  = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\int\limits_{\varphi \left( {x,y} \right)}^{\psi \left( {x,y} \right)} {f\left( {x,y,z} \right)dzdydx} } } \]
 \missingfigure{Page 228, middle}
 $z=\varphi \left( {x,y} \right)$ und $z=\psi \left( {x,y} \right)$ stellen die ``Grund'' und Deckelfläche von $D$ dar. \\
 

@@ -1,7 +1,7 @@
 \chapter{Folgen und Reihen (Der Limes Begriff)}
 \section{Folgen, allgemeines}
 \begin{definition}{3.1}
-Eine Folge reeler zahlen ist eine Abbildung $a:\mathbb{N}\backslash\{0\}\to\mathbb{R}$ wobei wir das Bild con $n\geq 1$ mit $a_n$ (statt $a(n)$) bezeichen.\\
+Eine Folge reeler zahlen ist eine Abbildung $a:\N\backslash\{0\}\to\R$ wobei wir das Bild con $n\geq 1$ mit $a_n$ (statt $a(n)$) bezeichen.\\
 
 Eine Folge wird dann meistens mit $(a_n)_{n\geq 1}$, daher mit der geordneten Bildmenge bezeichnet.
 \end{definition}
@@ -18,7 +18,7 @@ z.B. $d=2,a_1=1,a_2=\frac{3}{2},a_3=\frac{17}{12},a_4=\dots$
 \end{enumerate}
 
 \begin{definition}{3.3}
-Eine Folge $(a_n)_{n\geq 1}$ heisst beschränkt falls die Teilmenge $\{a_n:n\geq 1\}\subseteq\mathbb{R}$ beschränkt ist. d.h. Es gibt $c\in\mathbb{R} (c\geq 0)$ so dass $\left| a_n\right| \leq c, \forall n\geq 1$ 
+Eine Folge $(a_n)_{n\geq 1}$ heisst beschränkt falls die Teilmenge $\{a_n:n\geq 1\}\subseteq\R$ beschränkt ist. d.h. Es gibt $c\in\R (c\geq 0)$ so dass $\left| a_n\right| \leq c, \forall n\geq 1$ 
 \end{definition}
 
 \section{Grenzwert oder Limes eine Folge. Ein zentraler Begriff}
@@ -26,16 +26,16 @@ Eine Folge $(a_n)_{n\geq 1}$ heisst beschränkt falls die Teilmenge $\{a_n:n\geq
 Eine Folge $(a_n)\geq 1$ konvergiert gegen $a$ wann für jedes $\varepsilon>0$ ein Index $N(\varepsilon)\geq 1$ gilt so dass \[  \left| a_n-a\right| <\varepsilon, \forall n>N(\varepsilon)\] 
 \end{definition}
 
-\begin{definition}{3.4 (Version 2)}Eine Folge $(a_n)_{n\geq 1}$ konvergiert gegen $a\in\mathbb{R}$ falls für jedes $\varepsilon>0$ die Menge der Indizen $n\geq 1$ für welcher $a_n\not\in (a-\varepsilon,a+\varepsilon)$ endlich ist.\\
+\begin{definition}{3.4 (Version 2)}Eine Folge $(a_n)_{n\geq 1}$ konvergiert gegen $a\in\R$ falls für jedes $\varepsilon>0$ die Menge der Indizen $n\geq 1$ für welcher $a_n\not\in (a-\varepsilon,a+\varepsilon)$ endlich ist.\\
 
-\centerline{$\left( \forall\varepsilon>0, \#\{ n\in\mathbb{N}\mid a_n\not\in (a-\varepsilon,a+\varepsilon)\} <\infty\right)$}
+\centerline{$\left( \forall\varepsilon>0, \#\{ n\in\N\mid a_n\not\in (a-\varepsilon,a+\varepsilon)\} <\infty\right)$}
 \end{definition}
 
 \subsection*{Equivalenz beider Definitionen}\todo{Is this supposed to be a title?}
 \begin{enumerate}
 
-\item[(2)] $\Rightarrow(1)$ \\Sei für  $\varepsilon>0$ \[M(\varepsilon):=\{ n\in\mathbb{N}\mid a_n\not\in (a-\varepsilon,a+\varepsilon)\}=\{n\in\mathbb{N}\mid \left| a_n-a \right|\geq \varepsilon\}\]
-Da $M(\varepsilon)$ endlich ist, ist es nach oben beschränkt. Es  gibt also $N(\varepsilon)\in\mathbb{N}$ so dass $\forall n\in M(\varepsilon)$, $n\leq N(\varepsilon)-1$. Insbesondere gilt $\forall n\geq N(\varepsilon)$, $n\not\in M(\varepsilon)$ und daher $\left| a_n-a\right|<\varepsilon$.
+\item[(2)] $\Rightarrow(1)$ \\Sei für  $\varepsilon>0$ \[M(\varepsilon):=\{ n\in\N\mid a_n\not\in (a-\varepsilon,a+\varepsilon)\}=\{n\in\N\mid \left| a_n-a \right|\geq \varepsilon\}\]
+Da $M(\varepsilon)$ endlich ist, ist es nach oben beschränkt. Es  gibt also $N(\varepsilon)\in\N$ so dass $\forall n\in M(\varepsilon)$, $n\leq N(\varepsilon)-1$. Insbesondere gilt $\forall n\geq N(\varepsilon)$, $n\not\in M(\varepsilon)$ und daher $\left| a_n-a\right|<\varepsilon$.
 \item[(1)] $\Rightarrow(2)$ \[M(\varepsilon)=\{ n:\left| a_n-a\right| \geq \varepsilon\} \subset \left[ 0,N(\varepsilon)-1 \right]\] Also endlich.
 \end{enumerate}
 
@@ -48,7 +48,7 @@ Da $M(\varepsilon)$ endlich ist, ist es nach oben beschränkt. Es  gibt also $N(
 Seien $a$ und $b$ Grenzwerte von $(a_n)_{n\geq 1}$. Sei $\varepsilon = \left| \frac{b-a}{3}\right|>0$, dann gibt es $N_1,N_2$ so dass \[\left| a_n-a\right| <\varepsilon\hspace{10mm}\forall n>N_1\]\[\left| a_n-b\right| <\varepsilon\hspace{10mm}\forall n>N_2\]
 Also$ \forall n\geq \max\{ N_1,N_2\}$ \[(a-b)\cong\left| (a-a_n)+(a_n-b)\right| < 2\varepsilon=\frac{2}{3}\left|b-a\right|\]
 \subsection*{Binomischen Lehrsatz}
-Für beliebige Zahlen $a,b$ und $n\in\mathbb{N}$ ist \[{\left( {a + b} \right)^n} = \sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}
+Für beliebige Zahlen $a,b$ und $n\in\N$ ist \[{\left( {a + b} \right)^n} = \sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}
 n\\
 k
 \end{array}} \right){a^{n - k}}{b^k}} \]
@@ -58,18 +58,18 @@ k
 \begin{enumerate}
 \item Sei $a_n=\frac{1}{n}, n\geq 1$. Dann gilt $\lim a_n=0$ 
 \begin{itemize}
-\item Sei $\varepsilon>0$. Dann $\frac{1}{\varepsilon}>0$. Sei $n_0\in\mathbb{N}$, $n_0\geq 1$ mit $n_0>\frac{1}{\varepsilon}$ (Archimedische Eigenschaft, Satz 2.13)\\ 
+\item Sei $\varepsilon>0$. Dann $\frac{1}{\varepsilon}>0$. Sei $n_0\in\N$, $n_0\geq 1$ mit $n_0>\frac{1}{\varepsilon}$ (Archimedische Eigenschaft, Satz 2.13)\\ 
 \end{itemize}
 Dann gilt für alle $n\geq n_0$, $\frac{1}{\varepsilon}<n_0\leq n \Rightarrow \left| \frac{1}{n}-0\right| = \frac{1}{n}<\varepsilon, \forall n\geq n_0$
 \item Sei $0<q<1$ und $a_n:=q^n$, $n 1$\todo{Cannot read, page 54 top}. Dann gilt $\lim a_n=0$ ($a_n$ konvergiert gegen 0)
 \subsubsection*{Beweis}
-Zu beweisen \[\forall \varepsilon > 0, \exists N_0=N_0(\varepsilon)\in N\]\todo{Should it be $\in\mathbb{R}$??}\[\forall n\geq N_0:q^n <\varepsilon\]
+Zu beweisen \[\forall \varepsilon > 0, \exists N_0=N_0(\varepsilon)\in N\]\todo{Should it be $\in\R$??}\[\forall n\geq N_0:q^n <\varepsilon\]
 Die Idee ist zu zeigen dass $\frac{1}{q^n}$ sehr Gross wird und deswegen $q^n$ sehr klein wird. Setzen wir $\frac{1}{q}=1+\delta$ mit $\delta>0$ $\left( 1<1\Rightarrow \frac{1}{q}>1\right)$%CHECK FROM HERE
  $$\frac{1}{q^n}=\left( \frac{1}{q}\right)^n=\left( 1+\delta\right)^n=1+n\delta +\left( {\begin{array}{*{20}{c}}
 n\\
 2
-\end{array}} \right) \delta^2+\dots+\delta^n\geq 1+n\delta>n\delta, \forall n\in\mathbb{N}$$
-also \[0<q^n<\frac{1}{n\delta}, \forall n\in\mathbb{N}\]
+\end{array}} \right) \delta^2+\dots+\delta^n\geq 1+n\delta>n\delta, \forall n\in\N$$
+also \[0<q^n<\frac{1}{n\delta}, \forall n\in\N\]
 Sei jetzt $\varepsilon >0$, wähle $N_0=N_0(\varepsilon)$ mit $\frac{1}{\varepsilon\delta}<N_0\Rightarrow \frac{1}{N_0\delta}<\varepsilon$
 \[\forall n>N_0\hspace{5mm}0<q^n\leq\frac{1}{n\delta}<\frac{1}{N_0\delta}<\varepsilon\]
 \item $\sqrt[n]{n}$, $\lim a_n=1$. Klar: $n\geq 1$ also $\sqrt[n]{n}\geq 1$\\
@@ -96,7 +96,7 @@ Setzen wir $N_0:=\left( 1+\frac{2}{\varepsilon^2}\right)+1$. Dann gilt für $\fo
 \end{enumerate}
 
 \subsubsection*{Beispiel 3.7}
-Seien $p\in\mathbb{N}$, $0<q<1$. Dann gilt $\lim\limits_{n\to\infty}n^p q^n=0$. Dass heisst Exponentialfunktionen wächst schneller als jede Potenz (Wann $x$ genügend Gross ist, $a^x>x^b$)
+Seien $p\in\N$, $0<q<1$. Dann gilt $\lim\limits_{n\to\infty}n^p q^n=0$. Dass heisst Exponentialfunktionen wächst schneller als jede Potenz (Wann $x$ genügend Gross ist, $a^x>x^b$)
 
 \subsubsection*{Beweis}
 Der Trick ist folgender \[{n^p}{q^n} = {\left( {{n^{\frac{p}{n}}} \cdot q} \right)^n} = {\left( {{{\left( {\sqrt[n]{n}} \right)}^p}{{\left( {{q^{\frac{1}{p}}}} \right)}^p}} \right)^n}\] Wir werden Beispiel 3.6 (2.),(3.) benutzen. \\(d.h. $\lim\sqrt[n]{n}=1 \hspace{10mm}\lim r^n=0, 0<r<1$) \\
