@@ -1,1 +1,79 @@
 \chapter{Stetigkeit}
+% Starts at p127 (week8)
+\section{Grenzwerte von Funktionen}
+Sei $\Omega \subset \R^{d}$ eine Teilmenge und $f:\Omega \to \R^{n}$ eine Abbildung.
+
+\begin{definition}{4.1}
+$f$ hat an der Stelle $x_{0} \in \R^{d}$ den \emph{Grenzwert} $a$, falls für jede Folge $(x_k)_{k\in \N}$ in $\Omega$ mit $x_{k} \to x_{0}\, (k \to \infty)$ gilt $f(x_{k}) \to a$. \\
+
+Wir schreiben: $\lim_{x\to x_{0}}{f(x)} = a$
+\end{definition}
+\textbf{Bemerkung}: $x_{0}$ muss nicht im Definitionsbereich von $f$ sein.
+\begin{definition}{4.2}
+$f:\Omega \to \R^{d}$ heisst \emph{stetig} an der Stelle $x_{0} \in \Omega$ falls:
+\begin{enumerate}
+\item $f$ an der Stelle $x_{0}$ definiert ist,
+\item $\lim_{x\to x_{0}}{f(x)}$ existiert, und
+\item $\lim_{x\to x_{0}}{f(x)} = f(x_{0})$.
+\end{enumerate}
+\end{definition}
+\begin{definition}{4.2'}
+Die Abbildung $f:\Omega \to \R^{n}$ ist im Punkt $x_{0} \in \Omega$ \emph{stetig}, falls für jede gegen $x_{0}$ konvergierende Folge $(x_{n})_{n\geq 1}$ in $\Omega$, die Folge $(f(x_{n}))_{n\geq 1}$ zum Grenzwert $f(x_{0})$ konvergiert, d.h.
+\[\lim_{n\to\infty}f(x_{n}) = f(\lim_{n\to\infty}x_{n})\]
+Anders gesagt:
+\begin{itemize}
+\item Grenzwerte von Folgen werden von stetigen Funktionen nicht verändert.
+\item Stetige Funktionen erhalten Grenzwerte von Folgen.
+\end{itemize}
+\end{definition}
+\begin{definition}{4.2''}
+Die Abbildung $f:\Omega\to\R^{n}$ ist auf $\Omega$ \emph{stetig} (oder \emph{einfach stetig}, wenn der Kontex klar ist), falls $f$ in jedem Punkt $x\in\Omega$ stetig ist.
+\end{definition}
+\subsection*{Beispiele}
+Mittels Resultate aus dem dritten Kapitel haben wir wichtige Beispiele von stetigen Funktionen.
+\begin{itemize}
+\item Diese Funktion ist auf ganz $\R\times\R$ stetig: \begin{align*}f:\R\times\R&\to\R \\ (a,b) &\mapsto (a+b) \end{align*} (Seien $(a_{n}), (b_{n})$ Folgen mit $a = \lim{a_{n}}, b = \lim{b_{n}}$. Dann ist die Folge $(a_{n} + b_{n})$ konvergent, und $\lim{a_{n}+b_{n}} = a + b$, nach Satz 3.8) 
+\item Diese Funktion ist auf ganz $\R\times\R$ stetig:
+\begin{align*}f:\R\times\R&\to\R \\ (a,b)&\mapsto ab \end{align*}
+\item Diese Funktion is auf $\R\times\R^{x}$ stetig:
+\begin{align*}f:\R\times\R^{x}&\to\R \\ (a,b)&\mapsto a/b \end{align*}
+\item Aus wiederholter Anwendung von 1. und 2. ergibt sich die \emph{Polynomiale Funktion\todo{heisst die wirklich so?}}:
+\[\text{Sei } n \geq 0,\: a_{0}, \dots, a_{n}\in\R: p(x)\defeq a_{0} + a_{1}x + \dots + a_{n}x^{n} \]
+Die Polynomiale Funktion ist stetig auf ganz $\R$.
+ \todo{would be nicer if they were next to eachother}
+\item \begin{multicols}{2}[Die beiden folgenden Abbildungen sind stetig auf ihrem Definitionsbereich.]\begin{align*} \R^{d}\times\R^{d}&\to\R^{d} \\ (a,b)&\mapsto(a+b) \end{align*} \columnbreak \begin{align*} \R\times\R^{d}&\to\R^{d} \\ (\lambda,a)&\mapsto\lambda a \end{align*} \end{multicols}
+\item Die folgenden Abbildungen sind stetig.
+\todo{would be nicer if they were next to eachother}
+\begin{align*} \mathbb{C} &\to \mathbb{C} \\ z &\mapsto \bar{z}\end{align*}
+\begin{align*} \mathbb{C}\times\mathbb{C} &\to \mathbb{C} \\ (z,w) &\mapsto z*w \end{align*}
+\begin{align*} \mathbb{C}\times\mathbb{C}^{x} &\to \mathbb{C} \\ (z,w) &\mapsto z/w \end{align*}
+\item Die folgenden Funktionen sind auf [...] \todo{what goes there? p130 (week8sem1)} stetig:
+\begin{align*} \R^{d}&\to\R \\ x&\mapsto \norm{x} \end{align*}
+\begin{align*} \mathbb{C}&\to\R \\ z&\mapsto \abs{z} \end{align*}
+\item Die charakteristische Funktion von $\mathbb{Q}$: \\ 
+Sei $f(x) =\mathcal{X}_{\mathbb{Q}} = \begin{cases} 1 &x\in\mathbb{Q} \\ 0 &x\in\R\backslash\mathbb{Q} \end{cases} $ \\
+Sei $x\in\R\backslash\mathbb{Q}$ fest mit $(x_{k})\in\mathbb{Q}, x_{k}\to x$. Dann ist ${f(x_{k})=\mathcal{X}(x_{k})=1 \nrightarrow 0=\mathcal{X}(x)}$. \\
+(Zu $x\in\R\backslash\mathbb{Q}$, sei $x_{k}$ die an der k-ten Nachkommastelle abgebrochene Dezimaldarstellung von $x$. Dann gilt $x_{k} \in \mathbb{Q}\; \forall k \in \N$ und $x_{k}\to x_{1}$.)
+\item Sei $f: \begin{cases} x &x < 1 \\x &x>1 \end{cases}$ \\ 
+\todo{!! Picture missing p131week8sem1} $f$ ist in $x=1$ nicht stetig, weil $f$ an der Stelle $x=1$ nicht definiert ist. In diesem Beispiel ist die Funktion $f$ nicht stetig, aber sie ist eigentlich eine ``gute'' \todo{Does that really say gute?}Funktion.
+
+\todo{no ozlem number...}
+\end{itemize}
+\begin{definition}{(Struwe 4.1.3 (ii))}
+$\Omega \subset \R^{d}, f:\Omega\to\R^{n}, x_{0}\in\R^{d}\backslash\mathbb{Q}$ so dass $\exists (x_{k})\in\Omega$ mit $\lim{x_{k}=x_{0}}$. \\
+
+Dann ist $f$ an der Stelle $x_{0}$ \emph{stetig ergänzbar} falls $a=\lim{f(x_{k})}$ existiert. In diesem Fall setzen wir \[ f(x_{0} = a\]
+Die durch $f(x_{0})=a$ ergänzte Funktion $f$ ist offenbar stetig an der Stelle $x_{0}$.
+\end{definition}
+
+\todo{offenbar $\to$ offensichtlich?}
+\begin{itemize}
+%Random ozlem enumeration ignored for consistency
+\item Diese stückweise konstante Funktion ist stetig an jeder Stelle $x_{0} \neq 0$. Sie ist jedoch für $a\neq b$ an der Stelle $x_{0}=0$ nicht stetig ergänzbar. (Struwe Beispiel 4.1.3 (vii))
+\begin{align*}f&:\R^{x}\to\R \\ f(x)&=\begin{cases}a &\text{falls } x<0 \\ b &\text{falls } x>0\end{cases} \end{align*}
+\todo{!! Picture missing p132week8Sem1}
+\item Sei $f:(a,b)\to\R$ monoton wachsend, d.h. $\forall x,y\in(a,b)$ mit $x\leq y$ folgt $f(x)\leq f(y)$. Sei ausserdem $x_{0}\in (a,b)$. Dann existieren die \emph{links- und rechtsseitigen Grenzwerte} 
+\[ f(x_{0}^{+}) \defeq \lim_{\substack{x\to x_{0} \\ x > x_{0} \\ x \downarrow x_{0}}}f(x), \quad\quad f(x_{0}^{-})\defeq \lim_{\substack{x\to x_{0} \\ x < x_{0} \\ x \uparrow x_{0}}}f(x) \]
+und $f$ ist stetig an der Stelle $x_{0}$ genau dann, wenn $f(x_{0}^{-})=f(x_{0}^{+})=f(x_{0})$.
+\end{itemize}
+\subsubsection*{Beweis}
