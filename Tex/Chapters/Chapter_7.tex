@@ -95,7 +95,7 @@ Sei $p(\lambda ) = \prod\limits_{i = 1}^l {{{(\lambda  - {\lambda _i})}^{{m_i}}}
 \item Falls die characteristischen Polynom $n$ verschiedene reelle Nullstelle $\lambda_1,\dots,\lambda_n$ besitzt, so bilden ${e^{{\lambda _1}x}},{e^{{\lambda _2}x}}, \ldots ,{e^{{\lambda _n}x}}$ eine Basis des Vektorraums der Lösungen, das heisst für jede Lösung $y(x)$gibt es $c_1,c_2,\dots,c_n$ so dass \[y(x)={c_1}{e^{{\lambda _1}x}} + {c_2}{e^{{\lambda _2}x}} +  \ldots  + {c_n}{e^{{\lambda _n}x}}\]
 
 \item Sei $\lambda$ eine $k-$fache reelle Nullstelle das charakteristisches polynoms. Dann sind \[e^{\lambda x},xe^{\lambda x},\dots ,x^{k-1}e^{\lambda x}\] $k$ linear unabhängige Lösungen. 
-\item Sind $\lambda=\alpha+i\beta$, $\overline{\lambda}=\alpha-i\beta$, \todo{What ?? page 82 bottom} ein Paar konjugiert komplexer $k-$ fache nullstellen, so sind die Funktionen\\\begin{center}
+\item Sind $\lambda=\alpha+i\beta$, $\overline{\lambda}=\alpha-i\beta$, ein Paar konjugiert komplexer $k-$ fache nullstellen, so sind die Funktionen\\\begin{center}
 \begin{tabular}{c c c}
 $e^{\alpha x}\cos\left(\beta x\right)$&\hspace{10mm}&$e^{\alpha x}\sin\left(\beta x\right)$\\
 \vdots&\hspace{10mm} & \vdots\\
@@ -213,10 +213,10 @@ wobei $P_n,Q_n,S_n,R_n$ Polynome von Grad $n$ sind.
 \subsubsection*{Bemerkung 7.9}
 \begin{enumerate}
 \item \todo{end of this list? }Liegt eine Linearkombination der Störfunktion vor, so hat man auch als Ansatz eine entsprechende Linearkombination zu wählen. Dies ist Superpositionsprinzip
-\subsubsection*{Beispiel}
-Die DGL $y''+y'-6y=50\sin x$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x\] und die DGL $y''+y'-6y=10e^{2x}$ hat die spezielle Lösung \[y_s(x)=2xe^{2x}\]Die DGL $y''+y'-6y=50\sin x+10e^{2x}$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x+2xe^{2x}\] Die allgemenine Lösung \[y(x)=-7\sin x -\cos x+2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\]
 \subsubsection*{Superpositionsprinzip:}
 Ist $y_1(c)$ eine spezielle Lösung der L. Differentialgleichung \[y^{(n)}(x)+a_{n-1}(x)y^{(n-1)}(x)+\dots +a_0(x)y=b_1(x)\] und $y_2(x)$ eine spezielle Lösung der LDGL \[y^n(x)+\dots +a_0(x)y=b_2(x)\] dann ist $y_1(x)+y_2(x)$ eine Spezielle Lösung der DGL \[y^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\dots+a_0(x)y=b_1(x)+b_2(x)\]
+\subsubsection*{Beispiel}
+Die DGL $y''+y'-6y=50\sin x$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x\] und die DGL $y''+y'-6y=10e^{2x}$ hat die spezielle Lösung \[y_s(x)=2xe^{2x}\]Die DGL $y''+y'-6y=50\sin x+10e^{2x}$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x+2xe^{2x}\] Die allgemenine Lösung \[y(x)=-7\sin x -\cos x+2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\]
 \item Falls $\lambda=\alpha +i\beta$ ($\beta$ kann null sein) eine $m-$fache Nullstelle der characteristichen Polynoms von (Resonanzfall) \[(H)\hspace{10mm}y^n(x)+a_ny^{(n-1)}+\dots +a_0=0\]so muss man den Ansatz für $y_s(x)$mit dem Faktor $x^m$ multiplizieren.
 \subsubsection*{Beispiel}
 $y''+y=\sin x$ hat die spezielle Lösung $y_s=-\frac{1}{2}x\cos x$
@@ -251,16 +251,7 @@ $y''+y=\sin x$ hat die spezielle Lösung $y_s=-\frac{1}{2}x\cos x$
 
 \end{minipage}
 \end{figure}
-
-
-
-
-
-
-
-
-
-
+\end{enumerate}
 \subsection*{Zusatzbedingungen einer DGL. Anfangs und Randbedingungen}
 Die in der allgemeinen Lösung einer DGL $n-$ter Ordnung auftretenden parameter lassen sich durch Zusatzbedingungen festlegen. Physikalische sinnvolle Zusatzbedingungen werden meist in der Form von Anfangsbedingungen oder Randbedingungen vorgegeben. \\
 
@@ -303,7 +294,6 @@ Anfangsbedingungen
 \[c_2=\frac{m^2g}{a^2}\hspace{10mm}c_1=-\frac{m^2g}{a^2}\]
 \[\Rightarrow x(t)=-\frac{m^2g}{a^2}+\frac{m^2g}{a^2}e^{-\frac{a}{m}t}+\frac{mg}{a}t\]
 \[x(t)=\frac{mg}{a}t-\frac{m^2g}{a^2}\left[ 1-e^{-\frac{a}{m}t}\right]\]
-\end{enumerate}
 Eine partikuläre Lösung einer DGL $n-$ter Ordnung \[y^{(n)}{(x)}+a_{n-1}(x)+\dots+a_0 y(x)=b(x)\] kann man aus der allgemeine Lösung 
 \[y(x)=y(x,c_1,c_2,\dots,c_n)\] der DGL erhalten
 \begin{itemize}

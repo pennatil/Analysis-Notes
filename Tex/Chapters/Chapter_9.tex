@@ -227,3 +227,45 @@ $z=\varphi \left( {x,y} \right)$ und $z=\psi \left( {x,y} \right)$ stellen die `
 
 Der Normalbereich $A$ ist die Senkrechte Projektion von $D$ in die $x-y$ Ebene. Dessen ``Grund'' und ``Deckelkurve'' sind durch $y=g(x)$ und $y=h(x)$ gegeben.
 
+\subsubsection*{Bemerkung 9.16}
+Das Integral 
+\[ V=\int\limits_D 1 d\mu\text{ für }D\subset\R^3\]
+ergibt das Volumen von $D$. Für einen Normalbereich 
+\[D = \left\{ {\left( {x,y,z} \right)\mid a \le x \le b,g(x) \le y \le h(x),\varphi \left( {x,y} \right) \le z \le \psi \left( {x,y} \right)} \right\}\]
+ erhält man 
+\[V = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\int\limits_{\varphi \left( {x,y} \right)}^{\psi \left( {x,y} \right)} {1dzdydx} } }  = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\psi \left( {x,y} \right) - \varphi \left( {x,y} \right)dydx} } \]
+
+\section{Substitutionsregel}
+Häufig sind kartesische koordinaten für die Berechnung von Integralen eher ungeignet. z.B. wenn man symmetrien bezüglich gewisser Punkte oder Achsen nutzen will.\\
+
+Wir behandeln als nächstes Variablentransformationen vom Typ $\Phi:\R^n\to\R^n$ und verallgemeinern die 1.Dim Substitutionsregel:
+\[\int\limits_{\varphi (a)}^{\varphi (b)} {f(x)dx}  = \int\limits_a^b {f\left( {\varphi \left( t \right)} \right)\varphi '\left( t \right)dt} \]
+mit $f$ stetig, $x=\varphi\left( t\right)$ $\varphi :\lbrack a,b\rbrack\to I$ stetig differenzierbar, $I=$ Interval. Zunächst erinnern wir uns an die Lineare Algebra:\\
+
+Das Bild des Einheitsquadrats/würfels unter der linearen Abbildung 
+\begin{align*}
+\Phi:\R^n&\to\R^n\\
+\vec x&\to A\vec x\hspace{5mm}A\in\R^{n\times n}
+\end{align*}
+ist ein Parallelogram mit Fläche $\left| \det A\right|$
+\missingfigure{Page 231, top}
+Dies bleibt wahr, wenn man zur affin-linearen Abbildung $\Phi\left(\vec{x}\right)=A\vec a+\vec b$ betrachtet es kommt ja nur ein Verschiebung zu
+\missingfigure{Page 231 bottom}
+Nun, betrachten wir eine differenzierbare nichtlineare Transformation $\Phi:\R^n \to\R^n$. Dann gilt zumindest nahe eines festen Punktes $\vec x\in\R^n:$
+\[ \Phi\left( x\right)\approx\Phi\left( x_0\right) + d\Phi\left( x_0\right) \left( \vec{x}-\vec{x_0}\right)\]
+Die rechte Seite stellt gerade eine Abbildung vom Typ $A\vec x+\vec b$ der wobei die Jacobi Matrix $d\Phi\left( x_0\right)\in\R^n\times\R^n$ die Rolle von $A$ (und $\Phi\left( x_0\right)$ von $\vec b$) übernimmt. Damit ist der lokale Flächenverzerrungsfaktor von $\Phi$ gegeben durch $\left| \det d\Phi\left( x_0\right)\right|$ d.h. den Betrag der Jacobi oder Funktionaldeterminante. Die Lokale Flächenverzerrung muss bei der Substitution in Integralen berücksichtigt werden und zwar in der Form
+\[``d\vec x = \left| {\det d\Phi \left( {\vec y} \right)} \right|d\vec{y} \text{ ''},{\text{ falls }}\vec x = \Phi \left( y \right)\]
+Geometrische Darstellung in $\R^2$
+\missingfigure{Page 232.5 top}
+Die Flächen der einander entsprechenden markierten Vierecke unterscheiden sich gerade um den Faktor $\left|\det d\Phi\left( x_1\right)\right|$ bzw. $\left|\det d\Phi\left( x_2\right)\right|$
+\subsection*{Substitutionsregel}
+\subsubsection*{Satz 9.17}
+Sei $U,V\subset\R^n$ offen, $\Phi:U\to V$ bijektiv, stetig diff., $\det d\Phi\left( \vec y\right)\not=0$ $\forall\vec y\in U$, sowie $f: V\to\R$ stetig. Dann gilt
+\[\int\limits_V {f\left( {\vec x} \right)d\mu \left( {\vec x} \right)}  = \int\limits_{\Phi \left( U \right) = V} {f\left( {\Phi \left( {\vec y} \right)} \right)\left| {\det d\phi \left( y \right)} \right|} d\mu \] 
+
+\subsubsection*{Beispiel 9.18}
+\begin{enumerate}
+\item Berechne $\iiint\limits_V d\mu$, wobei \[\mathop {\text{V}}\limits_{\begin{array}{*{20}{c}} \downarrow \\{{\text{Kugeloktanten}}}\end{array}} {\text{ = }}\left\{ {\left. {{{\left( {x,y,z} \right)}^t}} \right|{x^2} + {y^2} + {z^2} \le 1,x,y,z \ge WHAT} \right\}\] \todo{chopped content, page 233 middle to bottom}Es ist einfacher in Kugelkoordinaten zu berechnen
+\[\Phi \left( {r,\theta ,\psi } \right) = \left( {\begin{array}{*{20}{c}}{r\cos \theta \cos \psi }\\{r\sin \theta \cos \psi }\\{r\sin \psi }\end{array}} \right)\]
+%Page 234, very top
+\end{enumerate}
