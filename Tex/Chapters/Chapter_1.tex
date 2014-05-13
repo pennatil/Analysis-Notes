@@ -54,7 +54,7 @@ Man fügt $\lnot B$ als Annahme hinzu und kommt nach einer Kette von erlaubten S
 
 \noindent Wir beweisen dass aus $A$ folgt $B$. Nehmen wir an, dass $A$ wahr und $B$ falsch ist. \\
 
-\noindent $\lnot B=$ es gibt eine grösste natürliche zahl $N_0''$ d.h $N_0>l$ für jedes $l \in \mathbb{N}$.\\
+\noindent $\lnot B=$ es gibt eine grösste natürliche zahl $N_0''$ d.h $N_0>l$ für jedes $l \in \N$.\\
 
 Mittels der Aussage $A$ wissen wir dass $N_0$ einen Nachfolger $N_0 +1$ hat. Dann $N_0+1>N_0$. Dass ist ober ein Wiederspruch.
 
@@ -70,10 +70,10 @@ Falls zugleich $A\subset B$ und $B\subset A$ gilt, so sind $A$ und $B$ gleich un
 
 \subsubsection*{Beispiele 1.2}
 \begin{enumerate}
-	\item Die Menge $\mathbb{N}=\{0,1,2,\dots\}$ der natürlichen Zahlen.
+	\item Die Menge $\N=\{0,1,2,\dots\}$ der natürlichen Zahlen.
 	\item Die leere Menge mit ``$\varnothing$'' bezeichnet. Sie ist in jeder Menge enthalten.
 	\item Die Menge $\mathbb{Z}=\{\dots,-2,-1,0,1,2,\dots\}$ aller ganze Zahlen.
-	\item Meistens werden Mengen nicht durch die Liste ihre Elemente gegeben, sondern durch bestimmte Eigenschaften ihrer Elemente definiert \[\mathbb{P}=\{2,3,4,5,7,11,13,\dots\}\] die Menge aller Primzahlen $\mathbb{P}:\{p\in\mathbb{N}\mid\text{ $p$ primzahl}\}$
+	\item Meistens werden Mengen nicht durch die Liste ihre Elemente gegeben, sondern durch bestimmte Eigenschaften ihrer Elemente definiert \[\mathbb{P}=\{2,3,4,5,7,11,13,\dots\}\] die Menge aller Primzahlen $\mathbb{P}:\{p\in\N\mid\text{ $p$ primzahl}\}$
 \end{enumerate}
 \section{Zwei Prinzipen}
 Wir werden die folgenden zwei Beweismethoden häufig benutzen.
@@ -81,10 +81,10 @@ Wir werden die folgenden zwei Beweismethoden häufig benutzen.
  \subsection*{1. Prinzip des Indirekten Beweises}
 Zum Beweis der Aussage $A\to B$ genügt es, die Aussage $\lnot B\to\lnot A$ zu zeigen oder die Annahme $A\land\lnot B$ zum Wiederspruch zu führen.
 \subsection*{2. Prinzip der Vollständigen Induktion}
-Sei für jedes $n\in\mathbb{N}$ eine Behauptung $A(n)$ gegeben. Soll die Behauptung für alle natürlichen Zahlen $n\in\mathbb{N}$ bewiesen werden, so genügen dazu zwei Beweisschritte:
+Sei für jedes $n\in\N$ eine Behauptung $A(n)$ gegeben. Soll die Behauptung für alle natürlichen Zahlen $n\in\N$ bewiesen werden, so genügen dazu zwei Beweisschritte:
 \begin{enumerate}[i)]
 \item Der Beweis von $A(0)$
-\item Für jedes $n\in\mathbb{N}$, der Beweis von $A(n+1)$ unter der Voraussetzung, dass $A(n)$ gilt. 
+\item Für jedes $n\in\N$, der Beweis von $A(n+1)$ unter der Voraussetzung, dass $A(n)$ gilt. 
 \end{enumerate}
 Oft gelten aber Behauptungen nicht von $n=0$. \\
 Soll die Gültigkeit von $A(n)$ für alle $n\geq m$ bewiesen werden so genügen wieder zwei Schritte:
@@ -315,7 +315,7 @@ Sei nun $I$ eine beliebige Menge ($I$=Indexmenge) und sei für alle $i\in I$ ein
 Wir definieren das Kartesische Produkt endlich vieler Mengen $A_1 \dots A_n$: \[{A_1} \times {A_n} = \prod\limits_{i = 1}^n {{A_i} = \{ ({x_1} \ldots {x_n})\mid {x_i} \in {A_i}} \} \]
 
 \subsubsection*{Satz 1.8}
-Seien $A_1 \dots A_k \subset X, \; k\in \mathbb{N}$. Es gilt
+Seien $A_1 \dots A_k \subset X, \; k\in \N$. Es gilt
 \begin{enumerate}
 \item \[{\left( {\bigcap\limits_{i = 1}^k {{A_i}} } \right)^c} = \bigcup\limits_{i = 1}^k {{A_i}^c} \]
 \item \[{\left( {\bigcup\limits_{i = 1}^k {{A_i}} } \right)^c} = \bigcap\limits_{i = 1}^k {{A_i}^c} \]
@@ -335,7 +335,7 @@ und
 \item Wir haben gesehen dass wir manchmal eine Aussage verneinen müssen. Deshalb müssen wir lernen wie man Aussage mit Quantoren verneinen kann.
 \[\neg\left(\forall n:A(n)\right)\Leftrightarrow\left(\exists n:\neg A(n)\right)\]
 \[\neg\left(\exists n:A(n)\right)\Leftrightarrow\left(\forall n:\neg A(n)\right)\]
-\[\neg\left(\forall x\in \mathbb{R}:x^2\geq 0\right)\Leftrightarrow\exists x\in\mathbb{R}:x^2<0\]
+\[\neg\left(\forall x\in \R:x^2\geq 0\right)\Leftrightarrow\exists x\in\R:x^2<0\]
 \end{enumerate}
 \section{Abbildungen}
 Seien $X,Y$ Mengen. 
@@ -424,8 +424,8 @@ $pr_x:$ & $X\times Y\to X $& ~ & $pr_y$: & $X\times Y\to Y$ \\
 ~& $(x,y)\mapsto x$ & ~& ~& $(x,y)\mapsto y$ \\
 \end{tabular}\\
 die Projektionen auf den ersten bzw. zweiten Faktor. 
-\item Sinus \begin{align*} f:\mathbb{R}&\to\lbrack -1,1\rbrack \\ x &\mapsto \sin x \end{align*}
-\item \begin{align*}f:\mathbb{R}&\to\mathbb{R} \\ x&\mapsto x^2+x\end{align*}
+\item Sinus \begin{align*} f:\R&\to\lbrack -1,1\rbrack \\ x &\mapsto \sin x \end{align*}
+\item \begin{align*}f:\R&\to\R \\ x&\mapsto x^2+x\end{align*}
 \end{enumerate}
 \begin{definition}{1.11}
 Sei $f:X\to Y$ eine Abbildung
@@ -452,18 +452,18 @@ Sei $f:X\to Y$ eine Abbildung
 \item $pr_y : X\times Y\to Y$ 
 \end{itemize}
 sind stets surjektiv.
-\item $f:\mathbb{R}\to\lbrack -1,1\rbrack$ \\
+\item $f:\R\to\lbrack -1,1\rbrack$ \\
 $x\mapsto \sin x$\\
 Surjektiv, nicht injektiv
 \columnbreak
-\item $f:\mathbb{R}\to\mathbb{R}$\\
+\item $f:\R\to\R$\\
 $x\mapsto x^2$\\
 Nicht surjektiv\\
 Nicht injektiv
 
-\item $f:\mathbb{N}\to\mathbb{N}$\\
+\item $f:\N\to\N$\\
 $n\mapsto 2n$\\
-ist injektiv. $f(\mathbb{N})$ ist die Menge aller geraden Zahlen
+ist injektiv. $f(\N)$ ist die Menge aller geraden Zahlen
 \item Eine Menge $A$ hat $n$ Elemente falls es eine bijektive ${f:\{1,\dots,n\}\to A}$ gibt. Die Zahl $n$ wird dann die Kardinalität von $A$ genannt und mit $|A|$, gelegentlich auch mit $\#A$ bezeichnet.
 \end{enumerate}
 \end{multicols}
@@ -472,7 +472,7 @@ ist injektiv. $f(\mathbb{N})$ ist die Menge aller geraden Zahlen
 Wir sagen zwei Mengen $X$ und $Y$ sind gleichmächtig falls eine bijektive Abbildung $f:X\to Y$ existiert.
 \end{definition}
 
-Mit dem ersten Cantorschen Diagonalverfahren kann man die rationalen Zahlen abzählen, d.h.$ \mathbb{Q}$ und $\mathbb{N}$ sind gleichmächtig
+Mit dem ersten Cantorschen Diagonalverfahren kann man die rationalen Zahlen abzählen, d.h.$ \mathbb{Q}$ und $\N$ sind gleichmächtig
 
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
@@ -619,9 +619,9 @@ y&\mapsto y
 Zum Beispiel:
 
 \begin{align*}
-f:\mathbb{R} &\to\mathbb{R} \\
+f:\R &\to\R \\
 x &\mapsto x^2 \\
-g:\mathbb{R}&\to\mathbb{R} \\
+g:\R&\to\R \\
 x &\mapsto x+1
 \end{align*}
 \[f\circ g=f\left( g(x)\right)=f(x+1)=(x+1)^2=x^2+2x+1 \]
@@ -640,14 +640,14 @@ Für $f\circ f^{-1}:$ Sei $y\in Y$ und sei $x$ mit $f(x)=y$. Dann ist $\left( f\
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
-\item \begin{align*} f:\mathbb{R}&\to\mathbb{R} \\
+\item \begin{align*} f:\R&\to\R \\
 x&\mapsto 2x+3 \end{align*}
 Die Funktion is bijektiv. \\
-Die Umkehrfunktion ist gegeben durch \begin{align*}f^{-1}:\mathbb{R}&\to\mathbb{R} \\
+Die Umkehrfunktion ist gegeben durch \begin{align*}f^{-1}:\R&\to\R \\
 x&\mapsto\frac{x-3}{2}\end{align*}
-\item Sei $\mathbb{R}^+=\lbrack 0,\infty\rbrack$ die Menge der nichtnegativen reellen Zahlen und \begin{align*}f:\mathbb{R}^+&\to\mathbb{R}^+ \\
+\item Sei $\R^+=\lbrack 0,\infty\rbrack$ die Menge der nichtnegativen reellen Zahlen und \begin{align*}f:\R^+&\to\R^+ \\
 x&\mapsto x^2\end{align*}
-Dann ist $f$ bijektiv und die Umkehrfunktion  ist gegeben durch \begin{align*}f^{-1}:\mathbb{R}^+&\to\mathbb{R}^+ \\
+Dann ist $f$ bijektiv und die Umkehrfunktion  ist gegeben durch \begin{align*}f^{-1}:\R^+&\to\R^+ \\
 x&\mapsto\sqrt{x}\end{align*}
 \end{enumerate}
 
