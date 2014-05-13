@@ -227,3 +227,17 @@ $z=\varphi \left( {x,y} \right)$ und $z=\psi \left( {x,y} \right)$ stellen die `
 
 Der Normalbereich $A$ ist die Senkrechte Projektion von $D$ in die $x-y$ Ebene. Dessen ``Grund'' und ``Deckelkurve'' sind durch $y=g(x)$ und $y=h(x)$ gegeben.
 
+\subsubsection*{Bemerkung 9.16}
+Das Integral 
+\[ V=\int\limits_D 1 d\mu\text{ für }D\subset\R^3\]
+ergibt das Volumen von $D$. Für einen Normalbereich 
+\[D = \left\{ {\left( {x,y,z} \right)\mid a \le x \le b,g(x) \le y \le h(x),\varphi \left( {x,y} \right) \le z \le \psi \left( {x,y} \right)} \right\}\]
+ erhält man 
+\[V = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\int\limits_{\varphi \left( {x,y} \right)}^{\psi \left( {x,y} \right)} {1dzdydx} } }  = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\psi \left( {x,y} \right) - \varphi \left( {x,y} \right)dydx} } \]
+
+\section{Substitutionsregel}
+Häufig sind kartesische koordinaten für die Berechnung von Integralen eher ungeignet. z.B. wenn man symmetrien bezüglich gewisser Punkte oder Achsen nutzen will.\\
+
+Wir behandeln als nächstes Variablentransformationen vom Typ $\Phi:\R^n\to\R^n$ und verallgemeinern die 1.Dim Substitutionsregel:
+\[\int\limits_{\varphi (a)}^{\varphi (b)} {f(x)dx}  = \int\limits_a^b {f\left( {\varphi \left( t \right)} \right)\varphi '\left( t \right)dt} \]
+mit $f$ stetig, $x=\varphi\left( t\right)$ $\varphi

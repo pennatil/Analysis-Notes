@@ -1,17 +1,18 @@
 \chapter{Logik und Unterlagen}
 Im Laufenden Semester werden wir viele mathematische Beweise einführen. Heute werden wir uns mit der Mathematische Logik beschäftigen. \\
 
-In der Mathematik stossen wir uns auf gewisse Grundannahmen ``Axiome'', die wir als gegeben ansehen. Eine dieser Annahmen ist der 
-\subsection*{Satz von ausgeschlossenen Dritten}
+In der Mathematik stossen wir auf gewisse Grundannahmen, ``Axiome'', die wir als gegeben ansehen. Eine dieser Annahmen ist der 
+\subsection*{Satz vom ausgeschlossenen Dritten}
 Eine zulässige mathematische Aussage ist entweder wahr oder falsch, jedoch nie beides zugleich.
 \subsubsection*{Beispiel}
 \begin{enumerate}
 	\item $5<7$ Wahr
 	\item $4<2$ Falsch
 \end{enumerate}
-In der wirklichen Welt ist es anders , z.B. ``Mathematik ist schön'', wahr oder falsch?\\
+In der wirklichen Welt ist es anders. Ist z.B. ``Mathematik ist schön'' wahr oder falsch?\\
 
-Mit Aussagen kann man ``rechnen''. Wir führen nun ein Paar geläufige Notationen der Logik ein:\\
+Mit Aussagen kann man ``rechnen''. Wir führen nun ein paar geläufige Notationen der Logik ein:\\
+\\
 Seien $A,B$ Aussagen
 \begin{itemize}
 \item $A$ und $B$ wird mit $A\land B$ bezeichnet
@@ -22,7 +23,7 @@ Seien $A,B$ Aussagen
 \item Aus $A$ folgt $B$ wird mit $\to$ bezeichnet
 \item Wenn $A$, dann auch $B$
 \item Die Negation der Aussage $A$ wird mit $\lnot A$ bezeichnet
-\item $A$ ist equivalent zu $B$ wird mit $A\Leftrightarrow B$ bezeichnet
+\item $A$ ist äquivalent zu $B$ wird mit $A\Leftrightarrow B$ bezeichnet
 \item $\left(A\to B\right)\land \left( B\to A\right)$ $A$ wahr genau dann, wenn $B$ wahr ist.
 \end{itemize}
 
@@ -31,15 +32,15 @@ Die Folgerung ist transitiv. Wenn wir wissen, dass $A\to B$ und $B\to C$, dann w
 
 
 \subsection*{Prinzip des Mathematischen Beweises}
-Wir können ber eine Kette von Folgerungen \[A\to B \to C \dots \to S\]
+Wir können aus einer Kette von Folgerungen \[A\to B \to C \dots \to S\]
 einen mathematischen ``Satz'' $S$ aus einen Annahme $A$ herleiten. (Ein Beweis ist eine Folge von Implikationen von Aussagen). 
 \subsubsection*{Kontraposition (Umkehrschluss)}
 
 $A\to B$ ist gleichbedeutend mit $\lnot B\to\lnot A$.\\
-Falls $A\to B$, so kann $A$ nicht wahr sein wenn $B$ falsch ist (weil $A$ wahr wäre, würde $B$ auch wahr sein).
+Falls $A\to B$, so kann $A$ nicht wahr sein wenn $B$ falsch ist (weil wenn $A$ wahr ist, würde $B$ auch wahr sein).
 
 \section{Prinzip des Indirekten Beweises}
-Zum Beweis der Aussage $A\to B$ genügt es die Aussage $\lnot B\to\lnot A$ zu zeigen, oder: die Annahme $A\land\lnot B$ zum Wiederspruch zu führen.
+Zum Beweis der Aussage $A\to B$ genügt es die Aussage $\lnot B\to\lnot A$ zu zeigen, oder die Annahme $A\land\lnot B$ zum Wiederspruch zu führen.
 
 \subsection*{Indirekter Beweis}
 Man fügt $\lnot B$ als Annahme hinzu und kommt nach einer Kette von erlaubten Schlüssen zu einer falschen Aussage.\\
@@ -52,11 +53,11 @@ Man fügt $\lnot B$ als Annahme hinzu und kommt nach einer Kette von erlaubten S
 \item $B=\text{''es gibt keine grösste natürliche Zahl''}$
 \end{itemize}
 
-\noindent Wir beweisen dass aus $A$ folgt $B$. Nehmen wir an, dass $A$ wahr und $B$ falsch ist. \\
+\noindent Wir beweisen dass $B$ aus $A$ folgt . Nehmen wir an, dass $A$ wahr und $B$ falsch ist. \\
 
-\noindent $\lnot B=$ es gibt eine grösste natürliche zahl $N_0''$ d.h $N_0>l$ für jedes $l \in \N$.\\
+\noindent $\lnot B=$ es gibt eine grösste natürliche zahl $N_0''$, d.h $N_0>l$ für jedes $l \in \N$.\\
 
-Mittels der Aussage $A$ wissen wir dass $N_0$ einen Nachfolger $N_0 +1$ hat. Dann $N_0+1>N_0$. Dass ist ober ein Wiederspruch.
+Mittels der Aussage $A$ wissen wir, dass $N_0$ einen Nachfolger $N_0 +1$ hat. Für diesen gilt $N_0+1>N_0$. Dies ist aber ein Wiederspruch.
 
 \begin{definition}{1.1}
 Eine Menge ist eine Zusammenfassung verschiedener Objekte zu einem Ganzen.\\
@@ -64,7 +65,7 @@ Die Objekte werden Elemente der Menge genannt.
 \end{definition}
 
 Sei $A$ eine Menge, dann wird ``$a$ ist element von $A$'' mit ``$a\in A$'' bezeichnet.\\
-Seien $A,B$ Mengen, dann wird ``jedes Element von $A$ ist ein Element von $B$'' mit ``$A\subset B$ bezeichnet, und man sagt ``$A$ ist in $B$ enthalten'' (oder $A$ ist eine Teilmenge von $B$). \\
+Seien $A,B$ Mengen, dann wird ``jedes Element von $A$ ist ein Element von $B$'' mit ``$A\subset B$`` bezeichnet, und man sagt ``$A$ ist in $B$ enthalten'' (oder $A$ ist eine Teilmenge von $B$). \\
 
 Falls zugleich $A\subset B$ und $B\subset A$ gilt, so sind $A$ und $B$ gleich und man schreibt $A=B$. 
 
@@ -94,7 +95,7 @@ Soll die Gültigkeit von $A(n)$ für alle $n\geq m$ bewiesen werden so genügen 
 \end{enumerate}
 Das Prinzip der vollständigen Induktion ist genau wie ein Dominoeffekt.\\
 
-Sie stellen alle Dominosteine  auf, einen nach dem anderen. Falls der erste Dominostein fällt ($A(1)$ wahr) und falls wir die Dominosteine genug nah nebeneinander gestellt haben, so dass ein fallender Dominostein den nächsten trifft ($A(k)\to A(k+1)$) dann wissen wir, dass alle Dominosteine fallen. 
+Sie stellen alle Dominosteine  auf, einen nach dem anderen. Falls der erste Dominostein fällt ($A(1)$ wahr) und falls wir die Dominosteine genug nah nebeneinander gestellt haben, so dass ein fallender Dominostein den nächsten trifft ($A(k)\to A(k+1)$), dann wissen wir, dass alle Dominosteine fallen. 
 
 \subsubsection*{Beispiel 1.3 (Induktion)}
 \begin{enumerate}
@@ -120,7 +121,7 @@ Sei $A(n)$ die Aussage: Jede natürliche Zahl $m$ mit $2\leq m\leq n$ ist ein Pr
 \subsubsection*{Satz 1.5}
 Die Menge $\mathbb{P}$ der Primzahlen ist unendlich.
 \subsubsection*{Beweis}
-Nehmen wir das Gegenteil ``$\mathbb{P}$ ist endlich'' an, d.h. $\mathbb{P}=\{p_1,p_2,\dots,p_m\}$ in aufsteigender Folge; also $p_1=2,p_2=3,p_3=5,p_4=7,\dots$. Wir betrachten die Zahl $k=p_1 p_2\dots p_i \dots p_m+1$. Aus Satz 1.4 folgt, dass eine Primzahl $p_i$ (aus der Liste $\{p_1 ,\dots , p_{m}\}$) existiert, mit $p_i$ teilt $k$. Da $p_i$ offensichtlich $p_1 p_2\dots p_i \dots p_m$ teilt, folgt dass $p_i$ $k-p_1\dots p_{m}=1$ teilt. Das ist ein Widerspruch. 
+Nehmen wir das Gegenteil ``$\mathbb{P}$ ist endlich'' an, d.h. $\mathbb{P}=\{p_1,p_2,\dots,p_m\}$ in aufsteigender Folge; also $p_1=2,p_2=3,p_3=5,p_4=7,\dots$. Wir betrachten die Zahl $k=p_1 p_2\dots p_i \dots p_m+1$. Aus Satz 1.4 folgt, dass eine Primzahl $p_i$ (aus der Liste $\{p_1 ,\dots , p_{m}\}$) existiert, mit $p_i$ teilt $k$. Da $p_i$ offensichtlich $p_1 p_2\dots p_i \dots p_m$ teilt, folgt dass $p_i$ die Restzahl $k-p_1\dots p_{m}=1$ teilt. Das ist ein Widerspruch. 
 
 \subsection*{Teilbarkeit}
 \subsubsection{Formale Definition}
@@ -143,6 +144,8 @@ $b$ ist Vielfaches von $a$ & ~\\
 \item $a\mid b$ und $a\mid c\to a\mid kb+lc,\text{    für alle }l,k\in\mathbb{Z}$
 \end{itemize}
 
+\subsubsection{Formaler Beweis von Satz 1.5}
+
 \begin{enumerate}
 \item $k=\left( p_1 p_2\dots p_i \dots p_m \right)+1$\\
 Es gibt eine Primzahl $p_i$ die $k$ teilt. $p_i\mid k$ mittels Satz 1.4.
@@ -152,24 +155,25 @@ So erhalten wir einen Widerspruch.
 \end{enumerate}
 
 \subsubsection*{Bemerkung}
-Letztes mal haben wir gesagt, dass jedes Element von $A$ ist auch Element von $B$ ($\forall x,x\in A\to x\in B$) mit $A\subset B$ bezeichnet wird. Wir sagen auch $A$ ist in $B$ enthalten oder $A$ ist Teilmenge von $B$. Falls $A\subset B$ und eine Element $b\in B$ gibt mit $b\not\in A$ sagen wir $A$ ist eine ``eigentliche Teilmenge'' von $B$. Manchmal schreiben wir $A\mathop  \subset \limits_{\not  = } B$ in diesem Fall. \\
+Letztes mal haben wir gesagt, dass ``jedes Element von $A$ ist auch Element von $B$'' ($\forall x,x\in A\to x\in B$) mit $A\subset B$ bezeichnet wird. Wir sagen auch ``$A$ ist in $B$ enthalten'' oder ``$A$ ist Teilmenge von $B$''. Falls $A\subset B$ und eine Element $b\in B$ existiert mit $b\not\in A$, so sagen wir ``$A$ ist eine ``eigentliche Teilmenge'' von $B$''. Manchmal schreiben wir $A\mathop  \subset \limits_{\not  = } B$ in diesem Fall. \\
 
-Es gibt viele Bücher mit der folgenden Notation: jedes Element von $A$ ist ein Element von $B$ wird mit $A\subseteq B$ bezeichnet. Und wenn $A\subseteq B$ und $A\not =B$ dann benutzen sie $A\subset B$ statt $A\mathop  \subset \limits_{\not  = } B$. $A=B$ falls $x\in A\Leftrightarrow x\in B$. 
+Es gibt viele Bücher mit der folgenden Notation: ``jedes Element von $A$ ist ein Element von $B$'' wird mit $A\subseteq B$ bezeichnet. Und wenn $A\subseteq B$ und $A\not =B$ dann wird $A\subset B$ statt $A\mathop  \subset \limits_{\not  = } B$ benutzt. $A=B$ falls $x\in A\Leftrightarrow x\in B$. 
 
 \subsubsection*{Satz}
 $A=B \Leftrightarrow A\subset B$ und $B\subset A$ 
 \subsubsection*{Beweis}
 Annahme: $A=B$. Falls $x\in A$, dann gilt, mittels $A=B$, $x\in B$ und damit gilt auch $A\subset B$. Falls $x\in B$, dann gilt $x\in A$ (mittels $A=B$), und damit gilt $B\subset A$.\\
 
-Wir haben bewiesen, dass $A=B \to A\subset B \text{ und } B\subset A$. Zunächst nehmen wir $A\subset B$ und $B\subset A$ an. Damit möchten wir $A=B$ zeigen. \\
+Wir haben bewiesen, dass $A=B \to A\subset B \text{ und } B\subset A$. \\
+Nun nehmen wir $A\subset B$ und $B\subset A$ an. Damit möchten wir $A=B$ zeigen. \\
 
-Sei $x\in A$, mittels $A\subset B$, haben wir $x\in B$, und somit $x\in A \to x\in B$. (\textasteriskcentered)\\
+Sei $x\in A$. Mittels $A\subset B$ erhalten wir $x\in B$ und somit $x\in A \to x\in B$. (\textasteriskcentered)\\
 
-Sei $x\in B$, mittels $B\subset A$, haben wir $x\in A$, und somit $x\in B \to x\in A$. (\textasteriskcentered\textasteriskcentered)\\
+Sei $x\in B$. Mittels $B\subset A$ erhalten wir $x\in A$ und somit $x\in B \to x\in A$. (\textasteriskcentered\textasteriskcentered)\\
 
 (\textasteriskcentered) und (\textasteriskcentered\textasteriskcentered) $\to A=B$ per Definition. 
 
-\section{Mengeoperationen}
+\section{Mengenoperationen}
 Zunächst erinnern wir kurz an die Definitionen der elementaren Operationen auf Mengen. \\
 
 \noindent Seien $A$ und $B$ Mengen. Wir können dann daraus folgende Mengen bilden:
@@ -190,7 +194,7 @@ $A\cap \emptyset=\emptyset$; $A\cup \emptyset=A$\vspace{-4mm}
 \subsubsection*{Bemerkung}
 \begin{itemize}
     \item $\cup$ verhält sich wie $+$
-    \item $\cap$ verhält sich wie Multiplikation
+    \item $\cap$ verhält sich wie die Multiplikation
     \item $\emptyset$ verhält sich wie das Nullelement
 \end{itemize}
     \item $\left( A\cup B\right)\cup C=A\cup\left( B\cup C\right)$\\
@@ -217,7 +221,7 @@ Das Kartesische Produkt $A\times B$ der Mengen $A,B$ ist die Menge der geordnete
 \end{definition}
 
 \subsubsection*{Beispiel}
-$\mathbb{Z}\times\mathbb{Z}=\{(a,b):a\in\mathbb{Z},b\in\mathbb{Z}\}$. Falls $\mathbb{Z}$ als ``eindimensionalen'' Gebilde dargestellt wird 
+$\mathbb{Z}\times\mathbb{Z}=\{(a,b):a\in\mathbb{Z},b\in\mathbb{Z}\}$. Falls $\mathbb{Z}$ als ``eindimensionales'' Gebilde dargestellt wird 
 
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
@@ -250,7 +254,7 @@ $\mathbb{Z}\times\mathbb{Z}=\{(a,b):a\in\mathbb{Z},b\in\mathbb{Z}\}$. Falls $\ma
 \end{tikzpicture}
 \end{center}
 
-So wird $\mathbb{Z}\times\mathbb{Z}$ als ``zweidimensionalen'' Gebilde dargestellt 
+So wird $\mathbb{Z}\times\mathbb{Z}$ als ``zweidimensionales'' Gebilde dargestellt 
 
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
@@ -312,7 +316,7 @@ Sei nun $I$ eine beliebige Menge ($I$=Indexmenge) und sei für alle $i\in I$ ein
 \item $\mathop{\bigcup}\limits_{i \in I}{A_i} = \{x\mid \exists i\in I,x\in A_i\}$. Vereinigung besteht aus den Elementen $x$, für welche es ein $i\in I$ gibt, so dass $x$ zu $A_i$ gehört.
 \item  $\mathop{\bigcap}\limits_{i \in I}{A_i} = \{x\mid \forall i\in I,x\in A_i\}$. Durchschnitt. 
 \end{itemize}
-Wir definieren das Kartesische Produkt endlich vieler Mengen $A_1 \dots A_n$: \[{A_1} \times {A_n} = \prod\limits_{i = 1}^n {{A_i} = \{ ({x_1} \ldots {x_n})\mid {x_i} \in {A_i}} \} \]
+Wir definieren das Kartesische Produkt endlich vieler Mengen $A_1 \dots A_n$: \[{A_1} \times {A_n} = \prod\limits_{i = 1}^n {{A_i} = \{ ({x_1}, \ldots, {x_n})\mid {x_i} \in {A_i}} \} \]
 
 \subsubsection*{Satz 1.8}
 Seien $A_1 \dots A_k \subset X, \; k\in \N$. Es gilt
@@ -322,17 +326,22 @@ Seien $A_1 \dots A_k \subset X, \; k\in \N$. Es gilt
 \end{enumerate}
 \subsubsection*{Beweis}
 \begin{align*}
-{\left( {\bigcap\limits_{i = 1}^k {{A_i}} } \right)^c} =&\left\{ {x \in X:x\not  \in \bigcap\limits_{i = 1}^k {{A_i}} } \right\} = \left\{ {x \in X\exists i \in \left\{ {1, \ldots ,k} \right\}:x\not  \in {A_i}} \right\}\\
-=&\bigcup\limits_{i = 1}^k {\left\{ {x \in X:x\not  \in {A_i}} \right\}}  = \bigcup\limits_{i = 1}^k {A_i^c}
+{\left( {\bigcap\limits_{i = 1}^k {{A_i}} } \right)^c}
+  =&\left\{x \;| \; {x \in X \wedge x\not  \in \bigcap\limits_{i = 1}^k {{A_i}} } \right\} 
+  = \left\{ x \;| \; {x \in X, \exists i \in \left\{ {1, \ldots ,k} \right\}:x\not  \in {A_i}} \right\}\\
+ =&\bigcup\limits_{i = 1}^k {\left\{ x \;| \; {x \in X \wedge x\not  \in {A_i}} \right\}}   = \bigcup\limits_{i = 1}^k {A_i^c}
 \end{align*}
 und
 \begin{align*}
-{\left( {\bigcup\limits_{i = 1}^k {{A_i}} } \right)^c} =&\left\{ {x \in X:x\not  \in \bigcup\limits_{i = 1}^k {{A_i}} } \right\} = \left\{ {x \in X\forall i \in \left\{ {1, \ldots ,k} \right\}:x\not  \in {A_i}} \right\}\\
-=&\bigcap\limits_{i = 1}^k {\left\{ {x \in X:x\not  \in {A_i}} \right\}}  = \bigcap\limits_{i = 1}^k {A_i^c} 
+{\left( {\bigcup\limits_{i = 1}^k {{A_i}} } \right)^c} 
+=&\left\{x \;| \; {x \in X \wedge x\not  \in \bigcup\limits_{i = 1}^k {{A_i}} } \right\} 
+= \left\{x \;| \; {x \in X, \forall i \in \left\{ {1, \ldots ,k} \right\}:x\not  \in {A_i}} \right\}\\
+=&\bigcap\limits_{i = 1}^k {\left\{ {x \;| \;x \in X \wedge x\not  \in {A_i}} \right\}}  
+= \bigcap\limits_{i = 1}^k {A_i^c} 
 \end{align*}
 \noindent (Siehe Analysis Serie 1, 1. Semester, Aufgabe 2.e)
 \begin{enumerate}[($\ast$)]
-\item Wir haben gesehen dass wir manchmal eine Aussage verneinen müssen. Deshalb müssen wir lernen wie man Aussage mit Quantoren verneinen kann.
+\item Wir haben gesehen, dass wir manchmal eine Aussage verneinen müssen. Deshalb müssen wir lernen wie man Aussagen mit Quantoren verneinen kann.
 \[\neg\left(\forall n:A(n)\right)\Leftrightarrow\left(\exists n:\neg A(n)\right)\]
 \[\neg\left(\exists n:A(n)\right)\Leftrightarrow\left(\forall n:\neg A(n)\right)\]
 \[\neg\left(\forall x\in \R:x^2\geq 0\right)\Leftrightarrow\exists x\in\R:x^2<0\]
@@ -343,10 +352,11 @@ Seien $X,Y$ Mengen.
 \begin{definition}{1.9}
 Eine Funktion oder Abbildung $f:X\to Y$ der Menge $X$ in die Menge $Y$ ist eine Vorschrift (ein Gesetz) die (das) jedem Element $x\in A$ genau ein Element $y=f(x)\in Y$ zuordnet. \\
 
-Es gibt verschiedene wichtige Objekte die in Zusammenhang mit einem Abbildung auftreten 
-\begin{align*}X &= \text{ \emph{Definitionsbereich} oder \emph{Definitionsmenge} (domain)} \\
+Es gibt verschiedene wichtige Objekte die in Zusammenhang mit einer Abbildung auftreten 
+\begin{align*}
+X &= \text{ \emph{Definitionsbereich} oder \emph{Definitionsmenge} (domain)} \\
 Y&= \text{ \emph{Wertebereich} oder \emph{Zielmenge} (range)} \\
-f(x) &=\{f(x)\mid x\in X\}\text{ ist das sog. \emph{Bild} oder die \emph{Bildmenge}} \\
+f(X) &=\{f(x)\mid x\in X\}\text{ ist das sog. \emph{Bild} oder die \emph{Bildmenge}} \\
 f^{-1}(y) &= x\text{ heisst \emph{Urbild} von }y. \end{align*}
 Der \emph{Graph} einer Funktion $f$ ist die Menge aller Paare $(x, f(x))$ wobei $x$ alle Elemente der Menge $X$ durchläuft. Er ist eine Teilmenge von $X \times Y$.
 \[ Gr(f) \defeq \{ (x, f(x)) \mid x \in X\} \]
@@ -587,10 +597,10 @@ dann ist $f$ nicht injektiv, d.h. es gibt $b\in B$ und $a_1,a_2\in A$ mit
 \end{center}
 \centerline{$3=\left| B\right| < 5 = \left| A \right|$}
 
-Mit Abbildungen kann man ``operieren''. Die wichstige Operation ist die Verkettung (oder komposition) zweier Abbildungen. 
+Mit Abbildungen kann man ``operieren''. Die wichstige Operation ist die Verkettung (oder Komposition) zweier Abbildungen. 
 
 \begin{definition}
-\noindent Abbildungen $f:X\to $, $g:Y\to Z$ kann man miteinander ausführen. Dies ergibt eine neue Abbildung \[X\mathop  \to \limits^f Y\mathop  \to \limits^g Z\] \[F:=g\circ f:X\to Z, x\mapsto g\left( f(x)\right)   \]
+\noindent Abbildungen $f:X\to Y$, $g:Y\to Z$ kann man miteinander ausführen. Dies ergibt eine neue Abbildung \[X\mathop  \to \limits^f Y\mathop  \to \limits^g Z\] \[F:=g\circ f:X\to Z, x\mapsto g\left( f(x)\right)   \]
 \[\text{Man sagt}
 \begin{cases}
 g \text{ nach } f \\
@@ -606,7 +616,7 @@ Zwei Funktionen $f$ und $g$ können verkettet werden wenn der Wertebereich der e
 In dieser Notation steht die zuerst angewandte Abbildung rechts. Das bedeutet bei $g\circ f$ wird zuerst die Funktion $f$ angewandt und dann die Funktion $g$. 
 \begin{itemize}
 \item Die Identische Abbildung verhält sich bei der Komposition neutral, für eine Funktion \[f:X\to Y \text{ gilt also}\]
-\[f\circ id_X=f=id_Y \circ Y\] wobei
+\[f\circ id_X=f=id_Y \circ f\] wobei
 \begin{align*}
 id_X:\Romanbar{X}&\to\Romanbar{X} \\
 x&\mapsto x \\
@@ -632,11 +642,11 @@ x &\mapsto x+1
 Sei $f:X\to Y$ eine bijektive Funktion. \\
 
 
-Die inverse Funktion $g:Y\to X$, einer bijektiven Funktion $f:X\to Y$ ist die Funktion, die jedem Element $y$ der Zielmenge seien eindeutig bestimmtes Urbildelement zuweist. (bei bijektiven Funktionen hat die Urbildmenge jedes Elements $y$ genau ein Element). \\
+Die inverse Funktion $g:Y\to X$ einer bijektiven Funktion $f:X\to Y$ ist die Funktion, die jedem Element $y$ der Zielmenge dessen eindeutig bestimmtes Urbildelement zuweist. (bei bijektiven Funktionen hat die Urbildmenge jedes Elements $y$ genau ein Element). \\
 
  $g(y):=x$, eindeutig definiertes $ x\in\Romanbar{X}$, mit $f(x)=y$. Dann ist definitionsgemäss $(g\circ f)(x)=x$, d.h. $g\circ f:id_{\Romanbar{X}}$. Die eindeutig definierte Abbildung $g$ wird (auch) mit $f^{-1}$ bezeichnet und Umkehrfunktion von $f$ genannt.\\
 
-Für $f\circ f^{-1}:$ Sei $y\in Y$ und sei $x$ mit $f(x)=y$. Dann ist $\left( f\circ f^{-1}\right)(y)=f\left(f^{-1}(y)\right)=f(x)=y$ \[f\circ f^{-1}=id_Y\]
+Für $f\circ f^{-1}:$ Sei $y\in Y$ und $x$ erfülle $f(x)=y$. Dann ist $\left( f\circ f^{-1}\right)(y)=f\left(f^{-1}(y)\right)=f(x)=y$ \[f\circ f^{-1}=id_Y\]
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
