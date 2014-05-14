@@ -127,13 +127,32 @@ Falls $l_{-}(x_{0}) < l_{+}(x_{0})$ sei $(t_{n})_{n \geq 1}$ wie folgt definiert
 Dann gilt $\lim{t_{n}} = x_{0}$. Aber $f(t_{2n+1})-f(t_{n}) \geq l_{+}(x_{0})-l_{+}(x_{0}) >0$, woraus folgt dest \todo{dest? p 135 bottom} $(f(t_{n}))_{n\geq1}$ nicht konvergent. \\
 Falls $l_{-}(x_{0})=l_{+}(x_{0})$ folgt die Stetigkeit sofort. 
 
+\subsection*{Satz 4.3}
+Sei $f:(a,b)\to\R$ monoton wachsend. Dann ist die Menge der Unstetigkeitspunkte von $f$ entweder endlich oder abzählbar.
+\subsection*{Beweis}
+Sei $U(f) = \{x\in(a,b):f \text{ ist nicht stetig an x}\}$. Dann ist $\forall x\in U(f), \quad l_{-}(x) < l_{+}(x)$ und wir wählen ein \todo{unreadable.. p136 mid}$g(x)\in ??n(l_{-}(x),l_{+}(x))$ .
+Falls $x_{1}<x_{2}$ in $U(f)$ folgt $l_{+}(x_{1})<l_{-}(x_{2})$ und somit $g(x_{1})<g(x_{2})$. Damit ist $g:U(f)\to ??$ \todo{same unreadable character} injektiv. 
 
+\noindent Stetigkeit verhält \todo{verträgt?} sich gut mit den üblichen Operationen auf Funktionen.
 
+\subsection*{Satz 4.4}
+Seien $f,g:\Omega \to \R^{n}$ und $x_{0}\in\Omega$. Falls $f$ und $g$ in $x_{0}$ stetig sind, so sind es auch $f+g$ und $\alpha f, \; \alpha \in \R$.
 
+\subsection*{Korollar 4.5}
+Falls $f,g$ auf $\Omega$ stetig sind, so sind es $f+g$ und $\alpha f$.
+ 
+\begin{definition}{4.6}
+\[ C\,(\,\Omega\, , \R\,) \] bezeichnet die Menge der stetigen Abbildungen $f: \Omega\to\R$. Nach Korollar 4.5 ist es ein Vektorraum.
+\end{definition}
 
+\subsection*{Satz 4.7}
+Seien $f:\Omega\to\R^{n}, \Omega \subset \R^{d}$ und $g:\Gamma \to \R^{m}$ mit $f(\Omega)\subset\Gamma$ und ${x_{0}\in\Omega}, {y_{0}=f(x_{0})\subset\Gamma}$. Falls $f$ in $x_{0}$ und $g$ in $y_{0}$ stetig sind, folgt, dass $g\circ f:\Omega\to\R^{m}$ in $x_{0}$ stetig ist.
 
+\subsection*{Beweis}
+Sei $(t_{n})_{n\geq1}$ in $\Omega$ mit $\lim{t_{n}} = x_{0}$. Da $f$ stetig ist, $\lim{f(t_{n})} = f(x_{0}) = y_{0}$, und aus der Stetigkeit von $g$ folgt, dass \[ \lim_{n\to\infty}{g(f(t_{n}))} = g(y_{0}) = (g \circ f)(x_{0}) \]
 
-
-
+\subsection*{Korollar 4.8}
+Falls $f:\Omega \to \R^{d}, f(\Omega) \subset \Gamma$ und $g:\Gamma \to \R^{m}$, auf $\Omega$ bzw auf $\Gamma$ stetig sind, so folgt, dass $g\circ f:\Omega\to\R^{m}$ auf $\Omega$ stetig ist.  
+\section{Stetige Funktionen}
 
 
