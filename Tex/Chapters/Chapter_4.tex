@@ -146,7 +146,7 @@ Falls $f,g$ auf $\Omega$ stetig sind, so sind es $f+g$ und $\alpha f$.
 \end{definition}
 
 \subsection*{Satz 4.7}
-Seien $f:\Omega\to\R^{n}, \Omega \subset \R^{d}$ und $g:\Gamma \to \R^{m}$ mit $f(\Omega)\subset\Gamma$ und ${x_{0}\in\Omega}, {y_{0}=f(x_{0})\subset\Gamma}$. Falls $f$ in $x_{0}$ und $g$ in $y_{0}$ stetig sind, folgt, dass $g\circ f:\Omega\to\R^{m}$ in $x_{0}$ stetig ist.
+Seien $f:\Omega\to\R^{n}, \Omega \subset \R^{d}$ und $g:\Gamma \to \R^{n}$ mit $f(\Omega)\subset\Gamma$ und ${x_{0}\in\Omega}, {y_{0}=f(x_{0})\subset\Gamma}$. Falls $f$ in $x_{0}$ und $g$ in $y_{0}$ stetig sind, folgt, dass $g\circ f:\Omega\to\R^{n}$ in $x_{0}$ stetig ist.
 
 \subsection*{Beweis}
 Sei $(t_{n})_{n\geq1}$ in $\Omega$ mit $\lim{t_{n}} = x_{0}$. Da $f$ stetig ist, $\lim{f(t_{n})} = f(x_{0}) = y_{0}$, und aus der Stetigkeit von $g$ folgt, dass \[ \lim_{n\to\infty}{g(f(t_{n}))} = g(y_{0}) = (g \circ f)(x_{0}) \]
@@ -154,5 +154,9 @@ Sei $(t_{n})_{n\geq1}$ in $\Omega$ mit $\lim{t_{n}} = x_{0}$. Da $f$ stetig ist,
 \subsection*{Korollar 4.8}
 Falls $f:\Omega \to \R^{d}, f(\Omega) \subset \Gamma$ und $g:\Gamma \to \R^{m}$, auf $\Omega$ bzw auf $\Gamma$ stetig sind, so folgt, dass $g\circ f:\Omega\to\R^{m}$ auf $\Omega$ stetig ist.  
 \section{Stetige Funktionen}
+In diesem Abschnitt behandeln wir die erste der fundamentalen Eigenschaften von stetigen Funktionen, nämlich das eine auf einem endlichen Intervall $[a,b]$ (Endpunkte eingeschlossen) stetige Funktion immer ein Max und Min besitzt. Dies veralgemeinern wir dann auf Abbildungen von $\Omega\subseteq\R^{d}$ nach $\R{n}$ wobei $\Omega$ eine spezielle Eigenschaft haben muss (Kompaktheit).
 
+\subsection*{Satz 4.9}
+Seien $-\infty < a \leq b < \infty$ und $f:[a,b] \to \R$ stetig. \\
+\noindent Dann ist $f([a,b])$ in $\R$ beschränkt und es gibt $c_{-}, c_{+} \in [a,b]$ mit \begin{align*} f(c_{+}) &= \text{sup } \{ f(x):x\in[a,b]\} \\ f(c_{-}) &= \text{inf }\{ f(x):x\in[a,b]\} \end{align*} d.h. Supremum und Infimum werden angenommen.
 
