@@ -267,5 +267,119 @@ Sei $U,V\subset\R^n$ offen, $\Phi:U\to V$ bijektiv, stetig diff., $\det d\Phi\le
 \begin{enumerate}
 \item Berechne $\iiint\limits_V d\mu$, wobei \[\mathop {\text{V}}\limits_{\begin{array}{*{20}{c}} \downarrow \\{{\text{Kugeloktanten}}}\end{array}} {\text{ = }}\left\{ {\left. {{{\left( {x,y,z} \right)}^t}} \right|{x^2} + {y^2} + {z^2} \le 1,x,y,z \ge WHAT} \right\}\] \todo{chopped content, page 233 middle to bottom}Es ist einfacher in Kugelkoordinaten zu berechnen
 \[\Phi \left( {r,\theta ,\psi } \right) = \left( {\begin{array}{*{20}{c}}{r\cos \theta \cos \psi }\\{r\sin \theta \cos \psi }\\{r\sin \psi }\end{array}} \right)\]
-%Page 234, very top
+Die Transformation $\Phi$ ist auf ganz $\R^3$ definiert und mit \[U = \left[ {0,1} \right] \times \left[ {0,\frac{\pi }{2}} \right] \times \left[ {0,\frac{\pi }{2}} \right]\]
+gilt 
+\begin{align*}
+\Phi\left( U\right) =&V\\
+\det\left( d\Phi\right)=&r^2\cos\psi\\
+\text{vol}\left(V\right)=&\int\limits_{V} d\mu\left( \vec x\right)=\int\limits_0^1\int\limits_0^{\frac{\pi}{2}}\int\limits_0^{\frac{\pi}{2}} r^2\cos\psi d\psi d\theta dr=\frac{\pi}{2}
+\end{align*}
+\item Berechne das Integral 
+\[ \iint\limits_D x dx dy\text{ wobei $D=$Viertelkreis}\]
+\begin{align*}
+\int\limits_{x = 0}^1 {\int\limits_{y = 0}^{\sqrt {1 - {x^2}} } x } dydx =&\int\limits_0^1 {\left( {\left. {xu} \right|_0^{\sqrt {1 - {x^2}} }} \right)dx} \\
+=&\int\limits_0^1 x\sqrt{1-x^2}dx\\
+=&\int\limits_0^1 {\frac{{{u^{{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-\nulldelimiterspace} 2}}}}}{2}} du =  - \frac{1}{2} \cdot \left. {\frac{{{u^{{3 \mathord{\left/ {\vphantom {3 2}} \right. \kern-\nulldelimiterspace} 2}}}}}{{{3 \mathord{\left/ {\vphantom {3 2}} \right. \kern-\nulldelimiterspace} 2}}}} \right|_0^1\\
+=&-\frac{1}{3}
+\end{align*}
+mit $1-x^2=u$, $-2xdx=du$\\
+\underline{Oder:}\\
+\[ \iint\limits_D x dx dy \hspace{10mm}\left( {\begin{array}{*{20}{c}}x\\y\end{array}} \right) = \mathop {\left( {\begin{array}{*{20}{c}}{r\cos \theta }\\{r\sin \theta }\end{array}} \right)}\limits_{dxdy = rdrd\theta } \]
+
+\begin{align*}
+\int\limits_0^{\pi /2} {\int\limits_0^1 {{r^2}\cos \theta drd\theta } }  =&\int\limits_0^{\pi /2} {\cos \theta \left( {\left. {\frac{{{r^3}}}{3}} \right|_0^1} \right)d\theta } \\
+ =&\frac{1}{3}\int\limits_0^{\pi /2} {\cos \theta d\theta }  = \left. { - \frac{1}{3}\sin \theta } \right|_0^{\pi /2} =  - \frac{1}{3}
+\end{align*}
+\item Die Substitutionsregel in mehreren variablen ist manchmal nützlich auch zur Berechnung von Integralen in einer Variable. Zunächst möchten wir das Integral \[ I=\int\limits_0^\infty e^{-x^2} dx\] berechnen. Wir Berechnen $I$ durch Berechnung eines Flächenintegrals wie folgt. Es gilt 
+\begin{align*}{I^2} =&{\left( {\int\limits_0^\infty  {{e^{ - {x^2}}}dx} } \right)^2}\\ =&\mathop {\lim }\limits_{R \to \infty } \left( {\int\limits_0^R {{e^{ - {x^2}}}dx} } \right)\left( {\int\limits_0^R {{e^{ - {y^2}}}dy} } \right)\\ =&\mathop {\lim }\limits_{R \to \infty } {I_R}
+\end{align*}
+für \[{I_R} = \int\limits_{\left[ {0,R} \right] \times \left[ {0,R} \right]} {{e^{ - \left( {{x^2} + {y^2}} \right)}}dxdy} \]
+Bezeichnet $K_\rho$ den Viertelkreis im 1. Quadrant mit radius $r$, so gilt
+\[\int\limits_{{K_R}} {{e^{ - \left( {{x^2} + {y^2}} \right)}}dxdy \le {I_R}\int\limits_{{K_{\sqrt 2 R}}} {{e^{ - \left( {{x^2} + {y^2}} \right)}}dxdy} } \]
+\missingfigure{Page 236 bottom}
+Die Integrale über $K_\rho$ berechnet man nun über Polarkoordinaten 
+\[\int\limits_{{K_\rho }} {{e^{ - \left( {{x^2} + {y^2}} \right)}}dxdy}  = \int\limits_0^\rho  {\int\limits_0^{\pi /2} {{e^{ - {r^2}}}rdrd\theta } }  = \frac{\pi }{4}\left( {1 - {e^{{\rho ^2}}}} \right)\]
+und somit gelten die Abschätzungen 
+\[\frac{\pi }{4}\left( {1 - {e^{ - {R^2}}}} \right) \le {I_R} \le \frac{\pi }{4}\left( {1 - {e^{ - 2{R^2}}}} \right)\]
+und gilt schliesslich
+\[\mathop {\lim }\limits_{R \to \infty } {I_R} = \frac{\pi }{4}\]
+d.h. \[{I^2} = \mathop {\lim }\limits_{R \to \infty } {I_R} = \frac{\pi }{4}\]
+d.h. \[I = \frac{{\sqrt \pi  }}{2} = \int\limits_0^\infty  {{e^{ - {x^2}}}dx} \]
+\end{enumerate}
+
+\section{Der Satz von Green}
+Wir errinern uns: Sei $\Omega\subset\R^2$, ist $V:\Omega\to\R^2$ ein $C'-$Vektorfeld mit Potential $f$, so folgt 
+\[\rot\left( v(x)\right)=\rot\left( \nabla f(x)\right)=0\hspace{10mm}\forall x\in\R^2 \]
+wobei 
+\[\rot\left( v\left( x,y\right)\right)=\frac{\partial v_2}{\partial x}\left( x,y\right) -\frac{\partial v_1}{\partial y}\left( x,y\right)\]
+so ist
+\[\rot v=\frac{\partial v_2}{\partial x} -\frac{\partial v_1}{\partial y}=0 \]
+in Zwei Dimensionen eine notwendige Bedingung für die Existenz eines Potential.\\
+
+Die Bedingung $\rot(v)=0$ ist sogar eine hinreichende Bedingung, falls das gebiet $\Omega$ einfach zusammenhängend ist. In diesem fall 
+\[\oint\limits_\gamma  v  = \int\limits_\gamma  {\nabla fds = f\left( {\gamma \left( 1 \right)} \right) - } f\left( {\gamma \left( 0 \right)} \right) = 0\] 
+für alle geschlossene Weg $\gamma$ und für eine nichtgeschlossene Weg $\gamma$
+\missingfigure{Add picture on 238 bottom and 239 top side by side}
+\[\int\limits_\gamma  v  = \int\limits_\gamma  {\nabla fds = f\left( {\gamma \left( 1 \right)} \right) - } f\left( {\gamma \left( 0 \right)} \right)\]
+d.h. Falls der Vektorfeld ein Gradientenfeld ist, ist das Integral $\int\limits_\gamma  v $ eine Funktion der Endpunkte ist. \\
+
+Anders gesagt, es gibt Fälle wobei ein Wegintegral (d.h. ein Integral auf einem 1. Dimensional Objekt mit hilfe eine 0. Dimensionalen Menge) berechnet werden kann
+
+\subsubsection*{Bemerkung}
+Auch für funktionen einer Variable: Falls $F'=f$ ist, dann gilt \[\int\limits_a^b {f(x)dx}  = F\left( b \right) - F\left( a \right)\] Hauptsatz der Integral rechnung einer Variable
+
+\subsubsection*{Frage}
+Gibt es auch Fälle wobei ein $2-$Dimensionale Integral mit hilfe einer $1-$Dimensionale Menge berechnet werden kann?\\
+
+\noindent Die Antwort ist genau der Inhalt das Satz von Green
+
+\subsubsection*{Satz 9.19 (Green)}
+Sei $\Omega \in\R^2$ ein Gebiet dessen rand $\partial\Omega$ ein stückweise $C'$ Parameterdarstellung hat. Sei $U$ eine offene Menge mit $\Omega\subset U$ und sei 
+\[ f=\frac{\partial Q}{\partial x}\left( x,y\right) -\frac{\partial P}{\partial y}\left( x,y\right) \]
+wobei $P,Q\in C'\left( U\right)$. Dann gilt
+\[ \iint\limits_\Omega \left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)d\mu = \int\limits_{\partial \Omega } {Pdx + Qdy} \]
+wobei $\partial \Omega$ so parametrisiert wird dass $\Omega$ zur linkes des Randes liegt. \\
+
+\noindent\underline{Anders gesagt:}\\
+
+\noindent Sei $V=\left( P,Q\right)$ ein $C'$ Vektorfeld auf dem Gebiet $U$. Sei $\Omega\subset U$ ein Gebiet dessen rand $\partial\Omega$ ein Stückweise $C'$ Parameterdarstellung hat. Die parametrisierung von $\Omega$ sei so gewählt dass $\Omega$ stets links zur Durchlaufrichtung liegt. Dann gilt
+\[\int\limits_{\partial \Omega } {Vds}  = \int\limits_{\partial \Omega } {Pdx + Qdy}  = \iint\limits_\Omega \rot\left( V \right)d\mu \]
+Bevor wir die Idee des Beweis geben, geben wir einige Beispiele und Anwendungen
+
+\subsubsection*{Beispiel 9.20}
+\begin{enumerate}
+\item Wir betrachten das Vektorfeld \[ F\left( x,y\right) = \left( y+3x,y-2x\right) \]
+und wir möchten dieses Kraftfeldes entlang der im gegenuhrzeigersinn durchlauferen Ellipse $\gamma: 4x^2+y^2=4$. Die Arbeit ist
+\begin{align*}
+\int\limits_\gamma  {Fd\vec s}  =&\int\limits_\gamma  {Pdx + Qdy} \\
+ =&\int\limits_\gamma  {\left( {y + 3x} \right)dx + \left( {2y - x} \right)dy} \\
+{\text{Green }} \to {\text{ }} =&\iint\limits_\Omega\frac{{\partial \left( {2y - x} \right)}}{{\partial x}} - \frac{{\partial \left( {y + 3x} \right)}}{{\partial y}}\\
+=&\iint -1-1d\mu=-2\iint\limits_\Omega d\mu\\
+=&-2\cdot\text{(Flächeninhalt von Ellipse $4x^2+y^2=4$)}\\
+\end{align*}
+\todo[inline]{Can't understand the result, page 242 top}
+\missingfigure{Page 242, top}
+\item Berechne das Wegintegral \[\int\limits_{\partial \Omega } {\left( {5 - xy - {y^2}} \right)dx - \left( {2xy - {x^2}} \right)dy} \] wobei $\Omega$ das Quadrat mit Eckpunkten $(0,0),(0,1),(1,1),(1,0)$ im gegenuhrzeigersinn ist 
+\begin{align*}
+&\int\limits_{\partial A} {\left( {5 - xy - {y^2}} \right)dx - \left( {2xy - {x^2}} \right)dy} \\ 
+=&\iint\limits_\Omega\left[ {\frac{\partial }{{\partial x}}\left( {2xy - {x^2}} \right) - \frac{\partial }{{\partial y}}\left( {5 - xy - {y^2}} \right)} \right]d\mu \\
+=&\iint\limits_\Omega\left(  2y-2x\right) - \left( -x-2y\right) d\mu\\
+=&3\iint\limits_\Omega d\mu=\int\limits_0^1\int\limits_0^1 x dx dy=\frac{3}{2}
+\end{align*}
+\item Mittels des Satzes von Green können wir den Flächeninhalt eines Gebiets mit hilfe eines Wegintegrals berechnen. Und zwar 
+\[ \text{Flächeninhalt$\left( \Omega\right)$}=\iint\limits_\Omega d\mu=\iint\left( \frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) d\mu\]
+wobei $P$ und $Q$ funktionen mit $\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1$ sind. Zum Beispiel können wir 
+\begin{align*}
+Q\left( x,y\right)=&\frac{1}{2}x\\
+P\left( x,y\right)=&-\frac{1}{2}x
+\end{align*}
+nehmen. Daraus folgt dass \[ F\left( \Omega\right) = \frac{1}{2}\int\limits_{\partial\Omega}-y dx+xdy\]
+Als ein Beispiel können wir verifizieren dass der Flächeninhalt des Kreis $x^2+y^2\leq 4$ gleich $4\pi$ ist. \\
+
+Betrachte die Parameterdarstellung $\gamma\left(\theta\right)=\left( 2\cos\theta,2\sin\theta\right)$, $\theta\in\lbrack 0,2\pi\rbrack$ des Rands $\partial\Omega$
+\begin{align*}
+F\left(\Omega\right)=&\iint\limits_\Omega d\mu = \frac{1}{2}\int\limits_{\partial\Omega} -ydx+xdy\\
+=&\frac{1}{2}\int\limits_0^{2\pi}\left( -2\sin\theta\right)\left( -2\sin\theta\right) + \left( 2\cos\theta\right)\left( 2\cos\theta\right) d\theta\\
+=&\frac{1}{2}\int\limits_0^{2\pi}4\left( \sin^2\theta+\cos^2\theta\right)d\theta=2\cdot 2\pi=4\pi
+\end{align*}
 \end{enumerate}
