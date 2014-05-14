@@ -80,7 +80,7 @@ Sei $x\in\R\backslash\mathbb{Q}$ fest mit $(x_{k})\in\mathbb{Q}, x_{k}\to x$. Da
 (Zu $x\in\R\backslash\mathbb{Q}$, sei $x_{k}$ die an der k-ten Nachkommastelle abgebrochene Dezimaldarstellung von $x$. Dann gilt $x_{k} \in \mathbb{Q}\; \forall k \in \N$ und $x_{k}\to x_{1}$.)
 \item Sei $f: \begin{cases} x &x < 1 \\x &x>1 \end{cases}$ \\
 
-\todo{!! Picture missing p131week8sem1} $f$ ist in $x=1$ nicht stetig, weil $f$ an der Stelle $x=1$ nicht definiert ist. In diesem Beispiel ist die Funktion $f$ nicht stetig, aber sie ist eigentlich eine ``gute'' \todo{Does that really say gute?}Funktion.
+\missingfigure{p131, week8 sem1} $f$ ist in $x=1$ nicht stetig, weil $f$ an der Stelle $x=1$ nicht definiert ist. In diesem Beispiel ist die Funktion $f$ nicht stetig, aber sie ist eigentlich eine ``gute'' \todo{Does that really say gute?}Funktion.
 
 \todo{no ozlem number...}
 \end{itemize}
@@ -96,24 +96,36 @@ Die durch $f(x_{0})=a$ ergänzte Funktion $f$ ist offenbar stetig an der Stelle 
 %Random ozlem enumeration ignored for consistency
 \item Diese stückweise konstante Funktion ist stetig an jeder Stelle $x_{0} \neq 0$. Sie ist jedoch für $a\neq b$ an der Stelle $x_{0}=0$ nicht stetig ergänzbar. (Struwe Beispiel 4.1.3 (vii))
 \begin{align*}f:\R^{x}&\to\R \\ f(x)&=\begin{cases}a &\text{falls } x<0 \\ b &\text{falls } x>0\end{cases} \end{align*}
-\todo{!! Picture missing p132week8Sem1}
+\missingfigure{p132, week8 Sem1}
 \item Sei $f:(a,b)\to\R$ monoton wachsend, d.h. $\forall x,y\in(a,b)$ mit $x\leq y$ folgt $f(x)\leq f(y)$. Sei ausserdem $x_{0}\in (a,b)$. Dann existieren die \emph{links- und rechtsseitigen Grenzwerte} 
 \[ f(x_{0}^{+}) \defeq \lim_{\substack{x\to x_{0} \\ x > x_{0} \\ x \downarrow x_{0}}}f(x), \quad\quad f(x_{0}^{-})\defeq \lim_{\substack{x\to x_{0} \\ x < x_{0} \\ x \uparrow x_{0}}}f(x) \]
 und $f$ ist stetig an der Stelle $x_{0}$ genau dann, wenn $f(x_{0}^{-})=f(x_{0}^{+})=f(x_{0})$.
 \end{itemize}
 \subsubsection*{Beweis}
-Wir behaupten, dass für jede Folge $(y_{n})_{n\geq 1}$ mit $\{y_{n}:n\geq 1\} \subset (a,x_{0})$ und $\lim{y_{n}} = x_{0}$ die Folge $(f(y_{n}))_{n\geq 1}$ kovergent und der linksseitige Limes $l_{-}(x_{0})$ unabhängig von der Wahl der Folge ist. \todo{!! Missing Picture p133week8sem1} \\
+Wir behaupten, dass für jede Folge $(y_{n})_{n\geq 1}$ mit $\{y_{n}:n\geq 1\} \subset (a,x_{0})$ und $\lim{y_{n}} = x_{0}$ die Folge $(f(y_{n}))_{n\geq 1}$ kovergent und der linksseitige Limes $l_{-}(x_{0})$ unabhängig von der Wahl der Folge ist.
+\missingfigure{p133, week8 sem1} \\
 
 \noindent Wir betrachten zuächst die ``spezielle'' Folge $x_{n}=(x_{0}-\frac{1}{n})_{n\geq r}$. Hier ist $r$ so gewählt, dass $x_{0}-\frac{1}{r}\geq a$. \\
-Dann ist $(f(x_{0}-\frac{1}{n}))_{n\geq r}$ monoton wachsend ($x_{0}-\frac{1}{n+1} > x_{0}-\frac{1}{n}$ und $f$ monoton wachsend) und $(f(x_{0}-\frac{1}{n}))_{n\geq r}$ beschränkt ($f(a)<[...]<f(b)$\todo{content missing in source material p134week8sem1}).
+Dann ist $(f(x_{0}-\frac{1}{n}))_{n\geq r}$ monoton wachsend ($x_{0}-\frac{1}{n+1} > x_{0}-\frac{1}{n}$ und $f$ monoton wachsend) und $(f(x_{0}-\frac{1}{n}))_{n\geq r}$ beschränkt ($f(a)<[...]<f(b)$\todo{missing in source material p134week8sem1}).
 \[\text{Sei }l_{-}\defeq\lim_{n\to\infty}{f(x_{0}-\frac{1}{n})}\]
-\noindent Wir möchten zeigen, dass für jede $(y_{n})\subset (a, x_{0})$ mit $\lim{y_{n}}=x_{0}$
+\noindent Wir möchten zeigen, dass für jede $(y_{n})\subset (a, x_{0})$ mit $\lim{y_{n}}=x_{0}$ $\lim{f(y_{n})}$ existiert und $\lim{f(y_{n})}=l_{-}$. \todo{$=l_{-}$ oder $=l$.?}
 
+Da es für jedes $x<x_{0}$ ein $n$ gibt, mit $x\leq x_{0}-\frac{1}{n}$ folgt \[f(x) \leq f(x_{0}-\frac{1}{n} \leq l_{-}\]
+Sei nun $(y_{n})_{n\geq 1}$ beliebig in \todo{unreadable p134 mid}$(?a?, x_{0})$ mit $\lim{y_{n}}=x_{0}$. Sei $\varepsilon > 0$, ($y_{n} < x_{0}$) und $n_{0}(\varepsilon)$ mit \[l_{-}-\varepsilon < f(x_{0}-\frac{1}{n})\leq l_{-} \quad \forall n>n_{0}(\varepsilon) \]
+Insbesondere
+\[l_{-} - \varepsilon < f(x_{0}-\frac{1}{n_{0}(\varepsilon)}) \leq l_{-} \]
+Sei jetzt $n_{1}(\varepsilon)=n_{1}(n_{0}(\varepsilon))>0$ so dass \[ x_{n_{0}(\varepsilon)} = x_{0} - \frac{1}{n_{0}(\varepsilon)} < y_{n} < x_{0} = \lim_{n\to\infty}{x_{n}} \quad \forall n \geq n_{1}(\varepsilon)\]
+\[ \left((y_{n})<(a,x_{0}), \lim{y_{n}}=x_{0}\right)\]
+Da $f$ monoton ist, folgt \[ l_{-} - \varepsilon < f(x_{0}-\frac{1}{n_{0}(\varepsilon)}) \leq f(y_{n}) \leq l_{-} = \lim{f(x_{n})} \]
+Insbesondere $\lim{f(y_{n})} = l_{-}$. \\
 
+\noindent Der Beweis für $L_{+}$ verläuft ganz analog. \\
 
-
-
-
+\noindent Nun zur Stetigkeit: Es gilt immer \[ l_{-}(x_{0})\leq f(x_{0}) \leq l_{+}(x_{0}) \]
+Falls $l_{-}(x_{0}) < l_{+}(x_{0})$ sei $(t_{n})_{n \geq 1}$ wie folgt definiert:
+\[ t_{n}=\begin{cases}x_{0}-\frac{1}{n} &n\text{ gerade} \\ x_{0}+\frac{1}{n} &n\text{ ungerade} \end{cases} \]
+Dann gilt $\lim{t_{n}} = x_{0}$. Aber $f(t_{2n+1})-f(t_{n}) \geq l_{+}(x_{0})-l_{+}(x_{0}) >0$, woraus folgt dest \todo{dest? p 135 bottom} $(f(t_{n}))_{n\geq1}$ nicht konvergent. \\
+Falls $l_{-}(x_{0})=l_{+}(x_{0})$ folgt die Stetigkeit sofort. 
 
 
 
