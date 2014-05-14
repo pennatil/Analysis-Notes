@@ -1291,16 +1291,51 @@ Die $l\times n$ matrix $df\left( x_0\right) = {\left( \frac{\partial f^i}{\parti
 \end{enumerate}
 
 \subsubsection*{Beispiel 8.59}
-\[f:\R^2\to\R\]
+
+\begin{enumerate}
+\item \[f:\R^2\to\R\]
 \[f\left( {x,y} \right) = \left( {\begin{array}{*{20}{c}}
 {{x^2} - {y^2}}\\
 {2xy}
 \end{array}} \right)\]
-\[f\in C^\infty\left( \R^2\R^2\right) \text{ mit } df\left( {x,y} \right) = \left( {\begin{array}{*{20}{c}}
+\[f\in C^\infty\left( \R^2:\R^2\right) \text{ mit } df\left( {x,y} \right) = \left( {\begin{array}{*{20}{c}}
 {2x}&{ - 2y}\\
 {2y}&{2x}
-\end{array}} \right) \]\todo[inline]{Can't understant the symbol between the $\R^2$, page 205 middle to top}
-Es gelten die üblichen Differentiationsregeln
+\end{array}} \right) \]
+\item Polarkoordinaten
+\begin{align*}
+f&:\lbrack 0,\infty)\times\lbrack 0,2\pi\rbrack\to\R^2\\
+\left( {\begin{array}{*{20}{c}}r\\\theta \end{array}} \right) &\to \left( {\begin{array}{*{20}{c}}x\\y\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{r\cos \theta }\\{r\sin \theta }\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{f'}\\{{f^2}}\end{array}} \right)\\
+df'\left( r,\theta\right)&=\left( \cos\theta, -r\sin\theta\right)\\
+df^2\left( r,\theta\right)&=\left( \sin\theta, r\cos\theta\right)\\
+df\left( {r,\theta } \right) &= \left( {\begin{array}{*{20}{c}}{\cos \theta }&{ - r\sin \theta }\\{\sin \theta }&{r\cos \theta }\end{array}} \right) \leftarrow {\text{Jacobi Matrix}}\\
+\det\left( df\left( r,\theta\right)\right)&=r\left( \cos^2\theta + \sin^2\theta\right)=r
+\end{align*}
+\missingfigure{Page 205.1 bottom}
+\item Zylinderkoordinaten
+\missingfigure{Page 205.2, top. Add following text to right column:\\
+Die $x,y$ Anteile werde in Polarkoordinaten transformiert und die $z$ koordinate beibehalten}
+\begin{align*}
+f:&\lbrack 0,\infty\rbrack\to\lbrack 0,2\pi\rbrack\times\R\to\R^2\\
+\left( {\begin{array}{*{20}{c}}r\\\theta \\z\end{array}} \right) \to& \left( {\begin{array}{*{20}{c}}x\\y\\z\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{r\cos \theta }\\{r\sin \theta }\\z\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{f'}\\{{f^2}}\\{{f^3}}\end{array}} \right)\\
+df(r,\theta ,z) =&\left[ {\begin{array}{*{20}{c}}{\cos \theta }&{ - r\sin \theta }&0\\{\sin \theta }&{r\cos \theta }&0\\0&0&1\end{array}} \right] \leftarrow {\text{Jacobi Matrix}}\\
+\det \left( {df(r,\theta ,z)} \right) =&r\left( {{{\cos }^2}\theta  + si{n^2}\theta } \right) = r
+\end{align*}
+\centerline{(Rotationssymmetrie bezüglich $z$ Achse)}
+\item Kugelkoordinaten
+\missingfigure{Page 205.3}
+\begin{align*}
+f:&\lbrack 0,\infty)\times\lbrack 0,2\pi\rbrack\times\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\to\R^3\\
+f\left( {\begin{array}{*{20}{c}}r\\\theta \\\psi \end{array}} \right) =&\left( {\begin{array}{*{20}{c}}{r\cos \theta \cos \psi }\\{r\sin \theta \cos \psi }\\{r\sin \psi }\end{array}} \right) = r\left( {\begin{array}{*{20}{c}}{\cos \theta \cos \psi }\\{\sin \theta \cos \psi }\\{\sin \psi }\end{array}} \right)\\
+df\left( {r,\theta ,\psi } \right) =&\left( {\begin{array}{*{20}{c}}{\cos \theta \cos \psi }&{ - r\sin \theta \cos \psi }&{ - r\cos \theta \sin \psi }\\{\sin \theta \cos \psi }&{r\cos \theta \cos \psi }&{ - r\sin \theta {\mathop{\rm sin?}\nolimits} }\\{\sin \psi }&0&{r\cos \psi }
+\end{array}} \right)\\
+\det\left( df\right)=&r^2cos\psi
+\end{align*}
+\todo{Check question mark, chopped content, page 205.3}
+\missingfigure{Page 205.3 bottom}
+\end{enumerate}
+
+\noindent Es gelten die üblichen Differentiationsregeln
 
 \subsubsection*{Satz 8.60}
 Sei $f,g:\Omega\subset\R^n\to\R^l$ an der Stelle $x_0\in\Omega$ differenzierbar und $\alpha\in\R$. dann sin die Funktionen $\alpha f$ und $f+g$ sowie das Skalarprodukt von $f$ und $g$ an der Stelle $x_0$ differenzierbar und 
