@@ -1,12 +1,12 @@
-\chapter{Integration in $\mathbb{R}^{\lowercase{n}}$}
+\chapter{Integration in $\R^{\lowercase{n}}$}
 Im Eindimensionalen hatten wir mit dem Integral \[\int\limits_a^b f(x)dx\] den Flächeninhalt unter dem Graphen von $f$ berechnet. Wir suchen nach eine Verallgemeinerung mit der \todo{can't understand word, page 207 middle} z.B. Volumen unter dem Graphen einer Funktion von zwei Variablen berechnen kann
 \missingfigure{page 207, middle}
 \underline{Erinnerung:} Bestimmtes Riemann-Integral einen Funktion $f(x)$ über einem Interval $\lbrack a,b\rbrack:$ 
 \[I=\int\limits_a^b f(x)dx\] Das Integral $I$ war als Grenzwert von Riemannscher Ober und Untersumme definiert (falls diese Grenzwert jeweils existieren und übereinstimmten).\\
 
-Konstruktionsprinzip für Bereichsintegrale ist Analog. Aber die Definitionsbereich $D$ ist komplizierter. Wir betrachten zunächst den Fall zweier Variabler, $n=2$, und einen Definitionsbereich $D\subset\mathbb{R}^2$ der Form
-\[D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack\subset\mathbb{R}^2\]
-d.h. $D$ ist ein kompakter Quader (Rechteck). Sei $f:D\rightarrow\mathbb{R}$ eine beschränkte Funktion.
+Konstruktionsprinzip für Bereichsintegrale ist Analog. Aber die Definitionsbereich $D$ ist komplizierter. Wir betrachten zunächst den Fall zweier Variabler, $n=2$, und einen Definitionsbereich $D\subset\R^2$ der Form
+\[D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack\subset\R^2\]
+d.h. $D$ ist ein kompakter Quader (Rechteck). Sei $f:D\to\R$ eine beschränkte Funktion.
 
 \begin{definition}{9.1}
 Mann nennt $Z=\left\{ \left( x_0,x_1,\dots,x_n\right), \left( y_0,y_1,\dots,y_m\right)\right\}$ eine Zerlegung des Quaders $D=\lbrack a_1,b_1\rbrack\times\lbrack a_2,b_2\rbrack$ falls gilt 
@@ -39,7 +39,7 @@ Für zwei beliebige Zerlegungen $Z_1,Z_2$ gilt stets \[U_f\left( Z_1\right)\leq 
 \missingfigure{Page 211 bottom}
 \end{enumerate}
 \begin{definition}{9.3}
-Sei $f:D\rightarrow\mathbb{R}$ beschränkt 
+Sei $f:D\to\R$ beschränkt 
 \begin{enumerate}
 \item Riemannsche Unterintegral bsz. Riemannsche Oberintegral der Funktion $f\left( x\right)$ über $D$ ist 
 \begin{align*}
@@ -60,7 +60,7 @@ oder
 
 \subsubsection*{Satz 9.4 (Elementare Eigenschaften des Integrals)}
 \begin{enumerate}
-\item \underline{Linearität:} Seien $f,g: D\rightarrow\mathbb{R}$ beschränkt und R integrabel, $\beta,\alpha\in\mathbb{R}$. Dann sind $\alpha f$, $f+g$ R - Integrabel
+\item \underline{Linearität:} Seien $f,g: D\to\R$ beschränkt und R integrabel, $\beta,\alpha\in\R$. Dann sind $\alpha f$, $f+g$ R - Integrabel
 \[\int\limits_D {\left( {\alpha f + \beta g} \right)d\mu  = \alpha \int\limits_D {fd\mu }  + \beta \int\limits_D {gd\mu } } \]
 \item \underline{Monotonie:} Gilt $f(x)\leq g(x)$, $\forall x\in D$, so folgt \[\int\limits_D {fd\mu }  \le \int\limits_D {gd\mu } \]
 \item\underline{Positivität:} Gilt für alle $x\in D$, $f(x)\geq 0$ (d.h. $f(x)$ ist nichtnegativ), so folgt \[\int\limits_D {fd\mu }  \ge 0\]
@@ -73,22 +73,36 @@ oder
 Wie kann man das R - Integral konkret berechnen? Der Satz von Fubini hilft uns.
 
 \subsubsection*{Satz 9.5 (Satz von Fubini)}
-Sei $Q=\lbrack a,b\rbrack\times \lbrack c,d\rbrack\in\mathbb{R}^2$ und sei $f\in C\degree\left( Q\right)$. Dann gilt \[\int\limits_Q {fd\mu }  = \int\limits_a^b {\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx = \int\limits_c^d {\left( {\int\limits_a^b {f\left( {x,y} \right)dx} } \right)dy} } \]
+Sei $Q=\lbrack a,b\rbrack\times \lbrack c,d\rbrack\in\R^2$ und sei $f\in C\degree\left( Q\right)$. Dann gilt \[\int\limits_Q {fd\mu }  = \int\limits_a^b {\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx = \int\limits_c^d {\left( {\int\limits_a^b {f\left( {x,y} \right)dx} } \right)dy} } \]
 d.h. das Integral von $f$ über $Q$ kann iterativ durch $1-$Dimensionale Integration bestimmt werden 
 
 \subsubsection*{Beispiel 9.6}
 \begin{enumerate}
 \item Sei $f\left( x,y\right)=2x+2yx$, $Q=\lbrack 0,1\rbrack\times\lbrack -2,2\rbrack$
-\begin{align*}\int\limits_Q {fd\mu }  =&\int\limits_{ - 2}^2 {\left( {\int\limits_0^1 {\left( {2x + 2yx} \right)dx} } \right)dy} \\=&\int\limits_{ - 2}^2 {\left( {\left. {{x^2} + y{x^2}} \right|_0^1} \right)dy} \\=&\int\limits_{ - 2}^2 {\left( {1 + y} \right)dy}  = \left. {y + \frac{{{y^2}}}{2}} \right|_{ - 2}^2 = 4
+\begin{align*}
+\int\limits_Q {fd\mu }  =&\int\limits_{ - 2}^2 {\left( {\int\limits_0^1 {\left( {2x + 2yx} \right)dx} } \right)dy} \\
+=&\int\limits_{ - 2}^2 {\left( {\left. {{x^2} + y{x^2}} \right|_0^1} \right)dy} \\
+=&\int\limits_{ - 2}^2 {\left( {1 + y} \right)dy}  = \left. {y + \frac{{{y^2}}}{2}} \right|_{ - 2}^2 = 4
 \end{align*}
 \underline{Oder:}
-\begin{align*}&\int\limits_0^1 {\left( {\int\limits_{ - 2}^2 {\left( {2x + 2yx} \right)dy} } \right)dx} \\ =&\int\limits_0^1 {\left( {\left. {2xy + {y^2}x} \right|_{ - 2}^2} \right)dx} \\ =&\int\limits_0^1 {\left[ {\left( {4x + 4x} \right) - \left( { - 4x + 4x} \right)} \right]dx} \\ =&\int\limits_0^1 {8xdx}  = \left. {4{x^2}} \right|_0^1 = 4
+\begin{align*}
+&\int\limits_0^1 {\left( {\int\limits_{ - 2}^2 {\left( {2x + 2yx} \right)dy} } \right)dx} \\
+ =&\int\limits_0^1 {\left( {\left. {2xy + {y^2}x} \right|_{ - 2}^2} \right)dx} \\
+ =&\int\limits_0^1 {\left[ {\left( {4x + 4x} \right) - \left( { - 4x + 4x} \right)} \right]dx} \\
+ =&\int\limits_0^1 {8xdx}  = \left. {4{x^2}} \right|_0^1 = 4
 \end{align*}
-\item \begin{align*}&\int\limits_0^1 {\int\limits_0^{2\pi } {\left( {{e^x}\sin y} \right)dy} dx} \\=&\int\limits_0^1 {\left( {\left. { - {e^x}\cos y} \right|_0^{2\pi }} \right)dx} \\
-=&\int\limits_0^1 0 dx = 0\end{align*}
+\item \begin{align*}
+&\int\limits_0^1 {\int\limits_0^{2\pi } {\left( {{e^x}\sin y} \right)dy} dx} \\
+=&\int\limits_0^1 {\left( {\left. { - {e^x}\cos y} \right|_0^{2\pi }} \right)dx} \\
+=&\int\limits_0^1 0 dx = 0
+\end{align*}
 \underline{Oder:}
-\begin{align*}&\int\limits_0^{2\pi } {\left( {\int\limits_0^1 {{e^x}\sin ydx} } \right)dy} \\=&\int\limits_0^{2\pi } {\left( {\left. {\sin y{e^x}} \right|_0^1} \right)dy} \\=&\int\limits_0^{2\pi } {\left( {e - 1} \right)\sin ydy} \\
-=&\left. { - \left( {e - 1} \right)\cos y} \right|_0^{2\pi } = 0\end{align*}
+\begin{align*}
+&\int\limits_0^{2\pi } {\left( {\int\limits_0^1 {{e^x}\sin ydx} } \right)dy} \\
+=&\int\limits_0^{2\pi } {\left( {\left. {\sin y{e^x}} \right|_0^1} \right)dy} \\
+=&\int\limits_0^{2\pi } {\left( {e - 1} \right)\sin ydy} \\
+=&\left. { - \left( {e - 1} \right)\cos y} \right|_0^{2\pi } = 0
+\end{align*}
 \end{enumerate}
 
 \subsection*{Geometrische Dehnung}\todo{Not sure about the text size...}
@@ -102,7 +116,7 @@ Die meisten praktischen Aufgaben lassen sich auf die Integration über sogenannt
 
 \begin{definition}{9.10}
 \begin{enumerate}
-\item Eine Teilmenge $D\subset\mathbb{R}^2$ heisst ein Normalbereich bezüglich der $x-$achse bzw. bezüglich der $y-$Achse falls es stetige Funktionen $g,h$ bzw. $\overline{g},\overline{h}$ gibt mit
+\item Eine Teilmenge $D\subset\R^2$ heisst ein Normalbereich bezüglich der $x-$achse bzw. bezüglich der $y-$Achse falls es stetige Funktionen $g,h$ bzw. $\overline{g},\overline{h}$ gibt mit
 \[D=\left\{ \left( x,y\right)\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}\] 
 bzw.
 \[D=\left\{ \left( x,y\right)\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}\]
@@ -120,10 +134,10 @@ Nun braucht man $V(x)$ nur noch über $\lbrack a,b\rbrack$ zu integrieren\[V = \
 
 \subsubsection*{Satz 9.11}
 \begin{enumerate}
-\item Ist $f(x)$ stetig auf einem Normalbereich \[D=\left\{ \left( x,y\right)\in\mathbb{R}^2\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}\] 
+\item Ist $f(x)$ stetig auf einem Normalbereich \[D=\left\{ \left( x,y\right)\in\R^2\mid a\leq x\leq b,\text{ und }g(x)\leq y\leq h(x)\right\}\] 
 so gilt 
 \[\int\limits_D {f(x)d\mu  = \int\limits_a^b {\left( {\int\limits_{g(x)}^{h(x)} {f\left( {x,y} \right)dy} } \right)dx} } \]
-\item bzw. Falls \[D=\left\{ \left( x,y\right)\in\mathbb{R}^2\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}\]
+\item bzw. Falls \[D=\left\{ \left( x,y\right)\in\R^2\mid \overline{a}\leq x\leq \overline{b},\text{ und }\overline{g}(x)\leq y\leq \overline{h}(x)\right\}\]
 so gilt 
 \[\int\limits_D {f(x)d\mu  = \int\limits_{\overline{a}}^{\overline{b}} {\left( {\int\limits_{\overline{g}(x)}^{\overline{h}(x)} {f\left( {x,y} \right)dx} } \right)dy} } \]
 \end{enumerate}
@@ -136,9 +150,13 @@ so gilt
  =&\int\limits_0^1 {\left( {\left. {xy - \frac{{{y^2}}}{2}} \right|_0^{\sqrt {1 - {x^2}} }} \right)} dx\\
 =&\int\limits_0^1 {\left( {x\sqrt {1 - {x^2}}  - \frac{{1 - {x^2}}}{2}} \right)dx}\\
 =&\int\limits_0^1 {x\sqrt {1 - {x^2}} } dx - \frac{1}{2}\int\limits_0^1 {1 - {x^2}dx}\\
- =&\frac{1}{2} - \frac{2}{3} = \frac{1}{3}\end{align*}
+ =&\frac{1}{2} - \frac{2}{3} = \frac{1}{3}
+\end{align*}
 \begin{align*}
-&\int\limits_0^1 {x\sqrt {1 - {x^2}} dx} \begin{array}{*{20}{c}}{u = 1 - {x^2}}\\{du =  - 2xdx}\end{array}\\
+&\int\limits_0^1 {x\sqrt {1 - {x^2}} dx} \begin{array}{*{20}{c}}
+{u = 1 - {x^2}}\\
+{du =  - 2xdx}
+\end{array}\\
 &=  - \frac{1}{2}\int\limits_0^1 {\sqrt u du}  = \left. { - \frac{1}{2} \cdot \frac{2}{3}{u^{\frac{3}{2}}}} \right|_0^1 = \frac{1}{3}\\
 &\int\limits_D {fd\mu  = \frac{1}{3} - \frac{1}{3} = 0} 
 \end{align*}
@@ -160,7 +178,10 @@ Zu Berechnung des Doppelintegrals zerlegen wir das Gebiet in Streifen parallel z
 \end{align*}
 \item Sei $D:$
 \missingfigure{Page 224 top}
-\[\int\limits_D {fd\mu } \mathop  = \limits_{\begin{array}{*{20}{c}} \downarrow \\ * \end{array}} \int\limits_{ - 1}^1 {\left( {\int\limits_{x = {y^2}}^1 {fdx} } \right)} dy\]
+\[\int\limits_D {fd\mu } \mathop  = \limits_{\begin{array}{*{20}{c}}
+ \downarrow \\
+ * 
+\end{array}} \int\limits_{ - 1}^1 {\left( {\int\limits_{x = {y^2}}^1 {fdx} } \right)} dy\]
 $$\text{(\textasteriskcentered $=$ Zerlegung des Gebietes in Streifen parallel zur $x-$achse)}$$
 oder mit Zerlegung in streifen parallel zur $y-$Achse
 \[\int\limits_D {fd\mu }  = \int\limits_{x = 0}^1 {\left( {\int\limits_{y =  - \sqrt x }^{y = \sqrt x } {f\left( {x,y} \right)dy} } \right)} dx\]
@@ -193,16 +214,172 @@ Wenn wir Aussen nach $y$ integrieren, brauchen wir keine Unterteilung
 \end{enumerate}
 
 \begin{definition}{9.14}
-Eine Teilmenge $D\subset\mathbb{R}^3$ heisst Normalbereich, falls es eine Darstellung 
+Eine Teilmenge $D\subset\R^3$ heisst Normalbereich, falls es eine Darstellung 
 \[D = \left\{ {\left. {\left( {x,y,z} \right) \in {R^3}} \right|a \le x \le b;g(x) < y < h(x);\varphi \left( {x,y} \right) \le z \le \psi \left( {x,y} \right)} \right\}\] gibt.\\
 
 (Vertauscht man die Rollen von $x,y$ und $z$ so entstehen weitere Mengen, die auch Normalbereiche genannt werden.)
 \end{definition}
 
 \subsubsection*{Satz 9.15}
-Sei $D\subset\mathbb{R}^3$ ein Normalbereich mit Darstellung wie oben, und $f:D\rightarrow\mathbb{R}$ stetig. Dann gilt \[\int\limits_D {fd\mu }  = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\int\limits_{\varphi \left( {x,y} \right)}^{\psi \left( {x,y} \right)} {f\left( {x,y,z} \right)dzdydx} } } \]
+Sei $D\subset\R^3$ ein Normalbereich mit Darstellung wie oben, und $f:D\to\R$ stetig. Dann gilt \[\int\limits_D {fd\mu }  = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\int\limits_{\varphi \left( {x,y} \right)}^{\psi \left( {x,y} \right)} {f\left( {x,y,z} \right)dzdydx} } } \]
 \missingfigure{Page 228, middle}
 $z=\varphi \left( {x,y} \right)$ und $z=\psi \left( {x,y} \right)$ stellen die ``Grund'' und Deckelfläche von $D$ dar. \\
 
 Der Normalbereich $A$ ist die Senkrechte Projektion von $D$ in die $x-y$ Ebene. Dessen ``Grund'' und ``Deckelkurve'' sind durch $y=g(x)$ und $y=h(x)$ gegeben.
 
+\subsubsection*{Bemerkung 9.16}
+Das Integral 
+\[ V=\int\limits_D 1 d\mu\text{ für }D\subset\R^3\]
+ergibt das Volumen von $D$. Für einen Normalbereich 
+\[D = \left\{ {\left( {x,y,z} \right)\mid a \le x \le b,g(x) \le y \le h(x),\varphi \left( {x,y} \right) \le z \le \psi \left( {x,y} \right)} \right\}\]
+ erhält man 
+\[V = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\int\limits_{\varphi \left( {x,y} \right)}^{\psi \left( {x,y} \right)} {1dzdydx} } }  = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\psi \left( {x,y} \right) - \varphi \left( {x,y} \right)dydx} } \]
+
+\section{Substitutionsregel}
+Häufig sind kartesische koordinaten für die Berechnung von Integralen eher ungeignet. z.B. wenn man symmetrien bezüglich gewisser Punkte oder Achsen nutzen will.\\
+
+Wir behandeln als nächstes Variablentransformationen vom Typ $\Phi:\R^n\to\R^n$ und verallgemeinern die 1.Dim Substitutionsregel:
+\[\int\limits_{\varphi (a)}^{\varphi (b)} {f(x)dx}  = \int\limits_a^b {f\left( {\varphi \left( t \right)} \right)\varphi '\left( t \right)dt} \]
+mit $f$ stetig, $x=\varphi\left( t\right)$ $\varphi :\lbrack a,b\rbrack\to I$ stetig differenzierbar, $I=$ Interval. Zunächst erinnern wir uns an die Lineare Algebra:\\
+
+Das Bild des Einheitsquadrats/würfels unter der linearen Abbildung 
+\begin{align*}
+\Phi:\R^n&\to\R^n\\
+\vec x&\to A\vec x\hspace{5mm}A\in\R^{n\times n}
+\end{align*}
+ist ein Parallelogram mit Fläche $\left| \det A\right|$
+\missingfigure{Page 231, top}
+Dies bleibt wahr, wenn man zur affin-linearen Abbildung $\Phi\left(\vec{x}\right)=A\vec a+\vec b$ betrachtet es kommt ja nur ein Verschiebung zu
+\missingfigure{Page 231 bottom}
+Nun, betrachten wir eine differenzierbare nichtlineare Transformation $\Phi:\R^n \to\R^n$. Dann gilt zumindest nahe eines festen Punktes $\vec x\in\R^n:$
+\[ \Phi\left( x\right)\approx\Phi\left( x_0\right) + d\Phi\left( x_0\right) \left( \vec{x}-\vec{x_0}\right)\]
+Die rechte Seite stellt gerade eine Abbildung vom Typ $A\vec x+\vec b$ der wobei die Jacobi Matrix $d\Phi\left( x_0\right)\in\R^n\times\R^n$ die Rolle von $A$ (und $\Phi\left( x_0\right)$ von $\vec b$) übernimmt. Damit ist der lokale Flächenverzerrungsfaktor von $\Phi$ gegeben durch $\left| \det d\Phi\left( x_0\right)\right|$ d.h. den Betrag der Jacobi oder Funktionaldeterminante. Die Lokale Flächenverzerrung muss bei der Substitution in Integralen berücksichtigt werden und zwar in der Form
+\[``d\vec x = \left| {\det d\Phi \left( {\vec y} \right)} \right|d\vec{y} \text{ ''},{\text{ falls }}\vec x = \Phi \left( y \right)\]
+Geometrische Darstellung in $\R^2$
+\missingfigure{Page 232.5 top}
+Die Flächen der einander entsprechenden markierten Vierecke unterscheiden sich gerade um den Faktor $\left|\det d\Phi\left( x_1\right)\right|$ bzw. $\left|\det d\Phi\left( x_2\right)\right|$
+\subsection*{Substitutionsregel}
+\subsubsection*{Satz 9.17}
+Sei $U,V\subset\R^n$ offen, $\Phi:U\to V$ bijektiv, stetig diff., $\det d\Phi\left( \vec y\right)\not=0$ $\forall\vec y\in U$, sowie $f: V\to\R$ stetig. Dann gilt
+\[\int\limits_V {f\left( {\vec x} \right)d\mu \left( {\vec x} \right)}  = \int\limits_{\Phi \left( U \right) = V} {f\left( {\Phi \left( {\vec y} \right)} \right)\left| {\det d\phi \left( y \right)} \right|} d\mu \] 
+
+\subsubsection*{Beispiel 9.18}
+\begin{enumerate}
+\item Berechne $\iiint\limits_V d\mu$, wobei \[\mathop {\text{V}}\limits_{\begin{array}{*{20}{c}} \downarrow \\{{\text{Kugeloktanten}}}\end{array}} {\text{ = }}\left\{ {\left. {{{\left( {x,y,z} \right)}^t}} \right|{x^2} + {y^2} + {z^2} \le 1,x,y,z \ge WHAT} \right\}\] \todo{chopped content, page 233 middle to bottom}Es ist einfacher in Kugelkoordinaten zu berechnen
+\[\Phi \left( {r,\theta ,\psi } \right) = \left( {\begin{array}{*{20}{c}}{r\cos \theta \cos \psi }\\{r\sin \theta \cos \psi }\\{r\sin \psi }\end{array}} \right)\]
+Die Transformation $\Phi$ ist auf ganz $\R^3$ definiert und mit \[U = \left[ {0,1} \right] \times \left[ {0,\frac{\pi }{2}} \right] \times \left[ {0,\frac{\pi }{2}} \right]\]
+gilt 
+\begin{align*}
+\Phi\left( U\right) =&V\\
+\det\left( d\Phi\right)=&r^2\cos\psi\\
+\text{vol}\left(V\right)=&\int\limits_{V} d\mu\left( \vec x\right)=\int\limits_0^1\int\limits_0^{\frac{\pi}{2}}\int\limits_0^{\frac{\pi}{2}} r^2\cos\psi d\psi d\theta dr=\frac{\pi}{2}
+\end{align*}
+\item Berechne das Integral 
+\[ \iint\limits_D x dx dy\text{ wobei $D=$Viertelkreis}\]
+\begin{align*}
+\int\limits_{x = 0}^1 {\int\limits_{y = 0}^{\sqrt {1 - {x^2}} } x } dydx =&\int\limits_0^1 {\left( {\left. {xu} \right|_0^{\sqrt {1 - {x^2}} }} \right)dx} \\
+=&\int\limits_0^1 x\sqrt{1-x^2}dx\\
+=&\int\limits_0^1 {\frac{{{u^{{1 \mathord{\left/ {\vphantom {1 2}} \right. \kern-\nulldelimiterspace} 2}}}}}{2}} du =  - \frac{1}{2} \cdot \left. {\frac{{{u^{{3 \mathord{\left/ {\vphantom {3 2}} \right. \kern-\nulldelimiterspace} 2}}}}}{{{3 \mathord{\left/ {\vphantom {3 2}} \right. \kern-\nulldelimiterspace} 2}}}} \right|_0^1\\
+=&-\frac{1}{3}
+\end{align*}
+mit $1-x^2=u$, $-2xdx=du$\\
+\underline{Oder:}\\
+\[ \iint\limits_D x dx dy \hspace{10mm}\left( {\begin{array}{*{20}{c}}x\\y\end{array}} \right) = \mathop {\left( {\begin{array}{*{20}{c}}{r\cos \theta }\\{r\sin \theta }\end{array}} \right)}\limits_{dxdy = rdrd\theta } \]
+
+\begin{align*}
+\int\limits_0^{\pi /2} {\int\limits_0^1 {{r^2}\cos \theta drd\theta } }  =&\int\limits_0^{\pi /2} {\cos \theta \left( {\left. {\frac{{{r^3}}}{3}} \right|_0^1} \right)d\theta } \\
+ =&\frac{1}{3}\int\limits_0^{\pi /2} {\cos \theta d\theta }  = \left. { - \frac{1}{3}\sin \theta } \right|_0^{\pi /2} =  - \frac{1}{3}
+\end{align*}
+\item Die Substitutionsregel in mehreren variablen ist manchmal nützlich auch zur Berechnung von Integralen in einer Variable. Zunächst möchten wir das Integral \[ I=\int\limits_0^\infty e^{-x^2} dx\] berechnen. Wir Berechnen $I$ durch Berechnung eines Flächenintegrals wie folgt. Es gilt 
+\begin{align*}{I^2} =&{\left( {\int\limits_0^\infty  {{e^{ - {x^2}}}dx} } \right)^2}\\ =&\mathop {\lim }\limits_{R \to \infty } \left( {\int\limits_0^R {{e^{ - {x^2}}}dx} } \right)\left( {\int\limits_0^R {{e^{ - {y^2}}}dy} } \right)\\ =&\mathop {\lim }\limits_{R \to \infty } {I_R}
+\end{align*}
+für \[{I_R} = \int\limits_{\left[ {0,R} \right] \times \left[ {0,R} \right]} {{e^{ - \left( {{x^2} + {y^2}} \right)}}dxdy} \]
+Bezeichnet $K_\rho$ den Viertelkreis im 1. Quadrant mit radius $r$, so gilt
+\[\int\limits_{{K_R}} {{e^{ - \left( {{x^2} + {y^2}} \right)}}dxdy \le {I_R}\int\limits_{{K_{\sqrt 2 R}}} {{e^{ - \left( {{x^2} + {y^2}} \right)}}dxdy} } \]
+\missingfigure{Page 236 bottom}
+Die Integrale über $K_\rho$ berechnet man nun über Polarkoordinaten 
+\[\int\limits_{{K_\rho }} {{e^{ - \left( {{x^2} + {y^2}} \right)}}dxdy}  = \int\limits_0^\rho  {\int\limits_0^{\pi /2} {{e^{ - {r^2}}}rdrd\theta } }  = \frac{\pi }{4}\left( {1 - {e^{{\rho ^2}}}} \right)\]
+und somit gelten die Abschätzungen 
+\[\frac{\pi }{4}\left( {1 - {e^{ - {R^2}}}} \right) \le {I_R} \le \frac{\pi }{4}\left( {1 - {e^{ - 2{R^2}}}} \right)\]
+und gilt schliesslich
+\[\mathop {\lim }\limits_{R \to \infty } {I_R} = \frac{\pi }{4}\]
+d.h. \[{I^2} = \mathop {\lim }\limits_{R \to \infty } {I_R} = \frac{\pi }{4}\]
+d.h. \[I = \frac{{\sqrt \pi  }}{2} = \int\limits_0^\infty  {{e^{ - {x^2}}}dx} \]
+\end{enumerate}
+
+\section{Der Satz von Green}
+Wir errinern uns: Sei $\Omega\subset\R^2$, ist $V:\Omega\to\R^2$ ein $C'-$Vektorfeld mit Potential $f$, so folgt 
+\[\rot\left( v(x)\right)=\rot\left( \nabla f(x)\right)=0\hspace{10mm}\forall x\in\R^2 \]
+wobei 
+\[\rot\left( v\left( x,y\right)\right)=\frac{\partial v_2}{\partial x}\left( x,y\right) -\frac{\partial v_1}{\partial y}\left( x,y\right)\]
+so ist
+\[\rot v=\frac{\partial v_2}{\partial x} -\frac{\partial v_1}{\partial y}=0 \]
+in Zwei Dimensionen eine notwendige Bedingung für die Existenz eines Potential.\\
+
+Die Bedingung $\rot(v)=0$ ist sogar eine hinreichende Bedingung, falls das gebiet $\Omega$ einfach zusammenhängend ist. In diesem fall 
+\[\oint\limits_\gamma  v  = \int\limits_\gamma  {\nabla fds = f\left( {\gamma \left( 1 \right)} \right) - } f\left( {\gamma \left( 0 \right)} \right) = 0\] 
+für alle geschlossene Weg $\gamma$ und für eine nichtgeschlossene Weg $\gamma$
+\missingfigure{Add picture on 238 bottom and 239 top side by side}
+\[\int\limits_\gamma  v  = \int\limits_\gamma  {\nabla fds = f\left( {\gamma \left( 1 \right)} \right) - } f\left( {\gamma \left( 0 \right)} \right)\]
+d.h. Falls der Vektorfeld ein Gradientenfeld ist, ist das Integral $\int\limits_\gamma  v $ eine Funktion der Endpunkte ist. \\
+
+Anders gesagt, es gibt Fälle wobei ein Wegintegral (d.h. ein Integral auf einem 1. Dimensional Objekt mit hilfe eine 0. Dimensionalen Menge) berechnet werden kann
+
+\subsubsection*{Bemerkung}
+Auch für funktionen einer Variable: Falls $F'=f$ ist, dann gilt \[\int\limits_a^b {f(x)dx}  = F\left( b \right) - F\left( a \right)\] Hauptsatz der Integral rechnung einer Variable
+
+\subsubsection*{Frage}
+Gibt es auch Fälle wobei ein $2-$Dimensionale Integral mit hilfe einer $1-$Dimensionale Menge berechnet werden kann?\\
+
+\noindent Die Antwort ist genau der Inhalt das Satz von Green
+
+\subsubsection*{Satz 9.19 (Green)}
+Sei $\Omega \in\R^2$ ein Gebiet dessen rand $\partial\Omega$ ein stückweise $C'$ Parameterdarstellung hat. Sei $U$ eine offene Menge mit $\Omega\subset U$ und sei 
+\[ f=\frac{\partial Q}{\partial x}\left( x,y\right) -\frac{\partial P}{\partial y}\left( x,y\right) \]
+wobei $P,Q\in C'\left( U\right)$. Dann gilt
+\[ \iint\limits_\Omega \left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)d\mu = \int\limits_{\partial \Omega } {Pdx + Qdy} \]
+wobei $\partial \Omega$ so parametrisiert wird dass $\Omega$ zur linkes des Randes liegt. \\
+
+\noindent\underline{Anders gesagt:}\\
+
+\noindent Sei $V=\left( P,Q\right)$ ein $C'$ Vektorfeld auf dem Gebiet $U$. Sei $\Omega\subset U$ ein Gebiet dessen rand $\partial\Omega$ ein Stückweise $C'$ Parameterdarstellung hat. Die parametrisierung von $\Omega$ sei so gewählt dass $\Omega$ stets links zur Durchlaufrichtung liegt. Dann gilt
+\[\int\limits_{\partial \Omega } {Vds}  = \int\limits_{\partial \Omega } {Pdx + Qdy}  = \iint\limits_\Omega \rot\left( V \right)d\mu \]
+Bevor wir die Idee des Beweis geben, geben wir einige Beispiele und Anwendungen
+
+\subsubsection*{Beispiel 9.20}
+\begin{enumerate}
+\item Wir betrachten das Vektorfeld \[ F\left( x,y\right) = \left( y+3x,y-2x\right) \]
+und wir möchten dieses Kraftfeldes entlang der im gegenuhrzeigersinn durchlauferen Ellipse $\gamma: 4x^2+y^2=4$. Die Arbeit ist
+\begin{align*}
+\int\limits_\gamma  {Fd\vec s}  =&\int\limits_\gamma  {Pdx + Qdy} \\
+ =&\int\limits_\gamma  {\left( {y + 3x} \right)dx + \left( {2y - x} \right)dy} \\
+{\text{Green }} \to {\text{ }} =&\iint\limits_\Omega\frac{{\partial \left( {2y - x} \right)}}{{\partial x}} - \frac{{\partial \left( {y + 3x} \right)}}{{\partial y}}\\
+=&\iint -1-1d\mu=-2\iint\limits_\Omega d\mu\\
+=&-2\cdot\text{(Flächeninhalt von Ellipse $4x^2+y^2=4$)}\\
+\end{align*}
+\todo[inline]{Can't understand the result, page 242 top}
+\missingfigure{Page 242, top}
+\item Berechne das Wegintegral \[\int\limits_{\partial \Omega } {\left( {5 - xy - {y^2}} \right)dx - \left( {2xy - {x^2}} \right)dy} \] wobei $\Omega$ das Quadrat mit Eckpunkten $(0,0),(0,1),(1,1),(1,0)$ im gegenuhrzeigersinn ist 
+\begin{align*}
+&\int\limits_{\partial A} {\left( {5 - xy - {y^2}} \right)dx - \left( {2xy - {x^2}} \right)dy} \\ 
+=&\iint\limits_\Omega\left[ {\frac{\partial }{{\partial x}}\left( {2xy - {x^2}} \right) - \frac{\partial }{{\partial y}}\left( {5 - xy - {y^2}} \right)} \right]d\mu \\
+=&\iint\limits_\Omega\left(  2y-2x\right) - \left( -x-2y\right) d\mu\\
+=&3\iint\limits_\Omega d\mu=\int\limits_0^1\int\limits_0^1 x dx dy=\frac{3}{2}
+\end{align*}
+\item Mittels des Satzes von Green können wir den Flächeninhalt eines Gebiets mit hilfe eines Wegintegrals berechnen. Und zwar 
+\[ \text{Flächeninhalt$\left( \Omega\right)$}=\iint\limits_\Omega d\mu=\iint\left( \frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) d\mu\]
+wobei $P$ und $Q$ funktionen mit $\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1$ sind. Zum Beispiel können wir 
+\begin{align*}
+Q\left( x,y\right)=&\frac{1}{2}x\\
+P\left( x,y\right)=&-\frac{1}{2}x
+\end{align*}
+nehmen. Daraus folgt dass \[ F\left( \Omega\right) = \frac{1}{2}\int\limits_{\partial\Omega}-y dx+xdy\]
+Als ein Beispiel können wir verifizieren dass der Flächeninhalt des Kreis $x^2+y^2\leq 4$ gleich $4\pi$ ist. \\
+
+Betrachte die Parameterdarstellung $\gamma\left(\theta\right)=\left( 2\cos\theta,2\sin\theta\right)$, $\theta\in\lbrack 0,2\pi\rbrack$ des Rands $\partial\Omega$
+\begin{align*}
+F\left(\Omega\right)=&\iint\limits_\Omega d\mu = \frac{1}{2}\int\limits_{\partial\Omega} -ydx+xdy\\
+=&\frac{1}{2}\int\limits_0^{2\pi}\left( -2\sin\theta\right)\left( -2\sin\theta\right) + \left( 2\cos\theta\right)\left( 2\cos\theta\right) d\theta\\
+=&\frac{1}{2}\int\limits_0^{2\pi}4\left( \sin^2\theta+\cos^2\theta\right)d\theta=2\cdot 2\pi=4\pi
+\end{align*}
+\end{enumerate}

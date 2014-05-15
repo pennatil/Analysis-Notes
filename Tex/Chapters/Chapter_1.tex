@@ -1,17 +1,18 @@
 \chapter{Logik und Unterlagen}
-Im Laufendes Semester werden wir viele mathematische Beweise einführen. Heute werden wir uns mit der Mathematische Logik beschäftiges.\\
+Im Laufenden Semester werden wir viele mathematische Beweise einführen. Heute werden wir uns mit der Mathematische Logik beschäftigen. \\
 
-In Mathematik stossen wir uns auf gewisse Grundannahmen ``Axiome'', die wir als gegeben ansehen. Eine dieser Annahmen ist der 
-\subsection*{Satz von ausgeschlossenen Dritten}
+In der Mathematik stossen wir auf gewisse Grundannahmen, ``Axiome'', die wir als gegeben ansehen. Eine dieser Annahmen ist der 
+\subsection*{Satz vom ausgeschlossenen Dritten}
 Eine zulässige mathematische Aussage ist entweder wahr oder falsch, jedoch nie beides zugleich.
 \subsubsection*{Beispiel}
 \begin{enumerate}
 	\item $5<7$ Wahr
 	\item $4<2$ Falsch
 \end{enumerate}
-In der wirklichen Welt ist es anders , z.B. ``Mathematik ist schön'', wahr oder falsch?\\
+In der wirklichen Welt ist es anders. Ist z.B. ``Mathematik ist schön'' wahr oder falsch?\\
 
-Mit Aussagen kann man ``rechnen''. Wir führen nun ein Paar geläufige Notationen der Logik ein:\\
+Mit Aussagen kann man ``rechnen''. Wir führen nun ein paar geläufige Notationen der Logik ein:\\
+\\
 Seien $A,B$ Aussagen
 \begin{itemize}
 \item $A$ und $B$ wird mit $A\land B$ bezeichnet
@@ -19,27 +20,27 @@ Seien $A,B$ Aussagen
 \end{itemize}
 \subsubsection*{Folgerung (eine wahre Implikation)}
 \begin{itemize}
-\item Aus $A$ folgt $B$ wird mit $\Rightarrow$ bezeichnet
+\item Aus $A$ folgt $B$ wird mit $\to$ bezeichnet
 \item Wenn $A$, dann auch $B$
 \item Die Negation der Aussage $A$ wird mit $\lnot A$ bezeichnet
-\item $A$ ist equivalent zu $B$ wird mit $A\Leftrightarrow B$ bezeichnet
-\item $\left(A\Rightarrow B\right)\land \left( B\Rightarrow A\right)$ $A$ wahr genau dann, wenn $B$ wahr ist.
+\item $A$ ist äquivalent zu $B$ wird mit $A\Leftrightarrow B$ bezeichnet
+\item $\left(A\to B\right)\land \left( B\to A\right)$ $A$ wahr genau dann, wenn $B$ wahr ist.
 \end{itemize}
 
 \subsubsection*{Bemerkung}
-Die Folgerung ist transitiv. Wenn wir wissen, dass $A\Rightarrow B$ und $B\Rightarrow C$, dann wissen wir dass $A\Rightarrow C$.
+Die Folgerung ist transitiv. Wenn wir wissen, dass $A\to B$ und $B\to C$, dann wissen wir dass $A\to C$.
 
 
 \subsection*{Prinzip des Mathematischen Beweises}
-Wir können ber eine Kette von Folgerungen \[A\Rightarrow B \Rightarrow C \dots \Rightarrow S\]
+Wir können aus einer Kette von Folgerungen \[A\to B \to C \dots \to S\]
 einen mathematischen ``Satz'' $S$ aus einen Annahme $A$ herleiten. (Ein Beweis ist eine Folge von Implikationen von Aussagen). 
 \subsubsection*{Kontraposition (Umkehrschluss)}
 
-$A\Rightarrow B$ ist gleichbedeutend mit $\lnot B\Rightarrow\lnot A$.\\
-Falls $A\Rightarrow B$, so kann $A$ nicht wahr sein wenn $B$ falsch ist (weil $A$ wahr wäre, würde $B$ auch wahr sein).
+$A\to B$ ist gleichbedeutend mit $\lnot B\to\lnot A$.\\
+Falls $A\to B$, so kann $A$ nicht wahr sein wenn $B$ falsch ist (weil wenn $A$ wahr ist, würde $B$ auch wahr sein).
 
 \section{Prinzip des Indirekten Beweises}
-Zum Beweis der Aussage $A\Rightarrow B$ genügt es die Aussage $\lnot B\Rightarrow\lnot A$ zu zeigen, oder: die Annahme $A\land\lnot B$ zum Wiederspruch zu führen.
+Zum Beweis der Aussage $A\to B$ genügt es die Aussage $\lnot B\to\lnot A$ zu zeigen, oder die Annahme $A\land\lnot B$ zum Wiederspruch zu führen.
 
 \subsection*{Indirekter Beweis}
 Man fügt $\lnot B$ als Annahme hinzu und kommt nach einer Kette von erlaubten Schlüssen zu einer falschen Aussage.\\
@@ -52,11 +53,11 @@ Man fügt $\lnot B$ als Annahme hinzu und kommt nach einer Kette von erlaubten S
 \item $B=\text{''es gibt keine grösste natürliche Zahl''}$
 \end{itemize}
 
-\noindent Wir beweisen dass aus $A$ folgt $B$. Nehmen wir an, dass $A$ wahr und $B$ falsch ist. \\
+\noindent Wir beweisen dass $B$ aus $A$ folgt . Nehmen wir an, dass $A$ wahr und $B$ falsch ist. \\
 
-\noindent $\lnot B=$ es gibt eine grösste natürliche zahl $N_0''$ d.h $N_0>l$ für jedes $l \in \mathbb{N}$.\\
+\noindent $\lnot B=$ es gibt eine grösste natürliche zahl $N_0''$, d.h $N_0>l$ für jedes $l \in \N$.\\
 
-Mittels der Aussage $A$ wissen wir dass $N_0$ einen Nachfolger $N_0 +1$ hat. Dann $N_0+1>N_0$. Dass ist ober ein Wiederspruch.
+Mittels der Aussage $A$ wissen wir, dass $N_0$ einen Nachfolger $N_0 +1$ hat. Für diesen gilt $N_0+1>N_0$. Dies ist aber ein Wiederspruch.
 
 \begin{definition}{1.1}
 Eine Menge ist eine Zusammenfassung verschiedener Objekte zu einem Ganzen.\\
@@ -64,27 +65,27 @@ Die Objekte werden Elemente der Menge genannt.
 \end{definition}
 
 Sei $A$ eine Menge, dann wird ``$a$ ist element von $A$'' mit ``$a\in A$'' bezeichnet.\\
-Seien $A,B$ Mengen, dann wird ``jedes Element von $A$ ist ein Element von $B$'' mit ``$A\subset B$ bezeichnet, und man sagt ``$A$ ist in $B$ enthalten'' (oder $A$ ist eine Teilmenge von $B$). \\
+Seien $A,B$ Mengen, dann wird ``jedes Element von $A$ ist ein Element von $B$'' mit ``$A\subset B$`` bezeichnet, und man sagt ``$A$ ist in $B$ enthalten'' (oder $A$ ist eine Teilmenge von $B$). \\
 
 Falls zugleich $A\subset B$ und $B\subset A$ gilt, so sind $A$ und $B$ gleich und man schreibt $A=B$. 
 
 \subsubsection*{Beispiele 1.2}
 \begin{enumerate}
-	\item Die Menge $\mathbb{N}=\{0,1,2,\dots\}$ der natürlichen Zahlen.
+	\item Die Menge $\N=\{0,1,2,\dots\}$ der natürlichen Zahlen.
 	\item Die leere Menge mit ``$\varnothing$'' bezeichnet. Sie ist in jeder Menge enthalten.
 	\item Die Menge $\mathbb{Z}=\{\dots,-2,-1,0,1,2,\dots\}$ aller ganze Zahlen.
-	\item Meistens werden Mengen nicht durch die Liste ihre Elemente gegeben, sondern durch bestimmte Eigenschaften ihrer Elemente definiert \[\mathbb{P}=\{2,3,4,5,7,11,13,\dots\}\] die Menge aller Primzahlen $\mathbb{P}:\{p\in\mathbb{N}\mid\text{ $p$ primzahl}\}$
+	\item Meistens werden Mengen nicht durch die Liste ihre Elemente gegeben, sondern durch bestimmte Eigenschaften ihrer Elemente definiert \[\mathbb{P}=\{2,3,4,5,7,11,13,\dots\}\] die Menge aller Primzahlen $\mathbb{P}:\{p\in\N\mid\text{ $p$ primzahl}\}$
 \end{enumerate}
 \section{Zwei Prinzipen}
 Wir werden die folgenden zwei Beweismethoden häufig benutzen.
 
  \subsection*{1. Prinzip des Indirekten Beweises}
-Zum Beweis der Aussage $A\Rightarrow B$ genügt es die Aussage $\lnot B\Rightarrow\lnot A$ zu zeigen, oder, die Annahme $A\land\lnot B$ zum Wiederspruch zu führen.
+Zum Beweis der Aussage $A\to B$ genügt es, die Aussage $\lnot B\to\lnot A$ zu zeigen oder die Annahme $A\land\lnot B$ zum Wiederspruch zu führen.
 \subsection*{2. Prinzip der Vollständigen Induktion}
-Sei für jedes $n\in\mathbb{N}$ eine Behauptung $A(n)$ gegeben. Soll die Behauptung für alle natürlichen Zahlen $n\in\mathbb{N}$ bewiessen werden, so genügen dazu zwei Beweisschritte:
+Sei für jedes $n\in\N$ eine Behauptung $A(n)$ gegeben. Soll die Behauptung für alle natürlichen Zahlen $n\in\N$ bewiesen werden, so genügen dazu zwei Beweisschritte:
 \begin{enumerate}[i)]
 \item Der Beweis von $A(0)$
-\item Für jedes $n\in\mathbb{N}$, der Beweis von $A(n+1)$ unter der Voraussetzung, dass $A(n)$ gilt. 
+\item Für jedes $n\in\N$, der Beweis von $A(n+1)$ unter der Voraussetzung, dass $A(n)$ gilt. 
 \end{enumerate}
 Oft gelten aber Behauptungen nicht von $n=0$. \\
 Soll die Gültigkeit von $A(n)$ für alle $n\geq m$ bewiesen werden so genügen wieder zwei Schritte:
@@ -92,39 +93,39 @@ Soll die Gültigkeit von $A(n)$ für alle $n\geq m$ bewiesen werden so genügen 
 	\item Beweis von $A(m)$
 	\item Für jedes $n\geq m$ impliziert $A(n)$ die Behauptung $A(n+1)$
 \end{enumerate}
-Das Prinzip der Vollständigen Induktion ist genau wie ein Dominoeffekt.\\
+Das Prinzip der vollständigen Induktion ist genau wie ein Dominoeffekt.\\
 
-Sie stellen alle Dominosteinen eine nach der andere. Falls der erste Dominostein fällt ($A(1)$ wahr) und falls wir die Dominosteine genug nah nebeneinander gestellt haben, so dass ein fallender Dominostein den nächsten trifft ($A(k)\Rightarrow A(k+1)$) dann wissen wir, dass alle Dominosteine fallen. 
+Sie stellen alle Dominosteine  auf, einen nach dem anderen. Falls der erste Dominostein fällt ($A(1)$ wahr) und falls wir die Dominosteine genug nah nebeneinander gestellt haben, so dass ein fallender Dominostein den nächsten trifft ($A(k)\to A(k+1)$), dann wissen wir, dass alle Dominosteine fallen. 
 
 \subsubsection*{Beispiel 1.3 (Induktion)}
 \begin{enumerate}
-\item Für alle $n\geq 1$ gilt: \[A(n): \quad 1+3+5+\dots (2n-1)=n^2\] Beweis mittels Vollständige Induktion
+\item Für alle $n\geq 1$ gilt: \[A(n): \quad 1+3+5+\dots (2n-1)=n^2\] Beweis mittels vollständiger Induktion
 \begin{enumerate}[i)]
 \item $A(i)$ lautet $1=1^2$ und gilt.
-\item Sei $n\geq 1$. Annahme: $A(n)$ gilt. Die Linke Seite der Identität $A(n+1)$ ist \[1+3+\dots +(2n-1)+(2n+1)=n^{2}+(2n+1)=(n+1)^2\] womit $A(n+1)$ bewiesen ist.
+\item Sei $n\geq 1$. Annahme: $A(n)$ gilt. Die linke Seite der Identität $A(n+1)$ ist \[1+3+\dots +(2n-1)+(2n+1)=n^{2}+(2n+1)=(n+1)^2\] womit $A(n+1)$ bewiesen ist.
 \end{enumerate}
-\item Als zweite Beispiel der vollständigen Induktion beweisen wir den Fundamentalsatz von Euklid:
+\item Als zweites Beispiel der vollständigen Induktion beweisen wir den Fundamentalsatz von Euklid:
 \subsubsection*{Satz 1.4}
-Jede natürliche Zahl $n\geq 2$ ist ein Produkt von Primzahlen, dass bis auf die Reihenfolge der Faktoren eindeutig ist. Wir werden uns hier nicht mit der Eindeutigkeit befassen.
+Jede natürliche Zahl $n\geq 2$ ist ein Produkt von Primzahlen, welches bis auf die Reihenfolge der Faktoren eindeutig ist. Wir werden uns hier aber nicht mit der Eindeutigkeit befassen.
 \subsubsection*{Beweis}
 Sei $A(n)$ die Aussage: Jede natürliche Zahl $m$ mit $2\leq m\leq n$ ist ein Produkt von Primzahlen
 \begin{enumerate}[i)]
-\item $A(2)$ gilt denn $2$ ist Primzahl
+\item $A(2)$ gilt, denn $2$ ist eine Primzahl.
 \item Sei $n\geq 2$. Wir nehmen an, dass $A(n)$ gilt. Für $n+1$ gibt es zwei Möglichkeiten
 \begin{enumerate}[a)]
 \item $n+1$ ist eine Primzahl und somit gilt $A(n+1)$ 
-\item $n+1$ ist keine Primzahl d.h. es gibt $2\leq a\leq n$ die $n+1$ teilt. Dann ist $b:=\frac{n+1}{a}$ auch ganz und zudem erfüllt $2\leq b\leq n$ . Aus $A(n)$ folgt, dass sowohl $a$ wie $b$ ein Produkt von Primzahlen sind. Somit ist auch $n+1=ab$ ein Produkt von Primzahlen. 
+\item $n+1$ ist keine Primzahl d.h. es gibt ein $2\leq a\leq n$ welches $n+1$ teilt. Dann ist $b\defeq\frac{n+1}{a}$ auch ganzzahlig und zudem ist $2\leq b\leq n$ erfüllt. Aus $A(n)$ folgt, dass sowohl $a$ wie $b$ ein Produkt von Primzahlen sind. Somit ist auch $n+1=ab$ ein Produkt von Primzahlen. 
 \end{enumerate}
 \end{enumerate}
 \end{enumerate}
 \subsubsection*{Satz 1.5}
 Die Menge $\mathbb{P}$ der Primzahlen ist unendlich.
 \subsubsection*{Beweis}
-Nehmen wir das Gegenteil ``$\mathbb{P}$ ist endlich'' an, d.h. $\mathbb{P}=\{p_1,p_2,\dots,p_m\}$ in aufsteigender Folge; also $p_1=2,p_2=3,p_3=5,p_4=7,\dots$. Wir betrachten die Zahl $k=p_1 p_2\dots p_i \dots p_m+1$. Aus Satz 1.4 folgt, dass eine Primzahl $p_i$ (aus der Liste $\{p_1 ,\dots , p_{m}\}$) existiert, mit $p_i$ teilt $k$. Da $p_i$ offensichtlich $p_1 p_2\dots p_i \dots p_m$ teilt, folgt dass $p_i$ $k-p_1\dots p_{m}=1$ teilt. Das ist ein Widerspruch. 
+Nehmen wir das Gegenteil ``$\mathbb{P}$ ist endlich'' an, d.h. $\mathbb{P}=\{p_1,p_2,\dots,p_m\}$ in aufsteigender Folge; also $p_1=2,p_2=3,p_3=5,p_4=7,\dots$. Wir betrachten die Zahl $k=p_1 p_2\dots p_i \dots p_m+1$. Aus Satz 1.4 folgt, dass eine Primzahl $p_i$ (aus der Liste $\{p_1 ,\dots , p_{m}\}$) existiert, mit $p_i$ teilt $k$. Da $p_i$ offensichtlich $p_1 p_2\dots p_i \dots p_m$ teilt, folgt dass $p_i$ die Restzahl $k-p_1\dots p_{m}=1$ teilt. Das ist ein Widerspruch. 
 
 \subsection*{Teilbarkeit}
 \subsubsection{Formale Definition}
-Eine Ganze Zahl $a$ teilt eine ganze Zahl $b$ genau dann, wenn es eine ganze Zahl $n$ gibt, für die $an=b$ ist. \\
+Eine ganze Zahl $a$ teilt eine ganze Zahl $b$ genau dann, wenn es eine ganze Zahl $n$ gibt, für die $an=b$ ist. \\
 \begin{center}
 \begin{tabular}{l|l}
 Man sagt dann (Synonyme) & Man schreibt \\\hline 
@@ -139,37 +140,40 @@ $b$ ist Vielfaches von $a$ & ~\\
 \begin{itemize}
 \item Gilt $a\mid b$ und $b\mid c$, so folgt $a\mid c$
 \item Für $k\in\mathbb{Z}\backslash\{0\}$ gilt: $a\mid b\Longleftrightarrow ka\mid kc$ 
-\item $a\mid b$ und $c\mid d\Rightarrow ac\mid bd$
-\item $a\mid b$ und $a\mid c\Rightarrow a\mid kb+lc,\text{    für alle }l,k\in\mathbb{Z}$
+\item $a\mid b$ und $c\mid d\to ac\mid bd$
+\item $a\mid b$ und $a\mid c\to a\mid kb+lc,\text{    für alle }l,k\in\mathbb{Z}$
 \end{itemize}
+
+\subsubsection{Formaler Beweis von Satz 1.5}
 
 \begin{enumerate}
 \item $k=\left( p_1 p_2\dots p_i \dots p_m \right)+1$\\
-Es gibt eine Primzahl $p_i$ dass $k$ teilt. $p_i\mid k$ mittels Satz 1.4.
-\item Sei $b=p_1 p_2\dots p_i \dots p_m=$ produkt aller Primzahlen. Sei $a=p_i$, $n=p_1 p_2 p_{i-1} p_{i+1} \dots p_m$. Dann $b=an$. Dass heisst $a$ ist Teiler von $b$, d.h. $p_i\mid\left(p_1\dots p_m\right)$
-\item $p_i\mid k$ und $p_i\mid \left(p_1\dots p_m\right) \Rightarrow p_i \mid k-\left(p_1\dots p_m\right)=1$.\\
-So erhalten wir einen Wiederspruch
+Es gibt eine Primzahl $p_i$ die $k$ teilt. $p_i\mid k$ mittels Satz 1.4.
+\item Sei $b=p_1 p_2\dots p_i \dots p_m=$ Produkt aller Primzahlen. Sei $a=p_i$, $n=p_1 p_2 p_{i-1} p_{i+1} \dots p_m$. Dann $b=an$. Das bedeuted, dass $a$ ein Teiler von $b$ ist, d.h. $p_i\mid\left(p_1\dots p_m\right)$
+\item $p_i\mid k$ und $p_i\mid \left(p_1\dots p_m\right) \to p_i \mid k-\left(p_1\dots p_m\right)=1$.\\
+So erhalten wir einen Widerspruch.
 \end{enumerate}
 
 \subsubsection*{Bemerkung}
-Letztes mal haben wir gesagt, dass jedes Element von $A$ ist auch Element von $B$ ($\forall x,x\in A\Rightarrow x\in B$) mit $A\subset B$ bezeichnet wird. Wir sagen auch $A$ ist in $B$ enthalten oder $A$ ist Teilmenge von $B$. Falls $A\subset B$ und eine Element $b\in B$ gibt mit $b\not\in A$ sagen wir $A$ ist eine ``eigentliche Teilmenge'' von $B$. Manchmal schreiben wir $A\mathop  \subset \limits_{\not  = } B$ in diesem Fall. \\
+Letztes mal haben wir gesagt, dass ``jedes Element von $A$ ist auch Element von $B$'' ($\forall x,x\in A\to x\in B$) mit $A\subset B$ bezeichnet wird. Wir sagen auch ``$A$ ist in $B$ enthalten'' oder ``$A$ ist Teilmenge von $B$''. Falls $A\subset B$ und eine Element $b\in B$ existiert mit $b\not\in A$, so sagen wir ``$A$ ist eine ``eigentliche Teilmenge'' von $B$''. Manchmal schreiben wir $A\mathop  \subset \limits_{\not  = } B$ in diesem Fall. \\
 
-Es gibt viele Bücher mit der folgenden Notation: jedes Element von $A$ ist ein Element von $B$ wird mit $A\subseteq B$ bezeichnet. Und wenn $A\subseteq B$ und $A\not =B$ dann benutzen sie $A\subset B$ statt $A\mathop  \subset \limits_{\not  = } B$. $A=B$ falls $x\in A\Leftrightarrow x\in B$. 
+Es gibt viele Bücher mit der folgenden Notation: ``jedes Element von $A$ ist ein Element von $B$'' wird mit $A\subseteq B$ bezeichnet. Und wenn $A\subseteq B$ und $A\not =B$ dann wird $A\subset B$ statt $A\mathop  \subset \limits_{\not  = } B$ benutzt. $A=B$ falls $x\in A\Leftrightarrow x\in B$. 
 
 \subsubsection*{Satz}
 $A=B \Leftrightarrow A\subset B$ und $B\subset A$ 
 \subsubsection*{Beweis}
-Annahme: $A=B$. Falls $x\in A$, dann mittels $A=B$, $x\in B$ gilt, damit gilt $A\subset B$ und falls $x\in B$, dann $x\in A$ gilt (mittels $A=B$) damit gilt $B\subset A$.\\
+Annahme: $A=B$. Falls $x\in A$, dann gilt, mittels $A=B$, $x\in B$ und damit gilt auch $A\subset B$. Falls $x\in B$, dann gilt $x\in A$ (mittels $A=B$), und damit gilt $B\subset A$.\\
 
-Wir haben bewiesen dass $A=B \Rightarrow A\subset B \text{ und } B\subset A$. Zunächst nehmen wir an dass $A\subset B$ und $B\subset A$. Wir möchten zeigen dass $A=B$. \\
+Wir haben bewiesen, dass $A=B \to A\subset B \text{ und } B\subset A$. \\
+Nun nehmen wir $A\subset B$ und $B\subset A$ an. Damit möchten wir $A=B$ zeigen. \\
 
-Sei $x\in A$, mittels $A\subset B$, haben wir $x\in B$ somit $x\in A \Rightarrow x\in B$. (\textasteriskcentered)\\
+Sei $x\in A$. Mittels $A\subset B$ erhalten wir $x\in B$ und somit $x\in A \to x\in B$. (\textasteriskcentered)\\
 
-Sei $x\in B$, mittels $B\subset A$, haben wir $x\in A$ somit $x\in B \Rightarrow x\in A$. (\textasteriskcentered\textasteriskcentered)\\
+Sei $x\in B$. Mittels $B\subset A$ erhalten wir $x\in A$ und somit $x\in B \to x\in A$. (\textasteriskcentered\textasteriskcentered)\\
 
-(\textasteriskcentered) und (\textasteriskcentered\textasteriskcentered) $\Rightarrow A=B$ per Definition. 
+(\textasteriskcentered) und (\textasteriskcentered\textasteriskcentered) $\to A=B$ per Definition. 
 
-\section{Mengeoperationen}
+\section{Mengenoperationen}
 Zunächst erinnern wir kurz an die Definitionen der elementaren Operationen auf Mengen. \\
 
 \noindent Seien $A$ und $B$ Mengen. Wir können dann daraus folgende Mengen bilden:
@@ -189,9 +193,9 @@ Seien $A,B,C$ Mengen.
 $A\cap \emptyset=\emptyset$; $A\cup \emptyset=A$\vspace{-4mm}
 \subsubsection*{Bemerkung}
 \begin{itemize}
-    \item $\cup$ verhaltet sich wie $+$
-    \item $\cap$ verhaltet sich wie Multiplikation
-    \item $\emptyset$ verhaltet sich wie das Nullelement
+    \item $\cup$ verhält sich wie $+$
+    \item $\cap$ verhält sich wie die Multiplikation
+    \item $\emptyset$ verhält sich wie das Nullelement
 \end{itemize}
     \item $\left( A\cup B\right)\cup C=A\cup\left( B\cup C\right)$\\
     $\left( A\cap B\right)\cap C=A\cap\left( B\cap C\right)$
@@ -217,7 +221,7 @@ Das Kartesische Produkt $A\times B$ der Mengen $A,B$ ist die Menge der geordnete
 \end{definition}
 
 \subsubsection*{Beispiel}
-$\mathbb{Z}\times\mathbb{Z}=\{(a,b):a\in\mathbb{Z},b\in\mathbb{Z}\}$. Falls $\mathbb{Z}$ als ``eindimensionalen'' Gebilde dargestellt wird 
+$\mathbb{Z}\times\mathbb{Z}=\{(a,b):a\in\mathbb{Z},b\in\mathbb{Z}\}$. Falls $\mathbb{Z}$ als ``eindimensionales'' Gebilde dargestellt wird 
 
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
@@ -250,8 +254,7 @@ $\mathbb{Z}\times\mathbb{Z}=\{(a,b):a\in\mathbb{Z},b\in\mathbb{Z}\}$. Falls $\ma
 \end{tikzpicture}
 \end{center}
 
-
-so wird $\mathbb{Z}\times\mathbb{Z}$ als ``zweidimensionalen'' Gebilde dargestellt 
+So wird $\mathbb{Z}\times\mathbb{Z}$ als ``zweidimensionales'' Gebilde dargestellt 
 
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
@@ -302,7 +305,7 @@ so wird $\mathbb{Z}\times\mathbb{Z}$ als ``zweidimensionalen'' Gebilde dargestel
 
 
 
-Um die Operationen auf mehrere Mengen zu Verallgemeinern sind die folgenden Quantoren nützlich ($\ast$)
+Um die Operationen auf mehrere Mengen zu verallgemeinern, sind die folgenden Quantoren nützlich ($\ast$)
 \begin{enumerate}
 \item $\forall$ ``Für alle'' (Allquantor)
 \item $\exists$ ``Es gibt'' (Existenzquantor)
@@ -310,44 +313,50 @@ Um die Operationen auf mehrere Mengen zu Verallgemeinern sind die folgenden Quan
 \end{enumerate}
 Sei nun $I$ eine beliebige Menge ($I$=Indexmenge) und sei für alle $i\in I$ eine Menge $A_i$ gegeben. Dann:
 \begin{itemize}
-\item $\mathop{\bigcup}\limits_{i \in I}{A_i} = \{x\mid \exists i\in I,x\in A_i\}$. Vereinigung besteht aus den Elementen $x$, für welche eine $i\in I$ gibt so dass $x$ zu $A_i$ gehört.
+\item $\mathop{\bigcup}\limits_{i \in I}{A_i} = \{x\mid \exists i\in I,x\in A_i\}$. Vereinigung besteht aus den Elementen $x$, für welche es ein $i\in I$ gibt, so dass $x$ zu $A_i$ gehört.
 \item  $\mathop{\bigcap}\limits_{i \in I}{A_i} = \{x\mid \forall i\in I,x\in A_i\}$. Durchschnitt. 
 \end{itemize}
-Wir können noch das Kartesische Produkt endlich vieler Mengen $A_1 \dots A_n$ definieren: \[{A_1} \times {A_n} = \prod\limits_{i = 1}^n {{A_i} = \{ ({x_1} \ldots {x_n})\mid {x_i} \in {A_i}} \} \]
+Wir definieren das Kartesische Produkt endlich vieler Mengen $A_1 \dots A_n$: \[{A_1} \times {A_n} = \prod\limits_{i = 1}^n {{A_i} = \{ ({x_1}, \ldots, {x_n})\mid {x_i} \in {A_i}} \} \]
 
 \subsubsection*{Satz 1.8}
-Seien $A_1 \dots A_k \subset X, \; k\in \mathbb{N}$. Es gilt
+Seien $A_1 \dots A_k \subset X, \; k\in \N$. Es gilt
 \begin{enumerate}
 \item \[{\left( {\bigcap\limits_{i = 1}^k {{A_i}} } \right)^c} = \bigcup\limits_{i = 1}^k {{A_i}^c} \]
 \item \[{\left( {\bigcup\limits_{i = 1}^k {{A_i}} } \right)^c} = \bigcap\limits_{i = 1}^k {{A_i}^c} \]
 \end{enumerate}
 \subsubsection*{Beweis}
 \begin{align*}
-{\left( {\bigcap\limits_{i = 1}^k {{A_i}} } \right)^c} =&\left\{ {x \in X:x\not  \in \bigcap\limits_{i = 1}^k {{A_i}} } \right\} = \left\{ {x \in X\exists i \in \left\{ {1, \ldots ,k} \right\}:x\not  \in {A_i}} \right\}\\
-=&\bigcup\limits_{i = 1}^k {\left\{ {x \in X:x\not  \in {A_i}} \right\}}  = \bigcup\limits_{i = 1}^k {A_i^c}
+{\left( {\bigcap\limits_{i = 1}^k {{A_i}} } \right)^c}
+  =&\left\{x \;| \; {x \in X \wedge x\not  \in \bigcap\limits_{i = 1}^k {{A_i}} } \right\} 
+  = \left\{ x \;| \; {x \in X, \exists i \in \left\{ {1, \ldots ,k} \right\}:x\not  \in {A_i}} \right\}\\
+ =&\bigcup\limits_{i = 1}^k {\left\{ x \;| \; {x \in X \wedge x\not  \in {A_i}} \right\}}   = \bigcup\limits_{i = 1}^k {A_i^c}
 \end{align*}
 und
 \begin{align*}
-{\left( {\bigcup\limits_{i = 1}^k {{A_i}} } \right)^c} =&\left\{ {x \in X:x\not  \in \bigcup\limits_{i = 1}^k {{A_i}} } \right\} = \left\{ {x \in X\forall i \in \left\{ {1, \ldots ,k} \right\}:x\not  \in {A_i}} \right\}\\
-=&\bigcap\limits_{i = 1}^k {\left\{ {x \in X:x\not  \in {A_i}} \right\}}  = \bigcap\limits_{i = 1}^k {A_i^c} 
+{\left( {\bigcup\limits_{i = 1}^k {{A_i}} } \right)^c} 
+=&\left\{x \;| \; {x \in X \wedge x\not  \in \bigcup\limits_{i = 1}^k {{A_i}} } \right\} 
+= \left\{x \;| \; {x \in X, \forall i \in \left\{ {1, \ldots ,k} \right\}:x\not  \in {A_i}} \right\}\\
+=&\bigcap\limits_{i = 1}^k {\left\{ {x \;| \;x \in X \wedge x\not  \in {A_i}} \right\}}  
+= \bigcap\limits_{i = 1}^k {A_i^c} 
 \end{align*}
 \noindent (Siehe Analysis Serie 1, 1. Semester, Aufgabe 2.e)
 \begin{enumerate}[($\ast$)]
-\item Wir haben gesehen dass wir manchmal eine Aussage verneinen müssen. Deshalb müssen wir lernen wie man Aussage mit Quantoren verneinen kann.
+\item Wir haben gesehen, dass wir manchmal eine Aussage verneinen müssen. Deshalb müssen wir lernen wie man Aussagen mit Quantoren verneinen kann.
 \[\neg\left(\forall n:A(n)\right)\Leftrightarrow\left(\exists n:\neg A(n)\right)\]
 \[\neg\left(\exists n:A(n)\right)\Leftrightarrow\left(\forall n:\neg A(n)\right)\]
-\[\neg\left(\forall x\in \mathbb{R}:x^2\geq 0\right)\Leftrightarrow\exists x\in\mathbb{R}:x^2<0\]
+\[\neg\left(\forall x\in \R:x^2\geq 0\right)\Leftrightarrow\exists x\in\R:x^2<0\]
 \end{enumerate}
 \section{Abbildungen}
 Seien $X,Y$ Mengen. 
 
 \begin{definition}{1.9}
-Eine Funktion oder Abbildung $f:X\rightarrow Y$ der Menge $X$ in die Menge $Y$ ist eine Vorschrift (ein Gesetz) die (das) jedem Element $x\in A$ genau ein Element $y=f(x)\in Y$ zuordnet. \\
+Eine Funktion oder Abbildung $f:X\to Y$ der Menge $X$ in die Menge $Y$ ist eine Vorschrift (ein Gesetz) die (das) jedem Element $x\in A$ genau ein Element $y=f(x)\in Y$ zuordnet. \\
 
-Es gibt verschiedene wichtige Objekte die in Zusammenhang mit einem Abbildung auftreten 
-\begin{align*}X &= \text{ \emph{Definitionsbereich} oder \emph{Definitionsmenge} (domain)} \\
+Es gibt verschiedene wichtige Objekte die in Zusammenhang mit einer Abbildung auftreten 
+\begin{align*}
+X &= \text{ \emph{Definitionsbereich} oder \emph{Definitionsmenge} (domain)} \\
 Y&= \text{ \emph{Wertebereich} oder \emph{Zielmenge} (range)} \\
-f(x) &=\{f(x)\mid x\in X\}\text{ ist das sog. \emph{Bild} oder die \emph{Bildmenge}} \\
+f(X) &=\{f(x)\mid x\in X\}\text{ ist das sog. \emph{Bild} oder die \emph{Bildmenge}} \\
 f^{-1}(y) &= x\text{ heisst \emph{Urbild} von }y. \end{align*}
 Der \emph{Graph} einer Funktion $f$ ist die Menge aller Paare $(x, f(x))$ wobei $x$ alle Elemente der Menge $X$ durchläuft. Er ist eine Teilmenge von $X \times Y$.
 \[ Gr(f) \defeq \{ (x, f(x)) \mid x \in X\} \]
@@ -355,7 +364,7 @@ Der \emph{Graph} einer Funktion $f$ ist die Menge aller Paare $(x, f(x))$ wobei 
 
 \subsubsection*{Beispiel 1.10}
 \begin{enumerate}
-\item (Identität) Für jede Menge $\Romanbar{X}$, ist $id_X : \Romanbar{X} \rightarrow\Romanbar{X}$ definiert durch $id_{\Romanbar{X}}(x)=x, \forall x\in X$ 
+\item (Identität) Für jede Menge $\Romanbar{X}$, ist $id_X : \Romanbar{X} \to\Romanbar{X}$ definiert durch $id_{\Romanbar{X}}(x)=x, \forall x\in X$ 
 
 \begin{center}
 \begin{tikzpicture}[scale=0.5]
@@ -388,7 +397,7 @@ Der \emph{Graph} einer Funktion $f$ ist die Menge aller Paare $(x, f(x))$ wobei 
 
 
 
-\item (Konstante) Sei $X$ Menge und $c\in \Romanbar{X}$. Die konstante Abbildung mit wert $c$ ist $f(x)=c, \forall x \in \Romanbar{X}$  
+\item (Konstante) Sei $X$ Menge und $c\in \Romanbar{X}$. Die konstante Abbildung mit Wert $c$ ist $f(x)=c, \forall x \in \Romanbar{X}$  
 
 \begin{center}
 \begin{tikzpicture}[scale=0.5]
@@ -421,18 +430,18 @@ Der \emph{Graph} einer Funktion $f$ ist die Menge aller Paare $(x, f(x))$ wobei 
 
 \item Seien $X,Y$ Mengen. Dann sind \\
 \begin{tabular}{r  l c r l c }
-$pr_x:$ & $X\times Y\rightarrow X $& ~ & $pr_y$: & $X\times Y\rightarrow Y$ \\
-~& $(x,y)\rightarrow x$ & ~& ~& $(x,y)\rightarrow y$ \\
+$pr_x:$ & $X\times Y\to X $& ~ & $pr_y$: & $X\times Y\to Y$ \\
+~& $(x,y)\mapsto x$ & ~& ~& $(x,y)\mapsto y$ \\
 \end{tabular}\\
-die Projektionen auf den ersten bzw. zweiten Faktoren. 
-\item Sinus \begin{align*} f:\mathbb{R}&\rightarrow\lbrack -1,1\rbrack \\ x &\rightarrow \sin x \end{align*}
-\item \begin{align*}f:\mathbb{R}&\rightarrow\mathbb{R} \\ x&\rightarrow x^2+x\end{align*}
+die Projektionen auf den ersten bzw. zweiten Faktor. 
+\item Sinus \begin{align*} f:\R&\to\lbrack -1,1\rbrack \\ x &\mapsto \sin x \end{align*}
+\item \begin{align*}f:\R&\to\R \\ x&\mapsto x^2+x\end{align*}
 \end{enumerate}
 \begin{definition}{1.11}
-Sei $f:X\rightarrow Y$ eine Abbildung
+Sei $f:X\to Y$ eine Abbildung
 \begin{enumerate}
-\item $f$ heisst injektiv falls auf $f(x_1)=f(x_2)$ stets $x_1=x_2$ folgt, falls jeder $y<\in Y$ höchstens ein Urbild hat.
-\item $f$ heisst surjektiv falls für jedes $y\in Y$ ein $x\in X$ gibt mit $f(x)=y$ \[\forall y\in Y, \exists x\in X:f(x)=y\]wenn jedes Element $y\in Y$ mindestens ein Urbild hat. 
+\item $f$ heisst injektiv falls aus $f(x_1)=f(x_2)$ stets $x_1=x_2$ folgt, also falls jedes $y\in Y$ höchstens ein Urbild hat.
+\item $f$ heisst surjektiv falls es für jedes $y\in Y$ ein $x\in X$ gibt mit $f(x)=y$ \[\forall y\in Y, \exists x\in X:f(x)=y\] Also wenn jedes Element $y\in Y$ mindestens ein Urbild hat. 
 \item $f$ heisst bijektiv falls $f$ injektiv und surjektiv ist, d.h. falls jedes $y\in Y$ genau ein Urbild hat. 
 \end{enumerate}
 \end{definition}
@@ -440,40 +449,40 @@ Sei $f:X\rightarrow Y$ eine Abbildung
 \begin{multicols}{2}
 [\subsubsection*{Beispiel 1.12}]
 \begin{enumerate}
-\item $id_{X}:X\rightarrow X$ bijektiv.
+\item $id_{X}:X\to X$ bijektiv.
 \item Eine konstante Abbildung \\
-	$f:\Romanbar{X}\rightarrow X, x\rightarrow c$ ist 
+	$f:\Romanbar{X}\to X, x\mapsto c$ ist 
 \begin{itemize}
 \item injektiv $\Leftrightarrow \Romanbar{X}=\{ c\}$
 \item surjektiv $\Leftrightarrow X=\{ c\}$
 \end{itemize}
 \item Die Projektionen 
 \begin{itemize}
-\item $pr_x : X\times Y\rightarrow X$ 
-\item $pr_y : X\times Y\rightarrow Y$ 
+\item $pr_x : X\times Y\to X$ 
+\item $pr_y : X\times Y\to Y$ 
 \end{itemize}
 sind stets surjektiv.
-\item $f:\mathbb{R}\rightarrow\lbrack -1,1\rbrack$ \\
-$x\rightarrow \sin x$\\
+\item $f:\R\to\lbrack -1,1\rbrack$ \\
+$x\mapsto \sin x$\\
 Surjektiv, nicht injektiv
 \columnbreak
-\item $f:\mathbb{R}\rightarrow\mathbb{R}$\\
-$x\rightarrow x^2$\\
+\item $f:\R\to\R$\\
+$x\mapsto x^2$\\
 Nicht surjektiv\\
 Nicht injektiv
 
-\item $f:\mathbb{N}\rightarrow\mathbb{N}$\\
-$n\rightarrow 2n$\\
-ist injektiv. $f(\mathbb{N})$ ist die Menge aller geraden Zahlen
-\item Eine Menge $A$ hat $n$ Elemente falls es eine bijektive ${f:\{1,\dots,n\}\rightarrow A}$ gibt. Die Zahl $n$ wird dann die Kardinalität von $A$ genannt und mit $|A|$, gelegentlich auch mit $\#A$ bezeichnet.
+\item $f:\N\to\N$\\
+$n\mapsto 2n$\\
+ist injektiv. $f(\N)$ ist die Menge aller geraden Zahlen
+\item Eine Menge $A$ hat $n$ Elemente falls es eine bijektive ${f:\{1,\dots,n\}\to A}$ gibt. Die Zahl $n$ wird dann die Kardinalität von $A$ genannt und mit $|A|$, gelegentlich auch mit $\#A$ bezeichnet.
 \end{enumerate}
 \end{multicols}
 
 \begin{definition}{Kardinalität}
-Wir sagen zwei Mengen $X$ und $Y$ sind gleichmächtig falls eine bijektive Abbildung $f:X\rightarrow Y$ gibt.
+Wir sagen zwei Mengen $X$ und $Y$ sind gleichmächtig falls eine bijektive Abbildung $f:X\to Y$ existiert.
 \end{definition}
 
-Mit dem ersten Cantorschen Diagonalverfahren kann man die rationalen Zahlen abzählen, d.h.$ \mathbb{Q}$ und $\mathbb{N}$ sind gleichmächtig
+Mit dem ersten Cantorschen Diagonalverfahren kann man die rationalen Zahlen abzählen, d.h.$ \mathbb{Q}$ und $\N$ sind gleichmächtig
 
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
@@ -541,8 +550,10 @@ Mit dem ersten Cantorschen Diagonalverfahren kann man die rationalen Zahlen abz�
 
 \end{tikzpicture}
 \end{center}
-\section{Dedekind Schubladen Prinzip}\todo{Is this supposed to be a new chapter?? page 19}
-Sei $f:A\rightarrow B$ eine beliebige Abbildung zwischen endliche Mengen. Falls $\left| B\right| < \left| A \right|$ dann ist $f$ nicht injektiv, d.h. es gibt $b\in B$ und $a_1,a_2\in A$ mit
+
+\section{Dedekind Schubladen Prinzip}
+Sei $f:A\to B$ eine beliebige Abbildung zwischen endlichen Mengen. Falls ${\left| B\right| < \left| A \right|}$ % the {} prevent undesired breaking of formula
+dann ist $f$ nicht injektiv, d.h. es gibt $b\in B$ und $a_1,a_2\in A$ mit
 \begin{enumerate}[i)]
 \item $a_1\not=a_2$
 \item $f(a_1)=f(a_2)=b$
@@ -586,50 +597,71 @@ Sei $f:A\rightarrow B$ eine beliebige Abbildung zwischen endliche Mengen. Falls 
 \end{center}
 \centerline{$3=\left| B\right| < 5 = \left| A \right|$}
 
-Mit Abbildungen kann man ``operieren''. Die wichstige Operation ist die Verkettung (oder komposition) zweier Abbildungen. 
+Mit Abbildungen kann man ``operieren''. Die wichstige Operation ist die Verkettung (oder Komposition) zweier Abbildungen. 
 
 \begin{definition}
-\noindent Abbildungen $f:X\rightarrow $, $g:Y\rightarrow Z$ kann man miteinander ausführen. Dies ergibt eine neue Abbildung \[X\mathop  \to \limits^f Y\mathop  \to \limits^g Z\] \[F:=g\circ f:X\rightarrow Z, x\rightarrow g\left( f(x)\right)   \]
+\noindent Abbildungen $f:X\to Y$, $g:Y\to Z$ kann man miteinander ausführen. Dies ergibt eine neue Abbildung \[X\mathop  \to \limits^f Y\mathop  \to \limits^g Z\] \[F:=g\circ f:X\to Z, x\mapsto g\left( f(x)\right)   \]
+\[\text{Man sagt}
+\begin{cases}
+g \text{ nach } f \\
+g \text{ komponiert mit } f \\
+g \circ f
+\end{cases}\]
 \end{definition}
-Zwei Funktionen $f$ und $g$ können verkettet werden wenn der Wertebereich der ersten Funktion mit dem Definitionsbereich der zweiten Funktion übereinstimmt. 
+Zwei Funktionen $f$ und $g$ können verkettet werden wenn der Wertebereich der ersten Funktion mit dem Definitionsbereich der zweiten Funktion übereinstimmt.
 
-\[\text{Man Sagt}\left\{ {\begin{array}{*{20}{c}}
-{g\text{ nach }f\text{ oder }}\\
-{g\text{ komponiert mit }f}\\
-{g\circ f}
-\end{array}} \right.\]
+%man sagt part moved into definition
 
 \underline{Zu Beachten:}
-In dieser Notation steht die zuerst angewandte Abbildung rechts; das heisst bei $g\circ f$ wird zuerst die Funktion $f$ angewandt und dann die Funktion $g$. 
+In dieser Notation steht die zuerst angewandte Abbildung rechts. Das bedeutet bei $g\circ f$ wird zuerst die Funktion $f$ angewandt und dann die Funktion $g$. 
 \begin{itemize}
-\item Die Identische Abbildung verhölt sich bei der Komposition \todo{?neu?, page 19.2 top}, für eine Funktion \[f:X\rightarrow Y \text{ gilt also}\]
-\[f\circ id_X=f=id_Y \circ Y\] wobei \[id_X:\Romanbar{X}\rightarrow\Romanbar{X}\]\[x\rightarrow x\] \[id_Y :Y\rightarrow Y\]\[y\rightarrow y\]
+\item Die Identische Abbildung verhält sich bei der Komposition neutral, für eine Funktion \[f:X\to Y \text{ gilt also}\]
+\[f\circ id_X=f=id_Y \circ f\] wobei
+\begin{align*}
+id_X:\Romanbar{X}&\to\Romanbar{X} \\
+x&\mapsto x \\
+id_Y :Y&\to Y \\ 
+y&\mapsto y
+\end{align*}
 
-\item Die Komposition von Funktionen ist associativ, d.h. für Funktionen $f,g,h$ gilt \[\left( h\circ g\right)\circ f=h\circ \left( g\circ f\right)\]
+\item Die Komposition von Funktionen ist assoziativ, d.h. für Funktionen $f,g,h$ gilt \[\left( h\circ g\right)\circ f=h\circ \left( g\circ f\right)\]
 \item Aber die Komposition von Funktionen ist im Allgemeinen nicht kommutativ! \[f\circ g\not= g\circ f\]
 Zum Beispiel:
-\[f:\mathbb{R}\rightarrow\mathbb{R}\]\[x\rightarrow x^2\]\[g:\mathbb{R}\rightarrow\mathbb{R}\]\[x\rightarrow x+1\]
-\[f\circ g=f\left( g(x)\right)=f(x+1)=(x+1)^2=x^2+2x+1\]\[g\circ f=g\left( f(x)\right)=g(x^2)=x^2+1\]
+
+\begin{align*}
+f:\R &\to\R \\
+x &\mapsto x^2 \\
+g:\R&\to\R \\
+x &\mapsto x+1
+\end{align*}
+\[f\circ g=f\left( g(x)\right)=f(x+1)=(x+1)^2=x^2+2x+1 \]
+\[g\circ f=g\left( f(x)\right)=g(x^2)=x^2+1\]
 \end{itemize}
 
-\section{Die Inverse Abbildung (Umkehrfunktion)}
-Sei $f:X\rightarrow Y$ eine bijektiven Funktion. \\
+\section{Die inverse Abbildung (Umkehrfunktion)}
+Sei $f:X\to Y$ eine bijektive Funktion. \\
 
-Die Inverse Funktion $g:Y\rightarrow X$, einer bijektiven Funktion $f:X\rightarrow Y$ ist die Funktion, die jedem Element $y$ der Zielmenge seien eindeutig bestimmtes Urbildelement zuweist. (bei bijektiven Funktionen hat die Urbildmenge jedes Element $y$ genau ein Element). \\
 
- $g(y):=x$, eindeutig definierte $ x\in\Romanbar{X}$, mit $f(x)=y$. Dann ist definitionsgemäss $(g\circ f)(x)=x$, d.h. $g\circ f:id_{\Romanbar{X}}$. Die Eindeutig definierte Abbildung $g$ wird (auch) mit $f^{-1}$ bezeichnet und Inverse von $f$ genannt.\\
+Die inverse Funktion $g:Y\to X$ einer bijektiven Funktion $f:X\to Y$ ist die Funktion, die jedem Element $y$ der Zielmenge dessen eindeutig bestimmtes Urbildelement zuweist. (bei bijektiven Funktionen hat die Urbildmenge jedes Elements $y$ genau ein Element). \\
 
-Für $f\circ f^{-1}:$ Sei $y\in Y$ und sei $x$ mit $f(x)=y$. Dann ist $\left( f\circ f^{-1}\right)(y)=f\left(f^{-1}(y)\right)=f(x)=y$ \[f\circ f^{-1}=id_Y\]
+ $g(y):=x$, eindeutig definiertes $ x\in\Romanbar{X}$, mit $f(x)=y$. Dann ist definitionsgemäss $(g\circ f)(x)=x$, d.h. $g\circ f:id_{\Romanbar{X}}$. Die eindeutig definierte Abbildung $g$ wird (auch) mit $f^{-1}$ bezeichnet und Umkehrfunktion von $f$ genannt.\\
+
+Für $f\circ f^{-1}:$ Sei $y\in Y$ und $x$ erfülle $f(x)=y$. Dann ist $\left( f\circ f^{-1}\right)(y)=f\left(f^{-1}(y)\right)=f(x)=y$ \[f\circ f^{-1}=id_Y\]
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
-\item \[f:\mathbb{R}\rightarrow\mathbb{R}\]\[x\rightarrow 2x+3\] bijektive\\
-Umkehrfunktion ist gegeben durch \[f^{-1}:\mathbb{R}\rightarrow\mathbb{R}\]\[x\rightarrow\frac{x-3}{2}\]
-\item Sei $\mathbb{R}^+=\lbrack 0,\infty\rbrack$ die Menge der nichtnegativen reelen Zahlen und \[f:\mathbb{R}^+\rightarrow\mathbb{R}^+\] mit \[x\rightarrow x^2\]
-Dann ist $f$ bijektive und die Umkehrfunktion \[f^{-1}:\mathbb{R}^+\rightarrow\mathbb{R}^+\] ist gegeben durch \[x\rightarrow\sqrt{x}\]
+\item \begin{align*} f:\R&\to\R \\
+x&\mapsto 2x+3 \end{align*}
+Die Funktion is bijektiv. \\
+Die Umkehrfunktion ist gegeben durch \begin{align*}f^{-1}:\R&\to\R \\
+x&\mapsto\frac{x-3}{2}\end{align*}
+\item Sei $\R^+=\lbrack 0,\infty\rbrack$ die Menge der nichtnegativen reellen Zahlen und \begin{align*}f:\R^+&\to\R^+ \\
+x&\mapsto x^2\end{align*}
+Dann ist $f$ bijektiv und die Umkehrfunktion  ist gegeben durch \begin{align*}f^{-1}:\R^+&\to\R^+ \\
+x&\mapsto\sqrt{x}\end{align*}
 \end{enumerate}
 
-\underline{Verallgemenerungen}
-Falls $f:X\rightarrow Y$ injektive ist, kann man die Umkehrabbildung \[f^{-1}:f\left(\Romanbar{X}\right)\rightarrow\Romanbar{X}\] definieren. Das heisst, die Funktion $f^{-1}$ erfüllt: wenn $f(x)=y$, dann $f^{-1}(y)=x$\\
+\textbf{Verallgemeinerungen}
+Falls $f:X\to Y$ \emph{injektiv} ist, kann man die Umkehrabbildung $f^{-1}:f\left(\Romanbar{X}\right)\to\Romanbar{X}$ definieren. Das heisst, die Funktion $f^{-1}$ erfüllt: wenn $f(x)=y$, dann ${f^{-1}(y)=x}$.\\
 
-\noindent Vorsicht: $f^{-1}\circ f=id_{\Romanbar{X}}$ aber $f\circ f^{-1}=id_{f\left(\Romanbar{X}\right)}$ und $f\circ f^{-1}=id_Y$ genau dann wenn $f(X)=Y$, d.h. $f$ bijektive ist.
+\noindent Vorsicht: $f^{-1}\circ f=id_{\Romanbar{X}}$ aber $f\circ f^{-1}=id_{f\left(\Romanbar{X}\right)}$ und $f\circ f^{-1}=id_Y$ nur genau dann wenn $f(X)=Y$, d.h. $f$ bijektiv ist.

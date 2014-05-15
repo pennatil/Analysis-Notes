@@ -5,6 +5,25 @@
 \DeclareMathOperator{\arctanh}{arctanh}%Defined here since it doesn't exist
 \newcommand{\verteq}[0]{\begin{turn}{90} $=$\end{turn}}%added vertical equal sign
 \DeclareMathOperator{\Hess}{Hess}%Defined here since it doesn't exist
+\DeclareMathOperator{\rot}{rot}%Defined here since it doesn't exist
 
 \newcommand{\defeq}{\vcentcolon=}% nicer :=
 \newcommand{\eqdef}{=\vcentcolon}% nicer =:
+
+\newcommand{\R}{\mathbb{R}} % set R with \R
+\newcommand{\N}{\mathbb{N}} % set N with \N
+
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert} % nice |x|
+\DeclarePairedDelimiter\norm{\lVert}{\rVert} % nice ||x||
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+% Shamelessly copied from http://tex.stackexchange.com/questions/43008/absolute-value-symbols

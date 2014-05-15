@@ -50,7 +50,7 @@ wobei $f(t)=$ die noch vorhandeden Masse eines Stoffes. Pro zeiteinheit zerfalle
 Sei $m$ eine Massepunkt der Unter Einfluss der Schwerkraft fällt. Es kann auch ein Reibungskraft geben. \\
 
 Die grösse der Reibungskraft ist proportional zur Geschwindigkeit. Dann ist, nach der zweiten Newtonische Gesetzt \[m\ddot x = mg - a\dot x\text{\hspace{10mm}}v=\frac{dx}{dt}\]
-Beim Beispiel 2., haben wir schon letze Semester gesehen dass \[\frac{df(t)}{dt}=-\alpha f\] als eine Lösung $Ke^{-\alpha t}$, $K\in\mathbb{R}$, hat 
+Beim Beispiel 2., haben wir schon letze Semester gesehen dass \[\frac{df(t)}{dt}=-\alpha f\] als eine Lösung $Ke^{-\alpha t}$, $K\in\R$, hat 
 \[f'=-\alpha f\Rightarrow \frac{f'}{f}=-\alpha\]
 \[\int{\frac{f'(t)}{f(t)}dt}=-\int{\alpha dt}\]
 \[\ln\left| f(t)\right|=-\alpha t+C\]
@@ -74,7 +74,7 @@ z.B.:
 \item $y''+2y'+x=0$ ist linear
 \end{itemize}
 
-\noindent Zum nächst betrachten wir Homogene LDG mit konstanten Koeffizienten. Sei \[y^{(n)}+a_{n-1}y^{(n-1)}+\dots+a_0=0\text{\hspace{10mm}(H)}\] wobei $a_i\in\mathbb{R}$ $i=0,\dots,n-1$
+\noindent Zum nächst betrachten wir Homogene LDG mit konstanten Koeffizienten. Sei \[y^{(n)}+a_{n-1}y^{(n-1)}+\dots+a_0=0\text{\hspace{10mm}(H)}\] wobei $a_i\in\R$ $i=0,\dots,n-1$
 \begin{definition}{7.2}
 Das \underline{charakteristische Polynom} der Gleichung (H) ist gegeben durch \[p(t):=t^n+a_{n-1}t^{n-1}+\dots+a_0\]
 \end{definition} 
@@ -95,7 +95,7 @@ Sei $p(\lambda ) = \prod\limits_{i = 1}^l {{{(\lambda  - {\lambda _i})}^{{m_i}}}
 \item Falls die characteristischen Polynom $n$ verschiedene reelle Nullstelle $\lambda_1,\dots,\lambda_n$ besitzt, so bilden ${e^{{\lambda _1}x}},{e^{{\lambda _2}x}}, \ldots ,{e^{{\lambda _n}x}}$ eine Basis des Vektorraums der Lösungen, das heisst für jede Lösung $y(x)$gibt es $c_1,c_2,\dots,c_n$ so dass \[y(x)={c_1}{e^{{\lambda _1}x}} + {c_2}{e^{{\lambda _2}x}} +  \ldots  + {c_n}{e^{{\lambda _n}x}}\]
 
 \item Sei $\lambda$ eine $k-$fache reelle Nullstelle das charakteristisches polynoms. Dann sind \[e^{\lambda x},xe^{\lambda x},\dots ,x^{k-1}e^{\lambda x}\] $k$ linear unabhängige Lösungen. 
-\item Sind $\lambda=\alpha+i\beta$, $\overline{\lambda}=\alpha-i\beta$, \todo{What ?? page 82 bottom} ein Paar konjugiert komplexer $k-$ fache nullstellen, so sind die Funktionen\\\begin{center}
+\item Sind $\lambda=\alpha+i\beta$, $\overline{\lambda}=\alpha-i\beta$, ein Paar konjugiert komplexer $k-$ fache nullstellen, so sind die Funktionen\\\begin{center}
 \begin{tabular}{c c c}
 $e^{\alpha x}\cos\left(\beta x\right)$&\hspace{10mm}&$e^{\alpha x}\sin\left(\beta x\right)$\\
 \vdots&\hspace{10mm} & \vdots\\
@@ -155,7 +155,7 @@ Zur Lösung der inhomogenes DGL kann man in vielen Fällen einen so genannte ``A
 \begin{enumerate}
 \item Wir betrachten die DGL \[y''+y'-6y=3e^{-4x}\]Die Zugehörige homogenes DGL \[y''+y'-6y=0\]
 \[p(\lambda)=\lambda^2+\lambda-6=0\text{\hspace{5mm}}\lambda_{1,2}=2,-3\] Die Allgemeine Lösung der Homogenes DGL ist \[y(x)=c_1e^{-3x}+c_2e^{2x}\] Zur Lösung der inhomogenes DGL verwenden wir einen ``Ansatz vom Typ der Rechten Seite'', gehen also davon aus, dass die spezielle Lösung der inhomogenes DGL die ähnliche Gestalt hat (als die Störfunktion) \[y_s(x)=Ke^{-4x}\]Für die Ableitungen des Ansatzes haben wir \[y_s'(x)=-4Ke^{-4x}\]
-\[y''_s(x)=16Ke^{-4x}\]Eingesetzt in die homogenes DGL ergibt sich \[y''+y'-6y=16Ke^{-4x}-4Ke^{-4x}-6Ke^{-4x}=6Ke^{-4x}=3e^{-4x}\]Also $6K=3\Rightarrow K=\frac{1}{2}$. Damit ist $y_s(x)=\frac{1}{2}e^{-4x}$ und die allgemeine Lösung der DGL \[y(x)=\frac{1}{2}e^{-4x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\mathbb{R}\]
+\[y''_s(x)=16Ke^{-4x}\]Eingesetzt in die homogenes DGL ergibt sich \[y''+y'-6y=16Ke^{-4x}-4Ke^{-4x}-6Ke^{-4x}=6Ke^{-4x}=3e^{-4x}\]Also $6K=3\Rightarrow K=\frac{1}{2}$. Damit ist $y_s(x)=\frac{1}{2}e^{-4x}$ und die allgemeine Lösung der DGL \[y(x)=\frac{1}{2}e^{-4x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\R\]
 \item \[y''+y'-6y=50\sin x\] Wählen wir als ``Ansatz vom Typ der rechten Seite''
 
 \[{y_s}(x) = {K_1}\sin x + {K_2}\cos x\]
@@ -180,7 +180,7 @@ Ein problem ergibt sich, wenn als Störfunktion eine Lösung der homogenes DGL e
 \[ = 5K{e^{2x}} = 10{e^{2x}}\]
 \[\Rightarrow K=2\]
 Der Ansatz führte also auf die Lösung \[y_s(x)=2xe^{2x}\]
-Insgesamt: \[y(x)=2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\mathbb{R}\]
+Insgesamt: \[y(x)=2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\R\]
 \item \[y''+y=\sin x\]
 \[y_H=c_1\sin x+c_2\cos x\]
 Für die Spezielle Lösung zu finden, wählen wir den Ansatz vom Typ der rechten Seite
@@ -213,10 +213,10 @@ wobei $P_n,Q_n,S_n,R_n$ Polynome von Grad $n$ sind.
 \subsubsection*{Bemerkung 7.9}
 \begin{enumerate}
 \item \todo{end of this list? }Liegt eine Linearkombination der Störfunktion vor, so hat man auch als Ansatz eine entsprechende Linearkombination zu wählen. Dies ist Superpositionsprinzip
-\subsubsection*{Beispiel}
-Die DGL $y''+y'-6y=50\sin x$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x\] und die DGL $y''+y'-6y=10e^{2x}$ hat die spezielle Lösung \[y_s(x)=2xe^{2x}\]Die DGL $y''+y'-6y=50\sin x+10e^{2x}$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x+2xe^{2x}\] Die allgemenine Lösung \[y(x)=-7\sin x -\cos x+2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\]
 \subsubsection*{Superpositionsprinzip:}
 Ist $y_1(c)$ eine spezielle Lösung der L. Differentialgleichung \[y^{(n)}(x)+a_{n-1}(x)y^{(n-1)}(x)+\dots +a_0(x)y=b_1(x)\] und $y_2(x)$ eine spezielle Lösung der LDGL \[y^n(x)+\dots +a_0(x)y=b_2(x)\] dann ist $y_1(x)+y_2(x)$ eine Spezielle Lösung der DGL \[y^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\dots+a_0(x)y=b_1(x)+b_2(x)\]
+\subsubsection*{Beispiel}
+Die DGL $y''+y'-6y=50\sin x$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x\] und die DGL $y''+y'-6y=10e^{2x}$ hat die spezielle Lösung \[y_s(x)=2xe^{2x}\]Die DGL $y''+y'-6y=50\sin x+10e^{2x}$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x+2xe^{2x}\] Die allgemenine Lösung \[y(x)=-7\sin x -\cos x+2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\]
 \item Falls $\lambda=\alpha +i\beta$ ($\beta$ kann null sein) eine $m-$fache Nullstelle der characteristichen Polynoms von (Resonanzfall) \[(H)\hspace{10mm}y^n(x)+a_ny^{(n-1)}+\dots +a_0=0\]so muss man den Ansatz für $y_s(x)$mit dem Faktor $x^m$ multiplizieren.
 \subsubsection*{Beispiel}
 $y''+y=\sin x$ hat die spezielle Lösung $y_s=-\frac{1}{2}x\cos x$
@@ -251,16 +251,7 @@ $y''+y=\sin x$ hat die spezielle Lösung $y_s=-\frac{1}{2}x\cos x$
 
 \end{minipage}
 \end{figure}
-
-
-
-
-
-
-
-
-
-
+\end{enumerate}
 \subsection*{Zusatzbedingungen einer DGL. Anfangs und Randbedingungen}
 Die in der allgemeinen Lösung einer DGL $n-$ter Ordnung auftretenden parameter lassen sich durch Zusatzbedingungen festlegen. Physikalische sinnvolle Zusatzbedingungen werden meist in der Form von Anfangsbedingungen oder Randbedingungen vorgegeben. \\
 
@@ -303,7 +294,6 @@ Anfangsbedingungen
 \[c_2=\frac{m^2g}{a^2}\hspace{10mm}c_1=-\frac{m^2g}{a^2}\]
 \[\Rightarrow x(t)=-\frac{m^2g}{a^2}+\frac{m^2g}{a^2}e^{-\frac{a}{m}t}+\frac{mg}{a}t\]
 \[x(t)=\frac{mg}{a}t-\frac{m^2g}{a^2}\left[ 1-e^{-\frac{a}{m}t}\right]\]
-\end{enumerate}
 Eine partikuläre Lösung einer DGL $n-$ter Ordnung \[y^{(n)}{(x)}+a_{n-1}(x)+\dots+a_0 y(x)=b(x)\] kann man aus der allgemeine Lösung 
 \[y(x)=y(x,c_1,c_2,\dots,c_n)\] der DGL erhalten
 \begin{itemize}
@@ -343,7 +333,7 @@ Die LDGL hat allgemeine Form \[y'(x)=a(x)y+b(x)\] $b(x)$ - inhomogene Term.\\
 \noindent Lösung von $y'(x)=a(x)y$: \[\frac{y'(x)}{y(x)}=a(x)\]
 d.h. $\left( \ln y(x)\right)'=a(x)$. Sei $A(x)$ eine Stammfunktion von $a(x)$, so ist \[\ln y(x)=A(x)+c\] Also $y(x)=e^{A(x)}\cdot e^c=Ke^{A(x)}$
 \subsubsection*{Satz 7.12} 
-Die allgemeine Lösung von $y'=ay$ ist $y(x)=Ke^{A(x)}$ wobei $K\in\mathbb{R}$ und $A'(x)=a(x)$
+Die allgemeine Lösung von $y'=ay$ ist $y(x)=Ke^{A(x)}$ wobei $K\in\R$ und $A'(x)=a(x)$
 \subsubsection*{Beispiel}
 \[xy'-2y=0\]
 \[y'=\frac{2}{x}y\Rightarrow a(x)=\frac{2}{x}, A(x)=2\ln\left|x\right|=\ln x^2\]
@@ -360,7 +350,7 @@ Jetzt wählen wit $v$ so dass \[v'-av=0\], d.h. \[v=e^{A(x)}\] Dann ist $u'v=b$ 
 Seien $A(x)$ eine Stammfunktion von $a(x)$ und $U(x)$ ein Stammfunktion von $be^{-A(x)}$. Dann ist $y(x)=e^{A(x)}$. $U$ Lösung von $y'=a(x)y+b(x)$
 
 \subsubsection*{Korollar 7.14}
-Die Allgemeine Lösung von LDGL $y'=ay+b$ ist durch $y(x)=e^{A(x)}\int{b(x)e^{-A(x)} dx}+Ke^{A(x)}$ gegeben wobei $K\in\mathbb{R}$, $A(x)$ eine Stammfunktion von $a(x)$
+Die Allgemeine Lösung von LDGL $y'=ay+b$ ist durch $y(x)=e^{A(x)}\int{b(x)e^{-A(x)} dx}+Ke^{A(x)}$ gegeben wobei $K\in\R$, $A(x)$ eine Stammfunktion von $a(x)$
 
 \subsubsection*{Beispiel 7.15}
 \begin{enumerate}
@@ -412,7 +402,7 @@ Ein einfaches Verfahren, so genannte ``separation der Variablen'' lässt sich an
 \end{array}\]
 Jetzt Integrieren wir auf beiden Seiten \[\int{\frac{dy}{y}}=\int{2xdx}\]
 \[\ln\left| y\right|=x^2+c\]Da wir an der Lösung $y$ interessiert sind und nicht am Logarithmus davon, wenden wir die Exponentialfunktion an \[\left| y\right|=e^{x^2+c}=e^ce^{x^2}\]
-Links und rechts stehen nur positive Grösse. Wenn wir aber auf der Rechten Seite nicht nur positive konstante $e^c>0$ zulassen, sondern irgendwelche Konstanten $K\in\mathbb{R}$ so erhalten wir \[y(x)=Ke^{x^2}\]
+Links und rechts stehen nur positive Grösse. Wenn wir aber auf der Rechten Seite nicht nur positive konstante $e^c>0$ zulassen, sondern irgendwelche Konstanten $K\in\R$ so erhalten wir \[y(x)=Ke^{x^2}\]
 \item \[y'=1+y^2\text{ ist separierbar}\]
 \[\int{\frac{dy}{1+y^2}=\int{dx}}\]
 \[\Rightarrow \arctan y=x+c \Leftrightarrow y=\tan(x+c)\]
@@ -427,5 +417,5 @@ hat keine Konstante Lösungen
 \[y=\sin\lbrack\arcsin x+c \rbrack\]
 \[=x\cos c\pm\sqrt{1-x^2}\sin c\]
 \[=ax+b\sqrt{1-x^2}\]
-wobei $a,b\in\mathbb{R}$ mit $a^2+b^2=1$. Rückeinsetzen in die DGL liefert die Zusatzbedingung \[y'=a-\frac{bx}{\sqrt{1-x^2}}>0,\hspace{5mm} (1+y^2>0)\]
+wobei $a,b\in\R$ mit $a^2+b^2=1$. Rückeinsetzen in die DGL liefert die Zusatzbedingung \[y'=a-\frac{bx}{\sqrt{1-x^2}}>0,\hspace{5mm} (1+y^2>0)\]
 \end{enumerate}
