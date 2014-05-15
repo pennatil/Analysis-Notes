@@ -148,7 +148,7 @@ Falls $f,g$ auf $\Omega$ stetig sind, so sind es $f+g$ und $\alpha f$.
 \subsection*{Satz 4.7}
 Seien $f:\Omega\to\R^{n}, \Omega \subset \R^{d}$ und $g:\Gamma \to \R^{n}$ mit $f(\Omega)\subset\Gamma$ und ${x_{0}\in\Omega}, {y_{0}=f(x_{0})\subset\Gamma}$. Falls $f$ in $x_{0}$ und $g$ in $y_{0}$ stetig sind, folgt, dass $g\circ f:\Omega\to\R^{n}$ in $x_{0}$ stetig ist.
 
-\subsection*{Beweis}
+\subsubsection*{Beweis}
 Sei $(t_{n})_{n\geq1}$ in $\Omega$ mit $\lim{t_{n}} = x_{0}$. Da $f$ stetig ist, $\lim{f(t_{n})} = f(x_{0}) = y_{0}$, und aus der Stetigkeit von $g$ folgt, dass \[ \lim_{n\to\infty}{g(f(t_{n}))} = g(y_{0}) = (g \circ f)(x_{0}) \]
 
 \subsection*{Korollar 4.8}
@@ -159,4 +159,38 @@ In diesem Abschnitt behandeln wir die erste der fundamentalen Eigenschaften von 
 \subsection*{Satz 4.9}
 Seien $-\infty < a \leq b < \infty$ und $f:[a,b] \to \R$ stetig. \\
 \noindent Dann ist $f([a,b])$ in $\R$ beschränkt und es gibt $c_{-}, c_{+} \in [a,b]$ mit \begin{align*} f(c_{+}) &= \text{sup } \{ f(x):x\in[a,b]\} \\ f(c_{-}) &= \text{inf }\{ f(x):x\in[a,b]\} \end{align*} d.h. Supremum und Infimum werden angenommen.
+
+\subsubsection*{Beweis}
+\begin{enumerate}
+\item $f([a,b])$ ist nach oben beschränkt (Indirekter Beweis) \\
+
+Falls nicht, so gibt es $\forall n \in \N$ ein $t_{t}\in [a,b]$ mit $f(t_{n}) \geq n$. \\
+$(t_{n})_{n\geq 1}$ ist beschränkt, nach Bolzano-Weierstrass. Sei $(t_{l(n)})$ eine konvergente Teilfolge mit $\lim{t_{l(n)}}=x$. \\
+Dann ist $x\in [a,b]$, da $a\leq t_{n}\leq b$ \\
+(Satz: $(a_{n}), (b_{n})$ konvergente Folgen mit $\lim{a_{n}} = a, \lim{b_{n}} = b$. Falls $a_{n} \leq b_{n}$, folgt $a \leq b$.) \\
+Aus der Stetigkeit von $f$ folgt: $\lim_{n\to\infty}{f(t_{n})} = f(x)$. Insbesondere ist $f(t_{l(n)})$ beschränkt, was im Widerspruch mit $f(t_{l(n)})\geq l(n)$ steht. \\
+
+$\implies$ $f$ ist nach oben beschränkt.
+
+\item $f$ ist nach unten beschränkt (analog) \\
+
+Sei $M \defeq \text{Sup }\{f(x):x\in [a,b]\}$, welches als Folge von 1. existiert. \\
+Sei für jedes $n\geq 1\; x_{n}\in [a,b]$ mit \[M-\frac{1}{n} < f(x) \leq M \quad\quad (\ast)\]
+($M-\frac{1}{n}$ ist kein Supremum $\implies$ $\exists x_{n}$ mit $M-\frac{1}{n} < f(x_{n})$)\\
+\item $(x_{n}) \subset [a,b]$ beschränkt. \\
+Sei nach Bolzano-Weierstrass $(x_{l(n)})_{n\geq 1}$ eine konvergente Teilfolge mit Limes $c_{+}$. Aus der Stetigkeit von $f$ folgt: \[ f(c_{+}) = \lim_{n\to\infty}{f(x_{l(n)})}\]
+Aus $(\ast)$ folgt
+\[ \lim_{n\to\infty}{f(x_{l(n)})} = M\]
+d.h. $\exists c_{+} \in [a,b]$ mit \[ f(c_{+}) = \lim{f(x_{l(n)})} = M\]
+\item Infimum ist ähnlich.
+\end{enumerate}
+
+\subsubsection*{Bemerkung}
+Satz 4.9 kann man als eine Eigenschaft des Intervalls $[a,b]$ auffassen. Sie gilt zum Beispiel nicht für $(0,1]$ wie das Beispiel der auf $(0,1]$ stetigen Funktion $f(x)=\frac{1}{x}$ zeigt.
+\missingfigure{Page 143, week8 Semester1}
+Die grundlegende Eigenschaft ist Kompaktheit.
+\begin{definition}{4.10}
+Eine Teilmenge $K\subset\R^{d}$ heisst \emph{kompakt}, falls jede Folge $(x_{n})_{n\geq 1}$ von Punkten aus $K$ einen Häufungspunkt \emph{in} $K$ besitzt, d.h. falls jede Folge in $K$ eine \emph{in} $K$ konvergierende Teilfolge hat.
+\end{definition}
+\subsubsection*{Beispiel}
 
