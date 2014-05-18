@@ -112,4 +112,149 @@ Sei jetzt $\varepsilon>0$. Da $\lim r^n=0$, $\exists N_1=N_1(\varepsilon)$, $\fo
 \section{Konvergenzkriterien}
 Mit konvergenten Folgen kann man \todo{Can't read, page 59 top} wie folgender Satz zeigt.
 \subsubsection*{Satz 3.8}
-Seien
+Seien $\left( a_n\right)_{n\geq 1}$ und $\left( b_n\right)_{n\geq 1}$ konvergente Folgen mit 
+\[\lim a_n=a\text{, }\lim b_n=b\]
+\begin{enumerate}[\hspace{2mm}i)]
+\item Die folge $\left( a_n+b_n\right)_{n\geq 1}$ konvergiert und $\lim\left( a_n+b_n\right)=a+b$
+\item Die folge $\left( a_n\cdot b_n\right)_{n\geq 1}$ konvergiert und $\lim\left( a_n\cdot b_n\right)=a\cdot b$
+\item Falls $b\not=0$ und $b_n\not=0$ $\forall n\geq 1$ gilt $\lim\frac{a_n}{b_n}=\frac{a}{b}$ 
+\item Falls $a_n\leq b_n$ folgt $a\leq b$
+\end{enumerate}
+
+\begin{beweis}{}
+Sei $\varepsilon >0$, es gibt  $N_1(\varepsilon)$, $N_2(\varepsilon)$ so dass
+\begin{align*}
+\left| a_n-a\right|&<\varepsilon, \forall n>N_1(\varepsilon)\\
+\left| b_n-b\right|&<\varepsilon, \forall n>N_2(\varepsilon)
+\end{align*}
+\begin{enumerate}[\hspace{2mm}i)]
+\item Für $n\geq\max\left\{ N_1(\varepsilon),N_2(\varepsilon)\right\}$ gilt \[\left| {\left( {{a_n} + {b_n}} \right) - \left( {a + b} \right)} \right| \le \left| {{a_n} - a} \right| + \left| {{b_n} - b} \right|\]
+Da dies für alle $\varepsilon>0<2\varepsilon$ gilt, folgt auch 
+\[\forall n > \max \left\{ {{N_1}\left( {\frac{\varepsilon }{2}} \right),{N_2}\left( {\frac{\varepsilon }{2}} \right)} \right\}: = N(\varepsilon )\]
+gilt \[\left| a_n+b_n-(a+b)\right| <\varepsilon\]
+\item Sei $C$ eine Schränke für $\left\{ \left|b_n\right| : n\geq 1\right\}$ (Bemerkung 3.5: Falls $\left( a_n\right)_{n\geq 1}$ konvergent ist, $\left\{b_n : n\geq 1\right\}$ beschränkt). Für $N_1(\varepsilon)$, $N_2(\varepsilon)$ wie oben folgt $\forall n\geq\max\left\{ N_1(\varepsilon), N_2(\varepsilon)\right\}$
+
+\begin{align*}\left| {{a_n}{b_n} - ab} \right| =&\left| {{a_n}{b_n} - a{b_n} + a{b_n} - ab} \right|\\ =&\left| {{b_n}\left( {{a_n} - a} \right) + a\left( {{b_n} - b} \right)} \right|\\ \le&  \varepsilon \left| {{b_n}} \right| + \left| a \right|\varepsilon  \le \varepsilon \left( {C + \left| a \right|} \right)\end{align*}
+
+Also folgt \[\forall n \ge N(\varepsilon ): = \max \left( {{N_1}\left( {\frac{\varepsilon }{{C + \left| a \right|}}} \right),{N_2}\left( {\frac{\varepsilon }{{\left| C \right| + a}}} \right)} \right)\]dass $\left| a_nb_n-ab\right| < \varepsilon$
+\item Wegen (ii) genügt es, dem Fall $a=a_n=1$, $\forall n\in\N$ zu betrachten 
+\[\left| {{b_n}} \right| = \left| {{b_n} - b + b} \right| \ge \left| b \right| - \left| {{b_n} - b} \right| \ge \left| b \right| - \varepsilon \]
+Sei $0 < \varepsilon < \frac{\left| b\right|}{2}$, dann gilt $\left| b_n\right| > \frac{\left| b\right|}{2}$. Es folgt 
+
+\[\left| {\frac{1}{{{b_n}}} - \frac{1}{b}} \right| = \left| {\frac{{{b_n} - b}}{{{b_n}b}}} \right| < \frac{2}{{{{\left| b \right|}^2}}}\left| {{b_n} - b} \right| \le \frac{2}{{{{\left| b \right|}^2}}}\varepsilon \hspace{10mm}\forall n > {n_0}(\varepsilon )\]
+Also folgt $\forall n > N(\varepsilon):=n_0\left( \frac{\varepsilon\left| b\right|^2}{2}\right)$ dass $\left| \frac{1}{b_n}-\frac{1}{b}\right| < \varepsilon$ 
+\item (Indirekter Beweis) Falls $a>b$, $a-b>0$. Sei 
+\begin{align*}
+\varepsilon&:= \frac{a-b}{2}>0\\
+2\varepsilon&= b-a\\
+\Rightarrow b-\varepsilon&= a+\varepsilon\\
+b_n\to b\Rightarrow&b_n < b+\varepsilon\hspace{5mm}\forall n>n_0(\varepsilon)\\
+a_n\to a\Rightarrow&-\varepsilon < a_n -a<\varepsilon\Rightarrow a-\varepsilon < a_n\hspace{5mm}\forall n>TODO
+\end{align*}
+Aber denn die Ungleichung 
+\[b_n < b+\varepsilon = a-\varepsilon < a_n\hspace{5mm}\forall n\geq n_0\]
+im Widerspruch zur Annahme $a_n\leq b_n$, $\forall n\in\N$
+\end{enumerate}
+\end{beweis}
+Es ist nicht unbedingt nötig, den ganzen Beweis zu führen um zu wissen dass eine Folge konvergent ist. Es gibt Folgen deren Konvergenz, durch eine Strukturelle Eigenschaft gesichert ist ohne dass man den Limes apriori kennen muss.\\
+
+Folgender Satz illustriert dieses, es benützt die Vollständigkeitsaxiom
+\subsubsection*{Satz 3.9 (Monotone Konvergenz)}
+\begin{enumerate}
+\item Sei $\left( a_n\right)_{n > 1}$ eine monoton Wachsende beschränkte Folge. Dann ist sie konvergent und es gilt zudem \[\mathop {\lim }\limits_{n \to \infty } {a_n} = \sup \left\{ {{a_n}:n \ge 1} \right\}\]
+\item Sei $\left( b_n\right)_{n \geq 1}$ eine Monotone fallende beschränkte Folge. Dann ist es konvergent und es gilt zudem \[\mathop {\lim }\limits_{n \to \infty } {b_n} = \inf \left\{ {{b_n}\mid n \ge 1} \right\}\]
+\end{enumerate}
+
+\begin{definition}{3.10}
+\begin{itemize}
+\item \textbf{Monotone wachsend}: \[a_n\leq a_{n+1}\hspace{5mm}\forall n\geq 1\]
+\item \textbf{Monotone fallend}: \[b_{n+1}\leq b_{n}\hspace{5mm}\forall n\geq 1\]
+\end{itemize}
+\end{definition}
+\todo[inline]{Number might be wrong, page 63 middle}
+
+\begin{beweis}{3.9}
+\begin{enumerate}[\hspace{2mm}i)]
+\item $a_1\leq a_2\leq \dots$ und $\left\{ a_n:n\geq 1\right\}$ nach oben beschränkt $\Rightarrow\exists C$ mit $a_n\leq C$ $\forall n\geq 1$. Sei nach Satz 2.9 (Jede nach oben beschränkte Teilmenge $A\subset R$ besitzt ein kleinste obere Schränke)   $a:=\sup \left\{ a_n:n\geq 1\right\}$ die Kleinste Obere Schranke. \\
+
+Wir behaupten dass: $a = \mathop {\lim }\limits_{n \to \infty } {a_n}$. Sei $\varepsilon>0$, dann ist $a-\varepsilon$ keine Obere Schranke und deswegen gibt es $n(\varepsilon)\geq 1$ mit $a_{n(\varepsilon)}>a-c$. Aus monotonität folgt 
+\[a_n>a_{n(\varepsilon)} > a-c\hspace{5mm}\forall n>n(\varepsilon)\]
+und folgt somit 
+\[ \left| a_n-a\right| < \varepsilon\hspace{5mm}\forall n> n(\varepsilon)\]
+\item Ähnlich.
+\end{enumerate}
+\end{beweis}
+Sätze 3.8, 3.9 haben vielfähige Anwendungen die wir durch einige Beispiele illustrieren.
+\subsubsection*{Beispiel 3.10}
+\begin{enumerate}
+\item Sei \[{a_n} = \frac{{3{n^6} + 11{n^4} - 1}}{{2{n^6} - 7{n^3} + n}} = \frac{{3 + \frac{{11}}{{{n^2}}} - \frac{1}{{{n^6}}}}}{{2 - \frac{7}{{{n^3}}} + \frac{1}{{{n^5}}}}} \to \frac{3}{2}\]
+\item $\mathop {\lim }\limits_{n \to \infty } {\left( {1 + \frac{1}{n}} \right)^n}$ existiert. \\
+
+Wir werden beweisen dass $a_n$ monotone wachsend und beschränkt ist. Der limes wird mit ``$e$'' beteichnet, wobei $e=2.71828\dots$ (Eulerische Konstant)
+\begin{beweis}{}
+\[a_n={\left( {1 + \frac{1}{n}} \right)^n}\]
+Wir möchten den Binomischen Lehrsatz anwenden 
+\begin{align*}
+{a_n} =&{\left( {1 + \frac{1}{n}} \right)^n}\\ 
+=&1 + n\left( {\frac{1}{n}} \right) + \frac{{n(n - 1)}}{{2!}}{\left( {\frac{1}{n}} \right)^2} + \frac{{n(n - 1)(n - 2)}}{{3!}}{\left( {\frac{1}{n}} \right)^3} +  \ldots  + {\left( {\frac{1}{n}} \right)^n}\\
+=&1 + 1 + \frac{1}{{2!}}\left( {1 - \frac{1}{n}} \right) + \frac{1}{{3!}}\left( {1 - \frac{1}{n}} \right)\left( {1 - \frac{2}{n}} \right)\\
+&+\ldots  + \frac{1}{{k!}}\left( {1 - \frac{1}{n}} \right)\left( {1 - \frac{2}{n}} \right) \ldots \left( {1 - \frac{{k - 1}}{n}} \right) +  \ldots 
+\end{align*}
+Nun ist aber 
+\begin{align*}\frac{1}{{2!}}\left( {1 - \frac{1}{n}} \right)&< \frac{1}{{2!}}\left( {1 - \frac{1}{{n + 1}}} \right)\\\frac{1}{{3!}}\left( {1 - \frac{1}{n}} \right)\left( {1 - \frac{2}{n}} \right)&< \frac{1}{{3!}}\left( {1 - \frac{1}{{n + 1}}} \right)\left( {1 - \frac{2}{{n + 1}}} \right)\\
+&\text{usw}\end{align*}
+deswegen folgt \[2 < a_n < a_{n+1}\hspace{5mm}\forall n\geq 1\]
+d.h. $a_n$ ist monoton wachsend.\\
+
+\noindent Die Produkte der Form
+\begin{align*}\left( {1 - \frac{1}{n}} \right) &\ldots \left( {1 - \frac{{k - 1}}{n}} \right) < 1\\ \Rightarrow {a_n} &< 1 + 1 + \frac{1}{{2!}} + \frac{1}{{3!}} +  \ldots \\&< 1 + 1 + \frac{1}{2} + \frac{1}{{{2^2}}} + \frac{1}{{{2^3}}} \ldots  = 3\end{align*}
+d.h. $a_n$ ist beschränkt. Monotone Konvergenz $\Rightarrow \left( a_n\right)_{n\geq 1}$ konvergiert
+\end{beweis}
+\item Rekursive Definitionen\\
+Sei $\mathop {c > 1}\limits_{c \in\R }$, $a_1=c$, ${a_{n + 1}} = \frac{1}{2}\left( {{a_n} + \frac{c}{{{a_n}}}} \right)$, $n\geq 1$. Dann ist $\lim a_n=\sqrt{c}$
+\begin{beweis}{}
+Dies ist ein wichtiges Beispiel. Hier wird vorgeführt wie man aus der apriori Existenz des Limes dessen Wert schliessen kann.\\
+
+\noindent\underline{1. Schnitt:}
+\[a_{n + 1}^2 \ge c\hspace{5mm}\forall n\geq 1\]
+$a_n$ ist (nach unten) beschränkt. 
+\begin{align*}{a_{n + 1}} =&\frac{{c + a_n^2}}{{2an}} = {a_n} + \frac{{c - a_n^2}}{{2{a_n}}}\\ \Rightarrow a_{n + 1}^2 =&a_n^2 + \left( {c - a_n^2} \right) + {\left( {\frac{{c - a_n^2}}{{2{a_n}}}} \right)^2}\\ =&c + {\left( {\frac{{c - a_n^2}}{{2{a_n}}}} \right)^2} \ge c\hspace{2mm}\text{(\textasteriskcentered)}\end{align*}
+\noindent\underline{2. Schnitt:}
+\[a_{n+1}\leq a_n\]
+d.h. $a_n$ ist monoton fallend. 
+\begin{align*}
+\text{(\textasteriskcentered)}: a_{n+1}^2&\geq c\\
+\Rightarrow\frac{c}{a_{n+1}}&\leq a_{n+1}\hspace{5mm} \forall n\in\N\text{, insbesondere}\\
+\frac{c}{a_n}&\leq a_n \\
+\Rightarrow a_{n+1}&=\frac{1}{2}\left( {{a_n} + \frac{c}{{{a_n}}}} \right) \le \frac{1}{2}\left( {{a_n} + {a_n}} \right) = {a_n}
+\end{align*}
+Monotone Konvergenz Satz $\Rightarrow\left( a_n\right)$ konvergiert.\\
+
+\noindent Sei $a=\lim a_n$. Da $a_n^2\geq c$, $\forall n\geq 2$ folgt $a^2\geq c$. Aus $a_{n+1}=\frac{1}{2}\left( a_n+\frac{c}{a_n}\right)$ und Satz 3.8 folgt $a=\frac{1}{2}\left( a+\frac{c}{a}\right)$ $\Rightarrow\frac{c}{a}=a\Rightarrow c=a^2\Rightarrow a=\sqrt{c}$. Schliesslich $\lim a_n=\sqrt{c}$
+\end{beweis}
+\end{enumerate}
+
+\section{Teilfolgen, Häufungspunkte}
+\begin{definition}{3.11}
+Sei $\left( a_n\right)_{n\in\N}\subset\R$ eine folge und sei $l(n)_{n\in\N}$ eine strict monotone wachsend Folge von positiven Natürliche Zahlen. Die Verkettung von $l(n)$ und $\left( a_n\right)$ heisst eine Teilfolge $\left( a_{l(n)}\right)_{n\in\N}$ von $\left( a_{n}\right)_{n\in\N}$ 
+\[n\to l(n)\to a_{l(n)}\]
+\end{definition}
+Die Idee ist sehr einfach: Wir haben die Folge \[a_1,a_2,a_3,a_4,a_5,a_6,\dots,a_j,\dots,a_{j+1},\dots \]
+und wir definieren eine neue Folge mit einigen Elementen von $\left( a_n\right)$ 
+\[a_1,a_3,a_6,a_{j+1},\dots \]
+
+\subsubsection*{Beispiel}
+\begin{enumerate}
+\item \begin{align*}{a_n} =&\left\{ {1,0, - 1,1,0, - 1,1,0, - 1, \ldots } \right\}\\ =&\left\{ {\begin{array}{*{20}{c}}0&{{\text{falls}}}&{n = 3k + 2}\\1&{{\text{falls}}}&{n = 3k + 1}\\{ - 1}&{{\text{falls}}}&{n = 3k + 3}\end{array}} \right.\end{align*}
+\begin{align*}n&\to 3n + 2 \to {a_{3n + 2}} = \left( {0,0, \ldots } \right)\\n&\to 3n + 1 \to {a_{3n + 1}} = \left( {1,1, \ldots } \right)\\n&\to 3n \to {a_{3n}} = \left( { - 1, - 1, \ldots } \right)
+\end{align*}
+\item $\left( a_n\right)_{n\in\N}$, $a_n=n\Rightarrow \left( 2^n\right)_{n\in\N}$ ist eine Teilfolge $n\to 2^n\to a_{2^n}$
+\item $a_n=\left( -1\right)^n$, $\left( a_{2n}\right)_{n\geq 1}$ $\left( a_{2n+1}\right)$ sind Teilfolgen
+\end{enumerate}
+
+\subsubsection*{Bemerkung 3.12}
+Im Definition 3.11 ist $l\left( \N\backslash\{ 0\}\right)$ eine unendliche Teilmenge von $\N\backslash\{ 0\}$. Umgekehrt, falls $\wedge\subset\N\backslash\{ 0\}$ eine unendliche Teilmenge ist dann enthält man eine Teilfolge von $\left( a_n\right)_{n\geq 1}$ mittels einer Monoton Abzählung $l:\N\backslash\{ 0\}\to\wedge$ von $\wedge$ ($l(n):=\min\left( \wedge \backslash\{ l(1),l(2),\dots ,l(n-1)\}\right)$)
+\begin{definition}{3.13}
+$a\in\R$ ist Häufungspunkt von $\left( a_n\right)_{n\geq 1}$ falls es eine gegen $a$ konvergierende Teilfolge $\left( a_{l(n)}\right)_{n\geq 1}$ gibt. 
+\end{definition}
+%page 71 top
