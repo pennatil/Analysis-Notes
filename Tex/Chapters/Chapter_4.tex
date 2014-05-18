@@ -192,5 +192,76 @@ Die grundlegende Eigenschaft ist Kompaktheit.
 \begin{definition}{4.10}
 Eine Teilmenge $K\subset\R^{d}$ heisst \emph{kompakt}, falls jede Folge $(x_{n})_{n\geq 1}$ von Punkten aus $K$ einen Häufungspunkt \emph{in} $K$ besitzt, d.h. falls jede Folge in $K$ eine \emph{in} $K$ konvergierende Teilfolge hat.
 \end{definition}
-\subsubsection*{Beispiel}
 
+\subsubsection*{Beispiel}
+\begin{enumerate}
+\item $(0,1]$ ist nicht kompakt: \\
+$(\frac{1}{n})_{n\geq 1} \subset (0,1]$ konvergiert gegen $0 \notin (0,1]$.
+\item $[a,b]$ ist kompakt. \\
+Sei $(t_{n})_{n\geq 1}$ eine Folge mit $a\leq t_{n} \leq b$. $(t_{n})$ ist beschränkt, nach Bolzano-Weierstrass sei $(t_{l(n)})$ eine konvergente Teilfolge mit Limes $l$. Dann folgt aus $a\leq t_{n} \leq b$. $(t_{l(n)})\quad \forall n\geq 1$, dass \[a\leq \lim{t_{l(n)}} \leq b\]
+D.h. $l\in [a,b]$.
+\end{enumerate}
+
+\subsection*{Lemma 4.11}
+Falls $K\subset\R^{d}$ kompakt ist, ist es beschränkt und besitzt zudem ein Minimum und Maximum.
+
+\subsubsection*{Beweis}
+Sonst gibt es zu jedem $n\geq 1, n\in \N$ ein $x_{n} \in K$ mit $\norm{x_{n}} \geq n$. Dann kann aber $(x_{n})_{n\geq 1}$ keine konvergente Teilfolge besitzen: $(\abs{x_{l(n)}} > l(n))$. \\
+$\implies$ $K$ ist beschränkt. \\
+Sei $s\defeq \text{Sup }K$. Dann gibt es $\forall n \geq 1, k_{n} \in K$ mit \[ s-\frac{1}{n}<k_{n}\leq s\]
+Insbesondere gilt $\lim{k_{n}}=s$. Da $K$ kompakt ist, hat $k_{n}$ eine \emph{in $K$} konvergierende Teilfolge. Daraus folgt, dass $s\in K$.
+
+\subsubsection*{Beispiel}
+$S^{d} \defeq \{ x\in\R^{d+1}: \norm{x} = 1\}$, die d-dimensionale Sphäre, ist kompakt. \\
+
+\subsubsection*{Beweis}
+Sei $(x_{n})_{n\geq 1} \subset S^{d}$, dann ist diese Folge offensichtlich beschränkt, besitzt sie (nach Bolzano-Weierstrass) eine konvergente Teilfolge $(x_{l(n)})_{n\geq 1}$. Sei $p \in \R^{d+1}$ deren Limes. Da die Funktion $f(x)\defeq\norm{x}$ stetig ist, folgt \[\norm{p} = f(p) \overset{\text{defn}}=f(\lim{x_{l(n)}}) \overset{f\text{ stetig}}= \lim{f(x_{l(n)})} = 1 \]
+$\implies p \in S^{d}$ \\
+
+\noindent Die Verallgemeinerung von Satz 4.9 ist
+
+\subsection*{Satz 4.12}
+\begin{enumerate}
+\item Sei $K\subset \R^{d}$ kompakt und $f:K\to\R^{n}$ eine stetige Abbildung. Dann ist $f(K)\subseteq\R^{n}$ eine kompakte Teilmenge.
+\item $f$ nimmt ihr Supremum und Infimum an, d.h. es gibt $c_{-}, c_{+}\in K$ mit \[ f(x_{-})\leq f(x) \leq f(x_{+}) \quad \forall x \in K\]
+\end{enumerate}
+
+\subsubsection*{Beweis}
+\begin{enumerate}
+\item Sei $(y_{n})_{n\geq 1}$ eine beliebige Folge in $f(K)$. Wir müssen zeigen, dass es eine konvergente Teilfolge mit Limes in $f(K)$ gibt. Sei $(x_{n}) \in K$ mit \[ f(x_{n}) = y_{n},\, n\geq 1\]
+Dann ist $(x_{n})_{n\geq 1}$ eine Folge in $K$. Da $K$ kompakt ist, gibt es $p \in K$ und $(x_{l(n)})$, eine konvergente Teilfolge mit $\lim{x_{l(n)}} =p$. \\
+Aus der Stetigkeit von $f$ folgt \[ f(p) = f(\lim{x_{n}}) \overset{f\text{ stetig}}= \lim{f(x_{l(n)})} = \lim{y_{l(n)}}\]
+D.h. $y_{l(n)}$ ist eine Teilfolge von $y_{n}$ mit Limes $f(p) \in K$. \\
+$\implies f(K)$ ist kompakt.
+\item Da $f(K)$ kompakt ist, (nach 1.), ist $f(K)$ beschränkt, und besitzt zudem ein Minimum und Maximum (nach Lemma 4.11). \\
+\begin{align*}\implies \quad \exists y_{+}, y_{-}\in f(K)\text{, mit } y_{+} &= \text{Sup } f(K) \\ y_{-} &= \text{Inf } f(K) \\
+\exists c_{+}, c_{-} \in K \text{, mit } y_{+} &= f(c_{+}) \\ y_{-} &= f(c_{-}) \end{align*}
+\end{enumerate}
+
+\section{Norm auf $\R^{d}$}
+\todo{In the source notes, this is 4.4, but there is no 4.3 that I can find...}
+Der Distanzbegriff auf $\R^{d}$ kommt von einem Skalarprodukt. Es gibt interessante, andere Arten einen Distanzbegriff einzuführen, nämlich mit dem Begriff der Norm.
+
+\begin{definition}{4.13}
+Eine \emph{Norm} auf $\R^{d}$ ist eine Abbildung \[ \norm{.}: \R^{d} \to \R \] mit den folgenden Eigenschaften:
+\begin{enumerate}
+\item \emph{Definiertheit}: $\norm{x} \geq 0$ mit Gleichheit genau dann wenn $x=0$.
+\item \emph{Positive Homogenität}: $\norm{\alpha x} = \abs{\alpha}\norm{x} \quad \forall \alpha \in \R, \forall x \in \R^{d}$
+\item \emph{Dreiecks-Ungleichung}: $\norm{x+y} \leq \norm{x} + \norm{y} \quad \forall x,y \in \R^{d}$
+\end{enumerate}
+\end{definition}
+
+\subsubsection*{Beispiel 4.14}
+\begin{enumerate}
+\item \[ \norm{x}_{2} = \Big(\sum_{i = 1}^{d} \abs{x_{i}}\Big)^{\frac{1}{2}}\quad\quad x=(x_{1}, \dots, x_{d})  \] kommt vom Skalarprodukt.
+\item Für $1\leq p<\infty$ sei \[ \norm{x}_{p} \defeq \Big( \sum_{i=1}^{d}\abs{x_{i}^{p}}\Big)^{\frac{1}{p}}\] und $\norm{x}_{\infty} = \max{\{\abs{x_{i}} : 1\leq i \leq d \}}$, dann sind $\norm{.}_{p}, 1\leq p \leq \infty$ Normen auf $\R^{d}$.
+\end{enumerate}
+Zwischen diesen verschiedenen Normen haben wir die folgenden Verhältnisse:
+ \[ \norm{x}_{\infty} = \max{\abs{x_{i}}} \leq \norm{x}_{p} = \sqrt[d]{\sum_{i=1}^{d}{\abs{x_{i}}^{p}}} \leq d\norm{x}_{\infty} \quad\quad (\ast)\]
+Bild von $\norm{x}_{1} = \sum_{i=1}^{d}\abs{x_{i}} \leq 1$
+\missingfigure{Page 151 week9 Sem1 top}
+$\norm{x}_{2} = \sqrt{\sum{x_{i}^{2}}} \leq 1$
+\missingfigure{Page 151 week9 Sem1 middle/bottom}
+\begin{definition}{4.15}
+Zwei Normen $\norm{.}^{(1)}, \norm{.}^{(2)}$ auf $\R^{d}$ heissen \emph{äquivalent}, falls es $c_{1}, c_{2} > 0$ gibt, mit \[ c_{1}\norm{x}^{(1)}\leq\norm{x}^{(2)} \leq c_{2}\norm{x}^{(1)} \quad \forall x \in \R^{d} \]
+\end{definition}
