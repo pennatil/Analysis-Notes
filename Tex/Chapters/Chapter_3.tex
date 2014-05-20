@@ -257,4 +257,120 @@ Im Definition 3.11 ist $l\left( \N\backslash\{ 0\}\right)$ eine unendliche Teilm
 \begin{definition}{3.13}
 $a\in\R$ ist Häufungspunkt von $\left( a_n\right)_{n\geq 1}$ falls es eine gegen $a$ konvergierende Teilfolge $\left( a_{l(n)}\right)_{n\geq 1}$ gibt. 
 \end{definition}
-%page 71 top
+\subsubsection*{Beispiel 3.14}
+\todo[inline]{Looks like there is no number 2, removed list in its entirety, page 71 middle to top}
+$a_n=(-1)^n$ hat +1 und -1 als Häufungspunkte. Wir werden jetzt die Menge der Häufungspunkte einer Folge $\left( a_n\right)_{n\geq 1}$ näher studieren und Insbesondere zeigen dass sie für beschränkte Folgen nicht leer ist. \\
+
+Sei $\left( a_n\right)_{n\geq 1}$ beschränkt und $C$ eine Obere Schranke für $\{ \left| a_n\right| : n\geq 1\}$. Für jedes $k\geq 1$ ist die Menge 
+\[A_k:=\left\{ a_n:n\geq k\right\} = \left\{ a_k,a_{k+1},\dots\right\} \] beschränkt und zudem gilt \[A_{k+1}\subset a_k\text{, }\forall k\geq 1\]
+Sei also 
+\begin{itemize}
+\item $m_k:=\inf A_k \nearrow\left( \inf A_k < \inf A_{k+1}\right)$
+\item $M_k:=\sup A_k\searrow\left( \sup A_{k+1} < \sup A_k\right)$
+\end{itemize} 
+Dann folgt aus Korollar 2.11
+\begin{enumerate}[\hspace{2mm}i)]
+\item $\left( m_k\right)_{k\geq 1}$ monotone wachsend
+\item $\left( M_k\right)_{k\geq 1}$ monotone fallend
+\end{enumerate}
+Nach Monotone Konvergenz Satz (Satz 3.9, s.\todo{add reference!!}) konvergieren beide Folgen
+
+\begin{definition}{3.15}
+Wir definieren
+\begin{itemize}
+\item $\mathop {\lim }\limits_{n \to \infty } \inf {a_n}: = \mathop {\lim }\limits_{k \to \infty } {m_k}$ limes inferior
+\item $\mathop {\lim }\limits_{n \to \infty } \sup {a_n}: = \mathop {\lim }\limits_{k \to \infty } {M_k}$ limes superior
+\end{itemize}
+Offensichtlich gilt $\lim\inf a_n\geq \lim\sup a_n$
+\end{definition}
+\noindent Interessant ist nun:
+\subsubsection*{Lemma 3.16}
+Sei $\left( a_n\right)_{n\geq 1}$ beschränkt. Dann sind $\lim\sup a_n$ und $\lim\inf a_n$ Häufungspunkte von $\left( a_n\right)_{n\geq 1}$
+
+\begin{beweis}{}
+Sei $\mathop {\lim }\limits_{n \to \infty } \sup {a_n} = a$. Wir möchten zeigen dass, eine Teilfolge $a_{l(n)}$ gibt mit $\lim a_{l(n)}=a$. Wir definieren $l:\N\backslash\{ 0\}\to\N\backslash\{ 0\}$ Induktive wie folgt:\\
+
+\noindent $l(1)\geq 1$ sei so gewählt, dass $M_1-1\leq a_{l(1)}\leq M_1=\sup A_1=\{ a_1,a_2,\dots\}$
+\begin{framed}
+\noindent\textbf{Korollar 2.11}\\
+Sei $h\in\R$, $h>0$
+\begin{enumerate}
+\item[4.] Falls $E$ ein $\sup$ besitzt $\Rightarrow\exists x\in E$ mit $x>\sup E-h$ 
+\end{enumerate}
+Sei $E=\{ a_1,\dots\}=A_1$, $h=1$
+\end{framed}
+Sei $l(2)\in\{ k\in\N\mid k>l(1)+1\}$ so dass \[M_{l(1)+1}\leq a_{l(2)}\leq M_{l(1)+1}\]
+(Sei $E=\{ a_{l(1)+1},a_{l(1)+2},\dots\}$, $h=\frac{1}{2}$). Falls $l(1),l(2),\dots,l(n-1)$ definiert ist, wählen wir $l(n)$ so dass:
+\[ l(n)\in\{ k\in\N : k>l(n-1)+1\}\]
+und 
+\[
+M_{l(n-1)+1}-\frac{1}{n}\leq a_{l(n)}\leq M_{l(n-1)+1}\tag{\text{\textasteriskcentered}}
+\]
+\[ \left| M_{l(n-1)+1}-a_{l(n)}\right| < \frac{1}{n}\]
+Dann ist $l(n)$ strikt monotone steigend und 
+\[ \left| a_{l(n)} -M_{l(n-1)+1}\right|\leq\frac{1}{n}\]
+Sei nun $\varepsilon > 0$ und $n(\varepsilon)$ so gewählt dass $\frac{1}{n(\varepsilon)}<\frac{\varepsilon}{2}$ und 
+\[a-\frac{\varepsilon}{2}\leq M_{l\left( n(\varepsilon)-1\right) +1}\leq a+\frac{\varepsilon}{2} \]
+($a=\lim M_k$: d.h. $\forall\varepsilon>0$, $\exists N(\varepsilon)$ so dass $\left| M_n -a\right| < \frac{\varepsilon}{2}$ $\forall n > N(\varepsilon)$). Dann gilt $\forall n > n(\varepsilon):\frac{1}{n}<\frac{\varepsilon}{2}$
+\[\left| M_{l(n-1)+1} - a\right| < \frac{\varepsilon}{2}\tag{\text{\textasteriskcentered\textasteriskcentered}}\]
+und
+\[\left| M_{l(n-1)+1} - a_{l(n)}\right| < \frac{1}{n}< \frac{\varepsilon}{2}\tag{\text{\textasteriskcentered}}\]
+(\textasteriskcentered) und (\textasteriskcentered\textasteriskcentered) $\Rightarrow\left| a_{l(n)}-a\right| < \varepsilon$ d.h. $\lim a_{l(n)}=a.$
+\end{beweis}
+Wir schliessen aus Lemma 3.16 den folgenden wichtiger Satz
+\subsubsection*{Satz 3.18 (Bolzano - Weierstrass)}
+Jede Beschränkte Folge $\left( a_n\right)_{n\geq 1}$ besitzt eine konvergente Teilfolge.
+\todo[inline]{MISSING CONTENT: Can't really understand the layout of this part, page 76 middle}
+Folgende Aussagen sind direkte Konsequenz 
+\subsubsection*{Satz 3.19}
+Sei $\left( a_n\right)_{n\geq 1}\subset\R$ beschränkt. $a_{-}:=\lim\inf a_n$, $a_+:=\lim\sup a_n$
+\begin{enumerate}
+\item $\forall\varepsilon > 0$ gibt es nur endlich viele $n\in\N$ mit $a_n\not\in\left( a_- -\varepsilon,a_+ +\varepsilon\right)$
+\item $a_+$ ist der grösste, $a_-$ der kleinste Häufungspunkt
+\item Folgende Aussagen sind äquivalent
+\begin{enumerate}[(i)]
+\item $\left( a_n\right)_{n\geq 1}$ konvergiert
+\item Jede Teilfolge von $\left( a_n\right)_{n\geq 1}$ konvergiert
+\item $a_-=a_+$ 
+\end{enumerate}
+\end{enumerate}
+\subsubsection*{Bemerkung}
+$\left( a_n\right)$ konvergiert gegen $a\Rightarrow$ jede Teilfolge konvergiert gegen $a$. Das ist ein sehr nutzliches Kriterion für Konvergenz
+
+\subsubsection*{Beispiel 3.20}
+Wir definieren rekursiv 
+\begin{align*}
+g_1&=1, g_{n+1}=1+\frac{1}{g_n}, n\geq 1\\
+g_1&=1, g_2=2, g_3=\frac{3}{2}, g_4=\frac{5}{3}
+\end{align*}
+\missingfigure{Page 77 bottom}
+So die Folge ist nicht monoton. Offensichtlich gilt $g_n\geq 1$ und damit auch $g_n\leq 2$ d.h. $g_n$ ist beschränkt.\\
+
+Aber Wir werden werden zwei Monoton Teilfolgen finden
+\begin{align*}
+{g_{n + 2}}&= 1 + \frac{1}{{{g_{n + 1}}}} = 1 + \frac{1}{{1 + \frac{1}{{{g_{n + 1}}}}}}\\
+&= \frac{{2 + \frac{1}{{{g_{n + 1}}}}}}{{1 + \frac{1}{{{g_{n + 1}}}}}} = \frac{{2{g_{n + 1}}}}{{{g_{n + 1}}}} = 2 - \frac{1}{{{g_n} + 1}}
+\end{align*}
+Daraus folgt 
+\[{g_{n + 2}} - {g_n} = \frac{1}{{{g_{n - 2}} + 1}} - \frac{1}{{{g_n} + 1}} = \frac{{{g_n} - {g_n} - 2}}{{\left( {{g_{n - 2}} + 1} \right)\left( {{g_n} + 1} \right)}}\]
+Nun ist: $g_3-g_1 = \frac{3}{2}-1>0$ und somit ist $g_{2k+3}-g_{2k+1}>0$, $\forall k$ d.h. die Teilfolge $\left( g_{2k+1}\right)_{k\geq 0}$ ist monotone Wachsend.\\
+
+\noindent$g_4-g_2=\frac{5}{3}-2<0$ woraus folgt $\left( g_{2k}\right)_{k\geq 1}$ monotone fallend ist. Seien also 
+\begin{align*}
+a&:=\lim_k g_{2k+1}\\
+b&:=\lim_k g_{2k}
+\end{align*}
+Dann
+\begin{align*}
+a&:=\lim_k g_{2k+1}=\lim\left( 1+\frac{1}{g_{2k}}\right)\\
+&=1+\frac{1}{b}\Rightarrow ab=b+1
+\end{align*}
+und Analog $b=1+\frac{1}{a}\Rightarrow ab=1+a$ woraus $ab=1+a=b+1$ und somit $a=b$. Folgt mit $g:=a=b$ $g=+\frac{1}{g}$ $\Rightarrow g=\frac{1+\sqrt{5}}{2}$\\
+
+$g_+:=\lim\sup g_n$ und $g_-:=\lim\inf g_n$ sind Häufungspunkte, d.h. es gibt Teilfolgen $a_n$ und $b_n$ mit $\lim a_n=g_+$, $\lim b_n=g_-$. Da jede Teilfolge von $\left( g_n\right)$ entweder unendlich viele gerade oder ungerade Indizen enthält folgt 
+\[g=g_+=g_-\]
+
+Jede Teilfolge hat (ent.) unendliche viele Elemente von $\left( g_{2n}\right)$ (oder $\left( g_{2n+1}\right)$)\todo{Put in big brackets (including math)}
+\[\left. {\begin{array}{*{20}{c}}{{g_ + } = \lim {a_n} = \lim {g_{2n}} = g}\\{{g_ + } = \lim {b_n} = \lim {g_{2n}} = g}\end{array}} \right\}{g_ + } = {g_ - } \Rightarrow \lim {g_n} = g = {g_ - } = {g_ + } = \frac{{1 + \sqrt 5 }}{2}\]
+
+%Finished week 5, start week 6
