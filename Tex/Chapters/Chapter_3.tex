@@ -373,4 +373,151 @@ $g_+:=\lim\sup g_n$ und $g_-:=\lim\inf g_n$ sind Häufungspunkte, d.h. es gibt T
 Jede Teilfolge hat (ent.) unendliche viele Elemente von $\left( g_{2n}\right)$ (oder $\left( g_{2n+1}\right)$)\todo{Put in big brackets (including math)}
 \[\left. {\begin{array}{*{20}{c}}{{g_ + } = \lim {a_n} = \lim {g_{2n}} = g}\\{{g_ + } = \lim {b_n} = \lim {g_{2n}} = g}\end{array}} \right\}{g_ + } = {g_ - } \Rightarrow \lim {g_n} = g = {g_ - } = {g_ + } = \frac{{1 + \sqrt 5 }}{2}\]
 
-%Finished week 5, start week 6
+\section{Cauchy Kriterium}
+\todo[inline]{Chapter numbering is, according to the handwritten notes, wrong. WHich one is the correct one??}
+\subsubsection*{Frage}
+Wie sieht man allgemein ob eine Folge konvergiert? Sei $\left( a_n\right)_{n\geq 1}$ konvergiert mit $\lim a_n=a$. Also gibt es zu jedem $\varepsilon>0$, $n(\varepsilon)$ mit $\left| a_n-a\right|<\varepsilon$ $\forall n\geq n(\varepsilon)$ .\\
+Daraus folgt, dass $\forall n,m\geq n(\varepsilon)$ 
+\begin{align*}
+\left|a_n-a_m\right|&= \left| a_n-a+a-a_m\right|\\
+&\leq \left| a_n-a \right|+\left| a_m-a\right| < 2\varepsilon
+\end{align*}
+\begin{definition}{3.21}
+$\left( a_n\right)_{n\geq 1}$ ist eine Cauchy Folge falls für $\varepsilon>0$ ein $n(\varepsilon)\geq 1$ gibt so dass $\left| a_n-a_m\right|<\varepsilon$, $\forall n,m\geq n(\varepsilon)$
+\end{definition}
+Wir haben gesehen dass 
+\[ \left( a_n\right) \text{ konvergiert }\Rightarrow\left( a_n\right) \text{ Cauchy}\]
+Wir haben auch
+\subsubsection*{Satz 3.22 (Cauchy Kriterium)}
+Sei $\left( a_n\right)_{n\geq 1}\subset\R$ eine folge. Die folgende Aussagen sind äquivalent 
+\begin{enumerate}
+\item $\left( a_n\right)$ ist eine Cauchy Folge
+\item $\left( a_n\right)$ ist konvergent
+\end{enumerate}
+
+\begin{beweis}{}
+\begin{enumerate}[align=left]
+\item[$(2)\Rightarrow(1)$]\checkmark
+\item[$(1)\Rightarrow(2)$] Wegen das Satzes von Bolzano - Weierstrass besitzt jede beschränkte Folge eine konvergente Teilfolge  \\
+
+\underline{Strategie:} 
+\begin{enumerate}[I)]
+\item $\left( a_n\right)$ beschränkt
+\item $\exists\left( a_{l(n)}\right)\subset \left( a_n\right)$ Konvergente Teilfolge
+\end{enumerate}
+Sei $\lim a_{l(n)}=a$, $\left( a_n\right)$ Cauchy.
+\begin{align*}
+\left|a_n-a\right|&= \left| a_n-a_{l(n)}+a_{l(n)}-a\right|\\
+&\leq \left| a_n-a_{l(n)} \right|+\left| a_{l(n)}-a\right| < 2\varepsilon
+\end{align*}
+
+\begin{enumerate}[I)]
+\item $\left(a_n\right)$ ist beschränkt: Sei $\varepsilon=1$. Sei $n(1)$ so dass $\left| a_n-a_m\right|<1$, $\forall n,m\geq n(1)$, insbesondere $\left| a_n-a_m\right|<1$. Woraus $\left| a_n\right| < a_{n(1)}+1$, $\forall n\geq n(1)$ folgt und somit $\forall n\geq 1$ 
+\[\left| {{a_n}} \right| \le \max \left\{ {\left| {{a_1}} \right|, \ldots ,\left| {{a_{n(1)}}} \right|,\left| {{a_{n(1)}}} \right| + 1} \right\}\]
+d.h. $\left( a_n\right)$ ist beschränkt
+\item Sei $a$ ein Häufungspunkt von $\left( a_n\right)$ (Bolzano - Weierstrass) und $l:\N\to\N$ strikt monotone mit 
+\[\mathop {\lim }\limits_{n \to \infty } {a_{l(n)}} = a\hspace{10mm}\left( {{\text{Bem.: }}l(n) \ge n} \right)\]
+\end{enumerate}
+Sei $\varepsilon>0$ und $n_0(\varepsilon)$ so dass 
+\[\left| {{a_{l(n)}} - a} \right| < \varepsilon \hspace{10mm}\forall n > {n_0}(\varepsilon )\]
+Sowie $n_1(\varepsilon)$ mit \\\todo{Can't understand, page 83 bottom}
+
+$\forall n \ge \max \left\{ {{n_0}(\varepsilon ),{n_1}(\varepsilon )} \right\}$ gilt:
+\begin{align*}
+\left| {{a_n} - a} \right| &\le \left| {{a_n} - {a_{l(n)}}} \right| + \left| {{a_{l(n)}} - a} \right|\\
+&\le \varepsilon  + \varepsilon  = 2\varepsilon 
+\end{align*}
+\[ \Rightarrow \lim a_n=a\Rightarrow \left( a_n\right) \text{ Konvergiert}\]
+\end{enumerate}
+\end{beweis}
+
+\subsubsection*{Beispiel 3.23}
+\begin{enumerate}
+\item Sei \[{a_n}: = 1 + \frac{1}{2} +  \ldots  + \frac{1}{n} = \sum\limits_{k = 1}^n {\frac{1}{k}} \] Dann ist also $1\leq a_n\leq a_{n+1}\dots$ monotone wachsend, aber divergent. Dann:
+\[{a_{2n}} - {a_n} = \frac{1}{{n + 1}} +  \ldots  + \frac{1}{{2n}} \ge \frac{n}{{2n}} = \frac{1}{2}\hspace{5mm}\forall n \ge 1\] 
+Es erfüllt also nicht das Cauchy - Kriterium
+\item Sei ${b_n}: = 1 - \frac{1}{2} + \frac{1}{3} +  \ldots  + {\left( { - 1} \right)^{n + 1}}\frac{1}{n}$ die alternierende harmonische Reihe. Insbesondere:
+\begin{align*}{b_{2k - 2}}&= \left( {1 - \frac{1}{2}} \right) + \left( {\frac{1}{3} - \frac{1}{4}} \right) +  \ldots  + \left( {\frac{1}{{2k - 3}} - \frac{1}{{2k - 2}}} \right)\\{b_{2k}}&= \left( {1 - \frac{1}{2}} \right) +  \ldots  + \left( {\frac{1}{{2k - 1}} - \frac{1}{{2k}}} \right)
+\end{align*}
+also folgt \[ 0 < b_{2k-2} < b_{2k}\hspace{10mm}\forall k\geq 1\]
+und 
+\begin{align*}{b_{2k + 1}}&= {b_{2k - 1}} - \frac{1}{{2k}} + \frac{1}{{2k + 1}}\\&= {b_{2k - 1}} + \underbrace {\left( {\frac{1}{{2k + 1}} - \frac{1}{{2k}}} \right)}_{ < 0}
+\end{align*}
+Woraus: $b_{2k+1}<b_{2k-1}$. Zudem 
+\begin{align*}
+b_{2k}&=b_{2k-1}-\frac{1}{2k}
+b_{2k}&<b_{2k-1}
+\end{align*}
+$\forall k\in\N$
+\[\frac{1}{2} = {b_2} < {b_4} \ldots  < {b_{2k - 2}} < {b_{2k}} < {b_{2k - 1}} < ?? < {b_1} = 1\]
+\todo[inline]{Check question marks right above, page 85 bottom}
+Die Teilfolgen $\left( b_{2k}\right)_{k\in\N}$, $\left( b_{2k+1}\right)_{k\in\N}$ konvergiert nach Satz 3.9 (Monotone konvergenz Satz). Da 
+\[\forall n \in\N:\left| {{b_n} - {b_{n + 1}}} \right| = \frac{1}{{n + 1}}\]
+haben sie zudem denselben Limes und $\left( b_n\right)_{n\in\N}$ konvergiert nach Satz 3.19 (Analog wie in Beispiel 3.20)
+\end{enumerate}
+
+\section{Folgen in $\R^d$ oder $\C$}
+Die Theorie der Folgen in $\R$, der Konvergenzbegriff usw. lassen sich leicht auf Folgen in $\R^d$ oder $\C$ übertragen $\norm{\cdot}$ bezeichnet die Euklidische Norm auf $\R^d$ und $\C$
+\[\norm{x}=\sqrt{x_1^2+x_2^2+\dots+x_d^2}\]
+Von diesem Standpunkt identifiziert sich $\C$ mit $\R^2$ so dass wir von Jetzt an Folgen in $\R^d$ betrachten. Die in 3.1 eingeführte Begriffe lassen sich leicht auf $\R^d$ übertragen
+\begin{definition}{}
+Eine Folge in $\R^d$ ist eine Abbildung 
+\begin{align*}
+a:\N\backslash\{ 0\}&\to\R^d\\
+n&\to a_n
+\end{align*}
+\end{definition}
+\begin{definition}{3.24}
+Eine Folge $\left( a_n\right)_{n\geq 1}$ in $\R^d$ heisst beschränkt falls es $c>0$ gibt mit $\norm{a_n}\leq c$, $\forall n\geq 1$
+\end{definition}
+\subsubsection*{Bemerkung}
+Für $d\geq 2$ haben wir keine Vollständige Ordnung, deswegen lassen sich Begriffe wie ``nach oben beschränkt'' nicht übertragen
+
+\begin{definition}{3.25}
+Eine Folge $\left( a_n\right)_{n\geq 1}$ in $\R^d$ konvergiert gegen $a\in\R^d$ falls für jedes $\varepsilon>0$ einen Index $N(\varepsilon)\geq 1$ gibt so dass 
+\[\norm{a_n-a}<\varepsilon\hspace{10mm}\forall n\geq N(\varepsilon)\]
+\end{definition}
+\todo[inline]{Not sure where the definition ends}
+Die andere Version lässt sich auch übertragen. Wir definieren dafür der (offene) \todo{??r.Ball?? page 88 bottom} mit Zentrum $a\in\R^d$ 
+\[B_{<r}(a):=\left\{ x\in\R^d : \norm{x-a}<r\right\}\]
+\missingfigure{page 88 bottom}
+$B_{<r}(a)$ ist die Verallgemeinerung von $\left( a-\varepsilon,a+\varepsilon\right)$. Nützlich ist auch der (geschlossene) \todo{??r.Ball?? page 89 top}
+\[\overline{B}_r(a):B_{\leq r}(a):=\left\{ x\in\R^d : \norm{x-a}\leq r\right\}\] 
+der das Interval $\left[ a-r,a+r\right]$ verallgemeine.
+
+\begin{definition}{3.25}
+Eine Folge $\left( a_n\right)_{n\geq 1}\subset\R^d$ konvergiert gegen $a\in\R^d$ falls für jedes $\varepsilon>0$, die Menge der Indizen $n\geq 1$ für welche $a_n\not\in B_{<\varepsilon}(a)$ endlich ist. Falls dieses Zutrifft, schreibt man 
+\[\mathop {\lim }\limits_{n \to \infty } {a_n} = a{\text{ oder }}{a_n}\mathop  \to \limits^{n \to \infty } a\] 
+\end{definition}
+
+\subsubsection*{Bemerkung}
+Die Konvergenz von $\left( a_n\right)_{n\geq 1}\subset\R^d$ ist gleichbedeutend mit der Existenz von einem Vektor $a\in\R^d$ so dass die Folge in $\R$, $\left( \norm{a_n-a}\right)_{n\geq 1}$ gegen 0 konvergiert \\
+
+\noindent Es gilt dann wieder
+\subsubsection*{Lemma 3.26}
+Sei $\left( a_n\right)_{n\geq 1}\subseteq\R^d$ konvergent
+\begin{enumerate}
+\item Der Limes ist eindeutig bestimmt
+\item Die Folge $\left( a_n\right)_{n\geq 1}$ ist beschränkt
+\end{enumerate}
+Der Konvergenzbegriff verträgt auch sehr gut mit Vektorraum Struktur wie das folgende Analog von Satz 3.8 zeigt.
+
+\subsubsection*{Satz 3.27}
+Seien $\left( a_n\right)_{n\geq 1}$, $\left( b_n\right)_{n\geq 1}$ konvergente Folgen in $\R^d$, sowie $\lambda\in\R$. Sei $a=\lim a_n$, $b=\lim b_n$. Dann sind $\left( a_n\pm b_n\right)_{n\geq 1}$ und $\left( \lambda a_n\right)_{n\geq 1}$ Konvergiert und es gilt 
+\[\lim\left( a_n\pm b_n\right) = a\pm b\text{, }\lim\lambda a_n=\lambda a\]
+Folgender Satz ist dann grundlegend um Bolzano - Weierstrass sowie der Cauchy Kriterium auf $\R^d$ zu verallgemeinen. \\
+
+Für eine Folge $\left( a_n\right)$ von Vektoren in $\R^d$ ist es Zweckmässig folgende Notation für die Koordinaten von $a_n$ zu benutzen \[a_n=\left( a_n^{(1)},a_n^{(2)},a_n^{(3)}\right)\]
+Dann gilt
+\subsubsection*{Satz 3.28}
+Folgende Aussagen sind äquivalent
+\begin{enumerate}[\hspace{2mm}(i)]
+\item $\left( a_n\right)_{n\geq 1}$ konvergiert in $\R^d$ 
+\item Jede der Folgen $\left( a_n^i\right)$ konvergiert in $\R$
+\end{enumerate}
+Falls diese zutrifft seien $a = \mathop {\lim }\limits_{n \to \infty } {a_n}$ sowie ${a^i} = \mathop {\lim }\limits_{n \to \infty } a_n^{(i)}$ dann gilt $a=\left( a^1,a^2,\dots,a^d\right)$ 
+\begin{beweis}{}
+Dazu brauchen wir folgendes geometrisches Lemma:
+\end{beweis}
+\subsubsection*{Lemma 3.29}
+%page 91 bottom, week 6
