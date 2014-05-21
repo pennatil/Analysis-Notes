@@ -48,6 +48,8 @@ In order to get the material, there are two ways:
 
 New PDFs are generated on an (almost) daily basis, so if you are not familiar with LaTex, just get the files from the "Output" folder.
 
+UPDATE: As of 21.05.2014 new PDFs are generated on a daily basis (at around 2:30 AM), so this page always contains the latest ones. 
+
 <a name="Contributing"></a>
 Contributing
 ============
