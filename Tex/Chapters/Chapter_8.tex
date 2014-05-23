@@ -439,7 +439,7 @@ Die Kettenregel wird auch angewandelt um Integrale mit Parametern zu studieren. 
 
 \subsubsection*{Beispiel}
 Sei $h:\R^2\to\R$, $\left( s,t\right)\to h\left(s,t \right)$. Wir nehmen an, $h$ ist stetig, $\frac{\partial h}{\partial t}$ existiert und ist auf ganz $\R^2$ stetig. Sei
-\[u(t) = \int\limits_a^{b(t)} {h(s,t)ds} {\text{, }}b(t) \in\subset '\left( \R \right){\text{, }}a \in\R\]\todo{Is it $C'$ or $\subset '$?? page 146 middle; limenet: it is C^1}
+\[u(t) = \int\limits_a^{b(t)} {h(s,t)ds} {\text{, }}b(t) \in\subset '\left( \R \right){\text{, }}a \in\R\]\todo{Is it $C'$ or $\subset '$?? page 146 middle; limenet: it is $C^1$}
 
 \subsubsection*{Satz 8.21}
 Sei $h(s,t)$ eine stetige differenzierbare Funktion von zwei Variablen und $b(t)$ differenzierbare Funktion einer Variable. Dann ist die Funktion \[u(t): = \int\limits_a^{b(t)} {h(s,t)ds} \] wo definiert, differenzierbar mit der Ableitung \[u'(t): = h\left( {b(t),t} \right) \cdot b'(t) + \int\limits_a^{b(t)} {\frac{{\partial h}}{{\partial t}}\left( {s,t} \right)ds} \]
@@ -511,7 +511,7 @@ x_0 &\to dx^i\left( x_0\right)
 Für jedes $x_0\in\R^n$ gilt $dx^i\left(e_j\right)=\delta_{ij}$, also bilden $dx^1\left( x_0\right),\dots,dx^n\left( x_0\right)$ eine Basis für $L\left(\R^n,\R\right)$, $\forall x\in\R^n$.\\
 
 Eine beliebige $1-$Form $\lambda :\R^n\to L\left(\R^n,\R\right)$ lässt sich dann eindeutig wie folgt darstellen \[\lambda \left( {{x_0}} \right) = \sum\limits_{i = 1}^n {{\lambda _i}\left( {{x_0}} \right)d{x^i}\left( {{x_0}} \right)} \] wobei $\lambda_i:\R^n\to\R$ Funktionen sind.
-\item Für jedes $f\in\subset'\left(\Omega\right)$\todo{Is it $C'$ or $\subset'$?? page 152.1 top; limenet: C^1} ist das Differential $df$ eine $1-Form$ \[df = \frac{{\partial f}}{{\partial {x^1}}}d{x^1} + \frac{{\partial f}}{{\partial {x^2}}}d{x^2} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}d{x^n}\]
+\item Für jedes $f\in\subset'\left(\Omega\right)$\todo{Is it $C'$ or $\subset'$?? page 152.1 top; limenet: $C^1$} ist das Differential $df$ eine $1-Form$ \[df = \frac{{\partial f}}{{\partial {x^1}}}d{x^1} + \frac{{\partial f}}{{\partial {x^2}}}d{x^2} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}d{x^n}\]
 \item Der Ausdruck $\lambda\left(x,y,z\right)=3dx+5zdy+xdz$ definiert eine $1-$Form auf $\R^3$ mit
 \begin{align*}
 & \lambda_1\left(x,y,z\right)=3\\
@@ -657,7 +657,7 @@ dh \left( P\right) \left( v_2\right) = &\left( \frac{\partial h}{\partial x}\lef
 \end{align*}
 Durch Lösen des linearen Gleichungssystem folgen wir:
 \[\frac{\partial h}{\partial x}\left( P\right) = \frac{\sqrt{2}}{4}+\frac{1}{5}, \frac{\partial h}{\partial y}\left( P\right) = \frac{1}{5}\]
-Die Richtung des Gradients ist somit \[ \nabla h\left( P \right) = \arctan{\frac{\frac{1}{5}}{\frac{\sqrt{2}}{4}+ \frac{1}{5}}}=19.86 °\]\todo{add arg at the beginning of the equation using special command, as well as tilde on top of equal sign}
+Die Richtung des Gradients ist somit \[ \nabla h\left( P \right) = \arctan{\frac{\frac{1}{5}}{\frac{\sqrt{2}}{4}+ \frac{1}{5}}}=19.86 \]\todo{add arg at the beginning of the equation using special command, as well as tilde on top of equal sign, Also add deg symbol on top of 19.86}
 und die Steigung in diese Richtung ist
 \[\left| \nabla h\left( P\right) \right| = \sqrt{\left( \frac{\sqrt{2}}{4}+\frac{1}{5}\right)^2 + \left( \frac{1}{5}\right)^2} = 0.59 = 59\%\] \todo{add tilde on top of second to last equal sign}
 \end{enumerate}
