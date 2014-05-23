@@ -1,8 +1,8 @@
 Analysis I/II Notes
 ===================
-This repo contains all the handwritten notes from Professor Imamoglu's Analysis I/II class for CS at ETHZ. Although this page should clarify most of your doubts, you can <a href="mailto:pennatil@student.ethz.ch">email me</a> and I will try to help you. Please avoid questions regarding LaTex (installation, usage, can't compile) as the sections below are pretty self explanatory. 
+This repo contains all the handwritten notes from Professor Imamoglu's Analysis I/II class for CS at ETHZ. Although this page should clarify most of your doubts, you can <a href="mailto:pennatil@student.ethz.ch">email me</a> and I will try to help you. Please avoid questions regarding LaTex (installation, usage, can't compile) as the sections below are pretty self explanatory.
 
-This repository will always contain the latest files (PDFs as well), which will be updated when progress is made. As of right now, i do NOT recommend you print out things in a final form (booklet, color,...) since they might change from one day to another. Once I am done, you will receive an email with the final files. 
+This repository will always contain the latest files (PDFs as well), which will be updated when progress is made. As of right now, i do NOT recommend you print out things in a final form (booklet, color,...) since they might change from one day to another. Once I am done, you will receive an email with the final files.
 
 If you wish to help (highly appreciated), there are a few things left to complete (take a look at the [Status](#Status) section). For more details on how, take a look at the [Contributing](#Contributing) section below.
 
@@ -18,7 +18,7 @@ Status
 |    5    |      No     |          -         |       -       |            -            |   No  |
 |    6    |     Yes     |         Yes        |       Yes      |           Yes           |   No  |
 |    7    |     Yes     |         Yes        |       Yes      | Waiting for corrections |   No  |
-|    8    |     Yes     |          In Progress         |       No      | Waiting for corrections |   No  |
+|    8    |     Yes     |          In Progress         |       Yes      | Waiting for corrections |   No  |
 |    9    | In Progress |          -         |       -       |            -            |   No  |
 
 (*) Might still be missing some content, which will be added once the corrections are made.
@@ -36,25 +36,25 @@ Getting the material
 
 In order to get the material, there are two ways:
 
-* Get a .zip file, containing all of the notes, as well as the source files. This package contains Final chapters, as well as those that are in progress. 
+* Get a .zip file, containing all of the notes, as well as the source files. This package contains Final chapters, as well as those that are in progress.
   1. Download the .zip archive [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip)
   2. Unzip it, you will find a folder named "Analysis-Notes-master", open it
   3. Open the "PDF" Folder
-  4. There are two folders you have to pay attention to:  
-      * Final chapters: Those files that are complete and final, are saved here.  
-	  * Work in Progress: Everything is included in here, as well as incomplete files. 
+  4. There are two folders you have to pay attention to:
+      * Final chapters: Those files that are complete and final, are saved here.
+	  * Work in Progress: Everything is included in here, as well as incomplete files.
   5. Get the files you need
 * Typeset (Build) it yourself from source. Take a look at the [Building](#Building) section
 
 New PDFs are generated on an (almost) daily basis, so if you are not familiar with LaTex, just get the files from the "Output" folder.
 
-UPDATE: As of 21.05.2014 new PDFs are generated on a daily basis (at around 2:30 AM), so this page always contains the latest ones. 
+UPDATE: As of 21.05.2014 new PDFs are generated on a daily basis (at around 2:30 AM), so this page always contains the latest ones.
 
 <a name="Contributing"></a>
 Contributing
 ============
 
-Since these documents are still a very early version, they might contain a few (if not more) mistakes. Also, not everything has been yet typed up, as well as corrected. Even if you have no experience with LaTex, you can correct spelling mistakes or else. You can help in two ways: 
+Since these documents are still a very early version, they might contain a few (if not more) mistakes. Also, not everything has been yet typed up, as well as corrected. Even if you have no experience with LaTex, you can correct spelling mistakes or else. You can help in two ways:
 
 1. Correct mistakes you find in the notes (spelling, math, ...)
     * If you have no experience with LaTex or GitHub:
@@ -71,7 +71,7 @@ Since these documents are still a very early version, they might contain a few (
 		2. Fork the repo. Help [here](https://help.github.com/articles/fork-a-repo)
 		3. Make the changes, and commit them to your forked repo. Make sure to add detailed comments explaining what you changed, makes my life a lot easier when merging!
 		4. Once you are done, request a Merge. Help [here](https://help.github.com/articles/using-pull-requests)
-2. Type up what's left of the notes. 
+2. Type up what's left of the notes.
 	* Only for people familiar with LaTex and GitHub. Please, do not start typing away, <a href="mailto:pennatil@student.ethz.ch?subject=I%20want%20to%20help!">email me</a> first so that we can avoid two people doing the same work.
 
 I will not take into consideration emails containing corrections. Please use the "Issues" tab so to keep track of every change.
@@ -99,8 +99,8 @@ This is only recommended to people with experience with LaTex, since the files m
 		4. Afterwards, type <code>./nameOfScript.sh</code> and press enter.
 		5. Wait until the process is done.
 		6. You will find a folder called "Output" inside the Notes folder, with the output file(s).
-		
+
 Disclaimer
 ==========
-The following documents, as well as any other file contained in this repository (like scripts, etc.) are given as is, meaning I take NO RESPONSIBILITY if something happens to your computer, or if the information contained in the documents is not accurate. 
+The following documents, as well as any other file contained in this repository (like scripts, etc.) are given as is, meaning I take NO RESPONSIBILITY if something happens to your computer, or if the information contained in the documents is not accurate.
 
