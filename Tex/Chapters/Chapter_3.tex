@@ -520,4 +520,181 @@ Falls diese zutrifft seien $a = \mathop {\lim }\limits_{n \to \infty } {a_n}$ so
 Dazu brauchen wir folgendes geometrisches Lemma:
 \end{beweis}
 \subsubsection*{Lemma 3.29}
-%page 91 bottom, week 6
+$\forall x=\left( x^1,x^2,\dots,x^d\right) \in\R^d$ gilt 
+\[\mathop {\max }\limits_{1 \le i \le d} \left| {{x^i}} \right| \le \mathop {\left\| x \right\|}\limits_{\begin{array}{*{20}{c}} \Downarrow \\{\sqrt {\sum {{{\left| {{x^i}} \right|}^2}} } }\end{array}}  \le \sqrt d \mathop {\max }\limits_{1 \le i \le d} \left| {{x^i}} \right|\]
+\missingfigure{page 92, top}
+\[{\left( { - \frac{r}{{\sqrt 2 }},\frac{r}{{\sqrt 2 }}} \right)^2} \subset {B_{ \le r}}\left( 0 \right) \subset {\left( { - r,r} \right)^2}\]
+
+\begin{beweis}{von Satz 3.28}
+\begin{enumerate}[align=left]
+\item[(i)$\Rightarrow$(ii)]Folgt aus der Ungleichung $\left| {a_n^{(i)} - {a^{(i)}}} \right| \le \left\| {{a_n} - a} \right\|$
+\item[(ii)$\Rightarrow$(i)]Sei $a^i=\lim a_n^i$ und $a=\left( a^i\right)_i$. Aus \[\left\| {{a_n} - a} \right\| \le \sqrt d \mathop {\max }\limits_{1 \le i \le d} \left| {a_n^{(i)} - {a^{(i)}}} \right|\] folgt (i)
+\end{enumerate}
+\end{beweis}
+
+\subsubsection*{Satz 3.29 (Bolzano - Weierstrasse)}
+Jede beschränkte Folge $\left( a_n\right)_{n\geq 1}$ in $\R^d$ besitzt eine konvergente Teilfolge
+\subsubsection*{Beispiel}
+\begin{enumerate}
+\item\begin{align*} \left( {{a_n}} \right)&= \left( {\begin{array}{*{20}{c}}{{\raise0.7ex\hbox{$1$} \!\mathord{\left/ {\vphantom {1 n}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$n$}}}\\{{\raise0.7ex\hbox{$2$} \!\mathord{\left/ {\vphantom {2 n}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$n$}}}\end{array}} \right) \subset\R^2\\
+\lim a_n&=\left( {\begin{array}{*{20}{c}}0\\0\end{array}} \right) \end{align*}
+\item \[\left( {{a_n}} \right) = \left( {\begin{array}{*{20}{c}}{\frac{{{n^2} + n + 1}}{{2{n^2} + n + 1}}}\\n\end{array}} \right)\]
+$\left( a_n\right)$ ist divergent
+\[\lim \frac{{{n^2} + n + 1}}{{2{n^2} + n + 1}} \to \frac{1}{2}\] aber $\lim n=\infty$
+\end{enumerate}
+
+\begin{definition}{3.30}
+$\left( a_n\right)_{n\geq 1}$ ist eine Cauchy Folge falls es $\forall\varepsilon >0$ ein $N(\varepsilon)\geq 1$ gibt so dass 
+\[\left\| {{a_n} - {a_m}} \right\| < \varepsilon \hspace{10mm}\forall n,m \ge N(\varepsilon )\]
+\end{definition}
+\noindent Aus Sätze 3.28 und 3.22 (Cauchy Kriterium) folgt 
+\subsubsection*{Satz 3.31}
+Es sind äquivalent 
+\begin{enumerate}
+\item $\left( a_n\right)_{n\geq 1}$ konvergiert
+\item $\left( a_n\right)$ ist eine Cauchy Folge
+\end{enumerate}
+Für $\C$ haben wir noch dass sich die Körperstruktur mit Konvergenz gut verträgt. Nähmlich
+\subsubsection*{Satz 3.32}
+Seien $\left( z_n\right)$, $\left( w_n\right)$ zwei Konvergente Folgen in $\C$ mit $z=\lim z_n$, $w=\lim w_n$. Dann 
+\begin{enumerate}[(i)]
+\item $\overline{z_n}\to z_n$ und ${\left( {\left\| {{z_n}} \right\|} \right)_{n \ge 1}}$ konvergiert gegen $\norm{z}$
+\item Die Folge $\left( z_n w_n\right)_{n\geq 1}$konvergiert gegen $zw$
+\item Falls $w\not =0$ und $w_n\not=0$, $\forall n\geq 1$ so konvergiert ${\left( \frac{z_n}{w_n} \right)_{n \ge 1}}$ gegen $\frac{z}{w}$
+\end{enumerate}
+
+\section{Reihen}
+Sei $\left( a_n\right)_{n\geq 1}$ eine Folge in $\R$ oder $\C$. Sei 
+\[ S_n:=a_1+a_2+\dots +a_n=\sum\limits_{k = 1}^n {{a_k}} \]
+die Folge der Partial Summen. Eine Reihe ist eine unendliche Summe\[{a_1} + {a_2} +  \ldots  = \sum\limits_{n = 1}^\infty {{a_n}} \] einer Folge $\left( a_n\right)_{n\geq 1}$
+
+\begin{definition}{3.33}
+Die Reihe $\sum\limits_{n = 1}^\infty a_n$ ist konvergent falls die Folge $\left( S_n\right)_{n\geq 1}$ konvergiert. In diesem Fall wird deren Limes mit $\sum\limits_{n = 1}^\infty a_n$ bezeichnet
+\[\lim {S_n} = \lim \sum\limits_{k = 1}^n {{a_k}: = \sum\limits_{n = 1}^\infty  {{a_n}} } \]
+\end{definition}
+\subsubsection*{Beispiel 3.34}
+\begin{enumerate}
+\item Für $\abs{q}<1$ gilt 
+\begin{align*}{S_n}&= \sum\limits_{k = 0}^n {{q^k} = \frac{{1 - {q^{n + 1}}}}{{1 - q}}} \\\lim {S_n}&= \mathop {\lim }\limits_{n \to \infty } \frac{{1 - {q^{n + 1}}}}{{1 - q}} = \frac{1}{{1 - q}}\text{  (da $\lim q^n=0$)}\end{align*}
+Somit konvergiert $\sum\limits_{k = 1}^\infty  {{q^k}} $ und deren Wert ist $\frac{1}{1-q}$
+\item Die Harmonische Reihe $\sum\limits_{n = 1}^\infty  {\frac{1}{n}} $ ist nach Beispiel 3.23 (i)\todo{ADD reference} divergent.
+\end{enumerate}
+Für Reihen gibt es verschiedene praktische Konvergenz Kriterium. Das erste ergibt sich direkt aus dem Cauchy Kriterium (Satz 3.22)\todo{add reference + page number}
+
+\subsubsection*{Satz 3.35 (Cauchy Kriterium)}
+Die Reihe $\sum\limits_{n = 1}^\infty  {{a_n}} $ konvergiert genau dann wenn es für jedes $\varepsilon>0$ einer Index $N(\varepsilon)\geq 1$ gibt, so dass 
+\[ \forall n\geq m\geq N(\varepsilon)\hspace{5mm}\left| \sum\limits_{k=m}^n a_k\right|<\varepsilon\]
+
+\begin{beweis}{}
+\todo[inline]{It says Übung, maybe incomplete? page 97 top}
+Die Reihe $\sum\limits_1^\infty  {{a_j}} $ konvergiert genau dann, wenn 
+\[\left| {\sum\limits_m^n {{a_j}} } \right| \to 0\hspace{10mm}\forall n \ge m\]
+$\sum\limits_1^\infty  {{a_j}} $ konv. $\Leftrightarrow S_n=\sum\limits_1^n a_k$ konv. $\Leftrightarrow S_n$ Cauchy $\Rightarrow \forall\varepsilon>0, \exists N(\varepsilon)$ s.d. 
+\[\forall n > m > N(\varepsilon)\hspace{10mm}\underbrace {\left| {{S_n} - {S_m}} \right|}_{\sum\limits_m^n {{a_k}} } < \varepsilon \]
+\end{beweis}
+\subsubsection*{Korollar}
+$\sum\limits_{k = 1}^\infty  {{a_k}} $ konvergent $\Rightarrow\left| a_k\right|\to 0$
+
+\begin{beweis}{}
+Nehmen wir $m=n$ in Satz 3.5\todo{Add reference + page number}. Das ist ein Notwendiges Kriterium aber nicht hinreichendes Kriterium 
+\end{beweis} 
+\todo[inline]{Content between brackets  looks like personal notes, should these be copied? page 97 bottom}
+
+\subsubsection*{Beispiel}
+$\sum\limits_1^\infty  k $ ist nicht konvergent, weil $\mathop {\lim }\limits_{k \to \infty } k\not  = 0$ (notwendig).\\
+$\sum\frac{1}{k}$ ist nicht konvergent obwohl $\lim\frac{1}{k}=0$ (nicht genügends)\\
+
+Im Folgenden leiten wir aus Vergleich mit der geometrischen Reihe verschiedene Konvergenz Kriterium ab (Quotienten, Wurzelkriterium). Dies Stützt sich auf
+
+\subsubsection*{Satz 3.36}
+Seien $\sum\limits_1^\infty  {{a_k}} $, $\sum\limits_1^\infty  {{b_k}} $ Reihen wobei 
+\begin{enumerate}
+\item Es gibt $k_0$ so dass $\left| a_k\right| \leq b_k$, $\forall k > k_0$ 
+\item $\sum b_k$ konvergiert
+\end{enumerate}
+Dann konvergiert $\sum\limits_{k = 1}^\infty  {{a_k}} $
+
+\begin{beweis}{}
+Sei $\varepsilon>0$ und $N(\varepsilon) > k_0$ so dass 
+\[\sum\limits_{k = m}^n {{b_k}}  = \left| {\sum\limits_{k = m}^n {{b_k}} } \right| \le \varepsilon\hspace{10mm} \forall n,m > N(\varepsilon ) > {k_0}\]
+Dann folgt aus 1. 
+\[\left| {\sum\limits_{k = m}^n {{a_k}} } \right| \le \sum\limits_{k = m}^n {\left| {{a_k}} \right|}  \le \sum\limits_{k = m}^n {{b_k}}  \le \varepsilon \]
+Der Satz folgt aus dem Cauchy Kriterium
+\end{beweis}
+\subsubsection*{Beispiel}
+\begin{enumerate}
+\item \[\sum\limits_{k = 1}^\infty  {\frac{1}{{k!}} = ?} \]
+\[\frac{1}{{k!}} \le \frac{1}{{{2^{k - 1}}}}\hspace{5mm}\forall k \ge 1 \Rightarrow \sum\limits_1^\infty  {\frac{1}{{k!}} < } \sum\limits_1^\infty  {\frac{1}{{{2^{k - 1}}}}}  = 2\]
+\item \[\sum\limits_{k = 1}^\infty  {\frac{1}{{{{\left( {k + 1} \right)}^2}}} = ?} \]
+Zum erst zeigen wir dass $\sum\limits_1^\infty  {\frac{1}{{k\left( {k + 1} \right)}}} $ konvergiert. Da 
+\begin{align*}
+\frac{1}{{k\left( {k + 1} \right)}}&= \frac{1}{k} - \frac{1}{{k + 1}}\hspace{10mm}\forall k \ge 1\\
+{S_n} = \sum\limits_1^\infty  {\frac{1}{{k\left( {k + 1} \right)}}} &= \left( {1 - \frac{1}{2}} \right) + \left( {\frac{1}{2} - \frac{1}{3}} \right) +  \ldots  + \left( {\frac{1}{{n - 1}} - \frac{1}{n}} \right)\\
+&= 1 - \frac{1}{n}
+\end{align*}
+$\mathop {\lim }\limits_{n \to \infty } {S_n} = 1,{\text{ d.h. }}\sum\limits_1^\infty  {\frac{1}{{k\left( {k + 1} \right)}} = 1} {\text{ }}$.\\
+$\forall k > 1$ Da 
+\begin{align*}{\left( {k + 1} \right)^2} > k\left( {k + 1} \right)\\\frac{1}{{{{\left( {k + 1} \right)}^2}}} < \frac{1}{{k\left( {k + 1} \right)}}
+\end{align*}
+Daraus folgt 
+\[\sum {\frac{1}{{{{\left( {k + 1} \right)}^2}}}}  \le \sum {\frac{1}{{k\left( {k + 1} \right)}}}  = 1\]
+$\sum {\frac{1}{{{{\left( {k + 1} \right)}^2}}}} $ konvergiert.
+\end{enumerate}
+
+\subsubsection*{Satz 3.37 (Quotientenkriterium)}
+Sei $a_k\not=0$, $\forall k\geq 1$ 
+
+\begin{enumerate}[(i)]
+\item Falls \[\mathop {\lim }\limits_{k \to \infty } \sup \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| < 1\] so ist $\sum a_k$ konvergent
+\item Falls \[\mathop {\lim }\limits_{k \to \infty } \inf \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| > 1\] so ist $\sum a_k$ divergent
+\end{enumerate}
+
+\begin{beweis}{}
+\begin{enumerate}[(i)]
+\item Sei ${q_0}: = \lim \sup \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|$ \[\mathop {\lim }\limits_{k \to \infty } \left( {\sup \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|} \right) = \mathop {\lim }\limits_{n \to \infty } \left( {\mathop {\sup }\limits_{k \ge n} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|} \right)\] 
+Wähle $q\in\R$ mit $q_0<q<1$. Dann gilt für genugend gross $n_0\in\N$ 
+\begin{align*}
+\forall n \ge {n_0}:&\left| {\mathop {\sup }\limits_{k \ge n} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| - {q_0}} \right| \le \underbrace {\left( {q - {q_0}} \right)}_\varepsilon\\
+{\text{d.h. }}&\text{ }\mathop {\sup }\limits_{k \ge n} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| \le q\hspace{5mm}\forall n \ge {n_0}
+\end{align*}
+Insbesondere bei Wahl von $n=n_0$ 
+\[\forall k \ge {n_0}\hspace{10mm}\left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| \le q\]
+Es folgt für $k\geq n_0$ die Abschätzung
+\begin{align*}\left| {{a_k}} \right|&= \left| {\frac{{{a_k}}}{{{a_{k - 1}}}} \cdot \frac{{{a_{k - 1}}}}{{{a_{k - 2}}}} \cdot  \ldots  \cdot \frac{{{a_{{n_0} + 1}}}}{{{a_{{n_0}}}}} \cdot {a_{{n_0}}}} \right|\\&\le {q^{k - {n_0}}}\left| {{a_{{n_0}}}} \right| = \underbrace {{q^n}\left| {{a_{{n_0}}}} \right|}_C{q^k} = C{q^k}
+\end{align*}
+Wir können nun $b_k=Cq^k$ setzen und Satz 3.36 \todo{Add refence + page number} anwenden. Da $\sum b_k$ konvergiert (da $\left| q\right| < 1$) $\sum a_k$ konvergiert.
+\item Sei 
+\[{q_0}: = \mathop {\lim }\limits_{k \to \infty } \inf \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| = \mathop {\lim }\limits_{n \to \infty } \mathop {\inf }\limits_{k \ge n} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|\]
+(falls es existiert). Wähle $q\in\R$ mit $q_0>q>1$. Dann existiert $n_0$ mit \[\forall k > {n_0}:\left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| > \mathop {\inf }\limits_{k > {n_0}} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| \ge q\]
+\[\left( \begin{array}{l}\hspace{4mm}\left| {\mathop {\inf }\limits_{k \ge n} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| - {q_0}} \right| < \underbrace {q - {q_0}}_\varepsilon \hspace{4mm}\forall k > {n_0}\\ \Rightarrow  - {q_0} + q < \inf \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| - {q_0}\hspace{5mm}\forall k > {n_0}\end{array} \right)\]
+Dann folgt analog wie in (i) dass 
+\begin{align*}\left| {{a_k}} \right|&= \left| {\frac{{{a_k}}}{{{a_{k - 1}}}} \cdot \frac{{{a_{k - 1}}}}{{{a_{k - 2}}}} \cdot  \ldots  \cdot \frac{{{a_{{n_0} + 1}}}}{{{a_{{n_0}}}}} \cdot {a_{{n_0}}}} \right|\\&> {q^{k - {n_0}}}\left| {{a_{{n_0}}}} \right| > C{q^k}, \forall k>k_0
+\end{align*}
+Insbesondere ist $\left\{ {\left| {{a_k}} \right|:k \ge 1} \right\}$ nicht beschränkt $\Rightarrow$ $\lim a_k\not\to 0\Rightarrow\sum a_k$ divergent.\\
+Falls $\lim \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|$ existiert, dann \[\lim \inf \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| = \lim \sup \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| = \lim \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| = L\]
+\end{enumerate}
+\end{beweis}
+
+\subsubsection*{Satz 3.36'}
+Sei $a_k\not=0$, $\forall k\in\N$ und sei $L = \mathop {\lim }\limits_{k \to \infty } \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|$
+\begin{enumerate}[(i)]
+\item Falls $L<1$, so ist $\sum a_k$ konvergent
+\item Falls $L>1$, so ist $\sum a_k$ divergent
+\item Falls $L=1$, kann man daraus nichts ableiten 
+\end{enumerate}
+\subsubsection*{Beispiel}
+\begin{enumerate}
+\item $\sum\limits_1^\infty  {\frac{{n!}}{{{n^n}}}} $ konvergiert. Da
+\begin{align*}\left| {\frac{{(n + 1)!}}{{{{\left( {n + 1} \right)}^{n + 1}}}} \cdot \frac{{{n^n}}}{{n!}}} \right|&= \left( {n + 1} \right) \cdot \frac{{{n^n}}}{{{{\left( {n + 1} \right)}^{n + 1}}}} = {\left( {\frac{n}{{n + 1}}} \right)^n}\\&={\left( {\frac{1}{{1 + \frac{1}{n}}}} \right)^n} \to \frac{1}{e} < 1\end{align*} 
+Insbesondere $\frac{n!}{n^n}\to 0$ falls $n\to\infty$, d.h. $n^n$ wächst schneller als $n!$ (schon gesehen) \todo{Maybe add where?? page 104 top}
+\item Wir haben schon gesehen dass $\sum\frac{1}{n^2}$ konvergiert. Aber Quotientenkriterium gibt kein informations dass \[\left| {\frac{{{a_{n + 1}}}}{{{a_n}}}} \right| = \left| {\frac{{{{\left( {n + 1} \right)}^2}}}{{{n^2}}}} \right| \to 1\]
+\item Wir haben auch schon gesehen dass $\sum\frac{1}{n}$ divergiert. In diesem fall auch \[\left| {\frac{{{a_{n + 1}}}}{{{a_n}}}} \right| = {\frac{{{{ {k + 1} }}}}{{{k}}}}  \to 1\], d.h. das Quotientenkriterium ist nicht anwendbar.
+\end{enumerate}
+
+%START WEEK 8
+
+
+
+
+
+
