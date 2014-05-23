@@ -16,8 +16,8 @@ Status
 |    3    | In Progress |          -         |       No      |            No           |   No  |
 |    4    | In Progress [bimmlerd]     |          -         |       -       |            -            |   No  |
 |    5    |      No     |          -         |       -       |            -            |   No  |
-|    6    |     Yes     |         Yes        |       No      |           Yes           |   No  |
-|    7    |     Yes     |         Yes        |       No      | Waiting for corrections |   No  |
+|    6    |     Yes     |         Yes        |       Yes      |           Yes           |   No  |
+|    7    |     Yes     |         Yes        |       Yes      | Waiting for corrections |   No  |
 |    8    |     Yes     |          In Progress         |       No      | Waiting for corrections |   No  |
 |    9    | In Progress |          -         |       -       |            -            |   No  |
 
