@@ -265,3 +265,17 @@ $\norm{x}_{2} = \sqrt{\sum{x_{i}^{2}}} \leq 1$
 \begin{definition}{4.15}
 Zwei Normen $\norm{.}^{(1)}, \norm{.}^{(2)}$ auf $\R^{d}$ heissen \emph{äquivalent}, falls es $c_{1}, c_{2} > 0$ gibt, mit \[ c_{1}\norm{x}^{(1)}\leq\norm{x}^{(2)} \leq c_{2}\norm{x}^{(1)} \quad \forall x \in \R^{d} \]
 \end{definition}
+\noindent\textbf{Bemerkung}: Sei $C=\max{\{ C_{2}, \frac{1}{C_{1}}\}}$, dann gilt $(\frac{1}{C})\norm{x}^{(1)}\leq\norm{x}^{(2)} \leq C\norm{x}^{(1)}$
+\subsubsection*{Beispiel}
+Die Normen $\norm{.}_{p} \quad 1\leq p\leq\infty$ sind wegen $(\ast)$ äquivalent.
+\subsubsection*{Bemerkung 4.16}
+Äquivalente Normen definieren dieselben ``offenen Mengen'' via Distanzfunktion.
+\subsubsection*{Beweis}
+\todo{marked as skip? p152 week 9 sem1}Für die Normkugeln \[ B_{r}^{(1)}(x_{0})\defeq \{ x:\norm{x-x_{0}}^{(1)}<r\} \] gilt mit $c_{1}\norm{x}^{1}\leq\norm{x}^{2}\leq c_{2}\norm{x}^{1}$ \[ B_{rc_{1}}^{(1)}(x_{0}) \subset B_{r}^{(2)}(x_{0}) \subset B_{c_{2}r}(x_{0})\]
+$\implies x_{0} \in \Omega$ innerer Punkt von $\Omega$ bezüglich $\norm{.}^{2} \iff x_{0}\in\Omega$ innerer Punkt von $\Omega$ bezüglich $\norm{.}^{1}$ \\
+
+\noindent Auf $\R^{d}$ haben wir
+\subsection*{Satz 4.17}
+Je zwei Normen auf $\R^{d}$ sind äquivalent.
+\subsubsection*{Beweis}
+Es genügt zu zeigen, dass eine beliebige Norm $\norm{.}$ zu $\norm{.}_{2}$ äquivalent ist.
