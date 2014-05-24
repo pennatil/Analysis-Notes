@@ -28,3 +28,11 @@
 \makeatother
 
 % Shamelessly copied from http://tex.stackexchange.com/questions/43008/absolute-value-symbols
+
+
+%Put a circle around a character
+\newcommand*\mycirc[1]{%
+  \begin{tikzpicture}[baseline=(C.base)]
+    \node[draw,circle,inner sep=1pt](C) {#1};
+  \end{tikzpicture}}
+% got it from http://www.latex-community.org/forum/viewtopic.php?f=44&t=6301#p24655

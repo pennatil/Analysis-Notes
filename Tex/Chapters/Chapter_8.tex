@@ -2,10 +2,10 @@
 \section{Partielle Ableitungen und Differential}
 Wie kann man die Begriffe der \todo{Missing content?? page 113 top} Differentialrechnung auf Funktionen $f:\Omega \subset \R^n\to\R$ erweitern?\\
 
-Funktion in mehreren variablen sind ein bisschen komplizierter als Funktionen in einer variable.
+Funktionen in mehreren Variablen sind ein bisschen komplizierter als Funktionen in einer Variable.
 \subsubsection*{Beispiel}
 \begin{enumerate}
-\item $f(x)=x^2+5$ ist in ursprung stetig da $\lim\limits_{x\to 0}f(x)=f(0)$. Aber $f:\R^2\to\R$ \[f(x,y) = \left\{ {\begin{array}{*{20}{c}}
+\item $f(x)=x^2+5$ ist im Ursprung stetig, da $\lim\limits_{x\to 0}f(x)=f(0)$. Aber $f:\R^2\to\R$ \[f(x,y) = \left\{ {\begin{array}{*{20}{c}}
 {\frac{{xy}}{{{x^2} + {y^2}}}}&{(x,y)\not  = (0,0)}\\
 0&{(x,y) = (0,0)}
 \end{array}} \right.\] ist im Ursprung nicht stetig. %page 114 top
@@ -30,7 +30,7 @@ Funktion in mehreren variablen sind ein bisschen komplizierter als Funktionen in
 \end{minipage}
 \end{figure}
 
-Aber der Limes entlang der Gerade $y=mx$ 
+Aber der Limes entlang der Gerade $y=mx$
 \[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
 {x \to 0}\\
 {y \to 0}\\
@@ -39,70 +39,70 @@ Aber der Limes entlang der Gerade $y=mx$
  \downarrow \\
 {{\text{Hängt von }} m {\text{ ab}}}
 \end{array}} \]
-und $\frac{m}{1+m^2}\not=0$, falls $m\not=0$. Eine funktion $f(x,y)$ an der stelle $(x_0,y_0)$ ist stetig wenn der limes $\mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} f(x,y)$ in jeder Richtung der gleichen wert haben. 
+und $\frac{m}{1+m^2}\not=0$, falls $m\not=0$. Eine Funktion $f(x,y)$ an der Stelle $(x_0,y_0)$ ist stetig wenn der Limes $\mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} f(x,y)$ in jeder Richtung den gleichen Wert hat.
 \begin{definition}{8.1}
 Sei $\Omega\subset\R^n$, $f:\Omega \to\R$, $a\in\Omega$
 \begin{enumerate}
-\item $f$ hat den Grenzwert $c\in\R$, d.h \[\lim\limits_{x\to a} f(x)=c\] ween es zu jeder (Beliebig kleinen) Schranke $\varepsilon>0$, eine $\delta$-umgebung \[{B_\delta }(a): = \left\{ {x \in \R^n}\mid\left| {x - a} \right| < \delta  \right\}\] gibt, so dass $\left| {f(x) - a} \right| < \varepsilon$ für alle $x\in\Omega\cap B_\delta (a), x\not=a$ gilt
+\item $f$ hat den Grenzwert $c\in\R$, d.h \[\lim\limits_{x\to a} f(x)=c\] wenn es zu jeder (beliebig kleinen) Schranke $\varepsilon>0$, eine $\delta$-umgebung \[{B_\delta }(a): = \left\{ {x \in \R^n}\mid\left| {x - a} \right| < \delta  \right\}\] gibt, so dass $\left| {f(x) - a} \right| < \varepsilon$ für alle $x\in\Omega\cap B_\delta (a), x\not=a$ gilt.
 \item $f$ heisst in $a\in\Omega$ stetig, wenn $\mathop {\lim }\limits_{x \to a} f'(x) = f(a)$ gilt.
-\item $f$ heisst in $\Omega$ stetig, wenn $f$ in allen $a\in\Omega$ stetig ist. 
+\item $f$ heisst in $\Omega$ stetig, wenn $f$ in allen $a\in\Omega$ stetig ist.
 \end{enumerate}
 Die Summe, das Produkt, der Quotient (Nenner ungleich Null) stetiger Funktion sind stetig.\\
 
-$f$ besitzt keinen Grenzwert in $x_0$ wenn sich bei Annäherungen an $x_0$ auf verschiedenen Kurven (z.b. Geraden) verschiedene oder keine Grenzwert ergeben.
+$f$ besitzt keinen Grenzwert in $x_0$ wenn sich bei Annäherungen an $x_0$ auf verschiedenen Kurven (z.b. Geraden) verschiedene Grenzwerte bzw. keinen Grenzwert ergeben bzw. ergibt.
 \end{definition}
 
 \subsection*{Sandwichlemma}
-Sei $f,g,h$ funktionen wobei $g<f<h$. Wenn $\mathop {\lim }\limits_{x \to a} g = L = \mathop {\lim }\limits_{x \to a} h$ gilt, dann ergibt $\lim\limits_{x\to a}f=L$.\\
+Seien $f,g,h$ Funktionen, wobei $g<f<h$. Wenn $\mathop {\lim }\limits_{x \to a} g = L = \mathop {\lim }\limits_{x \to a} h$ gilt, dann ergibt $\lim\limits_{x\to a}f=L$.\\
 
 \noindent Da $\mathop {\lim }\limits_{(x,y) \to (0,0)} \left| y \right| = 0$ gilt, $\mathop {\lim }\limits_{(x,y) \to (0,0)} f(x,y) = 0 \Rightarrow f$ ist in (0,0) stetig.\\
 
 \noindent \textbf{\underline{Oder}}\\
 
-\noindent Für Grenzwertbestimmungen (also auch für Stetigkeitsuntersuchungen) ist es oft nützlich, die Funktionen mittels Polarkoordinaten umzuschreiben. Vor allem bei Rationalen Funktionen. \\
+\noindent Für Grenzwertbestimmungen (also auch für Stetigkeitsuntersuchungen) ist es oft nützlich, die Funktionen mittels Polarkoordinaten umzuschreiben. Vor allem bei rationalen Funktionen. \\
 
-Hierbei gilt $x=r\cos\theta$, $y=r\sin\theta$, wobei $r=$ länge des Vektors $(x,y)$ und $\varphi$ der Winkel. Nun lass wir die Länge $r$ gegen 0 gehen. 
+Hierbei gilt $x=r\cos\theta$, $y=r\sin\theta$, wobei $r=$ Länge des Vektors $(x,y)$ und $\varphi$ der Winkel. Nun lassen wir die Länge $r$ gegen 0 gehen.
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
-\item Die Funktionen 
+\item Die Funktionen
 \begin{itemize}
 \item $f(x,y)=x^2+y^2$
 \item $f(x,y,z)=x^3+\frac{x^2}{y^2+1}+z$
 \item $f(x,y)=4x^2 y^3+3xy$
 \item $f(x,y)=\cos xy$
 \end{itemize}
-sind stetig, da sie aus Steigen Funktionen zusammengesetzt.
+sind stetig, da sie aus steigen Funktionen zusammengesetzt sind.
 
 \item \[f(x,y) = \left\{ {\begin{array}{*{20}{c}}
 {\frac{{{x^2}y}}{{{x^2} + {y^2}}}}&{{\text{für}}}&{{\text{(x,y)}}\not  = (0,0)}\\
 0&{{\text{für}}}&{{\text{(x,y)}}= (0,0)}
 \end{array}} \right.\]
-Für $(x,y)\not=(0,0)$ ist $f$ als Quotient von steiger Funktionen stetig. Es verbleibt $f$ im Punkt $(0,0)$ zu untersuchen. Da \[\left| {\frac{{{x^2}}}{{{x^2} + {y^2}}}} \right| \le 1\] \[ 0<\left| f(x,y)\right| <\left| y\right|\] \[f(x,y) = \frac{{{x^2}y}}{{{x^2} + {y^2}}} = \frac{{\left( {{r^2}{{\cos }^2}\theta } \right)\left( {r\sin \theta } \right)}}{{{r^2}\left( {{{\cos }^2}\theta  + {{\sin }^2}\theta } \right)}} = r{\cos ^2}\theta \sin \theta \] 
+Für $(x,y)\not=(0,0)$ ist $f$ als Quotient von stetigen Funktionen stetig. Es verbleibt $f$ im Punkt $(0,0)$ zu untersuchen. Da \[\left| {\frac{{{x^2}}}{{{x^2} + {y^2}}}} \right| \le 1\] \[ 0<\left| f(x,y)\right| <\left| y\right|\] \[f(x,y) = \frac{{{x^2}y}}{{{x^2} + {y^2}}} = \frac{{\left( {{r^2}{{\cos }^2}\theta } \right)\left( {r\sin \theta } \right)}}{{{r^2}\left( {{{\cos }^2}\theta  + {{\sin }^2}\theta } \right)}} = r{\cos ^2}\theta \sin \theta \]
 \[\mathop {\lim }\limits_{r \to 0} f(r,\theta ) = \mathop {\lim }\limits_{r \to 0} r{\cos ^2}\theta \sin \theta  = 0\]
-\item Wir können nochmals die Stetigkeit der Funktion 
+\item Wir können nochmals die Stetigkeit der Funktion
 \[f(x,y) = \left\{ {\begin{array}{*{20}{c}}
 {\frac{{{x^2}y}}{{{x^2} + {y^2}}}}&{{\text{für}}}&{{\text{(x,y)}}\not  = (0,0)}\\
 0&{{\text{für}}}&{{\text{(x,y)}}= (0,0)}
 \end{array}} \right.\] mittels Polarkoordinaten untersuchen \[f(x,y)=\frac{r^2\cos\theta\sin\theta}{r^2}=\cos\theta\sin\theta\] \[\mathop {\lim }\limits_{r \to 0} f(x,y) = \cos \theta \sin \theta \] hängt von $\theta$ ab. \[\Rightarrow f\text{ in (0,0) nicht stetig}\]
 
 \subsubsection*{Bemerkung}\todo{is this supposed to be inside the list or out??}
-Eine trickreiche Variante Grenzwerte zu berechnen, ergibt sich durch substitution, d.h. man berechnet den Grenzwert \[\mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} f\left( {g(x,y)} \right)\] indem man zunächst $t=g(x,y)$ setzt und den Grenzwert \[{t_0} = \mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} g(x,y)\] bestimmt. Dann ist \[\mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} f\left( {g(x,y)} \right) = \mathop {\lim }\limits_{t \to {t_0}} f(t)\] 
+Eine trickreiche Variante Grenzwerte zu berechnen, ergibt sich durch Substitution, d.h. man berechnet den Grenzwert \[\mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} f\left( {g(x,y)} \right)\] indem man zunächst $t=g(x,y)$ setzt und den Grenzwert \[{t_0} = \mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} g(x,y)\] bestimmt. Dann ist \[\mathop {\lim }\limits_{(x,y) \to ({x_0},{y_0})} f\left( {g(x,y)} \right) = \mathop {\lim }\limits_{t \to {t_0}} f(t)\]
 \end{enumerate}
 
 \subsubsection*{Beispiel}
-\[\mathop {\lim }\limits_{(x,y) \to (4,0)} \frac{{\sin xy}}{{xy}}\] Hier ist $g(x,y)=xy$, $\mathop {\lim }\limits_{(x,y) \to (4,0)} g(x,y) = 0$. Somit \[\mathop {\lim }\limits_{(x,y) \to (4,0)} \frac{{\sin xy}}{{xy}} = \mathop {\lim }\limits_{t \to 0} \frac{{\sin t}}{t} = 1\] Wir werden auch sehen das die Existenz der Ableitungen in einigen Richtungen ungenügend für die Differenzierbarkeit der Funktion ist. \\
+\[\mathop {\lim }\limits_{(x,y) \to (4,0)} \frac{{\sin xy}}{{xy}}\] Hier ist $g(x,y)=xy$, $\mathop {\lim }\limits_{(x,y) \to (4,0)} g(x,y) = 0$. Somit \[\mathop {\lim }\limits_{(x,y) \to (4,0)} \frac{{\sin xy}}{{xy}} = \mathop {\lim }\limits_{t \to 0} \frac{{\sin t}}{t} = 1\] Wir werden auch sehen, dass die Existenz der Ableitungen in einigen Richtungen ungenügend für die Differenzierbarkeit der Funktion ist. \\
 
-\noindent\textbf{\underline{Was bedeutet die Ableitung in einiger Richtung?}}
+\noindent\textbf{\underline{Was bedeutet die Ableitung in einingen Richtungen?}}
 \subsubsection*{Beispiel}
-Sei \[f:\R^2\to \R\]\[(x,y)\to \left(x^2+xy\right)\cos(xy)\]Man kann für jedes $y$, die Funktion \[\R\to\R\]\[x\to \left( x^2+xy\right)\left(\cos xy\right)\]als Funktion einer Variablen $x$ auflassen und die Ableitung davon berechnen. Das Resultat mit $\frac{\partial f}{\partial x}$ bezeichnet, ist die erste partielle Ableitung von $f$ nach $x$. In diesem fall ist es durch \[\frac{{\partial f}}{{\partial x}}(x,y) = (2x + y)(\cos xy) - ({x^2} + xy)y\sin (xy)\] gegeben. \\
+Sei \[f:\R^2\to \R\]\[(x,y)\to \left(x^2+xy\right)\cos(xy)\]Man kann für jedes $y$, die Funktion \[\R\to\R\]\[x\to \left( x^2+xy\right)\left(\cos xy\right)\]als Funktion einer Variablen $x$ auffassen und die Ableitung davon berechnen. Das Resultat wird mit $\frac{\partial f}{\partial x}$ bezeichnet und ist die erste partielle Ableitung von $f$ nach $x$. In diesem Fall ist es durch \[\frac{{\partial f}}{{\partial x}}(x,y) = (2x + y)(\cos xy) - ({x^2} + xy)y\sin (xy)\] gegeben. \\
 
-\noindent Analog definiert man $\frac{\partial f}{\partial y}$\[\frac{{\partial f}}{{\partial y}}(x,y) = x(\cos xy) - ({x^2} + xy)x\sin (xy)\] Die allgemeine Definition nimmt folgende Gestallt ein. Sei $\Omega \subset\R^n$. In zukunft  bezeichnen wir die $i-$te Koordinate eines Vektors $x\in\R^n$ mit $x^i$; also ist $x=\left( x^1,x^2,\dots,x^n\right)$.\\
+\noindent Analog definiert man $\frac{\partial f}{\partial y}$\[\frac{{\partial f}}{{\partial y}}(x,y) = x(\cos xy) - ({x^2} + xy)x\sin (xy)\] Die allgemeine Definition nimmt folgende Gestalt an. Sei $\Omega \subset\R^n$. In zukunft  bezeichnen wir die $i-$te Koordinate eines Vektors $x\in\R^n$ mit $x^i$; also ist $x=\left( x^1,x^2,\dots,x^n\right)$.\\
 
 \noindent Sei $e_i:=\left( 0,\dots,0,1,0,\dots,0\right)$ der $i-$te Basisvektor von $\R^n$
 
 \begin{definition}{8.2}
-Die Funktion $f:\Omega\subset\R^n\to\R$ heisst an der stelle $x_0\in\Omega$ in Richtung $e_i$ (oder nach $x^i$) partielle differenzierbar falls der limes \[\frac{{\partial f}}{{\partial {x^i}}}({x_0}) = {f_{{x^i}}}({x_0}): =  - \mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+Die Funktion $f:\Omega\subset\R^n\to\R$ heisst an der Stelle $x_0\in\Omega$ in Richtung $e_i$ (oder nach $x^i$) partiell differenzierbar, falls der Limes \[\frac{{\partial f}}{{\partial {x^i}}}({x_0}) = {f_{{x^i}}}({x_0}): =  - \mathop {\lim }\limits_{\begin{array}{*{20}{c}}
 {h \to 0}\\
 {h\not  = 0}
 \end{array}} \frac{{f({x_0} + h{e_i}) - f({x_0})}}{h}\]
@@ -114,7 +114,7 @@ existiert
 \end{definition}
 \subsubsection*{Bemerkung 8.3}
 \missingfigure{page 121, middle}
-Sei $f:\R^2\to\R, \left(x_0^1,x_0^2\right)\in\R^2$. Wir betrachten die scharen von $f$ \[f(\cdot ,x_0^2):\R\to \R\] und \[f(x_0^1,\cdot ):\R\to\R\] $\frac{\partial f}{\partial x^1}$, $\frac{\partial f}{\partial x^2}$ sind die Ansteig der Tangente zur entsprechende schrittkurven
+Sei $f:\R^2\to\R, \left(x_0^1,x_0^2\right)\in\R^2$. Wir betrachten die Scharen von $f$ \[f(\cdot ,x_0^2):\R\to \R\] und \[f(x_0^1,\cdot ):\R\to\R\] $\frac{\partial f}{\partial x^1}$, $\frac{\partial f}{\partial x^2}$ sind die zu dem Anstieg der Tangente entsprechenden Schnittkurven.
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
@@ -132,100 +132,100 @@ Sei $f:\R^2\to\R, \left(x_0^1,x_0^2\right)\in\R^2$. Wir betrachten die scharen v
 \[\frac{{\partial f}}{{\partial y}}(0,0) = \mathop {\lim }\limits_{h \to 0} \frac{{f(0,h) - f(0,0)}}{h} = \lim \frac{{\frac{{h \cdot {0^3}}}{{0 + {h^2}}} - 0}}{h} = 0\]
 \end{enumerate}
 \subsubsection*{Bemerkung}
-Für Funktionen $f:\R\to\R$ einer variable impliziert die differenzierbarkeit in $x_0$, die Stetigkeit in $x_0$ und zudem eine gute Approximation von $f$ durch eine affine Funktion in einer Umgebung von $x_0$. Folgendes Beispiel zeigt, dass in $\R^n$ $(n\geq 2)$ Partielle Differenzierbarkeit keine analoges  Approximationseigenschaften oder stetigkeit impliziert:
+Für Funktionen $f:\R\to\R$ einer Variable impliziert die Differenzierbarkeit in $x_0$, die Stetigkeit in $x_0$ und zudem eine gute Approximation von $f$ durch eine affine Funktion in einer Umgebung von $x_0$. Folgendes Beispiel zeigt, dass in $\R^n$ $(n\geq 2)$ partielle Differenzierbarkeit keine analoge Approximationseigenschaften oder Stetigkeit impliziert:
 \[f: \R^2 \to\R ,{\text{ }}f(x,y) = \left\{ {\begin{array}{*{20}{c}}
 {\frac{{xy}}{{{x^2} + {y^2}}}}&{(x,y)\not  = (0,0)}\\
 0&{(x,y)\not  = (0,0)}
 \end{array}} \right.\]
-Für alle $\left( x_0,y_0\right) \in\R^2$ ist $f$ in beiden Richtungen partiel differenzierbar:
+Für alle $\left( x_0,y_0\right) \in\R^2$ ist $f$ in beiden Richtungen partiell differenzierbar:
 \begin{itemize}
 \item Für $\left( x_0,y_0\right)\not=\left( 0,0\right)$ \[\frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right) = {\left. {\frac{{y\left( {{x^2} + {y^2}} \right) - 2{x^2}y}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}}} \right|_{(x,y) = \left( {{x_0},{y_0}} \right)}} = \frac{{y_0^3 - x_0^2{y_0}}}{{{{\left( {{x_0}^2 + {y_0}^2} \right)}^2}}}\]
 \[\frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right) = {\left. {\frac{{x\left( {{x^2} + {y^2}} \right) - 2x{y^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}}} \right|_{(x,y)\not  = \left( {{x_0},{y_0}} \right)}} = \frac{{{x^2} - x{y^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}}\]
 \item Für $\left(x_0,y_0\right)=\left( 0,0\right)$\[\frac{{\partial f}}{{\partial x}}(0,0) = \mathop {\lim }\limits_{h \to 0} \frac{{\overbrace {f\left( {0 + h,0} \right) - f\left( {0,0} \right)}^{f({x_0} + h{e_1}) - f(x_0)}}}{h} = \lim \frac{0}{h} = 0\]\[\frac{{\partial f}}{{\partial y}}(0,0) = \mathop {\lim }\limits_{h \to 0} \frac{{\overbrace {f\left( {0,0 + h} \right) - f\left( {0,0} \right)}^{f({x_0} + h{e_2}) - f({x_0})}}}{h} = \lim \frac{0}{h} = 0\]
 \end{itemize}
-Im Ursprung besitzt $f$ beide partielle Ableitungen, sie ist aber nicht stetig. Der Grund ist, dass die partielle Ableitungen nur partielle Informationen geben. Wir müssen die Differenzierbarkeit irgend eine andere weise verallgemeinen.\\
+Im Ursprung besitzt $f$ beide partielle Ableitungen, sie ist aber nicht stetig. Der Grund ist, dass die partielle Ableitungen nur partielle Informationen geben. Wir müssen die Differenzierbarkeit in irgendeiner anderen Weise verallgemeinen.\\
 
-Die Lösung dieses Problem ist, dass man eine Approximations-Eigenschaft durch eine Lineare Abbildung postuliert. \\
+Die Lösung dieses Problem ist, dass man eine Approximationseigenschaft durch eine lineare Abbildung postuliert. \\
 
-Sei $f:\R\to\R$ differenzierbar in $x_0;f'(x_0)$ existiert. In diesem Fall kann $f$ für alle $x$ nähe $x_0$ durch die Funktion $f(x_0)+f'(x_0)(x-x_0)$ gut approximiert werden. Dass heisst dass \[f(x)=f(x_0)+f'(x_0)(x-x_0)+R(x,x_0)\text{ \hspace{2mm}mit  }\mathop {\lim }\limits_{x \to {x_0}} \frac{{R(x,{x_0})}}{{x - {x_0}}} = 0\]
+Sei $f:\R\to\R$ differenzierbar in $x_0;f'(x_0)$ existiert. In diesem Fall kann $f$ für alle $x$ nahe $x_0$ durch die Funktion $f(x_0)+f'(x_0)(x-x_0)$ gut approximiert werden. Das heisst, dass \[f(x)=f(x_0)+f'(x_0)(x-x_0)+R(x,x_0)\text{ \hspace{2mm}mit  }\mathop {\lim }\limits_{x \to {x_0}} \frac{{R(x,{x_0})}}{{x - {x_0}}} = 0\]
 
 \subsubsection*{Bemerkung}
-$f'(x):\R\to\R'$ sollt als lineare Abbildung interpretiert werden
+$f'(x):\R\to\R'$ sollte als lineare Abbildung interpretiert werden
 \subsection*{Lineare Abbildungen}
-Eine Abbildung $A:\R^n\to\R$ ist linear falls für alle $x,y\in\R^n$ und $\alpha,\beta\in\R$ \[A\left( \alpha x+\beta y\right) =\alpha A(x)+\beta A(y)\]
-Eine solche Abbildung ist durch ihre Werte \[A(e_i):=A_1,A(e_2):=A_2,\dots,A(e_n):=A_n\] auf der Standardbasis $e_1,\dots,e_n$ eindeutig bestimmt. Aus $x = \sum\limits_{i = 1}^n {{x^i}{e_i}} $ und linearität folgt nämlich
+Eine Abbildung $A:\R^n\to\R$ ist linear, falls für alle $x,y\in\R^n$ und $\alpha,\beta\in\R$ \[A\left( \alpha x+\beta y\right) =\alpha A(x)+\beta A(y)\]
+Eine solche Abbildung ist durch ihre Werte \[A(e_i):=A_1,A(e_2):=A_2,\dots,A(e_n):=A_n\] auf der Standardbasis $e_1,\dots,e_n$ eindeutig bestimmt. Aus $x = \sum\limits_{i = 1}^n {{x^i}{e_i}} $ und der Linearität folgt nämlich
 
 \[
 A(x) = \sum\limits_{i = 1}^n {{x^i}A({e_i}) = \sum\limits_{i = 1}^n {{A_i}{x^i}} } \tag{\textasteriskcentered}
 \]
-Umgekehrt bestimmt ein Vektor $\left( A_1,\dots,A_n\right)$ vermöge der Formel (\textasteriskcentered) eine Lineare Abbildung.\\
+Umgekehrt bestimmt ein Vektor $\left( A_1,\dots,A_n\right)$ mittels der Formel (\textasteriskcentered) eine lineare Abbildung.\\
 
 Schreiben wir $x = \left( {\begin{array}{*{20}{c}}
 {{x^1}}\\
  \vdots \\
 {{x^n}}
 \end{array}} \right)$ für einen Vektor $x = {({x^1})_{1 \le i \le n}}$ und \\ %break needed to have everything on the same line
-$A=\left( A_1,\dots,A_n\right)$ für die Darstellung einer Lineare Abbildung $A:\R^n\to\R$ bezüglich die Standard Basis $\left\{e_1,\dots,e_n\right\}$ so ist \[A(x) = \left( {{A_1}, \ldots ,{A_n}} \right)\left( {\begin{array}{*{20}{c}}
+$A=\left( A_1,\dots,A_n\right)$ für die Darstellung einer linearen Abbildung $A:\R^n\to\R$ bezüglich die Standard Basis $\left\{e_1,\dots,e_n\right\}$ so ist \[A(x) = \left( {{A_1}, \ldots ,{A_n}} \right)\left( {\begin{array}{*{20}{c}}
 {{x^1}}\\
  \vdots \\
 {{x^n}}
 \end{array}} \right) = \sum {{A_i}{x^i}} \]
 
 \begin{definition}{8.4}
-Die Funktion $f:\Omega\to\R$ heisst an der Stelle $x_0\in\Omega\subset\R^n$ differenzierbar falls eine lineare Abbildung $A:\R^n\to\R$ gibt so dass \[f(x) = f\left( {{x_0}} \right) + A\left( {x - {x_0}} \right) + R\left( {{x_0},x} \right)\] wobei $\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} = 0$
+Die Funktion $f:\Omega\to\R$ heisst an der Stelle $x_0\in\Omega\subset\R^n$ differenzierbar, falls es eine lineare Abbildung $A:\R^n\to\R$ gibt, so dass \[f(x) = f\left( {{x_0}} \right) + A\left( {x - {x_0}} \right) + R\left( {{x_0},x} \right)\] wobei $\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} = 0$
 \end{definition}
-In diesem fall heisst $A$ der Differential an der Stelle $x_0$ und wird mit $\mathop {df}\limits_{{x_0}} $ bezeichnet, d.h. $f$ ist total differenzierbar in $x_0=\left( x_0^1,\dots,x_0^n\right)$ falls reelle Zahlen $A_1,\dots,A_n$ existieren so dass gilt \[f(x) = f\left( {{x_0}} \right) + {A_1}\left( {{x^1} - x_0^1} \right) + {A_2}\left( {{x^2} - x_0^2} \right) +  \ldots  + {A_n}\left( {{x^n} - x_0^n} \right) + R\left( {x,{x_0}} \right)\] mit $\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} = 0$
+In diesem Fall heisst $A$ das Differential an der Stelle $x_0$ und wird mit $\mathop {df}\limits_{{x_0}} $ bezeichnet, d.h. $f$ ist total differenzierbar in $x_0=\left( x_0^1,\dots,x_0^n\right)$, falls reelle Zahlen $A_1,\dots,A_n$ existieren, so dass gilt \[f(x) = f\left( {{x_0}} \right) + {A_1}\left( {{x^1} - x_0^1} \right) + {A_2}\left( {{x^2} - x_0^2} \right) +  \ldots  + {A_n}\left( {{x^n} - x_0^n} \right) + R\left( {x,{x_0}} \right)\] mit $\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} = 0$
 
 \subsubsection*{Bemerkung: Geometrische Interpretation}
-Sei $f:\Omega \to\R$, $\Omega\in\R^2$. Wir können die differenzierbare Funktion nähe dem Punkt $x_0=\left( x_0^1,x_0^2\right)$ mit hilfe der Lineare Funktion \[P\left( x \right) = P\left( {{x^1},{x^2}} \right) = f\left( {x_0^1,x_0^2} \right) + \underbrace {{A_1}\left( {{x^1} - x_0^1} \right) + {A_2}\left( {{x^2} - x_0^2} \right)}_{{d_x}_{_0}f\left( {x - {x_0}} \right)}\] approximieren. \\
+Sei $f:\Omega \to\R$, $\Omega\in\R^2$. Wir können die differenzierbare Funktion nahe dem Punkt $x_0=\left( x_0^1,x_0^2\right)$ mit Hilfe der linearen Funktion \[P\left( x \right) = P\left( {{x^1},{x^2}} \right) = f\left( {x_0^1,x_0^2} \right) + \underbrace {{A_1}\left( {{x^1} - x_0^1} \right) + {A_2}\left( {{x^2} - x_0^2} \right)}_{{d_x}_{_0}f\left( {x - {x_0}} \right)}\] approximieren. \\
 
-Die Differenz $\underbrace {f(x) - P(x)}_{{d_x}_{_0}f\left( {x - {x_0}} \right)}\mathop  \to \limits_{x \to {x_0}} 0$\todo{can't understand what comes after the formula, page 126.1 middle} $P(x)$ ist eine Ebene. Die ist die Tangenteebene zur $f$ an der Stelle $x_0$ und spielt die Rolle des Tangente für Funktionen in einer Variable. \missingfigure{page 126.1 bottom}
+Die Differenz $\underbrace {f(x) - P(x)}_{{d_x}_{_0}f\left( {x - {x_0}} \right)}\mathop  \to \limits_{x \to {x_0}} 0$\todo{can't understand what comes after the formula, page 126.1 middle} $P(x)$ ist eine Ebene. Die ist die Tangentialebene zu $f$ an der Stelle $x_0$ und spielt die Rolle der Tangente für Funktionen in einer Variable. \missingfigure{page 126.1 bottom}
 
 \subsubsection*{Beispiel 8.5}
 \begin{enumerate}[\indent a)]
-\item Jede affin Lineare Funktion $f(x)=Ax+b$, $x\in\R^n$, wobei $a:\R^n\to\R$ linear, b$\in\R$ ist an jeder stelle $x_0\in\R^n$ differenzierbar, mit $\mathop {df}\limits_{{x_0}} =A$ unabhängig von $x_0$ da 
+\item Jede affin lineare Funktion $f(x)=Ax+b$, $x\in\R^n$, wobei $a:\R^n\to\R$ linear, b $\in\R$ ist an jeder Stelle $x_0\in\R^n$ differenzierbar, mit $\mathop {df}\limits_{{x_0}} =A$ unabhängig von $x_0$, da
 \[f\left( x \right) - f\left( {{x_0}} \right) - A\left( {x - {x_0}} \right) = 0\hspace{10mm}\forall x,{x_0} \in\R^n\]
-\item Koordinaten funktionen $x^i:\R^n\to\R$, $\left( x^1,x^2,\dots,x^n\right)\to x^i$, $x^i(x)=x^i$. Dann ist $x^i$ differenzierbar an jeder Stelle $x_0\in\R^n$ mit \[{\left. {d{x^i}} \right|_{x = {x_0}}} = \left( {0, \ldots ,0,1,0, \ldots ,0} \right)\] die Differenziale $dx^1,dx^2,\dots,dx^n$ bilden also an jeder Stelle $x_0\in\R^n$ eine Basis des Raumes $L\left( {\R^n:\R} \right):=\left\{ A:\R^n\to\R; A\text{ linear}\right\}$, wobei wir $A\in L\left( \R^n:\R\right)$ mit der darstellung $A=\left( A_1,\dots,A_n\right)$ bzg. der Standardbasis $\{ e_1,\dots,e_n\}$ der $\R^n$ identifizieren, und mit $A_i=A\left( e_i\right)$ \[d{x^i} = \left( {0, \ldots ,0,1,0, \ldots ,0} \right)\]\[\left( {d{x^i}\left( {{e_1}} \right),d{x^i}\left( {{e_2}} \right), \ldots ,d{x^i}\left( {{e_n}} \right)} \right)\]
-Da gilt $d{x^i}\left( {{e_j}} \right) = \left\{ {\begin{array}{*{20}{c}}
+\item Koordinatenfunktionen $x^i:\R^n\to\R$, $\left( x^1,x^2,\dots,x^n\right)\to x^i$, $x^i(x)=x^i$. Dann ist $x^i$ differenzierbar an jeder Stelle $x_0\in\R^n$ mit \[{\left. {d{x^i}} \right|_{x = {x_0}}} = \left( {0, \ldots ,0,1,0, \ldots ,0} \right)\] die Differentiale $dx^1,dx^2,\dots,dx^n$ bilden also an jeder Stelle $x_0\in\R^n$ eine Basis des Raumes $L\left( {\R^n:\R} \right):=\left\{ A:\R^n\to\R; A\text{ linear}\right\}$, wobei wir $A\in L\left( \R^n:\R\right)$ mit der Darstellung $A=\left( A_1,\dots,A_n\right)$ bzgl. der Standardbasis $\{ e_1,\dots,e_n\}$ der $\R^n$ identifizieren, und mit $A_i=A\left( e_i\right)$ \[d{x^i} = \left( {0, \ldots ,0,1,0, \ldots ,0} \right)\]\[\left( {d{x^i}\left( {{e_1}} \right),d{x^i}\left( {{e_2}} \right), \ldots ,d{x^i}\left( {{e_n}} \right)} \right)\]
+Da $d{x^i}\left( {{e_j}} \right) = \left\{ {\begin{array}{*{20}{c}}
 1&{i = j}\\
 0&{i\not  = j}
-\end{array}} \right.$ ist ${\left( {d{x^i}} \right)_{1 \le i \le n}}$ die duale Basis von $L\left( \R^n:\R\right)$ zur Standardbasis ${\left( {e_i} \right)_{1 \le i \le n}}$ des $\R^n$.
-\item Jedes $f:\R\to\R\in\subset '\left(\R\right)$ besitzt das Differential \[df\left( {{x_0}} \right) = \frac{{df}}{{dx}}\left( {{x_0}} \right)dx = f'\left( {{x_0}} \right)dx\] d.h. $f'\left(x_0\right)$ ist die Darstellung von $df\left(x_0\right)$ bezüglich der Basis $dx$ von $L\left(\R:\R\right)$ 
+\end{array}} \right.$ gilt, ist ${\left( {d{x^i}} \right)_{1 \le i \le n}}$ die duale Basis von $L\left( \R^n:\R\right)$ zur Standardbasis ${\left( {e_i} \right)_{1 \le i \le n}}$ des $\R^n$.
+\item Jedes $f:\R\to\R\in\subset '\left(\R\right)$ besitzt das Differential \[df\left( {{x_0}} \right) = \frac{{df}}{{dx}}\left( {{x_0}} \right)dx = f'\left( {{x_0}} \right)dx\] d.h. $f'\left(x_0\right)$ ist die Darstellung von $df\left(x_0\right)$ bezüglich der Basis $dx$ von $L\left(\R:\R\right)$
 \item $f\left(x,y\right)=xe^y$, $\R^2\to\R$ ist an jeder Stelle $\left(x_0,y_0\right)\in\R^2$ differenzierbar und es gilt \[df\left( {{x_0},{y_0}} \right) = \left( {\frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right),\frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)} \right) = \left( {{e^{{y_0}}},x{e^{{y_0}}}} \right)\] \[f\left( {x,y} \right) - f\left( {{x_0},{y_0}} \right) = \underbrace {f\left( {x,y} \right) - f\left( {{x_0},y} \right)}_ \swarrow  + f\left( {{x_0},y} \right) - f\left( {{x_0},{y_0}} \right)\] \[ = \frac{{\partial f}}{{\partial x}}\left( {\xi ,y} \right)\left( {x - {x_0}} \right) + \frac{{\partial f}}{{\partial y}}\left( {{x_0},\eta } \right)\left( {y - {y_0}} \right)\]
-Nach der MWS der DR, mit geeigneten Zwischenstellen $\xi=\xi (y)$ und $\eta$ \[ = \frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right)\left( {x - {x_0}} \right) + \frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)\left( {y - {y_0}} \right) + R\left( {x,y} \right)\] 
+Nach dem Mittelwertsatz der Differentialrechnung, mit geeigneten Zwischenstellen $\xi=\xi (y)$ und $\eta$ \[ = \frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right)\left( {x - {x_0}} \right) + \frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)\left( {y - {y_0}} \right) + R\left( {x,y} \right)\]
 mit
 \begin{align*}
  R\left( {x,y} \right) = &\left[ {\frac{{\partial f}}{{\partial x}}\left( {\xi ,y} \right) - \frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right)} \right]\left( {x - {x_0}} \right) \\
  + &\left[ {\frac{{\partial f}}{{\partial y}}\left( {{x_0},\eta } \right) - \frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)} \right]\left( {y - {y_0}} \right)
 \end{align*}
-Wegen die Stetigkeit der Funktionen \[\frac{{\partial f}}{{\partial x}}\left( {x,y} \right) = {e^y}\hspace{5mm}\text{und}\hspace{5mm}\frac{{\partial f}}{{\partial y}}\left( {x,y} \right) = x{e^y}\] können wir den ``Fehler'' $R\left( x,y\right)$ leicht abschätzen \[\frac{{\left| {R\left( {x,y} \right)} \right|}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}} \le \mathop {\sup }\limits_{\begin{array}{*{20}{c}}
+Wegen der Stetigkeit der Funktionen \[\frac{{\partial f}}{{\partial x}}\left( {x,y} \right) = {e^y}\hspace{5mm}\text{und}\hspace{5mm}\frac{{\partial f}}{{\partial y}}\left( {x,y} \right) = x{e^y}\] können wir den ``Fehler'' $R\left( x,y\right)$ leicht abschätzen \[\frac{{\left| {R\left( {x,y} \right)} \right|}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}} \le \mathop {\sup }\limits_{\begin{array}{*{20}{c}}
 {\left| {\xi  - {x_0}} \right| < \left| {x - {x_0}} \right|}\\
 {\left| {\eta  - {y_0}} \right| < \left| {y - {y_0}} \right|}
 \end{array}} \left( {\left| {{e^y} - {e^{{y_0}}}} \right| + \left| {{x_0}} \right|\left| {{e^\eta } - {e^{{y_0}}}} \right|} \right)\]
-Für $\left( x,y\right)\to\left( x_0,y_0\right)$, $\left( x,y\right)\not=\left( x_0,y_0\right)$: d.h. es gilt \[\frac{{R\left( {x,y} \right)}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}} \to 0\] 
+Für $\left( x,y\right)\to\left( x_0,y_0\right)$, $\left( x,y\right)\not=\left( x_0,y_0\right)$: d.h. es gilt \[\frac{{R\left( {x,y} \right)}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}} \to 0\]
 d.h. es gilt \[\frac{{f\left( {x,y} \right) - f\left( {{x_0},{y_0}} \right) - \frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right)\left( {x - {x_0}} \right) - \frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)\left( {y - {y_0}} \right)}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}}\mathop  \to \limits_{\left( {x,y} \right) \to \left( {{x_0},{y_0}} \right)} 0\]
- d.h. $f\left( x,y\right)$ ist \todo{can't read, page 130 bottom} differenzierbar und 
+ d.h. $f\left( x,y\right)$ ist \todo{can't read, page 130 bottom} differenzierbar und
 \[df\left( {{x_0},{y_0}} \right) = \left( {\frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right),\frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)} \right)\]
 \item Die Funktion \[f\left( {x,y} \right) = \left\{ {\begin{array}{*{20}{c}}
 {\frac{{{x^3}y}}{{{x^2} + {y^2}}}}&{\left( {x,y} \right)\not  = \left( {0,0} \right)}\\
 0&{\left( {x,y} \right) = \left( {0,0} \right)}
 \end{array}} \right.\] ist in $\left( 0,0\right)$ differenzierbar. \\
 
-Wir haben schon gesehen dass $\frac{\partial f}{\partial x}\left( 0,0\right)=0$ und $\frac{\partial f}{\partial y}\left( 0,0\right)=0$. Dann gilt \[\frac{{\left| R \right|}}{{\left| {\left( {x,y} \right)} \right|}} = \frac{{\left| {f\left( {x,y} \right) - f\left( {0,0} \right) - \frac{{\partial f}}{{\partial x}}\left( {0,0} \right)\left( {x - 0} \right) - \frac{{\partial f}}{{\partial y}}\left( {0,0} \right)\left( {y - 0} \right)} \right|}}{{\left| {\left( {x - 0,y - 0} \right)} \right|}}\] \[ = \frac{{\left| {f\left( {x,y} \right) - 0 - 0 - 0} \right|}}{{\left| {\left( {x,y} \right)} \right|}} = \frac{{\left| {f\left( {x,y} \right)} \right|}}{{\left| {\left( {x,y} \right)} \right|}}\] 
-Zum untersuchen ist 
+Wir haben schon gesehen, dass $\frac{\partial f}{\partial x}\left( 0,0\right)=0$ und $\frac{\partial f}{\partial y}\left( 0,0\right)=0$. Dann gilt \[\frac{{\left| R \right|}}{{\left| {\left( {x,y} \right)} \right|}} = \frac{{\left| {f\left( {x,y} \right) - f\left( {0,0} \right) - \frac{{\partial f}}{{\partial x}}\left( {0,0} \right)\left( {x - 0} \right) - \frac{{\partial f}}{{\partial y}}\left( {0,0} \right)\left( {y - 0} \right)} \right|}}{{\left| {\left( {x - 0,y - 0} \right)} \right|}}\] \[ = \frac{{\left| {f\left( {x,y} \right) - 0 - 0 - 0} \right|}}{{\left| {\left( {x,y} \right)} \right|}} = \frac{{\left| {f\left( {x,y} \right)} \right|}}{{\left| {\left( {x,y} \right)} \right|}}\]
+Zu untersuchen ist
 \[\mathop {\lim }\limits_{\left( {x,y} \right) \to \left( {0,0} \right)}  \frac{{\left| {R\left( {\left( {x,y} \right),\left( {0,0} \right)} \right)} \right|}}{{\left( {x,y} \right) - \left( {0,0} \right)}} = \mathop {\lim }\limits_{\left( {x,y} \right) \to \left( {0,0} \right)} \frac{{\left| {f\left( {x,y} \right)} \right|}}{{\left| {\left( {x,y} \right)} \right|}}\]
-Mittels Polarkoordinaten ist dies noch einsichtiger 
+Mittels Polarkoordinaten ist dies noch offensichtlicher
 \[\mathop {\lim }\limits_{\left( {x,y} \right) \to \left( {0,0} \right)} \frac{{\left| {f\left( {x,y} \right)} \right|}}{{{x^2} + {y^2}}} = \mathop {\lim }\limits_{r \to 0} \frac{{{r^4}{{\cos }^3}\theta \sin \theta }}{{{r^2}}} = \mathop {\lim }\limits_{r \to 0} {r^2}{\cos ^3}\theta \sin \theta  = 0\] \[\Rightarrow f\text{ in }\left( 0,0\right)\text{ differenzierbar}\]
 \end{enumerate}
 
-\noindent Gibt es eine Beziehung zwischen des Differential und der partielle Ableitungen?
+\noindent Gibt es eine Beziehung zwischen dem Differential und den partiellen Ableitungen?
 
 \subsubsection*{Bemerkung 8.6}
 
-Sei $f:\Omega\to\R$, $\Omega\subset\R^n$ differenzierbar an der Stelle $x_0\in\Omega$. Dann existieren die partiellen Ableitungen $\frac{\partial f}{\partial x^i}\left( x_0\right)$, $i=1,\dots,n$ und dass Differential kann \[{d_{{y_0}}}f = \left( {\frac{{\partial f}}{{\partial {x^1}}}\left( {{x_0}} \right), \ldots ,\frac{{\partial f}}{{\partial {x^n}}}\left( {{x_0}} \right)} \right)\] dargestellt werden. 
+Sei $f:\Omega\to\R$, $\Omega\subset\R^n$ differenzierbar an der Stelle $x_0\in\Omega$. Dann existieren die partiellen Ableitungen $\frac{\partial f}{\partial x^i}\left( x_0\right)$, $i=1,\dots,n$ und dass Differential kann als \[{d_{{y_0}}}f = \left( {\frac{{\partial f}}{{\partial {x^1}}}\left( {{x_0}} \right), \ldots ,\frac{{\partial f}}{{\partial {x^n}}}\left( {{x_0}} \right)} \right)\] dargestellt werden.
 
 \subsubsection*{Beweis}
-$f$ an der Stelle $x_0$ differenzierbar \[\Rightarrow f\left( {{x_0} + h{e_i}} \right) = f\left( {{x_0}} \right) + \left( {{d_{{x_0}}}f} \right)\left( {h{e_i}} \right) + R\left( {{x_0} + h{e_i},{x_0}} \right)\] wobei \[\mathop {\lim }\limits_{h \to 0} \frac{{R\left( {{x_0} + h{e_i},{x_0}} \right)}}{h} = \lim \frac{{f\left( {{x_0} + h{e_i}} \right) - f\left( {{x_0}} \right)\left( {{d_{{x_0}}}f\left( {h{e_i}} \right)} \right)}}{h} = 0\] \[ \Rightarrow \lim \frac{{f\left( {{x_0} + h{e_i}} \right) - f\left( {{x_0}} \right)}}{h} = \lim \frac{{h{d_{{x_0}}}f\left( {{e_i}} \right)}}{h} = {d_{{x_0}}}f\left( {{e_i}} \right)\] d.h. $\frac{\partial f}{\partial x^i}\left( x_0\right)$ existiert und $=d_{x_0}f\left( e_i\right)$. \\
+Sei $f$ an der Stelle $x_0$ differenzierbar \[\Rightarrow f\left( {{x_0} + h{e_i}} \right) = f\left( {{x_0}} \right) + \left( {{d_{{x_0}}}f} \right)\left( {h{e_i}} \right) + R\left( {{x_0} + h{e_i},{x_0}} \right)\] wobei \[\mathop {\lim }\limits_{h \to 0} \frac{{R\left( {{x_0} + h{e_i},{x_0}} \right)}}{h} = \lim \frac{{f\left( {{x_0} + h{e_i}} \right) - f\left( {{x_0}} \right)\left( {{d_{{x_0}}}f\left( {h{e_i}} \right)} \right)}}{h} = 0\] \[ \Rightarrow \lim \frac{{f\left( {{x_0} + h{e_i}} \right) - f\left( {{x_0}} \right)}}{h} = \lim \frac{{h{d_{{x_0}}}f\left( {{e_i}} \right)}}{h} = {d_{{x_0}}}f\left( {{e_i}} \right)\] d.h. $\frac{\partial f}{\partial x^i}\left( x_0\right)$ existiert und $=d_{x_0}f\left( e_i\right)$. \\
 
 Da $\left( dx^i\right)_{i=1,\dots,n}$ die zur $\left( e_j\right)_{1\leq j\leq n}$ duale Basis ist \[{d_{{x_0}}}f = \sum\limits_{i = 1}^n {\frac{{\partial f}}{{\partial {x^i}}}\left( {{x_0}} \right)d{x^i} = \left( {\frac{{\partial f}}{{\partial {x^1}}}\left( {{x_0}} \right),\frac{{\partial f}}{{\partial {x^2}}}\left( {{x_0}} \right), \ldots ,\frac{{\partial f}}{{\partial {x^n}}}\left( {{x_0}} \right)} \right)} \]
 
@@ -236,35 +236,35 @@ Die Funktion \[f\left( {x,y} \right) = \left\{ {\begin{array}{*{20}{c}}
 \end{array}} \right.\] ist in $\left( 0,0\right)$ nicht differenzierbar ($f$ ist  in $\left( 0,0\right)$ nicht stetig)
 
 \subsubsection*{Satz 8.7}
-Falls $f:\Omega\to\R$ in $x_0\in\Omega\subset\R$ differenzierbar, ist sie in $x_0$ auch stetig.
+Falls $f:\Omega\to\R$ in $x_0\in\Omega\subset\R$ differenzierbar ist, ist sie in $x_0$ auch stetig.
 
 \subsubsection*{Beweis}
 Folgt aus der Definition
 \begin{definition}{8.8}
-$f:\Omega\to\R$ heisst von der Klasse $C'$, $\left( f\in C'\left(\Omega\right)\right)$ falls $f$ an jeder Stelle $x_0\in\Omega$ und in jede Richtung $e_i$ partielle differenzierbar ist und die Funktionen $x\to\frac{\partial f}{\partial x^i}\left(x\right)$ für jedes $1\leq i\leq n$ auf $\Omega$ stetig sind
+$f:\Omega\to\R$ heisst von der Klasse $C'$, $\left( f\in C'\left(\Omega\right)\right)$, falls $f$ an jeder Stelle $x_0\in\Omega$ und in jede Richtung $e_i$ partiell differenzierbar ist und die Funktionen $x\to\frac{\partial f}{\partial x^i}\left(x\right)$ für jedes $1\leq i\leq n$ auf $\Omega$ stetig sind.
 \end{definition}
 \subsubsection*{Satz 8.9}
-Sei $f\in C'\left(\Omega\right)$. Dann ist $f$ an jeder Stelle $x_0\in\Omega$ differenzierbar. 
+Sei $f\in C'\left(\Omega\right)$. Dann ist $f$ an jeder Stelle $x_0\in\Omega$ differenzierbar.
 
 \subsubsection*{Beweis}
-Für $n=3$ seien $x=\left( x^1,x^2,x^3\right)$, $x_0=\left( x_0^1,x_0^2,x_0^3\right)$. Dann ist 
+Für $n=3$ seien $x=\left( x^1,x^2,x^3\right)$, $x_0=\left( x_0^1,x_0^2,x_0^3\right)$. Dann ist
 \begin{align*}
 f\left( x \right) - f\left( {{x_0}} \right) = &\left\{ {f\left( {{x^1},{x^2},{x^3}} \right) - f\left( {{x^1},{x^2},x_0^3} \right)} \right\}\\
 + &\left\{ {f\left( {{x^1},{x^2},x_0^3} \right) - f\left( {{x^1},x_0^2,x_0^3} \right)} \right\}\\
 + &\left\{ {f\left( {{x^1},x_0^2,x_0^3} \right) - f\left( {x_0^1,x_0^2,x_0^3} \right)} \right\}
 \end{align*}
-Nach dem MWS der DR gilt: \[f\left( {{x^1},x_0^2,x_0^3} \right) - f\left( {x_0^1,x_0^2,x_0^3} \right) = \frac{{\partial f}}{{\partial {x^1}}}\left( {{\xi ^1},x_0^2,x_0^3} \right)\left( x^1-x_0^1\right)\] 
-wobei $\xi^1$ zwischen $x_0^1$ und $x^1$. Analog: 
-\[f\left( {{x^1},{x^2},x_0^3} \right) - f\left( {{x^1},x_0^2,x_0^3} \right) = \frac{{\partial f}}{{\partial {x^2}}}\left( {{x^1},{\xi ^2},x_0^3} \right)\left( {{x^2} - x_0^2} \right)\] wobei $\xi^2\in\left(x_0^2,x^2\right)$ 
+Nach dem MWS der DR gilt: \[f\left( {{x^1},x_0^2,x_0^3} \right) - f\left( {x_0^1,x_0^2,x_0^3} \right) = \frac{{\partial f}}{{\partial {x^1}}}\left( {{\xi ^1},x_0^2,x_0^3} \right)\left( x^1-x_0^1\right)\]
+wobei $\xi^1$ zwischen $x_0^1$ und $x^1$. Analog:
+\[f\left( {{x^1},{x^2},x_0^3} \right) - f\left( {{x^1},x_0^2,x_0^3} \right) = \frac{{\partial f}}{{\partial {x^2}}}\left( {{x^1},{\xi ^2},x_0^3} \right)\left( {{x^2} - x_0^2} \right)\] wobei $\xi^2\in\left(x_0^2,x^2\right)$
 und \[f\left( {{x^1},{x^2},{x^3}} \right) - f\left( {{x^1},{x^2},x_0^3} \right) = \frac{{\partial f}}{{\partial {x^3}}}\left( {{x^1},{x^2},{\xi ^3}} \right)\left( {{x^3} - x_0^3} \right)\]
-Eingesetz in dem Ausdrucke für $f(x)-f(x_0)$ ergibt: 
+Eingesetzt in den Ausdruck für $f(x)-f(x_0)$ ergibt:
 \begin{align*}
 f\left( x \right) - f\left( {{x_0}} \right) = &\frac{{\partial f}}{{\partial {x^1}}}\left( {{\xi ^1},x_0^2,x_0^3} \right)\left( {{x^1} - x_0^1} \right)\\
 + &\frac{{\partial f}}{{\partial {x^2}}}\left( {{x^1},{\xi ^2},x_0^3} \right)\left( {{x^2} - x_0^2} \right)\\ + &\frac{{\partial f}}{{\partial {x^3}}}\left( {{x^1},{x^2},{\xi ^3}} \right)\left( {{x^3} - x_0^3} \right)
 \end{align*}
 Also
 \[f\left( x \right) - f\left( {{x_0}} \right) = \sum\limits_{i = 1}^3 {\frac{{\partial f}}{{\partial {x^1}}}\left( {x_0^1,x_0^2,x_0^3} \right)\left( {{x^i} - x_0^i} \right)}  + R\left( {{x_0},x} \right)\]
-Wobei 
+Wobei
 \begin{align*}
 R\left( {{x_0},x} \right) = &\left( {\frac{{\partial f}}{{\partial {x^1}}}\left( {{\xi ^1},x_0^2,x_0^3} \right) - \frac{{\partial f}}{{\partial {x^1}}}\left( {x_0^1,x_0^2,x_0^3} \right)} \right)\left( {{x^1} - x_0^1} \right)\\
  + &\left( {\frac{{\partial f}}{{\partial {x^2}}}\left( {{x^1},{\xi ^2},x_0^3} \right) - \frac{{\partial f}}{{\partial {x^2}}}\left( {x_0^1,x_0^2,x_0^3} \right)} \right)\left( {{x^2} - x_0^2} \right)\\
@@ -273,10 +273,10 @@ R\left( {{x_0},x} \right) = &\left( {\frac{{\partial f}}{{\partial {x^1}}}\left(
 Also
 \[\left| {R\left( {x,{x_0}} \right)} \right| < \left| {x - {x_0}} \right|\underbrace {\left\{ {\left| {\left(  \ldots  \right)} \right| + \left| {\left(  \ldots  \right)} \right| + \left| {\left(  \ldots  \right)} \right|} \right\}}_{\scriptstyle \to 0{\text{ mit }}x \to {x_0}\hfill\atop
 \scriptstyle{\text{weil }}\frac{{\partial f}}{{\partial {x^i}}}{\text{ stetig sind}}\hfill}\]
-Also $\lim\frac{R\left( x,x_0\right)}{\left( x-x_0\right)}=0$ und $f(x)$ ist differenzierbar.
+Also ist $\lim\frac{R\left( x,x_0\right)}{\left( x-x_0\right)}=0$ und $f(x)$ ist differenzierbar.
 
 \subsubsection*{Beispiel 8.10}
-Polynome auf $\R^n$ sind von Klasse $C!$. Für jedes Multindex $\alpha=\left(\alpha_0,\dots , \alpha_n\right)\in\N^n$ definieren wir die Monomialfunktion \[{x^\alpha }: = {\left( {{x^0}} \right)^{{\alpha _0}}}{\left( {{x^1}} \right)^{{\alpha _1}}} \ldots {\left( {{x^n}} \right)^{{\alpha _n}}}\] Ein polynom von Grad $\leq N$ ist dann gegeben durch \[p(x) = \sum\limits_{\left| \alpha  \right| \le N} {{a_\alpha }{x^\alpha }} \] wobei $\left| \alpha  \right| = {\alpha _0} +  \ldots  + {\alpha _n}$
+Polynome auf $\R^n$ sind von der Klasse $C!$. Für jeden Multiindex $\alpha=\left(\alpha_0,\dots , \alpha_n\right)\in\N^n$ definieren wir die Monomialfunktion \[{x^\alpha }: = {\left( {{x^0}} \right)^{{\alpha _0}}}{\left( {{x^1}} \right)^{{\alpha _1}}} \ldots {\left( {{x^n}} \right)^{{\alpha _n}}}\] Ein Polynom von Grad $\leq N$ ist dann gegeben durch \[p(x) = \sum\limits_{\left| \alpha  \right| \le N} {{a_\alpha }{x^\alpha }} \] wobei $\left| \alpha  \right| = {\alpha _0} +  \ldots  + {\alpha _n}$
 \todo[inline]{Pages 135.1 - 135.2 are a zusammenfassung, not sure if needed to be included}
 \section{Differentiationsregeln}
 Ganz analog zum eindimensionalen Fall gelten folgende Differentiationsregeln
@@ -287,10 +287,10 @@ Sei $\Omega\subset\R^n$, sowie $f,g:\Omega\to\R$ an der Stelle $x_0\in\Omega$ di
 \item $d\left( {fg} \right)\left( {{x_0}} \right) = g\left( {{x_0}} \right)df\left( {{x_0}} \right) + f\left( {{x_0}} \right)dg\left( {{x_0}} \right)$
 \item Falls $g\left( x_0\right)\not=0$ \[d\left( {\frac{f}{g}} \right)\left( {{x_0}} \right) = \frac{{g\left( {{x_0}} \right)df\left( {{x_0}} \right) - f\left( {{x_0}} \right)dg\left( {{x_0}} \right)}}{{{{\left( {g\left( {{x_0}} \right)} \right)}^2}}}\]
 \end{enumerate}
-Beweis ist der selbe wie in Dim=1. Für die Kettenregel gibt es mehrere variationen 
+Beweis ist der Selbe wie im eindimensionalen Fall. Für die Kettenregel gibt es mehrere Variationen
 
 \subsubsection*{Satz 8.12 (Kettenregel, 1. Version)}
-Sei $g:\Omega\to\R$ in $x_0\in\Omega\subset\R^n$ differenzierbar, sowie $f\R\to\R$ an der stelle $g\left( x_0\right)\in\R$ differenzierbar. Dann gilt \[d\left( {f \circ g} \right)\left( {{x_0}} \right) = f'\left( {g\left( {{x_0}} \right)} \right) \cdot dg\left( {{x_0}} \right)\]
+Sei $g:\Omega\to\R$ in $x_0\in\Omega\subset\R^n$ differenzierbar, sowie $f\R\to\R$ an der Stelle $g\left( x_0\right)\in\R$ differenzierbar. Dann gilt \[d\left( {f \circ g} \right)\left( {{x_0}} \right) = f'\left( {g\left( {{x_0}} \right)} \right) \cdot dg\left( {{x_0}} \right)\]
 
 \missingfigure{page 137, middle UPDATE:STARTED DRAWING, MISSING DIAGRAM ON LEFT SIDE}
 
@@ -319,9 +319,9 @@ Sei $g:\Omega\to\R$ in $x_0\in\Omega\subset\R^n$ differenzierbar, sowie $f\R\to\
 %\end{center}
 
 \subsubsection*{Beweis}
-$g$ an der Stelle $x_0$ differenzierbar 
+Sei $g$ an der Stelle $x_0$ differenzierbar
 \[ \Rightarrow g\left( x \right) - g\left( {{x_0}} \right)\mathop  = \limits^A dg\left( {{x_0}} \right)\left( {x - {x_0}} \right) + {R_g}\left( {x - {x_0}} \right)\]
-mit \[\frac{{{R_g}\left( {x - {x_0}} \right)}}{{\left( {x - {x_0}} \right)}}\mathop  \to \limits_{x \to {x_0}} 0 \Rightarrow \frac{{g\left( x \right) - g\left( {{x_0}} \right)}}{{\left| {x - {x_0}} \right|}}\mathop  \le \limits^B C = \max \left[ {\frac{{\partial g}}{{\partial {x^i}}}\left( {{x_0}} \right)} \right]\] $f$ in $g\left( x_0\right)$ differenzierbar 
+mit \[\frac{{{R_g}\left( {x - {x_0}} \right)}}{{\left( {x - {x_0}} \right)}}\mathop  \to \limits_{x \to {x_0}} 0 \Rightarrow \frac{{g\left( x \right) - g\left( {{x_0}} \right)}}{{\left| {x - {x_0}} \right|}}\mathop  \le \limits^B C = \max \left[ {\frac{{\partial g}}{{\partial {x^i}}}\left( {{x_0}} \right)} \right]\] $f$ in $g\left( x_0\right)$ differenzierbar
 \[f\left( {g\left( x \right)} \right) - f\left( {g\left( {{x_0}} \right)} \right)\mathop  = \limits^C f'\left( {g\left( {{x_0}} \right)} \right)\left[ {g(x) - g\left( {{x_0}} \right)} \right] + {R_f}\left( {g\left( x \right),g\left( {{x_0}} \right)} \right)\]
 Woraus folgt:
 \begin{align*}
@@ -340,11 +340,11 @@ d.h.
 \[f\left( {g\left( x \right)} \right) - f\left( {g\left( {{x_0}} \right)} \right) = \left( {f'\left( {g\left( {{x_0}} \right)} \right) \cdot dg\left( {{x_0}} \right)} \right)\left( {x - {x_0}} \right) + {R_{f \circ g}}\left( {x,{x_0}} \right)\]
 wobei
 \[{R_{f \circ g}}\left( {x,{x_0}} \right) = f'\left( {g\left( {{x_0}} \right)} \right){R_g}\left( {x,{x_0}} \right) + {R_f}\left( {g\left( {{x_0}} \right),g\left( x \right)} \right)\]
-und 
+und
 \[\frac{{{R_{f \circ g}}\left( {x,{x_0}} \right)}}{{x - {x_0}}} = \underbrace {f'\left( {g\left( {{x_0}} \right)} \right)\frac{{{R_g}\left( {x,{x_0}} \right)}}{{\left( {x - {x_0}} \right)}}}_{ \downarrow 0} + \underbrace {\frac{{{R_f}\left( {g\left( {{x_0}} \right),g\left( x \right)} \right)}}{{x - {x_0}}}}_{ \downarrow 0}\]
 
 \subsubsection*{Beispiel 8.13}
-Sei $h:\R^2\to\R$ \[h(x,y)=e^{xy}\] $h= f\circ g$ wobei $g(x,y)=xy$, $f(t)=e^t$. Dann ist einerseits \[dh\left( {x,y} \right) = \left( {\frac{{\partial h}}{{\partial x}},\frac{{\partial h}}{{\partial y}}} \right) = \left( {y{e^{xy}},x{e^{xy}}} \right)\] anderseits nach Kettenregel 
+Sei $h:\R^2\to\R$ \[h(x,y)=e^{xy}\] $h= f\circ g$ wobei $g(x,y)=xy$, $f(t)=e^t$. Dann ist einerseits \[dh\left( {x,y} \right) = \left( {\frac{{\partial h}}{{\partial x}},\frac{{\partial h}}{{\partial y}}} \right) = \left( {y{e^{xy}},x{e^{xy}}} \right)\] anderseits nach Kettenregel
 \[dh\left( {x,y} \right) = d\left( {f \circ g} \right)' = f'\left( {g\left( {x,y} \right)} \right) \cdot dg\left( {x,y} \right) = {e^{xy}} \cdot \left( {y,x} \right) = \left( {y{e^{xy}},x{e^{xy}}} \right)\]
 Für die nächste Kettenregel führen wir folgende Definition ein:
 
@@ -365,23 +365,23 @@ d\left( {f \circ g} \right)\left( {{t_0}} \right) = &df\left( {g\left( {{t_0}} \
 \missingfigure{page 141, middle}
 
 \subsubsection*{Beispiel 8.17}
-Die vier Grundrechenarten sind differenzierbare Funktionen von zwei variablen. Insbesondere gilt: 
+Die vier Grundrechenarten sind differenzierbare Funktionen von zwei Variablen. Insbesondere gilt:
 \begin{itemize}
 \item $a:\R^2\to\R$, $\left( x,y\right) \to x+y$ \[da\left( {x,y} \right) = \left( {\frac{{\partial a}}{{\partial x}},\frac{{\partial a}}{{\partial y}}} \right) = \left( {1,1} \right)\]
 \item $m:\R^2\to \R$, $\left( x,y\right) \to x\cdot y$ \[dm\left( {x,y} \right) = \left( {y,x} \right)\]
 \end{itemize}
-Setzt man diese beiden Funktionen in die obige Kettenregel ein, so erhält man die aus der Analysis I bekannte Summen und Produktregel: 
+Setzt man diese beiden Funktionen in die obige Kettenregel ein, so erhält man die aus Analysis I bekannte Summen- und Produktregel:
 \[g:\R\to\R^2, t\to \left( g_1(t),g_2(t)\right)\]
 \[\frac{d}{{dt}}\left( {{g_1} + {g_2}} \right) = \frac{d}{{dt}}\left( {a \circ g} \right) = \left( {1,1} \right) \cdot \left( {\frac{{d{g_1}}}{{dt}},\frac{{d{g_2}}}{{dt}}} \right) = 1\cdot \frac{{d{g_1}}}{{dt}} + 1\cdot \frac{{d{g_2}}}{{dt}}\]
-und 
+und
 \begin{align*}
-\frac{d}{{dt}}\left( {{g_1} \cdot {g_2}} \right) = \frac{d}{{dt}}\left( {m \circ g} \right) = &\left( {\left( {dm} \right)\left( {g(t)} \right)} \right) \cdot \left( {\frac{{dg}}{{dt}}} \right)\\ 
-= &\left( {{g_2}\left( t \right),{g_1}\left( t \right)} \right) \cdot \left( {\frac{{d{g_1}}}{{dt}},\frac{{d{g_2}}}{{dt}}} \right)\\ 
+\frac{d}{{dt}}\left( {{g_1} \cdot {g_2}} \right) = \frac{d}{{dt}}\left( {m \circ g} \right) = &\left( {\left( {dm} \right)\left( {g(t)} \right)} \right) \cdot \left( {\frac{{dg}}{{dt}}} \right)\\
+= &\left( {{g_2}\left( t \right),{g_1}\left( t \right)} \right) \cdot \left( {\frac{{d{g_1}}}{{dt}},\frac{{d{g_2}}}{{dt}}} \right)\\
 = &\frac{{d{g_1}}}{{dt}} \cdot {g_2}\left( t \right) + \frac{{d{g_2}}}{{dt}} \cdot {g_1}\left( t \right)
 \end{align*}
 
 \subsubsection*{Beispiel 8.18}
-Sei $f:\Omega\to\R$ differenzierbar an der Stelle $x_0\in\Omega$ und sei $e\in\R^n\backslash\{ 0\}$; mit $\left| e\right|=1$. Betrachte die Gerade $g(t)=x_0+te$, $t\in\R$ durch $x_0$ mit Richtungsvektor 
+Sei $f:\Omega\to\R$ differenzierbar an der Stelle $x_0\in\Omega$ und sei $e\in\R^n\backslash\{ 0\}$; mit $\left| e\right|=1$. Betrachte die Gerade $g(t)=x_0+te$, $t\in\R$ durch $x_0$ mit Richtungsvektor
 
 \begin{figure}[H]
 \begin{minipage}[b]{0.45\linewidth}
@@ -418,31 +418,31 @@ t&\to x_0+te
 \end{figure}
 
 
-Dann ist die Funktion $f\circ g$ in einer Umgebung von $t_0=0$ definiert und nach Kettenregel $f\circ g$ an der Stelle $t_0=0$ differenzierbar mit 
+Dann ist die Funktion $f\circ g$ in einer Umgebung von $t_0=0$ definiert und nach Kettenregel $f\circ g$ an der Stelle $t_0=0$ differenzierbar mit
 \[\frac{d}{{dt}}\left( {f \circ g} \right)\left( 0 \right) = df\left( {g\left( 0 \right)} \right)\frac{{dg}}{{dt}}\left( 0 \right) = df\left( {{x_0}} \right)\left( e \right) = \sum\limits_{i = 1}^n {\frac{{\partial f}}{{\partial {x^i}}}\left( {{x_0}} \right) \cdot {e^i}} \]
 $e=\left( e^1,\dots, e^n\right) $ und wird Richtungsableitung von $f$ in Richtung $e$ genannt; $\partial_ef\left( x_0\right)$ bezeichnet. Insbesondere gilt für $e=e_i$
 \[{\partial _{{e_i}}}f\left( {{x_0}} \right) = \frac{{\partial f}}{{\partial {x^i}}}\left( {{x_0}} \right) = df\left( {{x_0}} \right)\left( {{e_i}} \right)\]
-Geometrisch die Richtungsableitung von $f$ in Richtung $e$ ist genau die Steigung der Tangente zur Schnittkurve falls wir den Graph von $f$ mit einer zur Ebene $xy$ senkrecht Ebene durch $x_0+te$ scheiden.
+Geometrisch ist die Richtungsableitung von $f$ in Richtung $e$ genau die Steigung der Tangente zur Schnittkurve, falls wir den Graph von $f$ mit einer zur $xy$-Ebene senkrechten Ebene durch $x_0+te$ scheiden.
 \missingfigure{page 144, middle}
-Für den Mittelwertsatz der DR - zu verallgemeinen benützen wir folgenden Begriffen:
+Um den Mittelwertsatz der DR zu verallgemeinern, benützen wir folgende Begriffe:
 \begin{definition}{8.19}
-Eine Menge $K\subset \R^n$ ist genau dann Konvex falls für jede Paar von Punkten $x,y\in K$ die Menge $K$ auch das segment \[\left( 1-t\right) x+ty\hspace{10mm} t\in\lbrack 0,y\rbrack\] mit endpunkt $x,y$ enthält
+Eine Menge $K\subset \R^n$ ist genau dann konvex, falls für jedes Paar von Punkten $x,y\in K$ die Menge $K$ auch das Segment \[\left( 1-t\right) x+ty\hspace{10mm} t\in\lbrack 0,y\rbrack\] mit Endpunkten $x,y$ enthält
 \missingfigure{Page 145, middle}
 \end{definition}
 \subsubsection*{Satz 8.20}
 Sei $\Omega\subset\R^n$ konvex $f:\Omega\to\R$ differenzierbar, $x_0,x_1\in\Omega$ sowie $x_t:=\left( 1-t\right) x_0+tx_1$\todo{is it $tx_1$ or $tx$, ?? page 145 middle}. Dann gibt es $\vartheta\in\lbrack 0,1\rbrack$ mit \[f\left( {{x_1}} \right) - f\left( {{x_0}} \right) = df\left( {{x_{i\vartheta }}} \right)\left( {{x_1} - {x_0}} \right)\]
 
 \subsubsection*{Beweis}
-Sei $g\left( t\right) = \left( 1-t\right) x_0+tx_1=x_t$. Dann ist $t\to \left( f\circ g\right)(t)$ auf $\left[ 0,1\right]$ stetig und in $\left( 0,1\right)$ differenzierbar. Also gibt es $\vartheta\in\left( 0,1\right)$ mit (nach MWS der DS einer variable) \[f\left( {{x_i}} \right) - f\left( {{x_0}} \right) = \left( {f \circ g} \right)(1) - \left( {f \circ g} \right)(0) = \left( {f \circ g} \right)'\left( \vartheta  \right)\left( {1 - 0} \right)\] Nur ist \[\left( {f \circ g} \right)'\left( \vartheta  \right) = df\left( {g\left( \vartheta  \right) \cdot \frac{{dg}}{{dt}}\left( \vartheta  \right)} \right)\] \todo{Is the formula done or does it continue on a new line, page 146 top}
+Sei $g\left( t\right) = \left( 1-t\right) x_0+tx_1=x_t$. Dann ist $t\to \left( f\circ g\right)(t)$ auf $\left[ 0,1\right]$ stetig und in $\left( 0,1\right)$ differenzierbar. Also gibt es $\vartheta\in\left( 0,1\right)$ mit (nach MWS der DR einer Variable) \[f\left( {{x_i}} \right) - f\left( {{x_0}} \right) = \left( {f \circ g} \right)(1) - \left( {f \circ g} \right)(0) = \left( {f \circ g} \right)'\left( \vartheta  \right)\left( {1 - 0} \right)\] Nun ist \[\left( {f \circ g} \right)'\left( \vartheta  \right) = df\left( {g\left( \vartheta  \right) \cdot \frac{{dg}}{{dt}}\left( \vartheta  \right)} \right)\] \todo{Is the formula done or does it continue on a new line, page 146 top}
 %\[\left( {df} \right)\left( {{x_\vartheta }} \right)\left( { - {x_0} + {x_1}} \right)\]
 Die Kettenregel wird auch angewandelt um Integrale mit Parametern zu studieren. Ein Beispiel davon ist:
 
 \subsubsection*{Beispiel}
-Sei $h:\R^2\to\R$, $\left( s,t\right)\to h\left(s,t \right)$. Wir nehmen an, $h$ ist stetig, $\frac{\partial h}{\partial t}$ existiert und ist uf ganz $\R^2$ stetig. Sei 
-\[u(t) = \int\limits_a^{b(t)} {h(s,t)ds} {\text{, }}b(t) \in\subset '\left( \R \right){\text{, }}a \in\R\]\todo{Is it $C'$ or $\subset '$?? page 146 middle}
+Sei $h:\R^2\to\R$, $\left( s,t\right)\to h\left(s,t \right)$. Wir nehmen an, $h$ ist stetig, $\frac{\partial h}{\partial t}$ existiert und ist auf ganz $\R^2$ stetig. Sei
+\[u(t) = \int\limits_a^{b(t)} {h(s,t)ds} {\text{, }}b(t) \in\subset '\left( \R \right){\text{, }}a \in\R\]\todo{Is it $C'$ or $\subset '$?? page 146 middle; limenet: it is $C^1$}
 
 \subsubsection*{Satz 8.21}
-Sei $h(s,t)$ eine stetige differenzierbare Funktion von zwei variablen und $b(t)$ differenzierbare Funktion eine variable. Dann ist die Funktion \[u(t): = \int\limits_a^{b(t)} {h(s,t)ds} \] wo definiert, differenzierbar mit der Ableitung \[u'(t): = h\left( {b(t),t} \right) \cdot b'(t) + \int\limits_a^{b(t)} {\frac{{\partial h}}{{\partial t}}\left( {s,t} \right)ds} \]
+Sei $h(s,t)$ eine stetige differenzierbare Funktion von zwei Variablen und $b(t)$ differenzierbare Funktion einer Variable. Dann ist die Funktion \[u(t): = \int\limits_a^{b(t)} {h(s,t)ds} \] wo definiert, differenzierbar mit der Ableitung \[u'(t): = h\left( {b(t),t} \right) \cdot b'(t) + \int\limits_a^{b(t)} {\frac{{\partial h}}{{\partial t}}\left( {s,t} \right)ds} \]
 \subsubsection*{Korollar 8.22}
 Sei $h=h\left( s,t\right) :\R^2\to\R$ stetig, und $\frac{\partial h}{\partial t}$ existiert und auf ganz $\R^2$ stetig. Sei \[u(t) = \int\limits_0^t {h\left( {s,t} \right)ds} \] Dann \[u(t) \in  \subset '\left( \R\right)\text{ und }u'(t) = h\left( {t,t} \right) + \int\limits_0^t {\frac{{\partial h}}{{\partial t}}\left( {s,t} \right)ds} \]
 
@@ -450,16 +450,16 @@ Sei $h=h\left( s,t\right) :\R^2\to\R$ stetig, und $\frac{\partial h}{\partial t}
 Setze $b(t)=t$, $a=0$ in Satz 8.21.
 
 \subsubsection*{Korollar 8.23}
-Sei $h:\R^2\to\R$ eine stetige Funktion mit Stetiger partieller Ableitung $\frac{\partial h}{\partial t}$. Dann ist die Funktion \[u(t): = \int\limits_a^b {h(s,t)ds} \] differenzierbar mit Ableitung \[u'(t): = \int\limits_a^b {\frac{{\partial h}}{{\partial t}}(s,t)ds} \] 
+Sei $h:\R^2\to\R$ eine stetige Funktion mit stetiger partieller Ableitung $\frac{\partial h}{\partial t}$. Dann ist die Funktion \[u(t): = \int\limits_a^b {h(s,t)ds} \] differenzierbar mit Ableitung \[u'(t): = \int\limits_a^b {\frac{{\partial h}}{{\partial t}}(s,t)ds} \]
 
 \subsubsection*{Beweis}
 Setze $b(t)=b$, in Satz 8.20
 
 \subsubsection*{Bemerkung 8.24}
-Mit Korollar 8.23 kann man bestimmte Integrale berechnen, auch wenn die zugehörige unbestimmten Integrale nicht elementar darstellbar sind
+Mit Korollar 8.23 kann man bestimmte Integrale berechnen, auch wenn die dazugehörigen unbestimmten Integrale nicht elementar darstellbar sind
 \subsubsection*{Beispiel 8.25}
-Berechne das integral \[\int\limits_0^1 {\frac{{{x^5} - 1}}{{\log x}}} dx\] Sei \[u\left( \alpha  \right): = \int\limits_0^1 {\frac{{{x^\alpha } - 1}}{{\log x}}dx} \] Für $\alpha \geq 0$ erfüllt $u\left(\alpha\right)$ die Voraussetzungen des Satzes. Wir berechnen \[u'\left( \alpha  \right) = \int\limits_0^1 {\frac{\partial }{{\partial \alpha }}\left( {\frac{{{x^\alpha } - 1}}{{\log x}}} \right)dx}  = \int\limits_0^1 {\frac{{{x^\alpha }\log x}}{{\log x}}dx = \int\limits_0^1 {{x^\alpha }dx}  = \left. {\frac{{{x^{\alpha  + 1}}}}{{\alpha  + 1}}} \right|_0^{x = 1} = } \frac{1}{{\alpha  + 1}}\] 
-Daraus folgt aus Fundamentales Satz der Integral Rechnung \[u\left( \alpha  \right) = \int {u'\left( \alpha  \right)d\alpha  = \int {\frac{{d\alpha }}{{\alpha  + 1}} = \log \left( {\alpha  + 1} \right)} }  + C\]
+Berechne das Integral \[\int\limits_0^1 {\frac{{{x^5} - 1}}{{\log x}}} dx\] Sei \[u\left( \alpha  \right): = \int\limits_0^1 {\frac{{{x^\alpha } - 1}}{{\log x}}dx} \] Für $\alpha \geq 0$ erfüllt $u\left(\alpha\right)$ die Voraussetzungen des Satzes. Wir berechnen \[u'\left( \alpha  \right) = \int\limits_0^1 {\frac{\partial }{{\partial \alpha }}\left( {\frac{{{x^\alpha } - 1}}{{\log x}}} \right)dx}  = \int\limits_0^1 {\frac{{{x^\alpha }\log x}}{{\log x}}dx = \int\limits_0^1 {{x^\alpha }dx}  = \left. {\frac{{{x^{\alpha  + 1}}}}{{\alpha  + 1}}} \right|_0^{x = 1} = } \frac{1}{{\alpha  + 1}}\]
+Daraus folgt aus dem fundamentalen Satz der Integralrechnung \[u\left( \alpha  \right) = \int {u'\left( \alpha  \right)d\alpha  = \int {\frac{{d\alpha }}{{\alpha  + 1}} = \log \left( {\alpha  + 1} \right)} }  + C\]
 Für eine noch zu bestimmende Konstante $C$. Aber
 \[u\left( 0 \right) = \int\limits_0^1 {0dx = 0 \Rightarrow C = 0} \]
 \[ \Rightarrow \int\limits_0^1 {\frac{{{x^\alpha } - 1}}{{\log x}}dx = \log \left( {\alpha  + 1} \right)} \]
@@ -475,7 +475,7 @@ t
 1
 \end{array}} \right)\]
 Dann \[u(t) = \left( {f \circ g} \right)(t) = f\left( {b(t),t} \right) = \int\limits_a^{b(t)} {h(s,t)ds} \]
-Nach Hauptsatz der Integral Rechnung $f$ ist nach $x$ partielle differenzierbar und $\frac{\partial f}{\partial x}=h(x,y)$. Man muss zeigen das $f$ ist nach $y$ partielle differenzierbar mit \[\frac{{\partial f}}{{\partial y}}(x,y) = \int\limits_a^x {\frac{{\partial h(s,y)}}{{\partial x}}ds} \]
+Nach dem Hauptsatz der Integralrechnung $f$ ist nach $x$ partielle differenzierbar und $\frac{\partial f}{\partial x}=h(x,y)$. Man muss zeigen, dass $f$ ist nach $y$ partiell differenzierbar mit \[\frac{{\partial f}}{{\partial y}}(x,y) = \int\limits_a^x {\frac{{\partial h(s,y)}}{{\partial x}}ds} \]
 Dann ergibt die Kettenregel
 \begin{align*}
 u'(t) = &\frac{d}{{dt}}\left( {f \circ g} \right)(t) = \left( {\frac{{\partial f}}{{\partial x}}\left( {g(t)} \right),\frac{{\partial f}}{{\partial y}}\left( {g(t)} \right)} \right) \cdot \frac{{dg}}{{dt}}\\
@@ -496,23 +496,23 @@ Sei $L\left(\R^n,\R\right)$ der Raum der linearen Abbildungen von $\R^n$ nach $\
 x_0 &\to df\left(x_0\right) = \left( {\frac{{\partial f}}{{\partial {x^1}}}\left( {{x_0}} \right), \ldots ,\frac{{\partial f}}{{\partial {x^n}}}\left( {{x_0}} \right)} \right)\\
 & \hspace{16mm}=  \frac{{\partial f}}{{\partial {x^1}}}\left( {{x_0}} \right)d{x^1} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}\left( {{x_0}} \right)d{x^n}
 \end{align*}
-Dies ist ein Beispiel von $1-$form
+Dies ist ein Beispiel der $1-$Form
 
 \begin{definition}{8.26}
-Eine Differentialform vom Grad 1 (auch ``$1-$Form'') auf $\Omega$ ist eine Abbildung \[\lambda :\Omega\to L\left(\R^n,\R\right)\]
+Eine Differentialform von Grad 1 (auch ``$1-$Form'') auf $\Omega$ ist eine Abbildung \[\lambda :\Omega\to L\left(\R^n,\R\right)\]
 \end{definition}
 \subsubsection*{Beispiel 8.27}
 \begin{enumerate}
-\item Seien $x^i:\R^n\to\R$ die Koordinatenfunktionen $1\leq i\leq n$. Für jedes $x_0\in\R^n$ ist $dx^i\left(x_0\right)\in L\left( \R^n,\R\right)$; dies führt zur $1-$Form
+\item Seien $x^i:\R^n\to\R$ die Koordinatenfunktion, $1\leq i\leq n$. Für jedes $x_0\in\R^n$ ist $dx^i\left(x_0\right)\in L\left( \R^n,\R\right)$; dies führt zur $1-$Form
 \begin{align*}
 dx^i:\R^n&\to L\left( \R^n,\R\right)\\
 x_0 &\to dx^i\left( x_0\right)
 \end{align*}
-Für jedes $x_0\in\R^n$, gilt $dx^i\left(e_j\right)=\delta_{ij}$ also bilden $dx^1\left( x_0\right),\dots,dx^n\left( x_0\right)$ eine Basis für $L\left(\R^n,\R\right)$, $\forall x\in\R^n$.\\
+Für jedes $x_0\in\R^n$ gilt $dx^i\left(e_j\right)=\delta_{ij}$, also bilden $dx^1\left( x_0\right),\dots,dx^n\left( x_0\right)$ eine Basis für $L\left(\R^n,\R\right)$, $\forall x\in\R^n$.\\
 
-Eine beliebig $1-$Form $\lambda :\R^n\to L\left(\R^n,\R\right)$ lässt sich dann eindeutig wie folgt darstellen \[\lambda \left( {{x_0}} \right) = \sum\limits_{i = 1}^n {{\lambda _i}\left( {{x_0}} \right)d{x^i}\left( {{x_0}} \right)} \] wobei $\lambda_i:\R^n\to\R$ Funktionen sind.
-\item Für jedes $f\in\subset'\left(\Omega\right)$\todo{Is it $C'$ or $\subset'$?? page 152.1 top} ist das differential $df$ eine $1-Form$ \[df = \frac{{\partial f}}{{\partial {x^1}}}d{x^1} + \frac{{\partial f}}{{\partial {x^2}}}d{x^2} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}d{x^n}\]
-\item Der Ausdrück $\lambda\left(x,y,z\right)=3dx+5zdy+xdz$ definiert ein $1-$Form auf $\R^3$ mit 
+Eine beliebige $1-$Form $\lambda :\R^n\to L\left(\R^n,\R\right)$ lässt sich dann eindeutig wie folgt darstellen \[\lambda \left( {{x_0}} \right) = \sum\limits_{i = 1}^n {{\lambda _i}\left( {{x_0}} \right)d{x^i}\left( {{x_0}} \right)} \] wobei $\lambda_i:\R^n\to\R$ Funktionen sind.
+\item Für jedes $f\in\subset'\left(\Omega\right)$\todo{Is it $C'$ or $\subset'$?? page 152.1 top; limenet: $C^1$} ist das Differential $df$ eine $1-Form$ \[df = \frac{{\partial f}}{{\partial {x^1}}}d{x^1} + \frac{{\partial f}}{{\partial {x^2}}}d{x^2} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}d{x^n}\]
+\item Der Ausdruck $\lambda\left(x,y,z\right)=3dx+5zdy+xdz$ definiert eine $1-$Form auf $\R^3$ mit
 \begin{align*}
 & \lambda_1\left(x,y,z\right)=3\\
 & \lambda_2\left(x,y,z\right)=5z\\
@@ -559,10 +559,10 @@ v:\R^2 &\to\R^2\\
 \end{enumerate}
 \subsubsection*{Bemerkung 8.29}
 Sei $<,>$ das übliche Skalarprodukt auf $\R^n$, d.h. \[ < x,y > : = \sum\limits_{i = 1}^n {{x^i}{y^i}} \]
-Mittels $<,>$ kann man von $1-$Formen zu Vektorfelder und umgekehrt übergehen. Dies geht wie folgt:
+Mittels $<,>$ kann man von $1-$Formen zu Vektorfeldern und umgekehrt übergehen. Dies geht wie folgt:
 \begin{enumerate}
 \item Sei $v:\Omega\to\R^n$ ein Vektorfeld. Dann definieren wir $\forall x\in\Omega$, $\omega\in\R^n$
-\[\lambda (x)(\omega):= < v(x),\omega >\] Offensichtlich $\lambda (x)\in\left( \R^n, \R\right)$ und somit ist 
+\[\lambda (x)(\omega):= < v(x),\omega >\] Offensichtlich $\lambda (x)\in\left( \R^n, \R\right)$ und somit ist
 \begin{align*}
 \lambda : \Omega &\to L\left(\R^n, \R\right) \\
 x &\to\lambda (x): \R^n \to\R\\
@@ -574,7 +574,7 @@ eine $1-$Form auf $\Omega$
 \begin{enumerate}[\indent 2.]
 \item Sei $\lambda :\Omega\to L\left(\R^n,\R\right)$ $1-$Form und $\lambda (x): = \sum\limits_{i = 1}^n {{\lambda _i}(x)d{x^i}} $ wie oben.\\
 
-Wir definieren 
+Wir definieren
 \begin{align*}
 v:\Omega &\to\R^n\\
 x &\to \left( \lambda _1(x),\lambda _2(x),\dots,\lambda _n(x) \right)
@@ -585,17 +585,17 @@ dann ist $v$ ein Vektorfeld und \[\lambda (x)(\omega)= < v(x),\omega>\] Sei $\om
 = & \sum\limits_{i = 1}^n {{\lambda _i}(x)d{x^i}\left( {{\omega ^1}{e_1} + {\omega ^2}{e_2} +  \ldots  + {\omega ^n}{e_n}} \right)}\\
  = & \sum\limits_{i = 1}^n {{\lambda _i}(x)\left( {{\omega ^1}d{x^i}\left( {{e_1}} \right) + {\omega ^i}d{x^i}\left( {{e_i}} \right) +  \ldots  + {\omega ^n}d{x^i}\left( {{e_n}} \right)} \right)} \\
 \begin{array}{*{20}{c}}
-{d{x^i}{{\left( {{e_j}} \right)}_{ij}}}& \leftarrow 
+{d{x^i}{{\left( {{e_j}} \right)}_{ij}}}& \leftarrow
 \end{array} = & \sum\limits_{i = 1}^n {{\lambda _i}(x){\omega ^i}}  = \left( {{\lambda _i}(x), \ldots ,{\lambda _n}(x)} \right) \cdot \left( {{\omega ^1}, \ldots ,{\omega ^n}} \right)\\
- = & < v(x),\omega  > 
+ = & < v(x),\omega  >
 \end{align*}
 Diese Diskussion können wir auf das Differential einer Funktion anwenden
 \end{enumerate}
 
 \begin{definition}{8.30}
-Sei $f\in\subset'\left(\Omega\right)$, das durch \[< v(x),\omega >:=df(x)(\omega ), \omega\in\R^n\] definierte Vektorfeld heisst Gradientenfeld von $f$ und wird mit $v(x)=\nabla f(x)$ oder grad$f$ bezeichnet. \\
+Sei $f\in\subset'\left(\Omega\right)$. Das durch \[< v(x),\omega >:=df(x)(\omega ), \omega\in\R^n\] definierte Vektorfeld heisst Gradientenfeld von $f$ und wird mit $v(x)=\nabla f(x)$ oder grad$f$ bezeichnet. \\
 
-Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\R^n$ folgt die Darstellung 
+Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\R^n$ folgt die Darstellung
 \[\nabla f(x) = \left( {\begin{array}{*{20}{c}}
 {\frac{{\partial f}}{{\partial {x^1}}}(x)}\\
  \vdots \\
@@ -604,14 +604,14 @@ Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\R^n$ folgt die Darstellung
 \centerline{(Oben nehmen wir $\lambda (x): = df(x) = \sum {\frac{{\partial f}}{{\partial {x^i}}}{r^i}{x^i}} $, Bemerkung 8.29, 2.)}
 \end{definition}
 \subsubsection*{Satz 8.31}
-Sei $f\in\subset '\left(\Omega\right)$ und $x_0\in\Omega$. Dann gibt $\nabla f\left(x_0\right)$ die Richtung und $\left| \nabla f\left(x_0\right)\right|$ den Betrag des Steilsten Anstiegen von $f$ an der Stelle $x_0$
+Sei $f\in\subset '\left(\Omega\right)$ und $x_0\in\Omega$. Dann gibt $\nabla f\left(x_0\right)$ die Richtung und $\left| \nabla f\left(x_0\right)\right|$ den Betrag des steilsten Anstieges von $f$ an der Stelle $x_0$ an.
 \subsubsection*{Beweis}
-Aus der Definition des Gradientenfeld folgt $\forall e\in\R^n$, unit Vektor $\mid\mid e\mid\mid =1$ \[df\left(x_0\right)\left( e\right)=< \nabla f\left( x_0\right) ,e >\]
+Aus der Definition des Gradientenfeld folgt $\forall e\in\R^n$, Einheitsvektor $\mid\mid e\mid\mid =1$ \[df\left(x_0\right)\left( e\right)=< \nabla f\left( x_0\right) ,e >\]
 \todo{Add arrow pointing down for description of function, page 157 middle}
-Mit Cauchy-Schwarz folgt 
+Mit Cauchy-Schwarz folgt
 \[<\nabla f\left( x_0\right)>\leq\left|\left|\nabla f\left( x_0\right)\right|\right|\left|\left| e\right|\right| = \left|\left| \nabla f\left( x_0\right)\right|\right|\]
-mit Gleichkeit genau dann wann $e$ ein positives vielfachen von $\nabla f\left( x_0\right)$ ist, nähmlich \[e=\frac{\nabla f\left( x_0\right)}{\left| \nabla f\left( x_0\right)\right|}\] \[\Rightarrow df\left( x_0\right) e \leq \left| \nabla f\left( x_0\right)\right|\]
-mit gleicheit für $e=\frac{\nabla f\left( x_0\right)}{\left| \nabla f\left( x_0\right)\right|}$
+mit Gleichkeit genau dann, wenn $e$ ein positives Vielfaches von $\nabla f\left( x_0\right)$ ist, nämlich \[e=\frac{\nabla f\left( x_0\right)}{\left| \nabla f\left( x_0\right)\right|}\] \[\Rightarrow df\left( x_0\right) e \leq \left| \nabla f\left( x_0\right)\right|\]
+mit Gleicheit für $e=\frac{\nabla f\left( x_0\right)}{\left| \nabla f\left( x_0\right)\right|}$
 %END BEWEIS
 $\nabla f\left( x_0\right)\not= 0\Rightarrow \nabla f\left( x_0\right)$ zeigt die Richtung an, in der $f$ am schnellsten wächst.\\
 
@@ -624,21 +624,21 @@ Sei $f:\R^n\to\R, C'$. Für jedes $s\in\R$ wird $f^{-1}(s)=\left\{ x\in\R^n\mid 
  f:\R^3 &\to\R\\
  \left( x,y,z\right) &\to x^2 +y^2 +z^2
  \end{align*}
-dann ist $f^{-1}(s)=$ Sphäre mit Zenter $O$ und Radius $\sqrt{s}$
-\item $f\left( x,y\right) = xy$ ist ein Hyperbolischer Parabolid mit Niveaulinien \missingfigure{page 158, bottom, use minipage} $f:\R^n \to\R$. Nun sei $x_0\in\Omega$ mit $f\left( x_0\right) = s$, i.e. $x_0 \in f^{-1} (s)$. Sei $\gamma :\lbrack -1,1\rbrack\to \R^n$ ein diff. kurve durch $x_0$ mit $\gamma\lbrack -1,1\rbrack\subset f^{-1}(s)$, $\gamma (0)=x_0$
-\missingfigure{page 159, middle} 
-Dann gilt $f\left( \gamma (t)\right)=s$, $\forall t\in\lbrack -1,1\rbrack$ und es folgt aus Kettenregel
+dann ist $f^{-1}(s)=$ Sphäre mit Zentrum $O$ und Radius $\sqrt{s}$
+\item $f\left( x,y\right) = xy$ ist ein hyperbolischer Parabolid mit Niveaulinien \missingfigure{page 158, bottom, use minipage} $f:\R^n \to\R$. Nun sei $x_0\in\Omega$ mit $f\left( x_0\right) = s$, i.e. $x_0 \in f^{-1} (s)$. Sei $\gamma :\lbrack -1,1\rbrack\to \R^n$ ein differenzierbare Kurve durch $x_0$ mit $\gamma\lbrack -1,1\rbrack\subset f^{-1}(s)$, $\gamma (0)=x_0$
+\missingfigure{page 159, middle}
+Dann gilt $f\left( \gamma (t)\right)=s$, $\forall t\in\lbrack -1,1\rbrack$ und es folgt aus der Kettenregel
 \[\begin{array}{l}%Find if there is a better way to do this
 \frac{d}{{dt}}\left( {f\left( {\gamma (t)} \right)} \right) = \frac{d}{{dt}}(s) = 0\\
 \hspace{5mm} \Downarrow \\
-df\left( {\gamma (t)} \right) \cdot \gamma '(t) = 0 =  < \nabla f\left( {\gamma (t)} \right),\gamma '(t) > 
+df\left( {\gamma (t)} \right) \cdot \gamma '(t) = 0 =  < \nabla f\left( {\gamma (t)} \right),\gamma '(t) >
 \end{array}\]
 Insbesondere $0=df\left(\gamma (0)\right)\cdot\gamma'(0)= < \nabla f\left( x_0\right),\gamma'(0) >$ d.h. $\nabla f\left( x_0\right)$ steht senkrecht zur Niveauflache von $f$ durch $x_0$
 \subsubsection*{Beispiel}
 Sei $f(x,y)=\frac{x^2-y^2}{2}$, $x,y\in\R^2$ \[\nabla f(x,y)=(x,-y)\] Sei $\left( x_0,y_0\right) = (1,-1)$ \[\nabla f(1,-1)=(1,1)\hspace{10mm} \left( \nabla f(1,-1)\right) = \sqrt{2}\] \[\frac{\nabla f}{\left| \nabla f\right|}(1,-1)=\frac{1}{\sqrt{2}}(1,1)\]
-\item Im Punkt $P$ biegt der Bergweg ab; nach Südosten geht er mit 25\% steigung berg an, nach Süden mit 20\% Gefälle berg ab. Der wanderer im Nebel möchte über die Wiese möglichst rascht zum Gipfel. In welche Richtung muss er gehen und wie steil ist es dorthin?\\
+\item Im Punkt $P$ biegt der Bergweg ab; nach Südosten geht er mit 25\% Steigung bergauf, nach Süden mit 20\% Gefälle bergab. Der wanderer im Nebel möchte über die Wiese möglichst rascht zum Gipfel. In welche Richtung muss er gehen und wie steil ist es dorthin?\\
 
-Wir legen die Koordinatensystem so, dass die $x-$Achse nach Osten und die $y-$Achse nach Norden zeigt, und setzen voraus, dass die Höhenfunktion $h$ differenzierbar ist. Wir wollen ihren Gradienten in $P$ $\nabla h(P)$ bestimmen. Noch Voraussetzung hat $h$ die beiden Richtungsableitungen \[dh\left( P\right)\left( v_1\right)=0.25\hspace{10mm}dh\left( P\right)\left(  v_2\right)=-0.2\] wobei \[v_1=\left( \frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\right)\hspace{10mm}v_2=(0,-1)\]
+Wir legen das Koordinatensystem so, dass die $x-$Achse nach Osten und die $y-$Achse nach Norden zeigt, und setzen voraus, dass die Höhenfunktion $h$ differenzierbar ist. Wir wollen ihren Gradienten in $P$ $\nabla h(P)$ bestimmen. Nach Voraussetzung hat $h$ die beiden Richtungsableitungen \[dh\left( P\right)\left( v_1\right)=0.25\hspace{10mm}dh\left( P\right)\left(  v_2\right)=-0.2\] wobei \[v_1=\left( \frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\right)\hspace{10mm}v_2=(0,-1)\]
 
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
@@ -655,28 +655,28 @@ dh \left( P\right) \left( v_1\right) = &\left( \frac{\partial h}{\partial x}\lef
 = & \frac{\partial h}{\partial x}\left(P\right)\frac{1}{\sqrt{2}} +\frac{\partial h}{\partial y}\left( P\right) \left(-\frac{1}{\sqrt{2}}\right) = \frac{1}{4}\\
 dh \left( P\right) \left( v_2\right) = &\left( \frac{\partial h}{\partial x}\left(P\right)\right) (0) - \frac{\partial h}{\partial y}\left(P\right)(-1)=-\frac{1}{5}
 \end{align*}
-Durch Lösen des linearen Gleichungssystem folgen wir: 
+Durch Lösen des linearen Gleichungssystem folgen wir:
 \[\frac{\partial h}{\partial x}\left( P\right) = \frac{\sqrt{2}}{4}+\frac{1}{5}, \frac{\partial h}{\partial y}\left( P\right) = \frac{1}{5}\]
-Die Richtung des Gradients ist somit \[ \nabla h\left( P \right) = \arctan{\frac{\frac{1}{5}}{\frac{\sqrt{2}}{4}+ \frac{1}{5}}}=19.86 degrees\]\todo{add arg at the beginning of the equation using special command, as well as tilde on top of equal sign}
-und die Steigung in diese Richtung ist 
+Die Richtung des Gradients ist somit \[ \nabla h\left( P \right) = \arctan{\frac{\frac{1}{5}}{\frac{\sqrt{2}}{4}+ \frac{1}{5}}}=19.86 \]\todo{add arg at the beginning of the equation using special command, as well as tilde on top of equal sign, Also add deg symbol on top of 19.86}
+und die Steigung in diese Richtung ist
 \[\left| \nabla h\left( P\right) \right| = \sqrt{\left( \frac{\sqrt{2}}{4}+\frac{1}{5}\right)^2 + \left( \frac{1}{5}\right)^2} = 0.59 = 59\%\] \todo{add tilde on top of second to last equal sign}
 \end{enumerate}
 
 \section{Wegintegrale}
-Wir haben gesehen in Bemerkung 8.29 dass Mittels das übliche SKalarprodukt $<,>$ kann man von $1-$Formen zu Vektorfelder und umgekehrt übergehen. \\
+Wir haben in Bemerkung 8.29 gesehen, dass man mittels dem üblichen Skalarprodukt $<,>$ von $1-$Formen zu Vektorfeldern und umgekehrt übergehen kann. \\
 
-In diesem Kapitel werden wir das ``Wegintegral'' von $1-$Formen oder \todo{can't read, page 162 middle} von Vektorfelder längs eine Kurve studieren. Dazu untersuchen wir zunächst Kurven in $\R^n$
+In diesem Kapitel werden wir das ``Wegintegral'' von $1-$Formen oder \todo{can't read, page 162 middle} von Vektorfeldern längs eine Kurve studieren. Dazu untersuchen wir zunächst Kurven in $\R^n$
 
 \subsection*{Parameterdarstellung einer Kurve}
-Sei $\gamma\subset\R^n$ eine Kurve. Eine Parameterdarstellung (PD) von $\gamma$ ist eine Funktion 
+Sei $\gamma\subset\R^n$ eine Kurve. Eine Parameterdarstellung (PD) von $\gamma$ ist eine Funktion
 \begin{align*}
 \gamma : I=\lbrack a,b\rbrack &\to\R^n\\
 t &\to \gamma (t)
 \end{align*}
 wobei $\gamma\left( t\right)$ ein Punkt $\gamma$ ist und jeder Punkt auf $\gamma$ kann als $\gamma\left( t\right)$ dargestellt werden
 \[\gamma\left( t\right) = \left( \gamma_1 (t),\dots,\gamma_n (t)\right)\]
-Die positive Orientierung von $\gamma$ ist die Richtung mit der die Kurve durchgelaufen wird
-\subsubsection*{Besipiel 8.32}
+Die positive Richtung von $\gamma$ ist die Richtung mit der die Kurve durchgelaufen wird
+\subsubsection*{Beispiel 8.32}
 \begin{enumerate}
 \item \[\gamma (t)=\left( a_1 +b_1 t,a_2 +b_2 t,a_3 +b_3 t\right)\text{, }t\in\R\]
 ist die Parameterdarstellung einer Gerade durch den Punkt $a=\left( a_1,a_2,a_3\right)$ und parallel zum Vektor $\left( b_1,b_2,b_3\right)$
@@ -695,7 +695,7 @@ ist die Parameterdarstellung einer Gerade durch den Punkt $a=\left( a_1,a_2,a_3\
 \end{tikzpicture}
 \end{center}
 
-\item $\gamma (t)=\left( a\cos t,b\sin t\right)$ ist eine Parameter Darstellung eine Ellipse
+\item $\gamma (t)=\left( a\cos t,b\sin t\right)$ ist einee Parameterdarstellung einer Ellipse
 \begin{figure}[H]
 \begin{minipage}[b]{0.45\linewidth}
 
@@ -723,71 +723,71 @@ ist die Parameterdarstellung einer Gerade durch den Punkt $a=\left( a_1,a_2,a_3\
 
 \end{minipage}
 \end{figure}
-\item $\gamma_1 (t)=\left( a\cos t,b\sin t, ct\right)$, $t\in\lbrack 0,2\pi\rbrack$ ist eine Parameterdarstellung einer elliptische Helix 
+\item $\gamma_1 (t)=\left( a\cos t,b\sin t, ct\right)$, $t\in\lbrack 0,2\pi\rbrack$ ist eine Parameterdarstellung einer elliptischen Helix
 \missingfigure{Page 164 top}
-$\gamma_2 (t)=\left( a\cos t,-b\sin t, c(2\pi -t)\right)$, $t\in\lbrack 0,2\pi\rbrack$ ist Parameterdarstellung der gleichen Kurve wobei die Orientierung umgekehrt ist 
+$\gamma_2 (t)=\left( a\cos t,-b\sin t, c(2\pi -t)\right)$, $t\in\lbrack 0,2\pi\rbrack$ ist die Parameterdarstellung der gleichen Kurve wobei die Richtung umgekehrt ist
 \missingfigure{page 164, middle}
-Der Tangentenvektor zur Kurve an der Stelle $\gamma (t)$ ist $\gamma' (t)$ \[\gamma'(t)=\left( \gamma_1'(t),\gamma_2'(t),\dots, \gamma_n'(t)\right)\]
+Der Tangentialvektor zur Kurve an der Stelle $\gamma (t)$ ist $\gamma' (t)$ \[\gamma'(t)=\left( \gamma_1'(t),\gamma_2'(t),\dots, \gamma_n'(t)\right)\]
 \todo{Do I have to include the example?? page 164 bottom}
 \end{enumerate}
 
 \begin{definition}{8.33}
-Das Wegintegral von $\vartheta$ langs $\gamma$ 
-\[\int\limits_\gamma  {vd\vec s}  = \int\limits_\gamma  {v(\gamma )d\gamma : = \int\limits_a^b { < v\left( {\gamma \left( t \right)} \right),\gamma '(t) > dt} } \] ${vd\vec s}=\gamma'(t)dt$ heisst gerichtetes Längeelement
+Das Wegintegral von $\vartheta$ längs $\gamma$
+\[\int\limits_\gamma  {vd\vec s}  = \int\limits_\gamma  {v(\gamma )d\gamma : = \int\limits_a^b { < v\left( {\gamma \left( t \right)} \right),\gamma '(t) > dt} } \] ${vd\vec s}=\gamma'(t)dt$ heisst gerichtetes Längenelement
 \end{definition}
 \subsubsection*{Beispiel 8.34}
-Ein einführendes Beispiel: Sei ein Massenpunkt, der sich unter den Einfluss eines Kraftfeldes $F:\R^2\to\R$ bewegt.\\
+Ein einführendes Beispiel: Sei $m$ ein Massenpunkt, der sich unter den Einfluss eines Kraftfeldes $F:\R^2\to\R$ bewegt.\\
 
-Wenn der Massenpunkt durch eine Konstante Kraft $\overrightarrow F $ längs einer Geraden um den Vektor $\vec s$ verschoben. \\
+Der Massenpunkt wird durch eine konstante Kraft $\overrightarrow F $ längs einer Geraden um den Vektor $\vec s$ verschoben. \\
 
-Die dabei verrichtete Arbeit ist definitionsgemäss das Skalar Produkt aus dem Kraftvektor $\overrightarrow F $ und dem Verschiebungsvektor $\vec s$.
+Die dabei verrichtete Arbeit ist definitionsgemäss das Skalarprodukt aus dem Kraftvektor $\overrightarrow F $ und dem Verschiebungsvektor $\vec s$.
 \missingfigure{Page 166, top}
 
-\noindent\underline{Allgemeinen Fall}\\
-Verschiebungs längs einer Kurve $\gamma$ in einem Kraftfeld $F=\left( P(x,y),Q(x,y)\right)$ 
+\noindent\underline{Allgemeiner Fall}\\
+Verschiebungs längs einer Kurve $\gamma$ in einem Kraftfeld $F=\left( P(x,y),Q(x,y)\right)$
 \missingfigure{Page 166, bottom}
-$\Delta W= F\cdot \Delta (\gamma)=$ Kraftkomponente entlang des Weges mal züruckgelagter weg. \\
+$\Delta W= F\cdot \Delta (\gamma)=$ Kraftkomponente entlang des Weges mal züruckgelegter Weg. \\
 
-Da sich Betrag und Richtung der Kraft sowie der jeweilige Winkel zum Weg vom Punkt zu Punkt ändern, gilt das zur Berechnung notwendige Skalarprodukt näherungsweise jeweils nur für ein Wegelement $\overrightarrow\Delta r$. Die Berechnung der Arbeit erfolgt daher in folgender Weise. 
+Da sich Betrag und Richtung der Kraft sowie der jeweilige Winkel zum Weg vom Punkt zu Punkt ändern, gilt das zur Berechnung notwendige Skalarprodukt näherungsweise jeweils nur für ein Wegelement $\overrightarrow\Delta r$. Die Berechnung der Arbeit erfolgt daher in folgender Weise:
 \begin{enumerate}[\indent a)]
 \item Zerlegung des Weges in Teilabschnitte \[\Delta \gamma_1=\gamma (t_{i+1})-\gamma(t_i)=\frac{\Delta \gamma}{\Delta t}\cdot \Delta t\]
-\item Ermittlung der Arbeit \todo{can't read, page 167 middle} Kraft: \[F\left( {\gamma \left( {{t_i}} \right)} \right) = F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right)\]
+\item Ermittlung der Arbeit \todo{can't read, page 167 middle; limenet: plus, grammar is totally wrong} Kraft: \[F\left( {\gamma \left( {{t_i}} \right)} \right) = F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right)\]
 \item Berechnen der Arbeit je Teilabschnitt-Skalarprodukt \[\Delta {W_i} = F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right) \cdot \Delta {\gamma _i}\]
-\item Aufsummeren der Teil-Arbeit \[W \approx \sum {\Delta {W_i} = \sum {F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right)} }  \cdot \underbrace {\Delta \gamma }_{\frac{{\Delta \gamma }}{{\Delta t}} \cdot \Delta t}\]
-\item Durch Verkleinerung des Wegelementes enthält man den exakten Wert der geleisteten Arbeit
+\item Aufsummieren der Teil-Arbeit \[W \approx \sum {\Delta {W_i} = \sum {F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right)} }  \cdot \underbrace {\Delta \gamma }_{\frac{{\Delta \gamma }}{{\Delta t}} \cdot \Delta t}\]
+\item Durch Verkleinerung des Wegelementes erthält man den exakten Wert der geleisteten Arbeit
 \begin{align*}
 W = &\int\limits_a^b {F\left( {\gamma \left( t \right)} \right)}  \cdot \gamma '\left( t \right)dt\\
  = &\int\limits_a^b { < F\left( {\gamma \left( t \right)} \right)} ,\gamma '\left( t \right) > dt
 \end{align*}
-\end{enumerate} 
+\end{enumerate}
 \subsubsection*{Bemerkung 8.35}
-Wir können das Wegintegral auch mit Differentialformen formulieren. Sei 
+Wir können das Wegintegral auch mit Differentialformen formulieren. Sei
 \begin{align*}
 v:\Omega &\to\R^n\\
 x &\to\left( v^i(x)\right)_{i=1}^n
 \end{align*}
-ein stetiges Vektorfeld ($v^i(x):\R^n\to\R$ stetig) dann ist durch $\lambda (x)(\omega):=< v(x),\omega >$ definierte $\lambda (x)\in L\left( \R^n,\R\right)$ eine $1-$Form
+ein stetiges Vektorfeld ($v^i(x):\R^n\to\R$ stetig) dann ist durch $\lambda (x)(\omega):=< v(x),\omega >$ eine $1-$Form $\lambda (x)\in L\left( \R^n,\R\right)$ definiert
 \begin{align*}
 \int\limits_\gamma  {vd\vec s}  = &\int\limits_a^b { < v\left( {\gamma (t)} \right),\gamma '(t) > dt}\\
- = &\int\limits_a^b {\lambda \left( {\gamma \left( t \right)} \right)\left( {\gamma '\left( t \right)} \right)dt} 
+ = &\int\limits_a^b {\lambda \left( {\gamma \left( t \right)} \right)\left( {\gamma '\left( t \right)} \right)dt}
 \end{align*}
 
 \noindent\underline{Umgekehrt}\\
 
-\noindent Sei $\lambda :\Omega\to L\left( \R^n,\R\right)$ eine $1-$Form die in Folgende Sinne stetig ist: \\
+\noindent Sei $\lambda :\Omega\to L\left( \R^n,\R\right)$ eine $1-$Form die im folgenden Sinn stetig ist: \\
 
-Sei 
+Sei
 \begin{align*}
 \gamma :\lbrack a,b\rbrack &\to\Omega\\
 t &\to\left( \gamma^1 (t), \gamma^2 (t),\dots ,\gamma^n (t) \right)
 \end{align*}
-ein $C'-$weg. Dann ist 
+ein $C'-$Weg. Dann ist
 \begin{align*}
 \lbrack a,b\rbrack \to &\R\\
 t\to &\lambda\left( \gamma (t)\right)\left( \gamma' (t)\right)\\
 & = \sum{\lambda_i\left(\gamma(t)\right)\cdot\frac{d\gamma^i}{dt}(t)}
 \end{align*}
-eine Stetige Funktion somit ist das Integral $\int\limits_a^b {\lambda \left( {\gamma \left( t \right)} \right)\left( {\gamma '\left( t \right)} \right)dt} $ wohl definiert. 
+eine stetige Funktion. Somit ist das Integral $\int\limits_a^b {\lambda \left( {\gamma \left( t \right)} \right)\left( {\gamma '\left( t \right)} \right)dt} $ wohl definiert.
 
 \begin{definition}{8.36}
 Das Wegintegral von $\gamma\in L\left( \R^n,\R\right)$ längs $\gamma$ ist \[\int\limits_\gamma  \lambda  : = \int\limits_a^b {\lambda \left( {\gamma (t)} \right)\left( {\gamma '(t)} \right)dt} \]
@@ -795,7 +795,7 @@ Das Wegintegral von $\gamma\in L\left( \R^n,\R\right)$ längs $\gamma$ ist \[\in
 
 \subsubsection*{Beispiel 8.37}
 \begin{enumerate}
-\item Sei $\gamma\in C'\left(\lbrack 0,2\pi\rbrack =\R^2\right)$ mit 
+\item Sei $\gamma\in C'\left(\lbrack 0,2\pi\rbrack =\R^2\right)$ mit
 \[\begin{array}{*{20}{c}}
 {\gamma (t) = \left( {\begin{array}{*{20}{c}}
 {\cos t}\\
@@ -808,24 +808,24 @@ Das Wegintegral von $\gamma\in L\left( \R^n,\R\right)$ längs $\gamma$ ist \[\in
 \end{array}} \right)}&{}
 \end{array}\]
 eine Parametrisierung des Einheitskreises $\lambda = \lambda (x,y)$ die $1-$Form mit \[\lambda (x,y)=-ydx+xdy\hspace{10mm}(x,y)\in\R^2\]
-Dann gilt 
+Dann gilt
 \begin{align*}
 \int\limits_\gamma  \lambda   = &\int\limits_0^{2\pi } {\underbrace {\left( { - \sin t,\cos t} \right)}_{\lambda (\gamma (t))} \cdot \underbrace {\left( {\begin{array}{*{20}{c}}
 { - \sin t}\\
 {\cos t}
 \end{array}} \right)}_{\gamma '(t)}dt} \\
-= &\int\limits_0^{2\pi } {\left( {{{\sin }^2}t + {{\cos }^2}t} \right)dt}  = 2\pi 
+= &\int\limits_0^{2\pi } {\left( {{{\sin }^2}t + {{\cos }^2}t} \right)dt}  = 2\pi
 \end{align*}
-\item Sei $\gamma (x,y)=3x^2ydx + \left( x^3+1\right)dy$. Wir betrachten die Kurvenintegral längs verschiederer Wege
+\item Sei $\gamma (x,y)=3x^2ydx + \left( x^3+1\right)dy$. Wir betrachten das Kurvenintegral längs verschiedener Wege
 \missingfigure{page 170 top, add formulas as well using a minipage}
 \begin{align*}
 &\int\limits_{{\gamma _1}} \lambda   = \int {3{x^2}ydx + \left( {{x^3} + 1} \right)dy}  = \int\limits_0^1 {\left( {3{t^3} + \left( {{t^3} + 1} \right)} \right)dt = 2}\\
-&\int\limits_\gamma  \lambda   = \int\limits_0^1 {\left( {3{t^4} + \left( {{t^3} + 1} \right) \cdot 2t} \right)dt = 2}  
+&\int\limits_\gamma  \lambda   = \int\limits_0^1 {\left( {3{t^4} + \left( {{t^3} + 1} \right) \cdot 2t} \right)dt = 2}
 \end{align*}
 \subsubsection*{Bemerkung}\todo{is  this inside the enumerated list or out?? page 170 bottom}
 Sei $f(x,y)=x^3y+y$. Dann ist  \[df(x+y)=3x^2ydx+\left( x^3+1\right) dy\] und \[f(1,1)-f(0,0)=(1+1)-(0,0)=2\]
-Wir können der Begriff des Wegintegrals auf Wege zu erweitern die Stückweise $C'$ sind. Ein Stückweise $C'-$Weg ist eine Stetige Abbildung $\gamma :\lbrack a,b\rbrack\to\R^n$ mit einer Unterteilung des Intervals 
-\[a=a_0 < a_1 < a_2 < \dots <a_n = b\] 
+Wir können den Begriff des Wegintegrals auf Wege erweitern, die stückweise $C'$ sind. Ein stückweiser $C'-$Weg ist eine stetige Abbildung $\gamma :\lbrack a,b\rbrack\to\R^n$ mit einer Unterteilung des Intervalls
+\[a=a_0 < a_1 < a_2 < \dots <a_n = b\]
 so dass \[{\left. \gamma  \right|_{\left[ {{a_i},{a_{i + 1}}} \right]}} = \left[ {{a_i},{a_{i + 1}}} \right] \to \R^n \] $C'$ ist.\\
 
 \noindent d.h. $t\to\gamma'(t)$ ist auf $\left( a_i, a_{i+1}\right)$ stetig und erweitert sich stetig auf $\lbrack a_i, a_{i+1}\rbrack$
@@ -833,75 +833,75 @@ so dass \[{\left. \gamma  \right|_{\left[ {{a_i},{a_{i + 1}}} \right]}} = \left[
 \missingfigure{Page 171 bottom}
 Dann definiert man
 \[\int\limits_\gamma  \lambda  : = \sum\limits_{t = 0}^{n - 1} {\int\limits_{{{\left. \gamma  \right|}_{\left[ {{a_i},{a_{i + 1}}} \right]}}} \lambda  } \]
-Jetzt werden wir einzige Grundlegenden Eigenschaften des Wegintegrals herleiten. 
+Jetzt werden wir die einzige grundlegendee Eigenschaften des Wegintegrals herleiten.
 \end{enumerate}
 
 \subsubsection*{Satz 8.38}
-Eigenschaften des Wegintegrals
+Eigenschaften des Wegintegrals \todo{limenet: make this bold}
 \begin{enumerate}[\indent E1)]
-\item Das Wegintegral $\int\limits_\gamma  \lambda  $ ist unabhängig von einer orientierungsverhaltenden umparametrisierung. \\
-D.h. Sei $\gamma :\lbrack a,b\rbrack\to\Omega$, $C'$ und $\varphi :\lbrack a',b'\rbrack\to\lbrack a,b\rbrack$, $C'$ mit $\varphi\left( a'\right)=a$, $\varphi\left( b'\right)=b$, $\varphi'\left( t\right) >0$ $\forall t\in\lbrack a', b'\rbrack$. Dann ist 
+\item Das Wegintegral $\int\limits_\gamma  \lambda  $ ist unabhängig von einer orientierungserhaltenden Umparametrisierung. \\
+D.h. Sei $\gamma :\lbrack a,b\rbrack\to\Omega$, $C'$ und $\varphi :\lbrack a',b'\rbrack\to\lbrack a,b\rbrack$, $C'$ mit $\varphi\left( a'\right)=a$, $\varphi\left( b'\right)=b$, $\varphi'\left( t\right) >0$ $\forall t\in\lbrack a', b'\rbrack$. Dann ist
 \begin{align*}
 \int\limits_{\gamma  \circ \varphi } \lambda   = &\int\limits_{a'}^{b'} {\lambda \left( {\gamma \left( {\varphi (t)} \right)} \right)\left( {\gamma  \circ \varphi } \right)'(t)dt} \\
  = &\int\limits_{a'}^{b'} {\lambda \left( {\gamma \left( {\varphi (t)} \right)} \right)\gamma '\left( {\varphi (t)} \right)\varphi '(t)dt} \\
- = &\int\limits_a^b {\lambda \left( {\gamma \left( s \right)} \right)\gamma '\left( s \right)ds = \int\limits_\gamma  \lambda  } 
+ = &\int\limits_a^b {\lambda \left( {\gamma \left( s \right)} \right)\gamma '\left( s \right)ds = \int\limits_\gamma  \lambda  }
 \end{align*}
-Geometrisch heisst dies, dass $\int\limits_\gamma  \lambda$ nur vom Bild $\gamma\left( \lbrack a,b\rbrack\right)$ mit vorgegebenen Durchlaufsinn abhängt
-\item Seien $\gamma_1:\lbrack a_1,b_1\rbrack\to\Omega$ und $\gamma_2:\lbrack a_2,b_2\rbrack\to\Omega$ zwei Wege mit $\gamma_1\left( b_1\right)=\gamma_2\left(a_2\right)$ 
+Geometrisch heisst dies, dass $\int\limits_\gamma  \lambda$ nur vom Bild $\gamma\left( \lbrack a,b\rbrack\right)$ mit vorgegebenen Durchlaufsinn abhängt.
+\item Seien $\gamma_1:\lbrack a_1,b_1\rbrack\to\Omega$ und $\gamma_2:\lbrack a_2,b_2\rbrack\to\Omega$ zwei Wege mit $\gamma_1\left( b_1\right)=\gamma_2\left(a_2\right)$
 \missingfigure{Page 173, middle to top}
-Wir definieren $\gamma_1+\gamma_2$ der Weg der durch aneinanderhängen von $\gamma_1$ mit $\gamma_2$ entsteht, d.h.
+Wir definieren $\gamma_1+\gamma_2$ als Weg, der durch aneinanderhängen von $\gamma_1$ und $\gamma_2$ entsteht, d.h.
 \[{\gamma _1} + {\gamma _2} = \left\{ {\begin{array}{*{20}{c}}
 {{\gamma _1}(t)}&{t \in \left[ {{a_1},{b_1}} \right]}\\
 {{\gamma _2}\left( {t - {b_1} + {a_2}} \right)}&{t \in \left[ {{b_1},{b_1} + {b_2} - {a_2}} \right]}
 \end{array}} \right.\]
 Dann gilt \[\int\limits_{{\gamma _1} + {\gamma _2}} \lambda   = \int\limits_{{\gamma _1}} \lambda   + \int\limits_{{\gamma _2}} \lambda  \]
-\item Sei $\gamma:\lbrack a,b\rbrack\to\Omega$ ein Weg. Dann sei $-\gamma:\lbrack a,b\rbrack\to\Omega$ der Gleiche Weg aber im entgegengesetzen Durchlaufsinn, d.h. $\left( -\gamma\right) (t)=\gamma\left( -t+a+b\right)$ 
+\item Sei $\gamma:\lbrack a,b\rbrack\to\Omega$ ein Weg. Dann sei $-\gamma:\lbrack a,b\rbrack\to\Omega$ der gleiche Weg aber im entgegengesetzen Durchlaufsinn, d.h. $\left( -\gamma\right) (t)=\gamma\left( -t+a+b\right)$
 \missingfigure{page 174, middle to top}
 Dann gilt \[\int\limits_{ - \gamma } \lambda   =  - \int\limits_\gamma  \lambda  \]
-\item Sei $f:\Omega\to\R$ eine $C'-$Funktion, sowie $\gamma:\lbrack a,b\rbrack\to\Omega$ Stückweise $C'$. Dann gilt \[\int\limits_\gamma  {df}  = f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)\]
-$\gamma$ ist $C'$, dann ist 
+\item Sei $f:\Omega\to\R$ eine $C'-$Funktion, sowie $\gamma:\lbrack a,b\rbrack\to\Omega$ stückweise $C'$. Dann gilt \[\int\limits_\gamma  {df}  = f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)\]
+$\gamma$ ist $C'$, dann ist
 \begin{align*}
 \int\limits_\gamma  {df}  = & \int\limits_a^b {df\left( {\gamma \left( t \right)} \right)\gamma '\left( t \right)dt} \\
-\mathop  = & \int\limits_a^b {\frac{d}{{dt}}\left( {f \circ \gamma } \right)\left( t \right)dt}\\ 
+\mathop  = & \int\limits_a^b {\frac{d}{{dt}}\left( {f \circ \gamma } \right)\left( t \right)dt}\\
  = &\left( {f \circ \gamma } \right)\left( b \right) - \left( {f \circ \gamma } \right)\left( a \right)\\
  = & f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)
 \end{align*}
-Mittels den Wegintegrals können wir die $C'-$Funktionen charakterisieren deren Differentialverschwinden.
+Mittels des Wegintegrals können wir die $C'-$Funktionen charakterisieren, deren Differentiale verschwinden.
 \end{enumerate}
 
 \subsubsection*{Satz 8.39}
-Sei $\Omega$ ``Offen'' und \todo{Can't read, page 175 middle} $\left( C'-\right)$Wegzusammenhängend. Sei $f\in C'\left(\Omega\right)$ falls $df(x)=0$, $\forall x\in\Omega$ so ist $f$ konstant.
+Sei $\Omega$ ``offen'' und $C^1-$wegzusammenhängend. Sei $f\in C'\left(\Omega\right)$. Falls $df(x)=0$, $\forall x\in\Omega$, so ist $f$ konstant.
 \subsubsection*{Beweis}
-$\Omega$ wegzusammenhängend heisst dass zu je zwei Punkten $x,y\in\Omega$ gibt es in $C'-$Weg $\gamma :\lbrack 0,1\rbrack\to\gamma$ mit $\gamma(0)=x$ und $\gamma(1)=y$, $\gamma\left(\lbrack 0,1\rbrack\right)\subset\Omega$. Dann folgt
+Wenn $\Omega$ wegzusammenhängend ist, heisst das, dass zu je zwei Punkten $x,y\in\Omega$ gibt es in $C'-$Weg $\gamma :\lbrack 0,1\rbrack\to\gamma$ mit $\gamma(0)=x$ und $\gamma(1)=y$, $\gamma\left(\lbrack 0,1\rbrack\right)\subset\Omega$. Dann folgt
 \begin{align*}
 f(y)-f(x)=& f\left(\gamma(1)\right)-f\left(\gamma(0)\right)\\
 = &\int\limits_{\gamma} df = 0
 \end{align*}
 $\Rightarrow f(y)=f(x)$, $\forall x,y\in\Omega\Rightarrow f$ ist konstant.\\
 
-\noindent\underline{Frage:} Wann ist eine $1-$Form $\lambda$, von der form $\lambda = df$, d.h. differential einer Funktion? d.h. gegeben eine $1-$Form $\lambda$, gibt es eine Funktion $f:\Omega\to\R$ s.d. $df=\lambda$\\
+\noindent\underline{Frage:} Wann ist eine $1-$Form $\lambda$, von der Form $\lambda = df$, d.h. das Differential einer Funktion? D.h. gegeben eine $1-$Form $\lambda$, gibt es eine Funktion $f:\Omega\to\R$ s.d. $df=\lambda$\\?
 
-Wenn ein $f:\Omega\to\R$ gibt so dass $df=\lambda$, heisst $f$ ein Potential. (Potential ist wie ein Stammfunktion für ein $1-$Form). Mittels Wegintegral,stellen wir jetzt ein Kriterium
+Wenn es ein $f:\Omega\to\R$ gibt, so dass $df=\lambda$, heisst $f$ ein Potential. (Potential ist wie eine Stammfunktion für eine $1-$Form). Mittels Wegintegral stellen wir jetzt ein Kriterium auf.
 
 \subsubsection*{Satz 8.30}
-Sei $\lambda\in\Omega\to L\left( \R^n,\R\right)$ eine Stetige $1-$Form. Folgende Aussage sind äquivalent
+Sei $\lambda\in\Omega\to L\left( \R^n,\R\right)$ eine stetige $1-$Form. Folgende Aussagen sind äquivalent
 \begin{enumerate}
 \item Es gibt $f\in C'\left( \Omega\right)$ mit $df=\Omega$
-\item Für je zwei Stückweise $C'-$Wege $\gamma_i=\lbrack a_i,b_i\rbrack\to\Omega$ mit selben Anfangs und Endpunkten (d.h. $\gamma_1\left( a_1\right)=\gamma_2\left(a_2\right)$, $\gamma_1\left( b_1\right)=\gamma_2\left(b_2\right)$) gilt \[\int\limits_{{\gamma _1}} \lambda   = \int\limits_{{\gamma _2}} \lambda  \]
-\item Für jede geschlossene $C'$Weg $\gamma$ gilt \[\int\limits_\gamma  \lambda   = 0\]
-\end{enumerate} 
+\item Für je zwei stückweise $C'-$Wege $\gamma_i=\lbrack a_i,b_i\rbrack\to\Omega$ mit den selben Anfangs- und Endpunkten (d.h. $\gamma_1\left( a_1\right)=\gamma_2\left(a_2\right)$, $\gamma_1\left( b_1\right)=\gamma_2\left(b_2\right)$), gilt \[\int\limits_{{\gamma _1}} \lambda   = \int\limits_{{\gamma _2}} \lambda  \]
+\item Für jeden geschlossenen $C'$Weg $\gamma$ gilt \[\int\limits_\gamma  \lambda   = 0\]
+\end{enumerate}
 
 \subsubsection*{Beweis}
 \begin{enumerate}[align=left]
-\item[$(1)\Rightarrow (2)$:] Folgt aus E4) 
+\item[$(1)\Rightarrow (2)$:] Folgt aus E4)
 \item[$(2)\Leftrightarrow (3)$:] Klar
-\item[$(2)\Rightarrow (1)$:] Sei $p_0\in\Omega$; für jedes $x\in\Omega$. Sei $\gamma:\lbrack 0,1\rbrack\to\Omega$ Stückweise $C'$ mit $\gamma(0)=p_0$, $\gamma(1)=x$. Definiere $f(x): = \int\limits_\gamma  \lambda $.\\
+\item[$(2)\Rightarrow (1)$:] Sei $p_0\in\Omega$; für jedes $x\in\Omega$. Sei $\gamma:\lbrack 0,1\rbrack\to\Omega$ stückweise $C'$ mit $\gamma(0)=p_0$, $\gamma(1)=x$. Definiere $f(x): = \int\limits_\gamma  \lambda $.\\
 
-Dann ist $f$ nach Annahme (2) Wohldefiniert (d.h. unabhängig von dem Weg von $p_0$ nach $x$) (Wir können $f$ auch mit $\int\limits_{{p_0}}^x \lambda  $ bezeichnen)
+Dann ist $f$ nach Annahme (2) wohl definiert (d.h. unabhängig vom Weg von $p_0$ nach $x$) (Wir können $f$ auch mit $\int\limits_{{p_0}}^x \lambda  $ bezeichnen)
 \end{enumerate}
 
 \subsubsection*{Behauptung}
-$f\in C'\left( \Omega\right)$ und $df=\lambda$. Um zu zeigen dass $df=\lambda$ müssen wir zeigen dass für $x,x_0\in\Omega$
+$f\in C'\left( \Omega\right)$ und $df=\lambda$. Um zu zeigen, dass $df=\lambda$ müssen wir zeigen, dass für $x,x_0\in\Omega$
 \[f\left(x\right)-f\left(x_0\right)=\lambda\left(x_0\right)\left( x-x_0\right)+R\left( x,x_0\right)\] mit $\frac{R\left( x,x_0\right)}{\left| x-x_0\right|}\to 0$.\\
 
 \noindent Sei $x_0\in\R$. Sei $\gamma_1:\lbrack -1,0\rbrack\to\Omega$ ein Weg von $p_0$ nach $x_0$. Dann gilt \[\int\limits_{{\gamma _1}} \lambda   = f\left( {{x_0}} \right)\]
@@ -911,23 +911,23 @@ Sei
 t &\to (1-t)x_0+tx
 \end{align*}
 \missingfigure{Page 178 bottom}
-Um $\gamma^x\left( \lbrack 0,1\rbrack\right)\subset\Omega$ zu garantieren, nehmen wir $r>0$ so dass $B_r\left( x_0\right)\subset\Omega$ und nehmen an, dass $x\in B_r\left( x_0\right)$. Dann ist
+Um $\gamma^x\left( \lbrack 0,1\rbrack\right)\subset\Omega$ zu garantieren, nehmen wir $r>0$, so dass $B_r\left( x_0\right)\subset\Omega$ und nehmen an, dass $x\in B_r\left( x_0\right)$. Dann ist
 \[f(x) = \int\limits_{{\gamma _1} + {\gamma _x}} \lambda   = \int\limits_{{\gamma _1}} \lambda   + \int\limits_{{\gamma _x}} \lambda   = f\left( {{x_0}} \right) + \int\limits_{{\gamma ^x}} \lambda  \]
 Nun ist
 \begin{align*}
 \int\limits_{{\gamma ^x}} \lambda   = &\int\limits_0^1 {\lambda \left( {{\gamma _x}\left( t \right)} \right){\gamma _x}'\left( t \right)} dt\\
  = &\int\limits_0^1 {\lambda \left( {{\gamma _x}\left( t \right)} \right)\left( {x - {x_0}} \right)} dt\\
- = &\lambda \left( {{x_0}} \right)\left( {x - {x_0}} \right) + \int\limits_0^1 {\left( {\lambda \left( {{\gamma ^x}\left( t \right)} \right) - \lambda \left( {{x_0}} \right)} \right)\left( {x - {x_0}} \right)dt} 
+ = &\lambda \left( {{x_0}} \right)\left( {x - {x_0}} \right) + \int\limits_0^1 {\left( {\lambda \left( {{\gamma ^x}\left( t \right)} \right) - \lambda \left( {{x_0}} \right)} \right)\left( {x - {x_0}} \right)dt}
 \end{align*}
 
-Sei $\lambda  = \sum {{\lambda ^i}d{x^i}} $ dann ist obigen Integral gleich 
+Sei $\lambda  = \sum {{\lambda ^i}d{x^i}} $ dann ist obiges Integral gleich
 \begin{align*}
 &\sum {\int\limits_0^1 {\left[ {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right]\left( {{x^i} - x_0^i} \right)dt} }\\
- \le &\sum {{{\left( {\int\limits_0^1 {{{\left[ {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right]}^2}} } \right)}^{\frac{1}{2}}}} \left| {x - {x_0}} \right| 
+ \le &\sum {{{\left( {\int\limits_0^1 {{{\left[ {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right]}^2}} } \right)}^{\frac{1}{2}}}} \left| {x - {x_0}} \right|
 \end{align*}
-Also $f\left( x \right) - f\left( {{x_0}} \right) = \lambda \left( {{x_0}} \right)\left( {x - {x_0}} \right) + R\left( {x,{x_0}} \right)$, wobei 
+Also $f\left( x \right) - f\left( {{x_0}} \right) = \lambda \left( {{x_0}} \right)\left( {x - {x_0}} \right) + R\left( {x,{x_0}} \right)$, wobei
 \[\frac{{R\left( {x - {x_0}} \right)}}{{\left| {x - {x_0}} \right|}} \le {\left( {\sum\limits_{i = 1}^n {{{\left( {\int\limits_0^1 {\left( {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right)dt} } \right)}^2}} } \right)^{\frac{1}{2}}}\]
-Aus stetigkeit der \todo{Can't read, page 179 bottom} folgt das
+Aus der Stetigkeit der \todo{Can't read, page 179 bottom} folgt, dass
 \[\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} \to 0\]
 
 \subsubsection*{Beispiel 8.31}
@@ -936,7 +936,7 @@ Aus stetigkeit der \todo{Can't read, page 179 bottom} folgt das
 
 \noindent\underline{Ansatz:} \[f\left(x,y\right)=\int\limits_{\gamma_{\left( x,y\right)}}\lambda\]
 wobei $\gamma_{\left( x,y\right)}\left(t\right)=\left(t_x,t_y\right)$, $t\in\left( 0,1\right)$. Dann ist
- 
+
 \begin{align*}
 \int\limits_\gamma  \lambda   = &\int\limits_0^1 {\lambda \left( {tx,ty} \right)\left( {x,y} \right)dt} \\
 = &\int\limits_0^1 {\left[ {2\left( {tx} \right){{\left( {ty} \right)}^2} \cdot x + 2{{\left( {tx} \right)}^2}\left( {ty} \right) \cdot y} \right]dt} \\
@@ -944,26 +944,26 @@ wobei $\gamma_{\left( x,y\right)}\left(t\right)=\left(t_x,t_y\right)$, $t\in\lef
 \end{align*}
 und $df\left( x,y\right)=2xy^2dx+2x^2ydy$.\\
 
-\noindent\underline{Oder:} Ansatz: 
+\noindent\underline{Oder:} Ansatz:
 \[df:\lambda \Rightarrow\frac{\partial f}{\partial x}=  2xy^2, \frac{\partial f}{\partial y}=  2x^2y\]
 \[\Rightarrow \frac{\partial f}{\partial x}=2xy^2 \Rightarrow f\left( x,y \right) = \int 2xy^2 dx =  x^2y^2+C\left( y\right)\]
 \[\Rightarrow\frac{\partial f}{\partial y}=2x^2y+\frac{d}{dy}C\left(y\right)=2x^2y \Rightarrow \frac{d}{dy}C\left( y\right) =  0 \Rightarrow C\left( y\right) = \text{ Konstant}\]
 \[\Rightarrow f\left( x,y\right)=  x^2y^2+C\]
 \end{enumerate}\todo{Where is number 2?? page 180}
-Analog wie für $1-$Formen kann man Satz 8.30 für Vektorfelder Formulieren
+Analog wie für $1-$Formen kann man Satz 8.30 für Vektorfelder formulieren
 
 \begin{definition}{8.32}
-Ein Vektorfeld $v:\Omega\to\R^n$ heisst konservative falls $\forall\gamma:\lbrack 0,1\rbrack\to\Omega$ geschlossen \[\int\limits_\gamma v ds=0\]
+Ein Vektorfeld $v:\Omega\to\R^n$ heisst konservativ, falls $\forall\gamma:\lbrack 0,1\rbrack\to\Omega$ geschlossen ist \[\int\limits_\gamma v ds=0\]
 \end{definition}
-Aus Satz 8.30 Folgt
+Aus Satz 8.30 folgt
 \subsubsection*{Satz 8.33}
-Für eine Stetige Vektorfeld $v:\Omega\to\R^n$ sind folgende Aussagen equivalent
+Für ein stetiges Vektorfeld $v:\Omega\to\R^n$ sind folgende Aussagen äquivalent
 \begin{enumerate}
-\item $v$ ist Konservative
+\item $v$ ist konservativ
 \item Es gibt $f\in C'\left( \Omega\right)$ mit $v=\nabla f$. In diesem Fall heisst $v$ Potentialfeld mit dem Potential $f$.
 \end{enumerate}
 
-Im Nächsten Kapitel, mittels höhere Partielle Ableitungen, erhalten wir eine einfach zu \todo{can't understand, page 182 top} notwendige Bedingung für ein Konservatives Vektorfeld. Wir werden sehen dass
+Im nächsten Kapitel, mittels höheren partiellen Ableitungen, erhalten wir eine einfache zu \todo{can't understand, page 182 top} notwendige Bedingung für ein konservatives Vektorfeld. Wir werden sehen, dass
 \[v = {\left( {{v^i}} \right)_{1 \le i \le n}} \in C'\left( {\Omega ,\R^n} \right)\text{ konservative }\]
 \[\Rightarrow \frac{\partial v^i}{\partial x^j}=\frac{\partial v^j}{\partial x^i}\hspace{5mm}1\leq i,j\leq n\]
 
@@ -971,11 +971,11 @@ Im Nächsten Kapitel, mittels höhere Partielle Ableitungen, erhalten wir eine e
 \begin{definition}{8.44}
 $f:\Omega\to\R$, $\Omega\subset\R^n$ $f\in C'\left( \Omega\right)$ heisst von Klasse $C^2$ falls $\frac{\partial f}{\partial x^i}\in C'{\left( \Omega\right)}_{1\leq i\leq n}$
 \end{definition}\todo{Where does the definition end? page 183 top}
-Für beliebiges $m$, die Funktion $f\in C'\left( \omega\right)$ heisst von der Klasse $C^m$, $f\in C^m\left( \omega\right)$ falls $\frac{\partial f}{\partial x^i}\in C^{m-1}\left( \Omega\right)$, $1\leq i\leq n$\\
+Für ein beliebiges $m$, heisst die Funktion $f\in C'\left( \omega\right)$ heisst von der Klasse $C^m$, $f\in C^m\left( \omega\right)$, falls $\frac{\partial f}{\partial x^i}\in C^{m-1}\left( \Omega\right)$, $1\leq i\leq n$\\
 
-Für eine $f\in C^2\left( \Omega\right)$, die Funktionen \[\frac{{{\partial ^2}f}}{{\partial {x^i}\partial {x^j}}}: = \frac{\partial }{{\partial {x^i}}}\left( {\frac{{\partial f}}{{\partial {x^j}}}} \right)\] heissen die zweiten partiellen Ableitungen von $f$.\\
+Für ein $f\in C^2\left( \Omega\right)$, heissen die Funktionen \[\frac{{{\partial ^2}f}}{{\partial {x^i}\partial {x^j}}}: = \frac{\partial }{{\partial {x^i}}}\left( {\frac{{\partial f}}{{\partial {x^j}}}} \right)\] die zweiten partiellen Ableitungen von $f$.\\
 
-Analog definiert man die $m-$ten partielle Ableitungen von $f$ oder partielle Ableitungen vom Grad $m$ für jedes $m>0$ (Für $f\in C^m \left(\Omega\right)$)
+Analog definiert man die $m-$ten partiellen Ableitungen von $f$ oder partielle Ableitungen vom Grad $m$ für jedes $m>0$ (Für $f\in C^m \left(\Omega\right)$)
 
 \subsubsection*{Satz 8.45}
 Sei $f\in C^2\left(\Omega\right)$. Dann gilt
@@ -983,18 +983,18 @@ Sei $f\in C^2\left(\Omega\right)$. Dann gilt
 \frac{{{\partial ^2}f}}{{\partial {x^i}\partial {x^j}}} = &\frac{\partial }{{\partial {x^i}}}\left( {\frac{{\partial f}}{{\partial {x^j}}}} \right)\\
  = &\frac{\partial }{{\partial {x^j}}}\left( {\frac{\partial }{{\partial {x^i}}}f} \right) = \frac{{{\partial ^2}f}}{{\partial {x^j}{x^i}}}
 \end{align*}
-Im Allgemein
+Im Allgemeinen
 \subsubsection*{Satz 8.46}
-Für jede $C^k-$Funktion sind alle Partielle Ableitungen vom Grad $\leq k$ von der Reihenfolge der Ableitungen unabhängig. Von Satz 8.35 erhalten wir folgende notwendige Bedingung für konservativität
+Für jede $C^k-$Funktion sind alle partiellen Ableitungen vom Grad $\leq k$ von der Reihenfolge der Ableitungen unabhängig. Von Satz 8.35 erhalten wir folgende notwendige Bedingung für die Konservativität
 
 \subsubsection*{Korollar 8.47}
-Sei $v:\Omega\to\R^n$, $v={\left( v^i\right)}_{1\leq i \leq n}$ ein $C'-$Vektorfeld. Falls $v$ konservativ ist, folgt 
+Sei $v:\Omega\to\R^n$, $v={\left( v^i\right)}_{1\leq i \leq n}$ ein $C'-$Vektorfeld. Falls $v$ konservativ ist, folgt
 \[\frac{{\partial {v^i}}}{{\partial {x^j}}} = \frac{{\partial {v^j}}}{{\partial {x^i}}}\hspace{5mm}1 \le i,j \le n\]
 
 \subsubsection*{Beweis}
-Nach voraussetzung gibt es $f\in C'\left( \Omega\right)$ mit $v^i(x)=\frac{\partial f}{\partial x^i}$. Da nun $v^i \in C'$, $1\leq i\leq n$ folgt $f\in C^2\left( \Omega\right)$. Woraus 
+Nach Voraussetzung gibt es $f\in C'\left( \Omega\right)$ mit $v^i(x)=\frac{\partial f}{\partial x^i}$. Da nun $v^i \in C'$, $1\leq i\leq n$ folgt $f\in C^2\left( \Omega\right)$. Woraus
 \[\frac{{\partial {v^i}}}{{\partial {x^j}}} = \frac{\partial }{{\partial {x^j}}}\left( {\frac{{\partial f}}{{\partial {x^i}}}} \right) = \frac{\partial }{{\partial {x^i}}}\left( {\frac{{\partial f}}{{\partial {x^j}}}} \right) = \frac{\partial }{{\partial {x^i}}}{v^j}\]
-folgt. 
+folgt.
 
 \subsubsection*{Beispiel 8.48}
 \begin{enumerate}
@@ -1003,7 +1003,7 @@ folgt.
 {2y}
 \end{array}} \right)\]
 Es gilt $\frac{\partial v'}{\partial y}=8xy$, $\frac{\partial v^2}{dx}=2$. Also ist $v$ nicht konservativ
-\item Sei $\Omega = \left\{ \left( x,y\right) \in\R^2:\left( x,y\right) \not= (0,0) \right\} = \R^2\backslash\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \to\R^2$ mindestens $C'$. Ausserdem \[\frac{{\partial v'}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C: 
+\item Sei $\Omega = \left\{ \left( x,y\right) \in\R^2:\left( x,y\right) \not= (0,0) \right\} = \R^2\backslash\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \to\R^2$ mindestens $C'$. Ausserdem \[\frac{{\partial v'}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C:
 \missingfigure{page 186, middle. Also add the formula describing $C(t)$ using a minipage}
 \begin{align*}
 \int\limits_C vds  = & \int\limits_0^{2\pi } { < v\left( {C\left( t \right)} \right),C'\left( t \right) > dt} \\
@@ -1016,51 +1016,51 @@ Es gilt $\frac{\partial v'}{\partial y}=8xy$, $\frac{\partial v^2}{dx}=2$. Also 
 \end{align*}
 Jetzt betrachten wir $\Omega'=\left\{ \left( x,y\right) \mid x>0 \right\}$ \todo{can't understand image on page 187, top} und führen Polarkoordinaten ein \[x=r\cos\theta, y=r\sin\theta\hspace{10mm} -\frac{\pi}{2}<\theta <\frac{\pi}{2}\]
 Dann ist $\tan\theta = \frac{y}{x}$ und \[\theta=\arctan\frac{y}{x}\]
-Wir betrachten $\theta:\Omega'\to\R$ als ein Funktion der Variabeln $x,y$ und berechnen 
+Wir betrachten $\theta:\Omega'\to\R$ als ein Funktion der Variabeln $x,y$ und berechnen
 \begin{align*}
 \frac{{\partial \theta }}{{\partial x}} = & \frac{1}{{1 + {{\left( {\frac{y}{x}} \right)}^2}}}\left( { - \frac{y}{{{x^2}}}} \right) =  - \frac{y}{{{x^2} + {y^2}}}\\
 \frac{{\partial \theta }}{{\partial x}} = & \frac{x}{{{x^2} + {y^2}}}
 \end{align*}
-Also gilt 
+Also gilt
 \[\nabla \theta\left( x,y\right) = v\left( x,y\right)\]
 \[v\left( x,y\right) \in\Omega'\]
 $$\Rightarrow\text{ $v$ ist konservative auf $\Omega$}$$
-Das heisst konservativität ist eine Eigenschaft zugleich des Vektorfeldes $v$ \underline{v} der Region $\Omega$
+Das heisst die Konservativität ist eine Eigenschaft zugleich des Vektorfeldes $v$ \underline{v} und der Region $\Omega$.
 \end{enumerate}
 
 \begin{definition}{8.49}
-Eine offene Menge $\Omega\subset\R^n$ heisst einfach zusammenhängend falls 
+Eine offene Menge $\Omega\subset\R^n$ heisst einfach zusammenhängend, falls
 \begin{enumerate}
-\item $\Omega$ ist stückweise $C'-$Wegzusammenhängend
-\item Jeder Stückweise $C'-$Weg in $\Omega$ kann stetig innerhalb $\Omega$ auf einen Punkt zusammengezogen werden 
+\item $\Omega$ ist stückweise $C'-$wegzusammenhängend
+\item Jeder stückweise $C'-$Weg in $\Omega$ kann stetig innerhalb $\Omega$ auf einen Punkt zusammengezogen werden
 \end{enumerate}
-Die Region $\Omega=\R\backslash\{ 0\}$ ist nicht einfach zu $\Omega' = \left\{ \left( x,y\right) \mid x>0\right\}$ ist es aber.
+Die Region $\Omega=\R\backslash\{ 0\}$ ist nicht einfach zu $\Omega' = \left\{ \left( x,y\right) \mid x>0\right\}$ ist es aber.\todo{This sentence doesn't make any sense at all}
 \end{definition}
 
 \subsubsection*{Satz 8.50}
-Sei $\Omega\in\R^2$ beschränkt zusammenhängend sowie einfachzusammenhängend, sei $v\in C'\left( \Omega:\R^2\right)$ Vektorfeld. Dann sind äquivalent 
+Sei $\Omega\in\R^2$ beschränkt zusammenhängend sowie einfachzusammenhängend, sei $v\in C'\left( \Omega:\R^2\right)$ Vektorfeld. Dann sind folgende Aussagen äquivalent
 \begin{enumerate}
 \item $v$ ist konservativ
 \item $\frac{\partial v_1}{\partial y}=\frac{\partial v_2}{\partial x}$
 \end{enumerate}
 
-\subsection*{Taylorentwicklung und der lokale Verhalten von $C^m-$Funktionen}\todo[inline]{Not sure how big of a title...}
-Wir werden jetzt ein Verallgemeinerung der $1.$ Variablen Taylorentwicklung herleiten. \\
+\subsection*{Taylorentwicklung und das lokale Verhalten von $C^m-$Funktionen}\todo[inline]{Not sure how big of a title...}
+Wir werden jetzt ein Verallgemeinerung der Taylorentwicklung einer Variablen herleiten. \\
 
 Sei $f:\R^n\to\R$ eine $C^m-$Funktion sowie $x_0,x_1\in\R^n$. (Allgemein könnte man $\R^n$ durch eine offene konvexe Menge ersetzen)\\
 
 \noindent Sei
-\begin{align*} 
+\begin{align*}
 \varphi:\R &\to\R^n\\
 t & \to \left( 1-t\right) x_0+x_1
 \end{align*}
-Dann ist $g:=f\circ\varphi:\R\to\R$ eine \todo[inline]{Dont know where this actually fits: $\left( g(0)=f=\left( x_0\right), g(1)=f\left( x_1\right)\right)$}$C^m-$Funktion und (nach Taylor \todo{can't read, page 189 bottom} von Funktionen $1-$variable) es gibt $\xi\in (0,1)$ so dass 
+Dann ist $g:=f\circ\varphi:\R\to\R$ eine \todo[inline]{Don't know where this actually fits: $\left( g(0)=f=\left( x_0\right), g(1)=f\left( x_1\right)\right)$}$C^m-$Funktion und (nach Taylorentwicklung \todo{can't read, page 189 bottom} von Funktionen mit einer Vvariablen) gibt es $\xi\in (0,1)$, so dass
 
 \[
 g\left( {} \right) = g\left( 0 \right) + g'\left( 0 \right) +  \ldots  + \frac{{{g^{\left( {m - 1} \right)}}\left( 0 \right)}}{{\left( {m - 1} \right)!}} + \frac{{{g^{\left( m \right)}}\left( \xi  \right)}}{{m!}}\tag{\textasteriskcentered\label{Chap8Equation,Taylor}}
-\] 
+\]
 \todo[inline]{can't read between brackets before equal sign, page 190 very top}
-Jetzt berechnen wir $g^{(i)}(t)$ im Funktion von $f$ und seinem Ableitungen. Für $g'(t)$ benutzen wir die Kettenregel:
+Jetzt berechnen wir $g^{(i)}(t)$ als Funktion von $f$ und deren Ableitungen. Für $g'(t)$ benutzen wir die Kettenregel:
 \[g'(t)=df\left( \varphi (t)\right) \cdot\varphi' (t)\] mit \[\varphi '(t) = {x_1} - {x_0} = \left( {{x_1}' - {x_0}',{x_1}^2 - {x_0}^2, \ldots ,{x_1}^n - {x_0}^n} \right)\] Erhalten wir:
 
 \begin{align*}
@@ -1070,22 +1070,22 @@ g'(0) = & \sum\limits_{i = 1}^n {\frac{{\partial f}}{{\partial {x^i}}}\left( {x_
 Jetzt berechnen wir $g^{(2)}(t)$:\[{g^{(2)}}(t) = \frac{d}{{dt}}\left( {g'\left( t \right)} \right) = \sum\limits_{i = 1}^n {\frac{d}{{dt}}\left( {\frac{{\partial f}}{{\partial {x^i}}}\left( {\varphi \left( t \right)} \right)} \right)} \left( {x_1^i - x_0^i} \right)\]
 Analog gilt:
 \[\frac{d}{{dt}}\left( {\frac{{\partial f}}{{\partial {x^i}}}\left( {\varphi \left( t \right)} \right)} \right) = \sum\limits_{j = 1}^n {\frac{{{\partial ^2}f}}{{\partial {x^j}\partial {{\text{x}}^i}}}\left( {\varphi \left( t \right)} \right)\left( {x_1^j - x_0^j} \right)} \]
-Eingesetzt gilt: 
+Eingesetzt gilt:
 \begin{align*}
 {g^{(2)}}(t) = & \sum\limits_{i = 1}^n {\sum\limits_{j = 1}^n {\left( {\frac{{{\partial ^2}f}}{{\partial {x^j}\partial {x^i}}}\left( {\varphi (t)} \right)} \right)} } \left( {x_1^i - x_0^i} \right)\left( {x_1^j - x_0^j} \right)\\
 {g^{(2)}}(0) = & \sum\limits_{i,j = 1}^n {\left( {\frac{{{\partial ^2}f}}{{\partial {x^j}\partial {x^i}}}\left( {{x_0}} \right)} \right)} \left( {x_1^i - x_0^i} \right)\left( {x_1^j - x_0^j} \right)
 \end{align*}
-Daraus schliesst man induktive das
+Daraus schliesst man induktiv, dass
 \[{g^{(k)}}(t) = \sum\limits_{{i_1},{i_2}, \ldots ,{i_k} = 1}^n {\left( {\frac{{{\partial ^k}f}}{{\partial {x^{{i_1}}} \ldots \partial {x^{{i_k}}}}}\left( {\varphi (t)} \right)} \right)} \prod\limits_{l = 1}^k {\left( {x_1^{{i_l}} - x_0^{{i_l}}} \right)} \]
 Eingesetzt in (\textasteriskcentered) (s.\pageref{Chap8Equation,Taylor}) ergibt \todo[inline]{MISSING CONTENT?? page 191 bottom}
 
-\subsubsection*{Satz 8.51(Taylor entwicklung)}
+\subsubsection*{Satz 8.51(Taylorentwicklung)}
 \begin{align*}
 f\left( {{x_1}} \right) = & f\left( {{x_0}} \right) + \sum\limits_{i = 1}^n {\frac{{\partial f}}{{\partial x'}}\left( {{x_0}} \right)\left( {x_1^i - x_0^i} \right) +  \ldots } \\
  + & \frac{1}{{\left( {m - 1} \right)!}}\sum\limits_{{i_1}, \ldots ,{i_{m - 1}} = 1}^n {\frac{{{\partial ^{m - 1}}f}}{{\partial {x^{{i_1}}} \ldots \partial {x^{{i_{m - 1}}}}}}\left( {{x_0}} \right)\prod\limits_{l = 1}^{\left( {m - 1} \right)} {\left( {x_1^{{i_l}} - x_0^{{i_l}}} \right)} } \\
- + & \frac{1}{{m!}}\sum\limits_{{i_1}, \ldots ,{i_m} = 1}^n {\frac{{{\partial ^m}f}}{{\partial {x^{{i_1}}} \ldots \partial {x^{{i_m}}}}}\left( {{x_\xi }} \right)\prod\limits_{l = 1}^m {\left( {x_1^{{i_l}} - x_0^{{i_l}}} \right)} } 
+ + & \frac{1}{{m!}}\sum\limits_{{i_1}, \ldots ,{i_m} = 1}^n {\frac{{{\partial ^m}f}}{{\partial {x^{{i_1}}} \ldots \partial {x^{{i_m}}}}}\left( {{x_\xi }} \right)\prod\limits_{l = 1}^m {\left( {x_1^{{i_l}} - x_0^{{i_l}}} \right)} }
 \end{align*}
-mit eine Zahl $\xi\in\left( 0,1\right)$, $x_\xi = \left( 1-\xi\right)x_0+\xi x_1$.
+mit einer Zahl $\xi\in\left( 0,1\right)$, $x_\xi = \left( 1-\xi\right)x_0+\xi x_1$.
 
 \subsubsection*{Bemerkung 8.52}
 Insbesondere für $m=2$ erhalten wir für $f$ die quadratische Näherung
@@ -1093,11 +1093,11 @@ Insbesondere für $m=2$ erhalten wir für $f$ die quadratische Näherung
 f\left( {{x_1}} \right) = & f\left( {{x_0}} \right) + \nabla f\left( {{x_0}} \right)\left( {{x_1} - {x_0}} \right)\\
  + &\frac{1}{2}\sum\limits_{i,j = 1}^2 {\frac{{{\partial ^2}f}}{{\partial {x^i}\partial {x^j}}}\left( {{x_0}} \right)\left( {x_1^i - x_0^i} \right)} \left( {x_1^j - x_0^j} \right) + {r_2}\left( {f,{x_1},{x_0}} \right)
 \end{align*}
-mit Fehler 
+mit Fehler
 \[\frac{r_2\left( f,y_1,x_0\right)}{\left| x_1-x_0\right|}\to 0, \left( x_1\to x_0\right)\]
 
 \begin{definition}{8.53}
-Die Matrix der Zweiten partiellen Ableitungen heisst die Hesse - Matrix von $f$, und mit $\Hess(f)$ oder $\nabla^2 f$ bezeichnet
+Die Matrix der zweiten partiellen Ableitungen heisst Hesse - Matrix von $f$ und wird mit $\Hess(f)$ oder $\nabla^2 f$ bezeichnet
 \begin{align*}
 \Hess(f)= & \nabla^2 f:=\left( \frac{\partial^2 f}{\partial x^i\cdot\partial x^j}\right)_{i,j=1\dots n}\\
  = & \left( {\begin{array}{*{20}{c}}
@@ -1108,7 +1108,7 @@ Die Matrix der Zweiten partiellen Ableitungen heisst die Hesse - Matrix von $f$,
 \end{array}} \right)
 \end{align*}
 \end{definition}
-Seien $\nabla f,x_1-x_0$ Zeilenvektoren und sei $\left( x-x_0\right)^t$ der zu $x_1-x_0$ transponierte Spaltenvektor . Dann wird die Taylorentwicklung von Grad 2 äquivalent zu 
+Seien $\nabla f,x_1-x_0$ Zeilenvektoren und sei $\left( x-x_0\right)^t$ der zu $x_1-x_0$ transponierte Spaltenvektor . Dann wird die Taylorentwicklung von Grad 2 äquivalent zu
 
 \begin{align*}
 f(x) = & f\left( x_0\right) + \nabla f\left( x_0\right) \left( x-x_0\right)^t\\
@@ -1117,7 +1117,7 @@ f(x) = & f\left( x_0\right) + \nabla f\left( x_0\right) \left( x-x_0\right)^t\\
 \end{align*}
 
 \subsubsection*{Bemerkung}
-Die Hesse - Matrix von $f$, nach Satz von Schwarz ist eine Symmetrische Matrix.
+Die Hesse - Matrix von $f$ ist nach Satz von Schwarz eine symmetrische Matrix.
 
 \subsubsection*{Beispiel}
 $f\left( x,y\right)=e^{x+y}\cos x$ im Punkt $(0,0)$. Die Taylorentwicklung vom Grad 2:
@@ -1125,7 +1125,7 @@ $f\left( x,y\right)=e^{x+y}\cos x$ im Punkt $(0,0)$. Die Taylorentwicklung vom G
 \frac{{\partial f}}{{\partial x}} = & {e^{x + y}}\cos x - {e^{x + y}}\sin x,\text{ }\frac{{\partial f}}{{\partial x}}(0,0) = 1\\
 \frac{{\partial f}}{{\partial x}} =  & {e^{x + y}}\cos x ,\text{ }\frac{{\partial f}}{{\partial x}}(0,0) = 1\\
 \end{align*}
-\todo[inline]{shouln't it be $\frac{{\partial f}}{{\partial y}}(0,0) = 1$ for second one??}
+\todo[inline]{shouldn't it be $\frac{{\partial f}}{{\partial y}}(0,0) = 1$ for second one??}
 \[\left( \nabla f\right)(0,0)=(1,1)\hspace{10mm}f(0,0)=1\]
 \begin{align*}
 \frac{\partial }{{\partial x}}\left( {\frac{{\partial f}}{{\partial y}}} \right) = & {e^{x + y}}\cos x - {e^{x + y}}\sin x,\text{ }\frac{{{\partial ^2}f}}{{\partial x\partial y}}(0,0) = 1\\
@@ -1168,56 +1168,56 @@ y
 \end{align*}
 Taylorpolynom von Grad 2: $1+\left( x+y\right)+\frac{1}{2}\left( 2xy+y^2\right)$\\
 
-Die Hesse - Matrix bestimmt ob die Funktion $f$ in der Nähe von $x$ konvex oder konkav ist (oder nicht). Sie ``spielt'' die gleiche Rolle, wie die zweite Ableitung von Funktionen in einer Variable. \\
+Die Hesse - Matrix bestimmt, ob die Funktion $f$ in der Nähe von $x$ konvex oder konkav ist (oder nicht). Sie spielt die gleiche Rolle wie die zweite Ableitung von Funktionen in einer Variable. \\
 
-Als nächstes benötigen wir eine mehrdimensionale Entsprechung zu den positivität \todo{Can't understand word between brackets, page 197 middle} in den eindimensionalen Beziehungen $f''(z)>0$ bzw. $f''(z)<0$.
+Als nächstes benötigen wir eine mehrdimensionale Entsprechung zur Positivität \todo{Can't understand word between brackets, page 197 middle} in den eindimensionalen Beziehungen $f''(z)>0$ bzw. $f''(z)<0$.
 
 \begin{definition}{8.54}
 Eine symmetrische Matrix $A=\left( a_{ij}\right)\in\R^{n\times n}$ heisst
 \begin{enumerate}
-\item \textbf{Positiv definit} wenn \[{}^txAx = \sum\limits_{i,j = 1}^n {{a_{ij}}{x^i}{x^j} > 0}\hspace{10mm}\forall x\in\R^n\] (oder wenn ihre Eigenwerte sämtlich positive sind)
-\item \textbf{Negativ definit} wenn \[{}^txAx < 0\hspace{10mm}\forall x\in\R^n\] (wenn ihre Eigenwerte sämtlich negativ sind)
+\item \textbf{Positiv definit} wenn \[{}^txAx = \sum\limits_{i,j = 1}^n {{a_{ij}}{x^i}{x^j} > 0}\hspace{10mm}\forall x\in\R^n\] (oder wenn sämtliche Eigenwerte positive sind)
+\item \textbf{Negativ definit} wenn \[{}^txAx < 0\hspace{10mm}\forall x\in\R^n\] (wenn sämtliche Eigenwerte negativ sind)
 \item Sonst \textbf{indefinit} (wenn sie sowohl positive als auch negative Eigenwerte besitzt)
 \end{enumerate}
 Im symmetrischen $2\times 2$ Fall ist die Gleichung auf Definitheit besonders leicht
 \end{definition}
 
 \subsubsection*{Satz 8.55}
-Eine Symmetrische Matrix 
+Eine Symmetrische Matrix
 \[A = \left( {\begin{array}{*{20}{c}}
 {{a_{11}}}&{{a_{12}}}\\
 {{a_{12}}}&{{a_{11}}}
 \end{array}} \right)\]
 ist genau dann
 \begin{enumerate}
-\item Positive definit, wenn $\det A>0$ und $a_{11}>0$
+\item Positiv definit, wenn $\det A>0$ und $a_{11}>0$
 \item Negativ definit, wenn $\det A>0$ und $a_{11}<0$
 \item Indefinit, wenn $\det A<0$
 \end{enumerate}
 
-\subsection*{Extrema von Funktionen mehrere Variablen}
-Jetzt werden wir nach Punkten $x\in\R^n$ sehen, in denen eine funktion $F:\R^n\to\R$ ein lokales Extremum annimmt. Wir erinnern uns an das Vorgehen im $f:\R\to\R$:
+\subsection*{Extrema von Funktionen mehrerer Variablen}
+Jetzt werden wir nach Punkten $x\in\R^n$ schauen, in denen eine Funktion $F:\R^n\to\R$ ein lokales Extremum annimmt. Wir erinnern uns an das Vorgehen im $f:\R\to\R$:
 \begin{enumerate}
 \item Finde alle Punkte $x\in\R$, für die $f'(x)=0$ gilt (Notwendige Bedingung)
-\item Falls in einem solchen Punkt zusätzlich $f''(x)>0$ (bzw. $f''(z)<0$) gilt so handelt es sich um ein lokales Minimum (bzw. Maximum) (hinreichende Bedingung)
+\item Falls in einem solchen Punkt zusätzlich $f''(x)>0$ (bzw. $f''(z)<0$) gilt, so handelt es sich um ein lokales Minimum (bzw. Maximum) (hinreichende Bedingung)
 \end{enumerate}
-Jetzt verallgemeinern wir diese Strategie Zunächst
+Jetzt verallgemeinern wir diese Strategie. Zunächst:
 
 \begin{definition}{8.55}
 Ein Punkt $x_0\in\R^n$ mit $df\left( x_0\right)=0$ heisst \underline{kritischer Punkt} von $f$ (oder \underline{stationärer} Punkt von $f$)
 \end{definition}
 
 \subsubsection*{Satz 8.56}
-Sei 
+Sei
 \begin{align*}
 f: &\text{ } \Omega \subset\R^n\to\R\\
 f \in & \text{ }C^2\left(\Omega\right); x_0\in\Omega
 \end{align*}
 \begin{enumerate}
-\item Falls $x_0\in\Omega$ lokale Extremum (min oder max) von $f$ ist, so gilt $df\left(x_0\right)=0$
-\item Falls $df\left( x_0\right)=0$, und falls $\Hess \left( f\right)\left( x_0\right)$ positive definiert ist, so ist $x_0$ eine lokale Minimalstelle
-\item Falls $df\left( x_0\right)$, und falls $\Hess_f\left( x_0\right)<0$ negativ definiert ist, so ist $x_0$ eine lokale Maximalstelle
-\item Falls $df\left( x_0\right)=0$, und $\Hess_f\left( x_0\right)$ indefinite ist, so ist $x_0$ ein Sattelpunkt (d.h. jede Umgebung $U$ von $x_0$ enthält Punkte $p,q\in U$ mit $f\left( P\right) > f\left( x_0\right)>f\left( q\right)$)
+\item Falls $x_0\in\Omega$ ein lokale Extremum (Minimum oder Maximum) von $f$ ist, so gilt $df\left(x_0\right)=0$
+\item Falls $df\left( x_0\right)=0$, und falls $\Hess \left( f\right)\left( x_0\right)$ positiv definit ist, so ist $x_0$ eine lokale Minimalstelle
+\item Falls $df\left( x_0\right)$, und falls $\Hess_f\left( x_0\right)<0$ negativ definit ist, so ist $x_0$ eine lokale Maximalstelle
+\item Falls $df\left( x_0\right)=0$, und $\Hess_f\left( x_0\right)$ indefinit ist, so ist $x_0$ ein Sattelpunkt (d.h. jede Umgebung $U$ von $x_0$ enthält Punkte $p,q\in U$ mit $f\left( P\right) > f\left( x_0\right)>f\left( q\right)$)
 \end{enumerate}
 
 \subsubsection*{Beispiel}
@@ -1232,7 +1232,7 @@ f\left( x,y,z\right)= & \left(x-1\right)^2+\left(y+2\right)^2+\left(z+1\right)^2
 0&2&0\\
 0&0&2
 \end{array}} \right)\]
-$H_f\left( x_0\right)$ ist positiv definiert $\Rightarrow x_0\left( 1,-2,-1\right)$ ist ein lokales Minimum. 
+$H_f\left( x_0\right)$ ist positiv definit $\Rightarrow x_0\left( 1,-2,-1\right)$ ist ein lokales Minimum.
 \item \begin{align*}
 f\left( x,y\right)= & \cos\left(x+2y\right)+\cos\left(2x+3y\right)\\
 \nabla f= & \left( -\sin\left(x+2y\right)-2\sin\left( 2x +3y\right)\right.,\\
@@ -1245,7 +1245,7 @@ f\left( x,y\right)= & \cos\left(x+2y\right)+\cos\left(2x+3y\right)\\
 {2x + 3y = k\pi }\\
 {x + 2y = l\pi }
 \end{array}} \right\} \Rightarrow y = k\pi {\text{ und }}x = l\pi \]
-Kritische punkte: $\left( \pi l,\pi k\right)\hspace{5mm}k,l\in\mathbb{Z}$
+Kritische Punkte: $\left( \pi l,\pi k\right)\hspace{5mm}k,l\in\mathbb{Z}$
 \begin{align*}
 \frac{{\partial f}}{{\partial y\partial x}} =&\frac{{\partial f}}{{\partial x\partial y}} =  - 2\cos \left( {x + 2y} \right) - 6\cos \left( {2x + 3y} \right)\\
 \frac{{{\partial ^2}f}}{{\partial {x^2}}} =&- \cos \left( {x + 2y} \right) - 4\cos \left( {2x + 3y} \right)\\
@@ -1256,16 +1256,16 @@ Kritische punkte: $\left( \pi l,\pi k\right)\hspace{5mm}k,l\in\mathbb{Z}$
 { - 5}&{ - 8}\\
 { - 8}&{ - 13}
 \end{array}} \right| = 13 \cdot 5 - 64 = 1 < 0\]
-$\Rightarrow\nabla^2 f\left( 0,0\right)$ ist negative definiert und $\left( 0,0\right)$ ist eine lokale maximalestelle.\\
+$\Rightarrow\nabla^2 f\left( 0,0\right)$ ist negativ definit und $\left( 0,0\right)$ ist eine lokale Maximalstelle.\\
 
-Auch alle punkte $\left( -2\pi k,2\pi l\right)$ sind lokale maxima. Analog, bis auf Addition von Vielfachen von $2\pi$ $f$ hat lokale minimalestelle in $\left( \pi,\pi\right)$ und Sattelpunkte in $\left( 0,\pi\right)$ und $\left( \pi,0\right)$
+Auch alle Punkte $\left( -2\pi k,2\pi l\right)$ sind lokale Maxima. Analog, bis auf Addition von Vielfachen von $2\pi$, hat $f$ eine lokale Minimalestelle in $\left( \pi,\pi\right)$ und Sattelpunkte in $\left( 0,\pi\right)$ und $\left( \pi,0\right)$
 \end{enumerate}
 
 \section{Vektorwertige Funktionen}
 Sei $\Omega\in\R^n$, $f=\left( f^i\right)_{1 < i < l}\Omega\to\R^l$
 \begin{definition}{8.57}
 \begin{enumerate}
-\item Die Funktion \todo[inline]{can,t understand the function, page 203 top} heisst an der stelle $x_0\in\Omega$ differenzierbar, falls jede komponente $f^i$, $1 < i < l$ an der stelle $x_0$ differenzierbar ist.\\
+\item Die Funktion \todo[inline]{can,t understand the function, page 203 top} heisst an der Stelle $x_0\in\Omega$ differenzierbar, falls jede Komponente $f^i$, $1 < i < l$ an der stelle $x_0$ differenzierbar ist.\\
 
 Das Differential $df\left( x_0\right)$ hat die Gestalt \[df\left( {{x_0}} \right) = \left( {\begin{array}{*{20}{c}}
 {df'\left( {{x_0}} \right)}\\
@@ -1276,7 +1276,7 @@ Das Differential $df\left( x_0\right)$ hat die Gestalt \[df\left( {{x_0}} \right
 \end{definition}
 \subsubsection*{Bemerkung 8.58}
 \begin{enumerate}
-\item Bezüglich der Standardbasis $dx^j$, $1\leq j\leq n$ erhalten wir 
+\item Bezüglich der Standardbasis $dx^j$, $1\leq j\leq n$ erhalten wir
 \[d{f^i}\left( {{x_0}} \right) = \sum\limits_{j = 1}^n {\frac{{\partial {f^i}}}{{\partial {x^j}}}\left( {{x_0}} \right)d{x^j} = \left( {\frac{{\partial {f^i}}}{{\partial x'}}\left( {{x_0}} \right), \ldots ,\frac{{\partial {f^i}}}{{\partial {x^n}}}\left( {{x_0}} \right)} \right)} \]
 die Darstellung
 \[df\left( {{x_0}} \right) = \left( {\begin{array}{*{20}{c}}
@@ -1285,8 +1285,8 @@ die Darstellung
  \vdots & \vdots & \ddots & \vdots \\
 {\frac{{\partial {f^l}}}{{\partial x'}}\left( {{x_0}} \right)}&{\frac{{\partial {f^l}}}{{\partial x'}}\left( {{x_0}} \right)}& \ldots &{\frac{{\partial {f^l}}}{{\partial {x^n}}}\left( {{x_0}} \right)}
 \end{array}} \right)\]
-Die $l\times n$ matrix $df\left( x_0\right) = {\left( \frac{\partial f^i}{\partial x^j}\left( x_0\right)\right)}_{1\leq i\leq l, 1\leq j\leq n}$ heisst Jacobi oder Funktionalmatrix von $f$ an der Stelle $x_0$.
-\item Auch im Vektorwertigen Fall ist die Funktion $f$ genau dann differenzierbar in $x_0$, wenn eine lineare Abbildung $A:\R^n\to\R^l$ existiert mit 
+Die $l\times n$ matrix $df\left( x_0\right) = {\left( \frac{\partial f^i}{\partial x^j}\left( x_0\right)\right)}_{1\leq i\leq l, 1\leq j\leq n}$ heisst Jacobi- oder Funktionalmatrix von $f$ an der Stelle $x_0$.
+\item Auch im vektorwertigen Fall ist die Funktion $f$ genau dann differenzierbar in $x_0$, wenn eine lineare Abbildung $A:\R^n\to\R^l$ existiert mit
 \[\mathop {\lim }\limits_{x \to {x_0}} \frac{{f\left( x \right) - f\left( {{x_0}} \right) - A\left( {x - {x_0}} \right)}}{{\left| {x - {x_0}} \right|}} = 0\]
 \end{enumerate}
 
@@ -1305,10 +1305,25 @@ Die $l\times n$ matrix $df\left( x_0\right) = {\left( \frac{\partial f^i}{\parti
 \item Polarkoordinaten
 \begin{align*}
 f&:\lbrack 0,\infty)\times\lbrack 0,2\pi\rbrack\to\R^2\\
-\left( {\begin{array}{*{20}{c}}r\\\theta \end{array}} \right) &\to \left( {\begin{array}{*{20}{c}}x\\y\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{r\cos \theta }\\{r\sin \theta }\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{f'}\\{{f^2}}\end{array}} \right)\\
+\left( {\begin{array}{*{20}{c}}
+r\\
+\theta
+\end{array}} \right) &\to \left( {\begin{array}{*{20}{c}}
+x\\
+y
+\end{array}} \right) = \left( {\begin{array}{*{20}{c}}
+{r\cos \theta }\\
+{r\sin \theta }
+\end{array}} \right) = \left( {\begin{array}{*{20}{c}}
+{f'}\\
+{{f^2}}
+\end{array}} \right)\\
 df'\left( r,\theta\right)&=\left( \cos\theta, -r\sin\theta\right)\\
 df^2\left( r,\theta\right)&=\left( \sin\theta, r\cos\theta\right)\\
-df\left( {r,\theta } \right) &= \left( {\begin{array}{*{20}{c}}{\cos \theta }&{ - r\sin \theta }\\{\sin \theta }&{r\cos \theta }\end{array}} \right) \leftarrow {\text{Jacobi Matrix}}\\
+df\left( {r,\theta } \right) &= \left( {\begin{array}{*{20}{c}}
+{\cos \theta }&{ - r\sin \theta }\\
+{\sin \theta }&{r\cos \theta }
+\end{array}} \right) \leftarrow {\text{Jacobi Matrix}}\\
 \det\left( df\left( r,\theta\right)\right)&=r\left( \cos^2\theta + \sin^2\theta\right)=r
 \end{align*}
 \missingfigure{Page 205.1 bottom}
@@ -1317,8 +1332,28 @@ df\left( {r,\theta } \right) &= \left( {\begin{array}{*{20}{c}}{\cos \theta }&{
 Die $x,y$ Anteile werde in Polarkoordinaten transformiert und die $z$ koordinate beibehalten}
 \begin{align*}
 f:&\lbrack 0,\infty\rbrack\to\lbrack 0,2\pi\rbrack\times\R\to\R^2\\
-\left( {\begin{array}{*{20}{c}}r\\\theta \\z\end{array}} \right) \to& \left( {\begin{array}{*{20}{c}}x\\y\\z\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{r\cos \theta }\\{r\sin \theta }\\z\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{f'}\\{{f^2}}\\{{f^3}}\end{array}} \right)\\
-df(r,\theta ,z) =&\left[ {\begin{array}{*{20}{c}}{\cos \theta }&{ - r\sin \theta }&0\\{\sin \theta }&{r\cos \theta }&0\\0&0&1\end{array}} \right] \leftarrow {\text{Jacobi Matrix}}\\
+\left( {\begin{array}{*{20}{c}}
+r\\
+\theta \\
+z
+\end{array}} \right) \to& \left( {\begin{array}{*{20}{c}}
+x\\
+y\\
+z
+\end{array}} \right) = \left( {\begin{array}{*{20}{c}}
+{r\cos \theta }\\
+{r\sin \theta }\\
+z
+\end{array}} \right) = \left( {\begin{array}{*{20}{c}}
+{f'}\\
+{{f^2}}\\
+{{f^3}}
+\end{array}} \right)\\
+df(r,\theta ,z) =&\left[ {\begin{array}{*{20}{c}}
+{\cos \theta }&{ - r\sin \theta }&0\\
+{\sin \theta }&{r\cos \theta }&0\\
+0&0&1
+\end{array}} \right] \leftarrow {\text{Jacobi Matrix}}\\
 \det \left( {df(r,\theta ,z)} \right) =&r\left( {{{\cos }^2}\theta  + si{n^2}\theta } \right) = r
 \end{align*}
 \centerline{(Rotationssymmetrie bezüglich $z$ Achse)}
@@ -1326,8 +1361,23 @@ df(r,\theta ,z) =&\left[ {\begin{array}{*{20}{c}}{\cos \theta }&{ - r\sin \thet
 \missingfigure{Page 205.3}
 \begin{align*}
 f:&\lbrack 0,\infty)\times\lbrack 0,2\pi\rbrack\times\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\to\R^3\\
-f\left( {\begin{array}{*{20}{c}}r\\\theta \\\psi \end{array}} \right) =&\left( {\begin{array}{*{20}{c}}{r\cos \theta \cos \psi }\\{r\sin \theta \cos \psi }\\{r\sin \psi }\end{array}} \right) = r\left( {\begin{array}{*{20}{c}}{\cos \theta \cos \psi }\\{\sin \theta \cos \psi }\\{\sin \psi }\end{array}} \right)\\
-df\left( {r,\theta ,\psi } \right) =&\left( {\begin{array}{*{20}{c}}{\cos \theta \cos \psi }&{ - r\sin \theta \cos \psi }&{ - r\cos \theta \sin \psi }\\{\sin \theta \cos \psi }&{r\cos \theta \cos \psi }&{ - r\sin \theta {\mathop{\rm sin?}\nolimits} }\\{\sin \psi }&0&{r\cos \psi }
+f\left( {\begin{array}{*{20}{c}}
+r\\
+\theta \\
+\psi
+\end{array}} \right) =&\left( {\begin{array}{*{20}{c}}
+{r\cos \theta \cos \psi }\\
+{r\sin \theta \cos \psi }\\
+{r\sin \psi }
+\end{array}} \right) = r\left( {\begin{array}{*{20}{c}}
+{\cos \theta \cos \psi }\\
+{\sin \theta \cos \psi }\\
+{\sin \psi }
+\end{array}} \right)\\
+df\left( {r,\theta ,\psi } \right) =&\left( {\begin{array}{*{20}{c}}
+{\cos \theta \cos \psi }&{ - r\sin \theta \cos \psi }&{ - r\cos \theta \sin \psi }\\
+{\sin \theta \cos \psi }&{r\cos \theta \cos \psi }&{ - r\sin \theta {\mathop{\rm sin?}\nolimits} }\\
+{\sin \psi }&0&{r\cos \psi }
 \end{array}} \right)\\
 \det\left( df\right)=&r^2cos\psi
 \end{align*}
@@ -1338,9 +1388,9 @@ df\left( {r,\theta ,\psi } \right) =&\left( {\begin{array}{*{20}{c}}{\cos \thet
 \noindent Es gelten die üblichen Differentiationsregeln
 
 \subsubsection*{Satz 8.60}
-Sei $f,g:\Omega\subset\R^n\to\R^l$ an der Stelle $x_0\in\Omega$ differenzierbar und $\alpha\in\R$. dann sin die Funktionen $\alpha f$ und $f+g$ sowie das Skalarprodukt von $f$ und $g$ an der Stelle $x_0$ differenzierbar und 
+Seien $f,g:\Omega\subset\R^n\to\R^l$ an der Stelle $x_0\in\Omega$ differenzierbar und $\alpha\in\R$. dann sind die Funktionen $\alpha f$ und $f+g$ sowie das Skalarprodukt von $f$ und $g$ an der Stelle $x_0$ differenzierbar und
 \begin{enumerate}
-\item $d\left( \alpha f\right) \left( x_0\right)=\alpha df\left( x_0\right)$ 
+\item $d\left( \alpha f\right) \left( x_0\right)=\alpha df\left( x_0\right)$
 \item $d\left( f+g\right) \left( x_0\right)=df\left( x_0\right) + dg\left( x_0\right)$
 \item $d\left( f\cdot g\right)\left( x_0\right) = f\left( x_0\right)\cdot dg\left( x_0\right)+g\left( x_0\right)\cdot df\left( x_0\right)$\\
 wobei $f\left( x_0\right)\cdot dg\left( x_0\right)=\sum\limits_{i = 1}^l {{f^i}\left( {{x_0}} \right)d{g^i}\left( {{x_0}} \right)}$
@@ -1348,7 +1398,7 @@ wobei $f\left( x_0\right)\cdot dg\left( x_0\right)=\sum\limits_{i = 1}^l {{f^i}\
 \subsubsection*{Satz 8.61}
 Seien $g:\Omega\to\R^l$ an der Stelle $x_0\in\Omega$ und $f:\R^l\to\R^m$ an der Stelle $g\left(x_0\right)$ differenzierbar.\\
 
-Dann ist die Funktion $f\circ g:\Omega\to\R^m$ an der Stelle $x_0$ differenzierbar, und 
+Dann ist die Funktion $f\circ g:\Omega\to\R^m$ an der Stelle $x_0$ differenzierbar, und
 \[d\left( f\circ g\right)\left( x_0\right)=df\left( g\left( x_0\right)\right)\cdot dg\left( x_0\right)\]
 
 \subsubsection*{Beispiel}
@@ -1362,7 +1412,7 @@ f:\R^2 & \to\R^2\\
 {2x}&{ - 2y}\\
 {2y}&{2x}
 \end{array}} \right)
-\end{align*} 
+\end{align*}
 \begin{align*}
 g:\R^3 & \to\R^3\\
 \left( x,y,z\right) & \to\left( {\begin{array}{*{20}{c}}
@@ -1372,7 +1422,7 @@ g:\R^3 & \to\R^3\\
 {2x}&{2y}&{2z}\\
 {yz}&{xz}&{xy}
 \end{array}} \right)
-\end{align*} 
+\end{align*}
 \begin{align*}
 \left( f\circ g\right):\R^3 & \to\R^2\\
 \left(x,y,z\right)&\to \left( {\begin{array}{*{20}{c}}
@@ -1392,6 +1442,6 @@ d\left( {f \circ g} \right)\left( {x,y,z} \right)&= df\left( {g\left( {x,y,z} \r
 &=\left( {\begin{array}{*{20}{c}}
 {4x\left( {{x^2} + {y^2} + {z^2}} \right) - 2x{y^2}{z^2}}& * & * \\
  * & * & * \\
- * & * & * 
+ * & * & *
 \end{array}} \right)
 \end{align*}

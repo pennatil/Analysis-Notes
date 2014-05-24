@@ -28,7 +28,7 @@ mv mainMult4.pdf "../../PDF/Work in Progress/Kapitel 4 - Stetigkeit - Analysis I
 mv mainMult5.pdf "../../PDF/Work in Progress/Kapitel 5 - Differentialrechnung auf R - Analysis I.pdf"
 mv mainMult6.pdf "../../PDF/Work in Progress/Kapitel 6 - Integration - Analysis II.pdf"
 mv mainMult7.pdf "../../PDF/Work in Progress/Kapitel 7 - Gewoehnliche Differenzialgleichungen - Analysis II.pdf"
-mv mainMult8.pdf "../../PDF/Work in Progress/Kapitel 8 - Differenzialrechnung in R^n - Analysis II.pdf"
+mv mainMult8.pdf "../../PDF/Work in Progress/Kapitel 8 - Differentialrechnung in R^n - Analysis II.pdf"
 mv mainMult9.pdf "../../PDF/Work in Progress/Kapitel 9 - Integration in R^n - Analysis II.pdf"
 
 
