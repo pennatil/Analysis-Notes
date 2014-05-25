@@ -1,1 +1,134 @@
 \chapter{Differentialrechnung auf $\R$}
+\section{Differential (Ableitung), Elementare Eigenschaften}
+\begin{definition}{5.1}
+Sei $f:\Omega\to\R$, $\Omega\subset\R$, und $x_0\in\Omega$
+\begin{enumerate}
+\item $f$ heisst differenzierbar an der Stelle $x_0$ falls 
+\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{x \to {x_0}}\\{x\not  = {x_0}}\end{array}} \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}\]
+existiert. Dieser Grenzwert wird dann mit $f'\left( x_0\right)$ oder $\frac{df}{dx}\left( x_0\right)$ bezeichnet. Die Zahl $f'\left( x_0\right)$ heisst die Ableitung oder das Differential von $f$ an der Stelle $x_0$
+\item $f$ heisst in $\Omega$ differenzierbar, falls sie an jeder Stelle $x_0\in\Omega$ differenzierbar. In diesem Fall, nennt sich die Funktion $x\to f'(x)$ Ableitung von $f$
+\end{enumerate}
+\end{definition}
+\subsubsection*{Bemerkung 5.2}
+In der Definition 5.1, verlangen wir also, dass für jede in $\Omega \backslash\{ x_0\}$ erhaltene folge $\left( x_n\right)_{n\geq 1}$ mit Grenzwert $x_0$, der Limes 
+\subsubsection*{Bemerkung 5.3}
+Sei $f$ differenzierbar in $x_0$ 
+\missingfigure{Page 184 bottom}
+Dann ist \[\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}\] die Steigung der Geraden durch die Punkte $\left( x_0,f\left( x_0\right) \right)$ und $\left( x,f\left( x\right) \right)$.\\
+
+Geometrisch ist also $f'\left( x_0\right)$ die Steigung der Tangenten am Graphen von $f$ im Punkt $\left( x_0,f\left( x_0\right) \right)$. Diese Tangente hat die Gleichung 
+\[T(x) = f'\left( {{x_0}} \right)\left( {x - {x_0}} \right) + f\left( {{x_0}} \right)\]
+Sei 
+\[f\left( x \right)= f'\left( {{x_0}} \right)\left( {x - {x_0}} \right) + f\left( {{x_0}} \right) + {R_{{x_0}}}\left( x \right) = T\left( x \right) + {R_{{x_0}}}\left( x \right)\]\[ \Rightarrow \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} = \frac{{f'\left( {{x_0}} \right)\left( {x - {x_0}} \right)}}{{x - {x_0}}} + \frac{{R\left( x \right)}}{{x - {x_0}}}\]
+Dann folgt 
+\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{x \to {x_0}}\\{x\not  = {x_0}}\end{array}} \frac{{R\left( x \right)}}{{x - {x_0}}} = 0\]
+Die Lineare Funktion $f\left( {{x_0}} \right) + f'\left( {{x_0}} \right)\left( {x - {x_0}} \right)$ stellt eine gute Approximation der Funktion $f(x)$ dar:\\
+
+\noindent Es gilt
+\[f\left( x \right) = f\left( {{x_0}} \right) + f'\left( {{x_0}} \right)\left( {x - {x_0}} \right) + {R_{{x_0}}}\left( x \right)\]
+mit 
+\[\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( x \right)}}{{x - {x_0}}} = 0\]
+\missingfigure{page 186, very top}
+\subsubsection*{Beispiel 5.4}
+\begin{enumerate}
+\item \begin{align*}
+f:\R&\to\R\\
+x&\to mx+b
+\end{align*}
+ist überall differenzierbar mit $f'\left( x\right)=m$, $\forall x\in\R$ 
+\begin{align*}f\left( x \right) - f\left( {{x_0}} \right)&= m\left( {x - {x_0}} \right)\\\mathop {\lim }\limits_{x \to {x_0}} \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}}&= m
+\end{align*}
+\item $f\left( x\right)=\abs{x}$ ist für alle $x_0\not=0$ differenzierbar aber nicht für $x_0=0$
+\[f\left( x \right) - f\left( 0 \right) = \left\{ {\begin{array}{*{20}{c}}x&{{\text{ für }}x \ge 0}\\{ - x}&{{\text{ für }}x \le 0}\end{array}} \right.\]
+Also ist \[\frac{{f\left( x \right) - f\left( 0 \right)}}{{x - 0}} = \left\{ {\begin{array}{*{20}{c}}1&{{\text{ fur }}x > 0}\\{ - 1}&{{\text{ fur }}x < 0}\end{array}} \right.\]
+Besitzt also keinen Grenzwert für $x\to 0$, $x\not=0$
+\item $\exp :\R\to\R$ ist überall auf $\R$ differenzierbar und $\exp'(x)=\exp(x)$. Sei $x_0\in\R$, $x_0\not=x=x_0+h\in\R$ 
+\begin{align*}\exp \left( {{x_0} + h} \right) - \exp \left( {{x_0}} \right)&= \exp \left( {{x_0}} \right)\left( {\exp \left( h \right) - 1} \right)\\\exp \left( h \right) - 1&= h + \frac{{{h^2}}}{{2!}} +  \ldots \\ \Rightarrow \frac{{\exp \left( h \right) - 1}}{h}&= 1 + \frac{h}{{2!}} + \frac{{{h^2}}}{{3!}}+\dots
+\end{align*}
+Also 
+\begin{align*}\left| {\frac{{\exp \left( h \right) - 1}}{h} - 1} \right|&\le \left| h \right|\left[ {\frac{1}{{2!}} + \frac{{\left| h \right|}}{{3!}} + \frac{{{{\left| h \right|}^2}}}{{4!}} +  \ldots } \right]\\&\le \left| h \right|\left[ {1 + \left| h \right| + \frac{{{{\left| h \right|}^2}}}{{2!}} +  \ldots } \right]\\&\le \left| h \right|\exp \left( h \right)
+\end{align*}
+Woraus 
+\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{h \to 0}\\{h\not  = 0}\end{array}} \frac{{\exp \left( h \right) - 1}}{h} = 1\]
+und somit 
+\begin{align*}{\mathop{\rm exp'}\nolimits} \left( {{x_0}} \right)&= \mathop {\lim }\limits_{\begin{array}{*{20}{c}}{h \to 0}\\{h\not  = 0}\end{array}} \frac{{\exp \left( {{x_0} + h} \right) - \exp \left( {{x_0}} \right)}}{h}\\&= \mathop {\lim }\limits_{h \to 0} \exp \left( {{x_0}} \right)\left( {\frac{{\exp \left( h \right) - 1}}{h}} \right)\\&= \exp \left( {{x_0}} \right)
+\end{align*}
+\item $\sin(x)$ und $\cos(x)$ sind überall differenzierbar und 
+\begin{align*}
+\sin'&=\cos\\
+\cos'&=-\sin
+\end{align*}
+Aus der Additionsgesetzen:
+\begin{align*}
+\sin \left( {x + h} \right) - \sin \left( x \right) &= \sin \left( x \right)\cos \left( h \right) + \cos \left( x \right)\sin \left( h \right) - \sin \left( x \right)\\& = \sin \left( x \right)\left( {\cos \left( h \right) - 1} \right) + \cos \left( x \right)\sin \left( h \right)
+\end{align*}
+Nun ist 
+\[\mathop {\lim }\limits_{h \to 0} \frac{{\sin \left( h \right)}}{h} = 1\]
+und 
+\begin{align*}\frac{{\cos \left( h \right) - 1}}{h} &= \frac{{{{\cos }^2}\left( h \right) - 1}}{{h\left( {\cos \left( h \right) + 1} \right)}} = \frac{{{{\sin }^2}\left( h \right)}}{{h\left( {\cos \left( h \right) + 1} \right)}}\\& = \frac{1}{{\mathop {\cos \left( h \right) + 1}\limits_{\begin{array}{*{20}{c}} \downarrow \\{\frac{1}{2}}\end{array}} }} \cdot \frac{{{{\sin }^2}\left( h \right)}}{{\mathop h\limits_{\begin{array}{*{20}{c}} \downarrow \\0\end{array}} }}
+\end{align*}
+\todo[inline]{There is a sin h/h which doesn't seem to belong anywhere, page 188 bottom right corner}
+\begin{align*}\frac{{\sin \left( {x + h} \right) - \sin \left( x \right)}}{h} &= \sin \left( x \right)\left( {\frac{{\cos \left( h \right) - 1}}{h}} \right) + \cos \left( x \right)\frac{{\sin \left( h \right)}}{h}\\ \Rightarrow \mathop {\lim }\limits_{h \to 0} \frac{{\sin \left( {x + h} \right) - \sin \left( x \right)}}{h} &= \lim \left( {\sin \left( x \right)\mathop {\lim }\limits_{h \to 0} \left( {\frac{{\cos \left( h \right) - 1}}{h}} \right)} \right.\\&\left. { \hspace{3mm}+ \cos \left( x \right)\mathop {\lim }\limits_{h \to 0} \left( {\frac{{\sin \left( h \right)}}{h}} \right)} \right)\\ &= \sin \left( x \right)\lim \left( {\frac{{\cos \left( h \right) - 1}}{h}} \right)\\ &\hspace{3mm}+ \cos \left( x \right)\lim \left( {\frac{{\sin \left( h \right)}}{h}} \right)\\& = \left( {\sin \left( x \right)} \right) \cdot 0 + \left( {\cos \left( x \right)} \right) \cdot 1 = \cos \left( x \right)
+\end{align*}
+Analog 
+\begin{align*}
+\cos \left( {x + h} \right) - \cos \left( x \right) &= \cos \left( x \right)\cos \left( h \right) - \sin \left( x \right)\sin \left( h \right) - \cos \left( x \right)\\& = \cos \left( x \right)\left( {\cos \left( h \right) - 1} \right) + \sin \left( x \right)\sin \left( h \right)
+\end{align*}
+Da wie oben $\frac{{\cos \left( h \right) - 1}}{h} \to 0$, $\frac{{\sin \left( h \right)}}{{\left( h \right)}} \to 1$ folgt $\cos'=-\sin$
+\end{enumerate}
+Der Zusammenhang zwischen differenzierbarkeit und stetigkeit ist
+\subsubsection*{Satz 5.5}
+Sei $\Omega\subseteq\R$, $x_0\in\Omega$ und $f:\Omega\to\R$ in $x_0$ differenzierbar. Dann ist $f$ in $x_0$ stetig. (Also, ``Diff'' ist mehr als ``Stetigkeit'')
+\begin{beweis}{}
+$f$ differenzierbar in $x_0$. Sei 
+\begin{align*}
+T:\Omega \backslash \left\{ {{x_0}} \right\}&\to\R\\
+ x &\to \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}
+\end{align*}
+Da $f$ differenzierbar in $x_0$ ist, hat $T$ ein Grenzwert in $x_0$, und 
+\[\mathop {\lim }\limits_{x \to {x_0}} T\left( x \right) = f'\left( x \right)\]
+Für $x\not=x_0$ 
+\[f\left( x \right) = T\left( x \right)\left( {x - {x_0}} \right) + f\left( {{x_0}} \right)\]
+$f\left( x \right)$ ist die Summe von 2 funktionen $T\left( x\right)\left( x-x_0\right)$ und $f\left( x_0\right)=$ konstant.\\
+
+Da beide funktionen ein Grenzwert an der Stelle $x_0$ besitzen, hat auch $f$ eine Grenzwert in $x_0$ und 
+\begin{align*}\mathop {\lim }\limits_{x \to {x_0}} f\left( x \right)&= \mathop {\lim }\limits_{x \to {x_0}} \left( {T\left( x \right)} \right)\mathop {\lim }\limits_{x \to {x_0}} \left( {x - {x_0}} \right) + \mathop {\lim }\limits_{x \to {x_0}} f\left( {{x_0}} \right)\\&= f'\left( x \right) \cdot 0 + f\left( {{x_0}} \right)= f\left( {{x_0}} \right)\end{align*}
+$\Rightarrow$ ist stetig in $x_0$.
+\end{beweis}
+\subsubsection*{Bemerkung}
+Die Umkehrung von Satz 5.5\todo{Add page + reference, page 190 middle} gilt nicht, z.B. $f\left( x \right)=\abs{x}$ ist stetig in $x=0$ aber nicht differenzierbar. 
+
+\subsubsection*{Beispiel 5.6}
+Das folgende Beispiel zeigt dass, es stetige funktionen $f:\R\to\R$ gibt, die an keiner Stelle $x_0\in\R$ differenzierbar sind. (Von der Waerden (1930))\\
+
+\noindent Sei für $x\in\R$ 
+\begin{align*}
+<x> =&\text{Distanz von $x$ zur nächsten ganzen Zahl}\\
+=&\min\left\{ \left| x-m\right|:m\in\mathbb{Z}\right\}
+\end{align*}
+Der Graph von $<x>$ sieht so aus 
+\missingfigure{page 191 top}
+Graph von $\frac{10x}{10}$ 
+\missingfigure{Page 191, top to middle}
+Sei 
+\[f\left( x \right): =  < x >  + \frac{{ < 10x > }}{{10}} + \frac{{ < {{10}^2}x > }}{{100}} +  \ldots \]
+Da 
+\[0 \le  < {10^n}x >  \le \frac{1}{2}\]
+folgt absolut konvergenz. Ausserdem sei 
+\[{f_k}\left( x \right) = \sum\limits_{n = 0}^k {\frac{{ < {{10}^n}x > }}{{{{10}^n}}}} \]
+Dann ist 
+\[\left| {f\left( x \right) - {f_k}\left( x \right)} \right| = \left| {\sum\limits_{n = k + 1}^\infty  {\frac{{ < {{10}^n}x > }}{{{{10}^n}}}} } \right| \le \frac{1}{2}\left| {\sum\limits_{n = k + 1}^\infty  {\frac{1}{{{{10}^n}}}} } \right| = \frac{1}{2} \cdot \frac{{{{10}^{ - k}}}}{9}\]
+$\forall k\geq 1$ ist $f_k:\R\to\R$ stetig. \\
+
+Da die Folge $\left( f_k\right)_{k\geq 1}$ gleichmässig gegen $f$ konvergiert ist $f$ stetig. Man kann zeigen, dass $f$ in keinem Punkt von $\R$ differenzierbar ist. \todo{End of beweis is put here, I think it is better if it stays up when the bsp begins. Page 192 middle}
+\subsubsection*{Satz 5.7}
+Seien $f,g:\Omega\to\R$ Funktionen, $x_0\in\R$. Wir nehmen an dass $f$ und $g$ in $x_0$ differenzierbar sind. Dann sind $f+g$, $f\cdot g$ und falls $g\left( x_0\right)\not=0$ auch $f/g$\todo{Is this supposed to be a fraction?? page 192 bottom} an der Stelle $x_0$ differenzierbar. Es gelten dann folgende Formel:
+\begin{enumerate}
+\item $\left( {af + bg} \right)'\left( {{x_0}} \right) = af'\left( {{x_0}} \right) + bf'\left( {{x_0}} \right)\hspace{5mm}\forall a,b \in \R$
+\item $\left( {f \cdot g} \right)'\left( {{x_0}} \right) = f'\left( {{x_0}} \right) \cdot g\left( {{x_0}} \right) + f\left( {{x_0}} \right) \cdot g'\left( {{x_0}} \right)$
+\item $\left( {\frac{f}{g}} \right)'\left( {{x_0}} \right) = \frac{{f'\left( {{x_0}} \right) \cdot g\left( {{x_0}} \right) - f\left( {{x_0}} \right) \cdot g'\left( {{x_0}} \right)}}{{g{{\left( {{x_0}} \right)}^2}}}$
+\end{enumerate} 
+%Page 193 top
+\begin{beweis}{}
+
+\end{beweis}
