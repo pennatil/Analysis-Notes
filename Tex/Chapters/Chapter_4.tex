@@ -278,4 +278,24 @@ $\implies x_{0} \in \Omega$ innerer Punkt von $\Omega$ bezüglich $\norm{.}^{2} 
 \subsection*{Satz 4.17}
 Je zwei Normen auf $\R^{d}$ sind äquivalent.
 \subsubsection*{Beweis}
-Es genügt zu zeigen, dass eine beliebige Norm $\norm{.}$ zu $\norm{.}_{2}$ äquivalent ist.
+Es genügt zu zeigen, dass eine beliebige Norm $\norm{.}$ zu $\norm{.}_{2}$ äquivalent ist. \\
+Seien $x=\sum{x_{i}e_{i}}$, $y=\sum{y_{i}e_{i}}$.
+Dann ist
+\begin{align*} \norm{x-y} = \norm{\sum_{i=1}^{d}{(x_{i}-y_{i})e_{i}}} \leq \sum_{i=1}^{d}{\abs{x_{i}-y_{i}}\norm{e_{i}}} &\leq \norm{x-y}\underbrace{\sum^{d}_{i=1}{\norm{e_{i}}}}_{\defeq C} \\
+ &\underset{(\ast)}{\leq} C' \norm{x-y}_{2}\end{align*}
+\todo{Layout imperfect, but hard to make better.. p153 week9 sem1}
+\begin{align*}\text{Also folgt, dass } \R^{d}&\to \R \\ x &\mapsto \norm{x}\text{ stetig ist.}\end{align*}
+Da $S^{d-1} = \{ x\in\R^{d}:\norm{x}_{2}=1\}$ kompakt ist, folgt dass es $c_{+}, c_{-}\in S^{d-1}$ gibt, mit ${k_{-}\defeq\norm{c_{-}}}\leq\norm{x}\leq{\norm{c_{+}}\defeq k_{+}} \: \forall x\in S^{d-1}$. Da $c_{0}\neq 0$ folgt $k_{-}>0$.
+
+
+
+
+
+
+
+
+
+
+
+
+
