@@ -285,9 +285,23 @@ Dann ist
  &\underset{(\ast)}{\leq} C' \norm{x-y}_{2}\end{align*}
 \todo{Layout imperfect, but hard to make better.. p153 week9 sem1}
 \begin{align*}\text{Also folgt, dass } \R^{d}&\to \R \\ x &\mapsto \norm{x}\text{ stetig ist.}\end{align*}
-Da $S^{d-1} = \{ x\in\R^{d}:\norm{x}_{2}=1\}$ kompakt ist, folgt dass es $c_{+}, c_{-}\in S^{d-1}$ gibt, mit ${k_{-}\defeq\norm{c_{-}}}\leq\norm{x}\leq{\norm{c_{+}}\defeq k_{+}} \: \forall x\in S^{d-1}$. Da $c_{0}\neq 0$ folgt $k_{-}>0$.
+Da $S^{d-1} = \{ x\in\R^{d}:\norm{x}_{2}=1\}$ kompakt ist, folgt dass es $c_{+}, c_{-}\in S^{d-1}$ gibt, mit ${k_{-}\defeq\norm{c_{-}}}\leq\norm{x}\leq{\norm{c_{+}}\defeq k_{+}} \: \forall x\in S^{d-1}$. Da $c_{0}\neq 0$ folgt $k_{-}>0$. \\
+Sei $x\neq0$allgemein ($C_{-}\in S^{d-1}$), dann ist $y\defeq\frac{x}{\norm{x}_{2}}\in S^{d-1}$ also $k_{-}\leq \norm{\frac{x}{\norm{x}_{2}}}<k_{+}$, woraus \[ k_{-}\norm{x}_{2}\leq\norm{x}\leq k_{+}\norm{x}_{2}\] folgt.
 
+\section{$\varepsilon -\delta$ Kriterium für Stetigkeit}
+\todo{4.5 in source notes. what to do?}
+Wir haben das folgende Kriterium für Stetigkeit an der Stelle $x_{0}$:
 
+\subsection*{Satz 4.18}
+Sei $f:\Omega\to\R^{n}$, $\Omega\subset\R^{d}$ eine Abbildung, $x_{0} \in\Omega$. Folgende Eigenschaften sind äquivalent:
+\begin{enumerate}
+\item $f$ ist stetig an der Stelle $x_{0}$. \\ D.h. für jede gegen $x_{0}$ konvergierende Folge $(x_{n})\subset\Omega$ konvergiert die Folge $f(x_{n})$ gegen $f(x_{0})$.
+\item Für jedes $\varepsilon>0$ gibt es $\delta>0$ so dass für alle $x\in\Omega$ mit $\abs{x-x_{0}}<\delta$ gilt:\[ \abs{\delta(x)-\delta(x_{0})}<\varepsilon \]
+\[ \forall\varepsilon>0\;\exists\delta>0: \forall x\in\Omega,\norm{x-x_{0}}<\delta \implies \norm{\delta(x)-\delta(x_{0})}<\varepsilon\]
+\end{enumerate}
+
+\subsubsection*{Beweis 4.18}
+%page 155 top
 
 
 
