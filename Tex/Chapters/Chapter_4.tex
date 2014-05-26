@@ -29,7 +29,7 @@ Anders gesagt:
 \begin{definition}{4.2''}
 Die Abbildung $f:\Omega\to\R^{n}$ ist auf $\Omega$ \emph{stetig} (oder \emph{einfach stetig}, wenn der Kontex klar ist), falls $f$ in jedem Punkt $x\in\Omega$ stetig ist.
 \end{definition}
-\subsection*{Beispiele}
+\subsubsection*{Beispiele}
 Mittels Resultate aus dem dritten Kapitel haben wir wichtige Beispiele von stetigen Funktionen.
 \begin{itemize}
 \item Diese Funktion ist auf ganz $\R\times\R$ stetig: \begin{align*}f:\R\times\R&\to\R \\ (a,b) &\mapsto (a+b) \end{align*} (Seien $(a_{n}), (b_{n})$ Folgen mit $a = \lim{a_{n}}, b = \lim{b_{n}}$. Dann ist die Folge $(a_{n} + b_{n})$ konvergent, und $\lim{a_{n}+b_{n}} = a + b$, nach Satz 3.8) 
@@ -127,36 +127,36 @@ Falls $l_{-}(x_{0}) < l_{+}(x_{0})$ sei $(t_{n})_{n \geq 1}$ wie folgt definiert
 Dann gilt $\lim{t_{n}} = x_{0}$. Aber $f(t_{2n+1})-f(t_{n}) \geq l_{+}(x_{0})-l_{+}(x_{0}) >0$, woraus folgt dest \todo{dest? p 135 bottom} $(f(t_{n}))_{n\geq1}$ nicht konvergent. \\
 Falls $l_{-}(x_{0})=l_{+}(x_{0})$ folgt die Stetigkeit sofort. 
 
-\subsection*{Satz 4.3}
+\subsubsection*{Satz 4.3}
 Sei $f:(a,b)\to\R$ monoton wachsend. Dann ist die Menge der Unstetigkeitspunkte von $f$ entweder endlich oder abzählbar.
-\subsection*{Beweis}
+\subsubsection*{Beweis}
 Sei $U(f) = \{x\in(a,b):f \text{ ist nicht stetig an x}\}$. Dann ist $\forall x\in U(f), \quad l_{-}(x) < l_{+}(x)$ und wir wählen ein \todo{unreadable.. p136 mid}$g(x)\in ??n(l_{-}(x),l_{+}(x))$ .
 Falls $x_{1}<x_{2}$ in $U(f)$ folgt $l_{+}(x_{1})<l_{-}(x_{2})$ und somit $g(x_{1})<g(x_{2})$. Damit ist $g:U(f)\to ??$ \todo{same unreadable character} injektiv. 
 
 \noindent Stetigkeit verhält \todo{verträgt?} sich gut mit den üblichen Operationen auf Funktionen.
 
-\subsection*{Satz 4.4}
+\subsubsection*{Satz 4.4}
 Seien $f,g:\Omega \to \R^{n}$ und $x_{0}\in\Omega$. Falls $f$ und $g$ in $x_{0}$ stetig sind, so sind es auch $f+g$ und $\alpha f, \; \alpha \in \R$.
 
-\subsection*{Korollar 4.5}
+\subsubsection*{Korollar 4.5}
 Falls $f,g$ auf $\Omega$ stetig sind, so sind es $f+g$ und $\alpha f$.
  
 \begin{definition}{4.6}
 \[ C\,(\,\Omega\, , \R\,) \] bezeichnet die Menge der stetigen Abbildungen $f: \Omega\to\R$. Nach Korollar 4.5 ist es ein Vektorraum.
 \end{definition}
 
-\subsection*{Satz 4.7}
+\subsubsection*{Satz 4.7}
 Seien $f:\Omega\to\R^{n}, \Omega \subset \R^{d}$ und $g:\Gamma \to \R^{n}$ mit $f(\Omega)\subset\Gamma$ und ${x_{0}\in\Omega}, {y_{0}=f(x_{0})\subset\Gamma}$. Falls $f$ in $x_{0}$ und $g$ in $y_{0}$ stetig sind, folgt, dass $g\circ f:\Omega\to\R^{n}$ in $x_{0}$ stetig ist.
 
 \subsubsection*{Beweis}
 Sei $(t_{n})_{n\geq1}$ in $\Omega$ mit $\lim{t_{n}} = x_{0}$. Da $f$ stetig ist, $\lim{f(t_{n})} = f(x_{0}) = y_{0}$, und aus der Stetigkeit von $g$ folgt, dass \[ \lim_{n\to\infty}{g(f(t_{n}))} = g(y_{0}) = (g \circ f)(x_{0}) \]
 
-\subsection*{Korollar 4.8}
+\subsubsection*{Korollar 4.8}
 Falls $f:\Omega \to \R^{d}, f(\Omega) \subset \Gamma$ und $g:\Gamma \to \R^{m}$, auf $\Omega$ bzw auf $\Gamma$ stetig sind, so folgt, dass $g\circ f:\Omega\to\R^{m}$ auf $\Omega$ stetig ist.  
 \section{Stetige Funktionen}
 In diesem Abschnitt behandeln wir die erste der fundamentalen Eigenschaften von stetigen Funktionen, nämlich das eine auf einem endlichen Intervall $[a,b]$ (Endpunkte eingeschlossen) stetige Funktion immer ein Max und Min besitzt. Dies veralgemeinern wir dann auf Abbildungen von $\Omega\subseteq\R^{d}$ nach $\R{n}$ wobei $\Omega$ eine spezielle Eigenschaft haben muss (Kompaktheit).
 
-\subsection*{Satz 4.9}
+\subsubsection*{Satz 4.9}
 Seien $-\infty < a \leq b < \infty$ und $f:[a,b] \to \R$ stetig. \\
 \noindent Dann ist $f([a,b])$ in $\R$ beschränkt und es gibt $c_{-}, c_{+} \in [a,b]$ mit \begin{align*} f(c_{+}) &= \text{sup } \{ f(x):x\in[a,b]\} \\ f(c_{-}) &= \text{inf }\{ f(x):x\in[a,b]\} \end{align*} d.h. Supremum und Infimum werden angenommen.
 
@@ -202,7 +202,7 @@ Sei $(t_{n})_{n\geq 1}$ eine Folge mit $a\leq t_{n} \leq b$. $(t_{n})$ ist besch
 D.h. $l\in [a,b]$.
 \end{enumerate}
 
-\subsection*{Lemma 4.11}
+\subsubsection*{Lemma 4.11}
 Falls $K\subset\R^{d}$ kompakt ist, ist es beschränkt und besitzt zudem ein Minimum und Maximum.
 
 \subsubsection*{Beweis}
@@ -220,7 +220,7 @@ $\implies p \in S^{d}$ \\
 
 \noindent Die Verallgemeinerung von Satz 4.9 ist
 
-\subsection*{Satz 4.12}
+\subsubsection*{Satz 4.12}
 \begin{enumerate}
 \item Sei $K\subset \R^{d}$ kompakt und $f:K\to\R^{n}$ eine stetige Abbildung. Dann ist $f(K)\subseteq\R^{n}$ eine kompakte Teilmenge.
 \item $f$ nimmt ihr Supremum und Infimum an, d.h. es gibt $c_{-}, c_{+}\in K$ mit \[ f(x_{-})\leq f(x) \leq f(x_{+}) \quad \forall x \in K\]
@@ -275,7 +275,7 @@ Die Normen $\norm{.}_{p} \quad 1\leq p\leq\infty$ sind wegen $(\ast)$ äquivalen
 $\implies x_{0} \in \Omega$ innerer Punkt von $\Omega$ bezüglich $\norm{.}^{2} \iff x_{0}\in\Omega$ innerer Punkt von $\Omega$ bezüglich $\norm{.}^{1}$ \\
 
 \noindent Auf $\R^{d}$ haben wir
-\subsection*{Satz 4.17}
+\subsubsection*{Satz 4.17}
 Je zwei Normen auf $\R^{d}$ sind äquivalent.
 \subsubsection*{Beweis}
 Es genügt zu zeigen, dass eine beliebige Norm $\norm{.}$ zu $\norm{.}_{2}$ äquivalent ist. \\
@@ -292,7 +292,7 @@ Sei $x\neq0$allgemein ($C_{-}\in S^{d-1}$), dann ist $y\defeq\frac{x}{\norm{x}_{
 \todo{4.5 in source notes. what to do?}
 Wir haben das folgende Kriterium für Stetigkeit an der Stelle $x_{0}$:
 
-\subsection*{Satz 4.18}
+\subsubsection*{Satz 4.18}
 Sei $f:\Omega\to\R^{n}$, $\Omega\subset\R^{d}$ eine Abbildung, $x_{0} \in\Omega$. Folgende Eigenschaften sind äquivalent:
 \begin{enumerate}
 \item $f$ ist stetig an der Stelle $x_{0}$. \\ D.h. für jede gegen $x_{0}$ konvergierende Folge $(x_{n})\subset\Omega$ konvergiert die Folge $f(x_{n})$ gegen $f(x_{0})$.
