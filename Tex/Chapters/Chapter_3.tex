@@ -854,6 +854,118 @@ $a_n=b_n-\abs{a_n}$ und beide Reihen konv. $\Rightarrow\sum a_n=\sum b_n-\sum\ab
 \end{beweis}
 \item Wurzel und Quotientenkriterium sind kriterium für absolute konvergenz.
 \item Da \[{S_n}: = \sum\limits_{k = 1}^n {\left| {{a_k}} \right|}  < {S_{n + 1}} = {S_n} + \left| {{a_n}} \right|\] ist, ist die Folge $\left( S_n\right)_{n\geq 1}$ monotone wachsend; Absolute konvergenz ist somit äquivalent mit der Beschänkheit von $\left( S_n\right)_{n\geq 1}$
-\item Falls $\sum a_k$ absolut konvergent, dann konvergiert natürlich 
-%Page 117 top
+\item Falls $\sum a_k$ absolut konvergent, dann konvergiert natürlich $\sum\limits_{k = j}^\infty  {\left| {{a_n}} \right|} $ für jede $j$ und $\forall \varepsilon > 0$, $\exists j(\varepsilon)$ so dass 
+\[\sum\limits_{k = j}^\infty  {\left| {{a_n}} \right|}  < \varepsilon\hspace{5mm} \forall j > j(\varepsilon )\]
 \end{enumerate}
+\begin{framed}
+\[\text{\underline{Notation:}}\hspace{3mm}\sum\limits_{k = 1}^\infty  {\left| {{a_n}} \right|}  < \infty  = \sum\limits_{k = 1}^\infty  {\left| {{a_k}} \right|} {\text{ konvergiert}}\]\vspace{-2mm}
+\end{framed}
+
+\subsubsection*{Satz 3.46}
+Sei $\sum\limits_1^\infty  {{a_k}} $ absolut konvergent, und $\varphi :\N\to\N$ eine Bijektion. Dann ist auch die ``umgeordnete Reihe'' $\sum\limits_{k = 1}^\infty  {{a_{\varphi (k)}}} $ absolut konvergent mit gleicher Summe
+
+\begin{beweis}{}
+\todo[inline]{It says Übung, maybe want to add something?? page 117 bottom}
+Sei $\varepsilon>0$ vorgegeben. Da $\sum\limits_1^\infty  {\left| {{a_k}} \right|} $ konvergent, gibt es $n_0(\varepsilon)$ mit $\sum\limits_{k = {n_0}}^\infty  {\left| {{a_k}} \right|}  < \varepsilon $. Sei \[n_1(\varepsilon):=\max\left\{ \varphi^{-1}(1),\varphi^{-1}(2),\dots,\varphi^{-1}(n_0)\right\}\]
+Falls $k>n_1(\varepsilon)$ dann folgt $\varphi(k)>n_0$ ($\varphi$ injektive). Also $\forall n,m\geq n_1(\varepsilon)$ 
+\[\left| {\sum\limits_{k = m}^n {{a_{\varphi (k)}}} } \right| \le \sum\limits_{k = m}^n {\left| {{a_{\varphi (k)}}} \right|}  \le \sum\limits_{k = {n_0}}^\infty  {\left| {{a_k}} \right|}  < \varepsilon \]
+Insbesondere konvergiert $\sum\limits_{k = 1}^\infty  {{a_{\varphi (k)}}} $ Absolut und 
+\begin{align*}\left| {\sum\limits_{k = 1}^\infty  {{a_k}}  - \sum\limits_{k = 1}^\infty  {{a_{\varphi (k)}}} } \right| &\le \left| {\sum\limits_{k = 1}^{{n_0}} {{a_k}}  - \sum\limits_{k = 1}^{{n_1}} {{a_{\varphi (k)}}} } \right| + \left| {\sum\limits_{{n_1} + 1}^\infty  {{a_{\varphi (k)}}} } \right| + \left| {\sum\limits_{k = {n_0} + 1}^\infty  {{a_k}} } \right|\\&\le 3\sum\limits_{k = {n_0}}^\infty  {\left| {{a_k}} \right|}  \le 3\varepsilon 
+\end{align*}
+\end{beweis}
+
+\subsubsection*{Beispiel 3.47}
+$\sum\limits_{k = 1}^\infty  {k{q^k}} $ ist für absolut konvergent (z.B. Quotientenkriterium)
+
+\begin{align*}\sum\limits_{k = 1}^\infty  {k{q^k}}  = q + {q^2} + {q^3} + {q^4}&\dots\\ + {q^2} + {q^3} + {q^4}&\dots\\ + {q^3} + {q^4}&\dots\\ + {q^4}&\dots\\ \vdots &
+\end{align*}
+\begin{align*}\sum\limits_{k = 1}^\infty  {k{q^k}} &= q\left\{ {1 + q +  \ldots } \right\} + {q^2}\left\{ {1 + q +  \ldots } \right\}\\&= \underbrace {\left\{ {1 + q +  \ldots } \right\}}_{\frac{1}{{1 - q}}}\underbrace {\left\{ {q + {q^2} +  \ldots } \right\}}_{\frac{q}{{\left( {1 - q} \right)}}} = \frac{q}{{{{\left( {1 - q} \right)}^2}}}\\&= \sum\limits_{l = 1}^\infty  {\left( {{q^l}\sum\limits_{k = 0}^\infty  {{q^k}} } \right)}  = \sum\limits_{l = 1}^\infty  {{q^l}} \left( {\frac{1}{{1 - q}}} \right) = \left( {\frac{1}{{1 - q}}} \right)\underbrace {\sum\limits_{l = 1}^\infty  {{q^l}} }_{\frac{q}{{1 - q}}}\\&= \frac{q}{{{{\left( {1 - q} \right)}^2}}}
+\end{align*}
+Umordnung der Summation: Statt $\downarrow$ wird $\to$ summiert
+
+\subsubsection*{Satz 3.47}
+Seien $\left( a_n\right)_{n\geq 1}$, $\left( b_n\right)_{n\geq 1}$ Folgen in $\R$ oder $\C$. Wir betrachten $\left( a_n b_k\right)_{(n,k)\in\N\times\N}$ als folge, wobei wir eine beliebige Abzählung von $\N\times\N$ durch $\N$ zulassen. Falls $\sum a_k$, $\sum b_k$ absolut konvergiert, ist $\sum a_k b_k$ absolut konvergiert und 
+\[\sum\limits_{k,l = 1}^\infty  {{a_k}{b_k}}  = \sum\limits_{k = 1}^\infty  {{a_k}} \sum\limits_{l = 1}^\infty  {{b_l}} \]
+unabhängig von der Summationsreihenfolge. Als korollar
+
+\subsubsection*{Korollar 3.48}
+Für alle $x,y$ in $\R$ oder $\C$ gilt
+\[ \exp\left( x+y\right)=\exp(x)\exp(y)\]
+$\left( \exp(x):=\sum\limits_{k=0}^\infty \frac{x^k}{k!}\right)$
+
+\begin{beweis}{}
+\[\exp (x)\exp (y)\mathop  = \limits^{{\text{Satz 3.47}}} \sum\limits_{k\not  = l = 0}^\infty  {\frac{{{x^k}{y^l}}}{{k!l!}}} \]
+\missingfigure{Page 121 top}
+Wir zählen jetzt $\N\times\N$ wie folgt ab
+\todo[inline]{Can't understand the formula, page 121 bottom}
+\[\exp (x)\exp (y) = \sum\limits_{n = 0}^\infty  {\frac{{{{\left( {x + y} \right)}^n}}}{{n!}}}  = \exp \left( {x + y} \right)\]
+\end{beweis}
+Zum Abschluss behandeln wir noch den Zusammenhang mit ``$e$'' und ``$e^x$''.
+
+\subsubsection*{Satz 3.49}
+\[\exp\left(1\right)=\mathop {\lim }\limits_{n \to \infty } {\left( {1 + \frac{1}{n}} \right)^n} = e\] 
+
+\begin{beweis}{}
+\begin{enumerate}
+\item \[\exp \left( 1 \right) = \sum\limits_{k = 0}^\infty  {\frac{1}{{k!}}} \]
+\begin{align*}
+&\Rightarrow\forall\varepsilon >0, \exists n_0=n_0(\varepsilon),\text{mit }\left| {\exp \left( 1 \right) - \sum\limits_{k = 0}^\infty  {\frac{1}{{k!}}}  < \varepsilon } \right|\\
+&\Leftrightarrow - \varepsilon  < \sum\limits_0^{{n_0}} {\frac{1}{{k!}}}  - \exp \left( 1 \right) < \varepsilon \\
+&\Leftrightarrow  - \varepsilon  + \exp \left( 1 \right) < \sum\limits_0^{n_0} {\frac{1}{{k!}}}  < \varepsilon  + \exp \left( 1 \right)
+\end{align*}
+Insbesondere 
+\[\exp \left( 1 \right) < \sum\limits_{k = 0}^{{n_0}} {\frac{1}{{k!}}}  + \varepsilon \]
+\item\begin{align*}{\left( {1 + \frac{1}{n}} \right)^n}& =\sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}n\\k\end{array}} \right)} \frac{1}{{{n^k}}}\\& =\sum\limits_{k = 0}^n {\frac{{n!}}{{k!\left( {n - k} \right)!}}}  \cdot \frac{1}{{{n^k}}}\\&\mathop  =\limits^{(\text{\textasteriskcentered})} \sum\limits_{k = 0}^n {\frac{1}{{k!}}} \underbrace {\left( {\frac{{n\left( {n - 1} \right) \ldots \left( {n - k + 1} \right)}}{{{n^k}}}} \right)}_{a_k^{(n)}}\\ &=\sum\limits_{k = 0}^n {\frac{1}{{k!}}} a_k^{(n)}\end{align*}
+Da 
+\[a_k^{(n)}:=\frac{n}{n}\cdot\frac{\left( n-1\right)}{n}\dots\frac{n-k+1}{n}<1\]
+\[{\left( {1 + \frac{1}{n}} \right)^n} < \sum\limits_{k = 0}^n {\frac{1}{{k!}}}  < \exp \left( 1 \right) \Rightarrow 0 < \exp \left( 1 \right) - {\left( {1 + \frac{1}{n}} \right)^n}\]
+\item $0<a_k^{(n)}<1$, und für jedes $k$ fest ist $a_k^{(n)}\to 1$, $n\to\infty$.
+\[\frac{{n\left( {n - 1} \right) \ldots \left( {n - k + 1} \right)}}{{{n^k}}} = \frac{{1\left( {1 - \frac{1}{n}} \right)\left( {1 - \frac{2}{n}} \right) \ldots \left( {1 - \frac{k}{n} + \frac{1}{n}} \right)}}{{\frac{{{n^k}}}{{{n^k}}}}}\mathop  \to \limits_{n \to \infty } 1\]
+somit
+\[ 1-a_k^{(n)}\mathop  \to \limits_{n \to \infty } 0\text{, ($k$ fest)}\]
+\[\Rightarrow\sum\limits_{k = 0}^n {\left( {1 - a_k^{(n)}} \right)} \mathop  \to \limits_{n \to \infty } 0\]
+$\Rightarrow$ Für $\varepsilon>0$, $\exists n_1=n_1(\varepsilon,n_0)$, so dass 
+\[\forall n \ge {n_1}\hspace{5mm}\sum\limits_{k = 0}^{{n_0}} {\left( {1 - a_k^{(n)}} \right)}  < \varepsilon \]
+Dann haben wir $\forall n \ge \max \{ {n_0},{n_1}\} $
+\begin{align*}0&\mathop  < \limits^{\mycirc{2}} \exp \left( 1 \right) - {\left( {1 + \frac{1}{n}} \right)^n}\mathop  < \limits^{()} \sum\limits_{k = 0}^{{n_0}} {\frac{1}{{k!}}}  + \varepsilon  - {\left( {1 + \frac{1}{n}} \right)^n}\\&\mathop  < \limits^{\mycirc{2}(\text{\textasteriskcentered})} \sum\limits_{k = 0}^{{n_0}} {\frac{1}{{k!}}}  + \varepsilon  - \sum\limits_{k = 0}^n {a_k^{(n)}} \frac{1}{{k!}}\\ &< \sum\limits_{k = 0}^{{n_0}} {\frac{1}{{k!}}}  + \varepsilon  - \sum\limits_{k = 0}^{{n_0}} {a_k^{(n)}} \frac{1}{{k!}}\\ &= \sum\limits_{k = 0}^{{n_0}} {\frac{1}{{k!}}} \left( {1 - a_k^{(n)}} \right) + \varepsilon \\& < \sum\limits_{k = 0}^{{n_0}} {\left( {1 - a_k^{(n)}} \right)}  + \varepsilon  < 2\varepsilon \\ \Rightarrow&\exp \left( 1 \right) = \mathop {\lim }\limits_{n \to \infty } {\left( {1 + \frac{1}{n}} \right)^n}\end{align*}
+\end{enumerate}
+\end{beweis}
+
+Analog kann man auch beweisen dass
+\subsubsection*{Satz 3.50}
+$\forall x\in\R$ 
+\[\exp(x)=\mathop {\lim }\limits_{n \to \infty } {\left( {1 + \frac{x}{n}} \right)^n}\]
+\todo[inline]{Start of additional content, page 125. This has to bre reviewed for layout issues (it's pretty much a mess)}
+\subsubsection*{Satz}
+\[\exp (x) = \sum {\frac{x}{{k!}}}  \Rightarrow \forall \varepsilon  > 0,\exists {n_0}(\varepsilon )\]
+\[\forall n > {n_0}\hspace{5mm}\left| {\exp (x) - \sum\limits_0^{{n_0}} {\frac{x}{{k!}}} } \right| < \varepsilon \]
+\begin{align*}& \Leftrightarrow  - \varepsilon  < \sum {\frac{x}{{k!}}}  - \exp (x) < \varepsilon \\\mycirc{1}& \Leftrightarrow \exp (x) - \varepsilon  < \sum\limits_0^{{n_0}} {\frac{x}{{k!}}}  < \varepsilon  + \exp (x)\end{align*}
+\begin{align*}\mycirc{2}\hspace{2mm}{\left( {1 + \frac{x}{n}} \right)^n}&= \sum\limits_0^n {\left( {\begin{array}{*{20}{c}}n\\k\end{array}} \right)} \frac{{{x^n}}}{{{n^k}}}\\ &= \sum\limits_{k = 0}^n {\frac{{n!}}{{k!\left( {n - k} \right)!}} \cdot } \frac{{{x^k}}}{{{n^k}}}\\ &= \sum\limits_0^n {\frac{1}{{k!}} \cdot \frac{{n!}}{{\left( {n - k} \right)!}}}  \cdot \frac{{{x^k}}}{{{n^k}}}\\&\mathop  = \limits^{\mycirc{2}} \sum {\frac{1}{{k!}}}  \cdot \underbrace {\frac{{n\left( {n - 1} \right) \ldots \left( {n - k + 1} \right)}}{{{n^k}}}}_{a_k^{(n)}} \cdot {x^k}\\ &\le \sum\limits_0^n {\frac{{{x^k}}}{{{n^k}}}}  < \exp (x)\\ \Rightarrow&\exp (x) - {\left( {1 + \frac{x}{n}} \right)^n} > 0\hspace{2mm}\mycirc{2}\end{align*}
+$0<a_k^n<1$ für jedes $k$ fest ist $a_k^{(n)}\to 1$, $n\to\infty$
+\[\frac{{n\left( {n - 1} \right) \ldots \left( {n - k + 1} \right)}}{{{n^k}}} = \frac{{1\left( {1 - \frac{1}{n}} \right)\left( {1 - \frac{2}{n}} \right) \ldots \left( {1 - \frac{k}{n} + \frac{1}{n}} \right)}}{{\frac{{{n^k}}}{{{n^k}}}}} \to 1\]
+\begin{align*}
+&\Rightarrow 1-a_k^{(n)}\to 0, n\to\infty\hspace{5mm}\text{($k$ fest)}\\
+&\Rightarrow \sum\limits_{k = 0}^{{n_0}} {\left( {1 - a_k^{(n)}} \right){x^k} \to } 0, n\to\infty\hspace{5mm}\text{($x,k$ fest)}\\
+&\Rightarrow\forall\varepsilon >0\hspace{5mm}\exists n_1=n_1\left(\varepsilon, n_0 \right)\hspace{5mm}\forall n>n_1
+\end{align*}
+\[\sum\limits_{k = 0}^{{n_0}} {\left( {1 - a_k^{(n)}} \right){x^k}}  < \varepsilon \]
+Dann $\forall n>\max\{ n_0,n_1\}$ 
+\begin{align*}0&\mathop  < \limits^{\mycirc{2}} \exp (x) - {\left( {1 + \frac{x}{n}} \right)^n}\mathop  < \limits^{\mycirc{1}} \sum\limits_0^{{n_0}} {\frac{{{x^k}}}{{k!}}}  + \varepsilon  - {\left( {1 + \frac{x}{n}} \right)^n}\\ &< \sum\limits_0^{{n_0}} {\frac{{{x^k}}}{{k!}}}  + \varepsilon  - \sum\limits_0^{{n_0}} {a_k^n} \frac{{{x^k}}}{{k!}}\\ &= \sum\limits_0^{{n_0}} {\frac{{(1 - a_k^n)}}{{k!}}} {x^k} + \varepsilon  < \sum\limits_0^{{n_0}} {\left( {1 - a_k^n} \right)} {x^k} + \varepsilon  < 2\varepsilon \end{align*}
+\todo[inline]{End of additional content}
+
+\noindent Satz 3.49 $\Rightarrow \exp(1)=e^1$
+\[\exp \left( {x + y} \right) =\left( {\exp \left( x \right)} \right)\left( {\exp \left( y \right)} \right)\]
+\begin{align*} \Rightarrow \exp \left( n \right) =&\exp \left( 1 \right)\exp \left( {n - 1} \right)\\ =&\exp \left( 1 \right)\exp \left( 1 \right)\exp \left( {n - 2} \right)\\ \vdots \\ =&e \cdot e \cdot  \ldots  \cdot e = {e^n}, \forall n\in\N
+\end{align*}
+\[1=\exp(0)=\exp(n)\exp(-n)\]
+\[\Rightarrow\exp(-n)=\frac{1}{\exp(n)}=\frac{1}{e^n}=e^{-n}\]
+\[\Rightarrow \exp(n)=e^n, \forall n\in\mathbb{Z}\]\[\forall q\in\N, \exp\left(\frac{1}{q}\right)=e^{\frac{1}{q}}\]
+Da
+\[ e=\exp(1)=\exp\left(q\cdot\frac{1}{q}\right)=\underbrace {\exp \left( {\frac{1}{q}} \right) \ldots \exp \left( {\frac{1}{q}} \right)}_{q{\text{ mal}}}\]
+Somit haben wir
+\subsubsection*{Satz 3.51}
+$\forall x\in\mathbb{Q}$, $\exp(x)=e^x$. Für rein imaginare Argumente $z=iy$, $y\in\R$ können wir $\exp(iy)$ durch Umordnung gemäs Satz 3.46 \todo{add reference + page number, page 126 middle} in Real und Imaginärteil zerlegen
+\begin{align*}\exp \left( {iy} \right)&= \sum\limits_{k = 0}^\infty  {\frac{{{{\left( {iy} \right)}^k}}}{{k!}}} \\&= \sum\limits_{l = 0}^\infty  {\frac{{{{\left( { - 1} \right)}^l}{y^{2l}}}}{{\left( {2l} \right)!}}}  + i\sum\limits_{l = 0}^\infty  {\frac{{{{\left( { - 1} \right)}^l}{y^{2l + 1}}}}{{\left( {2l + 1} \right)!}}} \\&: = \cos \left( y \right) + i\sin \left( y \right)\end{align*}
+Für $z=x+iy\in\C$ 
+\[\exp \left( z \right) = \exp \left( x \right)\exp \left( {iy} \right) = \exp \left( x \right)\left( {\cos \left( y \right) + i\sin \left( y \right)} \right)\]
+
