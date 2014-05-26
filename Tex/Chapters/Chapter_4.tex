@@ -146,13 +146,170 @@ Falls $f,g$ auf $\Omega$ stetig sind, so sind es $f+g$ und $\alpha f$.
 \end{definition}
 
 \subsection*{Satz 4.7}
-Seien $f:\Omega\to\R^{n}, \Omega \subset \R^{d}$ und $g:\Gamma \to \R^{m}$ mit $f(\Omega)\subset\Gamma$ und ${x_{0}\in\Omega}, {y_{0}=f(x_{0})\subset\Gamma}$. Falls $f$ in $x_{0}$ und $g$ in $y_{0}$ stetig sind, folgt, dass $g\circ f:\Omega\to\R^{m}$ in $x_{0}$ stetig ist.
+Seien $f:\Omega\to\R^{n}, \Omega \subset \R^{d}$ und $g:\Gamma \to \R^{n}$ mit $f(\Omega)\subset\Gamma$ und ${x_{0}\in\Omega}, {y_{0}=f(x_{0})\subset\Gamma}$. Falls $f$ in $x_{0}$ und $g$ in $y_{0}$ stetig sind, folgt, dass $g\circ f:\Omega\to\R^{n}$ in $x_{0}$ stetig ist.
 
-\subsection*{Beweis}
+\subsubsection*{Beweis}
 Sei $(t_{n})_{n\geq1}$ in $\Omega$ mit $\lim{t_{n}} = x_{0}$. Da $f$ stetig ist, $\lim{f(t_{n})} = f(x_{0}) = y_{0}$, und aus der Stetigkeit von $g$ folgt, dass \[ \lim_{n\to\infty}{g(f(t_{n}))} = g(y_{0}) = (g \circ f)(x_{0}) \]
 
 \subsection*{Korollar 4.8}
 Falls $f:\Omega \to \R^{d}, f(\Omega) \subset \Gamma$ und $g:\Gamma \to \R^{m}$, auf $\Omega$ bzw auf $\Gamma$ stetig sind, so folgt, dass $g\circ f:\Omega\to\R^{m}$ auf $\Omega$ stetig ist.  
 \section{Stetige Funktionen}
+In diesem Abschnitt behandeln wir die erste der fundamentalen Eigenschaften von stetigen Funktionen, nämlich das eine auf einem endlichen Intervall $[a,b]$ (Endpunkte eingeschlossen) stetige Funktion immer ein Max und Min besitzt. Dies veralgemeinern wir dann auf Abbildungen von $\Omega\subseteq\R^{d}$ nach $\R{n}$ wobei $\Omega$ eine spezielle Eigenschaft haben muss (Kompaktheit).
+
+\subsection*{Satz 4.9}
+Seien $-\infty < a \leq b < \infty$ und $f:[a,b] \to \R$ stetig. \\
+\noindent Dann ist $f([a,b])$ in $\R$ beschränkt und es gibt $c_{-}, c_{+} \in [a,b]$ mit \begin{align*} f(c_{+}) &= \text{sup } \{ f(x):x\in[a,b]\} \\ f(c_{-}) &= \text{inf }\{ f(x):x\in[a,b]\} \end{align*} d.h. Supremum und Infimum werden angenommen.
+
+\subsubsection*{Beweis}
+\begin{enumerate}
+\item $f([a,b])$ ist nach oben beschränkt (Indirekter Beweis) \\
+
+Falls nicht, so gibt es $\forall n \in \N$ ein $t_{t}\in [a,b]$ mit $f(t_{n}) \geq n$. \\
+$(t_{n})_{n\geq 1}$ ist beschränkt, nach Bolzano-Weierstrass. Sei $(t_{l(n)})$ eine konvergente Teilfolge mit $\lim{t_{l(n)}}=x$. \\
+Dann ist $x\in [a,b]$, da $a\leq t_{n}\leq b$ \\
+(Satz: $(a_{n}), (b_{n})$ konvergente Folgen mit $\lim{a_{n}} = a, \lim{b_{n}} = b$. Falls $a_{n} \leq b_{n}$, folgt $a \leq b$.) \\
+Aus der Stetigkeit von $f$ folgt: $\lim_{n\to\infty}{f(t_{n})} = f(x)$. Insbesondere ist $f(t_{l(n)})$ beschränkt, was im Widerspruch mit $f(t_{l(n)})\geq l(n)$ steht. \\
+
+$\implies$ $f$ ist nach oben beschränkt.
+
+\item $f$ ist nach unten beschränkt (analog) \\
+
+Sei $M \defeq \text{Sup }\{f(x):x\in [a,b]\}$, welches als Folge von 1. existiert. \\
+Sei für jedes $n\geq 1\; x_{n}\in [a,b]$ mit \[M-\frac{1}{n} < f(x) \leq M \quad\quad (\ast)\]
+($M-\frac{1}{n}$ ist kein Supremum $\implies$ $\exists x_{n}$ mit $M-\frac{1}{n} < f(x_{n})$)\\
+\item $(x_{n}) \subset [a,b]$ beschränkt. \\
+Sei nach Bolzano-Weierstrass $(x_{l(n)})_{n\geq 1}$ eine konvergente Teilfolge mit Limes $c_{+}$. Aus der Stetigkeit von $f$ folgt: \[ f(c_{+}) = \lim_{n\to\infty}{f(x_{l(n)})}\]
+Aus $(\ast)$ folgt
+\[ \lim_{n\to\infty}{f(x_{l(n)})} = M\]
+d.h. $\exists c_{+} \in [a,b]$ mit \[ f(c_{+}) = \lim{f(x_{l(n)})} = M\]
+\item Infimum ist ähnlich.
+\end{enumerate}
+
+\subsubsection*{Bemerkung}
+Satz 4.9 kann man als eine Eigenschaft des Intervalls $[a,b]$ auffassen. Sie gilt zum Beispiel nicht für $(0,1]$ wie das Beispiel der auf $(0,1]$ stetigen Funktion $f(x)=\frac{1}{x}$ zeigt.
+\missingfigure{Page 143, week8 Semester1}
+Die grundlegende Eigenschaft ist Kompaktheit.
+\begin{definition}{4.10}
+Eine Teilmenge $K\subset\R^{d}$ heisst \emph{kompakt}, falls jede Folge $(x_{n})_{n\geq 1}$ von Punkten aus $K$ einen Häufungspunkt \emph{in} $K$ besitzt, d.h. falls jede Folge in $K$ eine \emph{in} $K$ konvergierende Teilfolge hat.
+\end{definition}
+
+\subsubsection*{Beispiel}
+\begin{enumerate}
+\item $(0,1]$ ist nicht kompakt: \\
+$(\frac{1}{n})_{n\geq 1} \subset (0,1]$ konvergiert gegen $0 \notin (0,1]$.
+\item $[a,b]$ ist kompakt. \\
+Sei $(t_{n})_{n\geq 1}$ eine Folge mit $a\leq t_{n} \leq b$. $(t_{n})$ ist beschränkt, nach Bolzano-Weierstrass sei $(t_{l(n)})$ eine konvergente Teilfolge mit Limes $l$. Dann folgt aus $a\leq t_{n} \leq b$. $(t_{l(n)})\quad \forall n\geq 1$, dass \[a\leq \lim{t_{l(n)}} \leq b\]
+D.h. $l\in [a,b]$.
+\end{enumerate}
+
+\subsection*{Lemma 4.11}
+Falls $K\subset\R^{d}$ kompakt ist, ist es beschränkt und besitzt zudem ein Minimum und Maximum.
+
+\subsubsection*{Beweis}
+Sonst gibt es zu jedem $n\geq 1, n\in \N$ ein $x_{n} \in K$ mit $\norm{x_{n}} \geq n$. Dann kann aber $(x_{n})_{n\geq 1}$ keine konvergente Teilfolge besitzen: $(\abs{x_{l(n)}} > l(n))$. \\
+$\implies$ $K$ ist beschränkt. \\
+Sei $s\defeq \text{Sup }K$. Dann gibt es $\forall n \geq 1, k_{n} \in K$ mit \[ s-\frac{1}{n}<k_{n}\leq s\]
+Insbesondere gilt $\lim{k_{n}}=s$. Da $K$ kompakt ist, hat $k_{n}$ eine \emph{in $K$} konvergierende Teilfolge. Daraus folgt, dass $s\in K$.
+
+\subsubsection*{Beispiel}
+$S^{d} \defeq \{ x\in\R^{d+1}: \norm{x} = 1\}$, die d-dimensionale Sphäre, ist kompakt. \\
+
+\subsubsection*{Beweis}
+Sei $(x_{n})_{n\geq 1} \subset S^{d}$, dann ist diese Folge offensichtlich beschränkt, besitzt sie (nach Bolzano-Weierstrass) eine konvergente Teilfolge $(x_{l(n)})_{n\geq 1}$. Sei $p \in \R^{d+1}$ deren Limes. Da die Funktion $f(x)\defeq\norm{x}$ stetig ist, folgt \[\norm{p} = f(p) \overset{\text{defn}}=f(\lim{x_{l(n)}}) \overset{f\text{ stetig}}= \lim{f(x_{l(n)})} = 1 \]
+$\implies p \in S^{d}$ \\
+
+\noindent Die Verallgemeinerung von Satz 4.9 ist
+
+\subsection*{Satz 4.12}
+\begin{enumerate}
+\item Sei $K\subset \R^{d}$ kompakt und $f:K\to\R^{n}$ eine stetige Abbildung. Dann ist $f(K)\subseteq\R^{n}$ eine kompakte Teilmenge.
+\item $f$ nimmt ihr Supremum und Infimum an, d.h. es gibt $c_{-}, c_{+}\in K$ mit \[ f(x_{-})\leq f(x) \leq f(x_{+}) \quad \forall x \in K\]
+\end{enumerate}
+
+\subsubsection*{Beweis}
+\begin{enumerate}
+\item Sei $(y_{n})_{n\geq 1}$ eine beliebige Folge in $f(K)$. Wir müssen zeigen, dass es eine konvergente Teilfolge mit Limes in $f(K)$ gibt. Sei $(x_{n}) \in K$ mit \[ f(x_{n}) = y_{n},\, n\geq 1\]
+Dann ist $(x_{n})_{n\geq 1}$ eine Folge in $K$. Da $K$ kompakt ist, gibt es $p \in K$ und $(x_{l(n)})$, eine konvergente Teilfolge mit $\lim{x_{l(n)}} =p$. \\
+Aus der Stetigkeit von $f$ folgt \[ f(p) = f(\lim{x_{n}}) \overset{f\text{ stetig}}= \lim{f(x_{l(n)})} = \lim{y_{l(n)}}\]
+D.h. $y_{l(n)}$ ist eine Teilfolge von $y_{n}$ mit Limes $f(p) \in K$. \\
+$\implies f(K)$ ist kompakt.
+\item Da $f(K)$ kompakt ist, (nach 1.), ist $f(K)$ beschränkt, und besitzt zudem ein Minimum und Maximum (nach Lemma 4.11). \\
+\begin{align*}\implies \quad \exists y_{+}, y_{-}\in f(K)\text{, mit } y_{+} &= \text{Sup } f(K) \\ y_{-} &= \text{Inf } f(K) \\
+\exists c_{+}, c_{-} \in K \text{, mit } y_{+} &= f(c_{+}) \\ y_{-} &= f(c_{-}) \end{align*}
+\end{enumerate}
+
+\section{Norm auf $\R^{d}$}
+\todo{In the source notes, this is 4.4, but there is no 4.3 that I can find...}
+Der Distanzbegriff auf $\R^{d}$ kommt von einem Skalarprodukt. Es gibt interessante, andere Arten einen Distanzbegriff einzuführen, nämlich mit dem Begriff der Norm.
+
+\begin{definition}{4.13}
+Eine \emph{Norm} auf $\R^{d}$ ist eine Abbildung \[ \norm{.}: \R^{d} \to \R \] mit den folgenden Eigenschaften:
+\begin{enumerate}
+\item \emph{Definiertheit}: $\norm{x} \geq 0$ mit Gleichheit genau dann wenn $x=0$.
+\item \emph{Positive Homogenität}: $\norm{\alpha x} = \abs{\alpha}\norm{x} \quad \forall \alpha \in \R, \forall x \in \R^{d}$
+\item \emph{Dreiecks-Ungleichung}: $\norm{x+y} \leq \norm{x} + \norm{y} \quad \forall x,y \in \R^{d}$
+\end{enumerate}
+\end{definition}
+
+\subsubsection*{Beispiel 4.14}
+\begin{enumerate}
+\item \[ \norm{x}_{2} = \Big(\sum_{i = 1}^{d} \abs{x_{i}}\Big)^{\frac{1}{2}}\quad\quad x=(x_{1}, \dots, x_{d})  \] kommt vom Skalarprodukt.
+\item Für $1\leq p<\infty$ sei \[ \norm{x}_{p} \defeq \Big( \sum_{i=1}^{d}\abs{x_{i}^{p}}\Big)^{\frac{1}{p}}\] und $\norm{x}_{\infty} = \max{\{\abs{x_{i}} : 1\leq i \leq d \}}$, dann sind $\norm{.}_{p}, 1\leq p \leq \infty$ Normen auf $\R^{d}$.
+\end{enumerate}
+Zwischen diesen verschiedenen Normen haben wir die folgenden Verhältnisse:
+ \[ \norm{x}_{\infty} = \max{\abs{x_{i}}} \leq \norm{x}_{p} = \sqrt[d]{\sum_{i=1}^{d}{\abs{x_{i}}^{p}}} \leq d\norm{x}_{\infty} \quad\quad (\ast)\]
+Bild von $\norm{x}_{1} = \sum_{i=1}^{d}\abs{x_{i}} \leq 1$
+\missingfigure{Page 151 week9 Sem1 top}
+$\norm{x}_{2} = \sqrt{\sum{x_{i}^{2}}} \leq 1$
+\missingfigure{Page 151 week9 Sem1 middle/bottom}
+\begin{definition}{4.15}
+Zwei Normen $\norm{.}^{(1)}, \norm{.}^{(2)}$ auf $\R^{d}$ heissen \emph{äquivalent}, falls es $c_{1}, c_{2} > 0$ gibt, mit \[ c_{1}\norm{x}^{(1)}\leq\norm{x}^{(2)} \leq c_{2}\norm{x}^{(1)} \quad \forall x \in \R^{d} \]
+\end{definition}
+\noindent\textbf{Bemerkung}: Sei $C=\max{\{ C_{2}, \frac{1}{C_{1}}\}}$, dann gilt $(\frac{1}{C})\norm{x}^{(1)}\leq\norm{x}^{(2)} \leq C\norm{x}^{(1)}$
+\subsubsection*{Beispiel}
+Die Normen $\norm{.}_{p} \quad 1\leq p\leq\infty$ sind wegen $(\ast)$ äquivalent.
+\subsubsection*{Bemerkung 4.16}
+Äquivalente Normen definieren dieselben ``offenen Mengen'' via Distanzfunktion.
+\subsubsection*{Beweis}
+\todo{marked as skip? p152 week 9 sem1}Für die Normkugeln \[ B_{r}^{(1)}(x_{0})\defeq \{ x:\norm{x-x_{0}}^{(1)}<r\} \] gilt mit $c_{1}\norm{x}^{1}\leq\norm{x}^{2}\leq c_{2}\norm{x}^{1}$ \[ B_{rc_{1}}^{(1)}(x_{0}) \subset B_{r}^{(2)}(x_{0}) \subset B_{c_{2}r}(x_{0})\]
+$\implies x_{0} \in \Omega$ innerer Punkt von $\Omega$ bezüglich $\norm{.}^{2} \iff x_{0}\in\Omega$ innerer Punkt von $\Omega$ bezüglich $\norm{.}^{1}$ \\
+
+\noindent Auf $\R^{d}$ haben wir
+\subsection*{Satz 4.17}
+Je zwei Normen auf $\R^{d}$ sind äquivalent.
+\subsubsection*{Beweis}
+Es genügt zu zeigen, dass eine beliebige Norm $\norm{.}$ zu $\norm{.}_{2}$ äquivalent ist. \\
+Seien $x=\sum{x_{i}e_{i}}$, $y=\sum{y_{i}e_{i}}$.
+Dann ist
+\begin{align*} \norm{x-y} = \norm{\sum_{i=1}^{d}{(x_{i}-y_{i})e_{i}}} \leq \sum_{i=1}^{d}{\abs{x_{i}-y_{i}}\norm{e_{i}}} &\leq \norm{x-y}\underbrace{\sum^{d}_{i=1}{\norm{e_{i}}}}_{\defeq C} \\
+ &\underset{(\ast)}{\leq} C' \norm{x-y}_{2}\end{align*}
+\todo{Layout imperfect, but hard to make better.. p153 week9 sem1}
+\begin{align*}\text{Also folgt, dass } \R^{d}&\to \R \\ x &\mapsto \norm{x}\text{ stetig ist.}\end{align*}
+Da $S^{d-1} = \{ x\in\R^{d}:\norm{x}_{2}=1\}$ kompakt ist, folgt dass es $c_{+}, c_{-}\in S^{d-1}$ gibt, mit ${k_{-}\defeq\norm{c_{-}}}\leq\norm{x}\leq{\norm{c_{+}}\defeq k_{+}} \: \forall x\in S^{d-1}$. Da $c_{0}\neq 0$ folgt $k_{-}>0$. \\
+Sei $x\neq0$allgemein ($C_{-}\in S^{d-1}$), dann ist $y\defeq\frac{x}{\norm{x}_{2}}\in S^{d-1}$ also $k_{-}\leq \norm{\frac{x}{\norm{x}_{2}}}<k_{+}$, woraus \[ k_{-}\norm{x}_{2}\leq\norm{x}\leq k_{+}\norm{x}_{2}\] folgt.
+
+\section{$\varepsilon -\delta$ Kriterium für Stetigkeit}
+\todo{4.5 in source notes. what to do?}
+Wir haben das folgende Kriterium für Stetigkeit an der Stelle $x_{0}$:
+
+\subsection*{Satz 4.18}
+Sei $f:\Omega\to\R^{n}$, $\Omega\subset\R^{d}$ eine Abbildung, $x_{0} \in\Omega$. Folgende Eigenschaften sind äquivalent:
+\begin{enumerate}
+\item $f$ ist stetig an der Stelle $x_{0}$. \\ D.h. für jede gegen $x_{0}$ konvergierende Folge $(x_{n})\subset\Omega$ konvergiert die Folge $f(x_{n})$ gegen $f(x_{0})$.
+\item Für jedes $\varepsilon>0$ gibt es $\delta>0$ so dass für alle $x\in\Omega$ mit $\abs{x-x_{0}}<\delta$ gilt:\[ \abs{\delta(x)-\delta(x_{0})}<\varepsilon \]
+\[ \forall\varepsilon>0\;\exists\delta>0: \forall x\in\Omega,\norm{x-x_{0}}<\delta \implies \norm{\delta(x)-\delta(x_{0})}<\varepsilon\]
+\end{enumerate}
+
+\subsubsection*{Beweis 4.18}
+%page 155 top
+
+
+
+
+
+
+
+
+
 
 
