@@ -370,5 +370,172 @@ Man kann folgendes bemerken: Falls $f:\R\to\R$ bijektiv und die Umkehrfunktion $
 Insbesondere $f'(x)\not=0$ $\left(g'(x)\not=0\right)$, $\forall x$. Dies ist also eine Notwendige Bedingung zur Existenz  der Ableitung von $f^{-1}$
 
 \subsubsection*{Satz 5.20 (Umkehrsatz)}
-Sei $f:\left( a,b\right)\to\R$ differenzierbar mit $f'(x)>0$, $\forall x\in\left( a,b\right)$. Seien $c = \mathop {\inf }\limits_x f\left( x \right)$, $d = \mathop {\sup }\limits_x f\left( x \right)$. Dann ist $f:\left( a,b\right)\to\left( c,d\right)$ bijektiv, und die Umkehrfunktion 
-%page 215 top
+Sei $f:\left( a,b\right)\to\R$ differenzierbar mit $f'(x)>0$, $\forall x\in\left( a,b\right)$. Seien $c = \mathop {\inf }\limits_x f\left( x \right)$, $d = \mathop {\sup }\limits_x f\left( x \right)$. Dann ist $f:\left( a,b\right)\to\left( c,d\right)$ bijektiv, und die Umkehrfunktion $f^{-1}:\left( c,d\right)\to\left( a,b\right)$ ist differenzierbar mit 
+\[\left( {{f^{ - 1}}} \right)'\left( {f\left( x \right)} \right) = \frac{1}{{f'\left( x \right)}}\hspace{5mm}\forall x \in \left( {a,b} \right)\]
+d.h.
+\[\left( {{f^{ - 1}}} \right)'\left(y \right) = \frac{1}{{f'\left( {{f^{ - 1}}}\left( y\right) \right)}}\hspace{5mm}\forall y \in \left( {c,d} \right)\]
+
+\begin{beweis}{}
+$f'(x)>0\Rightarrow f$ streng monotone Wachsend. Da $f$ streng monoton wachsend ist, folgt die Erste Behauptung aus dem Zwischenwertsatz für monotone Funktionen $\left( \text{d.h. }f:\left( a,b\right)\to\left( c,d\right)\text{ bijektive}\right)$.\\
+
+Nun zeigen wir: $f^{-1}$ ist differenzierbar. Sei $y_0\in\left( c,d\right)$, und $\left( y_k\right)_{k\geq 1}$ eine Folge in $\left( c,d\right)$ lim
+\[\lim x_k=y_0\hspace{5mm}y_k\not=y_0\hspace{5mm}\forall k\geq 1\] 
+Dann gibt es eindeutig bestimmte $\left( x_k\right)_{k\geq 1}$ in $\left( a,b\right)$ mit $f\left( x_k\right)=y_k$ ($f$ bijektiv) und $x_0\in\left( a,b\right)$ mit $f\left( x_0\right)=y_0$. Also ist
+\[\frac{{{f^{ - 1}}\left( {{y_k}} \right) - {f^{ - 1}}\left( {{y_0}} \right)}}{{{y_k} - {y_0}}} = \frac{{{x_k} - {x_0}}}{{f\left( {{x_k}} \right) - f\left( {{x_0}} \right)}}\]
+Bemerk dass $x_k\not=x_0$, $\forall k\geq 1$ und dass die Stetigkeit (Satz 4.21) von $f^{-1}$, $\lim x_k=x_0$ impliziert
+\[\left( {\begin{array}{*{20}{c}}{f\left( {{x_k}} \right) = {y_k}}& \Rightarrow &{{x_k}}& = &{{f^{ - 1}}\left( {{y_k}} \right)}\\{}&{}&{\lim {x_k}}& = &{{f^{ - 1}}\left( {\lim {y_k}} \right)}\\{}&{}&{}& = &{{f^{ - 1}}\left( {{y_0}} \right)}\\{}&{}&{}& = &{{x_0}}\end{array}} \right)\]
+Nun ist 
+\[\frac{{{x_k} - {x_0}}}{{f\left( {{x_k}} \right) - f\left( {{x_0}} \right)}} = \frac{1}{{\frac{{f\left( {{x_k}} \right) - f\left( {{x_0}} \right)}}{{{x_k} - {x_0}}}}} \to \frac{1}{{f'\left( {{x_0}} \right)}}\]
+da $f'\left( x_0\right)\not=0$
+\end{beweis}
+
+\subsubsection*{Korollar 5.21}
+Die Funktion $\log :\left( 0,\infty\right)\to\mathbb{K}$ ist differenzierbar und $\log'(x)=\frac{1}{x}$, $\forall x\in\left( 0,\infty\right)$
+
+\begin{beweis}{}
+$\exp : \R\to\left( 0,\infty\right)$ erfüllt alle Bedingungen von Satz 5.20\todo{Add reference + page number, page 217 middle}($\exp'=\exp>0$). Wir haben also 
+\begin{align*}\log \left( {\exp \left( x \right)} \right) &= x\\{\mathop{\rm log'}\nolimits} \underbrace {\left( {\exp \left( x \right)} \right)}_y\underbrace {\left( {\exp \left( x \right)} \right)}_y &= 1\\{\mathop{\rm log'}\nolimits} \left( y \right) &= \frac{1}{y}\end{align*}
+\end{beweis}
+Wir definieren mittels ``$\exp$'' die verallgemeinerte Potenzfunktion $x\to x^\alpha$. Sei $\alpha\in\R$: zunächst bemerken wir für $n\in\N$ und $x>0=x^n=e^{n\log x}$. Wir definieren also für $x>0$ \[x^\alpha := e^{\alpha\log x}\]
+Dann gilt
+\subsubsection*{Korollar 5.22}
+$\alpha\in\R$, $x\to x^\alpha$ ist differenzierbar und $\left( x^\alpha\right)'=\alpha x^{\alpha-1}$
+
+\subsubsection*{Exkurs}
+Die Exponentialfunktion wächst Schneller als jede Polynom
+\[{e^x} > \frac{{{x^n}}}{{n!}}\hspace{5mm}x \ge 0\]
+Insbesondere $e^x>x$, $\forall x\geq 0$. Die $\log$ Funktion ist strikt monoton wachsend, Also $e^x>x\Rightarrow x\geq \log(x)$, $\forall x>0$.\\
+
+Für $a>0$, $x^a>\log (x^a)=a\log(x)$. Also $\log(x)<\frac{x^a}{a}$. Die $\log-$Funktion wächst also Langsamer als jede Positive Potenz.
+
+\section{Die Trigonometrische Funktion und Hyperbolische Funktionen}
+\begin{enumerate}
+\item $\sin(x)$
+\missingfigure{Page 219, top}
+$\sin'(x)=\cos(x)$; d.h. $\sin'(x)>0$, $\forall x\in\left( -\frac{\pi}{2},\frac{\pi}{2}\right)$ und besitzt daher eine differenzierbare Umkehrfunktion 
+\[\arcsin :\left( { - 1,1} \right) \to \left( { - \frac{\pi }{2},\frac{\pi }{2}} \right)\]
+deren Ableitung wie folgt berechnet wird
+\[{\mathop{\rm arcsin'}\nolimits} \left( x \right) = \frac{1}{{{\mathop{\rm sin'}\nolimits} \left( {\arcsin \left( x \right)} \right)}} = \frac{1}{{\cos \left( {\arcsin \left( x \right)} \right)}}\]
+Falls $\alpha=\arcsin(x)$, $-\frac{\pi}{2}<\alpha <\frac{\pi}{2}$. So ist 
+\begin{align*}{\cos ^2}\left( \alpha  \right) + {\sin ^2}\left( \alpha  \right) &= 1\\{\cos ^2}\left( \alpha  \right) + {x^2} &= 1
+\end{align*}
+d.h. $\cos^2\left( \alpha  \right)=1-x^2$. Da nun $-\frac{\pi}{2}<\alpha <\frac{\pi}{2}$ folgt aus $\cos\left( \alpha  \right)>0\Rightarrow\cos\left( \alpha  \right)=\sqrt{1-x^2}$. Daraus ergibt sich \[\arcsin'\left( x\right)=\frac{1}{\sqrt{1-x^2}}\]
+Analog haben wir
+\item $\cos$, $\R\to\R$
+\missingfigure{Page 220 middle to bottom}
+\[\cos :\left( {0,\pi } \right) \to \left( { - 1,1} \right)\]
+bijektive, und
+\[\arccos :\left( { - 1,1} \right) \to \left( {0,\pi } \right)\]
+ist die Inverse Funktion, und 
+\[{\mathop{\rm arccos'}\nolimits} \left( x \right) =  - \frac{1}{{\sqrt {1 - {x^2}} }}\]
+\item $\tan:\left( -\frac{\pi}{2},\frac{\pi}{2}\right)\to\R$
+\missingfigure{page 221, top}
+\[\arctan:\R\to\left( -\frac{\pi}{2},\frac{\pi}{2}\right)\]
+und
+\[\arctan'(x)=\frac{1}{1+x^2}\]
+\item Hyperbelfunktionen \[\cosh \left( x \right): = \frac{{{e^x} + {e^{ - x}}}}{2}\]\[\sinh \left( x \right): = \frac{{{e^x} - {e^{ - x}}}}{2}\]\[\tanh \left( x \right): = \frac{{\sinh \left( x \right)}}{{\cosh \left( x \right)}}\]
+\missingfigure{Bottom of page 221, add side by side to the formulas}
+Dann ist $\sinh:\R\to\R$ bijektiv, differenzierbar, mit $\sinh'(x)=\cosh(x)$ somit monotone steigend, und $\arcsinh:\R\to\R$ die Inverse
+\begin{itemize}
+\item $\cosh :\left[ {0,\infty } \right) \to \left[ {1,\infty } \right)$ bijektiv.\\
+Inverse: $\arccosh:\left( 1,\infty\right)\to\left( 0,\infty\right)$
+\item $\tanh :\R \to \left( {-1,1 } \right)$ ist bijektiv.\\
+Inverse: $\arctanh:\left( -1,1\right)\to\R$
+\end{itemize}
+Dann gilt:
+\begin{align*}{\mathop{\rm sinh'}\nolimits} \left( x \right) &= \cosh \left( x \right)\\{\mathop{\rm cosh'}\nolimits} \left( x \right) &= \sinh \left( x \right)\\{\mathop{\rm tanh'}\nolimits} \left( x \right) &= \frac{1}{{{{\cosh }^2}\left( x \right)}}
+\end{align*}
+mit der Relation $\cosh^2+\sinh^2+1$ folgt
+\begin{align*}\arcsinh'\left( x \right) &= \frac{1}{{\sqrt {1 + {x^2}} }}\\\arccosh'\left( x \right) &= \frac{1}{{\sqrt {{x^2} - 1} }}\\\arctanh'\left( x \right) &= \frac{1}{{1 - {x^2}}}
+\end{align*}
+\end{enumerate}
+
+\section{Funktionen der Klasse $C^m$}
+Sei $\Omega\subset\R$, $f:\Omega\to\R$, differenzierbar
+\begin{definition}{5.23}
+$f:\Omega\to\R$ heisst $C'$ (von der Klasse $C'$) falls $f$ auf $\Omega$ differenzierbar ist und $x\to f'(x)$ auf $\Omega$ stetig ist.\\
+
+\noindent\underline{Notation:}$C'\left( \Omega\right)=$ Vektorraum der auf $\Omega$, $C'-$Funktionen
+\end{definition}
+
+\subsubsection*{Beispiel 5.24}
+\begin{enumerate}
+\item $\exp,\cos,\sin,\text{polynom}\in C'\left( \R\right)$
+\item $f:\R\to\R$ 
+\[f\left( x \right) = \left\{ {\begin{array}{*{20}{c}}{{x^2}\sin \left( {\frac{1}{x}} \right)}&{x\not  = 0}\\0&{x = 0}\end{array}} \right.\]
+$\forall x\in\R\backslash\{ 0\}$
+\[f'\left( x \right) = 2x\sin \left( {\frac{1}{x}} \right) - \cos \left( {\frac{1}{x}} \right)\]
+\todo{Is this ``In 0'' or ``$\ln 0$''(Nat. Log), page 223 bottom}\underline{In 0:}
+\[\frac{{f\left( h \right) - f\left( 0 \right)}}{h} = \frac{{{h^2}\sin \left( {\frac{1}{h}} \right) - 0}}{h} = h\sin \left( {\frac{1}{h}} \right)\]
+\[\mathop {\lim }\limits_{h \to 0} h\sin \left( {\frac{1}{h}} \right) = 0\]
+Also $f'(0)=0$, $f$ ist differenzierbar in $x_0=0$. Aber $f'$ ist in 0 nicht stetig. Für $x_n=\frac{1}{n\pi}$ ist 
+\[f'\left( {{x_n}} \right) = \frac{{2\sin \left( {n\pi } \right)}}{{n\pi }} + {\left( { - 1} \right)^{n + 1}} = {\left( { - 1} \right)^{n + 1}}\]
+$\lim x_n=0$, $\lim f'\left( x_n\right)$ (Insbesondere $\not=f'(0)$) nicht existiert.
+\end{enumerate}
+Wir haben eine Konvergenz Begriff auf $C^0\left( \Omega\right)$ gesehen: Gleichmassige Konvergenz 
+\[{f_n}\mathop  \to \limits^{\text{glm.}} f{\text{ falls }}\mathop {\sup }\limits_{x \in \Omega } \left\| {{f_n} - f} \right\| \to 0\]
+Falls alle $f_n$ stetig sind, folgt dass $f$ stetig ist. Für $C'\left( \Omega\right)$, haben wir
+
+\subsubsection*{Satz 5.26}
+Sei $\left( f_n\right)_{n\geq 1}$ eine Folge in $C'\left( \Omega\right)$. Wir nehmen an dass ${f_n}\mathop  \to \limits^{\text{glm.}} f$ und ${f'_n}\mathop  \to \limits^{\text{glm.}} g$. Dann gilt $f\in C'\left( \Omega\right)$ und $g=f'$
+
+\begin{beweis}{}
+Da ${f_n}\mathop  \to \limits^{\text{glm.}} f$ und ${f'_n}\mathop  \to \limits^{\text{glm.}} g$, sind $f$ und $g$ stetig\\
+\underline{Zu Zeigen:} $f$ ist differenzierbar und $f'=g$.\\
+
+Seien $x\not=x_0$ in $\Omega$. Aus ${f_n}\mathop  \to \limits^{\text{glm.}} f$ folgt, $\mathop {\lim }\limits_{n \to \infty } {f_n}\left( x \right) = f\left( x \right)$ und $\mathop {\lim }\limits_{n \to \infty } {f_n}\left( {{x_0}} \right) = f\left( {{x_0}} \right)$
+\[\left| {\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} \right| = \mathop {\lim }\limits_{n \to \infty } \left| {\frac{{{f_n}\left( x \right) - {f_n}\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} \right|\]
+\underline{MWS:} $\exists\xi_n$ zwischen $x$ und $x_0$ so dass 
+\[\frac{{{f_n}\left( x \right) - {f_n}\left( {{x_0}} \right)}}{{x - {x_0}}} = f{'_n}\left( {{\xi _n}} \right)\]
+Nun
+\begin{align*}\left| {f{'_n}\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right| &\le \left| {f{'_n}\left( {{\xi _n}} \right) - g\left( {{\xi _n}} \right)} \right| + \left| {g\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right|\\ &\le \mathop {\sup }\limits_{\xi  \in \Omega } \mathop {\left| {f{'_n}\left( \xi  \right) - g\left( \xi  \right)} \right|}\limits_{\begin{array}{*{20}{c}} \downarrow &{{\text{Da }}f{'_n} \to g}\\0&{}\end{array}}  + \mathop {\left| {g\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right|}\limits_{\begin{array}{*{20}{c}} \downarrow &{\scriptstyle{\text{falls }}x \to {x_0}\hfill\atop\scriptstyle\left( {{\xi _n} \to {x_0}} \right)\hfill}\\0&{({\text{Stet. von }}g)}\end{array}} 
+\end{align*}
+Folglich 
+\[\mathop {\lim }\limits_{x \to {x_0}} \left| {\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} \right| = 0 \Rightarrow f' = g\]
+\end{beweis}
+
+\subsubsection*{Beispiel 5.28}
+Die Gleichmässige Konvergenz von $f'_n\to g$ ist notwendig: Sei 
+\[{f_n}\left( x \right) = \sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}} ,x \in \left( { - 1,1} \right)\]
+\subsubsection*{Behauptung}
+${f_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} f = \left| x \right|$ für $\abs{x}<1$
+\begin{beweis}{}
+\begin{align*}\left| {{f_n}\left( x \right) - \left| x \right|} \right| = &\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  - \left| x \right|} \right|\\ = &\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  - \left| x \right|} \right| \cdot \frac{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}\\ = &\frac{{{{\left( {\frac{1}{n}} \right)}^2} + {x^2} - {{\left( {\left| x \right|} \right)}^2}}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}} = \frac{{{{\left( {\frac{1}{n}} \right)}^2}}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}\le \frac{{{{\left( {\frac{1}{n}} \right)}^2}}}{{\left( {\frac{1}{n}} \right)}}\mathop  \to \limits^{n \to \infty } 0\end{align*}
+d.h. ${f_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} \left| x \right|$ \\
+\underline{Nun:}$\abs{x}$ ist stetig aber nicht \todo{??differenzierbar?? page 227 bottom}
+\begin{align*}f{'_n}\left( x \right) =&\frac{x}{{\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {{\left| x \right|}^2}} }}\mathop  \to \limits_{n \to \infty } \left\{ {\begin{array}{*{20}{c}}{\frac{x}{{\left| x \right|}}}&{x\not  = 0}\\0&{x = 0}\end{array}} \right.\\g\left( x \right) = &\left\{ {\begin{array}{*{20}{c}}1&{x > 1}\\0&{x = 0}\\{ - 1}&{x < 1}\end{array}} \right.
+\end{align*}
+$f'_n(x)\to g(x)$ nicht gleichmässig ($g$ nicht stetig in $x=0$)
+\end{beweis}
+
+Eine sehr wichtige Anwendung von Satz 5.26 \todo{Add reference + page number, page 228 middle} ist auf Eigenschaft von Funktionen die Summe von Potenzreihen sind. Sei $\left( a_n\right)_{n\geq 0}\in\R$. Wir nehmen an 
+\[\rho : = \frac{1}{{\lim \sup \sqrt[n]{{\left| {{a_n}} \right|}}}} > 0\]
+\subsubsection*{Satz 5.29}
+Sei $x\in\left( -\rho,\rho\right)=\Omega$ \[f\left( x \right) = \sum\limits_{n = 0}^\infty  {{a_n}{x^n}}\] die Summe der absolut konvergenten Potenzreihe. Dann ist $f\in C'\left( \Omega\right)$ und 
+\[f'\left( x \right) = \sum\limits_{n = 0}^\infty  {n{a_n}{x^{n - 1}}} \]
+mit Selben Konvergenzradius
+
+\begin{beweis}{}
+Sei 
+\[{f_k}\left( x \right) = \sum\limits_{n = 0}^\infty  {{a_n}{x^n}} \]
+Sei $0<r<\rho$. Dann gilt, $\forall x\in\left( -r,r\right)$: 
+\[\left| {{f_k}\left( x \right) - f\left( x \right)} \right| \le \sum\limits_{n = k + 1}^\infty  {\left| {{a_n}} \right|{r^n}} \mathop  \to \limits^{n \to \infty } 0\]
+Also $f_k\to f$ gleichmässig auf $\left( -r,r\right)$. Da
+\begin{align*}\lim \sup \sqrt[n]{{\left| {n{a_n}} \right|}} = &\lim \sup \left( {\sqrt[n]{n} \cdot \sqrt[n]{{\left| {{a_n}} \right|}}} \right)\\\left( {{\text{Da }}\lim \sqrt[n]{n} = 1} \right) = &\lim \sup \sqrt[n]{{\left| {{a_n}} \right|}} = \rho 
+\end{align*}
+ konvergiert 
+\[\sum\limits_{n = 0}^\infty  {n{a_n}{x^{n - 1}}}  = :g\left( x \right)\]
+absolut $\forall x\in\left( -\rho,\rho\right)$. Nun ist 
+\[f{'_k}\left( x \right) = \sum\limits_{n = 0}^k {n{a_n}{x^{n - 1}}} \]
+und es folgt wie oben $f{'_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} g$. Nach Satz 5.26 \todo{Add reference + page number, page 230 middle}, folgt das $f,g$ stetig und $g=f'$, auf $\left( -\rho,\rho\right)$.
+\end{beweis}
+
+\subsubsection*{Beispiel 5.30}
+\begin{enumerate}
+\item \begin{align*}\exp \left( x \right) = &\sum\limits_{n = 0}^\infty  {\frac{{{x^n}}}{{n!}}} \hspace{5mm}\forall x \in R\\{\mathop{\rm exp'}\nolimits} \left( x \right) = &\sum\limits_{n = 0}^\infty  {\frac{{n{x^{n - 1}}}}{{n!}}}  = \sum\limits_{n = 0}^\infty  {\frac{{{x^{n - 1}}}}{{\left( {n - 1} \right)!}}} \\ = &\sum\limits_{k = 0}^\infty  {\frac{{{x^k}}}{{k!}}}  = \exp \left( x \right)
+\end{align*}
+\item \[f\left( x \right) = \sum\limits_{k = 0}^\infty  {{x^k}}  = \frac{1}{{1 - x}}\hspace{5mm}\left| x \right| < 1\]
+Daraus folgt 
+\[\sum\limits_{k = 0}^\infty  {k{x^{k - 1}}} \mathop  = \limits_{\begin{array}{*{20}{c}} \downarrow \\\begin{array}{c}{\text{eine }}\\{\text{nicht}}\\{\text{WHAT}}\\{\text{Identität}}\end{array}\end{array}} \frac{1}{{{{\left( {1 - x} \right)}^2}}}\]
+\todo[inline]{Can't understand word, page 230 very bottom}
+\end{enumerate}

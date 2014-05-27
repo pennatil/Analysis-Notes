@@ -15,7 +15,7 @@ Status
 |    2    |     Yes(*)    |         Yes        |       Yes      | Waiting for corrections |   No  |
 |    3    | Yes |          -         |       No      |            No           |   No  |
 |    4    | In Progress [bimmlerd]     |          -         |       -       |            -            |   No  |
-|    5    |      In Progress [pennatil]     |          -         |       -       |            -            |   No  |
+|    5    |      Yes     |          -         |       -       |            -            |   No  |
 |    6    |     Yes     |         Yes        |       Yes      |           Yes           |   No  |
 |    7    |     Yes     |         Yes        |       Yes      | Waiting for corrections |   No  |
 |    8    |     Yes     |          In Progress         |       Yes      | Waiting for corrections |   No  |
