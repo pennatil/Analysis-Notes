@@ -300,13 +300,132 @@ Sei $f:\Omega\to\R^{n}$, $\Omega\subset\R^{d}$ eine Abbildung, $x_{0} \in\Omega$
 \[ \forall\varepsilon>0\;\exists\delta>0: \forall x\in\Omega,\norm{x-x_{0}}<\delta \implies \norm{\delta(x)-\delta(x_{0})}<\varepsilon\]
 \end{enumerate}
 
-\subsubsection*{Beweis 4.18}
-%page 155 top
+\begin{beweis}{4.18}
+\begin{enumerate}[align=left]
+\item[$(1)\Rightarrow (2)$] (Indirekt)\\
+Wir nehmen also an, dass (2) nicht gilt, d.h. es gibt $\varepsilon>0$ so dass für jedes $\delta >0$ einem punkt $x_\delta$ gibt mit 
+\[\left\| {{x_\delta } - {x_0}} \right\| < \delta {\text{ und }}\left\| {f\left( {{x_\delta }} \right) - f\left( {{x_0}} \right)} \right\| > \varepsilon \]
+\todo[inline]{Start of big bracket}
+\begin{align*}&\neg \left( {\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \Omega :\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)\\ &= \left( {\exists \varepsilon  > 0,\forall \delta  > 0,\exists x \in \Omega :\left| {x - {x_0}} \right| < \delta {\text{ }}\not  \Rightarrow {\text{ }}\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)
+\end{align*}
+d.h.
+\[\exists \varepsilon  > 0,\forall \delta  > 0,\exists {x_\delta } \in \Omega :\left| {{x_\delta } - {x_0}} \right| < \delta {\text{  und  }}\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| > \varepsilon \]
+\todo[inline]{end of big bracket}
+Sei $\varepsilon>0$. Wir wählen jetzt $\delta_n=\frac{1}{n}$, dann gibt es $x_n:=\left(x_{\delta_n}\right)_{n\in\N}$, eine Folge in $\Omega$, mit $\lim x_n=x_0$. Aber die Folge $\left( f\left( x_n\right)\right)$ kann offensichtlich nicht gegen $f\left( x_0\right)$ konvergieren (Da $\left| {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} \right| > \varepsilon $), d.h. $f$ ist nicht stetig in $x_0$ 
+\item[$(2)\Rightarrow (1)$] Sei $\left( x_n\right)_{n\geq 1}$ eine Folge in $\Omega$ mit Grenzwert $x_0$. Wir möchten zeigen dass $f\left( {{x_n}} \right) \to f\left( {{x_0}} \right)$. Sei $\varepsilon>0$, nach (2) sei $\delta_{\varepsilon}>0$ so dass $\forall x\in\Omega$ mit 
+\[\left| {x - {x_0}} \right| < {\delta _\varepsilon } \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+Da $\mathop {\lim }\limits_{n \to \infty } {x_n} = {x_0}$, gibt es $N\geq 1$ so dass 
+\[\left\| {{x_n} - {x_0}} \right\| < \delta\hspace{5mm} \forall n \ge {N_\delta }\]
+(Hier hängt $N$ von $\delta$, und also im Endeffekt von $\varepsilon$ ab). Aus (2) folgt
+\[\left\| {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} \right\| < \varepsilon \hspace{5mm}\forall n \ge {N_\delta }\]
+Dies zeigt $\lim f\left( {{x_n}} \right) = f\left( {{x_0}} \right)$
+\end{enumerate}
+\end{beweis}
 
+\subsubsection*{Beispiel}
+\begin{enumerate}
+\item $f:\R\to\R$, $f(x)=3x+8$. Dann $f$ ist stetig auf $\R$. Sei $\varepsilon>0$, sei $x_0\in\R$
+\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {\left( {3x + 8} \right) - \left( {3{x_0} + 8} \right)} \right| = 3\left| {\left( {x - {x_0}} \right)} \right|\hspace{5mm}\forall x \in \R\]
+Sei $\varepsilon>0$. Wenn wir $\delta=\frac{\varepsilon}{3}$ wählen, dann 
+\[ \text{CAN'T READ}, \left| {x - {x_0}} \right| < {\delta _\varepsilon } = \frac{\varepsilon }{3} \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+In diesem Beispiel $\delta$ hängt nur von $\varepsilon$ ab. Nächste Beispiel zeigt dass $\delta$ nicht nur von $\varepsilon$, sondern auch von $x_0$ abhängen kann.
+\item \begin{align*}
+f:\left( 0,\infty\right)\to&\left( 0,\infty\right)\\
+x\to&\frac{1}{x}
+\end{align*}
+ist stetig auf $\left( 0,\infty\right)$. Sei $x_0\in\left( 0,\infty\right)$
+\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {\frac{1}{x} - \frac{1}{{{x_0}}}} \right| = \left| {\frac{{{x_0} - x}}{{x \cdot {x_0}}}} \right|\]
+\[\left| {x - {x_0}} \right| < \delta  \Rightarrow  - \delta  < x - {x_0} < \delta  \Rightarrow x > {x_0} - \delta \]
+\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \frac{{\left| {{x_0} - x} \right|}}{{\left| x \right|\left| {{x_0}} \right|}} < \frac{{\left| {x - {x_0}} \right|}}{{\left| {{x_0}} \right|\left| {{x_0} - \delta } \right|}}\]
+Sei $\delta<\frac{x_0}{2}$, dann folgt 
+\[\delta  < \frac{{{x_0}}}{2} \Rightarrow {x_0} - \delta  > {x_0} - \frac{{{x_0}}}{2} > \frac{{{x_0}}}{2}\]
+\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \frac{{\left| {{x_0} - x} \right|}}{{\left| x \right|\left| {{x_0} - \delta } \right|}} \le \frac{{\left| {x - {x_0}} \right| \cdot 2}}{{{{\left| {{x_0}} \right|}^2}}} \le \frac{{2\delta }}{{\left| {{x_0}} \right|}}\]
+Sei 
+\[{\delta _{\varepsilon ;{x_0}}} = \min \left\{ {\frac{{{x_0}}}{2},\frac{{\varepsilon {{\left| {{x_0}} \right|}^2}}}{2}} \right\}\]
+Dann
+\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \frac{{\varepsilon {{\left| {{x_0}} \right|}^2}}}{2} \cdot \frac{2}{{{{\left| {{x_0}} \right|}^2}}} = \varepsilon \]
+\end{enumerate}
 
+\section{Zwischenwertsatz}
+\subsubsection*{Satz 4.19}
+Seien $a<b$ in $\R$ und $f:\lbrack a,b\rbrack\to\R$ eine Stetige Funktion, mit $f(a)\leq f\left( b\right)$ (oder $f(a)\geq f\left( b\right)$). Dann gibt es zu jedem $y\in\left[ f(a),f\left( b\right)\right]$ ein $x\in\left[ a,b\right]$ mit $f(x)=y$
 
+\begin{beweis}{}
+Idee ist einfach. Wir benutzen ein Approximationsverfahren (In diesem Fall Bisektionsverfahren). Wir definieren zwei Monotone Folgen
+\[ a=a_1\leq a_2\leq\dots\leq b_2\leq b_1=b\]
+mit $a_n\nearrow$, $b_n\searrow$, $\lim a_n=\lim b_n=c$ und 
+\[ f\left( a_n\right)<y\leq f\left( b_n\right)\]
+Dann aus stetigkeit von $f$, folgt dass 
+\[ \lim f\left( a_n\right)=\lim f\left( b_n\right)=f(c)=y\]
+\missingfigure{Add minipage with figures and formulas, page 158 top}
+Auf jedem Fall gibt
+\begin{enumerate}
+\item $a_1\leq a_2 < b_2 \leq b_1$
+\item $\left( b_2-a_2\right)=\frac{1}{2}\left( b_1-a_1\right)$
+\item $f\left( a_2\right) < y \leq f\left( b_2\right)$
+\end{enumerate}
+Wir iterieren jetzt dieses Verfahren. Wir nehmen an, dass wir Folgen definiert haben nach $(k-1)-$Schnitten 
+\begin{enumerate}
+\item $a_1\leq a_2\leq a_3\dots\leq a_k < b_k\leq b_{k-1}\dots\leq b_1$
+\item $\left( {{b_k} - {a_k}} \right) = \frac{1}{{{2^{k - 1}}}}\left( {{b_1} - {a_1}} \right)$
+\item $f\left( a_k\right) < y \leq f\left( b_k\right)$
+\end{enumerate}
+Nun unterscheiden wir wieder zwei Fälle\\
 
+\noindent\underline{Fall 1:}
+\[f\left( {\frac{{{a_k} + {b_k}}}{2}} \right) \ge y\] dann definieren wir $a_{k+1}=a_k$ und $b_{k+1}=\frac{a_k+b_k}{2}$\\
 
+\noindent\underline{Fall 2:}
+\[f\left( {\frac{{{a_k} + {b_k}}}{2}} \right) < y\]
+dann definieren wir $a_{k+1}=\frac{a_k+b_k}{2}$ und $b_{k+1}=b_k$. Dann ist immer
+\begin{enumerate}
+\item $a_k\leq a_{k+1}<b_{k+1}\leq b_k$
+\item ${b_{k + 1}} - {a_{k + 1}} = \frac{1}{2}\left( {{b_k} - {a_k}} \right) = \frac{1}{{{2^k}}}\left| {{b_1} - {a_1}} \right|$
+\item $f\left( a_{k+1}\right) < y \leq f\left( b_{k+1}\right)$
+\end{enumerate}
+Nach dem Prinzip der Vollständigen Induktion erhalten wir zwei folgen $\left( a_n\right)_{n\geq 1}$, $\left( b_n\right)_{n\geq 1}$ die den Eigenschaften 1., 2. und 3. erfüllen. $\left( a_n\right)$, $\left( b_n\right)$ sind monotone und beschränkt $\Rightarrow$ gibt es 
+\[\overline{a}=\lim a_k\leq\overline{b}=\lim b_k \]
+Wegen 2.
+\[\lim \left| {{a_k} - {b_k}} \right| = \lim \left| {\frac{{{b_1} - {a_1}}}{{{2^k}}}} \right| = 0\]
+d.h. $\lim a_k=\lim b_k$. Sei $c\in\lbrack a,b\rbrack$ dieser Wert. Aus stetigkeit von $f$ folgt 
+\[f\left( c \right) = \lim f\left( {{a_n}} \right) = \lim f\left( {{b_n}} \right)\]
+Aus 3. folgt 
+\begin{align*}f\left( {{a_n}} \right) < y &\Rightarrow f\left( c \right) \le y\\g \le f\left( {{b_n}} \right) &\Rightarrow y \le f\left( c \right)
+\end{align*}
+also $f(c)=y$.
+\end{beweis}
+
+\subsubsection*{Korollar 4.20}
+\begin{enumerate}
+\item Sei
+\[p\left( x \right) = {a_n}{x^n} + {a_{n - 1}}{x^{n - 1}} +  \ldots  + {a_0}\]
+ein polynome mit reellen Koeffizienten so dass $a_n\not=0$ und $n$ ungerade ist. Dann besitzt $p$ mindestens eine reelle Nullstelle.
+\begin{beweis}{}
+Sei 
+\begin{align*}q(x) &= \frac{{p(x)}}{{{a_n}}}\\ &= {x^n} + \frac{{{a_{n - 1}}}}{{{a_n}}} \cdot {x^{n - 1}} +  \ldots  + \frac{{{a_0}}}{{{a_n}}}\\ &= {x^n}\left[ {1 + \frac{{{a_{n - 1}}}}{{{a_n}}} \cdot \frac{1}{x} +  \ldots  + \frac{{{a_0}}}{{{a_n}}} \cdot \frac{1}{{{x^n}}}} \right]
+\end{align*}
+Dann
+\[\mathop {\lim }\limits_{x \to \infty } \frac{1}{{{x^5}}} = 0\]
+Folgt insbesondere dass es $c>0$ gibt so dass für $\abs{x}\geq c$ 
+\[1 + \frac{{{a_{n - 1}}}}{{{a_n}}} \cdot \frac{1}{x} +  \ldots  + \frac{{{a_0}}}{{{a_n}}} \cdot \frac{1}{{{x^n}}} \ge \frac{1}{2}\]
+Folglich ist:
+\begin{align*}q(c) &\ge {c^n}\frac{1}{2} > 0\\q( - c) &\le  - {c^n}\frac{1}{2} < 0\tag{\text{$n=$ ungerade}}
+\end{align*}
+Also gibt $x_0\in\lbrack -c,c\rbrack$ mit $q\left( x_0\right)=0$
+\end{beweis}
+\item Eine reelle $3\times 3$ Matrix besitzt immer einen reellen Eigenwert.
+\end{enumerate}
+
+\subsubsection*{Satz 4.21}
+Sei $f:\lbrack a,b\rbrack\to\R$ stetig, streng monoton Wachsend (d.h. $x<y=f(x)<f\left( y\right)$). Dann ist 
+\[\Bild\left( f\right)=\lbrack c,d\rbrack=\left[ f\left( a\right), f\left( b\right)\right]\]
+$f:\lbrack a,b\rbrack\to\lbrack c,d\rbrack$ is bijektiv und $f^{-1}:\lbrack c,d\rbrack\to\lbrack a,b\rbrack$ ist stetig
+
+\begin{beweis}{}
+\begin{enumerate}
+\item $f$ streng monoton wachsend, d.h. Falls $x\not=y$, dann ist %Page 162 top
+\end{enumerate}
+\end{beweis}
 
 
 
