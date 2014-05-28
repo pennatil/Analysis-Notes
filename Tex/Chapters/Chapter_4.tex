@@ -423,12 +423,196 @@ $f:\lbrack a,b\rbrack\to\lbrack c,d\rbrack$ is bijektiv und $f^{-1}:\lbrack c,d\
 
 \begin{beweis}{}
 \begin{enumerate}
-\item $f$ streng monoton wachsend, d.h. Falls $x\not=y$, dann ist %Page 162 top
+\item $f$ streng monoton wachsend, d.h. Falls $x\not=y$, dann ist $f\left( x\right)\not=f\left( y\right)\Rightarrow f$ Injektive.\\
+
+Zwischenwertsatz $\Rightarrow f$ surjektive. $c=f(a)<f(b)=d$, Sei $y\in\lbrack c,d\rbrack$, ZWS $\Rightarrow\exists x\in\left( a,b\right)$ mit $f(x)=y\Rightarrow$ ist bijektive
+\item $f^{-1}$ ist stetig: Sei $y\in\lbrack c,d\rbrack$ und sei $\left( y_0\right)\in\lbrack c,d\rbrack$ eine folge mit $\lim y_n=y_0$. $f$ bijektive, $\exists x_n$, $x_0=f^{-1}\left( y_0\right)$, $\left( x_n\right)$ beschränkt. Sei $f^{-1}\left( y_{l(n)}\right)$ eine beliebige konvergente Teilfolge und $x$ deren Grenzwert 
+\[ \lim f^{-1}\left( y_{l(n)}\right)=x\]
+\[ f\text{ stetig }\Rightarrow\lim f\left( f^{-1}\left( y_{l(n)}\right)\right) = f\left( f^{-1}\left( y_{l(n)}\right)\right)= f(x) \]
+aber 
+\[\lim f\left( {{f^{ - 1}}\left( {{y_{l(n)}}} \right)} \right) = \lim {y_{l(n)}}\]
+\begin{enumerate}
+\item[$\Rightarrow$] $\lim {y_{l(n)}}=f(x)$, $y_n$ ist aber auch konvergent
+\item[$\Rightarrow$] $\lim {y_{(n)}}=f(x)$, aber $\lim y_n=y_0$
+\item[$\Rightarrow$] $y_0=f(x)\Rightarrow x=f^{-1}\left( y_0\right)=x_0$
+\item[$\Rightarrow$] Jede Teilfolge von $\left( x_0\right)$ hat desselben Häufungspunkt $x_0$.
+\item[$\Rightarrow$] $\lim\sup x_n=x_0=\lim\inf x_n$, also $\lim {f^{ - 1}}\left( {{y_n}} \right) = \lim {x_n} = {x_0} = {f^{ - 1}}\left( {{y_0}} \right)\Rightarrow f$ stetig 
+\end{enumerate}
 \end{enumerate}
 \end{beweis}
 
+\subsubsection*{Korollar 4.22}
+Sei $f:\left( a,b\right)\to\R$ stetig und streng monoton wachsend mit monotonen Limes
+\[ - \infty  < c: = \mathop {\lim }\limits_{x \downarrow a} f\left( x \right) < \mathop {\lim }\limits_{x \uparrow b} f\left( x \right) = :d < \infty \]
+dann ist $f:\left( a,b\right)\to\left( c,d\right)$ bijektive und $f^{-1}$ ist stetig.
 
+\subsubsection*{Korollar 4.22}
+Sei $n\in\N$. Die Potenzfunktion $f(x)=x^n$ ist auf ganz $\R$ stetig. Sie ist auf $\left( 0,\infty\right)$ streng monoton wachsend mit Bild $\left( 0,\infty\right)$. Die Umkehrfunktion 
+\begin{align*}
+\left( 0,\infty\right)&\to\left( 0,\infty\right)\\
+x&\to\sqrt[n]{x}\text{ ist stetig}
+\end{align*}
 
+\begin{beweis}{}
+\[{y^n} - {x^n} = \left( {y - x} \right)\underbrace {\left( {{y^{n - 1}} + {y^{n - 2}}x +  \ldots {x^{n - 1}}} \right)}_{ > 0}\]
+Für $0<x,y<\infty$, ${y^{n - 1}} + {y^{n - 2}}x +  \ldots {x^{n - 1}}>0$.
+Also folgt $x<y\Rightarrow x^n<y^n$, d.h. $f$ streng monoton wachsend
+\end{beweis}
 
+\subsubsection*{Satz 4.23}
+Die Funktion $\exp:\R\to\R$ ist stetig, streng monotone wachsend mit 
+\[ \Bild\left( \exp\right)=\exp\left( \R\right)=\left( 0,\infty\right)\]
 
+\begin{definition}{4.24}
+Die Umkehrfunktion von $\exp:\R\to\left( 0,\infty\right)$ wird mit $\log:\left( 0,\infty\right)\to\R$ bezeichnet
+\end{definition}
+Dann
 
+\subsubsection*{Korollar 4.25}
+$\log:\left( 0,\infty\right)\to\R$ hat folgende Eigenschaften
+\begin{enumerate}
+\item Sie ist strikt monoton wachsend und stetig
+\item $\log(1)=0$
+\item $\log\left( x\cdot y\right)=\log(x)+\log\left( y\right)$
+\end{enumerate}
+
+\begin{beweis}{Satz 4.23}
+\[\exp \left( x \right) = 1 + x + \frac{{{x^2}}}{{2!}} +  \ldots \]
+ist absolut konvergent auf ganz $\R$
+\begin{enumerate}
+\item \[\exp \left( x \right) = \exp \left( {\frac{x}{2} + \frac{x}{2}} \right) = {\left( {\exp \left( {\frac{x}{2}} \right)} \right)^2} \ge 0\]
+\item Falls $x\geq 0$, ist \[\exp \left( x \right) > 1 > 0\hspace{5mm}\left( {\exp \left( x \right) = 1 \Leftrightarrow x = 0} \right)\]
+\item Wegen \[\exp \left( x \right) = \frac{1}{{\exp \left( { - x} \right)}}\not  = 0\] \[\exp \left( x \right) > 0\hspace{5mm}\forall x \in \R\] d.h. \[\exp\left( \R\right)\subset\left( 0,\infty\right)\]
+\item \[\exp \left( y \right) - \exp \left( x \right) = \exp \left( x \right)\left[ {\exp \left( {y - x} \right) - 1} \right]\]
+Falls $x<y$, so ist $\exp\left(y-x\right)>1$ und somit $\exp\left(y\right)>\exp\left(x\right)$ (da $\exp\left(x\right)>0$), d.h. $\exp$ ist streng monoton Wachsend
+\item Zur stetigkeit: Sei $x=x_0+h$, $0<h<1$
+\[\exp \left( x \right) - \exp \left( {{x_0}} \right) = \exp \left( {{x_0}} \right)\left( {\exp \left( h \right) - 1} \right)\]
+da 
+\[\left| {\exp \left( h \right) - 1} \right| = \mathop {\left| {\sum\limits_{k = 1}^\infty  {\frac{{{h^k}}}{{k!}}} } \right|}\limits^{ \to 0}  \le \mathop {\left| {\sum\limits_{k = 1}^\infty  {\left| {{h^k}} \right|} } \right|}\limits^{h \to 0}  = \frac{{\left| h \right|}}{{1 - \left| h \right|}} \to 0\]
+Also für $x=x_0+h\to x_0$, $\exp\left( x \right)-\left( x_0 \right)\to 0$ und die Funktion $\exp$ ist stetig
+\[\exp \left( x \right) \to \infty \left( {x \to \infty } \right){\text{ und }}\exp \left( x \right) \to 0\left( {x \to  - \infty } \right)\]
+\end{enumerate}
+\todo[inline]{do 3 and 4 belong together?? in your notes you gave number 3 to two different ones, page 166 bottom}
+\end{beweis}
+
+\begin{align*}
+\exp\left( \log(x)\right)&=x\\
+\exp\left( \log\left(x\right)+\log\left(y\right)\right)&=\exp\left( \log\left(x\right)\right)\cdot\exp\left( \log\left(x\right)\right)\\
+&=xy
+\end{align*}
+\[ \Rightarrow\boxed{\log\left( x\right)+\log\left( y\right)=\log\left( xy\right)}\]
+
+\section{Gleichmässig Stetigkeit}
+Sei $f:\Omega\to\R$ eine stetige funktion auf $\Omega$, d.h. 
+\[\forall {x_0} \in \Omega ,\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \R :\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+\todo[inline]{Begin big rounded parenthesis}
+$f$ ist nicht stetig auf $\Omega\Leftrightarrow\exists x_0\in\Omega,\exists\varepsilon>0,\forall>0,\exists\in\Omega:\abs{x-x_0}<\delta\text{ und }\abs{f\left( x\right)-f\left( x_0\right)}\geq\varepsilon$
+\todo[inline]{End big rounded parenthesis}
+
+\begin{definition}{4.24}
+\underline{Gleichmässig stetig:} \vspace{2mm}\\
+$f:\Omega\to\R^n$ heisst gleichmässig stetig falls für jede $\varepsilon>0$, ein $\delta>0$ gibt so dass $\forall x,x_0\in\Omega$
+\[\left\| {x - {x_0}} \right\| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+\underline{Stetig:} \vspace{2mm}\\
+$\forall x_0\in\omega$, $\forall \varepsilon>0$, $\exists\delta_{x_0,\varepsilon}>0$, $\forall x\in\Omega$:
+\[\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+\underline{Gleich stetig:} \vspace{2mm}\\
+$\forall \varepsilon>0$, $\exists\delta_{\varepsilon}>0$, $\forall x,x_0\in\Omega$:
+\[\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+Stetig: $\delta$ ist abhängig von $\varepsilon$ und $x_0$\\
+gleich. stetig:$\delta$ ist abhängig von $\varepsilon$, aber unabhängig con $x_0$
+\end{definition}
+
+\subsubsection*{Beispiel 4.25}
+\begin{enumerate}[I)]
+\item $\exp:\R\to\R$ ist nicht gleichmässig stetig \[\abs{\exp(x)-\exp\left( x_0\right)}=\abs{\exp\left( x-x_0\right)-1}\exp\left( x_0\right)\]
+Falls $x-x_0=\pm\delta$, $\delta\not=0$ und $x_0\to\infty$ dann
+\[\abs{\exp(x)-\exp\left( x_0\right)}\to\infty\]
+\item \begin{align*}
+f(x):\R&\to\R\\
+x&\to 2x+5
+\end{align*}
+Dann ist $f$ gleichmässigstetig
+\begin{beweis}{}
+Sei $\varepsilon>0$, $x_0,x\in\R$. Dann \[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {2x + 5 - 2{x_0} + 5} \right| = 2\left| {x - {x_0}} \right|\]
+$\Rightarrow$ Wenn wir $\delta=\frac{\varepsilon}{2}$ wählen, dann \[\left| {x - {x_0}} \right| < \frac{\varepsilon }{2} \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \] 
+\end{beweis}
+\item \begin{align*}
+f:\Omega&\to\Omega\hspace{5mm}\Omega=\left( 0,\infty\right)\\
+x&\to x^2
+\end{align*}
+$f$ ist stetig aber nicht gleichmässig stetig. 
+\begin{enumerate}[i)]
+\item $f$ stetig: Sei $x_0\in\R$, $\varepsilon>0$\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {{x^2} - x_0^2} \right| = \left| {\left( {x - {x_0}} \right)\left( {x + {x_0}} \right)} \right|\] Sei $\abs{x-x_0}<\varepsilon<1$. Dann, $x<x_0+1:=a$. Dann $x,x_0+1<a$
+\[\left| {{x^2} - x_0^2} \right| = \left| {x - {x_0}} \right|\left| {x + {x_0}} \right| < 2a\left| {x - {x_0}} \right|\]
+Wenn wir $\delta=\min\left(1,\frac{\varepsilon}{2a}\right)$ wählen dann \[\left| {x - x_0^2} \right| < 2a\left| {x - {x_a}} \right| \le \varepsilon \]
+\subsubsection*{Bemerkung}
+$f$ ist abhängig von $\varepsilon$, und $a$ ist $x_0+1$, abhängig von $x_0$.
+\item $f$ ist nicht gleichmässig stetig, d.h. \[\exists \varepsilon  > 0, \forall\delta>0, \exists x_0\in\Omega, \exists x\in\Omega:\abs{x-x_0}<\delta \text{ und }\abs{x^2-x_0^2}\geq \varepsilon\]
+Sei $\varepsilon=1$, $\delta>0$, $x_0=\frac{1}{\delta}$ und $x=x_0+\frac{\delta}{2}$. Dann $\abs{x-x_0}<\frac{\delta}{2}<\delta$ aber \[\left| {{x^2} - x_0^2} \right| = \left| {{{\left( {\frac{1}{\delta } + \frac{\delta }{2}} \right)}^2} - \frac{1}{{{\delta ^2}}}} \right| = 1 + \frac{{{\delta ^2}}}{4} > 1 = \varepsilon \]
+\end{enumerate}
+\item \begin{align*}
+f:\Omega&\to\Omega\hspace{5mm}\Omega=\lbrack 0,4\rbrack\\
+x&\to x^2
+\end{align*}
+Dann ist $f$ gleichmässig stetig
+\begin{beweis}{}
+Sei $\varepsilon>0$ gegeben. Sei $x_0,x\in\Omega=\lbrack 0,4\rbrack$, $0\leq x,x_0\leq 4\Rightarrow 0\leq x+x_0\leq 8$
+\begin{align*}
+\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| &= \left| {{x^2} - x_0^2} \right|\\
+ &= \left| {x - {x_0}} \right|\left| {x + {x_0}} \right| \le \left( {4 + 4} \right)\delta 
+\end{align*}
+Sei $\delta=\frac{\varepsilon}{8}$, dann 
+\[\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+\end{beweis}
+\item  \begin{align*}
+f:\left( 0,\infty\right)&\to\left( 0,\infty\right)\\
+x&\to \sqrt{x}
+\end{align*}
+ist gleichmässig stetig auf $\left( 0,\infty\right)$
+\begin{beweis}{}
+\todo[inline]{Ask for beweis! page 172 bottom}
+\end{beweis}
+\end{enumerate}
+
+Wir haben gesehen dass 
+ \begin{align*}
+f:\left( 0,\infty\right)&\to\left( 0,\infty\right)\\
+x&\to x^2
+\end{align*}
+nicht gleichmässig stetig ist, aber 
+ \begin{align*}
+f:\left[ 0,4\right]&\to\left[ 0,4\right]\\
+x&\to x^2
+\end{align*}
+ist gleichmässig stetig. Was ist die Unterschied? $\lbrack 0,4\rbrack$ ist kompakt, $\left( 0,\infty\right)$ nicht
+
+\subsubsection*{Satz 4.26}
+Sei $K\subset\R^d$ kompakt und $f:K\to\R^n$ stetig. Dann ist $f$ gleichmässig stetig.
+
+\begin{beweis}{(Indirekt)}
+Sonst es gibt $\varepsilon>0$ so dass für jedes $\delta>0$ Punkte $x,y\in k$ gibt mit \[\left\| {x - y} \right\| < \delta \hspace{5mm}\left| {f\left( x \right) - f\left( y \right)} \right| > \varepsilon \]
+Sei $\forall k\geq 1$, mit $\delta=\frac{1}{k}$, ein Paar $\left( x_k,y_k\right)$ gewählt so dass\[\left| {{x_k} - {y_k}} \right| < \frac{1}{k}{\text{ und }}\left| {f\left( {{x_k}} \right) - f\left( {{y_k}} \right)} \right| > \varepsilon \]
+Da $k$ kompakt ist, gibt eine konvergente Teilfolge $x_{l(k)}\to z$. Aus $\abs{x_k-y_k}<\frac{1}{k}$ folgt dass $y_{l(k)}\to z$. Sei nun $k_0$ so dass 
+\[\mathop {\left\| {f\left( {{x_{l\left( {{k_0}} \right)}}} \right) - f\left( z \right)} \right\|}\limits_{f{\text{ stetig}}} < \frac{\varepsilon }{2}\hspace{5mm}\forall k > {k_0}\]
+Dann folgt $\forall k>k_0$:
+\[\left\| {f\left( {{y_{l\left( {{k_0}} \right)}}} \right) - f\left( z \right)} \right\| \ge \left| {\underbrace {f\left( {{y_{l\left( k \right)}}} \right) - f\left( {{x_{l\left( k \right)}}} \right)}_{ > \varepsilon }} \right| - \left| {\underbrace {f\left( {{x_{l\left( k \right)}}} \right) - f\left( z \right)}_{ < \varepsilon /2}} \right| \ge \frac{\varepsilon }{2}\]
+\end{beweis}
+
+\section{Punktweise und gleichmässige Konvergenz}
+Sei $\Omega\subset\R^d$, $f,f_k:\Omega\to\R^n$
+
+\begin{definition}{4.28}
+$\left( f_k\right)_{k\geq 1}$ konvergiert punktweise gegen $f$ falls $\forall x\in\Omega$ \[\mathop {\lim }\limits_{k \to \infty } {f_k}\left( x \right) = f\left( x \right)\]
+$\forall x\in\Omega$, $\forall\varepsilon>0$, $\exists k_{\varepsilon,x}$ s.d. $\abs{f_k(x)-f(x)}<\varepsilon$, $\forall k>k_{\varepsilon,x}$. Es stellt sich die Frage ob $f$ stetig ist, falls alle $\left( f_k\right)_{k\geq 1}$ stetig sind
+\end{definition}
+\subsubsection*{Beispiel 4.30}
+Sei $f_k:\lbrack 0,1\rbrack\to\R$, $f_k(x)=x^k$, $k\geq 1$. Dann gilt 
+\begin{align*}0 \le x < 1:&\mathop {\lim }\limits_{k \to \infty } {x^k} = 0\\x = 1:&\mathop {\lim }\limits_{x \to \infty } {x^k} = 1
+\end{align*}
+Also konvergiert $\left( f_k\right)$ punktweise gegen 
+\[f(x) = \left\{ {\begin{array}{*{20}{r}}0&{0 \le x < 1}\\1&{x = 1}\end{array}} \right.\]
+Insbesondere ist $f\left( x\right)$ nicht stetig.
+
+\subsubsection*{Beispiel}
+%page 175 middle
