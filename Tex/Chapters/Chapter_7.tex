@@ -1,13 +1,16 @@
 \chapter{Gewöhnliche Differenzialgleichungen}
 Eine Gleichung, in der Ableitungen einer gesuchten Funktionen auftreten, nennt man Differentialgleichung.
-\[y'(t)=y+y^2\]
-\[\left( y'(t)\right)^2=y(t)+2\]
+\begin{align*}
+y'(t)&=y+y^2\\
+\left( y'(t)\right)^2&=y(t)+2
+\end{align*}
+
 Hängt die gesuchte Funktion in der DGL nur von einer einzigen Variablen ab, so spricht man von einer ``gewöhnlichen DGL''.\\
 
-\noindent Hängt hingegen die gesuchte Funktion von mehrere Variabeln ab, d.h. kommen partielle Ableitungen in der Differentialgleichung vor, so liegt eine ``partielle DGL'' vor. Viele physikalische Prozesse lassen sich oft durch Differenzialgleichungen beschreiben.
+Hängt hingegen die gesuchte Funktion von mehrere Variabeln ab, d.h. kommen partielle Ableitungen in der Differentialgleichung vor, so liegt eine ``partielle DGL'' vor. Viele physikalische Prozesse lassen sich oft durch Differenzialgleichungen beschreiben.
 \subsubsection*{Beispiel}
 \begin{enumerate}
-\item Ein lineares Federpendel wird durch folgende DGL beschrieben \[m\frac{d^2x}{dt^2}=-Kx\text{\hspace{10mm} mit K = Federkonstante}\]
+\item Ein lineares Federpendel wird durch folgende DGL beschrieben \[m\frac{d^2x}{dt^2}=-Kx \text{  mit K = Federkonstante}\]
 \begin{center}
 \begin{tikzpicture}
 \node[circle,fill=black,inner sep=1.5mm] (a) at (0,0) {};
@@ -51,10 +54,13 @@ Sei $m$ ein Massepunkt der unter Einfluss der Schwerkraft fällt. Es kann auch e
 
 Die Grösse der Reibungskraft ist proportional zur Geschwindigkeit. Dann ist, nach dem zweiten Newtonschen Gesetz \[m\ddot x = mg - a\dot x\text{\hspace{10mm}}v=\frac{dx}{dt}\]
 Beim Beispiel 2., haben wir schon letztes Semester gesehen dass \[\frac{df(t)}{dt}=-\alpha f\] als eine Lösung $Ke^{-\alpha t}$, $K\in\R$, hat
-\[f'=-\alpha f\Rightarrow \frac{f'}{f}=-\alpha\]
-\[\int{\frac{f'(t)}{f(t)}dt}=-\int{\alpha dt}\]
-\[\ln\left| f(t)\right|=-\alpha t+C\]
-\[\Rightarrow f(t)=Ke^{-\alpha t}\text{ mit }K={e^C}\]
+\begin{align*}
+f'=-\alpha f\Rightarrow \frac{f'}{f}&=-\alpha\\
+\int{\frac{f'(t)}{f(t)}dt}&=-\int{\alpha dt}\\
+\ln\left| f(t)\right|&=-\alpha t+C\\
+\Rightarrow f(t)&=Ke^{-\alpha t}\text{ mit }K={e^C}
+\end{align*}
+
 \end{enumerate}
 Alle drei Beispiele sind lineare DGL mit konstanten Koeffizienten.
 \section{Lineare DGL mit konstanten Koeffizienten}
@@ -81,11 +87,17 @@ Das \underline{charakteristische Polynom} der Gleichung (H) ist gegeben durch \[
 \subsubsection*{Lemma 7.3}
 Die Funktion $y(x)=e^{\lambda x}$ ist genau dann Lösung von (H), falls $p(\lambda)=0$
 \subsubsection*{Beweis}
-\[y(x)=e^{\lambda x}\]
-\[y'(x)=\lambda e^{\lambda x}\]
-\[y^j(x)=\lambda ^je^{\lambda x}\]
-Also mit \[=y^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\dots+a_0=(\lambda ^n+a_{n-1}\lambda ^{n-1}+\dots +a_0)e^x=\]
-\[\Leftrightarrow \lambda^n+a_{n-1}\lambda^{n-1}+\dots +a_0=p(\lambda)=0\]
+\begin{align*}
+y(x)&=e^{\lambda x}\\
+y'(x)&=\lambda e^{\lambda x}\\
+y^j(x)&=\lambda ^je^{\lambda x}
+\end{align*}
+Also mit 
+\begin{align*}
+&=y^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\dots+a_0\\
+&=(\lambda ^n+a_{n-1}\lambda ^{n-1}+\dots +a_0)e^x \\
+&\Leftrightarrow \lambda^n+a_{n-1}\lambda^{n-1}+\dots +a_0=p(\lambda)=0
+\end{align*}
 
 \subsubsection*{Satz 7.4}
 Sei $p(\lambda ) = \prod\limits_{i = 1}^l {{{(\lambda  - {\lambda _i})}^{{m_i}}}} $ mit $\lambda _j\in\mathbb{C}$, $\lambda_i\not=\lambda_j (i\not=j)$. Dann ist jede Lösung der zugehörigen HDGL darstellbar als Linearkombination der $n$ linear unabhängigen Funktionen $y_{ik}(x)=x^ke^{\lambda_ix}$, $1\leq i\leq l$, $0\leq k\leq m_i$.
@@ -107,16 +119,24 @@ $x^{k-1}e^{\alpha x}\cos\left(\beta x\right)$&\hspace{10mm}&$x^{k-1}e^{\alpha x}
 
 \subsubsection*{Beispiel 7.6}
 \begin{enumerate}
-\item \[y''-y=0\]
-\[p(\lambda)=\lambda^2-1=0=(\lambda-1)(\lambda+1)\]
-\[y(x)=c_1e^x+c_2e^{-x}\]
-\item \[y''+y=0\]
-\[p(\lambda)=\lambda^2+1=(\lambda+1)(\lambda-1)\]
-\[y(x)=c_1\cos x+c_2\sin x\]
-\item \[y^{(4)}+2y^{(2)}+y=0\]
-\[p(\lambda)=\lambda^4+2\lambda^2+1=0=(\lambda^2+1)^2=(\lambda-i)^2(\lambda+i)^2\]
+\item \begin{align*}
+y''-y&=0\\
+p(\lambda)&=\lambda^2-1=0=(\lambda-1)(\lambda+1)\\
+y(x)&=c_1e^x+c_2e^{-x}
+\end{align*}
+\item 
+\begin{align*}
+y''+y&=0\\
+p(\lambda)&=\lambda^2+1=(\lambda+1)(\lambda-1)\\
+y(x)&=c_1\cos x+c_2\sin x
+\end{align*}
+\item 
+\begin{align*}
+y^{(4)}+2y^{(2)}+y&=0\\
+p(\lambda)=\lambda^4+2\lambda^2+1&=0=(\lambda^2+1)^2=(\lambda-i)^2(\lambda+i)^2
+\end{align*}
 Also sinds $\cos x, \sin x, x\cos x,x\sin x$ Lösungen. \[y(x)=c_1\cos x+c_2 x\cos x+c_3\sin x+c_4 x\sin x\]
-\item \[y^{(4)}-y=0\]
+\item \[y^{(4)}-y=0\]%HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 \[p(\lambda)=t^4-1=(t^2-1)(t^2+1)=(t+1)(t-1)(t+i)(t-i)\]
 \[y(x)=c_1e^x+c_2e^{-x}+c_3\sin x+c_4\cos x\]
 \item \[2y''+20y'+48y=0\]

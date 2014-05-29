@@ -154,21 +154,37 @@ Die Summe \[U(f,P):=\sum\limits_{i = 1}^n {(\mathop {{\text{inf }}f}\limits_{[{x
 
 \begin{center}
 \begin{tikzpicture}
-\filldraw[draw=red, fill=red!10] (0,0) rectangle ++(2,2.65);
-\filldraw[draw=red, fill=red!10] (2,0) rectangle ++(3,2.71);
-\filldraw[draw=red, fill=red!10] (5,0) rectangle ++(1.5,2.35);
-\filldraw[draw=red, fill=red!10] (6.5,0) rectangle ++(3,5);
+%ORIGINAL COLORS
 
-\filldraw[draw=black, fill=black!10] (0,0) rectangle ++(2,2);
-\filldraw[draw=black, fill=black!10] (2,0) rectangle ++(3,2.5);
-\filldraw[draw=black, fill=black!10] (5,0) rectangle ++(1.5,2.2);
-\filldraw[draw=black, fill=black!10] (6.5,0) rectangle ++(3,4);
+%\def \myVar {10}
+%\definecolor{color1}{RGB}{240,19,37}
+%\definecolor{color2}{RGB}{31,29,28}
+%\definecolor{color3}{RGB}{62,43,255}
+%
+%
+\def \myVar {40}
+\definecolor{color1}{RGB}{175,175,175}
+\definecolor{color2}{RGB}{100,100,100}
+\definecolor{color3}{RGB}{10,10,10}
 
 
-\filldraw[draw=blue, fill=blue!10] (0,0) rectangle ++(2,1.38);
-\filldraw[draw=blue, fill=blue!10] (2,0) rectangle ++(3,2.12);
-\filldraw[draw=blue, fill=blue!10] (5,0) rectangle ++(1.5,2.09);
-\filldraw[draw=blue, fill=blue!10] (6.5,0) rectangle ++(3,2.35);
+
+
+\filldraw[draw=color1, fill=color1!\myVar] (0,0) rectangle ++(2,2.65);
+\filldraw[draw=color1, fill=color1!\myVar] (2,0) rectangle ++(3,2.71);
+\filldraw[draw=color1, fill=color1!\myVar] (5,0) rectangle ++(1.5,2.35);
+\filldraw[draw=color1, fill=color1!\myVar] (6.5,0) rectangle ++(3,5);
+
+\filldraw[draw=color2, fill=color2!\myVar] (0,0) rectangle ++(2,2);
+\filldraw[draw=color2, fill=color2!\myVar] (2,0) rectangle ++(3,2.5);
+\filldraw[draw=color2, fill=color2!\myVar] (5,0) rectangle ++(1.5,2.2);
+\filldraw[draw=color2, fill=color2!\myVar] (6.5,0) rectangle ++(3,4);
+
+
+\filldraw[draw=color3, fill=color3!\myVar] (0,0) rectangle ++(2,1.38);
+\filldraw[draw=color3, fill=color3!\myVar] (2,0) rectangle ++(3,2.12);
+\filldraw[draw=color3, fill=color3!\myVar] (5,0) rectangle ++(1.5,2.09);
+\filldraw[draw=color3, fill=color3!\myVar] (6.5,0) rectangle ++(3,2.35);
 
 % horizontal axis
 \draw[->] (-0.5,0) -- (10.5,0) node[anchor=north] {};
@@ -198,15 +214,14 @@ Die Summe \[U(f,P):=\sum\limits_{i = 1}^n {(\mathop {{\text{inf }}f}\limits_{[{x
 \draw[dotted, very thick] (6.05,0)--(6.05,2.2);
 \draw[dotted, very thick] (8.7,0)--(8.7,4);
 
-\draw	(9.5,4.5) node[anchor=west] {$\color{red}O(f,P)$}
-		(9.5,3.25) node[anchor=west] {$\color{black}S(f,P,\xi)$}
-		(9.5,1.25) node[anchor=west] {$\color{blue}U(f,P)$};
+\draw	(9.5,4.5) node[anchor=west] {$\color{color1}O(f,P)$}
+		(9.5,3.25) node[anchor=west] {$\color{color2}S(f,P,\xi)$}
+		(9.5,1.25) node[anchor=west] {$\color{color3}U(f,P)$};
 
 \draw (9.5,0)--(9.5,-0.5);
 
 \end{tikzpicture}
 \end{center}
-
 \end{enumerate}
 
 \subsubsection*{Bemerkung 6.2}
