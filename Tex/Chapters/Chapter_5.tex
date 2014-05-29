@@ -3,30 +3,38 @@
 \begin{definition}{5.1}
 Sei $f:\Omega\to\R$, $\Omega\subset\R$, und $x_0\in\Omega$
 \begin{enumerate}
-\item $f$ heisst differenzierbar an der Stelle $x_0$ falls 
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{x \to {x_0}}\\{x\not  = {x_0}}\end{array}} \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}\]
-existiert. Dieser Grenzwert wird dann mit $f'\left( x_0\right)$ oder $\frac{df}{dx}\left( x_0\right)$ bezeichnet. Die Zahl $f'\left( x_0\right)$ heisst die Ableitung oder das Differential von $f$ an der Stelle $x_0$
-\item $f$ heisst in $\Omega$ differenzierbar, falls sie an jeder Stelle $x_0\in\Omega$ differenzierbar. In diesem Fall, nennt sich die Funktion $x\to f'(x)$ Ableitung von $f$
+\item $f$ heisst differenzierbar an der Stelle $x_0$, falls
+\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{x \to {x_0}}\\
+{x\not  = {x_0}}
+\end{array}} \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}\]
+existiert. Dieser Grenzwert wird dann mit $f'\left( x_0\right)$ oder $\frac{df}{dx}\left( x_0\right)$ bezeichnet. Die Zahl $f'\left( x_0\right)$ heisst die Ableitung oder das Differential von $f$ an der Stelle $x_0$.
+\item $f$ heisst in $\Omega$ differenzierbar, falls sie an jeder Stelle $x_0\in\Omega$ differenzierbar ist. In diesem Fall, nennt sich die Funktion $x\to f'(x)$ Ableitung von $f$.
 \end{enumerate}
 \end{definition}
 \subsubsection*{Bemerkung 5.2}
-In der Definition 5.1, verlangen wir also, dass für jede in $\Omega \backslash\{ x_0\}$ erhaltene folge $\left( x_n\right)_{n\geq 1}$ mit Grenzwert $x_0$, der Limes 
+In der Definition 5.1 verlangen wir also, dass für jede in $\Omega \backslash\{ x_0\}$ enthaltene Folge $\left( x_n\right)_{n\geq 1}$ mit Grenzwert $x_0$, der Limes
+\[\mathop {\lim }\limits_{n \to \infty} \frac{{f\left( {x_n} \right) - f\left( {{x_0}} \right)}}{{x_n-x_0}} = 0\]
 \subsubsection*{Bemerkung 5.3}
-Sei $f$ differenzierbar in $x_0$ 
+Sei $f$ differenzierbar in $x_0$
 \missingfigure{Page 184 bottom}
 Dann ist \[\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}\] die Steigung der Geraden durch die Punkte $\left( x_0,f\left( x_0\right) \right)$ und $\left( x,f\left( x\right) \right)$.\\
 
-Geometrisch ist also $f'\left( x_0\right)$ die Steigung der Tangenten am Graphen von $f$ im Punkt $\left( x_0,f\left( x_0\right) \right)$. Diese Tangente hat die Gleichung 
+Geometrisch ist also $f'\left( x_0\right)$ die Steigung der Tangenten am Graphen von $f$ im Punkt $\left( x_0,f\left( x_0\right) \right)$. Diese Tangente hat die Gleichung
 \[T(x) = f'\left( {{x_0}} \right)\left( {x - {x_0}} \right) + f\left( {{x_0}} \right)\]
-Sei 
-\[f\left( x \right)= f'\left( {{x_0}} \right)\left( {x - {x_0}} \right) + f\left( {{x_0}} \right) + {R_{{x_0}}}\left( x \right) = T\left( x \right) + {R_{{x_0}}}\left( x \right)\]\[ \Rightarrow \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} = \frac{{f'\left( {{x_0}} \right)\left( {x - {x_0}} \right)}}{{x - {x_0}}} + \frac{{R\left( x \right)}}{{x - {x_0}}}\]
-Dann folgt 
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{x \to {x_0}}\\{x\not  = {x_0}}\end{array}} \frac{{R\left( x \right)}}{{x - {x_0}}} = 0\]
-Die Lineare Funktion $f\left( {{x_0}} \right) + f'\left( {{x_0}} \right)\left( {x - {x_0}} \right)$ stellt eine gute Approximation der Funktion $f(x)$ dar:\\
+Sei
+\[f\left( x \right)= f'\left( {{x_0}} \right)\left( {x - {x_0}} \right) + f\left( {{x_0}} \right) + {R_{{x_0}}}\left( x \right) = T\left( x \right) + {R_{{x_0}}}\left( x \right)\]
+\[ \Rightarrow \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} = \frac{{f'\left( {{x_0}} \right)\left( {x - {x_0}} \right)}}{{x - {x_0}}} + \frac{{R\left( x \right)}}{{x - {x_0}}}\]
+Dann folgt
+\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{x \to {x_0}}\\
+{x\not  = {x_0}}
+\end{array}} \frac{{R\left( x \right)}}{{x - {x_0}}} = 0\]
+Die lineare Funktion $f\left( {{x_0}} \right) + f'\left( {{x_0}} \right)\left( {x - {x_0}} \right)$ stellt eine gute Approximation der Funktion $f(x)$ dar:\\
 
 \noindent Es gilt
 \[f\left( x \right) = f\left( {{x_0}} \right) + f'\left( {{x_0}} \right)\left( {x - {x_0}} \right) + {R_{{x_0}}}\left( x \right)\]
-mit 
+mit
 \[\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( x \right)}}{{x - {x_0}}} = 0\]
 \missingfigure{page 186, very top}
 \subsubsection*{Beispiel 5.4}
@@ -35,172 +43,258 @@ mit
 f:\R&\to\R\\
 x&\to mx+b
 \end{align*}
-ist überall differenzierbar mit $f'\left( x\right)=m$, $\forall x\in\R$ 
-\begin{align*}f\left( x \right) - f\left( {{x_0}} \right)&= m\left( {x - {x_0}} \right)\\\mathop {\lim }\limits_{x \to {x_0}} \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}}&= m
+ist überall differenzierbar mit $f'\left( x\right)=m$, $\forall x\in\R$
+\begin{align*}
+f\left( x \right) - f\left( {{x_0}} \right)&= m\left( {x - {x_0}} \right)\\
+\mathop {\lim }\limits_{x \to {x_0}} \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}}&= m
 \end{align*}
-\item $f\left( x\right)=\abs{x}$ ist für alle $x_0\not=0$ differenzierbar aber nicht für $x_0=0$
-\[f\left( x \right) - f\left( 0 \right) = \left\{ {\begin{array}{*{20}{c}}x&{{\text{ für }}x \ge 0}\\{ - x}&{{\text{ für }}x \le 0}\end{array}} \right.\]
-Also ist \[\frac{{f\left( x \right) - f\left( 0 \right)}}{{x - 0}} = \left\{ {\begin{array}{*{20}{c}}1&{{\text{ fur }}x > 0}\\{ - 1}&{{\text{ fur }}x < 0}\end{array}} \right.\]
-Besitzt also keinen Grenzwert für $x\to 0$, $x\not=0$
-\item $\exp :\R\to\R$ ist überall auf $\R$ differenzierbar und $\exp'(x)=\exp(x)$. Sei $x_0\in\R$, $x_0\not=x=x_0+h\in\R$ 
-\begin{align*}\exp \left( {{x_0} + h} \right) - \exp \left( {{x_0}} \right)&= \exp \left( {{x_0}} \right)\left( {\exp \left( h \right) - 1} \right)\\\exp \left( h \right) - 1&= h + \frac{{{h^2}}}{{2!}} +  \ldots \\ \Rightarrow \frac{{\exp \left( h \right) - 1}}{h}&= 1 + \frac{h}{{2!}} + \frac{{{h^2}}}{{3!}}+\dots
+\item $f\left( x\right)=\abs{x}$ ist für alle $x_0\not=0$ differenzierbar, aber nicht für $x_0=0$
+\[f\left( x \right) - f\left( 0 \right) = \left\{ {\begin{array}{*{20}{c}}
+x&{{\text{ für }}x \ge 0}\\
+{ - x}&{{\text{ für }}x \le 0}
+\end{array}} \right.\]
+Also ist \[\frac{{f\left( x \right) - f\left( 0 \right)}}{{x - 0}} = \left\{ {\begin{array}{*{20}{c}}
+1&{{\text{ fur }}x > 0}\\
+{ - 1}&{{\text{ fur }}x < 0}
+\end{array}} \right.\]
+und besitzt also keinen Grenzwert für $x\to 0$, $x\not=0$
+\item $\exp :\R\to\R$ ist überall auf $\R$ differenzierbar und $\exp'(x)=\exp(x)$. Sei $x_0\in\R$, $x_0\not=x=x_0+h\in\R$
+\begin{align*}
+\exp \left( {{x_0} + h} \right) - \exp \left( {{x_0}} \right)&= \exp \left( {{x_0}} \right)\left( {\exp \left( h \right) - 1} \right)\\
+\exp \left( h \right) - 1&= h + \frac{{{h^2}}}{{2!}} +  \ldots \\
+ \Rightarrow \frac{{\exp \left( h \right) - 1}}{h}&= 1 + \frac{h}{{2!}} + \frac{{{h^2}}}{{3!}}+\dots
 \end{align*}
-Also 
-\begin{align*}\left| {\frac{{\exp \left( h \right) - 1}}{h} - 1} \right|&\le \left| h \right|\left[ {\frac{1}{{2!}} + \frac{{\left| h \right|}}{{3!}} + \frac{{{{\left| h \right|}^2}}}{{4!}} +  \ldots } \right]\\&\le \left| h \right|\left[ {1 + \left| h \right| + \frac{{{{\left| h \right|}^2}}}{{2!}} +  \ldots } \right]\\&\le \left| h \right|\exp \left( h \right)
+Also
+\begin{align*}
+\left| {\frac{{\exp \left( h \right) - 1}}{h} - 1} \right|&\le \left| h \right|\left[ {\frac{1}{{2!}} + \frac{{\left| h \right|}}{{3!}} + \frac{{{{\left| h \right|}^2}}}{{4!}} +  \ldots } \right]\\
+&\le \left| h \right|\left[ {1 + \left| h \right| + \frac{{{{\left| h \right|}^2}}}{{2!}} +  \ldots } \right]\\
+&\le \left| h \right|\exp \left( h \right)
 \end{align*}
-Woraus 
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{h \to 0}\\{h\not  = 0}\end{array}} \frac{{\exp \left( h \right) - 1}}{h} = 1\]
-und somit 
-\begin{align*}{\mathop{\rm exp'}\nolimits} \left( {{x_0}} \right)&= \mathop {\lim }\limits_{\begin{array}{*{20}{c}}{h \to 0}\\{h\not  = 0}\end{array}} \frac{{\exp \left( {{x_0} + h} \right) - \exp \left( {{x_0}} \right)}}{h}\\&= \mathop {\lim }\limits_{h \to 0} \exp \left( {{x_0}} \right)\left( {\frac{{\exp \left( h \right) - 1}}{h}} \right)\\&= \exp \left( {{x_0}} \right)
+Woraus
+\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{h \to 0}\\
+{h\not  = 0}
+\end{array}} \frac{{\exp \left( h \right) - 1}}{h} = 1\]
+und somit
+\begin{align*}
+{\mathop{\rm exp'}\nolimits} \left( {{x_0}} \right)&= \mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{h \to 0}\\
+{h\not  = 0}
+\end{array}} \frac{{\exp \left( {{x_0} + h} \right) - \exp \left( {{x_0}} \right)}}{h}\\
+&= \mathop {\lim }\limits_{h \to 0} \exp \left( {{x_0}} \right)\left( {\frac{{\exp \left( h \right) - 1}}{h}} \right)\\
+&= \exp \left( {{x_0}} \right)
 \end{align*}
-\item $\sin(x)$ und $\cos(x)$ sind überall differenzierbar und 
+folgt
+\item $\sin(x)$ und $\cos(x)$ sind überall differenzierbar und
 \begin{align*}
 \sin'&=\cos\\
 \cos'&=-\sin
 \end{align*}
-Aus der Additionsgesetzen:
+Mit den Additionsgesetzen:
 \begin{align*}
-\sin \left( {x + h} \right) - \sin \left( x \right) &= \sin \left( x \right)\cos \left( h \right) + \cos \left( x \right)\sin \left( h \right) - \sin \left( x \right)\\& = \sin \left( x \right)\left( {\cos \left( h \right) - 1} \right) + \cos \left( x \right)\sin \left( h \right)
+\sin \left( {x + h} \right) - \sin \left( x \right) &= \sin \left( x \right)\cos \left( h \right) + \cos \left( x \right)\sin \left( h \right) - \sin \left( x \right)\\
+& = \sin \left( x \right)\left( {\cos \left( h \right) - 1} \right) + \cos \left( x \right)\sin \left( h \right)
 \end{align*}
-Nun ist 
+Nun ist
 \[\mathop {\lim }\limits_{h \to 0} \frac{{\sin \left( h \right)}}{h} = 1\]
-und 
-\begin{align*}\frac{{\cos \left( h \right) - 1}}{h} &= \frac{{{{\cos }^2}\left( h \right) - 1}}{{h\left( {\cos \left( h \right) + 1} \right)}} = \frac{{{{\sin }^2}\left( h \right)}}{{h\left( {\cos \left( h \right) + 1} \right)}}\\& = \frac{1}{{\mathop {\cos \left( h \right) + 1}\limits_{\begin{array}{*{20}{c}} \downarrow \\{\frac{1}{2}}\end{array}} }} \cdot \frac{{{{\sin }^2}\left( h \right)}}{{\mathop h\limits_{\begin{array}{*{20}{c}} \downarrow \\0\end{array}} }}
+und
+\begin{align*}
+\frac{{\cos \left( h \right) - 1}}{h} &= \frac{{{{\cos }^2}\left( h \right) - 1}}{{h\left( {\cos \left( h \right) + 1} \right)}} = \frac{{{{\sin }^2}\left( h \right)}}{{h\left( {\cos \left( h \right) + 1} \right)}}\\
+& = \frac{1}{{\mathop {\cos \left( h \right) + 1}\limits_{\begin{array}{*{20}{c}}
+ \downarrow \\
+{\frac{1}{2}}
+\end{array}} }} \cdot \frac{{{{\sin }^2}\left( h \right)}}{{\mathop h\limits_{\begin{array}{*{20}{c}}
+ \downarrow \\
+0
+\end{array}} }}
 \end{align*}
 \todo[inline]{There is a sin h/h which doesn't seem to belong anywhere, page 188 bottom right corner}
-\begin{align*}\frac{{\sin \left( {x + h} \right) - \sin \left( x \right)}}{h} &= \sin \left( x \right)\left( {\frac{{\cos \left( h \right) - 1}}{h}} \right) + \cos \left( x \right)\frac{{\sin \left( h \right)}}{h}\\ \Rightarrow \mathop {\lim }\limits_{h \to 0} \frac{{\sin \left( {x + h} \right) - \sin \left( x \right)}}{h} &= \lim \left( {\sin \left( x \right)\mathop {\lim }\limits_{h \to 0} \left( {\frac{{\cos \left( h \right) - 1}}{h}} \right)} \right.\\&\left. { \hspace{3mm}+ \cos \left( x \right)\mathop {\lim }\limits_{h \to 0} \left( {\frac{{\sin \left( h \right)}}{h}} \right)} \right)\\ &= \sin \left( x \right)\lim \left( {\frac{{\cos \left( h \right) - 1}}{h}} \right)\\ &\hspace{3mm}+ \cos \left( x \right)\lim \left( {\frac{{\sin \left( h \right)}}{h}} \right)\\& = \left( {\sin \left( x \right)} \right) \cdot 0 + \left( {\cos \left( x \right)} \right) \cdot 1 = \cos \left( x \right)
-\end{align*}
-Analog 
 \begin{align*}
-\cos \left( {x + h} \right) - \cos \left( x \right) &= \cos \left( x \right)\cos \left( h \right) - \sin \left( x \right)\sin \left( h \right) - \cos \left( x \right)\\& = \cos \left( x \right)\left( {\cos \left( h \right) - 1} \right) + \sin \left( x \right)\sin \left( h \right)
+\frac{{\sin \left( {x + h} \right) - \sin \left( x \right)}}{h} &= \sin \left( x \right)\left( {\frac{{\cos \left( h \right) - 1}}{h}} \right) + \cos \left( x \right)\frac{{\sin \left( h \right)}}{h}\\
+ \Rightarrow \mathop {\lim }\limits_{h \to 0} \frac{{\sin \left( {x + h} \right) - \sin \left( x \right)}}{h} &= \lim \left( {\sin \left( x \right)\mathop {\lim }\limits_{h \to 0} \left( {\frac{{\cos \left( h \right) - 1}}{h}} \right)} \right.\\
+&\left. { \hspace{3mm}+ \cos \left( x \right)\mathop {\lim }\limits_{h \to 0} \left( {\frac{{\sin \left( h \right)}}{h}} \right)} \right)\\
+ &= \sin \left( x \right)\lim \left( {\frac{{\cos \left( h \right) - 1}}{h}} \right)\\
+ &\hspace{3mm}+ \cos \left( x \right)\lim \left( {\frac{{\sin \left( h \right)}}{h}} \right)\\
+& = \left( {\sin \left( x \right)} \right) \cdot 0 + \left( {\cos \left( x \right)} \right) \cdot 1 = \cos \left( x \right)
 \end{align*}
-Da wie oben $\frac{{\cos \left( h \right) - 1}}{h} \to 0$, $\frac{{\sin \left( h \right)}}{{\left( h \right)}} \to 1$ folgt $\cos'=-\sin$
+Analog
+\begin{align*}
+\cos \left( {x + h} \right) - \cos \left( x \right) &= \cos \left( x \right)\cos \left( h \right) - \sin \left( x \right)\sin \left( h \right) - \cos \left( x \right)\\
+& = \cos \left( x \right)\left( {\cos \left( h \right) - 1} \right) + \sin \left( x \right)\sin \left( h \right)
+\end{align*}
+Da wie oben $\frac{{\cos \left( h \right) - 1}}{h} \to 0$, $\frac{{\sin \left( h \right)}}{{\left( h \right)}} \to 1$, folgt $\cos'=-\sin$
 \end{enumerate}
-Der Zusammenhang zwischen differenzierbarkeit und stetigkeit ist
+Der Zusammenhang zwischen Differenzierbarkeit und Sstetigkeit ist:
 \subsubsection*{Satz 5.5}
-Sei $\Omega\subseteq\R$, $x_0\in\Omega$ und $f:\Omega\to\R$ in $x_0$ differenzierbar. Dann ist $f$ in $x_0$ stetig. (Also, ``Diff'' ist mehr als ``Stetigkeit'')
+Sei $\Omega\subseteq\R$, $x_0\in\Omega$ und $f:\Omega\to\R$ in $x_0$ differenzierbar. Dann ist $f$ in $x_0$ stetig. (Also ist ``Differenzierbarkeit'' ist mehr als ``Stetigkeit'')
 \begin{beweis}{}
-$f$ differenzierbar in $x_0$. Sei 
+$f$ differenzierbar in $x_0$. Sei
 \begin{align*}
 T:\Omega \backslash \left\{ {{x_0}} \right\}&\to\R\\
  x &\to \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}
 \end{align*}
-Da $f$ differenzierbar in $x_0$ ist, hat $T$ ein Grenzwert in $x_0$, und 
+Da $f$ differenzierbar in $x_0$ ist, hat $T$ ein Grenzwert in $x_0$, und
 \[\mathop {\lim }\limits_{x \to {x_0}} T\left( x \right) = f'\left( x \right)\]
-Für $x\not=x_0$ 
+Für $x\not=x_0$
 \[f\left( x \right) = T\left( x \right)\left( {x - {x_0}} \right) + f\left( {{x_0}} \right)\]
-$f\left( x \right)$ ist die Summe von 2 funktionen $T\left( x\right)\left( x-x_0\right)$ und $f\left( x_0\right)=$ konstant.\\
+$f\left( x \right)$ ist die Summe von zwei Funktionen $T\left( x\right)\left( x-x_0\right)$ und $f\left( x_0\right)=$ konstant.\\
 
-Da beide funktionen ein Grenzwert an der Stelle $x_0$ besitzen, hat auch $f$ eine Grenzwert in $x_0$ und 
-\begin{align*}\mathop {\lim }\limits_{x \to {x_0}} f\left( x \right)&= \mathop {\lim }\limits_{x \to {x_0}} \left( {T\left( x \right)} \right)\mathop {\lim }\limits_{x \to {x_0}} \left( {x - {x_0}} \right) + \mathop {\lim }\limits_{x \to {x_0}} f\left( {{x_0}} \right)\\&= f'\left( x \right) \cdot 0 + f\left( {{x_0}} \right)= f\left( {{x_0}} \right)\end{align*}
+Da beide Funktionen einen Grenzwert an der Stelle $x_0$ besitzen, hat auch $f$ einen Grenzwert in $x_0$ und
+\begin{align*}
+\mathop {\lim }\limits_{x \to {x_0}} f\left( x \right)&= \mathop {\lim }\limits_{x \to {x_0}} \left( {T\left( x \right)} \right)\mathop {\lim }\limits_{x \to {x_0}} \left( {x - {x_0}} \right) + \mathop {\lim }\limits_{x \to {x_0}} f\left( {{x_0}} \right)\\
+&= f'\left( x \right) \cdot 0 + f\left( {{x_0}} \right)= f\left( {{x_0}} \right)
+\end{align*}
 $\Rightarrow$ ist stetig in $x_0$.
 \end{beweis}
 \subsubsection*{Bemerkung}
-Die Umkehrung von Satz 5.5\todo{Add page + reference, page 190 middle} gilt nicht, z.B. $f\left( x \right)=\abs{x}$ ist stetig in $x=0$ aber nicht differenzierbar. 
+Die Umkehrung von Satz 5.5\todo{Add page + reference, page 190 middle} gilt nicht, z.B. $f\left( x \right)=\abs{x}$ ist stetig in $x=0$ aber nicht differenzierbar.
 
 \subsubsection*{Beispiel 5.6}
-Das folgende Beispiel zeigt dass, es stetige funktionen $f:\R\to\R$ gibt, die an keiner Stelle $x_0\in\R$ differenzierbar sind. (Von der Waerden (1930))\\
+Das folgende Beispiel zeigt, dass es stetige Funktionen $f:\R\to\R$ gibt, die an keiner Stelle $x_0\in\R$ differenzierbar sind. (Von der Waerden (1930))\\
 
-\noindent Sei für $x\in\R$ 
+\noindent Sei für $x\in\R$
 \begin{align*}
 <x> =&\text{Distanz von $x$ zur nächsten ganzen Zahl}\\
 =&\min\left\{ \left| x-m\right|:m\in\mathbb{Z}\right\}
 \end{align*}
-Der Graph von $<x>$ sieht so aus 
+Der Graph von $<x>$ sieht so aus
 \missingfigure{page 191 top}
-Graph von $\frac{10x}{10}$ 
+Graph von $\frac{10x}{10}$
 \missingfigure{Page 191, top to middle}
-Sei 
+Sei
 \[f\left( x \right): =  < x >  + \frac{{ < 10x > }}{{10}} + \frac{{ < {{10}^2}x > }}{{100}} +  \ldots \]
-Da 
+Da
 \[0 \le  < {10^n}x >  \le \frac{1}{2}\]
-folgt absolut konvergenz. Ausserdem sei 
+folgt absolute Konvergenz. Ausserdem sei
 \[{f_k}\left( x \right) = \sum\limits_{n = 0}^k {\frac{{ < {{10}^n}x > }}{{{{10}^n}}}} \]
-Dann ist 
+Dann ist
 \[\left| {f\left( x \right) - {f_k}\left( x \right)} \right| = \left| {\sum\limits_{n = k + 1}^\infty  {\frac{{ < {{10}^n}x > }}{{{{10}^n}}}} } \right| \le \frac{1}{2}\left| {\sum\limits_{n = k + 1}^\infty  {\frac{1}{{{{10}^n}}}} } \right| = \frac{1}{2} \cdot \frac{{{{10}^{ - k}}}}{9}\]
 $\forall k\geq 1$ ist $f_k:\R\to\R$ stetig. \\
 
-Da die Folge $\left( f_k\right)_{k\geq 1}$ gleichmässig gegen $f$ konvergiert ist $f$ stetig. Man kann zeigen, dass $f$ in keinem Punkt von $\R$ differenzierbar ist. \todo{End of beweis is put here, I think it is better if it stays up when the bsp begins. Page 192 middle}
+Da die Folge $\left( f_k\right)_{k\geq 1}$ gleichmässig gegen $f$ konvergiert, ist $f$ stetig. Man kann zeigen, dass $f$ in keinem Punkt von $\R$ differenzierbar ist. \todo{End of beweis is put here, I think it is better if it stays up when the bsp begins. Page 192 middle}
 \subsubsection*{Satz 5.7}
-Seien $f,g:\Omega\to\R$ Funktionen, $x_0\in\R$. Wir nehmen an dass $f$ und $g$ in $x_0$ differenzierbar sind. Dann sind $f+g$, $f\cdot g$ und falls $g\left( x_0\right)\not=0$ auch $f/g$\todo{Is this supposed to be a fraction?? page 192 bottom} an der Stelle $x_0$ differenzierbar. Es gelten dann folgende Formel:
+Seien $f,g:\Omega\to\R$ Funktionen, $x_0\in\R$. Wir nehmen an, dass $f$ und $g$ in $x_0$ differenzierbar sind. Dann sind $f+g$, $f\cdot g$ und falls $g\left( x_0\right)\not=0$ auch $f/g$\todo{Is this supposed to be a fraction?? page 192 bottom; limenet: yes, function f over function g} an der Stelle $x_0$ differenzierbar. Es gelten dann folgende Formeln:
 \begin{enumerate}
 \item $\left( {af + bg} \right)'\left( {{x_0}} \right) = af'\left( {{x_0}} \right) + bf'\left( {{x_0}} \right)\hspace{5mm}\forall a,b \in \R$
 \item $\left( {f \cdot g} \right)'\left( {{x_0}} \right) = f'\left( {{x_0}} \right) \cdot g\left( {{x_0}} \right) + f\left( {{x_0}} \right) \cdot g'\left( {{x_0}} \right)$
 \item $\left( {\frac{f}{g}} \right)'\left( {{x_0}} \right) = \frac{{f'\left( {{x_0}} \right) \cdot g\left( {{x_0}} \right) - f\left( {{x_0}} \right) \cdot g'\left( {{x_0}} \right)}}{{g{{\left( {{x_0}} \right)}^2}}}$
-\end{enumerate} 
+\end{enumerate}
 \begin{beweis}{}
 \begin{enumerate}
-\item Für $x\not=x_0$ 
+\item Für $x\not=x_0$
 \[\frac{{\left( {af + bg} \right)\left( x \right) - \left( {af + bg} \right)\left( {{x_0}} \right)}}{{x - {x_0}}} = a\left( {\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}} \right) + b\left( {\frac{{g\left( x \right) - g\left( {{x_0}} \right)}}{{x - {x_0}}}} \right)\]
-Da $f$ und $g$ in $x_0$ differenzierbar sind, folgt das $af+bg$ in $x_0$ differenzierbar ist und 
+Da $f$ und $g$ in $x_0$ differenzierbar sind, folgt, dass $af+bg$ in $x_0$ differenzierbar ist und
 \[\left( {af + bg} \right)\left( {{x_0}} \right) = af'\left( {{x_0}} \right) + bf'\left( {{x_0}} \right)\]
 \item \[f\left( x \right)g\left( x \right) - f\left( {{x_0}} \right)g\left( {{x_0}} \right) = g\left( x \right)\left[ {f\left( x \right) - f\left( {{x_0}} \right)} \right] + f\left( {{x_0}} \right)\left[ {g\left( x \right) - g\left( {{x_0}} \right)} \right]\]
 Durch $\left( x-x_0\right)$ dividiert
-\begin{align*}\frac{{f\left( x \right)g\left( x \right) - f\left( {{x_0}} \right)g\left( {{x_0}} \right)}}{{x - {x_0}}} =& \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}} \cdot g\left( {{x_0}} \right)\\ &+ \frac{{g\left( x \right) - g\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}} \cdot f\left( {{x_0}} \right)\end{align*}
+\begin{align*}
+\frac{{f\left( x \right)g\left( x \right) - f\left( {{x_0}} \right)g\left( {{x_0}} \right)}}{{x - {x_0}}} =& \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}} \cdot g\left( {{x_0}} \right)\\
+ &+ \frac{{g\left( x \right) - g\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}} \cdot f\left( {{x_0}} \right)
+\end{align*}
 Da $g$ in $x_0$ differenzierbar ist, ist $g$ in $x_0$ stetig und (Satz 5.5)\todo{Add reference + page number, page 194 middle}
 \[\mathop {\lim }\limits_{x \to {x_0}} g\left( x \right) = g\left( {{x_0}} \right)\]
-Die Formel folgt dann aus der differenzierbarkeit von $f$ und $g$ in $x_0$ 
-\item \begin{align*}\frac{{f\left( x \right)}}{{g\left( x \right)}} - \frac{{f\left( {{x_0}} \right)}}{{g\left( {{x_0}} \right)}} &= \frac{{f\left( x \right)g\left( {{x_0}} \right) - f\left( {{x_0}} \right)g\left( x \right)}}{{g\left( x \right)g\left( {{x_0}} \right)}}\\ &= \frac{{\left[ {f\left( x \right) - f\left( {{x_0}} \right)} \right]g\left( {{x_0}} \right) - f\left( {{x_0}} \right)\left[ {g\left( x \right) - g\left( {{x_0}} \right)} \right]}}{{g\left( x \right)g\left( {{x_0}} \right)}}\end{align*}
-Man dividiere duch $x-x_0$ und benutze die Stetigkeit von $g$ in $x_0$ 
+Die Formel folgt dann aus der Differenzierbarkeit von $f$ und $g$ in $x_0$
+\item \begin{align*}
+\frac{{f\left( x \right)}}{{g\left( x \right)}} - \frac{{f\left( {{x_0}} \right)}}{{g\left( {{x_0}} \right)}} &= \frac{{f\left( x \right)g\left( {{x_0}} \right) - f\left( {{x_0}} \right)g\left( x \right)}}{{g\left( x \right)g\left( {{x_0}} \right)}}\\
+ &= \frac{{\left[ {f\left( x \right) - f\left( {{x_0}} \right)} \right]g\left( {{x_0}} \right) - f\left( {{x_0}} \right)\left[ {g\left( x \right) - g\left( {{x_0}} \right)} \right]}}{{g\left( x \right)g\left( {{x_0}} \right)}}
+\end{align*}
+Man dividiere duch $x-x_0$ und benutze die Stetigkeit von $g$ in $x_0$
 \end{enumerate}
 \end{beweis}
 \subsubsection*{Beispiel 5.8}
 \begin{enumerate}
-\item $n\in\N$, $f_n\left( x\right)=x^n$ ist überall differenzierbar und $f'_n\left( x\right) = nx^{n-1}$ 
+\item $n\in\N$, $f_n\left( x\right)=x^n$ ist überall differenzierbar und $f'_n\left( x\right) = nx^{n-1}$
 \begin{beweis}{}
 Induktion: $f_0\left( x\right) = 1$ $\forall x$ \[f'_0\left( x\right) = 0 \left( = 0\cdot x^{-1}\right)\]
 \begin{itemize}
 \item $f_1\left( x\right) = x$, $\forall x$
 \item $f'_1\left( x\right) = 1 = 1\cdot x^{1-1}$ $\checkmark$
 \end{itemize}
-Sei $n\geq 2$. Wir nehmen an dass die Formel für $n-1$ gilt, i.e. 
-\begin{align*}f{'_{n - 1}}\left( x \right) =& \left( {{x^{n - 1}}} \right)' = \left( {n - 1} \right){x^{n - 2}}\\{f_n}\left( x \right) =&  {x^n} = x \cdot {x^{n - 1}} = x \cdot {f_{n - 1}}\left( x \right)\end{align*}
+Sei $n\geq 2$. Wir nehmen an, dass die Formel für $n-1$ gilt, i.e.
+\begin{align*}
+f{'_{n - 1}}\left( x \right) =& \left( {{x^{n - 1}}} \right)' = \left( {n - 1} \right){x^{n - 2}}\\
+{f_n}\left( x \right) =&  {x^n} = x \cdot {x^{n - 1}} = x \cdot {f_{n - 1}}\left( x \right)
+\end{align*}
 Nach 2., Satz 5.7 \todo{Add reference + page number, page 195 middle to bottom}
-\begin{align*}f{'_n}\left( x \right) &= \left( x \right)'{f_{n - 1}}\left( x \right) + xf{'_{n - 1}}\left( x \right)\\ &= {f_{n - 1}}\left( x \right) + x\left( {n - 1} \right){x^{n - 2}}\\ &= {x^{n - 1}} + \left( {n - 1} \right){x^{n - 1}} = n{x^{n - 1}}
+\begin{align*}
+f{'_n}\left( x \right) &= \left( x \right)'{f_{n - 1}}\left( x \right) + xf{'_{n - 1}}\left( x \right)\\
+ &= {f_{n - 1}}\left( x \right) + x\left( {n - 1} \right){x^{n - 2}}\\
+ &= {x^{n - 1}} + \left( {n - 1} \right){x^{n - 1}} = n{x^{n - 1}}
 \end{align*}
 \end{beweis}
 \item \begin{align*}
 p(x)&=a_nx^n+a_{n-1}x^{n-1}+\dots+a_0\\
 p'(x)&=na_nx^{n-1}+\left( n-1\right)a_{n-1}x^{n-2}+\dots+a_1
 \end{align*}
-Insbesondere ist die Ableitung eines Polynom von Grad $n$ ein Polynom von Grad $\left( n-1\right)$, $n\geq 1$.
-\item Sei $R(x)=\frac{p(x)}{q(x)}$, wobei $p,q$ polynome bezeichnen. $R(x)$ ist eine sogenannte rationale Funktion mit Definitionsbereich 
+Insbesondere ist die Ableitung eines Polynoms von Grad $n$ ein Polynom von Grad $\left( n-1\right)$, $n\geq 1$.
+\item Sei $R(x)=\frac{p(x)}{q(x)}$, wobei $p,q$ Polynome bezeichnen. $R(x)$ ist eine sogenannte rationale Funktion mit Definitionsbereich
 \[\Omega = \left\{ x\in\R : q(x)\not=0\right\}\]
 \[R'(x) = \frac{{p'(x)q(x) - p(x)q'(x)}}{{{q^2}(x)}}\]
 z.B. \[R(x) = \frac{{{x^3} + 1}}{{x - 1}}\]
-\begin{align*}R(x) &= \frac{{\left( {3{x^2}} \right)\left( {x - 1} \right) - \left( {{x^3} + 1} \right)}}{{{{\left( {x - 1} \right)}^2}}}\\ &= \frac{{3{x^3} - 3{x^2} - {x^3} - 1}}{{{{\left( {x - 1} \right)}^2}}}\\
- &= \frac{{2{x^3} - 3{x^2} - 1}}{{{{\left( {x - 1} \right)}^2}}}\end{align*}
+\begin{align*}
+R(x) &= \frac{{\left( {3{x^2}} \right)\left( {x - 1} \right) - \left( {{x^3} + 1} \right)}}{{{{\left( {x - 1} \right)}^2}}}\\
+ &= \frac{{3{x^3} - 3{x^2} - {x^3} - 1}}{{{{\left( {x - 1} \right)}^2}}}\\
+ &= \frac{{2{x^3} - 3{x^2} - 1}}{{{{\left( {x - 1} \right)}^2}}}
+\end{align*}
 \end{enumerate}
-Die nächste Rechenregel wird uns erlauben Funktionen wie z.B. $\exp\left( x^3+1\right)$, $\sin\left( x^2\right)$ abzuleiten
+Die nächste Rechenregel wird uns erlauben, Funktionen wie z.B. $\exp\left( x^3+1\right)$ und $\sin\left( x^2\right)$ abzuleiten
 
 \subsubsection*{Satz 5.9 (Kettenregel)}
-Seien $f:\Omega\to\R$, $g:T\to\R$ Funktionen mit $f\left( \Omega\right)\subset T$, und $x_0\in\Omega$. Wir nehmen an, dass $f$ an der Stelle $x_0$ und $g$ an der Stelle $f\left( x_0\right)$, differenzierbar sind. Dann ist $g\circ f:\Omega\to\R$ an der Stelle $x_0$ differenzierbar und 
+Seien $f:\Omega\to\R$, $g:T\to\R$ Funktionen mit $f\left( \Omega\right)\subset T$, und $x_0\in\Omega$. Wir nehmen an, dass $f$ an der Stelle $x_0$ und $g$ an der Stelle $f\left( x_0\right)$, differenzierbar sind. Dann ist $g\circ f:\Omega\to\R$ an der Stelle $x_0$ differenzierbar und
 \[\left( {g\circ f} \right)'\left( {{x_0}} \right) = g'\left( {f\left( {{x_0}} \right)} \right)f'\left( {{x_0}} \right)\]
 
 \subsubsection*{Bemerkung}
-$f$ ist differenzierbar in $x_0$ falls 
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{x \to {x_0}}\\{x\not  = {x_0}}\end{array}} \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}\]
-existiert, d.h. für jede in $\Omega\backslash\{ x_0\}$ enthaltene folge $\left( x_n\right)_{n\geq 1}$ mit Grenzwert $x_0$, der limes 
-\[\mathop {\lim }\limits_{n \to \infty } \frac{{f\left( {{x_n}} \right) - f\left( {{x_0}} \right)}}{{{x_n} - {x_0}}}\] existiert
+$f$ ist differenzierbar in $x_0$, falls
+\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{x \to {x_0}}\\
+{x\not  = {x_0}}
+\end{array}} \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}\]
+existiert, d.h. für jede in $\Omega\backslash\{ x_0\}$ enthaltene Folge $\left( x_n\right)_{n\geq 1}$ mit Grenzwert $x_0$, existiert der Limes
+\[\mathop {\lim }\limits_{n \to \infty } \frac{{f\left( {{x_n}} \right) - f\left( {{x_0}} \right)}}{{{x_n} - {x_0}}}\]
 
 \begin{beweis}{}
-Sei $\left( x_n\right)_{n\geq 1}$ mit $\lim x_n=x_0$, $x_n\not=x_0$. Dann gilt 
+Sei $\left( x_n\right)_{n\geq 1}$ mit $\lim x_n=x_0$, $x_n\not=x_0$. Dann gilt
 \[\lim f\left( x_n\right) = f\left( x_0\right)\]
 (Nach Satz 5.5 \todo{Add reference + page number, page 198 top} $f$ differenzierbar $\Rightarrow$ $f$ stetig (in $x_0$)).\\
 
-\noindent Sei $y_n:=f\left( x_n\right)$ $\left( y_0:=f\left( x_0\right)\right)$. Wir nehmen an dass $y_n\not=f\left( x_0\right)$, $\forall n$. Dann folgt 
-\begin{align*}\frac{{\left( {g \circ f} \right)\left( {{x_n}} \right) - \left( {g \circ f} \right)\left( {{x_0}} \right)}}{{{x_n} - {x_0}}} &= \frac{{g\left( {f\left( {{x_n}} \right)} \right) - g\left( {f\left( {{x_0}} \right)} \right)}}{{x - {x_0}}}\\&= \left( {\frac{{g\left( {f\left( {{x_n}} \right)} \right) - g\left( {f\left( {{x_0}} \right)} \right)}}{{f\left( {{x_n}} \right) - f\left( {{x_0}} \right)}}} \right) \cdot \left( {\frac{{f\left( {{x_n}} \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}} \right)\\& = \mathop {\left( {\frac{{g\left( {{y_n}} \right) - g\left( {{x_0}} \right)}}{{{y_n} - {y_0}}}} \right)}\limits_{\begin{array}{*{20}{c}}{\begin{array}{*{20}{c}} \downarrow &{\mathop {\lim }\limits_{n \to \infty } }\end{array}}\\{\begin{array}{*{20}{c}}{g'\left( {{y_0}} \right)}&{{\text{         }}}\end{array}}\end{array}}  \cdot \mathop {\left( {\frac{{f\left( {{x_n}} \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}} \right)}\limits_{\begin{array}{*{20}{c}}{\begin{array}{*{20}{c}} \downarrow &{\mathop {\lim }\limits_{n \to \infty } }\end{array}}\\{\begin{array}{*{20}{c}}{f'\left( {{x_0}} \right)}&{{\text{         }}}\end{array}}\end{array}} \\&\hspace{-1.5mm}\mathop  = \limits^{n \to \infty } g'\left( {f\left( {{x_0}} \right)} \right)f'\left( {{x_0}} \right)\end{align*}
+\noindent Sei $y_n:=f\left( x_n\right)$ $\left( y_0:=f\left( x_0\right)\right)$. Wir nehmen an, dass $y_n\not=f\left( x_0\right)$, $\forall n$. Dann folgt
+\begin{align*}
+\frac{{\left( {g \circ f} \right)\left( {{x_n}} \right) - \left( {g \circ f} \right)\left( {{x_0}} \right)}}{{{x_n} - {x_0}}} &= \frac{{g\left( {f\left( {{x_n}} \right)} \right) - g\left( {f\left( {{x_0}} \right)} \right)}}{{x - {x_0}}}\\
+&= \left( {\frac{{g\left( {f\left( {{x_n}} \right)} \right) - g\left( {f\left( {{x_0}} \right)} \right)}}{{f\left( {{x_n}} \right) - f\left( {{x_0}} \right)}}} \right) \cdot \left( {\frac{{f\left( {{x_n}} \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}} \right)\\
+& = \mathop {\left( {\frac{{g\left( {{y_n}} \right) - g\left( {{x_0}} \right)}}{{{y_n} - {y_0}}}} \right)}\limits_{\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+ \downarrow &{\mathop {\lim }\limits_{n \to \infty } }
+\end{array}}\\
+{\begin{array}{*{20}{c}}
+{g'\left( {{y_0}} \right)}&{{\text{         }}}
+\end{array}}
+\end{array}}  \cdot \mathop {\left( {\frac{{f\left( {{x_n}} \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}} \right)}\limits_{\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+ \downarrow &{\mathop {\lim }\limits_{n \to \infty } }
+\end{array}}\\
+{\begin{array}{*{20}{c}}
+{f'\left( {{x_0}} \right)}&{{\text{         }}}
+\end{array}}
+\end{array}} \\
+&\hspace{-1.5mm}\mathop  = \limits^{n \to \infty } g'\left( {f\left( {{x_0}} \right)} \right)f'\left( {{x_0}} \right)
+\end{align*}
 \end{beweis}
 \subsubsection*{Beispiel 5.10}
 \begin{enumerate}
 \item Berechne die Ableitung von $\exp\left( x^3+1\right)$
-\[\begin{array}{*{20}{l}}{g\left( x \right) = \exp \left( x \right)}&{f\left( x \right) = {x^3} + 1}\\{g'\left( x \right) = \exp \left( x \right)}&{f'\left( x \right) = 3{x^2}}\end{array}\]
+\[\begin{array}{*{20}{l}}
+{g\left( x \right) = \exp \left( x \right)}&{f\left( x \right) = {x^3} + 1}\\
+{g'\left( x \right) = \exp \left( x \right)}&{f'\left( x \right) = 3{x^2}}
+\end{array}\]
 \begin{align*}
 \left( g\circ f\right) \left( x\right) &= \exp\left( x^3+1\right)\\
 \left( g\circ f\right)' \left( x\right) &= g'\left( f\left( x\right)\right)\cdot f'\left( x\right)=\left[ \exp\left( x^3+1\right) \right]\cdot 3x^2
 \end{align*}
-\item \[ \left( \sin\left( x^2\right) \right)'=\left( g\circ f\right)'\left( x\right)\] mit 
-\[\begin{array}{*{20}{l}}{g\left( x \right) = \sin \left( x \right)}&{f\left( x \right) = {x^2}}\\{g'\left( x \right) = \cos \left( x \right)}&{f'\left( x \right) = 2x}\end{array}\]
+\item \[ \left( \sin\left( x^2\right) \right)'=\left( g\circ f\right)'\left( x\right)\] mit
+\[\begin{array}{*{20}{l}}
+{g\left( x \right) = \sin \left( x \right)}&{f\left( x \right) = {x^2}}\\
+{g'\left( x \right) = \cos \left( x \right)}&{f'\left( x \right) = 2x}
+\end{array}\]
 \[\left( \sin\left( x^2\right) \right)'=\cos\left( x^2\right)\cdot 2x\]
 \item \[\left( {{{\left( {3{x^7} + 11{x^6} + 5} \right)}^2}} \right)' = 2\left( {3{x^7} + 11{x^6} + 5} \right) \cdot \left( {21{x^6} + 66{x^5}} \right)\]
 \item Sei $g:\R\to\R$ differenzierbar und $n\in\N$ \[ f\left( x\right) = g\left( x\right)^n\]
@@ -214,7 +308,7 @@ Dann ist \[f'\left( x\right)=ng\left( x\right)^{n-1}\cdot g'\left( x\right)\]
 \section{Der Mittelwertsatz und Folgerungen}
 Wichtige Informationen über eine Funktion $f$ lassen sich leicht aus der Ableitung schliessen. Dies geschieht mittels dem Mittelwertsatz . Ein Spezialfalls der Mittelwertsatz ist
 \subsubsection*{Satz 5.12}
-Sei $f:\lbrack a,b\rbrack\to\R$ stetig und auf $\left( a,b\right)$ differenzierbar. Sei $z_+\in\lbrack a,b\rbrack$ mit $f\left( z_+\right) =\max\left\{ f\left( x\right) : x\in\lbrack a,b\rbrack\right\}$. Wir nehmen an dass $z_+\in\left( a,b\right)$. Dann gilt $f'\left( z_+\right) = 0$ Eine Analog Aussage gilt für $z$
+Sei $f:\lbrack a,b\rbrack\to\R$ stetig und auf $\left( a,b\right)$ differenzierbar. Sei $z_+\in\lbrack a,b\rbrack$ mit $f\left( z_+\right) =\max\left\{ f\left( x\right) : x\in\lbrack a,b\rbrack\right\}$. Wir nehmen an, dass $z_+\in\left( a,b\right)$. Dann gilt $f'\left( z_+\right) = 0$ Eine analoge Aussage gilt für $z$.
 \subsubsection*{Bemerkung 5.13}
 \begin{enumerate}
 \item $z_+$, $z_-$ existieren nach Satz 4.9
@@ -222,17 +316,20 @@ Sei $f:\lbrack a,b\rbrack\to\R$ stetig und auf $\left( a,b\right)$ differenzierb
 \end{enumerate}
 
 \begin{beweis}{}
-Sei $z_+\in\left( a,b\right)$. Da $\left( a,z_+\right)\not=\varnothing$, $\left( z_+,b\right)\not=\varnothing$ gibt es 
+Sei $z_+\in\left( a,b\right)$. Da $\left( a,z_+\right)\not=\varnothing$ und $\left( z_+,b\right)\not=\varnothing$, gibt es
 \[\left( x_n\right)_{n\geq 1}\subset\left( a,z_+\right)\]
 sowie
 \[\left( y_n\right)_{n\geq 1}\subset\left( z_+,b\right)\]
-mit 
+mit
 \[\mathop {\lim }\limits_{n \to \infty } {x_n} = {z_ + } = \mathop {\lim }\limits_{n \to \infty } {y_n}\]
 $\left( \text{z.B. }{x_n} = {z_ + } - \frac{1}{n}, {y_n} = {z_ + } + \frac{1}{n}\right)$\\
 
-Für $n\geq 1$ folgt 
+Für $n\geq 1$ folgt
 
-\begin{align*}f'\left( {{z_ + }} \right) &= \mathop {\lim }\limits_{n \to \infty } \frac{{\overbrace {f\left( {{x_n}} \right) - f\left( {{z_ + }} \right)}^{ < 0}}}{{\underbrace {{x_n} - {z_ + }}_{ < 0}}} \ge 0\\f\left( {{z_ + }} \right) &= \max \left\{ {f\left( x \right)} \right\}\\f'\left( {{z_ + }} \right) &= \mathop {\lim }\limits_{n \to \infty } \frac{{\overbrace {f\left( {{y_n}} \right) - f\left( {{z_ + }} \right)}^{ < 0}}}{{\underbrace {{y_n} - {z_ + }}_{ > 0}}} \le 0
+\begin{align*}
+f'\left( {{z_ + }} \right) &= \mathop {\lim }\limits_{n \to \infty } \frac{{\overbrace {f\left( {{x_n}} \right) - f\left( {{z_ + }} \right)}^{ < 0}}}{{\underbrace {{x_n} - {z_ + }}_{ < 0}}} \ge 0\\
+f\left( {{z_ + }} \right) &= \max \left\{ {f\left( x \right)} \right\}\\
+f'\left( {{z_ + }} \right) &= \mathop {\lim }\limits_{n \to \infty } \frac{{\overbrace {f\left( {{y_n}} \right) - f\left( {{z_ + }} \right)}^{ < 0}}}{{\underbrace {{y_n} - {z_ + }}_{ > 0}}} \le 0
 \end{align*}
 Woraus \[ f'\left( z_+\right) = 0\] folgt.
 \end{beweis}
@@ -242,40 +339,42 @@ Sei $f:\lbrack a,b\rbrack\to\R$ stetig und auf $\left( a,b\right)$ differenzierb
 \missingfigure{Page 203 middle}
 
 \begin{beweis}{}
-Die Idee ist sich auf den Fall $f(a)=f(b)=0$ züruckführen und dann der Satz 5.12\todo{Add reference + page number} anwenden. Die Gleichung für die sekante durch die Punkte $\left( a,f(a)\right)$, $\left( b,f\left( b\right)\right)$ ist 
+Die Idee lässt sich auf den Fall $f(a)=f(b)=0$ züruckführen und dann den Satz 5.12\todo{Add reference + page number} anwenden. Die Gleichung für die Sekante durch die Punkte $\left( a,f(a)\right)$, $\left( b,f\left( b\right)\right)$ ist
 \[S\left( x \right) = \left( {x - a} \right)\left( {\frac{{f\left( b \right) - f(a)}}{{b - a}}} \right) + f\left( a \right)\]
 Sei nun $g(x)=f(x)-S(x)$. Dann ist $g(a)=0=g(b)$\\
 
-\noindent\underline{Fall 1:} $g$ ist identisch $=0$. Also $f(x)=S(x)$ eine Gerade und die Aussage Stimmt $\forall x_0\in\left( a,b\right)$ \\
+\noindent\underline{Fall 1:} $g$ ist identisch $=0$. Also ist $f(x)=S(x)$ eine Gerade und die Aussage stimmt $\forall x_0\in\left( a,b\right)$ \\
 
-\noindent\underline{Fall 2:} $g\not=0$. Also ist entweder 
+\noindent\underline{Fall 2:} $g\not=0$. Also ist entweder
 \[\mathop {\max }\limits_x g(x) > 0\text{ }\left(\text{oder }\mathop {\min }\limits_x g(x) < 0\right)\]
-Im ``$\max$'' Fall sei $z_+$ mit 
+Im ``$\max$''-Fall sei $z_+$ mit
 \[g\left( {{z_ + }} \right) = \max \left\{ {g(x):x \in \left[ {a,b} \right]} \right\}\]
 Dann ist $ {{z_ + }} \in\left( a,b\right)$ (Da $g(a)=g(b)=0$, und $g\left( {{z_ + }} \right) >0$) und nach Satz 5.12\todo{Add reference + page number, page 205 very top} $g'\left( z_+\right)=0$, d.h.
-\begin{align*}g\left( {{z_ + }} \right) &= f'\left( {{z_ + }} \right) - S'\left( {{z_ + }} \right) = 0\\ \Rightarrow f'\left( {{z_ + }} \right) &= S'\left( {{z_ + }} \right) = \frac{{f\left( b \right) - f\left( a \right)}}{{b - a}}
+\begin{align*}
+g\left( {{z_ + }} \right) &= f'\left( {{z_ + }} \right) - S'\left( {{z_ + }} \right) = 0\\
+ \Rightarrow f'\left( {{z_ + }} \right) &= S'\left( {{z_ + }} \right) = \frac{{f\left( b \right) - f\left( a \right)}}{{b - a}}
 \end{align*}
-Der ``$\min$'' Fall ist Analog.
+Der ``$\min$''-Fall ist analog.
 \end{beweis}
-Als erste Anwendung haben wir 
+Als erste Anwendung haben wir
 \subsubsection*{Korollar 5.15}
 Sei $f:\lbrack a,b\rbrack\to\R$ wie im Satz 5.14\todo{Add reference + page number, page 205 middle to bottom}
 \begin{enumerate}
-\item Falls $f'(x)=0$, $\forall x\in\left( a,b\right)$ folgt dass $f$ konstant ist.
-\item Falls $f'(x)\geq 0$, $\forall x\in\left( a,b\right)$ so ist $f$ monotone wachsend.
+\item Falls $f'(x)=0$, $\forall x\in\left( a,b\right)$ folgt, dass $f$ konstant ist.
+\item Falls $f'(x)\geq 0$, $\forall x\in\left( a,b\right)$ so ist $f$ monoton wachsend.
 \item Falls $f'(x)> 0$, $\forall x\in\left( a,b\right)$ so ist $f$ streng monoton wachsend.
-\item Falls $f'(x)\leq 0$, $\forall x\in\left( a,b\right)$ so ist $f$ monotone fallend.
+\item Falls $f'(x)\leq 0$, $\forall x\in\left( a,b\right)$ so ist $f$ monoton fallend.
 \item Falls $f'(x)< 0$, $\forall x\in\left( a,b\right)$ so ist $f$ streng monoton fallend.
 \end{enumerate}
 
 \begin{beweis}{}
 \begin{enumerate}
-\item Seien $a\leq x<y\leq b$ beliebig und sei (nach mittelwertsatz) $x_0\in\left( x,y\right)$ mit 
+\item Seien $a\leq x<y\leq b$ beliebig und sei (nach Mittelwertsatz) $x_0\in\left( x,y\right)$ mit
 \[\frac{{f\left( y \right) - f\left( x \right)}}{{y - x}} = f'\left( {{x_0}} \right)\]
 da $f'\left( x_0\right)$ folgt $f\left( y\right)=f(x)\Rightarrow f$ ist konstant
-\item Seien $a\leq x<y\leq b$ beliebig und  $x_0\in\left( x,y\right)$ mit 
+\item Seien $a\leq x<y\leq b$ beliebig und  $x_0\in\left( x,y\right)$ mit
 \[\frac{{f\left( y \right) - f\left( x \right)}}{{y - x}} = f'\left( {{x_0}}>0 \right)\]
-woraus folgt  $f\left( y\right)\geq f(x)$  folgt $\Rightarrow f$ monotone wachsend.
+woraus folgt  $f\left( y\right)\geq f(x)$  folgt $\Rightarrow f$ monoton wachsend.
 \item Analog
 \item Analog
 \end{enumerate}
@@ -283,22 +382,32 @@ woraus folgt  $f\left( y\right)\geq f(x)$  folgt $\Rightarrow f$ monotone wachse
 
 \subsubsection*{Beispiel 5.16}
 \begin{enumerate}
-\item Bestimme alle differenzierbar Funktionen $f:\R\to\R$ mit $f'=\lambda f$. Offensichtlich erfüllt $t\to e^{\lambda t}$ dieser Gleichung 
+\item Bestimme alle differenzierbare Funktionen $f:\R\to\R$ mit $f'=\lambda f$. Offensichtlich erfüllt $t\to e^{\lambda t}$ diese Gleichung
 \begin{align*}
 f\left( t\right)&=e^{\lambda t}\\
 f'\left( t\right)&=\lambda e^{\lambda t}=\lambda f\left( t\right)
 \end{align*}
-Betrachten wir 
+Betrachten wir
 \begin{align*}
-g'\left( t\right)&=e^{-\lambda t}f\left( t\right)\\g'\left( t \right) &=  - \lambda {e^{ - \lambda t}}f\left( t \right) + {e^{ - \lambda t}}f'\left( t \right)\\ &= {e^{ - \lambda t}}\left( { - \lambda f\left( t \right) + f'\left( t \right)} \right)\\ &= {e^{ - \lambda t}}\left( 0 \right)\forall t\\ &= 0
+g'\left( t\right)&=e^{-\lambda t}f\left( t\right)\\
+g'\left( t \right) &=  - \lambda {e^{ - \lambda t}}f\left( t \right) + {e^{ - \lambda t}}f'\left( t \right)\\
+ &= {e^{ - \lambda t}}\left( { - \lambda f\left( t \right) + f'\left( t \right)} \right)\\
+ &= {e^{ - \lambda t}}\left( 0 \right)\forall t\\
+ &= 0
 \end{align*}
-Also folgt dass $g$ konstant ist, d.h. 
+Also folgt, dass $g$ konstant ist, d.h.
 \[g\left( t \right) = C \Rightarrow f\left( t \right) = C{e^{\lambda t}}\]
-\underline{Anders sagt:} Die Menge der Lösungen von $f'=\lambda f$ ist ein $1-$dimensionales Vektorraum
+\underline{Anders gesagt:} Die Menge der Lösungen von $f'=\lambda f$ ist ein $1-$dimensionaler Vektorraum
 \[V = \left\{ {f:\R \to\R \mid f' = \lambda f} \right\} = \left\{ {C{e^{\lambda t}}\mid c \in \R} \right\}\]
-\item \begin{align*}f\left( x \right) &= \frac{{2x}}{{1 + {x^2}}}\\f'\left( x \right) &= \frac{{2\left( {1 + {x^2}} \right) - \left( {2x} \right)\left( {2x} \right)}}{{{{\left( {1 + {x^2}} \right)}^2}}}\\ &= \frac{{2 - 2{x^2}}}{{{{\left( {1 + {x^2}} \right)}^2}}} = \frac{{2\left( {1 - {x^2}} \right)}}{{{{\left( {1 + {x^2}} \right)}^2}}}
+\item \begin{align*}
+f\left( x \right) &= \frac{{2x}}{{1 + {x^2}}}\\
+f'\left( x \right) &= \frac{{2\left( {1 + {x^2}} \right) - \left( {2x} \right)\left( {2x} \right)}}{{{{\left( {1 + {x^2}} \right)}^2}}}\\
+ &= \frac{{2 - 2{x^2}}}{{{{\left( {1 + {x^2}} \right)}^2}}} = \frac{{2\left( {1 - {x^2}} \right)}}{{{{\left( {1 + {x^2}} \right)}^2}}}
 \end{align*}
-\begin{align*}&f'\left( x \right) < 0\text{ für }\abs{x}>1\\&f'\left( { \pm 1} \right) = 0\\&f'\left( x \right) > 0\text{ für }\abs{x}<1
+\begin{align*}
+&f'\left( x \right) < 0\text{ für }\abs{x}>1\\
+&f'\left( { \pm 1} \right) = 0\\
+&f'\left( x \right) > 0\text{ für }\abs{x}<1
 \end{align*}
 \begin{tabularx}{\textwidth}{|Y|Y|Y|Y|Y|}
 \hline
@@ -310,8 +419,8 @@ Also folgt dass $g$ konstant ist, d.h.
 \missingfigure{Page 208 bottom}
 \end{enumerate}
 
-\subsubsection*{Korollar 5.17 (Bernoulli, l'Hopital)}
-Seien $f,g:\lbrack a,b\rbrack\to\R$ stetig differenzierbar in $\left( a,b\right)$ mit $g'(x)\not=0$, $\forall x\in\left( a,b\right)$. Wir nehmen an, dass 
+\subsubsection*{Korollar 5.17 (Bernoulli, L'Hôpital)}
+Seien $f,g:\lbrack a,b\rbrack\to\R$ stetig differenzierbar in $\left( a,b\right)$ mit $g'(x)\not=0$, $\forall x\in\left( a,b\right)$. Wir nehmen an, dass
 \begin{enumerate}[(i)]
 \item $f(a)=0=g(a)$
 \item $\mathop {\lim }\limits_{x \searrow a} \frac{{f'\left( x \right)}}{{g'\left( x \right)}} = A$
@@ -321,10 +430,12 @@ Dann ist $g(x)\not=0$, $\forall x>a$ und $\mathop {\lim }\limits_{x \searrow a} 
 \begin{beweis}{}
 Falls es $x_1>a$ gibt mit $g\left( x_1\right)=0$, dann folgt die Existenz von $x_0\in\left( a,x_1\right)$ mit $g'\left( x_0\right)=0$ (MWS.)
 \missingfigure{page 209 bottom}
-Wiederspruch zur Annahme $g'(x)\not=0$, $\forall x\in\left( a,b\right)$. Also $g(x)\not=0$, $\forall x>a$. Nunsei $a<s<b$ beliebig, und 
+Wiederspruch zur Annahme $g'(x)\not=0$, $\forall x\in\left( a,b\right)$. Also $g(x)\not=0$, $\forall x>a$. Nun sei $a<s<b$ beliebig, und
 \[h\left( x \right): = \frac{{f\left( s \right)}}{{g\left( s \right)}} \cdot g\left( x \right) - f\left( x \right)\hspace{5mm}x \in \left[ {a,s} \right]\]
-Dann gilt, $h(a)=0$ und $h(s)=0$, es gibt also $x_s\in\left( a,s\right)$ mit $h'\left( x_s\right)=0$, d.h. 
-\begin{align*}0 =& h'\left( {{x_s}} \right) = \frac{{f\left( s \right)}}{{g\left( s \right)}} \cdot g'\left( {{x_s}} \right) - f'\left( {{x_s}} \right)\\ \Rightarrow& \frac{{f'\left( {{x_s}} \right)}}{{g'\left( {{x_s}} \right)}} = \frac{{f\left( s \right)}}{{g\left( s \right)}}\tag{\textasteriskcentered}
+Dann gilt, $h(a)=0$ und $h(s)=0$, es gibt also $x_s\in\left( a,s\right)$ mit $h'\left( x_s\right)=0$, d.h.
+\begin{align*}
+0 =& h'\left( {{x_s}} \right) = \frac{{f\left( s \right)}}{{g\left( s \right)}} \cdot g'\left( {{x_s}} \right) - f'\left( {{x_s}} \right)\\
+ \Rightarrow& \frac{{f'\left( {{x_s}} \right)}}{{g'\left( {{x_s}} \right)}} = \frac{{f\left( s \right)}}{{g\left( s \right)}}\tag{\textasteriskcentered}
 \end{align*}
 Sei nun $s_n\in\left( a,b\right)$ beliebig mit $\lim s_n=a$. Da $a<x_{s_n}<s_n$ folgt, $\lim x_{s_n}=a$, und aus (\textasteriskcentered)
 \[\lim \frac{{f\left( {{s_n}} \right)}}{{g\left( {{s_n}} \right)}} = \lim \frac{{f'\left( {{x_{{s_n}}}} \right)}}{{g'\left( {{x_{{s_n}}}} \right)}} = A\]
@@ -332,13 +443,19 @@ Sei nun $s_n\in\left( a,b\right)$ beliebig mit $\lim s_n=a$. Da $a<x_{s_n}<s_n$ 
 
 \subsubsection*{Bemerkung 5.18}
 \begin{enumerate}
-\item Es gibt die selbe version für $\mathop {\lim }\limits_{x \nearrow b} $
-\item (Limes von links und rechts zusammen). Seien $f,g:\lbrack a,b\rbrack\to\R$ stetig. Sei $a<c<b$, wir nehmen an $f,g$ sind in $\left( {a,c} \right) \cup \left( {c,b} \right)$ differenzierbar, $g'(x)\not=0$, $\forall x\in\left( {a,c} \right) \cup \left( {c,b} \right)$ und
+\item Es gibt die selbe Version für $\mathop {\lim }\limits_{x \nearrow b} $
+\item (Limes von links und rechts zusammen). Seien $f,g:\lbrack a,b\rbrack\to\R$ stetig. Sei $a<c<b$, wir nehmen an, $f,g$ sind in $\left( {a,c} \right) \cup \left( {c,b} \right)$ differenzierbar, $g'(x)\not=0$, $\forall x\in\left( {a,c} \right) \cup \left( {c,b} \right)$ und
 \begin{enumerate}[(i)]
 \item $f(c)=g(c)=0$
-\item $\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{x \to c}\\{x\not  = c}\end{array}} \frac{{f'\left( x \right)}}{{g'\left( x \right)}} = A$
+\item $\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{x \to c}\\
+{x\not  = c}
+\end{array}} \frac{{f'\left( x \right)}}{{g'\left( x \right)}} = A$
 \end{enumerate}
-Dann ist $g(x)\not=0$, $\forall x\in\left( {a,c} \right) \cup \left( {c,b} \right)$ und $\mathop {\lim }\limits_{\begin{array}{*{20}{c}}{x \to c}\\{x\not  = c}\end{array}} \frac{{f\left( x \right)}}{{g\left( x \right)}} = A$
+Dann ist $g(x)\not=0$, $\forall x\in\left( {a,c} \right) \cup \left( {c,b} \right)$ und $\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{x \to c}\\
+{x\not  = c}
+\end{array}} \frac{{f\left( x \right)}}{{g\left( x \right)}} = A$
 \end{enumerate}
 
 \subsubsection*{Beispiel 5.19}
@@ -349,42 +466,47 @@ Dann ist $g(x)\not=0$, $\forall x\in\left( {a,c} \right) \cup \left( {c,b} \righ
 \item $\mathop {\lim }\limits_{x \to 0} \frac{{\cos \left( x \right) - 1}}{{{x^2}}} = \lim \frac{{ - \sin \left( x \right)}}{{2x}} =  - \frac{1}{2}$
 \item $\mathop {\lim }\limits_{x \to 0} \frac{{\left( {{e^x} - 1 - x - \frac{{{x^2}}}{{2!}}} \right)}}{{{x^3}}} = \mathop {\lim }\limits_{x \to 0} \left( {\frac{{{e^x} - 1 - x}}{{3{x^2}}}} \right) = \mathop {\lim }\limits_{x \to 0} \frac{{{e^x} - 1}}{{6x}} = \mathop {\lim }\limits_{x \to 0} \frac{{{e^x}}}{6} = \frac{1}{6}$
 \end{enumerate}
-Die nächste Anwendung der MWS ist der sogenannte ``Umkehrsatz''
+Die nächste Anwendung des Mittelwertsatzes ist der sogenannte ``Umkehrsatz''
 \subsubsection*{Fundamentale Frage}
-Sei $f:\R\to\R$ differenzierbar und bijektiv, und sei $g:\R\to\R$ die Inverse Funktion. Ist dann $g$ auch differenzierbar?
+Sei $f:\R\to\R$ differenzierbar und bijektiv und sei $g:\R\to\R$ die inverse Funktion. Ist dann $g$ auch differenzierbar?
 
 \subsubsection*{Beispiel}
 \begin{align*}
 f:\R&\to\R\\
 x&\to x^3
 \end{align*}
-ist überall differential und Bijektiv. Die ``Umkehrfunktion''
+ist überall differenzierbar und bijektiv. Die ``Umkehrfunktion''
 \begin{align*}
 g:\R&\to\R\\
 x&\to x^{1\over 3}
 \end{align*}
-ist aber in \todo{Can't understand, page 213 middle to bottom} nicht differenzierbar 
+ist aber in $0$ nicht differenzierbar
 \[\frac{{g\left( h \right) - g\left( 0 \right)}}{h} = \frac{{{h^{\frac{1}{3}}}}}{h} = {h^{ - \frac{2}{3}}} \to \infty \]
-Man kann folgendes bemerken: Falls $f:\R\to\R$ bijektiv und die Umkehrfunktion $g:\R\to\R$ auch differenzierbar ist dann folgt aus $\left( f\circ g\right)(x)=x$, $\forall x$ und der Kettenregel dass:
+Man kann folgendes bemerken: Falls $f:\R\to\R$ bijektiv und die Umkehrfunktion $g:\R\to\R$ auch differenzierbar ist, dann folgt aus $\left( f\circ g\right)(x)=x$, $\forall x$ und der Kettenregel, dass:
 \[f'\left( {g\left( x \right)} \right)g'\left( x \right) = 1\hspace{5mm}\forall x\]
-Insbesondere $f'(x)\not=0$ $\left(g'(x)\not=0\right)$, $\forall x$. Dies ist also eine Notwendige Bedingung zur Existenz  der Ableitung von $f^{-1}$
+Insbesondere $f'(x)\not=0$ $\left(g'(x)\not=0\right)$, $\forall x$. Dies ist also eine notwendige Bedingung zur Existenz der Ableitung von $f^{-1}$
 
 \subsubsection*{Satz 5.20 (Umkehrsatz)}
-Sei $f:\left( a,b\right)\to\R$ differenzierbar mit $f'(x)>0$, $\forall x\in\left( a,b\right)$. Seien $c = \mathop {\inf }\limits_x f\left( x \right)$, $d = \mathop {\sup }\limits_x f\left( x \right)$. Dann ist $f:\left( a,b\right)\to\left( c,d\right)$ bijektiv, und die Umkehrfunktion $f^{-1}:\left( c,d\right)\to\left( a,b\right)$ ist differenzierbar mit 
+Sei $f:\left( a,b\right)\to\R$ differenzierbar mit $f'(x)>0$, $\forall x\in\left( a,b\right)$. Seien $c = \mathop {\inf }\limits_x f\left( x \right)$, $d = \mathop {\sup }\limits_x f\left( x \right)$. Dann ist $f:\left( a,b\right)\to\left( c,d\right)$ bijektiv und die Umkehrfunktion $f^{-1}:\left( c,d\right)\to\left( a,b\right)$ ist differenzierbar mit
 \[\left( {{f^{ - 1}}} \right)'\left( {f\left( x \right)} \right) = \frac{1}{{f'\left( x \right)}}\hspace{5mm}\forall x \in \left( {a,b} \right)\]
 d.h.
 \[\left( {{f^{ - 1}}} \right)'\left(y \right) = \frac{1}{{f'\left( {{f^{ - 1}}}\left( y\right) \right)}}\hspace{5mm}\forall y \in \left( {c,d} \right)\]
 
 \begin{beweis}{}
-$f'(x)>0\Rightarrow f$ streng monotone Wachsend. Da $f$ streng monoton wachsend ist, folgt die Erste Behauptung aus dem Zwischenwertsatz für monotone Funktionen $\left( \text{d.h. }f:\left( a,b\right)\to\left( c,d\right)\text{ bijektive}\right)$.\\
+Sei $f'(x)>0\Rightarrow f$ streng monoton Wachsend. Da $f$ streng monoton wachsend ist, folgt die erste Behauptung aus dem Zwischenwertsatz für monotone Funktionen $\left( \text{d.h. }f:\left( a,b\right)\to\left( c,d\right)\text{ bijektive}\right)$.\\
 
 Nun zeigen wir: $f^{-1}$ ist differenzierbar. Sei $y_0\in\left( c,d\right)$, und $\left( y_k\right)_{k\geq 1}$ eine Folge in $\left( c,d\right)$ lim
-\[\lim x_k=y_0\hspace{5mm}y_k\not=y_0\hspace{5mm}\forall k\geq 1\] 
+\[\lim x_k=y_0\hspace{5mm}y_k\not=y_0\hspace{5mm}\forall k\geq 1\]
 Dann gibt es eindeutig bestimmte $\left( x_k\right)_{k\geq 1}$ in $\left( a,b\right)$ mit $f\left( x_k\right)=y_k$ ($f$ bijektiv) und $x_0\in\left( a,b\right)$ mit $f\left( x_0\right)=y_0$. Also ist
 \[\frac{{{f^{ - 1}}\left( {{y_k}} \right) - {f^{ - 1}}\left( {{y_0}} \right)}}{{{y_k} - {y_0}}} = \frac{{{x_k} - {x_0}}}{{f\left( {{x_k}} \right) - f\left( {{x_0}} \right)}}\]
-Bemerk dass $x_k\not=x_0$, $\forall k\geq 1$ und dass die Stetigkeit (Satz 4.21) von $f^{-1}$, $\lim x_k=x_0$ impliziert
-\[\left( {\begin{array}{*{20}{c}}{f\left( {{x_k}} \right) = {y_k}}& \Rightarrow &{{x_k}}& = &{{f^{ - 1}}\left( {{y_k}} \right)}\\{}&{}&{\lim {x_k}}& = &{{f^{ - 1}}\left( {\lim {y_k}} \right)}\\{}&{}&{}& = &{{f^{ - 1}}\left( {{y_0}} \right)}\\{}&{}&{}& = &{{x_0}}\end{array}} \right)\]
-Nun ist 
+Beachte, dass $x_k\not=x_0$, $\forall k\geq 1$ und dass die Stetigkeit (Satz 4.21) von $f^{-1}$, $\lim x_k=x_0$ impliziert
+\[\left( {\begin{array}{*{20}{c}}
+{f\left( {{x_k}} \right) = {y_k}}& \Rightarrow &{{x_k}}& = &{{f^{ - 1}}\left( {{y_k}} \right)}\\
+{}&{}&{\lim {x_k}}& = &{{f^{ - 1}}\left( {\lim {y_k}} \right)}\\
+{}&{}&{}& = &{{f^{ - 1}}\left( {{y_0}} \right)}\\
+{}&{}&{}& = &{{x_0}}
+\end{array}} \right)\]
+Nun ist
 \[\frac{{{x_k} - {x_0}}}{{f\left( {{x_k}} \right) - f\left( {{x_0}} \right)}} = \frac{1}{{\frac{{f\left( {{x_k}} \right) - f\left( {{x_0}} \right)}}{{{x_k} - {x_0}}}}} \to \frac{1}{{f'\left( {{x_0}} \right)}}\]
 da $f'\left( x_0\right)\not=0$
 \end{beweis}
@@ -393,49 +515,58 @@ da $f'\left( x_0\right)\not=0$
 Die Funktion $\log :\left( 0,\infty\right)\to\mathbb{K}$ ist differenzierbar und $\log'(x)=\frac{1}{x}$, $\forall x\in\left( 0,\infty\right)$
 
 \begin{beweis}{}
-$\exp : \R\to\left( 0,\infty\right)$ erfüllt alle Bedingungen von Satz 5.20\todo{Add reference + page number, page 217 middle}($\exp'=\exp>0$). Wir haben also 
-\begin{align*}\log \left( {\exp \left( x \right)} \right) &= x\\{\mathop{\rm log'}\nolimits} \underbrace {\left( {\exp \left( x \right)} \right)}_y\underbrace {\left( {\exp \left( x \right)} \right)}_y &= 1\\{\mathop{\rm log'}\nolimits} \left( y \right) &= \frac{1}{y}\end{align*}
+$\exp : \R\to\left( 0,\infty\right)$ erfüllt alle Bedingungen von Satz 5.20\todo{Add reference + page number, page 217 middle}($\exp'=\exp>0$). Wir haben also
+\begin{align*}
+\log \left( {\exp \left( x \right)} \right) &= x\\
+{\mathop{\rm log'}\nolimits} \underbrace {\left( {\exp \left( x \right)} \right)}_y\underbrace {\left( {\exp \left( x \right)} \right)}_y &= 1\\
+{\mathop{\rm log'}\nolimits} \left( y \right) &= \frac{1}{y}
+\end{align*}
 \end{beweis}
-Wir definieren mittels ``$\exp$'' die verallgemeinerte Potenzfunktion $x\to x^\alpha$. Sei $\alpha\in\R$: zunächst bemerken wir für $n\in\N$ und $x>0=x^n=e^{n\log x}$. Wir definieren also für $x>0$ \[x^\alpha := e^{\alpha\log x}\]
+Wir definieren mittels ``$\exp$'' die verallgemeinerte Potenzfunktion $x\to x^\alpha$. Sei $\alpha\in\R$: zunächst bemerken wir für $n\in\N$ und $x>0$: $x^n=e^{n\log x}$. Wir definieren also für $x>0$ \[x^\alpha := e^{\alpha\log x}\]
 Dann gilt
 \subsubsection*{Korollar 5.22}
 $\alpha\in\R$, $x\to x^\alpha$ ist differenzierbar und $\left( x^\alpha\right)'=\alpha x^{\alpha-1}$
 
 \subsubsection*{Exkurs}
-Die Exponentialfunktion wächst Schneller als jede Polynom
+Die Exponentialfunktion wächst schneller als jedes Polynom
 \[{e^x} > \frac{{{x^n}}}{{n!}}\hspace{5mm}x \ge 0\]
 Insbesondere $e^x>x$, $\forall x\geq 0$. Die $\log$ Funktion ist strikt monoton wachsend, Also $e^x>x\Rightarrow x\geq \log(x)$, $\forall x>0$.\\
 
-Für $a>0$, $x^a>\log (x^a)=a\log(x)$. Also $\log(x)<\frac{x^a}{a}$. Die $\log-$Funktion wächst also Langsamer als jede Positive Potenz.
+Für $a>0$, $x^a>\log (x^a)=a\log(x)$. Also $\log(x)<\frac{x^a}{a}$. Die $\log-$Funktion wächst also langsamer als jede positive Potenz.
 
-\section{Die Trigonometrische Funktion und Hyperbolische Funktionen}
+\section{Die Trigonometrischen und Hyperbolischen Funktionen}
 \begin{enumerate}
 \item $\sin(x)$
 \missingfigure{Page 219, top}
-$\sin'(x)=\cos(x)$; d.h. $\sin'(x)>0$, $\forall x\in\left( -\frac{\pi}{2},\frac{\pi}{2}\right)$ und besitzt daher eine differenzierbare Umkehrfunktion 
+$\sin'(x)=\cos(x)$; d.h. $\sin'(x)>0$, $\forall x\in\left( -\frac{\pi}{2},\frac{\pi}{2}\right)$ und besitzt daher eine differenzierbare Umkehrfunktion
 \[\arcsin :\left( { - 1,1} \right) \to \left( { - \frac{\pi }{2},\frac{\pi }{2}} \right)\]
 deren Ableitung wie folgt berechnet wird
 \[{\mathop{\rm arcsin'}\nolimits} \left( x \right) = \frac{1}{{{\mathop{\rm sin'}\nolimits} \left( {\arcsin \left( x \right)} \right)}} = \frac{1}{{\cos \left( {\arcsin \left( x \right)} \right)}}\]
-Falls $\alpha=\arcsin(x)$, $-\frac{\pi}{2}<\alpha <\frac{\pi}{2}$. So ist 
-\begin{align*}{\cos ^2}\left( \alpha  \right) + {\sin ^2}\left( \alpha  \right) &= 1\\{\cos ^2}\left( \alpha  \right) + {x^2} &= 1
+Falls $\alpha=\arcsin(x)$, $-\frac{\pi}{2}<\alpha <\frac{\pi}{2}$. So ist
+\begin{align*}
+{\cos ^2}\left( \alpha  \right) + {\sin ^2}\left( \alpha  \right) &= 1\\
+{\cos ^2}\left( \alpha  \right) + {x^2} &= 1
 \end{align*}
 d.h. $\cos^2\left( \alpha  \right)=1-x^2$. Da nun $-\frac{\pi}{2}<\alpha <\frac{\pi}{2}$ folgt aus $\cos\left( \alpha  \right)>0\Rightarrow\cos\left( \alpha  \right)=\sqrt{1-x^2}$. Daraus ergibt sich \[\arcsin'\left( x\right)=\frac{1}{\sqrt{1-x^2}}\]
 Analog haben wir
 \item $\cos$, $\R\to\R$
 \missingfigure{Page 220 middle to bottom}
 \[\cos :\left( {0,\pi } \right) \to \left( { - 1,1} \right)\]
-bijektive, und
+bijektiv und
 \[\arccos :\left( { - 1,1} \right) \to \left( {0,\pi } \right)\]
-ist die Inverse Funktion, und 
+ist die inverse Funktion und
 \[{\mathop{\rm arccos'}\nolimits} \left( x \right) =  - \frac{1}{{\sqrt {1 - {x^2}} }}\]
 \item $\tan:\left( -\frac{\pi}{2},\frac{\pi}{2}\right)\to\R$
 \missingfigure{page 221, top}
 \[\arctan:\R\to\left( -\frac{\pi}{2},\frac{\pi}{2}\right)\]
 und
 \[\arctan'(x)=\frac{1}{1+x^2}\]
-\item Hyperbelfunktionen \[\cosh \left( x \right): = \frac{{{e^x} + {e^{ - x}}}}{2}\]\[\sinh \left( x \right): = \frac{{{e^x} - {e^{ - x}}}}{2}\]\[\tanh \left( x \right): = \frac{{\sinh \left( x \right)}}{{\cosh \left( x \right)}}\]
+\item Hyperbelfunktionen
+\[\cosh \left( x \right): = \frac{{{e^x} + {e^{ - x}}}}{2}\]
+\[\sinh \left( x \right): = \frac{{{e^x} - {e^{ - x}}}}{2}\]
+\[\tanh \left( x \right): = \frac{{\sinh \left( x \right)}}{{\cosh \left( x \right)}}\]
 \missingfigure{Bottom of page 221, add side by side to the formulas}
-Dann ist $\sinh:\R\to\R$ bijektiv, differenzierbar, mit $\sinh'(x)=\cosh(x)$ somit monotone steigend, und $\arcsinh:\R\to\R$ die Inverse
+Dann ist $\sinh:\R\to\R$ bijektiv und differenzierbar mit $\sinh'(x)=\cosh(x)$ und somit monotone steigend und $\arcsinh:\R\to\R$ die Inverse
 \begin{itemize}
 \item $\cosh :\left[ {0,\infty } \right) \to \left[ {1,\infty } \right)$ bijektiv.\\
 Inverse: $\arccosh:\left( 1,\infty\right)\to\left( 0,\infty\right)$
@@ -443,41 +574,50 @@ Inverse: $\arccosh:\left( 1,\infty\right)\to\left( 0,\infty\right)$
 Inverse: $\arctanh:\left( -1,1\right)\to\R$
 \end{itemize}
 Dann gilt:
-\begin{align*}{\mathop{\rm sinh'}\nolimits} \left( x \right) &= \cosh \left( x \right)\\{\mathop{\rm cosh'}\nolimits} \left( x \right) &= \sinh \left( x \right)\\{\mathop{\rm tanh'}\nolimits} \left( x \right) &= \frac{1}{{{{\cosh }^2}\left( x \right)}}
+\begin{align*}
+{\mathop{\rm sinh'}\nolimits} \left( x \right) &= \cosh \left( x \right)\\
+{\mathop{\rm cosh'}\nolimits} \left( x \right) &= \sinh \left( x \right)\\
+{\mathop{\rm tanh'}\nolimits} \left( x \right) &= \frac{1}{{{{\cosh }^2}\left( x \right)}}
 \end{align*}
-mit der Relation $\cosh^2+\sinh^2+1$ folgt
-\begin{align*}\arcsinh'\left( x \right) &= \frac{1}{{\sqrt {1 + {x^2}} }}\\\arccosh'\left( x \right) &= \frac{1}{{\sqrt {{x^2} - 1} }}\\\arctanh'\left( x \right) &= \frac{1}{{1 - {x^2}}}
+mit der Beziehung $\cosh^2+\sinh^2+1$ folgt
+\begin{align*}
+\arcsinh'\left( x \right) &= \frac{1}{{\sqrt {1 + {x^2}} }}\\
+\arccosh'\left( x \right) &= \frac{1}{{\sqrt {{x^2} - 1} }}\\
+\arctanh'\left( x \right) &= \frac{1}{{1 - {x^2}}}
 \end{align*}
 \end{enumerate}
 
 \section{Funktionen der Klasse $C^m$}
-Sei $\Omega\subset\R$, $f:\Omega\to\R$, differenzierbar
+Sei $\Omega\subset\R$, $f:\Omega\to\R$ differenzierbar
 \begin{definition}{5.23}
-$f:\Omega\to\R$ heisst $C'$ (von der Klasse $C'$) falls $f$ auf $\Omega$ differenzierbar ist und $x\to f'(x)$ auf $\Omega$ stetig ist.\\
+$f:\Omega\to\R$ heisst $C'$ (von der Klasse $C'$), falls $f$ auf $\Omega$ differenzierbar ist und $x\to f'(x)$ auf $\Omega$ stetig ist.\\
 
-\noindent\underline{Notation:}$C'\left( \Omega\right)=$ Vektorraum der auf $\Omega$, $C'-$Funktionen
+\noindent\underline{Notation:}$C'\left( \Omega\right)=$ Vektorraum der auf $\Omega$ $C'-$Funktionen
 \end{definition}
 
 \subsubsection*{Beispiel 5.24}
 \begin{enumerate}
-\item $\exp,\cos,\sin,\text{polynom}\in C'\left( \R\right)$
-\item $f:\R\to\R$ 
-\[f\left( x \right) = \left\{ {\begin{array}{*{20}{c}}{{x^2}\sin \left( {\frac{1}{x}} \right)}&{x\not  = 0}\\0&{x = 0}\end{array}} \right.\]
+\item $\exp,\cos,\sin,\text{Polynom}\in C'\left( \R\right)$
+\item $f:\R\to\R$
+\[f\left( x \right) = \left\{ {\begin{array}{*{20}{c}}
+{{x^2}\sin \left( {\frac{1}{x}} \right)}&{x\not  = 0}\\
+0&{x = 0}
+\end{array}} \right.\]
 $\forall x\in\R\backslash\{ 0\}$
 \[f'\left( x \right) = 2x\sin \left( {\frac{1}{x}} \right) - \cos \left( {\frac{1}{x}} \right)\]
 \todo{Is this ``In 0'' or ``$\ln 0$''(Nat. Log), page 223 bottom}\underline{In 0:}
 \[\frac{{f\left( h \right) - f\left( 0 \right)}}{h} = \frac{{{h^2}\sin \left( {\frac{1}{h}} \right) - 0}}{h} = h\sin \left( {\frac{1}{h}} \right)\]
 \[\mathop {\lim }\limits_{h \to 0} h\sin \left( {\frac{1}{h}} \right) = 0\]
-Also $f'(0)=0$, $f$ ist differenzierbar in $x_0=0$. Aber $f'$ ist in 0 nicht stetig. Für $x_n=\frac{1}{n\pi}$ ist 
+Also $f'(0)=0$, $f$ ist differenzierbar in $x_0=0$. Aber $f'$ ist in 0 nicht stetig. Für $x_n=\frac{1}{n\pi}$ ist
 \[f'\left( {{x_n}} \right) = \frac{{2\sin \left( {n\pi } \right)}}{{n\pi }} + {\left( { - 1} \right)^{n + 1}} = {\left( { - 1} \right)^{n + 1}}\]
-$\lim x_n=0$, $\lim f'\left( x_n\right)$ (Insbesondere $\not=f'(0)$) nicht existiert.
+$\lim x_n=0$, $\lim f'\left( x_n\right)$ (insbesondere $\not=f'(0)$) nicht existiert.
 \end{enumerate}
-Wir haben eine Konvergenz Begriff auf $C^0\left( \Omega\right)$ gesehen: Gleichmassige Konvergenz 
+Wir haben einen Konvergenzbegriff auf $C^0\left( \Omega\right)$ gesehen: Gleichmässige Konvergenz
 \[{f_n}\mathop  \to \limits^{\text{glm.}} f{\text{ falls }}\mathop {\sup }\limits_{x \in \Omega } \left\| {{f_n} - f} \right\| \to 0\]
-Falls alle $f_n$ stetig sind, folgt dass $f$ stetig ist. Für $C'\left( \Omega\right)$, haben wir
+Falls alle $f_n$ stetig sind, folgt, dass $f$ stetig ist. Für $C'\left( \Omega\right)$ haben wir
 
 \subsubsection*{Satz 5.26}
-Sei $\left( f_n\right)_{n\geq 1}$ eine Folge in $C'\left( \Omega\right)$. Wir nehmen an dass ${f_n}\mathop  \to \limits^{\text{glm.}} f$ und ${f'_n}\mathop  \to \limits^{\text{glm.}} g$. Dann gilt $f\in C'\left( \Omega\right)$ und $g=f'$
+Sei $\left( f_n\right)_{n\geq 1}$ eine Folge in $C'\left( \Omega\right)$. Wir nehmen an, dass ${f_n}\mathop  \to \limits^{\text{glm.}} f$ und ${f'_n}\mathop  \to \limits^{\text{glm.}} g$. Dann gilt $f\in C'\left( \Omega\right)$ und $g=f'$
 
 \begin{beweis}{}
 Da ${f_n}\mathop  \to \limits^{\text{glm.}} f$ und ${f'_n}\mathop  \to \limits^{\text{glm.}} g$, sind $f$ und $g$ stetig\\
@@ -485,57 +625,92 @@ Da ${f_n}\mathop  \to \limits^{\text{glm.}} f$ und ${f'_n}\mathop  \to \limits^{
 
 Seien $x\not=x_0$ in $\Omega$. Aus ${f_n}\mathop  \to \limits^{\text{glm.}} f$ folgt, $\mathop {\lim }\limits_{n \to \infty } {f_n}\left( x \right) = f\left( x \right)$ und $\mathop {\lim }\limits_{n \to \infty } {f_n}\left( {{x_0}} \right) = f\left( {{x_0}} \right)$
 \[\left| {\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} \right| = \mathop {\lim }\limits_{n \to \infty } \left| {\frac{{{f_n}\left( x \right) - {f_n}\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} \right|\]
-\underline{MWS:} $\exists\xi_n$ zwischen $x$ und $x_0$ so dass 
+\underline{Mittelwertsatz:} $\exists\xi_n$ zwischen $x$ und $x_0$, so dass
 \[\frac{{{f_n}\left( x \right) - {f_n}\left( {{x_0}} \right)}}{{x - {x_0}}} = f{'_n}\left( {{\xi _n}} \right)\]
 Nun
-\begin{align*}\left| {f{'_n}\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right| &\le \left| {f{'_n}\left( {{\xi _n}} \right) - g\left( {{\xi _n}} \right)} \right| + \left| {g\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right|\\ &\le \mathop {\sup }\limits_{\xi  \in \Omega } \mathop {\left| {f{'_n}\left( \xi  \right) - g\left( \xi  \right)} \right|}\limits_{\begin{array}{*{20}{c}} \downarrow &{{\text{Da }}f{'_n} \to g}\\0&{}\end{array}}  + \mathop {\left| {g\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right|}\limits_{\begin{array}{*{20}{c}} \downarrow &{\scriptstyle{\text{falls }}x \to {x_0}\hfill\atop\scriptstyle\left( {{\xi _n} \to {x_0}} \right)\hfill}\\0&{({\text{Stet. von }}g)}\end{array}} 
+\begin{align*}
+\left| {f{'_n}\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right| &\le \left| {f{'_n}\left( {{\xi _n}} \right) - g\left( {{\xi _n}} \right)} \right| + \left| {g\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right|\\
+ &\le \mathop {\sup }\limits_{\xi  \in \Omega } \mathop {\left| {f{'_n}\left( \xi  \right) - g\left( \xi  \right)} \right|}\limits_{\begin{array}{*{20}{c}}
+ \downarrow &{{\text{Da }}f{'_n} \to g}\\
+0&{}
+\end{array}}  + \mathop {\left| {g\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right|}\limits_{\begin{array}{*{20}{c}}
+ \downarrow &{\scriptstyle{\text{falls }}x \to {x_0}\hfill\atop
+\scriptstyle\left( {{\xi _n} \to {x_0}} \right)\hfill}\\
+0&{({\text{Stet. von }}g)}
+\end{array}}
 \end{align*}
-Folglich 
+Folglich
 \[\mathop {\lim }\limits_{x \to {x_0}} \left| {\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} \right| = 0 \Rightarrow f' = g\]
 \end{beweis}
 
 \subsubsection*{Beispiel 5.28}
-Die Gleichmässige Konvergenz von $f'_n\to g$ ist notwendig: Sei 
+Die gleichmässige Konvergenz von $f'_n\to g$ ist notwendig: Sei
 \[{f_n}\left( x \right) = \sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}} ,x \in \left( { - 1,1} \right)\]
 \subsubsection*{Behauptung}
 ${f_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} f = \left| x \right|$ für $\abs{x}<1$
 \begin{beweis}{}
-\begin{align*}\left| {{f_n}\left( x \right) - \left| x \right|} \right| = &\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  - \left| x \right|} \right|\\ = &\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  - \left| x \right|} \right| \cdot \frac{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}\\ = &\frac{{{{\left( {\frac{1}{n}} \right)}^2} + {x^2} - {{\left( {\left| x \right|} \right)}^2}}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}} = \frac{{{{\left( {\frac{1}{n}} \right)}^2}}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}\le \frac{{{{\left( {\frac{1}{n}} \right)}^2}}}{{\left( {\frac{1}{n}} \right)}}\mathop  \to \limits^{n \to \infty } 0\end{align*}
-d.h. ${f_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} \left| x \right|$ \\
-\underline{Nun:}$\abs{x}$ ist stetig aber nicht \todo{??differenzierbar?? page 227 bottom}
-\begin{align*}f{'_n}\left( x \right) =&\frac{x}{{\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {{\left| x \right|}^2}} }}\mathop  \to \limits_{n \to \infty } \left\{ {\begin{array}{*{20}{c}}{\frac{x}{{\left| x \right|}}}&{x\not  = 0}\\0&{x = 0}\end{array}} \right.\\g\left( x \right) = &\left\{ {\begin{array}{*{20}{c}}1&{x > 1}\\0&{x = 0}\\{ - 1}&{x < 1}\end{array}} \right.
+\begin{align*}
+\left| {{f_n}\left( x \right) - \left| x \right|} \right| = &\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  - \left| x \right|} \right|\\
+ = &\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  - \left| x \right|} \right| \cdot \frac{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}\\
+ = &\frac{{{{\left( {\frac{1}{n}} \right)}^2} + {x^2} - {{\left( {\left| x \right|} \right)}^2}}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}} = \frac{{{{\left( {\frac{1}{n}} \right)}^2}}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}\le \frac{{{{\left( {\frac{1}{n}} \right)}^2}}}{{\left( {\frac{1}{n}} \right)}}\mathop  \to \limits^{n \to \infty } 0
 \end{align*}
-$f'_n(x)\to g(x)$ nicht gleichmässig ($g$ nicht stetig in $x=0$)
+d.h. ${f_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} \left| x \right|$ \\
+\underline{Nun:}$\abs{x}$ ist stetig aber nicht differenzierbar
+\begin{align*}
+f{'_n}\left( x \right) =&\frac{x}{{\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {{\left| x \right|}^2}} }}\mathop  \to \limits_{n \to \infty } \left\{ {\begin{array}{*{20}{c}}
+{\frac{x}{{\left| x \right|}}}&{x\not  = 0}\\
+0&{x = 0}
+\end{array}} \right.\\
+g\left( x \right) = &\left\{ {\begin{array}{*{20}{c}}
+1&{x > 1}\\
+0&{x = 0}\\
+{ - 1}&{x < 1}
+\end{array}} \right.
+\end{align*}
+$f'_n(x)\to g(x)$ konvergiert nicht gleichmässig ($g$ nicht stetig in $x=0$)
 \end{beweis}
 
-Eine sehr wichtige Anwendung von Satz 5.26 \todo{Add reference + page number, page 228 middle} ist auf Eigenschaft von Funktionen die Summe von Potenzreihen sind. Sei $\left( a_n\right)_{n\geq 0}\in\R$. Wir nehmen an 
+Eine sehr wichtige Anwendung von Satz 5.26 \todo{Add reference + page number, page 228 middle} ist auf die Eigenschaften von Funktionen, die Summe von Potenzreihen sind. Sei $\left( a_n\right)_{n\geq 0}\in\R$. Wir nehmen an
 \[\rho : = \frac{1}{{\lim \sup \sqrt[n]{{\left| {{a_n}} \right|}}}} > 0\]
 \subsubsection*{Satz 5.29}
-Sei $x\in\left( -\rho,\rho\right)=\Omega$ \[f\left( x \right) = \sum\limits_{n = 0}^\infty  {{a_n}{x^n}}\] die Summe der absolut konvergenten Potenzreihe. Dann ist $f\in C'\left( \Omega\right)$ und 
+Sei $x\in\left( -\rho,\rho\right)=\Omega$ \[f\left( x \right) = \sum\limits_{n = 0}^\infty  {{a_n}{x^n}}\] die Summe der absolut konvergenten Potenzreihe. Dann ist $f\in C'\left( \Omega\right)$ und
 \[f'\left( x \right) = \sum\limits_{n = 0}^\infty  {n{a_n}{x^{n - 1}}} \]
-mit Selben Konvergenzradius
+mit dem selben Konvergenzradius
 
 \begin{beweis}{}
-Sei 
+Sei
 \[{f_k}\left( x \right) = \sum\limits_{n = 0}^\infty  {{a_n}{x^n}} \]
-Sei $0<r<\rho$. Dann gilt, $\forall x\in\left( -r,r\right)$: 
+Sei $0<r<\rho$. Dann gilt, $\forall x\in\left( -r,r\right)$:
 \[\left| {{f_k}\left( x \right) - f\left( x \right)} \right| \le \sum\limits_{n = k + 1}^\infty  {\left| {{a_n}} \right|{r^n}} \mathop  \to \limits^{n \to \infty } 0\]
 Also $f_k\to f$ gleichmässig auf $\left( -r,r\right)$. Da
-\begin{align*}\lim \sup \sqrt[n]{{\left| {n{a_n}} \right|}} = &\lim \sup \left( {\sqrt[n]{n} \cdot \sqrt[n]{{\left| {{a_n}} \right|}}} \right)\\\left( {{\text{Da }}\lim \sqrt[n]{n} = 1} \right) = &\lim \sup \sqrt[n]{{\left| {{a_n}} \right|}} = \rho 
+\begin{align*}
+\lim \sup \sqrt[n]{{\left| {n{a_n}} \right|}} = &\lim \sup \left( {\sqrt[n]{n} \cdot \sqrt[n]{{\left| {{a_n}} \right|}}} \right)\\
+\left( {{\text{Da }}\lim \sqrt[n]{n} = 1} \right) = &\lim \sup \sqrt[n]{{\left| {{a_n}} \right|}} = \rho
 \end{align*}
- konvergiert 
+ konvergiert
 \[\sum\limits_{n = 0}^\infty  {n{a_n}{x^{n - 1}}}  = :g\left( x \right)\]
-absolut $\forall x\in\left( -\rho,\rho\right)$. Nun ist 
+absolut $\forall x\in\left( -\rho,\rho\right)$. Nun ist
 \[f{'_k}\left( x \right) = \sum\limits_{n = 0}^k {n{a_n}{x^{n - 1}}} \]
-und es folgt wie oben $f{'_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} g$. Nach Satz 5.26 \todo{Add reference + page number, page 230 middle}, folgt das $f,g$ stetig und $g=f'$, auf $\left( -\rho,\rho\right)$.
+und es folgt wie oben $f{'_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} g$. Nach Satz 5.26 \todo{Add reference + page number, page 230 middle}folgt, dass $f,g$ stetig und $g=f'$, auf $\left( -\rho,\rho\right)$.
 \end{beweis}
 
 \subsubsection*{Beispiel 5.30}
 \begin{enumerate}
-\item \begin{align*}\exp \left( x \right) = &\sum\limits_{n = 0}^\infty  {\frac{{{x^n}}}{{n!}}} \hspace{5mm}\forall x \in \R\\{\mathop{\rm exp'}\nolimits} \left( x \right) = &\sum\limits_{n = 0}^\infty  {\frac{{n{x^{n - 1}}}}{{n!}}}  = \sum\limits_{n = 0}^\infty  {\frac{{{x^{n - 1}}}}{{\left( {n - 1} \right)!}}} \\ = &\sum\limits_{k = 0}^\infty  {\frac{{{x^k}}}{{k!}}}  = \exp \left( x \right)
+\item \begin{align*}
+\exp \left( x \right) = &\sum\limits_{n = 0}^\infty  {\frac{{{x^n}}}{{n!}}} \hspace{5mm}\forall x \in \R\\
+{\mathop{\rm exp'}\nolimits} \left( x \right) = &\sum\limits_{n = 0}^\infty  {\frac{{n{x^{n - 1}}}}{{n!}}}  = \sum\limits_{n = 0}^\infty  {\frac{{{x^{n - 1}}}}{{\left( {n - 1} \right)!}}} \\
+ = &\sum\limits_{k = 0}^\infty  {\frac{{{x^k}}}{{k!}}}  = \exp \left( x \right)
 \end{align*}
 \item \[f\left( x \right) = \sum\limits_{k = 0}^\infty  {{x^k}}  = \frac{1}{{1 - x}}\hspace{5mm}\left| x \right| < 1\]
-Daraus folgt 
-\[\sum\limits_{k = 0}^\infty  {k{x^{k - 1}}} \mathop  = \limits_{\begin{array}{*{20}{c}} \downarrow \\\begin{array}{c}{\text{eine }}\\{\text{nicht}}\\{\text{WHAT}}\\{\text{Identität}}\end{array}\end{array}} \frac{1}{{{{\left( {1 - x} \right)}^2}}}\]
+Daraus folgt
+\[\sum\limits_{k = 0}^\infty  {k{x^{k - 1}}} \mathop  = \limits_{\begin{array}{*{20}{c}}
+ \downarrow \\
+\begin{array}{c}
+{\text{eine }}\\
+{\text{nicht}}\\
+{\text{WHAT}}\\
+{\text{Identität}}
+\end{array}
+\end{array}} \frac{1}{{{{\left( {1 - x} \right)}^2}}}\]
 \todo[inline]{Can't understand word, page 230 very bottom}
 \end{enumerate}
