@@ -368,7 +368,21 @@ Wir definieren rekursiv
 g_1&=1, g_{n+1}=1+\frac{1}{g_n}, n\geq 1\\
 g_1&=1, g_2=2, g_3=\frac{3}{2}, g_4=\frac{5}{3}
 \end{align*}
-\missingfigure{Page 77 bottom}
+\begin{center}
+\begin{tikzpicture}[]
+\draw 
+(0,0) --(8,0)
+(2,0.15) -- (2,-0.15)
+(2,-0.1) node[anchor=north] {$1=g_1$}
+(3,0.15) -- (3,-0.15)
+(3,0.1) node[anchor=south] {$g_3$}
+(5,0.15) -- (5,-0.15)
+(5,0.1) node[anchor=south] {$g_4$}
+(6,0.15) -- (6,-0.15)
+(6,-0.1) node[anchor=north] {$2=g_2$};
+\node[circle,fill=black,inner sep=0.5mm] (a) at (4,0) {};
+\end{tikzpicture}
+\end{center}
 So die Folge ist nicht monoton. Offensichtlich gilt $g_n\geq 1$ und damit auch $g_n\leq 2$ d.h. $g_n$ ist beschränkt.\\
 
 Aber wir werden werden zwei monotone Teilfolgen finden
@@ -512,7 +526,19 @@ Eine Folge $\left( a_n\right)_{n\geq 1}$ in $\R^d$ konvergiert gegen $a\in\R^d$,
 \todo[inline]{Not sure where the definition ends}
 Die andere Version lässt sich auch übertragen. Wir definieren dafür den (offenen) $r$-Ball (Ball mit Radius $r$) mit Zentrum $a\in\R^d$
 \[B_{<r}(a):=\left\{ x\in\R^d : \norm{x-a}<r\right\}\]
-\missingfigure{page 88 bottom}
+\begin{center}
+\begin{tikzpicture}[]
+\draw[->] (0,0) --(8,0);
+\draw[<-] (1,3) -- (1,-1);
+\draw[dashed] (5,1) -- (5,0);
+\draw[] (5,1) -- (6.41,1.5);
+\node[circle,fill=black,inner sep=0.5mm] (a) at (5,1) {} ;
+\draw (5,1) circle (1.5);
+\draw (5,0) node[anchor=north]{$a$};
+\draw (5.7,1.6) node[anchor=north]{$r$};
+
+\end{tikzpicture}
+\end{center}
 $B_{<r}(a)$ ist die Verallgemeinerung von $\left( a-\varepsilon,a+\varepsilon\right)$. Nützlich ist auch der (geschlossene) $r$-Ball
 \[\overline{B}_r(a):B_{\leq r}(a):=\left\{ x\in\R^d : \norm{x-a}\leq r\right\}\]
 der das Intervall $\left[ a-r,a+r\right]$ verallgemeinert.
@@ -558,7 +584,24 @@ $\forall x=\left( x^1,x^2,\dots,x^d\right) \in\R^d$ gilt
  \Downarrow \\
 {\sqrt {\sum {{{\left| {{x^i}} \right|}^2}} } }
 \end{array}}  \le \sqrt d \mathop {\max }\limits_{1 \le i \le d} \left| {{x^i}} \right|\]
-\missingfigure{page 92, top}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.91]
+\draw[->](-3,0) -- (3,0);
+\draw[->](0,-3) -- (0,3);
+\draw (-2,-2) rectangle (2,2);
+\draw (0,0) circle (2);
+\draw (-{sqrt(2)},-{sqrt(2)}) rectangle ({sqrt(2)},{sqrt(2)});
+\draw [decorate,decoration={brace,amplitude=10pt}]
+(2,0) -- (0,0);
+\draw (1,-0.3) node[anchor=north]{$r$};
+\draw [decorate,decoration={brace,amplitude=5pt}]
+(0,{sqrt(2)}) -- ({sqrt(2)},{sqrt(2)});
+\draw[->](1,2.5) -- ({sqrt(2)/2},1.62);
+\draw (1,2.5) node[anchor=south]{$\frac{r}{\sqrt{2}}$};
+\end{tikzpicture}
+\end{center}
+
 \[{\left( { - \frac{r}{{\sqrt 2 }},\frac{r}{{\sqrt 2 }}} \right)^2} \subset {B_{ \le r}}\left( 0 \right) \subset {\left( { - r,r} \right)^2}\]
 
 \begin{beweis}{von Satz 3.28}
@@ -1018,7 +1061,49 @@ $\left( \exp(x):=\sum\limits_{k=0}^\infty \frac{x^k}{k!}\right)$
 
 \begin{beweis}{}
 \[\exp (x)\exp (y)\mathop  = \limits^{{\text{Satz 3.47}}} \sum\limits_{k\not  = l = 0}^\infty  {\frac{{{x^k}{y^l}}}{{k!l!}}} \]
-\missingfigure{Page 121 top}
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\draw[->](-1,0) -- (8,0);
+\draw[->](0,0) -- (0,8);
+\node[circle,fill=black,inner sep=0.5mm] (a) at (0,0) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (1,0) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (1,6) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (2,5) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (1,5) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (2,4) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (3,4) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (3,3) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (4,3) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (4,2) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (5,2) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (6,1) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (5,1) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (6,0) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (2,0) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (7,0) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (0,1) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (0,7) {} ;
+\node[circle,fill=black,inner sep=0.5mm] (a) at (0,6) {} ;
+\draw[](1,0) -- (0,1)
+(1,0)--(1,6)
+(2,0)--(2,5);
+\draw[dashed](7,0) -- (0,7)
+(6,0) -- (0,6);
+%y-axis
+\draw (0,6) node[scale=0.8,anchor=east]{$(0,n-1)$};
+\draw (0,7) node[scale=0.8,anchor=east]{$(0,n)$};
+\draw (0,1) node[scale=0.8,anchor=east]{$(0,1)$};
+%x-axis
+\draw (0,0) node[scale=0.8,anchor=north]{$(0,0)$};
+\draw (1,0) node[scale=0.8,anchor=north]{$(1,0)$};
+\draw (2,0) node[scale=0.8,anchor=north]{$(2,0)$};
+\draw (5.8,0) node[scale=0.8,anchor=north]{$(n-1,0)$};
+\draw (7.1,0) node[scale=0.8,anchor=north]{$(n,0)$};
+%middle of the graph
+\draw (1.1,6.1) node[scale=0.8,anchor=west]{$(1,n-1)$};
+\draw (2.1,5.1) node[scale=0.8,anchor=west]{$(2,n-2)$};
+\end{tikzpicture}
+\end{center}
 Wir zählen jetzt $\N\times\N$ wie folgt ab
 \todo[inline]{Can't understand the formula, page 121 bottom}
 \[\exp (x)\exp (y) = \sum\limits_{n = 0}^\infty  {\frac{{{{\left( {x + y} \right)}^n}}}{{n!}}}  = \exp \left( {x + y} \right)\]
