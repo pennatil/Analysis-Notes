@@ -2,7 +2,7 @@
 cd "../Tex/MAINs"
 for i in {1..3}
 do
-   pdflatex main.tex
+   pdflatex --interaction nonstopmode main.tex
 done
 
 rm -f *.out *.log *.aux *.toc

@@ -2,7 +2,7 @@
 cd "../Tex/MAINs"
 for i in {1..3}
 do
-   pdflatex --shell-escape mainMult.tex
+   pdflatex --shell-escape --interaction nonstopmode mainMult.tex
 done
 rm -f *.out *.log *.aux
 
