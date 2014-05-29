@@ -17,7 +17,21 @@ In der Definition 5.1 verlangen wir also, dass für jede in $\Omega \backslash\{
 \[\mathop {\lim }\limits_{n \to \infty} \frac{{f\left( {x_n} \right) - f\left( {{x_0}} \right)}}{{x_n-x_0}} = 0\]
 \subsubsection*{Bemerkung 5.3}
 Sei $f$ differenzierbar in $x_0$
-\missingfigure{Page 184 bottom}
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\draw[->](-0.5,0) -- (6,0);
+\draw[->](0,-0.5) -- (0,6);
+\draw [in=-111, out=9] (0,1) to (5,5);
+\draw[fill=black] (2.5,1.86) circle (0.05);
+\draw[fill=black] (4.5,3.95) circle (0.05);
+\draw (2.5,1.86) -- (4.5,3.95);
+\draw[dashed] (2.5,1.86) -- (2.5,0) node[anchor=north] {$x_0$};
+\draw[dashed] (4.5,3.95) -- (4.5,0) node[anchor=north] {$x$};
+\draw[dashed] (2.5,1.86) -- (0,1.86) node[anchor=east] {$f\left(x_0\right)$};
+\draw[dashed] (4.5,3.95) -- (0,3.95) node[anchor=east] {$f(x)$};
+\end{tikzpicture}
+\end{center}
+
 Dann ist \[\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}\] die Steigung der Geraden durch die Punkte $\left( x_0,f\left( x_0\right) \right)$ und $\left( x,f\left( x\right) \right)$.\\
 
 Geometrisch ist also $f'\left( x_0\right)$ die Steigung der Tangenten am Graphen von $f$ im Punkt $\left( x_0,f\left( x_0\right) \right)$. Diese Tangente hat die Gleichung
