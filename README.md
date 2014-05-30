@@ -21,6 +21,7 @@ Status
 |    8    |     Yes     |          In Progress         |       Yes      | Waiting for corrections |   No  |
 |    9    | Yes |          -         |       Yes       |            Waiting for corrections            |   No  |
 
+
 (*) Might still be missing some content, which will be added once the corrections are made.
 
 TODO:
