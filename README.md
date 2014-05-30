@@ -19,7 +19,7 @@ Status
 |    6    |     Yes     |         Yes        |       Yes      |           Yes           |   No  |
 |    7    |     Yes     |         Yes        |       Yes      | Waiting for corrections |   No  |
 |    8    |     Yes     |          In Progress         |       Yes      | Waiting for corrections |   No  |
-|    9    | Yes |          -         |       -       |            Yes            |   No  |
+|    9    | Yes |          -         |       Yes       |            Waiting for corrections            |   No  |
 
 (*) Might still be missing some content, which will be added once the corrections are made.
 
