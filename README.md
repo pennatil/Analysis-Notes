@@ -14,7 +14,7 @@ Status
 |    1    |     Yes     |         Yes        |       Yes     | Waiting for corrections |   No  |
 |    2    |     Yes(*)    |         Yes        |       Yes      | Waiting for corrections |   No  |
 |    3    | Yes |          Yes        |       Yes      |            No           |   No  |
-|    4    | Yes     |          -         |       -       |            -            |   No  |
+|    4    | Yes     |          -         |       Yes       |            -            |   No  |
 |    5    |      Yes     |          -         |       Yes       |            -            |   No  |
 |    6    |     Yes     |         Yes        |       Yes      |           Yes           |   No  |
 |    7    |     Yes     |         Yes        |       Yes      | Waiting for corrections |   No  |
