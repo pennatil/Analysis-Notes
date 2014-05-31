@@ -10,7 +10,7 @@ Wir schreiben: $\lim_{x\to x_{0}}{f(x)} = a$
 \end{definition}
 \textbf{Bemerkung}: $x_{0}$ muss nicht im Definitionsbereich von $f$ sein.
 \begin{definition}{4.2}
-$f:\Omega \to \R^{d}$ heisst \emph{stetig} an der Stelle $x_{0} \in \Omega$ falls:
+$f:\Omega \to \R^{d}$ heisst \emph{stetig} an der Stelle $x_{0} \in \Omega$, falls:
 \begin{enumerate}
 \item $f$ an der Stelle $x_{0}$ definiert ist,
 \item $\lim_{x\to x_{0}}{f(x)}$ existiert, und
@@ -27,23 +27,23 @@ Anders gesagt:
 \end{itemize}
 \end{definition}
 \begin{definition}{4.2''}
-Die Abbildung $f:\Omega\to\R^{n}$ ist auf $\Omega$ \emph{stetig} (oder \emph{einfach stetig}, wenn der Kontex klar ist), falls $f$ in jedem Punkt $x\in\Omega$ stetig ist.
+Die Abbildung $f:\Omega\to\R^{n}$ ist auf $\Omega$ \emph{stetig} (oder \emph{einfach stetig}, wenn der Kontext klar ist), falls $f$ in jedem Punkt $x\in\Omega$ stetig ist.
 \end{definition}
 \subsubsection*{Beispiele}
-Mittels Resultate aus dem dritten Kapitel haben wir wichtige Beispiele von stetigen Funktionen.
+Mittels den Resultaten aus dem dritten Kapitel haben wir wichtige Beispiele von stetigen Funktionen.
 \begin{itemize}
-\item Diese Funktion ist auf ganz $\R\times\R$ stetig: \begin{align*}f:\R\times\R&\to\R \\ (a,b) &\mapsto (a+b) \end{align*} (Seien $(a_{n}), (b_{n})$ Folgen mit $a = \lim{a_{n}}, b = \lim{b_{n}}$. Dann ist die Folge $(a_{n} + b_{n})$ konvergent, und $\lim{a_{n}+b_{n}} = a + b$, nach Satz 3.8) 
+\item Diese Funktion ist auf ganz $\R\times\R$ stetig: \begin{align*}f:\R\times\R&\to\R \\ (a,b) &\mapsto (a+b) \end{align*} (Seien $(a_{n}), (b_{n})$ Folgen mit $a = \lim{a_{n}}, b = \lim{b_{n}}$. Dann ist die Folge $(a_{n} + b_{n})$ konvergent, und $\lim{a_{n}+b_{n}} = a + b$, nach Satz 3.8)
 \item Diese Funktion ist auf ganz $\R\times\R$ stetig:
 \begin{align*}f:\R\times\R&\to\R \\ (a,b)&\mapsto ab \end{align*}
-\item Diese Funktion is auf $\R\times\R^{x}$ stetig:
+\item Diese Funktion ist auf $\R\times\R^{x}$ stetig:
 \begin{align*}f:\R\times\R^{x}&\to\R \\ (a,b)&\mapsto a/b \end{align*}
-\item Aus wiederholter Anwendung von 1. und 2. ergibt sich die \emph{Polynomiale Funktion\todo{heisst die wirklich so?}}:
+\item Aus wiederholter Anwendung von 1. und 2. ergibt sich die \emph{polynomielle Funktion\todo{heisst die wirklich so?}}:
 \[\text{Sei } n \geq 0,\: a_{0}, \dots, a_{n}\in\R: p(x)\defeq a_{0} + a_{1}x + \dots + a_{n}x^{n} \]
-Die Polynomiale Funktion ist stetig auf ganz $\R$.
-\item Die beiden folgenden Abbildungen sind stetig auf ihrem Definitionsbereich. 
+Die polynomielle Funktion ist stetig auf ganz $\R$.
+\item Die folgenden beiden Abbildungen sind stetig auf ihrem Definitionsbereich.
 \begin{figure}[htbp]
 \begin{minipage}[t][4mm][b]{0.5\textwidth}
-\begin{align*} \R^{d}\times\R^{d}&\to\R^{d} \\ (a,b)&\mapsto(a+b)\end{align*} 
+\begin{align*} \R^{d}\times\R^{d}&\to\R^{d} \\ (a,b)&\mapsto(a+b)\end{align*}
 \end{minipage}
 \begin{minipage}[t][4mm][b]{0.5\textwidth}
 \begin{align*}  \R\times\R^{d}&\to\R^{d} \\ (\lambda,a)&\mapsto\lambda a \end{align*}
@@ -77,8 +77,8 @@ Die Polynomiale Funktion ist stetig auf ganz $\R$.
 Sei $f(x) =\mathcal{X}_{\mathbb{Q}} = \begin{cases} 1 &x\in\mathbb{Q} \\ 0 &x\in\R\backslash\mathbb{Q} \end{cases} $ \\
 
 Sei $x\in\R\backslash\mathbb{Q}$ fest mit $(x_{k})\in\mathbb{Q}, x_{k}\to x$. Dann ist ${f(x_{k})=\mathcal{X}(x_{k})=1 \nrightarrow 0=\mathcal{X}(x)}$. \\
-(Zu $x\in\R\backslash\mathbb{Q}$, sei $x_{k}$ die an der k-ten Nachkommastelle abgebrochene Dezimaldarstellung von $x$. Dann gilt $x_{k} \in \mathbb{Q}\; \forall k \in \N$ und $x_{k}\to x_{1}$.)
-\item Sei 
+(Zu $x\in\R\backslash\mathbb{Q}$ sei $x_{k}$ die an der k-ten Nachkommastelle abgebrochene Dezimaldarstellung von $x$. Dann gilt $x_{k} \in \mathbb{Q}\; \forall k \in \N$ und $x_{k}\to x_{1}$.)
+\item Sei
 \begin{multicols}{2}
 \begin{center}
 \vspace*{\fill}
@@ -103,7 +103,7 @@ $f: \begin{cases} x &x < 1 \\x &x>1 \end{cases}$
 \begin{definition}{(Struwe 4.1.3 (ii))}
 $\Omega \subset \R^{d}, f:\Omega\to\R^{n}, x_{0}\in\R^{d}\backslash\mathbb{Q}$ so dass $\exists (x_{k})\in\Omega$ mit $\lim{x_{k}=x_{0}}$. \\
 
-Dann ist $f$ an der Stelle $x_{0}$ \emph{stetig ergänzbar} falls $a=\lim{f(x_{k})}$ existiert. In diesem Fall setzen wir \[ f(x_{0} = a\]
+Dann ist $f$ an der Stelle $x_{0}$ \emph{stetig ergänzbar}, falls $a=\lim{f(x_{k})}$ existiert. In diesem Fall setzen wir \[ f(x_{0}) = a\]
 Die durch $f(x_{0})=a$ ergänzte Funktion $f$ ist offenbar stetig an der Stelle $x_{0}$.
 \end{definition}
 
@@ -127,7 +127,7 @@ Die durch $f(x_{0})=a$ ergänzte Funktion $f$ ist offenbar stetig an der Stelle 
 \end{tikzpicture}
 \end{center}
 \end{multicols}
-\item Sei $f:(a,b)\to\R$ monoton wachsend, d.h. $\forall x,y\in(a,b)$ mit $x\leq y$ folgt $f(x)\leq f(y)$. Sei ausserdem $x_{0}\in (a,b)$. Dann existieren die \emph{links- und rechtsseitigen Grenzwerte} 
+\item Sei $f:(a,b)\to\R$ monoton wachsend, d.h. $\forall x,y\in(a,b)$ mit $x\leq y$ folgt $f(x)\leq f(y)$. Sei ausserdem $x_{0}\in (a,b)$. Dann existieren die \emph{links- und rechtsseitigen Grenzwerte}
 \[ f(x_{0}^{+}) \defeq \lim_{\substack{x\to x_{0} \\ x > x_{0} \\ x \downarrow x_{0}}}f(x), \quad\quad f(x_{0}^{-})\defeq \lim_{\substack{x\to x_{0} \\ x < x_{0} \\ x \uparrow x_{0}}}f(x) \]
 und $f$ ist stetig an der Stelle $x_{0}$ genau dann, wenn $f(x_{0}^{-})=f(x_{0}^{+})=f(x_{0})$.
 \end{itemize}
@@ -140,11 +140,11 @@ Dann ist $(f(x_{0}-\frac{1}{n}))_{n\geq r}$ monoton wachsend ($x_{0}-\frac{1}{n+
 \[\text{Sei }l_{-}\defeq\lim_{n\to\infty}{f(x_{0}-\frac{1}{n})}\]
 \noindent Wir möchten zeigen, dass für jede $(y_{n})\subset (a, x_{0})$ mit $\lim{y_{n}}=x_{0}$ $\lim{f(y_{n})}$ existiert und $\lim{f(y_{n})}=l_{-}$. \todo{$=l_{-}$ oder $=l$.?}
 
-Da es für jedes $x<x_{0}$ ein $n$ gibt, mit $x\leq x_{0}-\frac{1}{n}$ folgt \[f(x) \leq f(x_{0}-\frac{1}{n} \leq l_{-}\]
-Sei nun $(y_{n})_{n\geq 1}$ beliebig in \todo{unreadable p134 mid}$(?a?, x_{0})$ mit $\lim{y_{n}}=x_{0}$. Sei $\varepsilon > 0$, ($y_{n} < x_{0}$) und $n_{0}(\varepsilon)$ mit \[l_{-}-\varepsilon < f(x_{0}-\frac{1}{n})\leq l_{-} \quad \forall n>n_{0}(\varepsilon) \]
+Da es für jedes $x<x_{0}$ ein $n$ gibt, mit $x\leq x_{0}-\frac{1}{n}$, folgt \[f(x) \leq f(x_{0}-\frac{1}{n} \leq l_{-}\]
+Sei nun $(y_{n})_{n\geq 1}$ beliebig in $(a, x_{0})$ mit $\lim{y_{n}}=x_{0}$. Sei $\varepsilon > 0$, ($y_{n} < x_{0}$) und $n_{0}(\varepsilon)$ mit \[l_{-}-\varepsilon < f(x_{0}-\frac{1}{n})\leq l_{-} \quad \forall n>n_{0}(\varepsilon) \]
 Insbesondere
 \[l_{-} - \varepsilon < f(x_{0}-\frac{1}{n_{0}(\varepsilon)}) \leq l_{-} \]
-Sei jetzt $n_{1}(\varepsilon)=n_{1}(n_{0}(\varepsilon))>0$ so dass \[ x_{n_{0}(\varepsilon)} = x_{0} - \frac{1}{n_{0}(\varepsilon)} < y_{n} < x_{0} = \lim_{n\to\infty}{x_{n}} \quad \forall n \geq n_{1}(\varepsilon)\]
+Sei jetzt $n_{1}(\varepsilon)=n_{1}(n_{0}(\varepsilon))>0$, so dass \[ x_{n_{0}(\varepsilon)} = x_{0} - \frac{1}{n_{0}(\varepsilon)} < y_{n} < x_{0} = \lim_{n\to\infty}{x_{n}} \quad \forall n \geq n_{1}(\varepsilon)\]
 \[ \left((y_{n})<(a,x_{0}), \lim{y_{n}}=x_{0}\right)\]
 Da $f$ monoton ist, folgt \[ l_{-} - \varepsilon < f(x_{0}-\frac{1}{n_{0}(\varepsilon)}) \leq f(y_{n}) \leq l_{-} = \lim{f(x_{n})} \]
 Insbesondere $\lim{f(y_{n})} = l_{-}$. \\
@@ -152,25 +152,25 @@ Insbesondere $\lim{f(y_{n})} = l_{-}$. \\
 \noindent Der Beweis für $L_{+}$ verläuft ganz analog. \\
 
 \noindent Nun zur Stetigkeit: Es gilt immer \[ l_{-}(x_{0})\leq f(x_{0}) \leq l_{+}(x_{0}) \]
-Falls $l_{-}(x_{0}) < l_{+}(x_{0})$ sei $(t_{n})_{n \geq 1}$ wie folgt definiert:
+Falls $l_{-}(x_{0}) < l_{+}(x_{0})$, sei $(t_{n})_{n \geq 1}$ wie folgt definiert:
 \[ t_{n}=\begin{cases}x_{0}-\frac{1}{n} &n\text{ gerade} \\ x_{0}+\frac{1}{n} &n\text{ ungerade} \end{cases} \]
 Dann gilt $\lim{t_{n}} = x_{0}$. Aber $f(t_{2n+1})-f(t_{n}) \geq l_{+}(x_{0})-l_{+}(x_{0}) >0$, woraus folgt dest \todo{dest? p 135 bottom} $(f(t_{n}))_{n\geq1}$ nicht konvergent. \\
-Falls $l_{-}(x_{0})=l_{+}(x_{0})$ folgt die Stetigkeit sofort. 
+Falls $l_{-}(x_{0})=l_{+}(x_{0})$ folgt die Stetigkeit sofort.
 
 \subsubsection*{Satz 4.3}
 Sei $f:(a,b)\to\R$ monoton wachsend. Dann ist die Menge der Unstetigkeitspunkte von $f$ entweder endlich oder abzählbar.
 \subsubsection*{Beweis}
 Sei $U(f) = \{x\in(a,b):f \text{ ist nicht stetig an x}\}$. Dann ist $\forall x\in U(f), \quad l_{-}(x) < l_{+}(x)$ und wir wählen ein \todo{unreadable.. p136 mid}$g(x)\in ??n(l_{-}(x),l_{+}(x))$ .
-Falls $x_{1}<x_{2}$ in $U(f)$ folgt $l_{+}(x_{1})<l_{-}(x_{2})$ und somit $g(x_{1})<g(x_{2})$. Damit ist $g:U(f)\to ??$ \todo{same unreadable character} injektiv. 
+Falls $x_{1}<x_{2}$ in $U(f)$, folgt $l_{+}(x_{1})<l_{-}(x_{2})$ und somit $g(x_{1})<g(x_{2})$. Damit ist $g:U(f)\to ??$ \todo{same unreadable character} injektiv.
 
-\noindent Stetigkeit verhält \todo{verträgt?} sich gut mit den üblichen Operationen auf Funktionen.
+\noindent Stetigkeit verträgt sich gut mit den üblichen Operationen auf Funktionen.
 
 \subsubsection*{Satz 4.4}
 Seien $f,g:\Omega \to \R^{n}$ und $x_{0}\in\Omega$. Falls $f$ und $g$ in $x_{0}$ stetig sind, so sind es auch $f+g$ und $\alpha f, \; \alpha \in \R$.
 
 \subsubsection*{Korollar 4.5}
-Falls $f,g$ auf $\Omega$ stetig sind, so sind es $f+g$ und $\alpha f$.
- 
+Falls $f,g$ auf $\Omega$ stetig sind, so sind es auch $f+g$ und $\alpha f$.
+
 \begin{definition}{4.6}
 \[ C\,(\,\Omega\, , \R\,) \] bezeichnet die Menge der stetigen Abbildungen $f: \Omega\to\R$. Nach Korollar 4.5 ist es ein Vektorraum.
 \end{definition}
@@ -182,9 +182,9 @@ Seien $f:\Omega\to\R^{n}, \Omega \subset \R^{d}$ und $g:\Gamma \to \R^{n}$ mit $
 Sei $(t_{n})_{n\geq1}$ in $\Omega$ mit $\lim{t_{n}} = x_{0}$. Da $f$ stetig ist, $\lim{f(t_{n})} = f(x_{0}) = y_{0}$, und aus der Stetigkeit von $g$ folgt, dass \[ \lim_{n\to\infty}{g(f(t_{n}))} = g(y_{0}) = (g \circ f)(x_{0}) \]
 
 \subsubsection*{Korollar 4.8}
-Falls $f:\Omega \to \R^{d}, f(\Omega) \subset \Gamma$ und $g:\Gamma \to \R^{m}$, auf $\Omega$ bzw auf $\Gamma$ stetig sind, so folgt, dass $g\circ f:\Omega\to\R^{m}$ auf $\Omega$ stetig ist.  
+Falls $f:\Omega \to \R^{d}, f(\Omega) \subset \Gamma$ und $g:\Gamma \to \R^{m}$, auf $\Omega$ bzw auf $\Gamma$ stetig sind, so folgt, dass $g\circ f:\Omega\to\R^{m}$ auf $\Omega$ stetig ist.
 \section{Stetige Funktionen}
-In diesem Abschnitt behandeln wir die erste der fundamentalen Eigenschaften von stetigen Funktionen, nämlich das eine auf einem endlichen Intervall $[a,b]$ (Endpunkte eingeschlossen) stetige Funktion immer ein Max und Min besitzt. Dies veralgemeinern wir dann auf Abbildungen von $\Omega\subseteq\R^{d}$ nach $\R{n}$ wobei $\Omega$ eine spezielle Eigenschaft haben muss (Kompaktheit).
+In diesem Abschnitt behandeln wir die erste der fundamentalen Eigenschaften von stetigen Funktionen, nämlich, dass eine auf einem endlichen Intervall $[a,b]$ (Endpunkte eingeschlossen) stetige Funktion immer ein Maximum und Minimum besitzt. Dies verallgemeinern wir dann auf Abbildungen von $\Omega\subseteq\R^{d}$ nach $\R{n}$, wobei $\Omega$ eine spezielle Eigenschaft haben muss (Kompaktheit).
 
 \subsubsection*{Satz 4.9}
 Seien $-\infty < a \leq b < \infty$ und $f:[a,b] \to \R$ stetig. \\
@@ -198,7 +198,7 @@ Falls nicht, so gibt es $\forall n \in \N$ ein $t_{t}\in [a,b]$ mit $f(t_{n}) \g
 $(t_{n})_{n\geq 1}$ ist beschränkt, nach Bolzano-Weierstrass. Sei $(t_{l(n)})$ eine konvergente Teilfolge mit $\lim{t_{l(n)}}=x$. \\
 Dann ist $x\in [a,b]$, da $a\leq t_{n}\leq b$ \\
 (Satz: $(a_{n}), (b_{n})$ konvergente Folgen mit $\lim{a_{n}} = a, \lim{b_{n}} = b$. Falls $a_{n} \leq b_{n}$, folgt $a \leq b$.) \\
-Aus der Stetigkeit von $f$ folgt: $\lim_{n\to\infty}{f(t_{n})} = f(x)$. Insbesondere ist $f(t_{l(n)})$ beschränkt, was im Widerspruch mit $f(t_{l(n)})\geq l(n)$ steht. \\
+Aus der Stetigkeit von $f$ folgt: $\lim_{n\to\infty}{f(t_{n})} = f(x)$. Insbesondere ist $f(t_{l(n)})$ beschränkt, was im Widerspruch zu $f(t_{l(n)})\geq l(n)$ steht. \\
 
 $\implies$ $f$ ist nach oben beschränkt.
 
@@ -276,12 +276,12 @@ $\implies f(K)$ ist kompakt.
 
 \section{Norm auf $\R^{d}$}
 \todo{In the source notes, this is 4.4, but there is no 4.3 that I can find...}
-Der Distanzbegriff auf $\R^{d}$ kommt von einem Skalarprodukt. Es gibt interessante, andere Arten einen Distanzbegriff einzuführen, nämlich mit dem Begriff der Norm.
+Der Distanzbegriff auf $\R^{d}$ kommt vom Skalarprodukt. Es gibt interessante, andere Arten einen Distanzbegriff einzuführen, nämlich mit dem Begriff der Norm.
 
 \begin{definition}{4.13}
 Eine \emph{Norm} auf $\R^{d}$ ist eine Abbildung \[ \norm{.}: \R^{d} \to \R \] mit den folgenden Eigenschaften:
 \begin{enumerate}
-\item \emph{Definiertheit}: $\norm{x} \geq 0$ mit Gleichheit genau dann wenn $x=0$.
+\item \emph{Definitheit}: $\norm{x} \geq 0$ mit Gleichheit genau dann wenn $x=0$.
 \item \emph{Positive Homogenität}: $\norm{\alpha x} = \abs{\alpha}\norm{x} \quad \forall \alpha \in \R, \forall x \in \R^{d}$
 \item \emph{Dreiecks-Ungleichung}: $\norm{x+y} \leq \norm{x} + \norm{y} \quad \forall x,y \in \R^{d}$
 \end{enumerate}
@@ -347,8 +347,8 @@ Dann ist
  &\underset{(\ast)}{\leq} C' \norm{x-y}_{2}\end{align*}
 \todo{Layout imperfect, but hard to make better.. p153 week9 sem1}
 \begin{align*}\text{Also folgt, dass } \R^{d}&\to \R \\ x &\mapsto \norm{x}\text{ stetig ist.}\end{align*}
-Da $S^{d-1} = \{ x\in\R^{d}:\norm{x}_{2}=1\}$ kompakt ist, folgt dass es $c_{+}, c_{-}\in S^{d-1}$ gibt, mit ${k_{-}\defeq\norm{c_{-}}}\leq\norm{x}\leq{\norm{c_{+}}\defeq k_{+}} \: \forall x\in S^{d-1}$. Da $c_{0}\neq 0$ folgt $k_{-}>0$. \\
-Sei $x\neq0$allgemein ($C_{-}\in S^{d-1}$), dann ist $y\defeq\frac{x}{\norm{x}_{2}}\in S^{d-1}$ also $k_{-}\leq \norm{\frac{x}{\norm{x}_{2}}}<k_{+}$, woraus \[ k_{-}\norm{x}_{2}\leq\norm{x}\leq k_{+}\norm{x}_{2}\] folgt.
+Da $S^{d-1} = \{ x\in\R^{d}:\norm{x}_{2}=1\}$ kompakt ist, folgt, dass es $c_{+}, c_{-}\in S^{d-1}$ gibt, mit ${k_{-}\defeq\norm{c_{-}}}\leq\norm{x}\leq{\norm{c_{+}}\defeq k_{+}} \: \forall x\in S^{d-1}$. Da $c_{0}\neq 0$ folgt $k_{-}>0$. \\
+Sei $x\neq0$ allgemein ($C_{-}\in S^{d-1}$), dann ist $y\defeq\frac{x}{\norm{x}_{2}}\in S^{d-1}$ also $k_{-}\leq \norm{\frac{x}{\norm{x}_{2}}}<k_{+}$, woraus \[ k_{-}\norm{x}_{2}\leq\norm{x}\leq k_{+}\norm{x}_{2}\] folgt.
 
 \section{$\varepsilon -\delta$ Kriterium für Stetigkeit}
 \todo{4.5 in source notes. what to do?}
@@ -358,27 +358,29 @@ Wir haben das folgende Kriterium für Stetigkeit an der Stelle $x_{0}$:
 Sei $f:\Omega\to\R^{n}$, $\Omega\subset\R^{d}$ eine Abbildung, $x_{0} \in\Omega$. Folgende Eigenschaften sind äquivalent:
 \begin{enumerate}
 \item $f$ ist stetig an der Stelle $x_{0}$. \\ D.h. für jede gegen $x_{0}$ konvergierende Folge $(x_{n})\subset\Omega$ konvergiert die Folge $f(x_{n})$ gegen $f(x_{0})$.
-\item Für jedes $\varepsilon>0$ gibt es $\delta>0$ so dass für alle $x\in\Omega$ mit $\abs{x-x_{0}}<\delta$ gilt:\[ \abs{\delta(x)-\delta(x_{0})}<\varepsilon \]
+\item Für jedes $\varepsilon>0$ gibt es $\delta>0$, so dass für alle $x\in\Omega$ mit $\abs{x-x_{0}}<\delta$ gilt:\[ \abs{\delta(x)-\delta(x_{0})}<\varepsilon \]
 \[ \forall\varepsilon>0\;\exists\delta>0: \forall x\in\Omega,\norm{x-x_{0}}<\delta \implies \norm{\delta(x)-\delta(x_{0})}<\varepsilon\]
 \end{enumerate}
 
 \begin{beweis}{4.18}
 \begin{enumerate}[align=left]
 \item[$(1)\Rightarrow (2)$] (Indirekt)\\
-Wir nehmen also an, dass (2) nicht gilt, d.h. es gibt $\varepsilon>0$ so dass für jedes $\delta >0$ einem punkt $x_\delta$ gibt mit 
+Wir nehmen also an, dass (2) nicht gilt, d.h. es gibt $\varepsilon>0$, so dass für jedes $\delta >0$ einem Punkt $x_\delta$ gibt mit
 \[\left\| {{x_\delta } - {x_0}} \right\| < \delta {\text{ und }}\left\| {f\left( {{x_\delta }} \right) - f\left( {{x_0}} \right)} \right\| > \varepsilon \]
 \todo[inline]{Start of big bracket}
-\begin{align*}&\neg \left( {\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \Omega :\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)\\ &= \left( {\exists \varepsilon  > 0,\forall \delta  > 0,\exists x \in \Omega :\left| {x - {x_0}} \right| < \delta {\text{ }}\not  \Rightarrow {\text{ }}\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)
+\begin{align*}
+&\neg \left( {\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \Omega :\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)\\
+ &= \left( {\exists \varepsilon  > 0,\forall \delta  > 0,\exists x \in \Omega :\left| {x - {x_0}} \right| < \delta {\text{ }}\not  \Rightarrow {\text{ }}\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)
 \end{align*}
 d.h.
 \[\exists \varepsilon  > 0,\forall \delta  > 0,\exists {x_\delta } \in \Omega :\left| {{x_\delta } - {x_0}} \right| < \delta {\text{  und  }}\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| > \varepsilon \]
 \todo[inline]{end of big bracket}
-Sei $\varepsilon>0$. Wir wählen jetzt $\delta_n=\frac{1}{n}$, dann gibt es $x_n:=\left(x_{\delta_n}\right)_{n\in\N}$, eine Folge in $\Omega$, mit $\lim x_n=x_0$. Aber die Folge $\left( f\left( x_n\right)\right)$ kann offensichtlich nicht gegen $f\left( x_0\right)$ konvergieren (Da $\left| {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} \right| > \varepsilon $), d.h. $f$ ist nicht stetig in $x_0$ 
-\item[$(2)\Rightarrow (1)$] Sei $\left( x_n\right)_{n\geq 1}$ eine Folge in $\Omega$ mit Grenzwert $x_0$. Wir möchten zeigen dass $f\left( {{x_n}} \right) \to f\left( {{x_0}} \right)$. Sei $\varepsilon>0$, nach (2) sei $\delta_{\varepsilon}>0$ so dass $\forall x\in\Omega$ mit 
+Sei $\varepsilon>0$. Wir wählen jetzt $\delta_n=\frac{1}{n}$, dann gibt es $x_n:=\left(x_{\delta_n}\right)_{n\in\N}$, eine Folge in $\Omega$, mit $\lim x_n=x_0$. Aber die Folge $\left( f\left( x_n\right)\right)$ kann offensichtlich nicht gegen $f\left( x_0\right)$ konvergieren (Da $\left| {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} \right| > \varepsilon $), d.h. $f$ ist nicht stetig in $x_0$.
+\item[$(2)\Rightarrow (1)$] Sei $\left( x_n\right)_{n\geq 1}$ eine Folge in $\Omega$ mit Grenzwert $x_0$. Wir möchten zeigen, dass $f\left( {{x_n}} \right) \to f\left( {{x_0}} \right)$. Sei $\varepsilon>0$, nach (2) sei $\delta_{\varepsilon}>0$, so dass $\forall x\in\Omega$ mit
 \[\left| {x - {x_0}} \right| < {\delta _\varepsilon } \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
-Da $\mathop {\lim }\limits_{n \to \infty } {x_n} = {x_0}$, gibt es $N\geq 1$ so dass 
+Da $\mathop {\lim }\limits_{n \to \infty } {x_n} = {x_0}$, gibt es $N\geq 1$, so dass
 \[\left\| {{x_n} - {x_0}} \right\| < \delta\hspace{5mm} \forall n \ge {N_\delta }\]
-(Hier hängt $N$ von $\delta$, und also im Endeffekt von $\varepsilon$ ab). Aus (2) folgt
+(Hier hängt $N$ von $\delta$ und also im Endeffekt von $\varepsilon$ ab). Aus (2) folgt
 \[\left\| {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} \right\| < \varepsilon \hspace{5mm}\forall n \ge {N_\delta }\]
 Dies zeigt $\lim f\left( {{x_n}} \right) = f\left( {{x_0}} \right)$
 \end{enumerate}
@@ -388,9 +390,9 @@ Dies zeigt $\lim f\left( {{x_n}} \right) = f\left( {{x_0}} \right)$
 \begin{enumerate}
 \item $f:\R\to\R$, $f(x)=3x+8$. Dann $f$ ist stetig auf $\R$. Sei $\varepsilon>0$, sei $x_0\in\R$
 \[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {\left( {3x + 8} \right) - \left( {3{x_0} + 8} \right)} \right| = 3\left| {\left( {x - {x_0}} \right)} \right|\hspace{5mm}\forall x \in \R\]
-Sei $\varepsilon>0$. Wenn wir $\delta=\frac{\varepsilon}{3}$ wählen, dann 
-\[ \text{CAN'T READ}, \left| {x - {x_0}} \right| < {\delta _\varepsilon } = \frac{\varepsilon }{3} \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
-In diesem Beispiel $\delta$ hängt nur von $\varepsilon$ ab. Nächste Beispiel zeigt dass $\delta$ nicht nur von $\varepsilon$, sondern auch von $x_0$ abhängen kann.
+Sei $\varepsilon>0$. Wenn wir $\delta=\frac{\varepsilon}{3}$ wählen, dann
+\todo{week9p156-1}\[ \text{CAN'T READ}, \left| {x - {x_0}} \right| < {\delta _\varepsilon } = \frac{\varepsilon }{3} \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+In diesem Beispiel hängt $\delta$ nur von $\varepsilon$ ab. Das nächste Beispiel zeigt, dass $\delta$ nicht nur von $\varepsilon$, sondern auch von $x_0$ abhängen kann.
 \item \begin{align*}
 f:\left( 0,\infty\right)\to&\left( 0,\infty\right)\\
 x\to&\frac{1}{x}
@@ -399,10 +401,10 @@ ist stetig auf $\left( 0,\infty\right)$. Sei $x_0\in\left( 0,\infty\right)$
 \[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {\frac{1}{x} - \frac{1}{{{x_0}}}} \right| = \left| {\frac{{{x_0} - x}}{{x \cdot {x_0}}}} \right|\]
 \[\left| {x - {x_0}} \right| < \delta  \Rightarrow  - \delta  < x - {x_0} < \delta  \Rightarrow x > {x_0} - \delta \]
 \[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \frac{{\left| {{x_0} - x} \right|}}{{\left| x \right|\left| {{x_0}} \right|}} < \frac{{\left| {x - {x_0}} \right|}}{{\left| {{x_0}} \right|\left| {{x_0} - \delta } \right|}}\]
-Sei $\delta<\frac{x_0}{2}$, dann folgt 
+Sei $\delta<\frac{x_0}{2}$, dann folgt
 \[\delta  < \frac{{{x_0}}}{2} \Rightarrow {x_0} - \delta  > {x_0} - \frac{{{x_0}}}{2} > \frac{{{x_0}}}{2}\]
 \[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \frac{{\left| {{x_0} - x} \right|}}{{\left| x \right|\left| {{x_0} - \delta } \right|}} \le \frac{{\left| {x - {x_0}} \right| \cdot 2}}{{{{\left| {{x_0}} \right|}^2}}} \le \frac{{2\delta }}{{\left| {{x_0}} \right|}}\]
-Sei 
+Sei
 \[{\delta _{\varepsilon ;{x_0}}} = \min \left\{ {\frac{{{x_0}}}{2},\frac{{\varepsilon {{\left| {{x_0}} \right|}^2}}}{2}} \right\}\]
 Dann
 \[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \frac{{\varepsilon {{\left| {{x_0}} \right|}^2}}}{2} \cdot \frac{2}{{{{\left| {{x_0}} \right|}^2}}} = \varepsilon \]
@@ -410,19 +412,19 @@ Dann
 
 \section{Zwischenwertsatz}
 \subsubsection*{Satz 4.19}
-Seien $a<b$ in $\R$ und $f:\lbrack a,b\rbrack\to\R$ eine Stetige Funktion, mit $f(a)\leq f\left( b\right)$ (oder $f(a)\geq f\left( b\right)$). Dann gibt es zu jedem $y\in\left[ f(a),f\left( b\right)\right]$ ein $x\in\left[ a,b\right]$ mit $f(x)=y$
+Seien $a<b$ in $\R$ und $f:\lbrack a,b\rbrack\to\R$ eine stetige Funktion, mit $f(a)\leq f\left( b\right)$ (oder $f(a)\geq f\left( b\right)$). Dann gibt es zu jedem $y\in\left[ f(a),f\left( b\right)\right]$ ein $x\in\left[ a,b\right]$ mit $f(x)=y$.
 
 \begin{beweis}{}
-Idee ist einfach. Wir benutzen ein Approximationsverfahren (In diesem Fall Bisektionsverfahren). Wir definieren zwei Monotone Folgen
+Die Idee ist einfach. Wir benutzen ein Approximationsverfahren (In diesem Fall ein Bisektionsverfahren). Wir definieren zwei monotone Folgen
 \[ a=a_1\leq a_2\leq\dots\leq b_2\leq b_1=b\]
-mit $a_n\nearrow$, $b_n\searrow$, $\lim a_n=\lim b_n=c$ und 
+mit $a_n\nearrow$, $b_n\searrow$, $\lim a_n=\lim b_n=c$ und
 \[ f\left( a_n\right)<y\leq f\left( b_n\right)\]
-Dann aus stetigkeit von $f$, folgt dass 
+Dann folgt aus der Stetigkeit von $f$f, dass
 \[ \lim f\left( a_n\right)=\lim f\left( b_n\right)=f(c)=y\]
 \begin{multicols}{2}
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
-\shade[top color=black!10,bottom color=black!10] 
+\shade[top color=black!10,bottom color=black!10]
       (1,1) parabola bend (2,4)(2.5,3)
 (2.5,3) parabola bend (3.2,2)(3.2,0) ;
 \draw[color=black!10,fill=black!10] (1,0) rectangle (3.18,1)
@@ -430,7 +432,7 @@ Dann aus stetigkeit von $f$, folgt dass
 \draw[->](-0.5,0) -- (6,0);
 \draw[->](0,-0.5) -- (0,6);
 \draw (1,1) parabola bend (2,4) (2.5,3);
-\draw (2.5,3) parabola bend (3.2,2) (5,4.5); 
+\draw (2.5,3) parabola bend (3.2,2) (5,4.5);
 \draw[fill=black] (1,1) circle (0.05);
 \draw[fill=black] (5,4.5) circle (0.05);
 \draw[fill=black] (3.2,2) circle (0.05);
@@ -453,13 +455,13 @@ b_2&=\frac{a+b}{2}
 \columnbreak
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
-\shade[top color=black!10,bottom color=black!10] 
+\shade[top color=black!10,bottom color=black!10]
       (3.2,2) parabola bend (3.2,2) (5,4.5) |- (3.2,2);
 \draw[color=black!10,fill=black!10] (3.2,0) rectangle (4.99,2);
 \draw[->](-0.5,0) -- (6,0);
 \draw[->](0,-0.5) -- (0,6);
 \draw (1,1) parabola bend (2,4) (2.5,3);
-\draw (2.5,3) parabola bend (3.2,2) (5,4.5); 
+\draw (2.5,3) parabola bend (3.2,2) (5,4.5);
 \draw[fill=black] (1,1) circle (0.05);
 \draw[fill=black] (5,4.5) circle (0.05);
 \draw[fill=black] (3.2,2) circle (0.05);
@@ -479,13 +481,13 @@ b_2&=b_1
 \end{align*}
 \setlength{\leftskip}{0cm}
 \end{multicols}
-Auf jedem Fall gibt
+Auf jeden Fall gibt es
 \begin{enumerate}
 \item $a_1\leq a_2 < b_2 \leq b_1$
 \item $\left( b_2-a_2\right)=\frac{1}{2}\left( b_1-a_1\right)$
 \item $f\left( a_2\right) < y \leq f\left( b_2\right)$
 \end{enumerate}
-Wir iterieren jetzt dieses Verfahren. Wir nehmen an, dass wir Folgen definiert haben nach $(k-1)-$Schnitten 
+Wir iterieren jetzt dieses Verfahren. Wir nehmen an, dass wir Folgen nach $(k-1)-$Schnitten definiert haben
 \begin{enumerate}
 \item $a_1\leq a_2\leq a_3\dots\leq a_k < b_k\leq b_{k-1}\dots\leq b_1$
 \item $\left( {{b_k} - {a_k}} \right) = \frac{1}{{{2^{k - 1}}}}\left( {{b_1} - {a_1}} \right)$
@@ -504,14 +506,16 @@ dann definieren wir $a_{k+1}=\frac{a_k+b_k}{2}$ und $b_{k+1}=b_k$. Dann ist imme
 \item ${b_{k + 1}} - {a_{k + 1}} = \frac{1}{2}\left( {{b_k} - {a_k}} \right) = \frac{1}{{{2^k}}}\left| {{b_1} - {a_1}} \right|$
 \item $f\left( a_{k+1}\right) < y \leq f\left( b_{k+1}\right)$
 \end{enumerate}
-Nach dem Prinzip der Vollständigen Induktion erhalten wir zwei folgen $\left( a_n\right)_{n\geq 1}$, $\left( b_n\right)_{n\geq 1}$ die den Eigenschaften 1., 2. und 3. erfüllen. $\left( a_n\right)$, $\left( b_n\right)$ sind monotone und beschränkt $\Rightarrow$ gibt es 
+Nach dem Prinzip der vollständigen Induktion erhalten wir zwei Folgen $\left( a_n\right)_{n\geq 1}$, $\left( b_n\right)_{n\geq 1}$, die die Eigenschaften 1., 2. und 3. erfüllen. $\left( a_n\right)$, $\left( b_n\right)$ sind monoton und beschränkt $\Rightarrow$ gibt es
 \[\overline{a}=\lim a_k\leq\overline{b}=\lim b_k \]
 Wegen 2.
 \[\lim \left| {{a_k} - {b_k}} \right| = \lim \left| {\frac{{{b_1} - {a_1}}}{{{2^k}}}} \right| = 0\]
-d.h. $\lim a_k=\lim b_k$. Sei $c\in\lbrack a,b\rbrack$ dieser Wert. Aus stetigkeit von $f$ folgt 
+d.h. $\lim a_k=\lim b_k$. Sei $c\in\lbrack a,b\rbrack$ dieser Wert. Aus stetigkeit von $f$ folgt
 \[f\left( c \right) = \lim f\left( {{a_n}} \right) = \lim f\left( {{b_n}} \right)\]
-Aus 3. folgt 
-\begin{align*}f\left( {{a_n}} \right) < y &\Rightarrow f\left( c \right) \le y\\g \le f\left( {{b_n}} \right) &\Rightarrow y \le f\left( c \right)
+Aus 3. folgt
+\begin{align*}
+f\left( {{a_n}} \right) < y &\Rightarrow f\left( c \right) \le y\\
+g \le f\left( {{b_n}} \right) &\Rightarrow y \le f\left( c \right)
 \end{align*}
 also $f(c)=y$.
 \end{beweis}
@@ -520,17 +524,22 @@ also $f(c)=y$.
 \begin{enumerate}
 \item Sei
 \[p\left( x \right) = {a_n}{x^n} + {a_{n - 1}}{x^{n - 1}} +  \ldots  + {a_0}\]
-ein polynome mit reellen Koeffizienten so dass $a_n\not=0$ und $n$ ungerade ist. Dann besitzt $p$ mindestens eine reelle Nullstelle.
+ein Polynom mit reellen Koeffizienten, so dass $a_n\not=0$ und $n$ ungerade ist. Dann besitzt $p$ mindestens eine reelle Nullstelle.
 \begin{beweis}{}
-Sei 
-\begin{align*}q(x) &= \frac{{p(x)}}{{{a_n}}}\\ &= {x^n} + \frac{{{a_{n - 1}}}}{{{a_n}}} \cdot {x^{n - 1}} +  \ldots  + \frac{{{a_0}}}{{{a_n}}}\\ &= {x^n}\left[ {1 + \frac{{{a_{n - 1}}}}{{{a_n}}} \cdot \frac{1}{x} +  \ldots  + \frac{{{a_0}}}{{{a_n}}} \cdot \frac{1}{{{x^n}}}} \right]
+Sei
+\begin{align*}
+q(x) &= \frac{{p(x)}}{{{a_n}}}\\
+ &= {x^n} + \frac{{{a_{n - 1}}}}{{{a_n}}} \cdot {x^{n - 1}} +  \ldots  + \frac{{{a_0}}}{{{a_n}}}\\
+ &= {x^n}\left[ {1 + \frac{{{a_{n - 1}}}}{{{a_n}}} \cdot \frac{1}{x} +  \ldots  + \frac{{{a_0}}}{{{a_n}}} \cdot \frac{1}{{{x^n}}}} \right]
 \end{align*}
 Dann
 \[\mathop {\lim }\limits_{x \to \infty } \frac{1}{{{x^5}}} = 0\]
-Folgt insbesondere dass es $c>0$ gibt so dass für $\abs{x}\geq c$ 
+Folgt insbesondere, dass es $c>0$ gibt so dass für $\abs{x}\geq c$
 \[1 + \frac{{{a_{n - 1}}}}{{{a_n}}} \cdot \frac{1}{x} +  \ldots  + \frac{{{a_0}}}{{{a_n}}} \cdot \frac{1}{{{x^n}}} \ge \frac{1}{2}\]
 Folglich ist:
-\begin{align*}q(c) &\ge {c^n}\frac{1}{2} > 0\\q( - c) &\le  - {c^n}\frac{1}{2} < 0\tag{\text{$n=$ ungerade}}
+\begin{align*}
+q(c) &\ge {c^n}\frac{1}{2} > 0\\
+q( - c) &\le  - {c^n}\frac{1}{2} < 0\tag{\text{$n=$ ungerade}}
 \end{align*}
 Also gibt $x_0\in\lbrack -c,c\rbrack$ mit $q\left( x_0\right)=0$
 \end{beweis}
@@ -538,41 +547,42 @@ Also gibt $x_0\in\lbrack -c,c\rbrack$ mit $q\left( x_0\right)=0$
 \end{enumerate}
 
 \subsubsection*{Satz 4.21}
-Sei $f:\lbrack a,b\rbrack\to\R$ stetig, streng monoton Wachsend (d.h. $x<y=f(x)<f\left( y\right)$). Dann ist 
+Sei $f:\lbrack a,b\rbrack\to\R$ stetig, streng monoton wachsend (d.h. $x<y=f(x)<f\left( y\right)$). Dann ist
 \[\Bild\left( f\right)=\lbrack c,d\rbrack=\left[ f\left( a\right), f\left( b\right)\right]\]
-$f:\lbrack a,b\rbrack\to\lbrack c,d\rbrack$ is bijektiv und $f^{-1}:\lbrack c,d\rbrack\to\lbrack a,b\rbrack$ ist stetig
+$f:\lbrack a,b\rbrack\to\lbrack c,d\rbrack$ ist bijektiv und $f^{-1}:\lbrack c,d\rbrack\to\lbrack a,b\rbrack$ ist stetig.
 
 \begin{beweis}{}
 \begin{enumerate}
-\item $f$ streng monoton wachsend, d.h. Falls $x\not=y$, dann ist $f\left( x\right)\not=f\left( y\right)\Rightarrow f$ Injektive.\\
+\item $f$ streng monoton wachsend, d.h. falls $x\not=y$, dann ist $f\left( x\right)\not=f\left( y\right)\Rightarrow f$ Injektive.\\
 
-Zwischenwertsatz $\Rightarrow f$ surjektive. $c=f(a)<f(b)=d$, Sei $y\in\lbrack c,d\rbrack$, ZWS $\Rightarrow\exists x\in\left( a,b\right)$ mit $f(x)=y\Rightarrow$ ist bijektive
-\item $f^{-1}$ ist stetig: Sei $y\in\lbrack c,d\rbrack$ und sei $\left( y_0\right)\in\lbrack c,d\rbrack$ eine folge mit $\lim y_n=y_0$. $f$ bijektive, $\exists x_n$, $x_0=f^{-1}\left( y_0\right)$, $\left( x_n\right)$ beschränkt. Sei $f^{-1}\left( y_{l(n)}\right)$ eine beliebige konvergente Teilfolge und $x$ deren Grenzwert 
+Zwischenwertsatz $\Rightarrow f$ surjektiv. $c=f(a)<f(b)=d$, Sei $y\in\lbrack c,d\rbrack$, ZWS $\Rightarrow\exists x\in\left( a,b\right)$ mit $f(x)=y\Rightarrow$ ist bijektiv.
+\item $f^{-1}$ ist stetig: Sei $y\in\lbrack c,d\rbrack$ und sei $\left( y_0\right)\in\lbrack c,d\rbrack$ eine Folge mit $\lim y_n=y_0$. $f$ bijektiv, $\exists x_n$, $x_0=f^{-1}\left( y_0\right)$, $\left( x_n\right)$ beschränkt. Sei $f^{-1}\left( y_{l(n)}\right)$ eine beliebige konvergente Teilfolge und $x$ deren Grenzwert
 \[ \lim f^{-1}\left( y_{l(n)}\right)=x\]
 \[ f\text{ stetig }\Rightarrow\lim f\left( f^{-1}\left( y_{l(n)}\right)\right) = f\left( f^{-1}\left( y_{l(n)}\right)\right)= f(x) \]
-aber 
+aber
 \[\lim f\left( {{f^{ - 1}}\left( {{y_{l(n)}}} \right)} \right) = \lim {y_{l(n)}}\]
 \begin{enumerate}
 \item[$\Rightarrow$] $\lim {y_{l(n)}}=f(x)$, $y_n$ ist aber auch konvergent
 \item[$\Rightarrow$] $\lim {y_{(n)}}=f(x)$, aber $\lim y_n=y_0$
 \item[$\Rightarrow$] $y_0=f(x)\Rightarrow x=f^{-1}\left( y_0\right)=x_0$
-\item[$\Rightarrow$] Jede Teilfolge von $\left( x_0\right)$ hat desselben Häufungspunkt $x_0$.
-\item[$\Rightarrow$] $\lim\sup x_n=x_0=\lim\inf x_n$, also $\lim {f^{ - 1}}\left( {{y_n}} \right) = \lim {x_n} = {x_0} = {f^{ - 1}}\left( {{y_0}} \right)\Rightarrow f$ stetig 
+\item[$\Rightarrow$] Jede Teilfolge von $\left( x_0\right)$ hat denselben Häufungspunkt $x_0$.
+\item[$\Rightarrow$] $\lim\sup x_n=x_0=\lim\inf x_n$, also $\lim {f^{ - 1}}\left( {{y_n}} \right) = \lim {x_n} = {x_0} = {f^{ - 1}}\left( {{y_0}} \right)\Rightarrow f$ stetig
 \end{enumerate}
 \end{enumerate}
 \end{beweis}
 
 \subsubsection*{Korollar 4.22}
-Sei $f:\left( a,b\right)\to\R$ stetig und streng monoton wachsend mit monotonen Limes
+Sei $f:\left( a,b\right)\to\R$ stetig und streng monoton wachsend mit monotonem Limes
 \[ - \infty  < c: = \mathop {\lim }\limits_{x \downarrow a} f\left( x \right) < \mathop {\lim }\limits_{x \uparrow b} f\left( x \right) = :d < \infty \]
-dann ist $f:\left( a,b\right)\to\left( c,d\right)$ bijektive und $f^{-1}$ ist stetig.
+dann ist $f:\left( a,b\right)\to\left( c,d\right)$ bijektiv und $f^{-1}$ ist stetig.
 
 \subsubsection*{Korollar 4.22}
-Sei $n\in\N$. Die Potenzfunktion $f(x)=x^n$ ist auf ganz $\R$ stetig. Sie ist auf $\left( 0,\infty\right)$ streng monoton wachsend mit Bild $\left( 0,\infty\right)$. Die Umkehrfunktion 
+Sei $n\in\N$. Die Potenzfunktion $f(x)=x^n$ ist auf ganz $\R$ stetig. Sie ist auf $\left( 0,\infty\right)$ streng monoton wachsend mit Bild $\left( 0,\infty\right)$. Die Umkehrfunktion
 \begin{align*}
 \left( 0,\infty\right)&\to\left( 0,\infty\right)\\
-x&\to\sqrt[n]{x}\text{ ist stetig}
+x&\to\sqrt[n]{x}
 \end{align*}
+ist stetig.
 
 \begin{beweis}{}
 \[{y^n} - {x^n} = \left( {y - x} \right)\underbrace {\left( {{y^{n - 1}} + {y^{n - 2}}x +  \ldots {x^{n - 1}}} \right)}_{ > 0}\]
@@ -581,7 +591,7 @@ Also folgt $x<y\Rightarrow x^n<y^n$, d.h. $f$ streng monoton wachsend
 \end{beweis}
 
 \subsubsection*{Satz 4.23}
-Die Funktion $\exp:\R\to\R$ ist stetig, streng monotone wachsend mit 
+Die Funktion $\exp:\R\to\R$ ist stetig, streng monoton wachsend mit
 \[ \Bild\left( \exp\right)=\exp\left( \R\right)=\left( 0,\infty\right)\]
 
 \begin{definition}{4.24}
@@ -592,7 +602,7 @@ Dann
 \subsubsection*{Korollar 4.25}
 $\log:\left( 0,\infty\right)\to\R$ hat folgende Eigenschaften
 \begin{enumerate}
-\item Sie ist strikt monoton wachsend und stetig
+\item ist strikt monoton wachsend und stetig
 \item $\log(1)=0$
 \item $\log\left( x\cdot y\right)=\log(x)+\log\left( y\right)$
 \end{enumerate}
@@ -605,10 +615,10 @@ ist absolut konvergent auf ganz $\R$
 \item Falls $x\geq 0$, ist \[\exp \left( x \right) > 1 > 0\hspace{5mm}\left( {\exp \left( x \right) = 1 \Leftrightarrow x = 0} \right)\]
 \item Wegen \[\exp \left( x \right) = \frac{1}{{\exp \left( { - x} \right)}}\not  = 0\] \[\exp \left( x \right) > 0\hspace{5mm}\forall x \in \R\] d.h. \[\exp\left( \R\right)\subset\left( 0,\infty\right)\]
 \item \[\exp \left( y \right) - \exp \left( x \right) = \exp \left( x \right)\left[ {\exp \left( {y - x} \right) - 1} \right]\]
-Falls $x<y$, so ist $\exp\left(y-x\right)>1$ und somit $\exp\left(y\right)>\exp\left(x\right)$ (da $\exp\left(x\right)>0$), d.h. $\exp$ ist streng monoton Wachsend
-\item Zur stetigkeit: Sei $x=x_0+h$, $0<h<1$
+Falls $x<y$, so ist $\exp\left(y-x\right)>1$ und somit $\exp\left(y\right)>\exp\left(x\right)$ (da $\exp\left(x\right)>0$), d.h. $\exp$ ist streng monoton wachsend.
+\item Zur Stetigkeit: Sei $x=x_0+h$, $0<h<1$
 \[\exp \left( x \right) - \exp \left( {{x_0}} \right) = \exp \left( {{x_0}} \right)\left( {\exp \left( h \right) - 1} \right)\]
-da 
+da
 \[\left| {\exp \left( h \right) - 1} \right| = \mathop {\left| {\sum\limits_{k = 1}^\infty  {\frac{{{h^k}}}{{k!}}} } \right|}\limits^{ \to 0}  \le \mathop {\left| {\sum\limits_{k = 1}^\infty  {\left| {{h^k}} \right|} } \right|}\limits^{h \to 0}  = \frac{{\left| h \right|}}{{1 - \left| h \right|}} \to 0\]
 Also für $x=x_0+h\to x_0$, $\exp\left( x \right)-\left( x_0 \right)\to 0$ und die Funktion $\exp$ ist stetig
 \[\exp \left( x \right) \to \infty \left( {x \to \infty } \right){\text{ und }}\exp \left( x \right) \to 0\left( {x \to  - \infty } \right)\]
@@ -623,8 +633,8 @@ Also für $x=x_0+h\to x_0$, $\exp\left( x \right)-\left( x_0 \right)\to 0$ und d
 \end{align*}
 \[ \Rightarrow\boxed{\log\left( x\right)+\log\left( y\right)=\log\left( xy\right)}\]
 
-\section{Gleichmässig Stetigkeit}
-Sei $f:\Omega\to\R$ eine stetige funktion auf $\Omega$, d.h. 
+\section{Gleichmässige Stetigkeit}
+Sei $f:\Omega\to\R$ eine stetige Funktion auf $\Omega$, d.h.
 \[\forall {x_0} \in \Omega ,\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \R :\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
 \todo[inline]{Begin big rounded parenthesis}
 $f$ ist nicht stetig auf $\Omega\Leftrightarrow\exists x_0\in\Omega,\exists\varepsilon>0,\forall>0,\exists\in\Omega:\abs{x-x_0}<\delta\text{ und }\abs{f\left( x\right)-f\left( x_0\right)}\geq\varepsilon$
@@ -632,7 +642,7 @@ $f$ ist nicht stetig auf $\Omega\Leftrightarrow\exists x_0\in\Omega,\exists\vare
 
 \begin{definition}{4.24}
 \underline{Gleichmässig stetig:} \vspace{2mm}\\
-$f:\Omega\to\R^n$ heisst gleichmässig stetig falls für jede $\varepsilon>0$, ein $\delta>0$ gibt so dass $\forall x,x_0\in\Omega$
+$f:\Omega\to\R^n$ heisst gleichmässig stetig, falls für jedes $\varepsilon>0$ es ein $\delta>0$ gibt, so dass $\forall x,x_0\in\Omega$
 \[\left\| {x - {x_0}} \right\| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
 \underline{Stetig:} \vspace{2mm}\\
 $\forall x_0\in\omega$, $\forall \varepsilon>0$, $\exists\delta_{x_0,\varepsilon}>0$, $\forall x\in\Omega$:
@@ -640,8 +650,8 @@ $\forall x_0\in\omega$, $\forall \varepsilon>0$, $\exists\delta_{x_0,\varepsilon
 \underline{Gleich stetig:} \vspace{2mm}\\
 $\forall \varepsilon>0$, $\exists\delta_{\varepsilon}>0$, $\forall x,x_0\in\Omega$:
 \[\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
-Stetig: $\delta$ ist abhängig von $\varepsilon$ und $x_0$\\
-gleich. stetig:$\delta$ ist abhängig von $\varepsilon$, aber unabhängig con $x_0$
+Stetig: $\delta$ ist abhängig von $\varepsilon$ und $x_0$.\\
+Gleichmässig stetig:$\delta$ ist abhängig von $\varepsilon$, aber unabhängig von $x_0$.
 \end{definition}
 
 \subsubsection*{Beispiel 4.25}
@@ -653,22 +663,22 @@ Falls $x-x_0=\pm\delta$, $\delta\not=0$ und $x_0\to\infty$ dann
 f(x):\R&\to\R\\
 x&\to 2x+5
 \end{align*}
-Dann ist $f$ gleichmässigstetig
+Dann ist $f$ gleichmässig stetig
 \begin{beweis}{}
 Sei $\varepsilon>0$, $x_0,x\in\R$. Dann \[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {2x + 5 - 2{x_0} + 5} \right| = 2\left| {x - {x_0}} \right|\]
-$\Rightarrow$ Wenn wir $\delta=\frac{\varepsilon}{2}$ wählen, dann \[\left| {x - {x_0}} \right| < \frac{\varepsilon }{2} \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \] 
+$\Rightarrow$ Wenn wir $\delta=\frac{\varepsilon}{2}$ wählen, dann \[\left| {x - {x_0}} \right| < \frac{\varepsilon }{2} \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
 \end{beweis}
 \item \begin{align*}
 f:\Omega&\to\Omega\hspace{5mm}\Omega=\left( 0,\infty\right)\\
 x&\to x^2
 \end{align*}
-$f$ ist stetig aber nicht gleichmässig stetig. 
+$f$ ist stetig, aber nicht gleichmässig stetig.
 \begin{enumerate}[i)]
 \item $f$ stetig: Sei $x_0\in\R$, $\varepsilon>0$\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {{x^2} - x_0^2} \right| = \left| {\left( {x - {x_0}} \right)\left( {x + {x_0}} \right)} \right|\] Sei $\abs{x-x_0}<\varepsilon<1$. Dann, $x<x_0+1:=a$. Dann $x,x_0+1<a$
 \[\left| {{x^2} - x_0^2} \right| = \left| {x - {x_0}} \right|\left| {x + {x_0}} \right| < 2a\left| {x - {x_0}} \right|\]
-Wenn wir $\delta=\min\left(1,\frac{\varepsilon}{2a}\right)$ wählen dann \[\left| {x - x_0^2} \right| < 2a\left| {x - {x_a}} \right| \le \varepsilon \]
+Wenn wir $\delta=\min\left(1,\frac{\varepsilon}{2a}\right)$ wählen, dann \[\left| {x - x_0^2} \right| < 2a\left| {x - {x_a}} \right| \le \varepsilon \]
 \subsubsection*{Bemerkung}
-$f$ ist abhängig von $\varepsilon$, und $a$ ist $x_0+1$, abhängig von $x_0$.
+$f$ ist abhängig von $\varepsilon$, und $a$ ist $x_0+1$ abhängig von $x_0$.
 \item $f$ ist nicht gleichmässig stetig, d.h. \[\exists \varepsilon  > 0, \forall\delta>0, \exists x_0\in\Omega, \exists x\in\Omega:\abs{x-x_0}<\delta \text{ und }\abs{x^2-x_0^2}\geq \varepsilon\]
 Sei $\varepsilon=1$, $\delta>0$, $x_0=\frac{1}{\delta}$ und $x=x_0+\frac{\delta}{2}$. Dann $\abs{x-x_0}<\frac{\delta}{2}<\delta$ aber \[\left| {{x^2} - x_0^2} \right| = \left| {{{\left( {\frac{1}{\delta } + \frac{\delta }{2}} \right)}^2} - \frac{1}{{{\delta ^2}}}} \right| = 1 + \frac{{{\delta ^2}}}{4} > 1 = \varepsilon \]
 \end{enumerate}
@@ -681,9 +691,9 @@ Dann ist $f$ gleichmässig stetig
 Sei $\varepsilon>0$ gegeben. Sei $x_0,x\in\Omega=\lbrack 0,4\rbrack$, $0\leq x,x_0\leq 4\Rightarrow 0\leq x+x_0\leq 8$
 \begin{align*}
 \left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| &= \left| {{x^2} - x_0^2} \right|\\
- &= \left| {x - {x_0}} \right|\left| {x + {x_0}} \right| \le \left( {4 + 4} \right)\delta 
+ &= \left| {x - {x_0}} \right|\left| {x + {x_0}} \right| \le \left( {4 + 4} \right)\delta
 \end{align*}
-Sei $\delta=\frac{\varepsilon}{8}$, dann 
+Sei $\delta=\frac{\varepsilon}{8}$, dann
 \[\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
 \end{beweis}
 \item  \begin{align*}
@@ -696,43 +706,48 @@ ist gleichmässig stetig auf $\left( 0,\infty\right)$
 \end{beweis}
 \end{enumerate}
 
-Wir haben gesehen dass 
+Wir haben gesehen, dass
  \begin{align*}
 f:\left( 0,\infty\right)&\to\left( 0,\infty\right)\\
 x&\to x^2
 \end{align*}
-nicht gleichmässig stetig ist, aber 
+nicht gleichmässig stetig ist, aber
  \begin{align*}
 f:\left[ 0,4\right]&\to\left[ 0,4\right]\\
 x&\to x^2
 \end{align*}
-ist gleichmässig stetig. Was ist die Unterschied? $\lbrack 0,4\rbrack$ ist kompakt, $\left( 0,\infty\right)$ nicht
+ist gleichmässig stetig. Was ist der Unterschied? $\lbrack 0,4\rbrack$ ist kompakt, $\left( 0,\infty\right)$ nicht.
 
 \subsubsection*{Satz 4.26}
 Sei $K\subset\R^d$ kompakt und $f:K\to\R^n$ stetig. Dann ist $f$ gleichmässig stetig.
 
 \begin{beweis}{(Indirekt)}
-Sonst es gibt $\varepsilon>0$ so dass für jedes $\delta>0$ Punkte $x,y\in k$ gibt mit \[\left\| {x - y} \right\| < \delta \hspace{5mm}\left| {f\left( x \right) - f\left( y \right)} \right| > \varepsilon \]
-Sei $\forall k\geq 1$, mit $\delta=\frac{1}{k}$, ein Paar $\left( x_k,y_k\right)$ gewählt so dass\[\left| {{x_k} - {y_k}} \right| < \frac{1}{k}{\text{ und }}\left| {f\left( {{x_k}} \right) - f\left( {{y_k}} \right)} \right| > \varepsilon \]
-Da $k$ kompakt ist, gibt eine konvergente Teilfolge $x_{l(k)}\to z$. Aus $\abs{x_k-y_k}<\frac{1}{k}$ folgt dass $y_{l(k)}\to z$. Sei nun $k_0$ so dass 
+Sonst gibt es $\varepsilon>0$, so dass für jedes $\delta>0$ Punkte $x,y\in k$ gibt mit \[\left\| {x - y} \right\| < \delta \hspace{5mm}\left| {f\left( x \right) - f\left( y \right)} \right| > \varepsilon \]
+Sei $\forall k\geq 1$, mit $\delta=\frac{1}{k}$, ein Paar $\left( x_k,y_k\right)$ gewählt, so dass\[\left| {{x_k} - {y_k}} \right| < \frac{1}{k}{\text{ und }}\left| {f\left( {{x_k}} \right) - f\left( {{y_k}} \right)} \right| > \varepsilon \]
+Da $k$ kompakt ist, gibt es eine konvergente Teilfolge $x_{l(k)}\to z$. Aus $\abs{x_k-y_k}<\frac{1}{k}$ folgt dass $y_{l(k)}\to z$. Sei nun $k_0$ so dass
 \[\mathop {\left\| {f\left( {{x_{l\left( {{k_0}} \right)}}} \right) - f\left( z \right)} \right\|}\limits_{f{\text{ stetig}}} < \frac{\varepsilon }{2}\hspace{5mm}\forall k > {k_0}\]
 Dann folgt $\forall k>k_0$:
 \[\left\| {f\left( {{y_{l\left( {{k_0}} \right)}}} \right) - f\left( z \right)} \right\| \ge \left| {\underbrace {f\left( {{y_{l\left( k \right)}}} \right) - f\left( {{x_{l\left( k \right)}}} \right)}_{ > \varepsilon }} \right| - \left| {\underbrace {f\left( {{x_{l\left( k \right)}}} \right) - f\left( z \right)}_{ < \varepsilon /2}} \right| \ge \frac{\varepsilon }{2}\]
 \end{beweis}
 
-\section{Punktweise und gleichmässige Konvergenz}
+\section{Punktweise und Gleichmässige Konvergenz}
 Sei $\Omega\subset\R^d$, $f,f_k:\Omega\to\R^n$
 
 \begin{definition}{4.28}
-$\left( f_k\right)_{k\geq 1}$ konvergiert punktweise gegen $f$ falls $\forall x\in\Omega$ \[\mathop {\lim }\limits_{k \to \infty } {f_k}\left( x \right) = f\left( x \right)\]
-$\forall x\in\Omega$, $\forall\varepsilon>0$, $\exists k_{\varepsilon,x}$ s.d. $\abs{f_k(x)-f(x)}<\varepsilon$, $\forall k>k_{\varepsilon,x}$. Es stellt sich die Frage ob $f$ stetig ist, falls alle $\left( f_k\right)_{k\geq 1}$ stetig sind
+$\left( f_k\right)_{k\geq 1}$ konvergiert punktweise gegen $f$, falls $\forall x\in\Omega$ \[\mathop {\lim }\limits_{k \to \infty } {f_k}\left( x \right) = f\left( x \right)\]
+$\forall x\in\Omega$, $\forall\varepsilon>0$, $\exists k_{\varepsilon,x}$ s.d. $\abs{f_k(x)-f(x)}<\varepsilon$, $\forall k>k_{\varepsilon,x}$. Es stellt sich die Frage, ob $f$ stetig ist, falls alle $\left( f_k\right)_{k\geq 1}$ stetig sind.
 \end{definition}
 \subsubsection*{Beispiel 4.30}
-Sei $f_k:\lbrack 0,1\rbrack\to\R$, $f_k(x)=x^k$, $k\geq 1$. Dann gilt 
-\begin{align*}0 \le x < 1:&\mathop {\lim }\limits_{k \to \infty } {x^k} = 0\\x = 1:&\mathop {\lim }\limits_{x \to \infty } {x^k} = 1
+Sei $f_k:\lbrack 0,1\rbrack\to\R$, $f_k(x)=x^k$, $k\geq 1$. Dann gilt
+\begin{align*}
+0 \le x < 1:&\mathop {\lim }\limits_{k \to \infty } {x^k} = 0\\
+x = 1:&\mathop {\lim }\limits_{x \to \infty } {x^k} = 1
 \end{align*}
-Also konvergiert $\left( f_k\right)$ punktweise gegen 
-\[f(x) = \left\{ {\begin{array}{*{20}{r}}0&{0 \le x < 1}\\1&{x = 1}\end{array}} \right.\]
+Also konvergiert $\left( f_k\right)$ punktweise gegen
+\[f(x) = \left\{ {\begin{array}{*{20}{r}}
+0&{0 \le x < 1}\\
+1&{x = 1}
+\end{array}} \right.\]
 Insbesondere ist $f\left( x\right)$ nicht stetig.
 
 \subsubsection*{Beispiel}
@@ -744,67 +759,78 @@ Da $x\in\lbrack 1,2\rbrack$, $\abs{nx+1}\geq n+1$ und $1+\abs{x}\leq 3$
 \[\frac{3}{{1 + n}} \le \varepsilon  \Rightarrow \frac{3}{\varepsilon } - 1 \le n\]
 d.h. $\forall\varepsilon>0$, $\exists N_\varepsilon$ s.d. für $n>N_{\varepsilon}=\frac{3}{\varepsilon}-1$
 \[\abs{f_n(x)-x}<\varepsilon\hspace{5mm}\forall x\in\lbrack 1,2\rbrack\]
-$N_\varepsilon$ hängt nur von $\varepsilon$ ab und nicht von $x\in\lbrack 1,2\rbrack$ ab.
+$N_\varepsilon$ hängt nur von $\varepsilon$ ab und nicht von $x\in\lbrack 1,2\rbrack$.
 
 \begin{definition}{4.29}
-$\left( f_k\right)$ konvergiert gleichmässig gegen $f$ falls 
+$\left( f_k\right)$ konvergiert gleichmässig gegen $f$, falls
 \[\mathop {\sup }\limits_{x \in \Omega } \left\| {{f_k}(x) - f(x)} \right\| \to 0,k \to \infty \]
-d-h- $\forall\varepsilon>0$, $\exists k_\varepsilon$ so dass $\forall k>k_\varepsilon$
+d-h- $\forall\varepsilon>0$, $\exists k_\varepsilon$, so dass $\forall k>k_\varepsilon$
 \[\forall x \in \Omega :\left\| {{f_k}(x) - f(x)} \right\| < \varepsilon \]
 \end{definition}
 
 \subsubsection*{Beispiel 4.30}
 Seien $\left( a_k\right)_{k\geq 1}\in\C$\[p(z): = \sum\limits_{k = 0}^\infty  {{a_k}{z^k}} \]
-mit konvergenzradius
+mit Konvergenzradius
 \[\rho:=\frac{1}{\lim\sup\sqrt[k]{a_k}}\leq\infty\]
-Sei $\rho>0$, und $0\leq r<\rho$. Dann konvergiert die Folge 
+Sei $\rho>0$, und $0\leq r<\rho$. Dann konvergiert die Folge
 \[p_n(z): = \sum\limits_{k = 0}^\infty  {{a_k}{z^k}} \]
-gleichmässig auf $\overline{B_r(0)}$ gegen $p(z)$ 
+gleichmässig auf $\overline{B_r(0)}$ gegen $p(z)$
 
 \begin{beweis}{}
-Sei $z\in\overline{B_r(0)}$ und $r<s<\rho$ 
-\begin{align*}\left| {p(z) - {p_n}(z)} \right| &= \left| {\sum\limits_{k = n + 1}^\infty  {{a_k}{z^k}} } \right|\\&\hspace{-3mm}\mathop  \le \limits_{z \in \overline {{B_r}(0)} } \sum\limits_{n + 1}^\infty  {\left| {{a_n}} \right|{r^k}} \\& = \sum\limits_{k = n + 1}^\infty  {\left( {{a_k}} \right){{\left| {\frac{r}{s}} \right|}^k}{s^k}} \\&\mathop  \le \limits^{{\left( \text{\textasteriskcentered} \right)}} 
-{\left( {\frac{r}{s}} \right)^{n + 1}}\sum\limits_{n + 1}^\infty  {\left| {{a_k}} \right|{s^k}} \\ &\le {\left( {\frac{r}{s}} \right)^{n + 1}}{C_s}
+Sei $z\in\overline{B_r(0)}$ und $r<s<\rho$
+\begin{align*}
+\left| {p(z) - {p_n}(z)} \right| &= \left| {\sum\limits_{k = n + 1}^\infty  {{a_k}{z^k}} } \right|\\
+&\hspace{-3mm}\mathop  \le \limits_{z \in \overline {{B_r}(0)} } \sum\limits_{n + 1}^\infty  {\left| {{a_n}} \right|{r^k}} \\
+& = \sum\limits_{k = n + 1}^\infty  {\left( {{a_k}} \right){{\left| {\frac{r}{s}} \right|}^k}{s^k}} \\
+&\mathop  \le \limits^{{\left( \text{\textasteriskcentered} \right)}}
+{\left( {\frac{r}{s}} \right)^{n + 1}}\sum\limits_{n + 1}^\infty  {\left| {{a_k}} \right|{s^k}} \\
+ &\le {\left( {\frac{r}{s}} \right)^{n + 1}}{C_s}
 \end{align*}
 wobei
 \[{C_s}: = \sum\limits_0^\infty  {\left| {{a_k}} \right|{s^k} < \infty } \]
 \[\Rightarrow\left| {p(z) - {p_n}(z)} \right|\mathop  \to \limits_{n \to \infty } 0\]
-mit 
+mit
 \[\left| {\frac{r}{s}} \right| < 1,k > n + 1 \Rightarrow {\left( {\frac{r}{s}} \right)^k} < {\left( {\frac{r}{s}} \right)^{n + 1}}\tag{\text{\textasteriskcentered}}\]
 \end{beweis}
-Der sinn dieses Konvergenzbegriff ist
+Die Bedeutung dieses Konvergenzbegriffs ist
 \subsubsection*{Satz 4.31}
-Seien $f_k:\Omega\to\R^n$ stetig und $f:\Omega\to\R$ so dass $f_k$ gleichmässig gegen $f$ konvergiert. Dann ist $f$ stetig.
+Seien $f_k:\Omega\to\R^n$ stetig und $f:\Omega\to\R$, so dass $f_k$ gleichmässig gegen $f$ konvergiert. Dann ist $f$ stetig.
 \subsubsection*{Korollar 4.32}
-Potenzreihen sind stetig im inneren ihres Konvergenzkreises. 
+Potenzreihen sind stetig im Inneren ihres Konvergenzkreises.
 \begin{beweis}{}
 Folgt aus Satz 4.31 und Beispiel 4.30
 \end{beweis}
 
 \begin{beweis}{4.31}
-Sei $x_0\in\Omega$, und $\left( x_n\right)_{n>1}$ eine Folge in $\Omega$ mit Grenzwert $x_0$. Sei $\varepsilon>0$. Wir wählen ein k so dass 
+Sei $x_0\in\Omega$, und $\left( x_n\right)_{n>1}$ eine Folge in $\Omega$ mit Grenzwert $x_0$. Sei $\varepsilon>0$. Wir wählen ein k, so dass
 \[\mathop {\sup }\limits_{x \in \Omega } \left| {{f_k}(x) - f(x)} \right| < \varepsilon \]
-Da $f_k$ stetig ist, sei nun $N\geq 1$ mit 
+Da $f_k$ stetig ist, sei nun $N\geq 1$ mit
 \[\left| {{f_k}\left( {{x_n}} \right) - {f_k}\left( x \right)} \right| \le \varepsilon \hspace{5mm}\forall n > N\]
-Dann gilt 
-\begin{align*}\left\| {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} \right\| &= \left| {f\left( {{x_n}} \right) - {f_k}\left( {{x_n}} \right) + {f_k}\left( {{x_n}} \right) + {f_k}\left( {{x_0}} \right) - {f_k}\left( {{x_0}} \right) - f\left( {{x_0}} \right)} \right|\\ &\le \left| {f\left( {{x_n}} \right) - {f_k}\left( {{x_n}} \right)} \right| + \left| {{f_k}\left( {{x_n}} \right) - {f_k}\left( {{x_0}} \right)} \right| + \left| {{f_k}\left( {{x_0}} \right) - f\left( {{x_0}} \right)} \right|\\ &\le 3\varepsilon 
+Dann gilt
+\begin{align*}
+\left\| {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} \right\| &= \left| {f\left( {{x_n}} \right) - {f_k}\left( {{x_n}} \right) + {f_k}\left( {{x_n}} \right) + {f_k}\left( {{x_0}} \right) - {f_k}\left( {{x_0}} \right) - f\left( {{x_0}} \right)} \right|\\
+ &\le \left| {f\left( {{x_n}} \right) - {f_k}\left( {{x_n}} \right)} \right| + \left| {{f_k}\left( {{x_n}} \right) - {f_k}\left( {{x_0}} \right)} \right| + \left| {{f_k}\left( {{x_0}} \right) - f\left( {{x_0}} \right)} \right|\\
+ &\le 3\varepsilon
 \end{align*}
 \end{beweis}
-Eine natürliche Frage ist, was sind die ``einfachsten'' Funktionen mit denen man alle stetigen Funktionen gleichmässig approximieren kann?\\
-Es gibt eine sehr allgemeines Satz von Stone - Weierstrass, der gibt insbesondere ein Kriterium für Funktionen auf kompakten Teilmenge von $\R^d$
+Eine natürliche Frage ist, was sind die ``einfachsten'' Funktionen, mit denen man alle stetigen Funktionen gleichmässig approximieren kann?\\
+Es gibt einen sehr allgemeines Satz von Stone - Weierstrass, der insbesondere ein Kriterium für Funktionen auf kompakten Teilmengen von $\R^d$ gibt.
 \subsubsection*{Satz von Weierstrass}
-Mann kann jede Stetige Funktion auf einem kompakten Interval durch polynome approximieren. \\
+Mann kann jede stetige Funktion auf einem kompakten Intervall durch Polynome approximieren. \\
 
-Ein expliziter Approximation verfahren für auf $\lbrack 0,1\rbrack$ stetige Funktionen mittels polynomen wurde von S.Bernstein gefunden (1911). Sei 
-\[{B_{i,n}}(x) = \left( {\begin{array}{*{20}{c}}n\\i\end{array}} \right){x^i}{\left( {1 - x} \right)^{n - 1}},0 \le i \le n\]
+Ein explizites Approximationsverfahren für auf $\lbrack 0,1\rbrack$ stetige Funktionen mittels Polynomen wurde von S.Bernstein gefunden (1911). Sei
+\[{B_{i,n}}(x) = \left( {\begin{array}{*{20}{c}}
+n\\
+i
+\end{array}} \right){x^i}{\left( {1 - x} \right)^{n - 1}},0 \le i \le n\]
 \missingfigure{Page 181 middle}
-Dieses Polynom bilden ein Basis der Vektorraums der Polynomen von Grad $=n$. Sei $f:\lbrack 0,1\rbrack\to\R$, dann ist
+Dieses Polynom bildet ein Basis für den Vektorraum der Polynomen von Grad $=n$. Sei $f:\lbrack 0,1\rbrack\to\R$, dann ist
 \[{B_n}\left( f \right)(x): = \sum\limits_{i = 0}^n {{B_{i,n}}\left( x \right)f\left( {\frac{i}{n}} \right)} \]
 \subsubsection*{Satz (Bernstein)}
-Sei $f:\lbrack 0,1\rbrack\to\R$ stetig. Dann konvergiert die Folgen $B_n\left( f\right)(x)_{n\geq 1}$ gleichmässig gegen $f$.\\
+Sei $f:\lbrack 0,1\rbrack\to\R$ stetig. Dann konvergiert die Folge $B_n\left( f\right)(x)_{n\geq 1}$ gleichmässig gegen $f$.\\
 
-Mit dem Bernstein Polynomen, kann man eine Bezier kurve $n-$ten Gerades zu gegebenen $n+1$ \todo{Can't read word, page 182 middle} Bezierpunkten $P_0,\dots,P_n$ definieren. Die Bezierkurve ist ein Wichtiges Werkzeug für Komputergrafik darstellt.\\
+Mit den Bernstein-Polynomen kann man eine Bezierkurve $n-$ten Gerades zu gegebenen $n+1$ \todo{Can't read word, page 182 middle} Bezierpunkten $P_0,\dots,P_n$ definieren. Die Bezierkurve stellt ein wichtiges Werkzeug in der Vektorgrafik dar..\\
 
-Seien z.B. $P_0,\dots,P_n$ $n-$Kontrollpunkte in den \todo{Can't read, page 182 bottom}. Dann ist die Parametrische Kurve 
+Seien z.B. $P_0,\dots,P_n$ $n-$Kontrollpunkte in der Ebene. Dann ist die parametrische Kurve
 \[t \to \sum\limits_{i = 1}^n {{B_{i,n}}\left( t \right){P_i}} \]
-die Bezier Kurve, diese Kurve lieft immer in der Konvexen \todo{can't understand, page 182 bottom} des Kontrolpolygon. 
+die Bezierkurve. Diese Kurve liegt immer in der konvexen Hülle des Kontrollpolygons.
