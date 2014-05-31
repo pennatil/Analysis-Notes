@@ -136,11 +136,15 @@ y^{(4)}+2y^{(2)}+y&=0\\
 p(\lambda)=\lambda^4+2\lambda^2+1&=0=(\lambda^2+1)^2=(\lambda-i)^2(\lambda+i)^2
 \end{align*}
 Also sinds $\cos x, \sin x, x\cos x,x\sin x$ Lösungen. \[y(x)=c_1\cos x+c_2 x\cos x+c_3\sin x+c_4 x\sin x\]
-\item \[y^{(4)}-y=0\]%HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-\[p(\lambda)=t^4-1=(t^2-1)(t^2+1)=(t+1)(t-1)(t+i)(t-i)\]
-\[y(x)=c_1e^x+c_2e^{-x}+c_3\sin x+c_4\cos x\]
-\item \[2y''+20y'+48y=0\]
-\[p(\lambda)=2\lambda^2 +20\lambda+48=0\Rightarrow \lambda_{1,2}=-4,-6\]
+\item \begin{align*}
+y^{(4)}-y&=0\\
+p(\lambda)&=t^4-1=(t^2-1)(t^2+1)=(t+1)(t-1)(t+i)(t-i)\\
+y(x)&=c_1e^x+c_2e^{-x}+c_3\sin x+c_4\cos x
+\end{align*}
+\item \begin{align*}
+2y''+20y'+48y&=0\\
+p(\lambda)=2\lambda^2 +20\lambda+48&=0\Rightarrow \lambda_{1,2}=-4,-6
+\end{align*}
 Die Lösung ist \[y(x)=c_1e^{-4x}+c_2e^{-6x}\]
 \end{enumerate}
 \section{Inhomogene DGL}
@@ -153,9 +157,12 @@ Die allgemeine Lösung einer inhomogenen DGL \[y^{(n)}+a_{n-1}y^{(n-1)}+\dots +a
 \subsubsection*{Beispiel}
 \[y''+y=\sin x\]
 Um diese inhomogene DGL zu lösen, benötigen wir die allgemeine Lösung der dazugehörigen homogenen DGL $y''+y=0$\[p(\lambda)=\lambda^2+1=0\Rightarrow y_{AH}(x)=c_1\sin x+c_2\cos x\] Nun wird noch eine spezielle Lösung der inhomogenen DGL $y''+y=\sin x$ benötigt. Wir verifizieren, dass $y(x)=-\frac{1}{2}x\cos x$ eine derartige Lösung ist
-\[y'(x)=-\frac{1}{2}\cos x+\frac{1}{2}x\sin x\]
-\[y''(x)=\frac{1}{2}\sin x+\frac{1}{2}\sin x+\frac{1}{2}x\cos x=\sin x+\frac{1}{2}x\cos x\]
-\[y''(x)+y(x)=\sin x+\frac{1}{2}x\cos x-\frac{1}{2}x\cos x=\sin x\] Die allgemeine Lösung der inhomogenen DGL ist damit $$y(x) = \underbrace { - \frac{1}{2}x\cos x}_{\scriptstyle{\text{Spezielle Lösung }}\hfill\atop
+\begin{align*}
+y'(x)&=-\frac{1}{2}\cos x+\frac{1}{2}x\sin x\\
+y''(x)&=\frac{1}{2}\sin x+\frac{1}{2}\sin x+\frac{1}{2}x\cos x=\sin x+\frac{1}{2}x\cos x\\
+y''(x)+y(x)&=\sin x+\frac{1}{2}x\cos x-\frac{1}{2}x\cos x=\sin x
+\end{align*}
+Die allgemeine Lösung der inhomogenen DGL ist damit $$y(x) = \underbrace { - \frac{1}{2}x\cos x}_{\scriptstyle{\text{Spezielle Lösung }}\hfill\atop
 \scriptstyle{\text{der inhomogene DGL}}\hfill} + \underbrace {{c_1}\sin x + {c_2}\cos x}_{\scriptstyle{\text{Allgemeine Lösung }}\hfill\atop
 \scriptstyle{\text{der Homogene DGL}}\hfill}$$
 \subsubsection*{Bemerkung}
@@ -173,40 +180,60 @@ Zur Lösung der inhomogenen DGL kann man in vielen Fällen einen so genannten ``
 
 \subsubsection*{Beispiel 7.8}
 \begin{enumerate}
-\item Wir betrachten die DGL \[y''+y'-6y=3e^{-4x}\]Die dazugehörige homogene DGL \[y''+y'-6y=0\]
-\[p(\lambda)=\lambda^2+\lambda-6=0\text{\hspace{5mm}}\lambda_{1,2}=2,-3\] Die Allgemeine Lösung der homogenen DGL ist \[y(x)=c_1e^{-3x}+c_2e^{2x}\] Zur Lösung der inhomogenen DGL verwenden wir einen ``Ansatz vom Typ der Rechten Seite'', gehen also davon aus, dass die spezielle Lösung der inhomogenen DGL eine ähnliche Gestalt hat (wie die Störfunktion) \[y_s(x)=Ke^{-4x}\]Für die Ableitungen des Ansatzes haben wir \[y_s'(x)=-4Ke^{-4x}\]
-\[y''_s(x)=16Ke^{-4x}\]Eingesetzt in die homogene DGL ergibt sich \[y''+y'-6y=16Ke^{-4x}-4Ke^{-4x}-6Ke^{-4x}=6Ke^{-4x}=3e^{-4x}\]Also $6K=3\Rightarrow K=\frac{1}{2}$. Damit ist $y_s(x)=\frac{1}{2}e^{-4x}$ und die allgemeine Lösung der DGL \[y(x)=\frac{1}{2}e^{-4x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\R\]
+\item Wir betrachten die DGL \[y''+y'-6y=3e^{-4x}\]
+Die dazugehörige homogene DGL 
+\begin{align*}
+y''+y'-6y&=0\\
+p(\lambda)=\lambda^2+\lambda-6&=0\text{\hspace{5mm}}\lambda_{1,2}=2,-3
+\end{align*}
+Die Allgemeine Lösung der homogenen DGL ist \[y(x)=c_1e^{-3x}+c_2e^{2x}\] Zur Lösung der inhomogenen DGL verwenden wir einen ``Ansatz vom Typ der Rechten Seite'', gehen also davon aus, dass die spezielle Lösung der inhomogenen DGL eine ähnliche Gestalt hat (wie die Störfunktion)
+ \[y_s(x)=Ke^{-4x}\]
+Für die Ableitungen des Ansatzes haben wir 
+\begin{align*}
+y_s'(x)&=-4Ke^{-4x}\\
+y''_s(x)&=16Ke^{-4x}
+\end{align*}
+Eingesetzt in die homogene DGL ergibt sich \[y''+y'-6y=16Ke^{-4x}-4Ke^{-4x}-6Ke^{-4x}=6Ke^{-4x}=3e^{-4x}\]Also $6K=3\Rightarrow K=\frac{1}{2}$. Damit ist $y_s(x)=\frac{1}{2}e^{-4x}$ und die allgemeine Lösung der DGL \[y(x)=\frac{1}{2}e^{-4x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\R\]
 \item \[y''+y'-6y=50\sin x\] Wählen wir als ``Ansatz vom Typ der rechten Seite''
 
-\[{y_s}(x) = {K_1}\sin x + {K_2}\cos x\]
-\[y{'_s}(x) = {K_1}\cos x - {K_2}\sin x\]
-\[y'{'_s}(x) =  - {K_1}\sin x - {K_2}\cos x\]
-\[y'' + y' - 6y =  - {K_1}\sin x - {K_2}\cos x + {K_1}\cos x - {K_2}\sin x + 6{K_1}\sin x + 6{K_2}\cos x\]
-\[ = ( - 7{K_1} - {K_2})\sin x + ( - 7{K_2} + {K_1})\cos x\]
-\[ = 50\sin x\]
-\[ \Rightarrow  - 7{K_2} + {K_1} = 0 \Rightarrow {K_1} = 7{K_2}\]
-\[ - 7{K_1} - {K_2} = 50 \Rightarrow  - 49{K_2} - {K_2} = 50\]
-\[ \Rightarrow {K_2} =  - 1,{K_1} =  - 7\]
-\[y_s(x)=-7\sin x-\cos x\]
+\begin{align*}
+{y_s}(x) &= {K_1}\sin x + {K_2}\cos x\\
+y{'_s}(x) &= {K_1}\cos x - {K_2}\sin x\\
+y'{'_s}(x) &=  - {K_1}\sin x - {K_2}\cos x
+\end{align*}
+\begin{align*}
+y'' + y' - 6y &=  - {K_1}\sin x - {K_2}\cos x + {K_1}\cos x\\
+ &\hspace{4mm}- {K_2}\sin x + 6{K_1}\sin x + 6{K_2}\cos x\\
+ &= ( - 7{K_1} - {K_2})\sin x + ( - 7{K_2} + {K_1})\cos x = 50\sin x\\
+ &\Rightarrow  - 7{K_2} + {K_1} = 0 \Rightarrow {K_1} = 7{K_2}\\
+& - 7{K_1} - {K_2} = 50 \Rightarrow  - 49{K_2} - {K_2} = 50\\
+ &\Rightarrow {K_2} =  - 1,{K_1} =  - 7\\
+y_s(x)&=-7\sin x-\cos x
+\end{align*}
 Damit ist die allgemeine Lösung der inhomogenen DGL \[y(x)=-7\sin x-\cos x+c_1e^{-3x}+c_2e^{2x}\]
 \end{enumerate}
 Ein Problem ergibt sich, wenn als Störfunktion eine Lösung der homogenen DGL erscheint:
 \begin{enumerate}[\indent 3.]
 \item \[y''+y'-6y=e^{2x}\]''Der Ansatz vom Typ der rechten Seite''\[y(x)=Ke^{2x}\] führt nicht weiter, da dieser Ansatz eingesetzt in homogenen DGL 0 ergibt und nicht $e^{2x}$. Wir benutzen nun den Ansatz
-\[y(x)=Kxe^{2x}\]
-\[y'(x) = K{e^{2x}} + 2Kx{e^{2x}}\]
-\[y''(x) = 2K{e^{2x}} + 2K{e^{2x}} + 4Kx{e^{2x}}\]
-\[y'' + y' - 6y = 4Kx{e^{2x}} + 4Kx{e^{2x}} + K{e^{2x}} + 2Kx{e^{2x}} - 6Kx{e^{2x}}\]
-\[ = 5K{e^{2x}} = 10{e^{2x}}\]
-\[\Rightarrow K=2\]
+\begin{align*}
+y(x)&=Kxe^{2x}\\
+y'(x) &= K{e^{2x}} + 2Kx{e^{2x}}\\
+y''(x) &= 2K{e^{2x}} + 2K{e^{2x}} + 4Kx{e^{2x}}\\
+y'' + y' - 6y &= 4Kx{e^{2x}} + 4Kx{e^{2x}} + K{e^{2x}} + 2Kx{e^{2x}} - 6Kx{e^{2x}}\\
+ &= 5K{e^{2x}} = 10{e^{2x}}\\
+&\Rightarrow K=2
+\end{align*}
 Der Ansatz führt also zur Lösung \[y_s(x)=2xe^{2x}\]
 Insgesamt: \[y(x)=2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\text{\hspace{5mm}}c_1,c_2\in\R\]
 \item \[y''+y=\sin x\]
 \[y_H=c_1\sin x+c_2\cos x\]
 Um die spezielle Lösung zu finden, wählen wir einen ``Ansatz vom Typ der rechten Seite''
-\[{y_s}(x) = x\left( {{K_1}\sin x + {K_2}\cos x} \right)\]
-\[y{'_s}(x) = \left( {{K_1}\sin x + {K_2}\cos x} \right) + x\left( {{K_1}\cos x - {K_2}\sin x} \right)\]
-\[y'{'_s}(x) = {K_1}\cos x - {K_2}\sin x + {K_1}\cos x - {K_2}\sin x + x\left( { - {K_1}\sin x - {K_2}\cos x} \right)\]
+\begin{align*}
+{y_s}(x) &= x\left( {{K_1}\sin x + {K_2}\cos x} \right)\\
+y{'_s}(x) &= \left( {{K_1}\sin x + {K_2}\cos x} \right) + x\left( {{K_1}\cos x - {K_2}\sin x} \right)\\
+y'{'_s}(x) &= {K_1}\cos x - {K_2}\sin x + {K_1}\cos x - {K_2}\sin x\\
+ &\hspace{4mm}+ x\left( { - {K_1}\sin x - {K_2}\cos x} \right)
+\end{align*}
 Eingesetzt in die DGL ergibt sich
 \[y'{'_s}(x) + y(x) = 2{K_1}\cos x - 2{K_2} - x({K_1}\sin x + {K_2}\cos x) + x({K_1}\sin x + {K_2}\cos x)\]
 \[=2K_1\cos x-2K_2 \sin x=\sin x\]
