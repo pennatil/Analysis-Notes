@@ -13,9 +13,9 @@ Status
 |:-------:|:-----------:|:------------------:|:-------------:|:-----------------------:|:-----:|
 |    1    |     Yes     |         Yes        |       Yes     | Waiting for corrections |   No  |
 |    2    |     Yes(*)    |         Yes        |       Yes      | Waiting for corrections |   No  |
-|    3    | Yes |          Yes        |       Yes      |            No           |   No  |
-|    4    | Yes     |          -         |       Yes       |            -            |   No  |
-|    5    |      Yes     |          -         |       Yes       |            -            |   No  |
+|    3    | Yes |          Yes        |       Yes      |           Waiting for corrections           |   No  |
+|    4    | Yes     |          -         |       Yes       |Waiting for corrections           |   No  |
+|    5    |      Yes     |          -         |       Yes       |          Waiting for corrections           |   No  |
 |    6    |     Yes     |         Yes        |       Yes      |           Yes           |   No  |
 |    7    |     Yes     |         Yes        |       Yes      | Waiting for corrections |   No  |
 |    8    |     Yes     |          In Progress         |       Yes      | Waiting for corrections |   No  |
@@ -24,11 +24,7 @@ Status
 (*) Might still be missing some content, which will be added once the corrections are made.
 
 TODO:
-* Spell check chapters that are done
-* Finish chapters 3 through 5
-* Continue new chapters as new material comes in
-* Type up the Tipps from both semester (find source material)
-* Be done by the end of the current Semester
+* Finish drawings
 
 <a name="Getting the material"></a>
 Getting the material
@@ -103,4 +99,3 @@ This is only recommended to people with experience with LaTex, since the files m
 Disclaimer
 ==========
 The following documents, as well as any other file contained in this repository (like scripts, etc.) are given as is, meaning I take NO RESPONSIBILITY if something happens to your computer, or if the information contained in the documents is not accurate.
-
