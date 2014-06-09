@@ -292,31 +292,50 @@ Beweis ist der Selbe wie im eindimensionalen Fall. Für die Kettenregel gibt es 
 \subsubsection*{Satz 8.12 (Kettenregel, 1. Version)}
 Sei $g:\Omega\to\R$ in $x_0\in\Omega\subset\R^n$ differenzierbar, sowie $f\R\to\R$ an der Stelle $g\left( x_0\right)\in\R$ differenzierbar. Dann gilt \[d\left( {f \circ g} \right)\left( {{x_0}} \right) = f'\left( {g\left( {{x_0}} \right)} \right) \cdot dg\left( {{x_0}} \right)\]
 
-\missingfigure{page 137, middle UPDATE:STARTED DRAWING, MISSING DIAGRAM ON LEFT SIDE}
+\begin{center}
+\begin{tikzpicture}[scale=0.75]
+\draw[thick,->] (5,0) -- (5,4) node[anchor=south]{$\R$};
+\draw[thick,->] (5.5,3) parabola bend(7.5,3.3)(9.5,3);
+\draw(7.5,3.5) node[anchor=south] {$f$};
 
-%\begin{center}
-%\begin{tikzpicture}
-%
-%\draw[thick,->] (5,0) -- (5,4) node[anchor=south]{$\R$};
-%\draw[thick,->] (5.5,3) parabola bend(7.5,3.3)(9.5,3);
-%\draw(7.5,3.5) node[anchor=south] {$f$};
-%
-%\draw[thick,->] (10,0) -- (10,4);
-%\draw[thick,->] (0.5,3) parabola bend(2.5,3.3)(4.5,3);
-%\draw(2.5,3.5) node[anchor=south] {$g$};
-%
-%\draw[thick,->] (0.5,0) parabola bend(5,-0.5)(9.5,0);
-%\draw(5,-0.75) node[anchor=north] {$\left( f\circ g\right) \left( x_0\right)$};
-%
-%\node[circle,fill=black,inner sep=0.75mm] (a) at (10,3) {};
-%\node[circle,fill=black,inner sep=0.75mm] (a) at (5,3) {};
-%
-%\draw(10.25,3) node[anchor=west] {$f\left( y_0\right)$};
-%\draw(5,3) node[anchor=north east] {$y_0=g\left( x_0\right)$};
-%
-%\draw(-2,3) node[anchor=north east] {$\R^n$};
-%\end{tikzpicture}
-%\end{center}
+\draw[thick,->] (10,0) -- (10,4);
+\draw[thick,->] (0.5,3) parabola bend(2.5,3.3)(4.5,3);
+\draw(2.5,3.5) node[anchor=south] {$g$};
+
+\draw[thick,->] (0.5,0) parabola bend(5,-0.5)(9.5,0);
+\draw(5,-0.75) node[anchor=north] {$\left( f\circ g\right) \left( x_0\right)$};
+
+\node[circle,fill=black,inner sep=0.75mm] (a) at (10,3) {};
+\node[circle,fill=black,inner sep=0.75mm] (a) at (5,3) {};
+
+\draw(10.25,3) node[anchor=west] {$f\left( y_0\right)$};
+\draw(5,3) node[anchor=north east] {$y_0=g\left( x_0\right)$};
+
+\draw(-3,2.75) node[anchor=north east] {$\R^n$};
+
+
+
+		\node [] (0) at (-3.25, 3) {};
+		\node [] (1) at (0, 3.5) {};
+		\node [] (2) at (0, 2.75) {};
+		\node [] (3) at (0.25, 1.75) {};
+		\node [] (4) at (-2.75, 2) {};
+		\draw [bend left=135] (0.center) to (1.center);
+		\draw [bend right, looseness=0.75] (1.center) to (2.center);
+		\draw [bend left] (2.center) to (3.center);
+		\draw [bend left=75, looseness=0.75] (3.center) to (4.center);
+		\draw [bend left] (0.center) to (4.center);
+\draw[fill=black] (-0.5,2.7) circle (0.1);
+\draw[anchor=north] (-0.5,2.6) node {$x_0$};
+\draw[->] (-2,0.75) -- (-2,4.5);
+\draw[->] (-2,0.75) -- (1.25,0.75);
+\draw[->] (-2,0.75) -- (-2.75,-0.75);
+\draw[fill=white,color=white, very thick] (-2,1.385) -- (-2,3.865);
+\draw[fill=white,color=white, very thick] (-2.005,1.39) -- (-2.005,3.865);
+\draw[fill=white,color=white, very thick] (-1.995,1.385) -- (-1.995,3.865);
+
+\end{tikzpicture}
+\end{center}
 
 \subsubsection*{Beweis}
 Sei $g$ an der Stelle $x_0$ differenzierbar
