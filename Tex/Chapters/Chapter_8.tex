@@ -444,7 +444,60 @@ Geometrisch ist die Richtungsableitung von $f$ in Richtung $e$ genau die Steigun
 Um den Mittelwertsatz der DR zu verallgemeinern, benützen wir folgende Begriffe:
 \begin{definition}{8.19}
 Eine Menge $K\subset \R^n$ ist genau dann konvex, falls für jedes Paar von Punkten $x,y\in K$ die Menge $K$ auch das Segment \[\left( 1-t\right) x+ty\hspace{10mm} t\in\lbrack 0,y\rbrack\] mit Endpunkten $x,y$ enthält
-\missingfigure{Page 145, middle}
+\begin{multicols}{2}
+\begin{center}
+\begin{tikzpicture}[scale=0.75]
+\node [] (0) at (1, 1) {};
+\node [] (1) at (2, 2) {};
+\node [] (2) at (3, 1) {};
+\node [] (3) at (0, -2) {};
+\node [] (4) at (-3, 1) {};
+\node [] (5) at (-2.25, 2) {};
+\node [] (6) at (-1.5, 1) {};
+\node [] (7) at (-0.25, 0) {};
+
+\draw [bend right=45] (4.center) to (3.center);
+\draw [bend right=45, looseness=1.25] (3.center) to (2.center);
+\draw [bend right=45, looseness=1.25] (2.center) to (1.center);
+\draw [bend right] (1.center) to (0.center);
+\draw [bend left] (0.center) to (7.center);
+\draw [bend left] (7.center) to (6.center);
+\draw [bend right] (6.center) to (5.center);
+\draw [bend right=45, looseness=0.75] (5.center) to (4.center);
+
+\draw[fill=black] (1.8,1.1) circle (0.1);
+\draw[fill=black] (-2.4,0.8) circle (0.1);
+
+\draw(-2.4,0.8) --(1.8,1.1);
+
+\draw[](-2.4,0.7) node[anchor=north]{$x$};
+\draw[](1.8,1.0) node[anchor=north]{$y$};
+\end{tikzpicture}
+\end{center}
+\columnbreak
+\begin{center}
+\begin{tikzpicture}[scale=0.65]
+    \begin{scope}[rotate=320]
+        \draw (0:3cm) \foreach \x in {60,120,...,359} {
+                -- (\x:3cm)
+            }-- cycle (90:3cm) ;
+           \end{scope}
+\draw (-2.25,-0.35) -- (1.75,1);
+\draw[fill=black] (-2.25,-0.35) circle (0.1);
+\draw[fill=black] (1.75,1) circle (0.1);
+
+\end{tikzpicture}
+\end{center}
+\end{multicols}
+\begin{multicols}{2}
+\begin{center}
+Nicht Konvex
+\end{center}
+\columnbreak
+\begin{center}
+Konvex
+\end{center}
+\end{multicols}
 \end{definition}
 \subsubsection*{Satz 8.20}
 Sei $\Omega\subset\R^n$ konvex $f:\Omega\to\R$ differenzierbar, $x_0,x_1\in\Omega$ sowie $x_t:=\left( 1-t\right) x_0+tx_1$\todo{is it $tx_1$ or $tx$, ?? page 145 middle}. Dann gibt es $\vartheta\in\lbrack 0,1\rbrack$ mit \[f\left( {{x_1}} \right) - f\left( {{x_0}} \right) = df\left( {{x_{i\vartheta }}} \right)\left( {{x_1} - {x_0}} \right)\]
@@ -572,7 +625,8 @@ v:\R^2 &\to\R^2\\
 \end{center}
 
 \item $v\left( x,y\right) = \left( -y,x\right)$
-\missingfigure{Page 153, bottom}
+\missingfigure{Page 153, bottom\\
+\textcolor{red}{PLEASE SUGGEST SOME COORDINATES, AS I CANNOT REPLICATE YOUR DRAWING!}}
 \end{enumerate}
 \subsubsection*{Bemerkung 8.29}
 Sei $<,>$ das übliche Skalarprodukt auf $\R^n$, d.h. \[ < x,y > : = \sum\limits_{i = 1}^n {{x^i}{y^i}} \]
@@ -642,7 +696,7 @@ Sei $f:\R^n\to\R, C'$. Für jedes $s\in\R$ wird $f^{-1}(s)=\left\{ x\in\R^n\mid 
  \left( x,y,z\right) &\to x^2 +y^2 +z^2
  \end{align*}
 dann ist $f^{-1}(s)=$ Sphäre mit Zentrum $O$ und Radius $\sqrt{s}$
-\item $f\left( x,y\right) = xy$ ist ein hyperbolischer Parabolid mit Niveaulinien \missingfigure{page 158, bottom, use minipage} $f:\R^n \to\R$. Nun sei $x_0\in\Omega$ mit $f\left( x_0\right) = s$, i.e. $x_0 \in f^{-1} (s)$. Sei $\gamma :\lbrack -1,1\rbrack\to \R^n$ ein differenzierbare Kurve durch $x_0$ mit $\gamma\lbrack -1,1\rbrack\subset f^{-1}(s)$, $\gamma (0)=x_0$
+\item $f\left( x,y\right) = xy$ ist ein hyperbolischer Parabolid mit Niveaulinien \missingfigure{page 158, bottom, use minipage\\\textcolor{red}{ARE YOU SURE THIS IS NOT $x^2-y^2$?? I CAN'T REPLICATE YOUR DRAWING HERE}} $f:\R^n \to\R$. Nun sei $x_0\in\Omega$ mit $f\left( x_0\right) = s$, i.e. $x_0 \in f^{-1} (s)$. Sei $\gamma :\lbrack -1,1\rbrack\to \R^n$ ein differenzierbare Kurve durch $x_0$ mit $\gamma\lbrack -1,1\rbrack\subset f^{-1}(s)$, $\gamma (0)=x_0$
 \missingfigure{page 159, middle}
 Dann gilt $f\left( \gamma (t)\right)=s$, $\forall t\in\lbrack -1,1\rbrack$ und es folgt aus der Kettenregel
 \[\begin{array}{l}%Find if there is a better way to do this
