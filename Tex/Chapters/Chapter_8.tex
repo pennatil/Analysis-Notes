@@ -697,7 +697,29 @@ Sei $f:\R^n\to\R, C'$. Für jedes $s\in\R$ wird $f^{-1}(s)=\left\{ x\in\R^n\mid 
  \end{align*}
 dann ist $f^{-1}(s)=$ Sphäre mit Zentrum $O$ und Radius $\sqrt{s}$
 \item $f\left( x,y\right) = xy$ ist ein hyperbolischer Parabolid mit Niveaulinien \missingfigure{page 158, bottom, use minipage\\\textcolor{red}{ARE YOU SURE THIS IS NOT $x^2-y^2$?? I CAN'T REPLICATE YOUR DRAWING HERE}} $f:\R^n \to\R$. Nun sei $x_0\in\Omega$ mit $f\left( x_0\right) = s$, i.e. $x_0 \in f^{-1} (s)$. Sei $\gamma :\lbrack -1,1\rbrack\to \R^n$ ein differenzierbare Kurve durch $x_0$ mit $\gamma\lbrack -1,1\rbrack\subset f^{-1}(s)$, $\gamma (0)=x_0$
-\missingfigure{page 159, middle}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\draw[] (-5,0) -- (5,0) -- (3,-4) --(-7,-4) --  (-5,0);
+\draw[<-,very thick] (-4,0) -- (-1,0);
+\draw[<-,very thick] (-4,0) -- (-1,0);
+
+\draw[] (-4,-3) parabola bend (-2,-2)(-1.5,-2.05);
+
+\draw[] (-1.5,-2.05) parabola bend (-1,-2.1)(2,-1.5);
+\draw[fill=black] (-1.5,-2.05) circle (0.075);
+\draw[->,thick] (-1.5,-2.05) --(-1.5,-0.75);
+\draw[->,thick] (-1.5,-2.05) --(-0.1,-1.85);
+\draw (-1.5,-2.25) node[anchor=north] {$x_0=\gamma(0)$};
+\draw (-0.1,-1.85) node[anchor=south] {$\gamma'(0)$};
+\draw (2,-1.5) node[anchor=north] {$\gamma$};
+\draw (-2.5,0) node[anchor=south] {$\nabla f\left( x_0\right)$};
+\draw (5,-0.5) node[anchor=west] {$f^{-1}(s)$};
+\draw [<-] (4.5,0.2) -- (5,1) node[anchor=south]{Niveaufläche};
+
+\end{tikzpicture}
+\end{center}
+
 Dann gilt $f\left( \gamma (t)\right)=s$, $\forall t\in\lbrack -1,1\rbrack$ und es folgt aus der Kettenregel
 \[\begin{array}{l}%Find if there is a better way to do this
 \frac{d}{{dt}}\left( {f\left( {\gamma (t)} \right)} \right) = \frac{d}{{dt}}(s) = 0\\
@@ -795,7 +817,18 @@ ist die Parameterdarstellung einer Gerade durch den Punkt $a=\left( a_1,a_2,a_3\
 \end{minipage}
 \end{figure}
 \item $\gamma_1 (t)=\left( a\cos t,b\sin t, ct\right)$, $t\in\lbrack 0,2\pi\rbrack$ ist eine Parameterdarstellung einer elliptischen Helix
-\missingfigure{Page 164 top}
+\begin{center}
+\begin{tikzpicture}
+%DON'T CHANGE THE ORDER OF THE TWO FOLLOWING COMMANDS!!
+\draw[decoration={aspect=0.3, segment length=10mm, amplitude=10mm,coil},decorate] (0,3.1) -- (0,0);
+\fill [white] (3,3.2) rectangle (0,2.5);
+\draw[->] (1,2.5) -- (1.05,2.7);
+\draw[->] (0.5,0.125) -- (0.51,0.129);
+\draw[->] (0,0.5) -- (0,3);
+\draw[->] (0,0.5) -- (2,0.5);
+\draw[->] (0,0.5) -- (-0.5,-0.7);
+\end{tikzpicture}
+\end{center}
 $\gamma_2 (t)=\left( a\cos t,-b\sin t, c(2\pi -t)\right)$, $t\in\lbrack 0,2\pi\rbrack$ ist die Parameterdarstellung der gleichen Kurve wobei die Richtung umgekehrt ist
 \missingfigure{page 164, middle}
 Der Tangentialvektor zur Kurve an der Stelle $\gamma (t)$ ist $\gamma' (t)$ \[\gamma'(t)=\left( \gamma_1'(t),\gamma_2'(t),\dots, \gamma_n'(t)\right)\]
@@ -812,11 +845,57 @@ Ein einführendes Beispiel: Sei $m$ ein Massenpunkt, der sich unter den Einfluss
 Der Massenpunkt wird durch eine konstante Kraft $\overrightarrow F $ längs einer Geraden um den Vektor $\vec s$ verschoben. \\
 
 Die dabei verrichtete Arbeit ist definitionsgemäss das Skalarprodukt aus dem Kraftvektor $\overrightarrow F $ und dem Verschiebungsvektor $\vec s$.
-\missingfigure{Page 166, top}
+
+\begin{center}
+\begin{tikzpicture}
+\draw[->] (0,0) -- (2,0);
+\draw[->] (0,0) -- (2,1);
+\draw[fill=black] (0,0) circle (0.05);
+
+\draw(0.8,0.3) node [anchor=west]{$\theta$};
+\draw (0.75,0) arc (0:20:1cm);
+\draw(2,1) node [anchor=west]{$F$};
+\draw(0,0) node [anchor=north]{$s$};
+\draw(2,0) node [anchor=west]{$s+ds$};
+\draw(1,0) node [anchor=north]{$\mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over \Delta } s$};
+\draw(6,1) node [anchor=north]{$W=\vec F\cdot \vec s=F\cdot s\cdot\cos\theta$};
+\end{tikzpicture}
+\end{center}
 
 \noindent\underline{Allgemeiner Fall}\\
 Verschiebungs längs einer Kurve $\gamma$ in einem Kraftfeld $F=\left( P(x,y),Q(x,y)\right)$
-\missingfigure{Page 166, bottom}
+\begin{center}
+\begin{tikzpicture}
+\draw[->] (0,0) -- (10,0);
+\draw[->] (0,0) -- (0,6);
+
+\draw (1,4.5) parabola bend (1,4.5)(4,3);
+\draw (4,3) parabola bend (7,1.75)(9,2);
+
+\draw[] (0,0) -- (2.5,4.125);
+\draw[fill=black] (2.5,4.125) circle (0.05);
+\draw(2.5,4.3) node [anchor=west]{$P_a=\gamma(t_a)$};
+
+\draw[] (0,0) -- (4,3);
+\draw[fill=black] (4,3) circle (0.05);
+\draw(4.2,2.9) node [anchor=west]{$\left( (x(t),y(t)\right)=\gamma(t)$};
+\draw[->] (4,3) -- (5,3.5);
+\draw(5,3.5) node [anchor=west]{$F(x,y)$};
+
+
+\draw[] (0,0) -- (6,1.89);
+\draw[fill=black] (6,1.89) circle (0.05);
+\draw(6,2.2) node [anchor=west]{$P_b=\gamma(t_b)$};
+
+\draw(0.65,4.75) node [anchor=north]{$\gamma$};
+
+\draw(0.75,2.75) node [anchor=north]{$\gamma(t_t)$};
+\draw(2.25,2.5) node [anchor=north]{$\gamma(t)$};
+\draw(3.5,1.75) node [anchor=north]{$\gamma(t_{b^2})$};
+
+\end{tikzpicture}
+\end{center}
+
 $\Delta W= F\cdot \Delta (\gamma)=$ Kraftkomponente entlang des Weges mal züruckgelegter Weg. \\
 
 Da sich Betrag und Richtung der Kraft sowie der jeweilige Winkel zum Weg vom Punkt zu Punkt ändern, gilt das zur Berechnung notwendige Skalarprodukt näherungsweise jeweils nur für ein Wegelement $\overrightarrow\Delta r$. Die Berechnung der Arbeit erfolgt daher in folgender Weise:
@@ -888,7 +967,39 @@ Dann gilt
 = &\int\limits_0^{2\pi } {\left( {{{\sin }^2}t + {{\cos }^2}t} \right)dt}  = 2\pi
 \end{align*}
 \item Sei $\gamma (x,y)=3x^2ydx + \left( x^3+1\right)dy$. Wir betrachten das Kurvenintegral längs verschiedener Wege
-\missingfigure{page 170 top, add formulas as well using a minipage}
+\begin{multicols}{2}
+\begin{align*}
+\gamma_1(t)&=(t,t), 0\leq t\leq 1\\
+\gamma_1'(t)&=(1,1)\\
+\gamma_2(t)&=(t,t^2), 0\leq t\leq 1\\
+\gamma_2'(t)&=(1,2t)\\
+\end{align*}
+\null\vfill
+\columnbreak
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+		\node [] (0) at (0, 0) {};
+		\node [] (1) at (4, 4) {};
+\begin{scope}[decoration={
+    markings,
+    mark=at position 0.5 with {\arrow{>}}}
+    ] 
+		\draw [postaction={decorate},bend right] (0.center) to (1.center);
+		\draw [postaction={decorate}] (0.center) to (1.center);
+		\end{scope}
+\draw[->](-0.5,0) --(5,0);
+\draw[->](0,-0.5) --(0,5);
+\draw(-0.2,0) node [anchor=north]{0};	
+\draw[fill=black] (0,0) circle (0.05);	
+\draw[fill=black] (4,4) circle (0.05);	
+\draw(2,2.1) node [anchor=south]{$\gamma_1$};
+\draw(3.2,1.05) node [anchor=south]{$\gamma_2$};
+\draw(4,4) node [anchor=west]{$(1,1)$};
+\end{tikzpicture}
+\end{center}
+\null\vfill
+\end{multicols}
+\vspace{-15mm}
 \begin{align*}
 &\int\limits_{{\gamma _1}} \lambda   = \int {3{x^2}ydx + \left( {{x^3} + 1} \right)dy}  = \int\limits_0^1 {\left( {3{t^3} + \left( {{t^3} + 1} \right)} \right)dt = 2}\\
 &\int\limits_\gamma  \lambda   = \int\limits_0^1 {\left( {3{t^4} + \left( {{t^3} + 1} \right) \cdot 2t} \right)dt = 2}
