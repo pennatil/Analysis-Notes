@@ -1012,7 +1012,25 @@ so dass \[{\left. \gamma  \right|_{\left[ {{a_i},{a_{i + 1}}} \right]}} = \left[
 
 \noindent d.h. $t\to\gamma'(t)$ ist auf $\left( a_i, a_{i+1}\right)$ stetig und erweitert sich stetig auf $\lbrack a_i, a_{i+1}\rbrack$
 \subsubsection*{Beispiel}\todo{is  this inside the enumerated list or out?? page 171 middle}
-\missingfigure{Page 171 bottom}
+
+\begin{multicols}{2}
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+\node [] (0) at (0, 0) {};
+\node[](1) at (4,0){};
+\node [] (2) at (8, 2) {};
+\draw [bend left=60] (0.center) to (1.center);
+\draw [] (1.center) to (2.center);
+\draw[fill=black] (0.center) circle (0.075);
+\draw[fill=black] (1.center) circle (0.075);
+\draw[fill=black] (2.center) circle (0.075);
+\end{tikzpicture}
+\end{center}
+\columnbreak
+\null\vfill
+Bild eines stückweise $C'-$Weges
+\end{multicols}
+
 Dann definiert man
 \[\int\limits_\gamma  \lambda  : = \sum\limits_{t = 0}^{n - 1} {\int\limits_{{{\left. \gamma  \right|}_{\left[ {{a_i},{a_{i + 1}}} \right]}}} \lambda  } \]
 Jetzt werden wir die einzige grundlegendee Eigenschaften des Wegintegrals herleiten.
@@ -1030,7 +1048,27 @@ D.h. Sei $\gamma :\lbrack a,b\rbrack\to\Omega$, $C'$ und $\varphi :\lbrack a',b'
 \end{align*}
 Geometrisch heisst dies, dass $\int\limits_\gamma  \lambda$ nur vom Bild $\gamma\left( \lbrack a,b\rbrack\right)$ mit vorgegebenen Durchlaufsinn abhängt.
 \item Seien $\gamma_1:\lbrack a_1,b_1\rbrack\to\Omega$ und $\gamma_2:\lbrack a_2,b_2\rbrack\to\Omega$ zwei Wege mit $\gamma_1\left( b_1\right)=\gamma_2\left(a_2\right)$
-\missingfigure{Page 173, middle to top}
+\begin{center}
+\begin{tikzpicture}
+
+\draw[fill=black] (4,1) circle (0.05);
+\draw[fill=black] (8,0) circle (0.05);
+\draw[fill=black] (0,0) circle (0.05);
+\begin{scope}[decoration={
+    markings,
+    mark=at position 0.5 with {\arrow{>}}}
+    ] 
+		\draw[postaction={decorate}] (0,0) parabola bend (3,0.9)(4,1);
+\draw[postaction={decorate}]  (4,1) parabola bend (5,0.9) (8,0);
+		\end{scope}
+
+\draw (4,1) node [anchor=south] {$\gamma_1(b_1)=\gamma_2(a_2)$};
+\draw (2,0.85) node [anchor=south] {$\gamma_1$}; 
+\draw (6,0.85) node [anchor=south] {$\gamma_2$}; 
+\draw (0,0) node [anchor=north] {$\gamma_1(a_1)$};
+\draw (8,0) node [anchor=north] {$\gamma_2(b_2)$}; 
+\end{tikzpicture}
+\end{center}
 Wir definieren $\gamma_1+\gamma_2$ als Weg, der durch aneinanderhängen von $\gamma_1$ und $\gamma_2$ entsteht, d.h.
 \[{\gamma _1} + {\gamma _2} = \left\{ {\begin{array}{*{20}{c}}
 {{\gamma _1}(t)}&{t \in \left[ {{a_1},{b_1}} \right]}\\
@@ -1038,7 +1076,32 @@ Wir definieren $\gamma_1+\gamma_2$ als Weg, der durch aneinanderhängen von $\ga
 \end{array}} \right.\]
 Dann gilt \[\int\limits_{{\gamma _1} + {\gamma _2}} \lambda   = \int\limits_{{\gamma _1}} \lambda   + \int\limits_{{\gamma _2}} \lambda  \]
 \item Sei $\gamma:\lbrack a,b\rbrack\to\Omega$ ein Weg. Dann sei $-\gamma:\lbrack a,b\rbrack\to\Omega$ der gleiche Weg aber im entgegengesetzen Durchlaufsinn, d.h. $\left( -\gamma\right) (t)=\gamma\left( -t+a+b\right)$
-\missingfigure{page 174, middle to top}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.75]
+
+\begin{scope}[decoration={
+    markings,
+    mark=at position 0.5 with {\arrow{>}}}
+    ] 
+		\draw[postaction={decorate}]  (0,0) parabola bend (2,1.5)(2,1.5);
+\draw[postaction={decorate}](2,1.5) parabola bend (2,1.5)(4,3);
+		\end{scope}
+		
+\begin{scope}[decoration={
+    markings,
+    mark=at position 0.5 with {\arrow{<}}}
+    ] 
+		\draw[postaction={decorate}]  (3,0) parabola bend (5,1.5)(5,1.5);
+\draw[postaction={decorate}](5,1.5) parabola bend (5,1.5)(7,3);
+		\end{scope}
+
+\draw (2,2.2) node [anchor=north]{$\gamma$};
+\draw (5,0.8) node [anchor=south]{$-\gamma$};
+
+\end{tikzpicture}
+\end{center}
+
 Dann gilt \[\int\limits_{ - \gamma } \lambda   =  - \int\limits_\gamma  \lambda  \]
 \item Sei $f:\Omega\to\R$ eine $C'-$Funktion, sowie $\gamma:\lbrack a,b\rbrack\to\Omega$ stückweise $C'$. Dann gilt \[\int\limits_\gamma  {df}  = f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)\]
 $\gamma$ ist $C'$, dann ist
@@ -1092,7 +1155,46 @@ Sei
 \gamma_x:\lbrack 0,1\rbrack &\to\Omega\\
 t &\to (1-t)x_0+tx
 \end{align*}
-\missingfigure{Page 178 bottom}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+
+
+		\node [] (0) at (-0.25, 0) {};
+		\node [] (1) at (-2, 3) {};
+		\node [] (2) at (-4, 0) {};
+		\draw [] (1.center) to (0.center);
+		
+		\begin{scope}[decoration={
+    markings,
+    mark=at position 0.5 with {\arrow{>}}}
+    ] 
+		\draw [postaction={decorate},bend left=15] (2.center) to (1.center);
+		\end{scope}
+		\begin{scope}[decoration={
+    markings,
+    mark=at position 0.5 with {\arrow{>}}}
+    ] 
+		\draw [postaction={decorate},bend right=15] (2.center) to (0.center);	
+		\end{scope}		
+		
+
+
+		\draw[] (-0.25,0) circle (4.5);
+\draw[->](-0.25,0)--(3.5,2.5);
+\draw[fill=black] (0.center) circle (0.075);
+\draw[fill=black] (1.center) circle (0.075);
+\draw[fill=black] (2.center) circle (0.075);
+\draw (1.5,1.5) node [anchor=south]{$r$};
+\draw (1.north) node [anchor=south]{$x$};
+\draw (0.south) node [anchor=north]{$x_0$};
+\draw (2.south) node [anchor=north]{$p_0$};
+\draw (-2,-0.5) node [anchor=north]{$\gamma_1$};
+\draw (-0.65,2) node [anchor=north]{$\gamma_x$};
+\draw (-3.75,2) node [anchor=north]{$\gamma$};
+\end{tikzpicture}
+\end{center}
+
 Um $\gamma^x\left( \lbrack 0,1\rbrack\right)\subset\Omega$ zu garantieren, nehmen wir $r>0$, so dass $B_r\left( x_0\right)\subset\Omega$ und nehmen an, dass $x\in B_r\left( x_0\right)$. Dann ist
 \[f(x) = \int\limits_{{\gamma _1} + {\gamma _x}} \lambda   = \int\limits_{{\gamma _1}} \lambda   + \int\limits_{{\gamma _x}} \lambda   = f\left( {{x_0}} \right) + \int\limits_{{\gamma ^x}} \lambda  \]
 Nun ist
@@ -1186,7 +1288,28 @@ folgt.
 \end{array}} \right)\]
 Es gilt $\frac{\partial v'}{\partial y}=8xy$, $\frac{\partial v^2}{dx}=2$. Also ist $v$ nicht konservativ
 \item Sei $\Omega = \left\{ \left( x,y\right) \in\R^2:\left( x,y\right) \not= (0,0) \right\} = \R^2\backslash\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \to\R^2$ mindestens $C'$. Ausserdem \[\frac{{\partial v'}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C:
-\missingfigure{page 186, middle. Also add the formula describing $C(t)$ using a minipage}
+
+\begin{multicols}{2}
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+
+\draw[->] (0,-2.5) --(0,2.5);
+\draw[->] (-2.5,0) --(2.5,0);
+\draw[->, very thick] (-0.74,1.8625) --(-0.75,1.86);
+\draw[] (0,0) circle (2);
+\end{tikzpicture}
+\end{center}
+\columnbreak
+\null\vfill
+\begin{align*}
+C(t)&=\left( \cos(t),\sin(t)\right)\\
+t&\in(0,2\pi]
+\end{align*}
+\null\vfill
+\end{multicols}
+
+
+
 \begin{align*}
 \int\limits_C vds  = & \int\limits_0^{2\pi } { < v\left( {C\left( t \right)} \right),C'\left( t \right) > dt} \\
 = & \int\limits_0^{2\pi } \left( -\sin t,\cos t\right)\cdot  \left( {\begin{array}{*{20}{c}}
@@ -1508,7 +1631,99 @@ df\left( {r,\theta } \right) &= \left( {\begin{array}{*{20}{c}}
 \end{array}} \right) \leftarrow {\text{Jacobi Matrix}}\\
 \det\left( df\left( r,\theta\right)\right)&=r\left( \cos^2\theta + \sin^2\theta\right)=r
 \end{align*}
-\missingfigure{Page 205.1 bottom}
+
+\begin{center}
+\begin{tikzpicture}
+
+\draw[->] (0,-0.5) --(0,2);
+\draw[->] (-0.5,0) --(3,0);
+
+\draw (0,0) --(2.5,1.5);
+\draw[fill=black] (2.5,1.5) circle (0.05);
+\draw (1,0) arc (0:31:1cm); 
+
+\draw[dashed] (0,1.5) --(2.5,1.5);
+\draw[dashed] (2.5,0) --(2.5,1.5);
+\draw(2.5,0) node [anchor=north]{$x$};
+\draw(0,1.5) node [anchor=east]{$y$};
+\draw(2.5,1.5) node [anchor=west]{$(x,y)$};
+\draw(1.45,0.35) node [anchor=east]{$\theta$};
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.35]
+
+\fill[fill=black]
+    (18,3) -- ++(4cm,0cm) arc (0:135:4cm);
+
+\fill[fill=white]
+    (18,3) -- ++(3cm,0cm) arc (0:135:3cm);
+
+\fill[fill=white]
+    (18,3) -- ++(4cm,0cm) arc (0:112.5:4cm);
+
+\draw[->] (0,-0.5) --(0,6.5);
+\draw[->] (-0.5,0) --(6.5,0);
+
+\draw (1,0) --(1,6.25);
+\draw (2,0) --(2,6.25);
+\draw (3,0) --(3,6.25);
+\draw (4,0) --(4,6.25);
+\draw (5,0) --(5,6.25);
+\draw (6,0) --(6,6.25);
+
+\draw (0,1) --(6.25,1);
+\draw (0,2) --(6.25,2);
+\draw (0,3) --(6.25,3);
+\draw (0,4) --(6.25,4);
+\draw (0,5) --(6.25,5);
+\draw (0,6) --(6.25,6);
+
+\draw (0,6.5) node [anchor=south]{$\theta$};
+\draw (6.5,0) node [anchor=west]{$r$};
+\draw (0,3) node [anchor=east]{$\pi$};
+\draw (0,6) node [anchor=east]{$2\pi$};
+
+\draw [fill=black] (2,1)--(2,2)--(3,2)--(3,1);
+
+\draw [<-] (6.35,5.05) --(6.75,5.25);
+\draw (6.75,5.25) node [anchor =west]{$\theta=$konstant};
+
+\draw [<-] (5.05,6.35) --(5.25,6.75);
+\draw (5.25,6.75) node [anchor =south]{$r=$konstant};
+
+\draw[->](7,3)parabola bend (9,3.5)(11,3);
+
+
+\draw[->] (18,-3) --(18,9);
+\draw[->] (12,3) --(24,3);
+\draw[] (18,3) circle (1);
+\draw[] (18,3) circle (2);
+\draw[] (18,3) circle (3);
+\draw[] (18,3) circle (4);
+\draw[] (18,3) circle (5);
+
+\draw (18,3) -- ++(45:5.5) node [anchor=west] {$r=$ konstant};
+\draw (18,3) -- ++(135:5.5);
+\draw (18,3) -- ++(225:5.5);
+\draw (18,3) -- ++(315:5.5);
+
+\draw (18,3) -- ++(45+22.5:5.5);
+\draw (18,3) -- ++(135+22.5:5.5);
+\draw (18,3) -- ++(225+22.5:5.5);
+\draw (18,3) -- ++(315+22.5:5.5);
+
+\draw (18,3) -- ++(45-22.5:5.5) node [anchor=west] {$\theta=$ konstant};
+\draw (18,3) -- ++(135-22.5:5.5);
+\draw (18,3) -- ++(225-22.5:5.5);
+\draw (18,3) -- ++(315-22.5:5.5);
+
+\draw (24,3) node [anchor=west] {$x$};
+\draw (18,9) node [anchor=south] {$y$};
+
+\end{tikzpicture}
+\end{center}
 \item Zylinderkoordinaten
 \missingfigure{Page 205.2, top. Add following text to right column:\\
 Die $x,y$ Anteile werde in Polarkoordinaten transformiert und die $z$ koordinate beibehalten}
