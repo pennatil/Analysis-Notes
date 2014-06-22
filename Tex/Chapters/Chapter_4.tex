@@ -133,8 +133,19 @@ und $f$ ist stetig an der Stelle $x_{0}$ genau dann, wenn $f(x_{0}^{-})=f(x_{0}^
 \end{itemize}
 \subsubsection*{Beweis}
 Wir behaupten, dass für jede Folge $(y_{n})_{n\geq 1}$ mit $\{y_{n}:n\geq 1\} \subset (a,x_{0})$ und $\lim{y_{n}} = x_{0}$ die Folge $(f(y_{n}))_{n\geq 1}$ kovergent und der linksseitige Limes $l_{-}(x_{0})$ unabhängig von der Wahl der Folge ist.
-\missingfigure{THIS IMAGE IS NOT THAT USEFUL, SHOULD IT BE INCLUDED?? p133, week8 sem1} \\
 
+\[l\_\left( {{x_0}} \right): = {\text{linkseitiges Limes}} = \mathop {\lim }\limits_{\begin{array}{*{20}{c}}{x \to {x_0}}\\{x < {x_0}}\end{array}} f(x)\]
+\begin{center}
+\begin{tikzpicture}
+\draw (-2,0) --(2,0);
+\draw (-1.6,0) node {$($};
+\draw (1.6,0) node {$)$};
+\draw (0,0) node {$|$};
+\draw (0,-0.2) node [anchor=north]{$x_0$};
+\draw (1.6,-0.2) node [anchor=north]{$b$};
+\draw (-1.6,-0.2) node [anchor=north]{$a$};
+\end{tikzpicture}
+\end{center}
 \noindent Wir betrachten zuächst die ``spezielle'' Folge $x_{n}=(x_{0}-\frac{1}{n})_{n\geq r}$. Hier ist $r$ so gewählt, dass $x_{0}-\frac{1}{r}\geq a$. \\
 Dann ist $(f(x_{0}-\frac{1}{n}))_{n\geq r}$ monoton wachsend ($x_{0}-\frac{1}{n+1} > x_{0}-\frac{1}{n}$ und $f$ monoton wachsend) und $(f(x_{0}-\frac{1}{n}))_{n\geq r}$ beschränkt ($f(a)<[...]<f(b)$\todo{missing in source material p134week8sem1}).
 \[\text{Sei }l_{-}\defeq\lim_{n\to\infty}{f(x_{0}-\frac{1}{n})}\]
@@ -822,8 +833,21 @@ Ein explizites Approximationsverfahren für auf $\lbrack 0,1\rbrack$ stetige Fun
 \[{B_{i,n}}(x) = \left( {\begin{array}{*{20}{c}}
 n\\
 i
-\end{array}} \right){x^i}{\left( {1 - x} \right)^{n - 1}},0 \le i \le n\]
-\missingfigure{Page 181 middle}
+\end{array}} \right){x^i}{\left( {1 - x} \right)^{n - i}},0 \le i \le n\]
+
+\begin{center}
+\begin{tikzpicture}[domain=0:1, scale=5] 
+\draw[-stealth] (0,0) -- (1.1,0) node[below] {$x$}; 
+\draw[-stealth] (0,0) -- (0,1.2) node[left] {$y$}; 
+\draw[] plot[id=x,samples=100] function{(1-x)**4}; 
+\draw[] plot[id=x,samples=100] function{4*x*(1-x)**3}; 
+\draw[] plot[id=x,samples=100] function{6*x**2*(1-x)**2};
+\draw[] plot[id=x,samples=100] function{4*x**3*(1-x)**1}; 
+\draw[] plot[id=x,samples=100] function{1*x**4}; 
+\draw[] (0.5,0.75) node [anchor=south]{$n=4$};
+\end{tikzpicture}
+\end{center}
+
 Dieses Polynom bildet ein Basis für den Vektorraum der Polynomen von Grad $=n$. Sei $f:\lbrack 0,1\rbrack\to\R$, dann ist
 \[{B_n}\left( f \right)(x): = \sum\limits_{i = 0}^n {{B_{i,n}}\left( x \right)f\left( {\frac{i}{n}} \right)} \]
 \subsubsection*{Satz (Bernstein)}

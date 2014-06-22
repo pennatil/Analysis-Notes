@@ -2,10 +2,10 @@
 cd "../Tex/MAINs"
 for i in {1..3}
 do
-   pdflatex --interaction nonstopmode main.tex
+   pdflatex --synctex=-1 --interaction nonstopmode --shell-escape --file-line-error main.tex
 done
 
-rm -f *.out *.log *.aux *.toc
+rm -f *.out *.log *.aux *.toc *.synctex
 
 #Activate these lines once the document is final!
 # mkdir -p "../Final Documents"

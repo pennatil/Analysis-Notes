@@ -12,14 +12,14 @@ Status
 | Chapter |  Typed up?  | Finished drawings? | Spellchecked? |      Math checked?      | Done? |
 |:-------:|:-----------:|:------------------:|:-------------:|:-----------------------:|:-----:|
 |    1    |     Yes     |         Yes        |       Yes     | Waiting for corrections |   No  |
-|    2    |     Yes(*)    |         Yes        |       Yes      | Waiting for corrections |   No  |
-|    3    | Yes |          Yes        |       Yes      |           Waiting for corrections           |   No  |
-|    4    | Yes     |          -         |       Yes       |Waiting for corrections           |   No  |
-|    5    |      Yes     |          -         |       Yes       |          Waiting for corrections           |   No  |
+|    2    |     Yes(*)  |         Yes        |       Yes      | Waiting for corrections |   No  |
+|    3    | Yes 		 |          Yes       |       Yes      |           Waiting for corrections           |   No  |
+|    4    | Yes         |     		Yes       |       Yes       |Waiting for corrections           |   No  |
+|    5    |      Yes    |          Yes         |       Yes       |          Waiting for corrections           |   No  |
 |    6    |     Yes     |         Yes        |       Yes      |           Yes           |   No  |
 |    7    |     Yes     |         Yes        |       Yes      | Waiting for corrections |   No  |
 |    8    |     Yes     |          In Progress         |       Yes      | Waiting for corrections |   No  |
-|    9    | Yes |          -         |       Yes       |            Waiting for corrections            |   No  |
+|    9    | Yes 		 |          -         |       Yes       |            Waiting for corrections            |   No  |
 
 (*) Might still be missing some content, which will be added once the corrections are made.
 
@@ -81,8 +81,9 @@ This is only recommended to people with experience with LaTex, since the files m
 	* Mac OS: [MacteX](http://tug.org/mactex/)
     * Windows: [MikTeX](http://miktex.org/download) or [TexLive](https://www.tug.org/texlive/acquire-netinstall.html) (Recommended)
     * Linux: [TexLive](https://www.tug.org/texlive/quickinstall.html) (Ubuntu: <code>sudo apt-get install texlive-full</code>)
-2. Download the master Branch [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip)
-3. Generate the files
+2. Make sure you have gnuplot installed. If you don't, a quick google search will help you!
+3. Download the master Branch [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip)
+4. Generate the files
 	* If you want to use a program with a GUI:
 	  1. Navigate to the "Tex/MAINs" folder, and open "main.tex" using TexWorks (Right-click->open with...)
 	  2. On the top left, select "pdfLaTex" from the dropdown menu

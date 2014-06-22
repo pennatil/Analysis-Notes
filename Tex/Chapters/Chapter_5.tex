@@ -542,7 +542,28 @@ f'\left( x \right) &= \frac{{2\left( {1 + {x^2}} \right) - \left( {2x} \right)\l
     $f\left( x\right)$                  & $\searrow$                                     & $\nearrow$ & $\nearrow$ & $\searrow$                  \\[1.5ex]\hline
  \end{tabularx}
 \todo[inline]{Fix vertical positioning in table, page 208 bottom}
-\missingfigure{Page 208 bottom}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+\node [] (0) at (-3, -2) {};
+\node [] (1) at (3, 2) {};
+\node [] (2) at (10, 0.5) {};
+\node [] (3) at (-10, -0.5) {};
+\draw [, in=-165, out=15, looseness=1.25] (0.center) to (1.center);
+\draw [, in=180, out=15, looseness=0.75] (1.center) to (2.center);
+\draw [, in=-15, out=-165] (0.center) to (3.center);
+\draw[->] (0,-4) -- (0,4);
+\draw[<-] (10,0) -- (-10,0);
+\draw[fill=black] (0,0) circle (0.125);
+\draw[fill=black] (3.75,2.1) circle (0.125);
+\draw[fill=black] (3.75,0.2) --(3.75,-0.2) node[anchor=north] {1};
+
+
+\draw[fill=black] (-4,-2.2) circle (0.125);
+\draw[fill=black] (-4,0.2) --(-4,-0.2) node[anchor=north] {$-1$};
+\end{tikzpicture}
+\end{center}
+
 \end{enumerate}
 
 \subsubsection*{Korollar 5.17 (Bernoulli, L'Hôpital)}
@@ -555,7 +576,21 @@ Dann ist $g(x)\not=0$, $\forall x>a$ und $\mathop {\lim }\limits_{x \searrow a} 
 
 \begin{beweis}{}
 Falls es $x_1>a$ gibt mit $g\left( x_1\right)=0$, dann folgt die Existenz von $x_0\in\left( a,x_1\right)$ mit $g'\left( x_0\right)=0$ (MWS.)
-\missingfigure{page 209 bottom}
+
+\begin{center}
+\begin{tikzpicture}
+\draw (-3.5,0) --(3.5,0);
+\draw[fill=black] (3,0) circle (0.05) node [anchor=north]{$x_1$};
+\draw[fill=black] (-3,0) circle (0.05) node [anchor=north]{$a$};
+\draw[bend left=60] (-3,0) to (3,0);
+\draw[dashed] (0,0) -- (0,1.52);
+\draw[fill=black] (0,1.52) circle (0.05);
+\draw[] (-3,0) -- (-3,2.5);
+\draw[] (3,0) -- (3,2.5);
+\draw[] (-2,1.52) -- (2,1.52);
+\end{tikzpicture}
+\end{center}
+
 Wiederspruch zur Annahme $g'(x)\not=0$, $\forall x\in\left( a,b\right)$. Also $g(x)\not=0$, $\forall x>a$. Nun sei $a<s<b$ beliebig, und
 \[h\left( x \right): = \frac{{f\left( s \right)}}{{g\left( s \right)}} \cdot g\left( x \right) - f\left( x \right)\hspace{5mm}x \in \left[ {a,s} \right]\]
 Dann gilt, $h(a)=0$ und $h(s)=0$, es gibt also $x_s\in\left( a,s\right)$ mit $h'\left( x_s\right)=0$, d.h.
@@ -663,7 +698,35 @@ Für $a>0$, $x^a>\log (x^a)=a\log(x)$. Also $\log(x)<\frac{x^a}{a}$. Die $\log-$
 \section{Die Trigonometrischen und Hyperbolischen Funktionen}
 \begin{enumerate}
 \item $\sin(x)$
-\missingfigure{Page 219, top}
+
+\begin{center}
+\begin{tikzpicture}[scale=2,domain=-1.5707963267949:1.5707963267949]
+\draw[dashed] plot[id=x,samples=100] function{cos(x)}; 
+\draw[] plot[id=x,samples=100] function{sin(x)}; 
+\draw[->](0,-1.5)--(0,1.5);
+\draw[->](-2,0)--(2,0);
+
+\draw (-1.5707963267949,-0.075) -- (-1.5707963267949,0.075);
+\draw (1.5707963267949,-0.075) -- (1.5707963267949,0.075);
+
+\draw[dotted] (-1.5707963267949,0) -- (-1.5707963267949,-1);
+\draw[dotted] (-1.5707963267949,-1) -- (0,-1);
+\draw[dotted] (1.5707963267949,0) -- (1.5707963267949,1);
+\draw[dotted] (1.5707963267949,1) -- (0,1);
+
+\draw (-0.075,-1) -- (0.075,-1);
+\draw (-0.075,1) -- (0.075,1);
+
+\draw[] (-1.7707963267949,0) node [anchor=south]{$-\frac{\pi}{2}$};
+\draw[] (1.7707963267949,0) node [anchor=north]{$\frac{\pi}{2}$};
+\draw[] (0,-1) node [anchor=west]{$-1$};
+\draw[] (0,1.1) node [anchor=east]{$1$};
+
+\draw[] (1.5707963267949,1) node [anchor=west]{$\sin x$};
+\draw[] (-0.7,0.8) node [anchor=east]{$\cos x$};
+\end{tikzpicture}
+\end{center}
+
 $\sin'(x)=\cos(x)$; d.h. $\sin'(x)>0$, $\forall x\in\left( -\frac{\pi}{2},\frac{\pi}{2}\right)$ und besitzt daher eine differenzierbare Umkehrfunktion
 \[\arcsin :\left( { - 1,1} \right) \to \left( { - \frac{\pi }{2},\frac{\pi }{2}} \right)\]
 deren Ableitung wie folgt berechnet wird
@@ -675,23 +738,88 @@ Falls $\alpha=\arcsin(x)$, $-\frac{\pi}{2}<\alpha <\frac{\pi}{2}$. So ist
 \end{align*}
 d.h. $\cos^2\left( \alpha  \right)=1-x^2$. Da nun $-\frac{\pi}{2}<\alpha <\frac{\pi}{2}$ folgt aus $\cos\left( \alpha  \right)>0\Rightarrow\cos\left( \alpha  \right)=\sqrt{1-x^2}$. Daraus ergibt sich \[\arcsin'\left( x\right)=\frac{1}{\sqrt{1-x^2}}\]
 Analog haben wir
-\item $\cos$, $\R\to\R$
-\missingfigure{Page 220 middle to bottom}
+\item $\cos$, $\R\to\R$\\
+\begin{center}
+\begin{tikzpicture}[domain=0:pi,scale=1.23]
+\draw[] plot[id=x,samples=100] function{cos(x)}; 
+\draw[dashed] plot[id=x,samples=100] function{sin(x)}; 
+\draw[->](0,-1.5)--(0,1.5);
+\draw[->](0,0)--(pi+0.5,0);
+
+\draw[dotted](pi,0)--(pi,-1); 
+\draw[dotted](pi,-1)--(0,-1); 
+
+\draw (-0.05,-1) -- (0.05,-1);
+\draw (-0.05,1) -- (0.05,1);
+\draw (pi,-0.05) -- (pi,0.05);
+
+\draw (-0.05,-1) node[anchor=east]{-1};
+\draw (-0.05,1) node[anchor=east]{1};
+
+\draw (pi,0.1) node[anchor=south]{$\pi$};
+\end{tikzpicture}
+\end{center}
 \[\cos :\left( {0,\pi } \right) \to \left( { - 1,1} \right)\]
 bijektiv und
 \[\arccos :\left( { - 1,1} \right) \to \left( {0,\pi } \right)\]
 ist die inverse Funktion und
 \[{\mathop{\rm arccos'}\nolimits} \left( x \right) =  - \frac{1}{{\sqrt {1 - {x^2}} }}\]
 \item $\tan:\left( -\frac{\pi}{2},\frac{\pi}{2}\right)\to\R$
-\missingfigure{page 221, top}
+
+\begin{center}
+\begin{tikzpicture}[domain=(-pi/2)+0.3:(pi/2)-0.3]
+\draw[] plot[id=x,samples=100] function{tan(x)}; 
+\draw[->] (0,-4) -- (0,4);
+\draw[->] (-2,0) -- (2,0);
+
+\draw[dashed] (-pi/2+0.2,3.4) -- (-pi/2+0.2,-3.4); 
+\draw[dashed] (pi/2-0.2,3.4) -- (pi/2-0.2,-3.4); 
+
+\draw (pi/2,0) node [anchor=north]{$\frac{\pi}{2}$};
+\draw (-pi/2-0.1,0) node [anchor=north]{$-\frac{\pi}{2}$};
+\end{tikzpicture}
+\end{center}
+
 \[\arctan:\R\to\left( -\frac{\pi}{2},\frac{\pi}{2}\right)\]
 und
 \[\arctan'(x)=\frac{1}{1+x^2}\]
 \item Hyperbelfunktionen
+\begin{multicols}{2}
+\null\vfill
 \[\cosh \left( x \right): = \frac{{{e^x} + {e^{ - x}}}}{2}\]
+\null\vfill
+\columnbreak
+\begin{tikzpicture}[domain=-1.5:1.5,scale=0.8]
+\draw[] plot[id=x,samples=100] function{cosh(x)}; 
+\draw[->] (-2,0) --(2,0);
+\draw[->] (0,-1) --(0,3);
+\end{tikzpicture}
+\end{multicols}
+
+\begin{multicols}{2}
+\null\vfill
 \[\sinh \left( x \right): = \frac{{{e^x} - {e^{ - x}}}}{2}\]
+\null\vfill
+\columnbreak
+\begin{tikzpicture}[domain=-1.5:1.5,xscale=0.8,yscale=0.5]
+\draw[] plot[id=x,samples=100] function{sinh(x)}; 
+\draw[->] (-2,0) --(2,0);
+\draw[->] (0,-3) --(0,3);
+\end{tikzpicture}
+\end{multicols}
+
+\begin{multicols}{2}
+\null\vfill
 \[\tanh \left( x \right): = \frac{{\sinh \left( x \right)}}{{\cosh \left( x \right)}}\]
-\missingfigure{Bottom of page 221, add side by side to the formulas}
+\null\vfill
+\columnbreak
+\begin{tikzpicture}[domain=-1.5:1.5,scale=0.8]
+\draw[] plot[id=x,samples=100] function{tanh(x)}; 
+\draw[->] (-2,0) --(2,0);
+\draw[->] (0,-1) --(0,1);
+\end{tikzpicture}
+\end{multicols}
+
 Dann ist $\sinh:\R\to\R$ bijektiv und differenzierbar mit $\sinh'(x)=\cosh(x)$ und somit monotone steigend und $\arcsinh:\R\to\R$ die Inverse
 \begin{itemize}
 \item $\cosh :\left[ {0,\infty } \right) \to \left[ {1,\infty } \right)$ bijektiv.\\

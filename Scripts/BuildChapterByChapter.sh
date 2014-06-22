@@ -2,9 +2,9 @@
 cd "../Tex/MAINs"
 for i in {1..3}
 do
-   pdflatex --shell-escape --interaction nonstopmode mainMult.tex
+   pdflatex --synctex=-1 --interaction nonstopmode --shell-escape --file-line-error mainMult.tex
 done
-rm -f *.out *.log *.aux
+rm -f *.out *.log *.aux *.synctex
 
 
 #Activate them individually once a certain file is final!
