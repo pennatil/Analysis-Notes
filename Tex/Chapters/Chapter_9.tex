@@ -36,7 +36,49 @@ U_f\left( Z_2\right)&\geq U_f\left( Z_1\right)\text{ und }\\
 O_f\left( Z_2\right)&\leq O_f\left( Z_1\right)
 \end{align*}
 Für zwei beliebige Zerlegungen $Z_1,Z_2$ gilt stets \[U_f\left( Z_1\right)\leq O_f\left( Z_2\right)\]
-\missingfigure{Page 211 bottom}
+
+\begin{center}
+\begin{tikzpicture}[]
+
+\draw[->] (0,0) --(6,0);
+\draw[->] (0,0) --(0,5);
+
+\draw (1,1) rectangle (5,4);
+
+\draw[] (2,1) --(2,4);
+\draw[dashed] (2,0)--(2,1);
+\draw[] (4,1) --(4,4);
+\draw[dashed] (4,0)--(4,1);
+\draw[dashed] (1,0)--(1,1);
+\draw[dashed] (5,0)--(5,1);
+
+\draw[dashed] (0,1)--(1,1);
+\draw[dashed] (0,3)--(1,3);
+\draw[dashed] (0,4)--(1,4);
+
+\draw (1,-0.1) -- (1,0) node [anchor=north]{$x_0=a_1$};
+\draw (2,-0.1) -- (2,0) node [anchor=north]{$x_1$};
+\draw (4,-0.1) -- (4,0) node [anchor=north]{$x_2$};
+\draw (5,-0.1) -- (5,0) node [anchor=north]{$b_1=x_3$};
+
+\draw (-0.1,1) -- (0,1) node [anchor=east]{$y_0=a_2$};
+\draw (-0.1,3) -- (0,3) node [anchor=east]{$y_1$};
+\draw (-0.1,4) -- (0,4) node [anchor=east]{$y_2=b_2$};
+
+\draw[] (1,3) --(5,3);
+
+\draw (1.5,2) node {$Q_{11}$};
+\draw (3,2) node {$Q_{21}$};
+\draw (4.5,2) node {$Q_{31}$};
+
+\draw (1.5,3.5) node {$Q_{12}$};
+\draw (3,3.5) node {$Q_{22}$};
+\draw (4.5,3.5) node {$Q_{32}$};
+
+
+\end{tikzpicture}
+\end{center}
+
 \end{enumerate}
 \begin{definition}{9.3}
 Sei $f:D\to\R$ beschränkt
@@ -106,7 +148,73 @@ d.h. das Integral von $f$ über $Q$ kann iterativ durch $1-$dimensionale Integra
 \end{enumerate}
 
 \subsection*{Geometrische Deutung}\todo{Not sure about the text size...}
-\missingfigure{Page 218 top}
+\begin{center}
+\begin{tikzpicture}
+%Gray Sheet
+\draw[color=black!20,fill=black!20] (0.31,5) -- (0.31,0.62) -- (4.31,0.62)  -- (4.31,5)--(0.31,5);
+\draw [color=black!20,fill=black!20] (4.31,5)--(4.31,0.62)--(4.36,0.72)--(4.36,5.1) -- (4.31,5);
+\draw [bend left=15,fill=black!20] (0.31,5) to (4.31,5);
+\draw [bend left=15,fill=black!20] (0.36,5.1) to (4.36,5.1);
+\draw[color=black!20,fill=black!20] (4.31,5) -- (4.36,5.1) -- (4,5.1) -- cycle; 
+\draw[color=black!20,fill=black!20] (0.31,5) -- (0.36,5.1) -- (4,5.1) -- cycle; 
+
+\node [] (0) at (0, 0) {};
+\node [] (1) at (4, 0) {};
+\node [] (2) at (5, 2) {};
+\node [] (3) at (1, 2) {};
+\node [] (4) at (0, 4) {};
+\node [] (5) at (4, 4) {};
+\node [] (6) at (5, 6) {};
+\node [] (7) at (1, 6) {};
+\node [] (8) at (-2, -1) {};
+\node [] (9) at (5, -1) {};
+\node [] (10) at (-2, 5) {};
+\node [] (11) at (0, 3) {};
+\node [] (12) at (-0.5, -1) {};
+\node [] (13) at (3.5, -1) {};
+\node [] (14) at (-1.5, 0) {};
+\node [] (15) at (-0.5, 2) {};
+\node [] (16) at (0, 2) {};
+\draw [] (0.center) to (1.center);
+\draw [] (1.center) to (2.center);
+\draw [] (2.center) to (3.center);
+\draw [] (3.center) to (0.center);
+\draw [] (0.center) to (4.center);
+\draw [thick, bend left=15] (4.center) to (5.center);
+\draw [] (5.center) to (1.center);
+\draw [] (3.center) to (7.center);
+\draw [] (2.center) to (6.center);
+\draw [thick, bend left=15] (4.center) to (7.center);
+\draw [thick, bend left=15] (5.center) to (6.center);
+\draw [thick, bend right=15] (6.center) to (7.center);
+\draw [->, in=180, out=0] (8.center) to (9.center) node [anchor=west]{$y$};
+\draw [->] (8.center) to (10.center) node [anchor=south]{$z$};
+\draw [] (8.center) to (11.center);
+\draw [dashed] (15.center) to (16.center);
+\draw [dashed] (12.center) to (0.center);
+\draw [dashed] (0.center) to (14.center) node [anchor=east]{$a$};
+\draw [dashed] (13.center) to (1.center);
+ \draw(13.center) node [anchor=north]{$d$};
+ \draw(15.center) node [anchor=east]{$b$};
+ \draw(-0.5,-1) node [anchor=north]{$c$};
+\draw(4.36,0.72) node [anchor=west]{$dx$};
+
+
+
+
+
+
+
+
+%Gray sheet limits
+\draw [bend left=15] (0.31,5) to (4.31,5);
+\draw [bend left=15] (0.36,5.1) to (4.36,5.1);
+\draw [](0.31,5) -- (0.31,0.62);
+\draw [](4.31,5) -- (4.31,0.62);
+\draw [](4.36,5.1) -- (4.36,0.72);
+\draw [](4.31,0.62) -- (0.31,0.62);
+\end{tikzpicture}
+\end{center}
 In der Skizze ergibt sch als Volumen der markierten Schicht bei festem $x$ und sehr kleinen Dicke $dx$ näherungsweise das Volumen \[\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx\] Das Aufaddieren sämtlicher Schichtvolumen entspricht gerade der Integration über die Variable $x$, d.h. für das gesuchte Volumen gilt \[V = \int\limits_a^b {\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx} \]
 Bis jetzt können wir nur Integrale über achsenparallel rechteckige bzw. quaderförmige Bereiche berechnen.\\
 
@@ -125,7 +233,37 @@ bzw.
 
 \subsubsection*{Beispiel}
 Kreise und Rechtecke sind Normalbereiche bzgl. beider Achsen
-\missingfigure{Page 220, top}
+\missingfigure{page 220 top; ALREADY STARTED, PICTURE ON THE RIGHT GETS PUSHED DOWN FOR SOME REASON, STILL TO FIX!}
+%\begin{multicols}{2}
+%\begin{tikzpicture}[scale=0.6]
+%\draw[->] (-0.5,0)--(7,0) node [anchor=west] {$x$};
+%\draw[->] (0,-0.5)--(0,6) node [anchor=south] {$y$};
+%\draw[fill=black!20] (1,1)parabola bend (1,1)(6,5) parabola bend (1,3)(1,3) -- (1,1);
+%\draw (3.1,3.7) node [anchor=south] {$y=h(x)$};
+%\draw (4.2,1) node [anchor=south] {$y=g(x)$};
+%\draw[dashed] (6,5) -- (6,0) node [anchor=north] {$b$};
+%\draw[dashed] (1,1) -- (1,0) node [anchor=north] {$a$};
+%\end{tikzpicture}
+%\columnbreak
+%\begin{tikzpicture}[scale=0.5]
+%		\node [] (0) at (1, 1) {};
+%		\node [] (1) at (1, 5) {};
+%		\node [] (2) at (6, 5) {};
+%		\node [] (3) at (6, 3.5) {};
+%		\node [] (4) at (6, 1) {};
+%		\draw[fill=black!20]  (0.center) .. controls (2,3) and (2,3) .. (1.center) -- (2.center) .. controls (5.5,4.25) and (5.5,4.25) .. (3.center) .. controls (6.75,2.25) and (6.75,2.25) .. (4.center)--cycle;
+%\draw[->] (-0.5,0) -- (8,0) node [anchor=west] {$x$};
+%\draw[->] (0,-0.5) -- (0,7.15) node [anchor=south] {$y$};
+%\draw[dashed] (0,1)--(1,1);
+%\draw[dashed] (1,5) -- (0,5);
+%\draw (0,1) node[anchor=east] {$\overline{a}$};
+%\draw (0,5) node[anchor=east] {$\overline{b}$};
+%\draw (0.4,4) node[anchor=west]{$x$};
+%\draw (0.3,3.5) node[anchor=west]{$=$};
+%\draw (0.1,2.9) node[anchor=west]{$\overline{g}(y)$};
+%\draw (6.5,3) node[anchor=west]{$x=\overline{h}(y)$};
+%\end{tikzpicture}
+%\end{multicols}
 Über Normalbereiche lässt sich sehr bequem integrieren
 \missingfigure{Page 220 bottom}
 Die markierte Scheibe bei $y=$const. mit kleiner Dicke $dx$ besitzt näherungsweise das Volumen
