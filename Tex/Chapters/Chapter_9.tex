@@ -282,7 +282,26 @@ so gilt
 \subsubsection*{Beispiel 9.12}
 \begin{enumerate}
 \item Sei $f\left( x,y\right)=x-y$
-\missingfigure{Page 222, top}
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+
+\draw[color=black!20,fill=black!20] (0,0)--(3.5,0)--(0,3.5)--cycle;
+
+\draw[->] (-0.5,0) --(4,0) node [anchor=west]{$x$};
+\draw[->] (0,-0.5) --(0,4) node [anchor=south]{$y$};;
+
+\draw[fill=black!20] (3.5,0) arc (0:90:3.5);
+
+\draw (3.5,0.05)--(3.5,-0.2) node [anchor=north] {1};
+\draw (0.05,3.5)--(-0.2,3.5) node [anchor=east] {1};
+
+\draw[<-] (2.8,2.5) -- (3.5,2.8)node [anchor=west]{$y=\sqrt{1-x^2}$};
+
+\draw (-2,3.5) node {$D=$};
+\end{tikzpicture}
+\end{center}
+
 \begin{align*}
 \int\limits_D fd\mu =&\int\limits_{x=0}^{x=1}\int\limits_{y=0}^{y=\sqrt{1-x^2}}\left( x-y\right) dy dx\\
  =&\int\limits_0^1 {\left( {\left. {xy - \frac{{{y^2}}}{2}} \right|_0^{\sqrt {1 - {x^2}} }} \right)} dx\\
@@ -299,7 +318,28 @@ so gilt
 &\int\limits_D {fd\mu  = \frac{1}{3} - \frac{1}{3} = 0}
 \end{align*}
 \item Sei $D$ \todo{missing content?? page 223 top} das durch die Gerade $g(x)=x+2$ und die Parabel $b(x)=4-x^2$ begrenzte Gebiet
-\missingfigure{Page 223, top}
+
+\begin{center}
+\begin{tikzpicture}[domain=-2.3:2.3,scale=1] 
+\draw[fill=black!20] plot[id=x,samples=100] function{-x**2+4}; 
+\draw [fill=white, color=white] (-3,0) -- (3,0) -- (3,-2) -- (-3,-2) -- cycle;
+\draw [fill=white, color=white] (-2,0) -- (2.5,4.5) -- (2.5,0) -- cycle;
+\draw[] plot[id=x,samples=100] function{-x**2+4};
+%\draw[color=black!20,fill=black!20] (0,0)--(3.5,0)--(0,3.5)--cycle;
+
+\draw[->] (-3,0) --(3,0) node [anchor=west]{$x$};
+\draw[->] (0,-1) --(0,5) node [anchor=south]{$y$};
+
+\draw[fill=black] (-2,0) circle (0.075);
+\draw[fill=black] (1,3) circle (0.075);
+
+\draw(-2,0) -- (2.5,4.5);
+\draw[dashed] (1,3) -- (1,0);
+\draw[] (1,0.1) -- (1,-0.1) node [anchor=north]{1};
+\draw[] (-2.4,0) node [anchor=north]{$-2$};
+\end{tikzpicture}
+\end{center}
+
 Schnittpunkte:
 \begin{align*}
 &x+2=4-x^2\\
@@ -315,7 +355,34 @@ Zu Berechnung des Doppelintegrals zerlegen wir das Gebiet in Streifen parallel z
  =&\left( {4 - 4 - \frac{8}{3}} \right) - \left( {1 - \frac{1}{4} + \frac{1}{9}} \right) =  - \frac{{127}}{{36}}
 \end{align*}
 \item Sei $D:$
-\missingfigure{Page 224 top}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+		\node [] (0) at (0, 0) {};
+		\node [] (1) at (4, 1.5) {};
+		\node [] (2) at (4, -1.5) {};
+		\node [] (3) at (5, 0) {};
+		\node [] (4) at (0, -2.5) {};
+		\node [] (5) at (0, 2.5) {};
+		\node [] (6) at (-0.5, 0) {};
+		\node [] (7) at (0, 1.5) {};
+		\node [] (8) at (0, -1.5) {};
+		\draw [, in=180, out=90, looseness=0.50, fill=black!20] (0.center) to (1.center);
+		\draw [, in=-90, out=180, looseness=0.50, fill=black!20] (2.center) to (0.center);
+		
+
+		\draw[color=black!20,fill=black!20] (1.center) to (2.center) to (0.center) to (1.center);
+		\draw [dashed] (1.center) to (7.center);
+		\draw [->] (6.center) to (3.center) node [anchor=west]{$x$};
+		\draw [->] (4.center) to (5.center) node [anchor=south]{$y$};;
+		\draw [dashed] (2.center) to (8.center);
+		\draw (8.center) node [anchor=east] {$-1$};
+		\draw (7.center) node [anchor=east] {$1$};
+		\draw (1.center) node [anchor=west] {$\sqrt{x}$};
+		\draw (2.center) node [anchor=west] {$-\sqrt{x}$};
+\end{tikzpicture}
+\end{center}
+
 \[\int\limits_D {fd\mu } \mathop  = \limits_{\begin{array}{*{20}{c}}
  \downarrow \\
  *
@@ -341,6 +408,19 @@ Wenn wir von aussen nach $y$ integrieren, brauchen wir keine Unterteilung
  =&\int\limits_{ - 2}^4 {\left( {\left. {\frac{{{x^2}}}{2}} \right|_{\frac{{{y^2}}}{4}}^{\frac{y}{2} + 2}} \right)dy}\\
 =&\frac{1}{2}\int\limits_{ - 2}^4 {\left( {{{\left( {\frac{y}{2} + 2} \right)}^2} - \frac{{{y^4}}}{{16}}} \right)dy}
 \end{align*}
+\end{enumerate}
+
+\subsubsection*{Beispiel für das An dem der Integrationsreihenfolge}
+\subsubsection*{Beispiel}
+\begin{enumerate}
+\item \[\int\limits_0^1 {\int\limits_1^{{e^y}} {f(x,y)dxdy} } \]
+$x=1$ und $x=e^y\Rightarrow y=\ln x \Leftrightarrow 1=\ln x \Leftrightarrow x=e$
+\missingfigure{Page 226.1 middle to top}
+\[\int\limits_1^e {\int\limits_{y = \log x}^{y = 1} {f(x,y)dydx} } \]
+\missingfigure{Page 226.1 middle to bottom}
+\item Berechne \[\int\limits_0^1 {\int\limits_x^1 {{e^{{y^2}}}dydx} } \] Man kann das Integral $\int\limits_a^b {{e^{{y^2}}}dydx} $ nicht direkt berechnen, weil man kein explizit Stammfunktion für $e^{y^2}$ finden kann. Man kann sich die Reihenfolge der Zerlegung beliebig heraussuchen damit die Rechnung möglichst einfach wird. 
+\missingfigure{Page 226.2 middle to top}
+\begin{align*}\int\limits_{x = 0}^{x = 1} {\int\limits_{y = x}^{y = 1} {{e^{{y^2}}}dydx} }  &= \int\limits_{y = 0}^{y = 1} {\int\limits_{x = 0}^{x = y} {{e^{{y^2}}}dxdy} } \\ &= \int\limits_0^1 {\left[ {\left. {x{e^{{y^2}}}} \right|_{x = 0}^{x = y}} \right]} dy\\ &= \int\limits_0^1 {y{e^{{y^2}}}dy}  = \left. {\frac{{{e^{{y^2}}}}}{2}} \right|_0^1 = \frac{1}{2}\left( {e - 1} \right)\end{align*}
 \end{enumerate}
 
 \subsubsection*{Bemerkung 9.13}
