@@ -5,7 +5,7 @@ do
    pdflatex --synctex=-1 --interaction nonstopmode --shell-escape --file-line-error main.tex
 done
 
-rm -f *.out *.log *.aux *.toc *.synctex
+rm -f *.out *.log *.aux *.toc *.synctex *.x.gnuplot *.x.table
 
 #Activate these lines once the document is final!
 # mkdir -p "../Final Documents"
