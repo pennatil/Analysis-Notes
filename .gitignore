@@ -36,3 +36,7 @@ Tex/MAINs/main.pdf
 Tex/MAINs/Session.tks
 
 Tex/MAINs/mainReview.tex
+
+*.x.gnuplot
+
+*.x.table
