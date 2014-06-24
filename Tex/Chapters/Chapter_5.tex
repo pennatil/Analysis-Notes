@@ -167,7 +167,7 @@ Analog
 Da wie oben $\frac{{\cos \left( h \right) - 1}}{h} \to 0$, $\frac{{\sin \left( h \right)}}{{\left( h \right)}} \to 1$, folgt $\cos'=-\sin$
 \end{enumerate}
 Der Zusammenhang zwischen Differenzierbarkeit und Sstetigkeit ist:
-\subsubsection*{Satz 5.5}
+\subsubsection*{Satz 5.5}\label{satz5.5}
 Sei $\Omega\subseteq\R$, $x_0\in\Omega$ und $f:\Omega\to\R$ in $x_0$ differenzierbar. Dann ist $f$ in $x_0$ stetig. (Also ist ``Differenzierbarkeit'' ist mehr als ``Stetigkeit'')
 \begin{beweis}{}
 $f$ differenzierbar in $x_0$. Sei
@@ -189,7 +189,7 @@ Da beide Funktionen einen Grenzwert an der Stelle $x_0$ besitzen, hat auch $f$ e
 $\Rightarrow$ ist stetig in $x_0$.
 \end{beweis}
 \subsubsection*{Bemerkung}
-Die Umkehrung von Satz 5.5\todo{Add page + reference, page 190 middle} gilt nicht, z.B. $f\left( x \right)=\abs{x}$ ist stetig in $x=0$ aber nicht differenzierbar.
+Die Umkehrung von Satz 5.5 (s.~\pageref{satz5.5}) gilt nicht, z.B. $f\left( x \right)=\abs{x}$ ist stetig in $x=0$ aber nicht differenzierbar.
 
 \subsubsection*{Beispiel 5.6}
 Das folgende Beispiel zeigt, dass es stetige Funktionen $f:\R\to\R$ gibt, die an keiner Stelle $x_0\in\R$ differenzierbar sind. (Von der Waerden (1930))\\
@@ -275,7 +275,7 @@ Da die Folge $\left( f_k\right)_{k\geq 1}$ gleichmässig gegen $f$ konvergiert, 
 Seien $f,g:\Omega\to\R$ Funktionen, $x_0\in\R$. Wir nehmen an, dass $f$ und $g$ in $x_0$ differenzierbar sind. Dann sind $f+g$, $f\cdot g$ und falls $g\left( x_0\right)\not=0$ auch $f/g$\todo{Is this supposed to be a fraction?? page 192 bottom; limenet: yes, function f over function g} an der Stelle $x_0$ differenzierbar. Es gelten dann folgende Formeln:
 \begin{enumerate}
 \item $\left( {af + bg} \right)'\left( {{x_0}} \right) = af'\left( {{x_0}} \right) + bf'\left( {{x_0}} \right)\hspace{5mm}\forall a,b \in \R$
-\item $\left( {f \cdot g} \right)'\left( {{x_0}} \right) = f'\left( {{x_0}} \right) \cdot g\left( {{x_0}} \right) + f\left( {{x_0}} \right) \cdot g'\left( {{x_0}} \right)$
+\item \label{satz5.7,2.}$\left( {f \cdot g} \right)'\left( {{x_0}} \right) = f'\left( {{x_0}} \right) \cdot g\left( {{x_0}} \right) + f\left( {{x_0}} \right) \cdot g'\left( {{x_0}} \right)$
 \item $\left( {\frac{f}{g}} \right)'\left( {{x_0}} \right) = \frac{{f'\left( {{x_0}} \right) \cdot g\left( {{x_0}} \right) - f\left( {{x_0}} \right) \cdot g'\left( {{x_0}} \right)}}{{g{{\left( {{x_0}} \right)}^2}}}$
 \end{enumerate}
 \begin{beweis}{}
@@ -290,7 +290,7 @@ Durch $\left( x-x_0\right)$ dividiert
 \frac{{f\left( x \right)g\left( x \right) - f\left( {{x_0}} \right)g\left( {{x_0}} \right)}}{{x - {x_0}}} =& \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}} \cdot g\left( {{x_0}} \right)\\
  &+ \frac{{g\left( x \right) - g\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}} \cdot f\left( {{x_0}} \right)
 \end{align*}
-Da $g$ in $x_0$ differenzierbar ist, ist $g$ in $x_0$ stetig und (Satz 5.5)\todo{Add reference + page number, page 194 middle}
+Da $g$ in $x_0$ differenzierbar ist, ist $g$ in $x_0$ stetig und (Satz 5.5, s.~\pageref{satz5.5})
 \[\mathop {\lim }\limits_{x \to {x_0}} g\left( x \right) = g\left( {{x_0}} \right)\]
 Die Formel folgt dann aus der Differenzierbarkeit von $f$ und $g$ in $x_0$
 \item \begin{align*}
@@ -314,7 +314,7 @@ Sei $n\geq 2$. Wir nehmen an, dass die Formel für $n-1$ gilt, i.e.
 f{'_{n - 1}}\left( x \right) =& \left( {{x^{n - 1}}} \right)' = \left( {n - 1} \right){x^{n - 2}}\\
 {f_n}\left( x \right) =&  {x^n} = x \cdot {x^{n - 1}} = x \cdot {f_{n - 1}}\left( x \right)
 \end{align*}
-Nach 2., Satz 5.7 \todo{Add reference + page number, page 195 middle to bottom}
+Nach 2., Satz 5.7 (s.~\pageref{satz5.7,2.})
 \begin{align*}
 f{'_n}\left( x \right) &= \left( x \right)'{f_{n - 1}}\left( x \right) + xf{'_{n - 1}}\left( x \right)\\
  &= {f_{n - 1}}\left( x \right) + x\left( {n - 1} \right){x^{n - 2}}\\
@@ -354,7 +354,7 @@ existiert, d.h. für jede in $\Omega\backslash\{ x_0\}$ enthaltene Folge $\left(
 \begin{beweis}{}
 Sei $\left( x_n\right)_{n\geq 1}$ mit $\lim x_n=x_0$, $x_n\not=x_0$. Dann gilt
 \[\lim f\left( x_n\right) = f\left( x_0\right)\]
-(Nach Satz 5.5 \todo{Add reference + page number, page 198 top} $f$ differenzierbar $\Rightarrow$ $f$ stetig (in $x_0$)).\\
+(Nach Satz 5.5, s.~\pageref{satz5.5},  $f$ differenzierbar $\Rightarrow$ $f$ stetig (in $x_0$)).\\
 
 \noindent Sei $y_n:=f\left( x_n\right)$ $\left( y_0:=f\left( x_0\right)\right)$. Wir nehmen an, dass $y_n\not=f\left( x_0\right)$, $\forall n$. Dann folgt
 \begin{align*}
@@ -406,7 +406,7 @@ Dann ist \[f'\left( x\right)=ng\left( x\right)^{n-1}\cdot g'\left( x\right)\]
 
 \section{Der Mittelwertsatz und Folgerungen}
 Wichtige Informationen über eine Funktion $f$ lassen sich leicht aus der Ableitung schliessen. Dies geschieht mittels dem Mittelwertsatz . Ein Spezialfalls der Mittelwertsatz ist
-\subsubsection*{Satz 5.12}
+\subsubsection*{Satz 5.12}\label{satz5.12}
 Sei $f:\lbrack a,b\rbrack\to\R$ stetig und auf $\left( a,b\right)$ differenzierbar. Sei $z_+\in\lbrack a,b\rbrack$ mit $f\left( z_+\right) =\max\left\{ f\left( x\right) : x\in\lbrack a,b\rbrack\right\}$. Wir nehmen an, dass $z_+\in\left( a,b\right)$. Dann gilt $f'\left( z_+\right) = 0$ Eine analoge Aussage gilt für $z$.
 \subsubsection*{Bemerkung 5.13}
 \begin{enumerate}
@@ -433,7 +433,7 @@ f'\left( {{z_ + }} \right) &= \mathop {\lim }\limits_{n \to \infty } \frac{{\ove
 Woraus \[ f'\left( z_+\right) = 0\] folgt.
 \end{beweis}
 
-\subsubsection*{Satz 5.14 (Mittelwertsatz)}
+\subsubsection*{Satz 5.14 (Mittelwertsatz)}\label{satz5.14}
 Sei $f:\lbrack a,b\rbrack\to\R$ stetig und auf $\left( a,b\right)$ differenzierbar, $a\not=b$. Dann gibt es $x_0\in\left( a,b\right)$ mit \[f'\left( {{x_0}} \right) = \frac{{f\left( b \right) - f\left( a \right)}}{{b - a}}\]
 \begin{center}
 \begin{tikzpicture}
@@ -465,7 +465,7 @@ Sei $f:\lbrack a,b\rbrack\to\R$ stetig und auf $\left( a,b\right)$ differenzierb
 \end{center}
 
 \begin{beweis}{}
-Die Idee lässt sich auf den Fall $f(a)=f(b)=0$ züruckführen und dann den Satz 5.12\todo{Add reference + page number} anwenden. Die Gleichung für die Sekante durch die Punkte $\left( a,f(a)\right)$, $\left( b,f\left( b\right)\right)$ ist
+Die Idee lässt sich auf den Fall $f(a)=f(b)=0$ züruckführen und dann den Satz 5.12 (s.~\pageref{satz5.12}) anwenden. Die Gleichung für die Sekante durch die Punkte $\left( a,f(a)\right)$, $\left( b,f\left( b\right)\right)$ ist
 \[S\left( x \right) = \left( {x - a} \right)\left( {\frac{{f\left( b \right) - f(a)}}{{b - a}}} \right) + f\left( a \right)\]
 Sei nun $g(x)=f(x)-S(x)$. Dann ist $g(a)=0=g(b)$\\
 
@@ -475,7 +475,7 @@ Sei nun $g(x)=f(x)-S(x)$. Dann ist $g(a)=0=g(b)$\\
 \[\mathop {\max }\limits_x g(x) > 0\text{ }\left(\text{oder }\mathop {\min }\limits_x g(x) < 0\right)\]
 Im ``$\max$''-Fall sei $z_+$ mit
 \[g\left( {{z_ + }} \right) = \max \left\{ {g(x):x \in \left[ {a,b} \right]} \right\}\]
-Dann ist $ {{z_ + }} \in\left( a,b\right)$ (Da $g(a)=g(b)=0$, und $g\left( {{z_ + }} \right) >0$) und nach Satz 5.12\todo{Add reference + page number, page 205 very top} $g'\left( z_+\right)=0$, d.h.
+Dann ist $ {{z_ + }} \in\left( a,b\right)$ (Da $g(a)=g(b)=0$, und $g\left( {{z_ + }} \right) >0$) und nach Satz 5.12 (s.~\pageref{satz5.12}) $g'\left( z_+\right)=0$, d.h.
 \begin{align*}
 g\left( {{z_ + }} \right) &= f'\left( {{z_ + }} \right) - S'\left( {{z_ + }} \right) = 0\\
  \Rightarrow f'\left( {{z_ + }} \right) &= S'\left( {{z_ + }} \right) = \frac{{f\left( b \right) - f\left( a \right)}}{{b - a}}
@@ -484,7 +484,7 @@ Der ``$\min$''-Fall ist analog.
 \end{beweis}
 Als erste Anwendung haben wir
 \subsubsection*{Korollar 5.15}
-Sei $f:\lbrack a,b\rbrack\to\R$ wie im Satz 5.14\todo{Add reference + page number, page 205 middle to bottom}
+Sei $f:\lbrack a,b\rbrack\to\R$ wie im Satz 5.14 (s.~\pageref{satz5.14})
 \begin{enumerate}
 \item Falls $f'(x)=0$, $\forall x\in\left( a,b\right)$ folgt, dass $f$ konstant ist.
 \item Falls $f'(x)\geq 0$, $\forall x\in\left( a,b\right)$ so ist $f$ monoton wachsend.
@@ -535,13 +535,13 @@ f'\left( x \right) &= \frac{{2\left( {1 + {x^2}} \right) - \left( {2x} \right)\l
 &f'\left( { \pm 1} \right) = 0\\
 &f'\left( x \right) > 0\text{ für }\abs{x}<1
 \end{align*}
+%THIS IS A PRETTY AWFUL WAY OF CENTERING THE ROWS, BUT IT WORKS :)
 \begin{tabularx}{\textwidth}{|Y|Y|Y|Y|Y|}
 \hline
     $x$ & $x<-1$                          & $-1<x<0$ & $0<x<1$ & $x>1$                                                      \\\hline\hline
-    $f'\left( x\right)$        & $-$ & $+$ & $+$ & $-$ \\ [1.5ex]\hline
-    $f\left( x\right)$                  & $\searrow$                                     & $\nearrow$ & $\nearrow$ & $\searrow$                  \\[1.5ex]\hline
+    \vspace{-1mm}$f'\left( x\right)$        & \vspace{-1mm}$-$ & \vspace{-1mm}$+$ & \vspace{-1mm}$+$ & \vspace{-1mm}$-$ \\ [1.5ex]\hline
+    \vspace{-1mm}$f\left( x\right)$                  & \vspace{-1mm}$\searrow$     & \vspace{-1mm}$\nearrow$ & \vspace{-1mm}$\nearrow$ & \vspace{-1mm}$\searrow$                  \\[1.5ex]\hline
  \end{tabularx}
-\todo[inline]{Fix vertical positioning in table, page 208 bottom}
 
 \begin{center}
 \begin{tikzpicture}[scale=0.5]
@@ -647,7 +647,7 @@ Man kann folgendes bemerken: Falls $f:\R\to\R$ bijektiv und die Umkehrfunktion $
 \[f'\left( {g\left( x \right)} \right)g'\left( x \right) = 1\hspace{5mm}\forall x\]
 Insbesondere $f'(x)\not=0$ $\left(g'(x)\not=0\right)$, $\forall x$. Dies ist also eine notwendige Bedingung zur Existenz der Ableitung von $f^{-1}$
 
-\subsubsection*{Satz 5.20 (Umkehrsatz)}
+\subsubsection*{Satz 5.20 (Umkehrsatz)}\label{satz5.20}
 Sei $f:\left( a,b\right)\to\R$ differenzierbar mit $f'(x)>0$, $\forall x\in\left( a,b\right)$. Seien $c = \mathop {\inf }\limits_x f\left( x \right)$, $d = \mathop {\sup }\limits_x f\left( x \right)$. Dann ist $f:\left( a,b\right)\to\left( c,d\right)$ bijektiv und die Umkehrfunktion $f^{-1}:\left( c,d\right)\to\left( a,b\right)$ ist differenzierbar mit
 \[\left( {{f^{ - 1}}} \right)'\left( {f\left( x \right)} \right) = \frac{1}{{f'\left( x \right)}}\hspace{5mm}\forall x \in \left( {a,b} \right)\]
 d.h.
@@ -676,7 +676,7 @@ da $f'\left( x_0\right)\not=0$
 Die Funktion $\log :\left( 0,\infty\right)\to\mathbb{K}$ ist differenzierbar und $\log'(x)=\frac{1}{x}$, $\forall x\in\left( 0,\infty\right)$
 
 \begin{beweis}{}
-$\exp : \R\to\left( 0,\infty\right)$ erfüllt alle Bedingungen von Satz 5.20\todo{Add reference + page number, page 217 middle}($\exp'=\exp>0$). Wir haben also
+$\exp : \R\to\left( 0,\infty\right)$ erfüllt alle Bedingungen von Satz 5.20 (s.~\pageref{satz5.20})($\exp'=\exp>0$). Wir haben also
 \begin{align*}
 \log \left( {\exp \left( x \right)} \right) &= x\\
 {\mathop{\rm log'}\nolimits} \underbrace {\left( {\exp \left( x \right)} \right)}_y\underbrace {\left( {\exp \left( x \right)} \right)}_y &= 1\\
@@ -870,7 +870,7 @@ Wir haben einen Konvergenzbegriff auf $C^0\left( \Omega\right)$ gesehen: Gleichm
 \[{f_n}\mathop  \to \limits^{\text{glm.}} f{\text{ falls }}\mathop {\sup }\limits_{x \in \Omega } \left\| {{f_n} - f} \right\| \to 0\]
 Falls alle $f_n$ stetig sind, folgt, dass $f$ stetig ist. Für $C'\left( \Omega\right)$ haben wir
 
-\subsubsection*{Satz 5.26}
+\subsubsection*{Satz 5.26}\label{satz5.26}
 Sei $\left( f_n\right)_{n\geq 1}$ eine Folge in $C'\left( \Omega\right)$. Wir nehmen an, dass ${f_n}\mathop  \to \limits^{\text{glm.}} f$ und ${f'_n}\mathop  \to \limits^{\text{glm.}} g$. Dann gilt $f\in C'\left( \Omega\right)$ und $g=f'$
 
 \begin{beweis}{}
@@ -924,7 +924,7 @@ g\left( x \right) = &\left\{ {\begin{array}{*{20}{c}}
 $f'_n(x)\to g(x)$ konvergiert nicht gleichmässig ($g$ nicht stetig in $x=0$)
 \end{beweis}
 
-Eine sehr wichtige Anwendung von Satz 5.26 \todo{Add reference + page number, page 228 middle} ist auf die Eigenschaften von Funktionen, die Summe von Potenzreihen sind. Sei $\left( a_n\right)_{n\geq 0}\in\R$. Wir nehmen an
+Eine sehr wichtige Anwendung von Satz 5.26 (s.~\pageref{satz5.26}) ist auf die Eigenschaften von Funktionen, die Summe von Potenzreihen sind. Sei $\left( a_n\right)_{n\geq 0}\in\R$. Wir nehmen an
 \[\rho : = \frac{1}{{\lim \sup \sqrt[n]{{\left| {{a_n}} \right|}}}} > 0\]
 \subsubsection*{Satz 5.29}
 Sei $x\in\left( -\rho,\rho\right)=\Omega$ \[f\left( x \right) = \sum\limits_{n = 0}^\infty  {{a_n}{x^n}}\] die Summe der absolut konvergenten Potenzreihe. Dann ist $f\in C'\left( \Omega\right)$ und
@@ -945,7 +945,7 @@ Also $f_k\to f$ gleichmässig auf $\left( -r,r\right)$. Da
 \[\sum\limits_{n = 0}^\infty  {n{a_n}{x^{n - 1}}}  = :g\left( x \right)\]
 absolut $\forall x\in\left( -\rho,\rho\right)$. Nun ist
 \[f{'_k}\left( x \right) = \sum\limits_{n = 0}^k {n{a_n}{x^{n - 1}}} \]
-und es folgt wie oben $f{'_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} g$. Nach Satz 5.26 \todo{Add reference + page number, page 230 middle}folgt, dass $f,g$ stetig und $g=f'$, auf $\left( -\rho,\rho\right)$.
+und es folgt wie oben $f{'_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} g$. Nach Satz 5.26 (s.~\pageref{satz5.26}) folgt, dass $f,g$ stetig und $g=f'$, auf $\left( -\rho,\rho\right)$.
 \end{beweis}
 
 \subsubsection*{Beispiel 5.30}

@@ -163,7 +163,7 @@ im Widerspruch zur Annahme $a_n\leq b_n$, $\forall n\in\N$
 Es ist nicht unbedingt nötig, den ganzen Beweis zu führen, um zu wissen, dass eine Folge konvergent ist. Es gibt Folgen, deren Konvergenz durch eine Strukturelle Eigenschaft gesichert ist, ohne dass man den Limes apriori kennen muss.\\
 
 Folgender Satz illustriert das, er benützt das Vollständigkeitsaxiom
-\subsubsection*{Satz 3.9 (Monotone Konvergenz)}
+\subsubsection*{Satz 3.9 (Monotone Konvergenz)}\label{satz3.9}
 \begin{enumerate}
 \item Sei $\left( a_n\right)_{n > 1}$ eine monoton wachsende beschränkte Folge. Dann ist sie konvergent und es gilt zudem \[\mathop {\lim }\limits_{n \to \infty } {a_n} = \sup \left\{ {{a_n}:n \ge 1} \right\}\]
 \item Sei $\left( b_n\right)_{n \geq 1}$ eine monoton fallende beschränkte Folge. Dann ist sie konvergent und es gilt zudem \[\mathop {\lim }\limits_{n \to \infty } {b_n} = \inf \left\{ {{b_n}\mid n \ge 1} \right\}\]
@@ -298,7 +298,7 @@ Dann folgt aus Korollar 2.11
 \item $\left( m_k\right)_{k\geq 1}$ monoton wachsend
 \item $\left( M_k\right)_{k\geq 1}$ monoton fallend
 \end{enumerate}
-Nach dem Satz der monotonen Konvergenz (Satz 3.9, s.\todo{add reference!!}) konvergieren beide Folgen
+Nach dem Satz der monotonen Konvergenz (Satz 3.9, s.~\pageref{satz3.9}) konvergieren beide Folgen
 
 \begin{definition}{3.15}
 Wir definieren
@@ -409,11 +409,13 @@ und analog $b=1+\frac{1}{a}\Rightarrow ab=1+a$ woraus $ab=1+a=b+1$ und somit $a=
 $g_+:=\lim\sup g_n$ und $g_-:=\lim\inf g_n$ sind Häufungspunkte, d.h. es gibt Teilfolgen $a_n$ und $b_n$ mit $\lim a_n=g_+$, $\lim b_n=g_-$. Da jede Teilfolge von $\left( g_n\right)$ entweder unendlich viele gerade oder ungerade Indizes enthält, folgt
 \[g=g_+=g_-\]
 
-Jede Teilfolge hat entweder unendliche viele Elemente von $\left( g_{2n}\right)$ oder $\left( g_{2n+1}\right)$.\todo{Put in big brackets (including math)}
+%START BRACKET
+Jede Teilfolge hat entweder unendliche viele Elemente von $\left( g_{2n}\right)$ oder $\left( g_{2n+1}\right)$.\todo{Add big bracket}
 \[\left. {\begin{array}{*{20}{c}}
 {{g_ + } = \lim {a_n} = \lim {g_{2n}} = g}\\
 {{g_ + } = \lim {b_n} = \lim {g_{2n}} = g}
 \end{array}} \right\}{g_ + } = {g_ - } \Rightarrow \lim {g_n} = g = {g_ - } = {g_ + } = \frac{{1 + \sqrt 5 }}{2}\]
+%END BRACKET
 
 \section{Cauchy-Kriterium}
 \todo[inline]{Chapter numbering is, according to the handwritten notes, wrong. WHich one is the correct one??}
@@ -430,7 +432,7 @@ $\left( a_n\right)_{n\geq 1}$ ist eine Cauchy-Folge falls für $\varepsilon>0$ e
 Wir haben gesehen, dass
 \[ \left( a_n\right) \text{ konvergiert }\Rightarrow\left( a_n\right) \text{ Cauchy}\]
 Wir haben auch\todo{limenet: what??}
-\subsubsection*{Satz 3.22 (Cauchy-Kriterium)}
+\subsubsection*{Satz 3.22 (Cauchy-Kriterium)}\label{satz3.22}
 Sei $\left( a_n\right)_{n\geq 1}\subset\R$ eine Folge. Die folgenden Aussagen sind äquivalent
 \begin{enumerate}
 \item $\left( a_n\right)$ ist eine Cauchy-Folge
@@ -672,9 +674,9 @@ Die Reihe $\sum\limits_{n = 1}^\infty a_n$ ist konvergent, falls die Folge $\lef
 \lim {S_n}&= \mathop {\lim }\limits_{n \to \infty } \frac{{1 - {q^{n + 1}}}}{{1 - q}} = \frac{1}{{1 - q}}\text{  (da $\lim q^n=0$)}
 \end{align*}
 Somit konvergiert $\sum\limits_{k = 1}^\infty  {{q^k}} $ und deren Wert ist $\frac{1}{1-q}$
-\item Die Harmonische Reihe $\sum\limits_{n = 1}^\infty  {\frac{1}{n}} $ ist nach Beispiel 3.23 (i)\todo{ADD reference} divergent.
+\item Die Harmonische Reihe $\sum\limits_{n = 1}^\infty  {\frac{1}{n}} $ ist nach Beispiel 3.23 (i) divergent.
 \end{enumerate}
-Für Reihen gibt es verschiedene praktische Konvergenz-Kriterien. Das erste ergibt sich direkt aus dem Cauchy-Kriterium (Satz 3.22)\todo{add reference + page number}
+Für Reihen gibt es verschiedene praktische Konvergenz-Kriterien. Das erste ergibt sich direkt aus dem Cauchy-Kriterium (Satz 3.22, s.~\pageref{satz3.22})
 
 \subsubsection*{Satz 3.35 (Cauchy-Kriterium)}
 Die Reihe $\sum\limits_{n = 1}^\infty  {{a_n}} $ konvergiert genau dann, wenn es für jedes $\varepsilon>0$ einen Index $N(\varepsilon)\geq 1$ gibt,, so dass
@@ -691,7 +693,7 @@ $\sum\limits_1^\infty  {{a_j}} $ konv. $\Leftrightarrow S_n=\sum\limits_1^n a_k$
 $\sum\limits_{k = 1}^\infty  {{a_k}} $ konvergent $\Rightarrow\left| a_k\right|\to 0$
 
 \begin{beweis}{}
-Nehmen wir $m=n$ an in Satz 3.5\todo{Add reference + page number}. Das ist ein notwendiges Kriterium aber nicht ein hinreichendes Kriterium.
+Nehmen wir $m=n$ an in Satz 3.5 (s.\todo{Add Reference. UPDATE: CAN'T FIND SATZ 3.5!!}). Das ist ein notwendiges Kriterium aber nicht ein hinreichendes Kriterium.
 \end{beweis}
 \todo[inline]{Content between brackets  looks like personal notes, should these be copied? page 97 bottom}
 
@@ -701,7 +703,7 @@ $\sum\frac{1}{k}$ ist nicht konvergent obwohl $\lim\frac{1}{k}=0$ (nicht genüge
 
 Im folgenden leiten wir aus dem Vergleich mit der geometrischen Reihe verschiedene Konvergenz-Kriterien ab (Quotienten- und Wurzelkriterium). Dies stützt sich auf
 
-\subsubsection*{Satz 3.36}
+\subsubsection*{Satz 3.36}\label{satz3.36}
 Seien $\sum\limits_1^\infty  {{a_k}} $, $\sum\limits_1^\infty  {{b_k}} $ Reihen wobei
 \begin{enumerate}
 \item Es gibt $k_0$, so dass $\left| a_k\right| \leq b_k$, $\forall k > k_0$
@@ -742,7 +744,7 @@ $\sum {\frac{1}{{{{\left( {k + 1} \right)}^2}}}} $ konvergiert.
 Sei $a_k\not=0$, $\forall k\geq 1$
 
 \begin{enumerate}[(i)]
-\item Falls \[\mathop {\lim }\limits_{k \to \infty } \sup \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| < 1\] so ist $\sum a_k$ konvergent
+\item \label{satz3.37}Falls \[\mathop {\lim }\limits_{k \to \infty } \sup \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| < 1\] so ist $\sum a_k$ konvergent
 \item Falls \[\mathop {\lim }\limits_{k \to \infty } \inf \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| > 1\] so ist $\sum a_k$ divergent
 \end{enumerate}
 
@@ -761,7 +763,7 @@ Es folgt für $k\geq n_0$ die Abschätzung
 \left| {{a_k}} \right|&= \left| {\frac{{{a_k}}}{{{a_{k - 1}}}} \cdot \frac{{{a_{k - 1}}}}{{{a_{k - 2}}}} \cdot  \ldots  \cdot \frac{{{a_{{n_0} + 1}}}}{{{a_{{n_0}}}}} \cdot {a_{{n_0}}}} \right|\\
 &\le {q^{k - {n_0}}}\left| {{a_{{n_0}}}} \right| = \underbrace {{q^n}\left| {{a_{{n_0}}}} \right|}_C{q^k} = C{q^k}
 \end{align*}
-Wir können nun $b_k=Cq^k$ setzen und Satz 3.36 \todo{Add refence + page number} anwenden. Da $\sum b_k$ konvergiert (da $\left| q\right| < 1$), konvergiert $\sum a_k$.
+Wir können nun $b_k=Cq^k$ setzen und Satz 3.36 (s.~\pageref{satz3.36}) anwenden. Da $\sum b_k$ konvergiert (da $\left| q\right| < 1$), konvergiert $\sum a_k$.
 \item Sei
 \[{q_0}: = \mathop {\lim }\limits_{k \to \infty } \inf \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| = \mathop {\lim }\limits_{n \to \infty } \mathop {\inf }\limits_{k \ge n} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|\]
 (falls es existiert). Wähle $q\in\R$ mit $q_0>q>1$. Dann existiert $n_0$ mit \[\forall k > {n_0}:\left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| > \mathop {\inf }\limits_{k > {n_0}} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| \ge q\]
@@ -802,7 +804,7 @@ konvergiert für jedes $z\in\C$. Sei $a_k:=\frac{z^k}{k!}$.
 \[\frac{{{a_{k + 1}}}}{{{a_k}}} = \frac{{{z^{k + 1}}}}{{\left( {k + 1} \right)!}} \cdot \frac{{k!}}{{{z^k}}} = \frac{z}{{k + 1}}\]
 Also
 \[\mathop {\lim }\limits_{k \to \infty } \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| = \mathop {\lim }\limits_{k \to \infty } \left| {\frac{z}{{k + 1}}} \right| = 0 < 1\hspace{5mm}\forall z \in\C \]
-Nach Satz 3.37 (i)\todo{Add reference + page number} ist $\sum {\frac{{{z^k}}}{{k!}}} $ konvergent. Wir werden darauf züruckkommen.
+Nach Satz 3.37 (i) (s.~\pageref{satz3.37}) ist $\sum {\frac{{{z^k}}}{{k!}}} $ konvergent. Wir werden darauf züruckkommen.
 \item Bestimme, für welche $z\in\C$ konvergiert \[\sum\limits_{k = 1}^\infty  {\frac{{{z^k}k!}}{{{k^k}}}} \]
 Sei ${a_n} = \frac{{{z^k}k!}}{{{k^k}}}$
 \begin{align*}
@@ -813,7 +815,7 @@ Dann ist $\lim\left|\frac{a_{k+1}}{a_k}\right|=\frac{\abs{z}}{e}$.
 Somit folgt die Konvergenz für $\abs{z}<e$ und die Divergenz für $\abs{z}>e$. $\abs{z}<e$ ist der ``Konvergenzkreis'' für $\sum {\frac{{{z^k}k!}}{{{k^k}}}} $
 \end{enumerate}
 Beispiele 4., 5. sind die erste Einführung des Begriffs des Konvergenzkreises. Das Quotientenkriterium versagt, wenn unendlich viele $a_k$ verschwinden oder falls $\lim\abs{\frac{a_{k+1}}{a_k}}=1$
-\subsubsection*{Satz 3.39 (Wurzelkriterium)}
+\subsubsection*{Satz 3.39 (Wurzelkriterium)}\label{satz3.39}
 Sei $\left( a_n\right)_{n\geq 1}$ eine Folge in $\R$ oder $\C$
 \begin{enumerate}[(i)]
 \item Falls $\lim\sup\sqrt[k]{\abs{a_k}}<1$, so konvergiert $\sum\limits_1^\infty a_k$
@@ -832,7 +834,7 @@ Der letzte Satz ist sehr fundamental im Studium der Potenzreihen. Potenzreihen s
 \begin{definition}{}
 Sei $\left( c_k\right)_{k\in\N}$ eine Folge in $\R$ oder $\C$. Betrachte die Potenzreihe in $z\in\C$ \[p(z): = \sum\limits_{k = 0}^\infty  {{c_k}{z^k}} \]
 \end{definition}
-Mit Satz 3.39 \todo{Add reference + page number} (Wurzelkriterium) erhalten wir die folgende Charakterisierung des Konvergenzbereichs von $p(z)$
+Mit Satz 3.39 (Wurzelkriterium, s.~\pageref{satz3.39}) erhalten wir die folgende Charakterisierung des Konvergenzbereichs von $p(z)$
 \subsubsection*{Satz 3.40}
 Die Potenzreihe \[p(z): = \sum\limits_{k = 0}^\infty  {{c_k}{z^k}} \] ist konvergent $\forall z\in\C$, mit \[\left| z \right| < \rho : = \frac{1}{{\lim \sup \sqrt[k]{{\left| {{c_k}} \right|}}}} \in \left[ {0,\infty } \right]\] Sie ist divergent für alle $\abs{z}>\rho$\\
 
@@ -1016,7 +1018,7 @@ $a_n=b_n-\abs{a_n}$ und beide Reihen konv. $\Rightarrow\sum a_n=\sum b_n-\sum\ab
 \[\text{\underline{Notation:}}\hspace{3mm}\sum\limits_{k = 1}^\infty  {\left| {{a_n}} \right|}  < \infty  = \sum\limits_{k = 1}^\infty  {\left| {{a_k}} \right|} {\text{ konvergiert}}\]\vspace{-2mm}
 \end{framed}
 
-\subsubsection*{Satz 3.46}
+\subsubsection*{Satz 3.46}\label{satz3.46}
 Sei $\sum\limits_1^\infty  {{a_k}} $ absolut konvergent und $\varphi :\N\to\N$ eine Bijektion. Dann ist auch die ``umgeordnete Reihe'' $\sum\limits_{k = 1}^\infty  {{a_{\varphi (k)}}} $ absolut konvergent mit gleicher Summe.
 
 \begin{beweis}{}
@@ -1209,7 +1211,7 @@ Da
 \[ e=\exp(1)=\exp\left(q\cdot\frac{1}{q}\right)=\underbrace {\exp \left( {\frac{1}{q}} \right) \ldots \exp \left( {\frac{1}{q}} \right)}_{q{\text{ mal}}}\]
 Somit haben wir
 \subsubsection*{Satz 3.51}
-$\forall x\in\mathbb{Q}$, $\exp(x)=e^x$. Für rein imaginäre Argumente $z=iy$, $y\in\R$ können wir $\exp(iy)$ durch Umordnung gemäs Satz 3.46 \todo{add reference + page number, page 126 middle} in Real- und Imaginärteil zerlegen
+$\forall x\in\mathbb{Q}$, $\exp(x)=e^x$. Für rein imaginäre Argumente $z=iy$, $y\in\R$ können wir $\exp(iy)$ durch Umordnung gemäs Satz 3.46 (s.~\pageref{satz3.46}) in Real- und Imaginärteil zerlegen
 \begin{align*}
 \exp \left( {iy} \right)&= \sum\limits_{k = 0}^\infty  {\frac{{{{\left( {iy} \right)}^k}}}{{k!}}} \\
 &= \sum\limits_{l = 0}^\infty  {\frac{{{{\left( { - 1} \right)}^l}{y^{2l}}}}{{\left( {2l} \right)!}}}  + i\sum\limits_{l = 0}^\infty  {\frac{{{{\left( { - 1} \right)}^l}{y^{2l + 1}}}}{{\left( {2l + 1} \right)!}}} \\

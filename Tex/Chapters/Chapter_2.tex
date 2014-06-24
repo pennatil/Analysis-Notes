@@ -376,6 +376,7 @@ Also ist $\R^n$ ein Vektorraum. In der linearen Algebra führt man dann Begriffe
 
 Jeder Vektor $x=\left(x_1,\dots,x_n \right)\in\R$ besitzt eine eindeutige Darstellung $x=\sum x_ie_i$ bezüglich der Standardbasis.
 \begin{definition}{2.16}
+\vspace{-6mm}
 \begin{enumerate}
 \item Das Skalarprodukt zweier Vektoren $x=\left(x_1,\dots,x_n \right),y=\left(y_1,\dots,y_n \right)$ ist die durch \[ < x,y > : = \sum\limits_{i = 1}^n {{x_i}{y_i}} \] definierte reelle Zahl\\ $<\cdot,\cdot>=\R^n\times\R^n\to\R$ 
 \item Falls $<x,y>=0$ heissen $x$ und $y$ senkrecht (orthogonal) aufeinander. $<\cdot,\cdot>$ besitzt folgende Eigenschaften
@@ -550,8 +551,7 @@ Diese Identifikation von $\R$ und $\mathbb{C}_0$ ist verträglich mit den Operat
 \subsubsection*{Polarform}
 Als Polarkoordinaten in der Ebene führen wir $(r,\phi)$ ein
 
-\begin{figure}[ht]
-\begin{minipage}[b]{0.45\linewidth}
+\begin{multicols}{2}
 \begin{center}
 \begin{tikzpicture}
 \draw[->](-0.5,0)--(3.5,0);
@@ -565,16 +565,16 @@ Als Polarkoordinaten in der Ebene führen wir $(r,\phi)$ ein
 \node[circle,fill=black,inner sep=1] (a) at (2.5,1.5) {};
 \end{tikzpicture}
 \end{center}
+\columnbreak
+\vfill
+\begin{align*}
+x&=r\cos\phi\hspace{5mm} y=r\sin\phi\\
+z&=r\left( \cos\phi + i\sin\phi\right)\\
+r&=\left| z\right|
+\end{align*}
+\null\vfill
+\end{multicols}
 
-\end{minipage}
-\hspace{0.5cm}
-\begin{minipage}[b]{0.45\linewidth}
-$x=r\cos\phi$\hspace{5mm} $y=r\sin\phi$\\
-$z=r\left( \cos\phi + i\sin\phi\right)$\\
-$r=\left| z\right|$
-\vspace{9mm}
-\end{minipage}
-\end{figure}
 
 \begin{definition}{}
 Wir definieren (nach Euler)\[e^{i\phi}:=\cos\phi+ i\sin\phi\]\[z=re^{i\phi}=\left| z\right|e^{i\phi}\]

@@ -878,17 +878,19 @@ Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\R^n$ folgt die Darstellung
 \end{definition}
 \subsubsection*{Satz 8.31}
 Sei $f\in\subset '\left(\Omega\right)$ und $x_0\in\Omega$. Dann gibt $\nabla f\left(x_0\right)$ die Richtung und $\left| \nabla f\left(x_0\right)\right|$ den Betrag des steilsten Anstieges von $f$ an der Stelle $x_0$ an.
-\subsubsection*{Beweis}
+\begin{beweis}{}
 Aus der Definition des Gradientenfeld folgt $\forall e\in\R^n$, Einheitsvektor $\mid\mid e\mid\mid =1$ \[df\left(x_0\right)\left( e\right)=< \nabla f\left( x_0\right) ,e >\]
-\todo{Add arrow pointing down for description of function, page 157 middle}
+
 Mit Cauchy-Schwarz folgt
 \[<\nabla f\left( x_0\right)>\leq\left|\left|\nabla f\left( x_0\right)\right|\right|\left|\left| e\right|\right| = \left|\left| \nabla f\left( x_0\right)\right|\right|\]
 mit Gleichkeit genau dann, wenn $e$ ein positives Vielfaches von $\nabla f\left( x_0\right)$ ist, nämlich \[e=\frac{\nabla f\left( x_0\right)}{\left| \nabla f\left( x_0\right)\right|}\] \[\Rightarrow df\left( x_0\right) e \leq \left| \nabla f\left( x_0\right)\right|\]
 mit Gleicheit für $e=\frac{\nabla f\left( x_0\right)}{\left| \nabla f\left( x_0\right)\right|}$
 %END BEWEIS
 $\nabla f\left( x_0\right)\not= 0\Rightarrow \nabla f\left( x_0\right)$ zeigt die Richtung an, in der $f$ am schnellsten wächst.\\
+\end{beweis}
 
-\noindent \underline{Geometrische Interpretation}
+
+\subsubsection*{Geometrische Interpretation}
 Sei $f:\R^n\to\R, C'$. Für jedes $s\in\R$ wird $f^{-1}(s)=\left\{ x\in\R^n\mid f(x)=s\right\}$ Niveaufläche genannt.
 
 \subsubsection*{Beispiel}
@@ -952,9 +954,9 @@ dh \left( P\right) \left( v_2\right) = &\left( \frac{\partial h}{\partial x}\lef
 \end{align*}
 Durch Lösen des linearen Gleichungssystem folgen wir:
 \[\frac{\partial h}{\partial x}\left( P\right) = \frac{\sqrt{2}}{4}+\frac{1}{5}, \frac{\partial h}{\partial y}\left( P\right) = \frac{1}{5}\]
-Die Richtung des Gradients ist somit \[ \nabla h\left( P \right) = \arctan{\frac{\frac{1}{5}}{\frac{\sqrt{2}}{4}+ \frac{1}{5}}}=19.86 \]\todo{add arg at the beginning of the equation using special command, as well as tilde on top of equal sign, Also add deg symbol on top of 19.86}
+Die Richtung des Gradients ist somit \[ \arg\nabla h\left( P \right) = \arctan{\frac{\frac{1}{5}}{\frac{\sqrt{2}}{4}+ \frac{1}{5}}}\cong 19.86\text{\textdegree} \]
 und die Steigung in diese Richtung ist
-\[\left| \nabla h\left( P\right) \right| = \sqrt{\left( \frac{\sqrt{2}}{4}+\frac{1}{5}\right)^2 + \left( \frac{1}{5}\right)^2} = 0.59 = 59\%\] \todo{add tilde on top of second to last equal sign}
+\[\left| \nabla h\left( P\right) \right| = \sqrt{\left( \frac{\sqrt{2}}{4}+\frac{1}{5}\right)^2 + \left( \frac{1}{5}\right)^2} \cong 0.59 = 59\%\] 
 \end{enumerate}
 
 \section{Wegintegrale}
@@ -1253,8 +1255,7 @@ Dann definiert man
 Jetzt werden wir die einzige grundlegendee Eigenschaften des Wegintegrals herleiten.
 \end{enumerate}
 
-\subsubsection*{Satz 8.38}
-Eigenschaften des Wegintegrals \todo{limenet: make this bold}
+\subsubsection*{Satz 8.38 (Eigenschaften des Wegintegrals)}
 \begin{enumerate}[\indent E1)]
 \item Das Wegintegral $\int\limits_\gamma  \lambda  $ ist unabhängig von einer orientierungserhaltenden Umparametrisierung. \\
 D.h. Sei $\gamma :\lbrack a,b\rbrack\to\Omega$, $C'$ und $\varphi :\lbrack a',b'\rbrack\to\lbrack a,b\rbrack$, $C'$ mit $\varphi\left( a'\right)=a$, $\varphi\left( b'\right)=b$, $\varphi'\left( t\right) >0$ $\forall t\in\lbrack a', b'\rbrack$. Dann ist
@@ -1556,7 +1557,7 @@ Eine offene Menge $\Omega\subset\R^n$ heisst einfach zusammenhängend, falls
 \item $\Omega$ ist stückweise $C'-$wegzusammenhängend
 \item Jeder stückweise $C'-$Weg in $\Omega$ kann stetig innerhalb $\Omega$ auf einen Punkt zusammengezogen werden
 \end{enumerate}
-Die Region $\Omega=\R\backslash\{ 0\}$ ist nicht einfach zu $\Omega' = \left\{ \left( x,y\right) \mid x>0\right\}$ ist es aber.\todo[inline]{This sentence doesn't make any sense at all}%DO NOT MODIFY THIS TODO AS IT MESSES UP FLOATS WHEN BUILDING
+Die Region $\Omega=\R\backslash\{ 0\}$ ist nicht einfach zu $\Omega' = \left\{ \left( x,y\right) \mid x>0\right\}$ ist es aber.\todo[inline]{limenet: This sentence doesn't make any sense at all}%DO NOT MODIFY THIS TODO AS IT MESSES UP FLOATS WHEN BUILDING
 \end{definition}
 
 \subsubsection*{Satz 8.50}
