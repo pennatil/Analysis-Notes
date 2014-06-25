@@ -378,14 +378,7 @@ Sei $f:\Omega\to\R^{n}$, $\Omega\subset\R^{d}$ eine Abbildung, $x_{0} \in\Omega$
 \item[$(1)\Rightarrow (2)$] (Indirekt)\\
 Wir nehmen also an, dass (2) nicht gilt, d.h. es gibt $\varepsilon>0$, so dass für jedes $\delta >0$ einem Punkt $x_\delta$ gibt mit
 \[\left\| {{x_\delta } - {x_0}} \right\| < \delta {\text{ und }}\left\| {f\left( {{x_\delta }} \right) - f\left( {{x_0}} \right)} \right\| > \varepsilon \]
-\todo[inline]{Start of big bracket}
-\begin{align*}
-&\neg \left( {\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \Omega :\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)\\
- &= \left( {\exists \varepsilon  > 0,\forall \delta  > 0,\exists x \in \Omega :\left| {x - {x_0}} \right| < \delta {\text{ }}\not  \Rightarrow {\text{ }}\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)
-\end{align*}
-d.h.
-\[\exists \varepsilon  > 0,\forall \delta  > 0,\exists {x_\delta } \in \Omega :\left| {{x_\delta } - {x_0}} \right| < \delta {\text{  und  }}\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| > \varepsilon \]
-\todo[inline]{end of big bracket}
+\[\left( \begin{array}{l}\begin{array}{*{20}{l}}{\neg \left( {\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \Omega :\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)}\\{ = \left( {\exists \varepsilon  > 0,\forall \delta  > 0,\exists x \in \Omega :\left| {x - {x_0}} \right| < \delta {\text{ }}\not  \Rightarrow {\text{ }}\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)\hspace{-5mm}}%A bit hacked together, but it works\end{array}\\{\text{\hspace{48mm}d.h.}}\\\exists \varepsilon  > 0,\forall \delta  > 0,\exists {x_\delta } \in \Omega :\left| {{x_\delta } - {x_0}} \right| < \delta {\text{  und  }}\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| > \varepsilon \end{array} \right)\]
 Sei $\varepsilon>0$. Wir wählen jetzt $\delta_n=\frac{1}{n}$, dann gibt es $x_n:=\left(x_{\delta_n}\right)_{n\in\N}$, eine Folge in $\Omega$, mit $\lim x_n=x_0$. Aber die Folge $\left( f\left( x_n\right)\right)$ kann offensichtlich nicht gegen $f\left( x_0\right)$ konvergieren (Da $\left| {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} \right| > \varepsilon $), d.h. $f$ ist nicht stetig in $x_0$.
 \item[$(2)\Rightarrow (1)$] Sei $\left( x_n\right)_{n\geq 1}$ eine Folge in $\Omega$ mit Grenzwert $x_0$. Wir möchten zeigen, dass $f\left( {{x_n}} \right) \to f\left( {{x_0}} \right)$. Sei $\varepsilon>0$, nach (2) sei $\delta_{\varepsilon}>0$, so dass $\forall x\in\Omega$ mit
 \[\left| {x - {x_0}} \right| < {\delta _\varepsilon } \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
@@ -647,9 +640,19 @@ Also für $x=x_0+h\to x_0$, $\exp\left( x \right)-\left( x_0 \right)\to 0$ und d
 \section{Gleichmässige Stetigkeit}
 Sei $f:\Omega\to\R$ eine stetige Funktion auf $\Omega$, d.h.
 \[\forall {x_0} \in \Omega ,\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \R :\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
-\todo[inline]{Begin big rounded parenthesis}
-$f$ ist nicht stetig auf $\Omega\Leftrightarrow\exists x_0\in\Omega,\exists\varepsilon>0,\forall>0,\exists\in\Omega:\abs{x-x_0}<\delta\text{ und }\abs{f\left( x\right)-f\left( x_0\right)}\geq\varepsilon$
-\todo[inline]{End big rounded parenthesis}
+\[
+\sbox{\tempbox}{%
+$\displaystyle
+   \Omega\Leftrightarrow\exists x_0\in\Omega,\exists\varepsilon>0,\forall>0,\exists\in\Omega:\abs{x-x_0}<\delta\text{ und }\abs{f\left( x\right)-f\left( x_0\right)}\geq\varepsilon
+$
+}
+\begin{pmatrix}
+\,\parbox[b]{\wd\tempbox}{$f$ ist nicht stetig auf }\hfill\, % left alignment
+\\[\abovedisplayskip]
+\,\usebox{\tempbox}\,
+\vspace{2mm}
+\end{pmatrix}
+\]
 
 \begin{definition}{4.24}
 \underline{Gleichmässig stetig:} \vspace{2mm}\\

@@ -1,6 +1,65 @@
 \chapter{Integration in $\R^{\lowercase{n}}$}
 Im Eindimensionalen hatten wir mit dem Integral \[\int\limits_a^b f(x)dx\] den Flächeninhalt unter dem Graphen von $f$ berechnet. Wir suchen nach einer Verallgemeinerung mit der \todo{can't understand word, page 207 middle} z.B. Volumen unter dem Graphen einer Funktion von zwei Variablen berechnet werden kann.
-\missingfigure{page 207, middle}
+
+
+\begin{multicols}{2}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\shade[top color=black!20,bottom color=black!20,in=-150, out=45] 
+      (0.5,3) to (5.5,4) |- (0.5,0);
+\draw[fill=white,color=white] (0.5,5) -- (1.5,5) -- (1.5,0)--(0.5,0)--cycle;
+\draw[fill=white,color=white] (4.5,5) -- (6,5) -- (6,0)--(4.5,0)--cycle;
+
+\draw[->] (-0.5,0)--(6,0) node [anchor=north]{$x$};;
+\draw[->] (0,-0.5)--(0,5) node [anchor=east]{$y$};
+\draw [in=-150, out=45] (0.5,3) to (5.5,4);
+\draw[dashed] (1.5,3.58)--(1.5,0) node [anchor=north]{$a$};
+\draw[dashed] (4.5,3.66)--(4.5,0) node [anchor=north]{$b$};
+\draw (3,1.8) node {$A=\int\limits^a_b f(x)dx$};
+\end{tikzpicture}
+\end{center}
+\columnbreak
+\begin{center}
+\begin{tikzpicture}[scale=0.65]
+		\node [] (0) at (0, 0) {};
+		\node [] (1) at (5.75, 3.25) {};
+		\node [] (2) at (6, -4) {};
+		\node [] (3) at (0, 5) {};
+		\node [] (4) at (2, -1) {};
+		\node [] (5) at (4, 1.5) {};
+		\node [] (6) at (5, -1.5) {};
+		\node [] (7) at (7, 1) {};
+		\node [] (8) at (2, 2) {};
+		\node [] (9) at (4, 4.5) {};
+		\node [] (10) at (7, 3.5) {};
+		\node [] (11) at (5, 1) {};
+		
+\draw[fill=black!20, color=black!20] (4.center) -- (5.center) -- (7.center) -- (6.center)-- cycle;
+
+		\draw [->] (0.center) to (3.center);
+		\draw [->] (0.center) to (1.center);
+		\draw [->] (0.center) to (2.center);
+		\draw [] (4.center) to (6.center);
+		\draw [] (4.center) to (5.center);
+		\draw [] (5.center) to (7.center);
+		\draw [] (7.center) to (6.center);
+		\draw [] (4.center) to (8.center);
+		\draw [] (5.center) to (9.center);
+		\draw [] (7.center) to (10.center);
+		\draw [] (6.center) to (11.center);
+		\draw [, bend left] (8.center) to (11.center);
+		\draw [, bend left] (11.center) to (10.center);
+		\draw [, bend right] (10.center) to (9.center);
+		\draw [, bend right=15] (9.center) to (8.center);
+\draw (5.5,0.75) node {$D$};
+\draw (7,4.5) node {$f(x,y)$};
+\draw (3,-4) node {$V=\int\limits_D f(x,y)d\mu$};
+\end{tikzpicture}
+\end{center}
+\end{multicols}
+
+
+
 \underline{Erinnerung:} Das bestimmte Riemann-Integral einer Funktion $f(x)$ über einem Intervall ist $\lbrack a,b\rbrack:$
 \[I=\int\limits_a^b f(x)dx\] Das Integral $I$ war als Grenzwert der Riemannschen Ober- und Untersumme definiert (falls diese Grenzwerte jeweils existieren und übereinstimmten).\\
 
@@ -392,7 +451,21 @@ oder mit Zerlegung in Streifen parallel zur $y-$Achse
 \[\int\limits_D {fd\mu }  = \int\limits_{x = 0}^1 {\left( {\int\limits_{y =  - \sqrt x }^{y = \sqrt x } {f\left( {x,y} \right)dy} } \right)} dx\]
 Manchmal muss man $D$ zerlegen.
 \item Bestimme $\int\limits_D {xdxdy} $ wobei $D$ von $y^2=4x$ und $y=2x-4$ begrenzt wird.
-\missingfigure{Page 225, middle}
+
+\begin{center}
+\begin{tikzpicture}[domain=0:10,scale=0.4]
+\draw plot[id=x,samples=500] function{2*sqrt(x)} node[anchor=west] {$y=2\sqrt{x}$}; 
+\draw plot[id=x,samples=500] function{-2*sqrt(x)} node[anchor=west] {$y=-2\sqrt{x}$};
+\draw[->] (0,-8) -- (0,8) node [anchor=south]{$y$};
+\draw[->] (0,0) -- (11,0) node [anchor=west]{$x$};
+\draw[fill=black] (1,-2) circle (0.15) node [anchor=west]{$~P_1$};
+\draw[fill=black] (4,4) circle (0.15) node [anchor=north]{$~~P_2$};
+\draw plot[domain=-1:6,id=x,samples=50] function{2*x-4};
+\draw (1,3) -- (1,-3);
+\draw (1.5,1.5) node {$D$};
+\end{tikzpicture}
+\end{center}
+
 Schnittpunkte $P_1,P_2$:
 \begin{align*}
 &4x=y^2=\left( 2x-4\right)^2\\
@@ -415,11 +488,80 @@ Wenn wir von aussen nach $y$ integrieren, brauchen wir keine Unterteilung
 \begin{enumerate}
 \item \[\int\limits_0^1 {\int\limits_1^{{e^y}} {f(x,y)dxdy} } \]
 $x=1$ und $x=e^y\Rightarrow y=\ln x \Leftrightarrow 1=\ln x \Leftrightarrow x=e$
-\missingfigure{Page 226.1 middle to top}
+
+\begin{center}
+\begin{tikzpicture}[domain=1:2.71,scale=2.5]
+
+
+\draw[fill=black!20,color=black!20] (1,0)--(1,1) -- (2.71,1) -- cycle;
+\draw[thick, color=white] (1,0) --(2.71,1);
+\draw[fill=white] plot[id=x,samples=100] function{log(x)} node[anchor=west] {$(e,1)$}; 
+\draw[] (1,0)--(1,1) -- (2.71,1);
+\draw[fill=black] (1,0) circle (0.025);
+\draw[fill=black] (1,1) circle (0.025);
+\draw[fill=black] (2.71,1) circle (0.025);
+\draw (1,1) node [anchor=south]{$(1,1)$};
+\draw[->] (0,-0.2) --(0,1.5) node [anchor=south]{$y$};
+\draw[->] (-0.2,0) --(3.5,0) node [anchor=west]{$x$};
+\draw (2.1,0.4) node [anchor=west]{$x=e^y$};
+\draw[dashed] (2.71,0)--(2.71,1);
+\draw (2.71,0) node [anchor=north]{$e$};
+\draw (1,0) node [anchor=north]{$x=1$};
+\draw[dashed] (0,1)--(1,1);
+\draw (0,1) node [anchor=east]{$1$};
+\draw[->] (1.8,0.5) --(2.1,0.4);
+\end{tikzpicture}
+\end{center}
+
 \[\int\limits_1^e {\int\limits_{y = \log x}^{y = 1} {f(x,y)dydx} } \]
-\missingfigure{Page 226.1 middle to bottom}
+
+\begin{center}
+\begin{tikzpicture}[domain=1:2.71,scale=2.5]
+
+
+\draw[fill=black!20,color=black!20] (1,0)--(1,1) -- (2.71,1) -- cycle;
+\draw[thick, color=white] (1,0) --(2.71,1);
+\draw[fill=white] plot[id=x,samples=100] function{log(x)} node[anchor=west] {$(e,1)$}; 
+\draw[] (1,0)--(1,1) -- (2.71,1);
+\draw[fill=black] (1,0) circle (0.025);
+\draw[fill=black] (1,1) circle (0.025);
+\draw[fill=black] (2.71,1) circle (0.025);
+\draw (1,1) node [anchor=south]{$(1,1)$};
+\draw[->] (0,-0.2) --(0,1.5) node [anchor=south]{$y$};
+\draw[->] (-0.2,0) --(3.5,0) node [anchor=west]{$x$};
+\draw (2,0.4) node [anchor=west]{$y=\log(x)$};
+\draw[dashed] (2.71,0)--(2.71,1);
+\draw (2.71,0) node [anchor=north]{$e$};
+\draw (1,0) node [anchor=north]{$x=1$};
+\draw[dashed] (0,1)--(1,1);
+\draw (0,1) node [anchor=east]{$1$};
+\draw[->] (1.8,0.5) --(2,0.4);
+\end{tikzpicture}
+\end{center}
+
 \item Berechne \[\int\limits_0^1 {\int\limits_x^1 {{e^{{y^2}}}dydx} } \] Man kann das Integral $\int\limits_a^b {{e^{{y^2}}}dydx} $ nicht direkt berechnen, weil man kein explizit Stammfunktion für $e^{y^2}$ finden kann. Man kann sich die Reihenfolge der Zerlegung beliebig heraussuchen damit die Rechnung möglichst einfach wird. 
-\missingfigure{Page 226.2 middle to top}
+
+\begin{center}
+\begin{tikzpicture}[scale=2.5]
+\draw[fill=black!20,color=black!20] (0,0)--(1,1)--(0,1)--cycle;
+\draw[fill=white,color=white] (0,0)--(1,0)--(1,0.3) -- (0,0.3)--cycle;
+\draw[] (0,0)--(1,1)--(0,1);
+\draw[->] (-0.1,0) -- (1.5,0) node [anchor=west]{$x$};
+\draw[->] (0,-0.1) -- (0,1.25) node [anchor=south]{$y$};
+
+\draw [dashed] (1,0)--(1,1) node [anchor=west]{$y=x$};
+\draw[fill=black] (1,1) circle (0.025);
+\draw[fill=black] (0,0) circle (0.025);
+\draw[fill=black] (0,1) circle (0.025);
+
+\draw (1,0) node [anchor=north]{1};
+\draw (-0.1,0) node [anchor=north]{0};
+
+\draw (0.35,0.75) node[] {$D$};
+\draw (0,1) node[anchor=east] {$y=1$};
+\end{tikzpicture}
+\end{center}
+
 \begin{align*}\int\limits_{x = 0}^{x = 1} {\int\limits_{y = x}^{y = 1} {{e^{{y^2}}}dydx} }  &= \int\limits_{y = 0}^{y = 1} {\int\limits_{x = 0}^{x = y} {{e^{{y^2}}}dxdy} } \\ &= \int\limits_0^1 {\left[ {\left. {x{e^{{y^2}}}} \right|_{x = 0}^{x = y}} \right]} dy\\ &= \int\limits_0^1 {y{e^{{y^2}}}dy}  = \left. {\frac{{{e^{{y^2}}}}}{2}} \right|_0^1 = \frac{1}{2}\left( {e - 1} \right)\end{align*}
 \end{enumerate}
 
@@ -427,7 +569,26 @@ $x=1$ und $x=e^y\Rightarrow y=\ln x \Leftrightarrow 1=\ln x \Leftrightarrow x=e$
 \begin{enumerate}
 \item Das Integral \[A = \int\limits_D {1d\mu } \] ergibt die Fläche von $D$. Für einen Normalbereich bzgl. der $x-$Achse erhalten wir daraus die bekannte Formel
 \[A = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {1dydx} }  = \int\limits_a^b {\left( {h(x) - g(x)} \right)dx} \]
-\missingfigure{Page 226, bottom}
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\shade[top color=black!20,bottom color=black!20,in=-150, out=45] 
+      (0.5,3) to (5.5,4) |- (0.5,0);
+\shade[top color=white,bottom color=white,in=140, out=-15] 
+      (0.45,1) to (5.55,2) |- (0.5,0);
+
+\draw[->] (-0.5,0)--(6,0) node [anchor=north]{$x$};;
+\draw[->] (0,-0.5)--(0,5) node [anchor=east]{$y$};
+\draw [in=-150, out=45] (0.5,3) to (5.5,4);
+\draw [in=140, out=-15] (0.5,1) to (5.5,2);
+\draw[dashed] (0.5,3)--(0.5,0) node [anchor=north]{$a$};
+\draw[dashed] (5.5,4)--(5.5,0) node [anchor=north]{$b$};
+\draw (5.5,2) node [anchor=west]{$g(x)$};
+\draw (5.5,4) node [anchor=west]{$h(x)$};
+\draw (3,2.75) node []{$D$};
+\end{tikzpicture}
+\end{center}
+
 \item Interpretiert man $\rho(x,y)$ als ortabhängige Flächendichte, so erhält man mit \[m = \int\limits_D {\rho \left( {x,y} \right)d\mu } \] die Masse von $D$
 \end{enumerate}
 
@@ -466,7 +627,27 @@ Das Bild des Einheitsquadrats/-würfels unter der linearen Abbildung
 \vec x&\to A\vec x\hspace{5mm}A\in\R^{n\times n}
 \end{align*}
 ist ein Parallelogramm mit Fläche $\left| \det A\right|$
-\missingfigure{Page 231, top}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\draw[fill=black!20,color=black!20] (0,0) --(0,4) --(4,4) --(4,0)--cycle;
+\draw[fill=black!20,color=black!20] (10,0) --(12,4) --(16,6) --(14,2)--cycle;
+\draw[->] (-0.5,0)--(5,0);
+\draw[->] (0,-0.5)--(0,5);
+\draw[->,very thick] (0,0)--(0,4) node [anchor=east]{$e_2$};
+\draw[->,very thick] (0,0)--(4,0) node [anchor=north]{$e_1$};
+\draw[->] (5,3) parabola bend(7,3.5) (9,3);
+\draw (7,3.5) node [anchor=south]{$A$};
+
+\draw[->] (10-0.5,0)--(10+5,0);
+\draw[->] (10+0,-0.5)--(10+0,5);
+\draw[->,very thick] (10+0,0)--(10+2,4) node [anchor=east]{$Ae_2$};
+\draw[->,very thick] (10+0,0)--(10+4,2) node [anchor=north]{$Ae_1$};
+\draw (13,2.5) node [anchor=south]{$\left| \det A\right|$};
+
+\end{tikzpicture}
+\end{center}
+
 Dies bleibt wahr, wenn man zur affin-linearen Abbildung $\Phi\left(\vec{x}\right)=A\vec a+\vec b$ betrachtet, es kommt ja nur ein Verschiebung dazu
 \missingfigure{Page 231 bottom}
 Nun betrachten wir eine differenzierbare nichtlineare Transformation $\Phi:\R^n \to\R^n$. Dann gilt, zumindest nahe eines festen Punktes $\vec x\in\R^n$:
@@ -598,7 +779,7 @@ und wir möchten dieses Kraftfeldes entlang der im Gegenuhrzeigersinn durchlaufe
 =&-2\cdot\text{(Flächeninhalt von Ellipse $4x^2+y^2=4$)}\\
 \end{align*}
 \todo[inline]{Can't understand the result, page 242 top}
-\missingfigure{Page 242, top}
+\missingfigure{Page 243, bottom}
 \item Berechne das Wegintegral \[\int\limits_{\partial \Omega } {\left( {5 - xy - {y^2}} \right)dx - \left( {2xy - {x^2}} \right)dy} \] wobei $\Omega$ das Quadrat mit Eckpunkten $(0,0),(0,1),(1,1),(1,0)$ im Gegenuhrzeigersinn ist
 \begin{align*}
 &\int\limits_{\partial A} {\left( {5 - xy - {y^2}} \right)dx - \left( {2xy - {x^2}} \right)dy} \\
