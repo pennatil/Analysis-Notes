@@ -274,7 +274,7 @@ d.h. das Integral von $f$ über $Q$ kann iterativ durch $1-$dimensionale Integra
 \draw [](4.31,0.62) -- (0.31,0.62);
 \end{tikzpicture}
 \end{center}
-In der Skizze ergibt sch als Volumen der markierten Schicht bei festem $x$ und sehr kleinen Dicke $dx$ näherungsweise das Volumen \[\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx\] Das Aufaddieren sämtlicher Schichtvolumen entspricht gerade der Integration über die Variable $x$, d.h. für das gesuchte Volumen gilt \[V = \int\limits_a^b {\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx} \]
+In der Skizze ergibt sich als Volumen der markierten Schicht bei festem $x$ und sehr kleinen Dicke $dx$ näherungsweise das Volumen \[\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx\] Das Aufaddieren sämtlicher Schichtvolumen entspricht gerade der Integration über die Variable $x$, d.h. für das gesuchte Volumen gilt \[V = \int\limits_a^b {\left( {\int\limits_c^d {f\left( {x,y} \right)dy} } \right)dx} \]
 Bis jetzt können wir nur Integrale über achsenparallel rechteckige bzw. quaderförmige Bereiche berechnen.\\
 
 Das reicht für viele praktische Aufgaben nicht aus. Meist ist der Integrationsbereich $D$ verbogen oder zumindest anders begrenzt.
@@ -562,7 +562,11 @@ $x=1$ und $x=e^y\Rightarrow y=\ln x \Leftrightarrow 1=\ln x \Leftrightarrow x=e$
 \end{tikzpicture}
 \end{center}
 
-\begin{align*}\int\limits_{x = 0}^{x = 1} {\int\limits_{y = x}^{y = 1} {{e^{{y^2}}}dydx} }  &= \int\limits_{y = 0}^{y = 1} {\int\limits_{x = 0}^{x = y} {{e^{{y^2}}}dxdy} } \\ &= \int\limits_0^1 {\left[ {\left. {x{e^{{y^2}}}} \right|_{x = 0}^{x = y}} \right]} dy\\ &= \int\limits_0^1 {y{e^{{y^2}}}dy}  = \left. {\frac{{{e^{{y^2}}}}}{2}} \right|_0^1 = \frac{1}{2}\left( {e - 1} \right)\end{align*}
+\begin{align*}
+\int\limits_{x = 0}^{x = 1} {\int\limits_{y = x}^{y = 1} {{e^{{y^2}}}dydx} }  &= \int\limits_{y = 0}^{y = 1} {\int\limits_{x = 0}^{x = y} {{e^{{y^2}}}dxdy} } \\
+ &= \int\limits_0^1 {\left[ {\left. {x{e^{{y^2}}}} \right|_{x = 0}^{x = y}} \right]} dy\\
+ &= \int\limits_0^1 {y{e^{{y^2}}}dy}  = \left. {\frac{{{e^{{y^2}}}}}{2}} \right|_0^1 = \frac{1}{2}\left( {e - 1} \right)
+\end{align*}
 \end{enumerate}
 
 \subsubsection*{Bemerkung 9.13}
