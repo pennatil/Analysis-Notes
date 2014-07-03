@@ -34,7 +34,7 @@ mv mainMult9.pdf "../../PDF/Work in Progress/Kapitel 9 - Integration in R^n - An
 
 
 { # your 'try' block
-    growlnotify "Finished Generating Chapter Files"  -m "They can be found in the Output folder"
+    growlnotify "Finished Generating Chapter Files"  -m "They can be found in the PDF folder"
 } || {
-	echo -e "\n\n#### FINISHED GENERATING CHAPTER FILES, CAN BE FOUND IN THE OUTPUT FOLDER ####\n\n"
+	echo -e "\n\n#### FINISHED GENERATING CHAPTER FILES, CAN BE FOUND IN THE PDF FOLDER ####\n\n"
 }
