@@ -15,9 +15,9 @@ rm -f *.out *.log *.aux *.toc *.synctex *.x.gnuplot *.x.table
 mkdir -p "../../PDF/Work in Progress"
 mv main.pdf "../../PDF/Work in Progress/Notizen - Analysis I&II.pdf"
 { # your 'try' block
-    growlnotify "Finished Generating Main"  -m "Can be found in the Output folder"
+    growlnotify "Finished Generating Main"  -m "Can be found in the PDF folder"
 } || {
-	echo -e "\n\n#### FINISHED GENERATING MAIN, CAN BE FOUND IN THE OUTPUT FOLDER ####\n\n"
+	echo -e "\n\n#### FINISHED GENERATING MAIN, CAN BE FOUND IN THE PDF FOLDER ####\n\n"
 }
 
 
