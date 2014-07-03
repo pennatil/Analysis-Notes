@@ -95,7 +95,7 @@ This is only recommended to people with experience with LaTex, since the files m
 		3. If it is the first time that you run this script, type <code>sudo chmod 755 nameOfScript.sh</code> (Where <code>nameOfScript.sh</code> is either <code>BuildAll.sh</code> or <code>BuildChapterByChapter.sh</code>. This command grants permission to the script to run)
 		4. Afterwards, type <code>./nameOfScript.sh</code> and press enter.
 		5. Wait until the process is done.
-		6. You will find a folder called "Output" inside the Notes folder, with the output file(s).
+		6. You will find a folder called "PDF" inside the Notes folder, with the output file(s).
 
 Disclaimer
 ==========
