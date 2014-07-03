@@ -388,12 +388,12 @@ Jeder Vektor $x=\left(x_1,\dots,x_n \right)\in\R$ besitzt eine eindeutige Darste
 \end{definition}
 
 \begin{definition}{2.17}
-Die Norm $\left|\left| x\right|\right|$ eines Vektors ist: \[\norm{x} := \sqrt{<x,x>}=\sqrt{\sum\limits_{i = 1}^n {{x_{i}^{2}}}}\] und wird oft als Länge interpretiert.
+Die Norm $\norm{ x}$ eines Vektors ist: \[\norm{x} := \sqrt{<x,x>}=\sqrt{\sum\limits_{i = 1}^n {{x_{i}^{2}}}}\] und wird oft als Länge interpretiert.
 \subsubsection*{Beispiel 2.18}
 \begin{itemize}
     \item
 
-$\left|\left|(1,2)\right|\right|=\sqrt{1+4}$
+$\norm{(1,2)}=\sqrt{1+4}$
 
 
 \begin{center}
@@ -427,7 +427,7 @@ $\left|\left|(1,2)\right|\right|=\sqrt{1+4}$
 
 
 
-    \item $\left|\left|(1,1,1)\right|\right|=\sqrt{3}$
+    \item $\norm{(1,1,1)}=\sqrt{3}$
 \begin{center}
 \begin{tikzpicture}[scale=1,smooth,
                         line cap=round,line join=round]
@@ -465,30 +465,30 @@ $\left|\left|(1,2)\right|\right|=\sqrt{1+4}$
     \end{tikzpicture}
 \end{center}
 
-    \item $\left|\left|e_i\right|\right|=1$, $<e_i,e_j>=0$. $e_i \perp e_j$\\
+    \item $\norm{e_i}=1$, $<e_i,e_j>=0$. $e_i \perp e_j$\\
 $\{e_1,e_2,\dots,e_n\}$ ist eine orthonormale Basis. Die Vektoren einer orthogonalen Basis sind orthogonal zueinander und normiert (die Länge ist gleich 1).
 \end{itemize}
 \end{definition}
 Die erste wichtige Eigenschaft des Skalaprodukts ist
 \subsubsection*{Satz 2.19 (Cauchy-Schwarz)}
-$\forall x,y\in\R^n$ gilt $\left| <x,y>\right| \leq \left|\left| x\right|\right| \left|\left| y\right|\right|$ und \[\left| <x,y>\right|=\left|\left| x\right|\right| \left|\left| y\right|\right|\Leftrightarrow \exists\lambda\in\R: x=\lambda y\Leftrightarrow \text{die Vektoren sind parallel zueinander}\]
+$\forall x,y\in\R^n$ gilt $\left| <x,y>\right| \leq \norm{ x} \norm{ y}$ und \[\left| <x,y>\right|=\norm{ x} \norm{ y}\Leftrightarrow \exists\lambda\in\R: x=\lambda y\Leftrightarrow \text{die Vektoren sind parallel zueinander}\]
 
 Die Euklidische Norm hat die Eigenschaften
 \subsubsection*{Satz 2.20}
 \begin{itemize}
-    \item $\left|\left| \alpha x\right|\right|=\left|\alpha\right|\left|\left| x\right|\right|$ (Homogenität)
-    \item $\left|\left| x+y\right|\right| \leq \left|\left| x\right|\right| + \left|\left| y\right|\right|$ (Dreiecksungleichung)
+    \item $\norm{ \alpha x}=\left|\alpha\right|\norm{ x}$ (Homogenität)
+    \item $\norm{ x+y} \leq \norm{ x} + \norm{ y}$ (Dreiecksungleichung)
 \end{itemize}
 
 \subsubsection*{Beweis}
 \begin{itemize}
     \item ASK FOR BEWEIS \todo{ASK FOR BEWEIS}
-    \item \[{\left|\left| x+y\right|\right|}^2=<x+y,x+y>\]
+    \item \[{\norm{ x+y}}^2=<x+y,x+y>\]
 \[=<x,x+y>+<y,x+y>\]
 \[<x,x>+<x,y>+<y,x>+<y,y>\]
 \[<x,x>+2<x,y>+<y,y>\]
-\[\leq {\left|\left| x \right|\right|}^2 + 2|<x,y>| + {\left|\left| y \right|\right|}^2\]
-\[\leq {\left|\left| x \right|\right|}^2 + 2{\left|\left| y \right|\right|}  {\left|\left| x \right|\right|} + {\left|\left| x \right|\right|}^2 = (||x|| \: ||y||)^2\]
+\[\leq {\norm{ x }}^2 + 2|<x,y>| + {\norm{ y }}^2\]
+\[\leq {\norm{ x }}^2 + 2{\norm{ y }}  {\norm{ x }} + {\norm{ x }}^2 = (||x|| \: ||y||)^2\]
 \end{itemize}
 
 \section{Die Komplexen Zahlen}
@@ -527,20 +527,20 @@ In den Rechnungen lässt man oft das 1 in $x\cdot 1$ fallen und schreibt $z=x+yi
 \item Im $z:=y$ heisst der Imaginärteil
 \end{itemize}
 \item Die zu: $z=x+iy$ konjugierte Zahl ist $\overline{z}=x-iy$
-\item Wir definieren die Norm von $z$ als $\left|\left| z\right|\right|=\sqrt{x^2+y^2}$
+\item Wir definieren die Norm von $z$ als $\norm{ z}=\sqrt{x^2+y^2}$
 \end{enumerate}
 \end{definition}
 \subsubsection*{Satz 2.23}
 \begin{enumerate}[\indent (i)]
 \item $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$
 \item $\overline{z_1\cdot z_2}=\overline{z_1}\cdot\overline{z_2}$
-\item $z\cdot\overline{z}={\left|\left| z\right|\right|}^2\cdot 1$
-\item ${\left|\left| z_1\cdot z_2\right|\right|}={\left|\left| z_1\right|\right|}\cdot{\left|\left| z_2\right|\right|}$
+\item $z\cdot\overline{z}={\norm{ z}}^2\cdot 1$
+\item ${\norm{ z_1\cdot z_2}}={\norm{ z_1}}\cdot{\norm{ z_2}}$
 \end{enumerate}
 \subsubsection*{Beweis}
 ASK FOR BEWEIS \todo{ASK FOR BEWEIS}
 \subsubsection*{Abkürzung}
-$\left| z\right| := \left|\left| z \right|\right|$
+$\left| z\right| := \norm{ z }$
 \subsubsection*{Bemerkung 2.24}
 Wir können $\R$ in $\mathbb{C}$ ``einbetten'' mittels $\R\ni x\to (x,0)\in\mathbb{C}$. Sei $\mathbb{C}_0=\{ (x,y)\in\mathbb{C}\mid y=0 \}=\{ (x,0)\mid x\in\R\}$. Die Abbildung $f:\R\to\mathbb{C}_0$, $x\to (x,0)$ist eine Bijektion.\\
 
