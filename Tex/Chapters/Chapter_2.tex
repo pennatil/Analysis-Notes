@@ -154,20 +154,20 @@ Dann gilt $a\leq b$ $\forall a\in A$ $b\in B$. Aber ein $c\in\mathbb{Q}$, mit $a
 Wir definieren jetzt für $x,y\in\R$ \[\max \{ x,y\}  = \left\{ {\begin{array}{*{20}{c}}
 {x\text{ falls }y \le x}\\
 {y\text{ falls }x \le y}
-\end{array}} \right.\] Insbesondere ist der Absolutbetrag einer Zahl $x\in\R, \left| x \right|$ \[\left| x \right|:\max \{x,-x\}\] Für diesen gilt folgender wichtiger Satz
+\end{array}} \right.\] Insbesondere ist der Absolutbetrag einer Zahl $x\in\R, \abs{ x }$ \[\abs{ x }:\max \{x,-x\}\] Für diesen gilt folgender wichtiger Satz
 \subsubsection*{Satz 2.7}
 \begin{enumerate}[i)]
-\item $\left| {x + y} \right| \le \left| x \right| + \left| y \right|$ (Dreiecksungleichung)
-\item $\left| {xy} \right| = \left| x \right|\left| y \right|$
+\item $\abs{ {x + y} } \le \abs{ x } + \abs{ y }$ (Dreiecksungleichung)
+\item $\abs{ {xy} } = \abs{ x }\abs{ y }$
 \end{enumerate}
 \subsubsection*{Beweis 2.7}
 \begin{enumerate}[i)]
-\item $x \le \left| x \right|, - x \le \left| x \right|$\\$y \le \left| y \right|, - y \le \left| y \right|$\\und $x+y\leq  \left| x \right| +  \left| y \right|, - (x + y) \le \left| x \right| + \left| y \right|$ \\ woraus $\left| {x + y} \right| \le \left| x \right| + \left| y \right|$ folgt
+\item $x \le \abs{ x }, - x \le \abs{ x }$\\$y \le \abs{ y }, - y \le \abs{ y }$\\und $x+y\leq  \abs{ x } +  \abs{ y }, - (x + y) \le \abs{ x } + \abs{ y }$ \\ woraus $\abs{ {x + y} } \le \abs{ x } + \abs{ y }$ folgt
 \item ASK FOR BEWEIS\todo{ASK FOR BEWEIS}
 \end{enumerate}
 
 \subsubsection*{Satz (Youngsche Ungleichung)}
-Für alle $a,b\in\R$, $\delta >0$ gilt $2\left| {ab} \right| \le \delta {a^2} + \frac{{{b^2}}}{\delta }$
+Für alle $a,b\in\R$, $\delta >0$ gilt $2\abs{ {ab} } \le \delta {a^2} + \frac{{{b^2}}}{\delta }$
 \end{enumerate}
 
 \section{Infimum und Supremum}
@@ -471,12 +471,12 @@ $\{e_1,e_2,\dots,e_n\}$ ist eine orthonormale Basis. Die Vektoren einer orthogon
 \end{definition}
 Die erste wichtige Eigenschaft des Skalaprodukts ist
 \subsubsection*{Satz 2.19 (Cauchy-Schwarz)}
-$\forall x,y\in\R^n$ gilt $\left| <x,y>\right| \leq \norm{ x} \norm{ y}$ und \[\left| <x,y>\right|=\norm{ x} \norm{ y}\Leftrightarrow \exists\lambda\in\R: x=\lambda y\Leftrightarrow \text{die Vektoren sind parallel zueinander}\]
+$\forall x,y\in\R^n$ gilt $\abs{ <x,y>} \leq \norm{ x} \norm{ y}$ und \[\abs{ <x,y>}=\norm{ x} \norm{ y}\Leftrightarrow \exists\lambda\in\R: x=\lambda y\Leftrightarrow \text{die Vektoren sind parallel zueinander}\]
 
 Die Euklidische Norm hat die Eigenschaften
 \subsubsection*{Satz 2.20}
 \begin{itemize}
-    \item $\norm{ \alpha x}=\left|\alpha\right|\norm{ x}$ (Homogenität)
+    \item $\norm{ \alpha x}=\abs{\alpha}\norm{ x}$ (Homogenität)
     \item $\norm{ x+y} \leq \norm{ x} + \norm{ y}$ (Dreiecksungleichung)
 \end{itemize}
 
@@ -540,7 +540,7 @@ In den Rechnungen lässt man oft das 1 in $x\cdot 1$ fallen und schreibt $z=x+yi
 \subsubsection*{Beweis}
 ASK FOR BEWEIS \todo{ASK FOR BEWEIS}
 \subsubsection*{Abkürzung}
-$\left| z\right| := \norm{ z }$
+$\abs{ z} := \norm{ z }$
 \subsubsection*{Bemerkung 2.24}
 Wir können $\R$ in $\mathbb{C}$ ``einbetten'' mittels $\R\ni x\to (x,0)\in\mathbb{C}$. Sei $\mathbb{C}_0=\{ (x,y)\in\mathbb{C}\mid y=0 \}=\{ (x,0)\mid x\in\R\}$. Die Abbildung $f:\R\to\mathbb{C}_0$, $x\to (x,0)$ist eine Bijektion.\\
 
@@ -569,14 +569,14 @@ Als Polarkoordinaten in der Ebene führen wir $(r,\phi)$ ein
 \begin{align*}
 x&=r\cos\phi\hspace{5mm} y=r\sin\phi\\
 z&=r\left( \cos\phi + i\sin\phi\right)\\
-r&=\left| z\right|
+r&=\abs{ z}
 \end{align*}
 \null\vfill
 \end{multicols}
 
 
 \begin{definition}{}
-Wir definieren (nach Euler)\[e^{i\phi}:=\cos\phi+ i\sin\phi\]\[z=re^{i\phi}=\left| z\right|e^{i\phi}\]
+Wir definieren (nach Euler)\[e^{i\phi}:=\cos\phi+ i\sin\phi\]\[z=re^{i\phi}=\abs{ z}e^{i\phi}\]
 \end{definition}
 \todo{Where does the definition end??}
 
@@ -609,7 +609,7 @@ Für beliebiges $z=x+iy\not=0$ gilt also:\\
 \node[anchor=west,scale=0.7] at (1.7,1.157){$\cos\phi + i\sin\phi$};
  \draw [domain=0:35] plot ({cos(\x)}, {sin(\x)});
 \node[anchor=west,scale=0.7] at (0.5,0.25){$\phi$};
-\node[anchor=west,scale=0.7] at (5,0.25){$r=\left| z\right|$};
+\node[anchor=west,scale=0.7] at (5,0.25){$r=\abs{ z}$};
 \node[anchor=west,scale=0.7] at (5,-0.25){$\phi=\arg z$ - Das Argument von z};
 \end{tikzpicture}
 \end{center}
@@ -630,9 +630,9 @@ Die polare Darstellung ist in Berechnungen sehr nützlich, insbesondere um das P
 \[\frac{\left(\sqrt{3}-i\right)^3}{(1+i)^2}=\frac{\omega^3}{z^4}=\frac{8e^{-i\frac{\pi}{2}}}{4e^{i\pi}}=2e^{-\frac{3\pi}{2}i}=2e^{\frac{\pi}{2}i}=2i\]\\
 
 Die Polarform ist auch sehr nützlich um die Wurzel einer komplexen Zahl zu berechnen. Sei $\omega\in\mathbb{C}$, $n\in\mathbb{N}$. Wir möchten die Gleichung $z^n=\omega$ lösen.
-\[\omega=\left|\omega\right| e^{i\phi}\]
-\[z^n=\omega=\left|\omega\right| e^{i\theta}=\left| \omega\right| e^{i(\theta +2k\pi}\]
-\[\Rightarrow z=\left| \omega\right|^\frac{1}{n}e^{i\frac{\left(\theta + 2k\pi\right)}{n}}\]
+\[\omega=\abs{\omega} e^{i\phi}\]
+\[z^n=\omega=\abs{\omega} e^{i\theta}=\abs{ \omega} e^{i(\theta +2k\pi}\]
+\[\Rightarrow z=\abs{ \omega}^\frac{1}{n}e^{i\frac{\left(\theta + 2k\pi\right)}{n}}\]
 
 \subsubsection*{Beispiel}
 \[z^3=1\Rightarrow z^3=\left( e^{2\pi i k}\right)^\frac{1}{3} \in \{e^{i\pi\frac{2k}{3}}: k=0,1,2\} = \{1,e^{2i\frac{\pi}{3}},e^{4i\frac{\pi}{3}} \}\]

@@ -18,12 +18,12 @@ z.B. $d=2,a_1=1,a_2=\frac{3}{2},a_3=\frac{17}{12},a_4=\dots$
 \end{enumerate}
 
 \begin{definition}{3.3}
-Eine Folge $(a_n)_{n\geq 1}$ heisst beschränkt, falls die Teilmenge $\{a_n:n\geq 1\}\subseteq\R$ beschränkt ist. d.h. es gibt $c\in\R (c\geq 0)$, so dass $\left| a_n\right| \leq c, \forall n\geq 1$
+Eine Folge $(a_n)_{n\geq 1}$ heisst beschränkt, falls die Teilmenge $\{a_n:n\geq 1\}\subseteq\R$ beschränkt ist. d.h. es gibt $c\in\R (c\geq 0)$, so dass $\abs{ a_n} \leq c, \forall n\geq 1$
 \end{definition}
 
 \section{Grenzwert oder Limes eine Folge. Ein zentraler Begriff}
 \begin{definition}{3.4}
-Eine Folge $(a_n)\geq 1$ konvergiert gegen $a$ wenn es für jedes $\varepsilon>0$ einen Index $N(\varepsilon)\geq 1$ gibt, so dass \[  \left| a_n-a\right| <\varepsilon, \forall n>N(\varepsilon)\]
+Eine Folge $(a_n)\geq 1$ konvergiert gegen $a$ wenn es für jedes $\varepsilon>0$ einen Index $N(\varepsilon)\geq 1$ gibt, so dass \[  \abs{ a_n-a} <\varepsilon, \forall n>N(\varepsilon)\]
 \end{definition}
 
 \begin{definition}{3.4 (Version 2)}Eine Folge $(a_n)_{n\geq 1}$ konvergiert gegen $a\in\R$, falls für jedes $\varepsilon>0$ die Menge der Indizes $n\geq 1$ für welcher $a_n\not\in (a-\varepsilon,a+\varepsilon)$ endlich ist.\\
@@ -34,9 +34,9 @@ Eine Folge $(a_n)\geq 1$ konvergiert gegen $a$ wenn es für jedes $\varepsilon>0
 \subsection*{Äquivalenz beider Definitionen}\todo{Is this supposed to be a title?}
 \begin{enumerate}
 
-\item[(2)] $\Rightarrow(1)$ \\Sei für  $\varepsilon>0$ \[M(\varepsilon):=\{ n\in\N\mid a_n\not\in (a-\varepsilon,a+\varepsilon)\}=\{n\in\N\mid \left| a_n-a \right|\geq \varepsilon\}\]
-Da $M(\varepsilon)$ endlich ist, ist es nach oben beschränkt. Es  gibt also $N(\varepsilon)\in\N$, so dass $\forall n\in M(\varepsilon)$, $n\leq N(\varepsilon)-1$. Insbesondere gilt $\forall n\geq N(\varepsilon)$, $n\not\in M(\varepsilon)$ und daher $\left| a_n-a\right|<\varepsilon$.
-\item[(1)] $\Rightarrow(2)$ \[M(\varepsilon)=\{ n:\left| a_n-a\right| \geq \varepsilon\} \subset \left[ 0,N(\varepsilon)-1 \right]\] Also endlich.
+\item[(2)] $\Rightarrow(1)$ \\Sei für  $\varepsilon>0$ \[M(\varepsilon):=\{ n\in\N\mid a_n\not\in (a-\varepsilon,a+\varepsilon)\}=\{n\in\N\mid \abs{ a_n-a }\geq \varepsilon\}\]
+Da $M(\varepsilon)$ endlich ist, ist es nach oben beschränkt. Es  gibt also $N(\varepsilon)\in\N$, so dass $\forall n\in M(\varepsilon)$, $n\leq N(\varepsilon)-1$. Insbesondere gilt $\forall n\geq N(\varepsilon)$, $n\not\in M(\varepsilon)$ und daher $\abs{ a_n-a}<\varepsilon$.
+\item[(1)] $\Rightarrow(2)$ \[M(\varepsilon)=\{ n:\abs{ a_n-a} \geq \varepsilon\} \subset \left[ 0,N(\varepsilon)-1 \right]\] Also endlich.
 \end{enumerate}
 
 \noindent Falls die Eigenschaften in Definition 3.4 zutrifft, schreibt man\[a = \mathop {\lim }\limits_{n \to \infty } {a_n}{\text{ oder }}{a_n}\mathop  \to \limits_{n \to \infty } a\] Die Zahl $a$ nennt sich Grenzwert oder Limes der Folge $(a_n)_{n\geq 1}$. Eine Folge heisst konvergent falls sie einen Limes besitzt, andernfalls heisst sie divergent.
@@ -45,14 +45,14 @@ Da $M(\varepsilon)$ endlich ist, ist es nach oben beschränkt. Es  gibt also $N(
 \begin{enumerate}
 \item Falls $(a_n)_{n\geq 1}$ konvergiert, ist der Limes eindeutig bestimmt
 \subsubsection*{Beweis}
-Seien $a$ und $b$ Grenzwerte von $(a_n)_{n\geq 1}$. Sei $\varepsilon = \left| \frac{b-a}{3}\right|>0$, dann gibt es $N_1,N_2$, so dass \[\left| a_n-a\right| <\varepsilon\hspace{10mm}\forall n>N_1\]\[\left| a_n-b\right| <\varepsilon\hspace{10mm}\forall n>N_2\]
-Also $\forall n\geq \max\{ N_1,N_2\}$ \[(a-b)\cong\left| (a-a_n)+(a_n-b)\right| < 2\varepsilon=\frac{2}{3}\left|b-a\right|\]
+Seien $a$ und $b$ Grenzwerte von $(a_n)_{n\geq 1}$. Sei $\varepsilon = \abs{ \frac{b-a}{3}}>0$, dann gibt es $N_1,N_2$, so dass \[\abs{ a_n-a} <\varepsilon\hspace{10mm}\forall n>N_1\]\[\abs{ a_n-b} <\varepsilon\hspace{10mm}\forall n>N_2\]
+Also $\forall n\geq \max\{ N_1,N_2\}$ \[(a-b)\cong\abs{ (a-a_n)+(a_n-b)} < 2\varepsilon=\frac{2}{3}\abs{b-a}\]
 \subsection*{Binomischer Lehrsatz}
 Für beliebige Zahlen $a,b$ und $n\in\N$ ist \[{\left( {a + b} \right)^n} = \sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}
 n\\
 k
 \end{array}} \right){a^{n - k}}{b^k}} \]
-\item Falls $(a_n)_{n\geq 1}$ konvergent ist, $\{a_n:n\geq 1\}$ beschränkt: Sei $\varepsilon=1$, $\lim a_n=a$ und $N_0$ mit \[\left| a_n-a\right| \leq 1\hspace{10mm} \forall n>N_0\] Dann ist $\forall n$ $\left| a_n\right| \geq \max\{\left| a\right| +1,\left| a_j\right|, 1\leq j\leq N_0  \}$
+\item Falls $(a_n)_{n\geq 1}$ konvergent ist, $\{a_n:n\geq 1\}$ beschränkt: Sei $\varepsilon=1$, $\lim a_n=a$ und $N_0$ mit \[\abs{ a_n-a} \leq 1\hspace{10mm} \forall n>N_0\] Dann ist $\forall n$ $\abs{ a_n} \geq \max\{\abs{ a} +1,\abs{ a_j}, 1\leq j\leq N_0  \}$
 \end{enumerate}
 \subsubsection*{Beispiel 3.6}
 \begin{enumerate}
@@ -60,7 +60,7 @@ k
 \begin{itemize}
 \item Sei $\varepsilon>0$. Dann $\frac{1}{\varepsilon}>0$. Sei $n_0\in\N$, $n_0\geq 1$ mit $n_0>\frac{1}{\varepsilon}$ (Archimedische Eigenschaft, Satz 2.13)\\
 \end{itemize}
-Dann gilt für alle $n\geq n_0$, $\frac{1}{\varepsilon}<n_0\leq n \Rightarrow \left| \frac{1}{n}-0\right| = \frac{1}{n}<\varepsilon, \forall n\geq n_0$
+Dann gilt für alle $n\geq n_0$, $\frac{1}{\varepsilon}<n_0\leq n \Rightarrow \abs{ \frac{1}{n}-0} = \frac{1}{n}<\varepsilon, \forall n\geq n_0$
 \item Sei $0<q<1$ und $a_n:=q^n$, $n 1$\todo{Cannot read, page 54 top}. Dann gilt $\lim a_n=0$ ($a_n$ konvergiert gegen 0)
 \subsubsection*{Beweis}
 Zu beweisen \[\forall \varepsilon > 0, \exists N_0=N_0(\varepsilon)\in N\]\todo{Should it be $\in\R$??}\[\forall n\geq N_0:q^n <\varepsilon\]
@@ -90,7 +90,7 @@ n\\
 
 Setzen wir $N_0:=\left( 1+\frac{2}{\varepsilon^2}\right)+1$. Dann gilt für $\forall n>N_0$ \[(1+\varepsilon)^n > n \geq 1\]
 \[\Rightarrow 1\leq \sqrt[n]{n}\leq 1+\varepsilon\]
-\[\Rightarrow -\varepsilon<0\leq\sqrt[n]{n}-1\leq\varepsilon\Rightarrow \left| \sqrt[n]{n}-1\right| <\varepsilon, \forall n>N_0\]
+\[\Rightarrow -\varepsilon<0\leq\sqrt[n]{n}-1\leq\varepsilon\Rightarrow \abs{ \sqrt[n]{n}-1} <\varepsilon, \forall n>N_0\]
 \item Nicht alle Folgen sind konvergent. Es gibt zwei verschiedene Verhältnisse einer divergenten Folge \[a_n=(-1)^n \Rightarrow \{1,-1,\dots \}\text{ beschränkt aber nicht konvergent}\]
 \item $a_n=n$ unbeschränkt, divergent.
 \end{enumerate}
@@ -124,29 +124,29 @@ Seien $\left( a_n\right)_{n\geq 1}$ und $\left( b_n\right)_{n\geq 1}$ konvergent
 \begin{beweis}{}
 Sei $\varepsilon >0$, es gibt  $N_1(\varepsilon)$, $N_2(\varepsilon)$, so dass
 \begin{align*}
-\left| a_n-a\right|&<\varepsilon, \forall n>N_1(\varepsilon)\\
-\left| b_n-b\right|&<\varepsilon, \forall n>N_2(\varepsilon)
+\abs{ a_n-a}&<\varepsilon, \forall n>N_1(\varepsilon)\\
+\abs{ b_n-b}&<\varepsilon, \forall n>N_2(\varepsilon)
 \end{align*}
 \begin{enumerate}[\hspace{2mm}i)]
-\item Für $n\geq\max\left\{ N_1(\varepsilon),N_2(\varepsilon)\right\}$ gilt \[\left| {\left( {{a_n} + {b_n}} \right) - \left( {a + b} \right)} \right| \le \left| {{a_n} - a} \right| + \left| {{b_n} - b} \right|\]
+\item Für $n\geq\max\left\{ N_1(\varepsilon),N_2(\varepsilon)\right\}$ gilt \[\abs{ {\left( {{a_n} + {b_n}} \right) - \left( {a + b} \right)} } \le \abs{ {{a_n} - a} } + \abs{ {{b_n} - b} }\]
 Da dies für alle $\varepsilon>0<2\varepsilon$ gilt, folgt auch, dass
 \[\forall n > \max \left\{ {{N_1}\left( {\frac{\varepsilon }{2}} \right),{N_2}\left( {\frac{\varepsilon }{2}} \right)} \right\}: = N(\varepsilon )\]
-gilt \[\left| a_n+b_n-(a+b)\right| <\varepsilon\]
-\item Sei $C$ eine Schranke für $\left\{ \left|b_n\right| : n\geq 1\right\}$ (Bemerkung 3.5: Falls $\left( a_n\right)_{n\geq 1}$ konvergent ist, ist $\left\{b_n : n\geq 1\right\}$ beschränkt). Für $N_1(\varepsilon)$, $N_2(\varepsilon)$ wie oben folgt $\forall n\geq\max\left\{ N_1(\varepsilon), N_2(\varepsilon)\right\}$
+gilt \[\abs{ a_n+b_n-(a+b)} <\varepsilon\]
+\item Sei $C$ eine Schranke für $\left\{ \abs{b_n} : n\geq 1\right\}$ (Bemerkung 3.5: Falls $\left( a_n\right)_{n\geq 1}$ konvergent ist, ist $\left\{b_n : n\geq 1\right\}$ beschränkt). Für $N_1(\varepsilon)$, $N_2(\varepsilon)$ wie oben folgt $\forall n\geq\max\left\{ N_1(\varepsilon), N_2(\varepsilon)\right\}$
 
 \begin{align*}
-\left| {{a_n}{b_n} - ab} \right| =&\left| {{a_n}{b_n} - a{b_n} + a{b_n} - ab} \right|\\
- =&\left| {{b_n}\left( {{a_n} - a} \right) + a\left( {{b_n} - b} \right)} \right|\\
- \le&  \varepsilon \left| {{b_n}} \right| + \left| a \right|\varepsilon  \le \varepsilon \left( {C + \left| a \right|} \right)
+\abs{ {{a_n}{b_n} - ab} } =&\abs{ {{a_n}{b_n} - a{b_n} + a{b_n} - ab} }\\
+ =&\abs{ {{b_n}\left( {{a_n} - a} \right) + a\left( {{b_n} - b} \right)} }\\
+ \le&  \varepsilon \abs{ {{b_n}} } + \abs{ a }\varepsilon  \le \varepsilon \left( {C + \abs{ a }} \right)
 \end{align*}
 
-Also folgt aus \[\forall n \ge N(\varepsilon ): = \max \left( {{N_1}\left( {\frac{\varepsilon }{{C + \left| a \right|}}} \right),{N_2}\left( {\frac{\varepsilon }{{\left| C \right| + a}}} \right)} \right)\],dass $\left| a_nb_n-ab\right| < \varepsilon$
+Also folgt aus \[\forall n \ge N(\varepsilon ): = \max \left( {{N_1}\left( {\frac{\varepsilon }{{C + \abs{ a }}}} \right),{N_2}\left( {\frac{\varepsilon }{{\abs{ C } + a}}} \right)} \right)\],dass $\abs{ a_nb_n-ab} < \varepsilon$
 \item Wegen (ii) genügt es, den Fall $a=a_n=1$, $\forall n\in\N$ zu betrachten
-\[\left| {{b_n}} \right| = \left| {{b_n} - b + b} \right| \ge \left| b \right| - \left| {{b_n} - b} \right| \ge \left| b \right| - \varepsilon \]
-Sei $0 < \varepsilon < \frac{\left| b\right|}{2}$, dann gilt $\left| b_n\right| > \frac{\left| b\right|}{2}$. Es folgt
+\[\abs{ {{b_n}} } = \abs{ {{b_n} - b + b} } \ge \abs{ b } - \abs{ {{b_n} - b} } \ge \abs{ b } - \varepsilon \]
+Sei $0 < \varepsilon < \frac{\abs{ b}}{2}$, dann gilt $\abs{ b_n} > \frac{\abs{ b}}{2}$. Es folgt
 
-\[\left| {\frac{1}{{{b_n}}} - \frac{1}{b}} \right| = \left| {\frac{{{b_n} - b}}{{{b_n}b}}} \right| < \frac{2}{{{{\left| b \right|}^2}}}\left| {{b_n} - b} \right| \le \frac{2}{{{{\left| b \right|}^2}}}\varepsilon \hspace{10mm}\forall n > {n_0}(\varepsilon )\]
-Also folgt $\forall n > N(\varepsilon):=n_0\left( \frac{\varepsilon\left| b\right|^2}{2}\right)$ dass $\left| \frac{1}{b_n}-\frac{1}{b}\right| < \varepsilon$
+\[\abs{ {\frac{1}{{{b_n}}} - \frac{1}{b}} } = \abs{ {\frac{{{b_n} - b}}{{{b_n}b}}} } < \frac{2}{{{{\abs{ b }}^2}}}\abs{ {{b_n} - b} } \le \frac{2}{{{{\abs{ b }}^2}}}\varepsilon \hspace{10mm}\forall n > {n_0}(\varepsilon )\]
+Also folgt $\forall n > N(\varepsilon):=n_0\left( \frac{\varepsilon\abs{ b}^2}{2}\right)$ dass $\abs{ \frac{1}{b_n}-\frac{1}{b}} < \varepsilon$
 \item (Indirekter Beweis) Falls $a>b$, $a-b>0$. Sei
 \begin{align*}
 \varepsilon&:= \frac{a-b}{2}>0\\
@@ -184,7 +184,7 @@ Folgender Satz illustriert das, er benützt das Vollständigkeitsaxiom
 Wir behaupten, dass: $a = \mathop {\lim }\limits_{n \to \infty } {a_n}$. Sei $\varepsilon>0$, dann ist $a-\varepsilon$ keine obere Schranke und deswegen gibt es $n(\varepsilon)\geq 1$ mit $a_{n(\varepsilon)}>a-c$. Aus der Monotonität folgt
 \[a_n>a_{n(\varepsilon)} > a-c\hspace{5mm}\forall n>n(\varepsilon)\]
 und damit folgt
-\[ \left| a_n-a\right| < \varepsilon\hspace{5mm}\forall n> n(\varepsilon)\]
+\[ \abs{ a_n-a} < \varepsilon\hspace{5mm}\forall n> n(\varepsilon)\]
 \item Ähnlich.
 \end{enumerate}
 \end{beweis}
@@ -286,7 +286,7 @@ $a\in\R$ ist Häufungspunkt von $\left( a_n\right)_{n\geq 1}$ falls es eine gege
 \todo[inline]{Looks like there is no number 2, removed list in its entirety, page 71 middle to top}
 $a_n=(-1)^n$ hat +1 und -1 als Häufungspunkte. Wir werden jetzt die Menge der Häufungspunkte einer Folge $\left( a_n\right)_{n\geq 1}$ näher studieren und insbesondere zeigen, dass sie für beschränkte Folgen nicht leer ist. \\
 
-Sei $\left( a_n\right)_{n\geq 1}$ beschränkt und $C$ eine obere Schranke für $\{ \left| a_n\right| : n\geq 1\}$. Für jedes $k\geq 1$ ist die Menge
+Sei $\left( a_n\right)_{n\geq 1}$ beschränkt und $C$ eine obere Schranke für $\{ \abs{ a_n} : n\geq 1\}$. Für jedes $k\geq 1$ ist die Menge
 \[A_k:=\left\{ a_n:n\geq k\right\} = \left\{ a_k,a_{k+1},\dots\right\} \] beschränkt und zudem gilt \[A_{k+1}\subset A_k\text{, }\forall k\geq 1\]
 Sei also
 \begin{itemize}
@@ -331,16 +331,16 @@ und
 \[
 M_{l(n-1)+1}-\frac{1}{n}\leq a_{l(n)}\leq M_{l(n-1)+1}\tag{\text{\textasteriskcentered}}
 \]
-\[ \left| M_{l(n-1)+1}-a_{l(n)}\right| < \frac{1}{n}\]
+\[ \abs{ M_{l(n-1)+1}-a_{l(n)}} < \frac{1}{n}\]
 Dann ist $l(n)$ strikt monoton steigend und
-\[ \left| a_{l(n)} -M_{l(n-1)+1}\right|\leq\frac{1}{n}\]
+\[ \abs{ a_{l(n)} -M_{l(n-1)+1}}\leq\frac{1}{n}\]
 Sei nun $\varepsilon > 0$ und $n(\varepsilon)$ so gewählt, dass $\frac{1}{n(\varepsilon)}<\frac{\varepsilon}{2}$ und
 \[a-\frac{\varepsilon}{2}\leq M_{l\left( n(\varepsilon)-1\right) +1}\leq a+\frac{\varepsilon}{2} \]
-($a=\lim M_k$: d.h. $\forall\varepsilon>0$, $\exists N(\varepsilon)$, so dass $\left| M_n -a\right| < \frac{\varepsilon}{2}$ $\forall n > N(\varepsilon)$). Dann gilt $\forall n > n(\varepsilon):\frac{1}{n}<\frac{\varepsilon}{2}$
-\[\left| M_{l(n-1)+1} - a\right| < \frac{\varepsilon}{2}\tag{\text{\textasteriskcentered\textasteriskcentered}}\]
+($a=\lim M_k$: d.h. $\forall\varepsilon>0$, $\exists N(\varepsilon)$, so dass $\abs{ M_n -a} < \frac{\varepsilon}{2}$ $\forall n > N(\varepsilon)$). Dann gilt $\forall n > n(\varepsilon):\frac{1}{n}<\frac{\varepsilon}{2}$
+\[\abs{ M_{l(n-1)+1} - a} < \frac{\varepsilon}{2}\tag{\text{\textasteriskcentered\textasteriskcentered}}\]
 und
-\[\left| M_{l(n-1)+1} - a_{l(n)}\right| < \frac{1}{n}< \frac{\varepsilon}{2}\tag{\text{\textasteriskcentered}}\]
-(\textasteriskcentered) und (\textasteriskcentered\textasteriskcentered) $\Rightarrow\left| a_{l(n)}-a\right| < \varepsilon$ d.h. $\lim a_{l(n)}=a.$
+\[\abs{ M_{l(n-1)+1} - a_{l(n)}} < \frac{1}{n}< \frac{\varepsilon}{2}\tag{\text{\textasteriskcentered}}\]
+(\textasteriskcentered) und (\textasteriskcentered\textasteriskcentered) $\Rightarrow\abs{ a_{l(n)}-a} < \varepsilon$ d.h. $\lim a_{l(n)}=a.$
 \end{beweis}
 Wir schliessen aus Lemma 3.16 den folgenden wichtigen Satz
 \subsubsection*{Satz 3.18 (Bolzano - Weierstrass)}
@@ -433,14 +433,14 @@ $g_+:=\lim\sup g_n$ und $g_-:=\lim\inf g_n$ sind Häufungspunkte, d.h. es gibt T
 \section{Cauchy-Kriterium}
 \todo[inline]{Chapter numbering is, according to the handwritten notes, wrong. WHich one is the correct one??}
 \subsubsection*{Frage}
-Wie sieht man allgemein, ob eine Folge konvergiert? Sei $\left( a_n\right)_{n\geq 1}$ konvergent mit $\lim a_n=a$. Also gibt es zu jedem $\varepsilon>0$, $n(\varepsilon)$ mit $\left| a_n-a\right|<\varepsilon$ $\forall n\geq n(\varepsilon)$ .\\
+Wie sieht man allgemein, ob eine Folge konvergiert? Sei $\left( a_n\right)_{n\geq 1}$ konvergent mit $\lim a_n=a$. Also gibt es zu jedem $\varepsilon>0$, $n(\varepsilon)$ mit $\abs{ a_n-a}<\varepsilon$ $\forall n\geq n(\varepsilon)$ .\\
 Daraus folgt, dass $\forall n,m\geq n(\varepsilon)$
 \begin{align*}
-\left|a_n-a_m\right|&= \left| a_n-a+a-a_m\right|\\
-&\leq \left| a_n-a \right|+\left| a_m-a\right| < 2\varepsilon
+\abs{a_n-a_m}&= \abs{ a_n-a+a-a_m}\\
+&\leq \abs{ a_n-a }+\abs{ a_m-a} < 2\varepsilon
 \end{align*}
 \begin{definition}{3.21}
-$\left( a_n\right)_{n\geq 1}$ ist eine Cauchy-Folge falls für $\varepsilon>0$ ein $n(\varepsilon)\geq 1$ gibt, so dass $\left| a_n-a_m\right|<\varepsilon$, $\forall n,m\geq n(\varepsilon)$
+$\left( a_n\right)_{n\geq 1}$ ist eine Cauchy-Folge falls für $\varepsilon>0$ ein $n(\varepsilon)\geq 1$ gibt, so dass $\abs{ a_n-a_m}<\varepsilon$, $\forall n,m\geq n(\varepsilon)$
 \end{definition}
 Wir haben gesehen, dass
 \[ \left( a_n\right) \text{ konvergiert }\Rightarrow\left( a_n\right) \text{ Cauchy}\]
@@ -464,24 +464,24 @@ Sei $\left( a_n\right)_{n\geq 1}\subset\R$ eine Folge. Die folgenden Aussagen si
 \end{enumerate}
 Sei $\lim a_{l(n)}=a$, $\left( a_n\right)$ Cauchy.
 \begin{align*}
-\left|a_n-a\right|&= \left| a_n-a_{l(n)}+a_{l(n)}-a\right|\\
-&\leq \left| a_n-a_{l(n)} \right|+\left| a_{l(n)}-a\right| < 2\varepsilon
+\abs{a_n-a}&= \abs{ a_n-a_{l(n)}+a_{l(n)}-a}\\
+&\leq \abs{ a_n-a_{l(n)} }+\abs{ a_{l(n)}-a} < 2\varepsilon
 \end{align*}
 
 \begin{enumerate}[I)]
-\item $\left(a_n\right)$ ist beschränkt: Sei $\varepsilon=1$. Sei $n(1)$, so dass $\left| a_n-a_m\right|<1$, $\forall n,m\geq n(1)$, insbesondere $\left| a_n-a_m\right|<1$. Woraus $\left| a_n\right| < a_{n(1)}+1$, $\forall n\geq n(1)$ folgt und somit $\forall n\geq 1$
-\[\left| {{a_n}} \right| \le \max \left\{ {\left| {{a_1}} \right|, \ldots ,\left| {{a_{n(1)}}} \right|,\left| {{a_{n(1)}}} \right| + 1} \right\}\]
+\item $\left(a_n\right)$ ist beschränkt: Sei $\varepsilon=1$. Sei $n(1)$, so dass $\abs{ a_n-a_m}<1$, $\forall n,m\geq n(1)$, insbesondere $\abs{ a_n-a_m}<1$. Woraus $\abs{ a_n} < a_{n(1)}+1$, $\forall n\geq n(1)$ folgt und somit $\forall n\geq 1$
+\[\abs{ {{a_n}} } \le \max \left\{ {\abs{ {{a_1}} }, \ldots ,\abs{ {{a_{n(1)}}} },\abs{ {{a_{n(1)}}} } + 1} \right\}\]
 d.h. $\left( a_n\right)$ ist beschränkt
 \item Sei $a$ ein Häufungspunkt von $\left( a_n\right)$ (Bolzano - Weierstrass) und $l:\N\to\N$ strikt monoton mit
 \[\mathop {\lim }\limits_{n \to \infty } {a_{l(n)}} = a\hspace{10mm}\left( {{\text{Bem.: }}l(n) \ge n} \right)\]
 \end{enumerate}
 Sei $\varepsilon>0$ und $n_0(\varepsilon)$, so dass
-\[\left| {{a_{l(n)}} - a} \right| < \varepsilon \hspace{10mm}\forall n > {n_0}(\varepsilon )\]
+\[\abs{ {{a_{l(n)}} - a} } < \varepsilon \hspace{10mm}\forall n > {n_0}(\varepsilon )\]
 Sowie $n_1(\varepsilon)$ mit \\\todo{Can't understand, page 83 bottom}
 
 $\forall n \ge \max \left\{ {{n_0}(\varepsilon ),{n_1}(\varepsilon )} \right\}$ gilt:
 \begin{align*}
-\left| {{a_n} - a} \right| &\le \left| {{a_n} - {a_{l(n)}}} \right| + \left| {{a_{l(n)}} - a} \right|\\
+\abs{ {{a_n} - a} } &\le \abs{ {{a_n} - {a_{l(n)}}} } + \abs{ {{a_{l(n)}} - a} }\\
 &\le \varepsilon  + \varepsilon  = 2\varepsilon
 \end{align*}
 \[ \Rightarrow \lim a_n=a\Rightarrow \left( a_n\right) \text{ konvergiert}\]
@@ -513,7 +513,7 @@ $\forall k\in\N$
 \[\frac{1}{2} = {b_2} < {b_4} \ldots  < {b_{2k - 2}} < {b_{2k}} < {b_{2k - 1}} < ?? < {b_1} = 1\]
 \todo[inline]{Check question marks right above, page 85 bottom}
 Die Teilfolgen $\left( b_{2k}\right)_{k\in\N}$, $\left( b_{2k+1}\right)_{k\in\N}$ konvergiert nach Satz 3.9 (Satz der monotonen Konvergenz). Da
-\[\forall n \in\N:\left| {{b_n} - {b_{n + 1}}} \right| = \frac{1}{{n + 1}}\]
+\[\forall n \in\N:\abs{ {{b_n} - {b_{n + 1}}} } = \frac{1}{{n + 1}}\]
 haben sie zudem denselben Limes und $\left( b_n\right)_{n\in\N}$ konvergiert nach Satz 3.19 (analog wie in Beispiel 3.20)
 \end{enumerate}
 
@@ -595,10 +595,10 @@ Dazu brauchen wir folgendes geometrisches Lemma:
 \todo{limenet: above beweis is finished too early, IMO}
 \subsubsection*{Lemma 3.29}
 $\forall x=\left( x^1,x^2,\dots,x^d\right) \in\R^d$ gilt
-\[\mathop {\max }\limits_{1 \le i \le d} \left| {{x^i}} \right| \le \mathop {\left\| x \right\|}\limits_{\begin{array}{*{20}{c}}
+\[\mathop {\max }\limits_{1 \le i \le d} \abs{ {{x^i}} } \le \mathop {\left\| x \right\|}\limits_{\begin{array}{*{20}{c}}
  \Downarrow \\
-{\sqrt {\sum {{{\left| {{x^i}} \right|}^2}} } }
-\end{array}}  \le \sqrt d \mathop {\max }\limits_{1 \le i \le d} \left| {{x^i}} \right|\]
+{\sqrt {\sum {{{\abs{ {{x^i}} }}^2}} } }
+\end{array}}  \le \sqrt d \mathop {\max }\limits_{1 \le i \le d} \abs{ {{x^i}} }\]
 
 \begin{center}
 \begin{tikzpicture}[scale=0.91]
@@ -621,8 +621,8 @@ $\forall x=\left( x^1,x^2,\dots,x^d\right) \in\R^d$ gilt
 
 \begin{beweis}{von Satz 3.28}
 \begin{enumerate}[align=left]
-\item[(i)$\Rightarrow$(ii)]Folgt aus der Ungleichung $\left| {a_n^{(i)} - {a^{(i)}}} \right| \le \left\| {{a_n} - a} \right\|$
-\item[(ii)$\Rightarrow$(i)]Sei $a^i=\lim a_n^i$ und $a=\left( a^i\right)_i$. Aus \[\left\| {{a_n} - a} \right\| \le \sqrt d \mathop {\max }\limits_{1 \le i \le d} \left| {a_n^{(i)} - {a^{(i)}}} \right|\] folgt (i)
+\item[(i)$\Rightarrow$(ii)]Folgt aus der Ungleichung $\abs{ {a_n^{(i)} - {a^{(i)}}} } \le \left\| {{a_n} - a} \right\|$
+\item[(ii)$\Rightarrow$(i)]Sei $a^i=\lim a_n^i$ und $a=\left( a^i\right)_i$. Aus \[\left\| {{a_n} - a} \right\| \le \sqrt d \mathop {\max }\limits_{1 \le i \le d} \abs{ {a_n^{(i)} - {a^{(i)}}} }\] folgt (i)
 \end{enumerate}
 \end{beweis}
 
@@ -693,17 +693,17 @@ Für Reihen gibt es verschiedene praktische Konvergenz-Kriterien. Das erste ergi
 
 \subsubsection*{Satz 3.35 (Cauchy-Kriterium)}
 Die Reihe $\sum\limits_{n = 1}^\infty  {{a_n}} $ konvergiert genau dann, wenn es für jedes $\varepsilon>0$ einen Index $N(\varepsilon)\geq 1$ gibt,, so dass
-\[ \forall n\geq m\geq N(\varepsilon)\hspace{5mm}\left| \sum\limits_{k=m}^n a_k\right|<\varepsilon\]
+\[ \forall n\geq m\geq N(\varepsilon)\hspace{5mm}\abs{ \sum\limits_{k=m}^n a_k}<\varepsilon\]
 
 \begin{beweis}{}
 \todo[inline]{It says Übung, maybe incomplete? page 97 top}
 Die Reihe $\sum\limits_1^\infty  {{a_j}} $ konvergiert genau dann, wenn
-\[\left| {\sum\limits_m^n {{a_j}} } \right| \to 0\hspace{10mm}\forall n \ge m\]
+\[\abs{ {\sum\limits_m^n {{a_j}} } } \to 0\hspace{10mm}\forall n \ge m\]
 $\sum\limits_1^\infty  {{a_j}} $ konv. $\Leftrightarrow S_n=\sum\limits_1^n a_k$ konv. $\Leftrightarrow S_n$ Cauchy $\Rightarrow \forall\varepsilon>0, \exists N(\varepsilon)$ s.d.
-\[\forall n > m > N(\varepsilon)\hspace{10mm}\underbrace {\left| {{S_n} - {S_m}} \right|}_{\sum\limits_m^n {{a_k}} } < \varepsilon \]
+\[\forall n > m > N(\varepsilon)\hspace{10mm}\underbrace {\abs{ {{S_n} - {S_m}} }}_{\sum\limits_m^n {{a_k}} } < \varepsilon \]
 \end{beweis}
 \subsubsection*{Korollar}
-$\sum\limits_{k = 1}^\infty  {{a_k}} $ konvergent $\Rightarrow\left| a_k\right|\to 0$
+$\sum\limits_{k = 1}^\infty  {{a_k}} $ konvergent $\Rightarrow\abs{ a_k}\to 0$
 
 \begin{beweis}{}
 Nehmen wir $m=n$ an in Satz 3.5 (s.\todo{Add Reference. UPDATE: CAN'T FIND SATZ 3.5!!}). Das ist ein notwendiges Kriterium aber nicht ein hinreichendes Kriterium.
@@ -719,16 +719,16 @@ Im folgenden leiten wir aus dem Vergleich mit der geometrischen Reihe verschiede
 \subsubsection*{Satz 3.36}\label{satz3.36}
 Seien $\sum\limits_1^\infty  {{a_k}} $, $\sum\limits_1^\infty  {{b_k}} $ Reihen wobei
 \begin{enumerate}
-\item Es gibt $k_0$, so dass $\left| a_k\right| \leq b_k$, $\forall k > k_0$
+\item Es gibt $k_0$, so dass $\abs{ a_k} \leq b_k$, $\forall k > k_0$
 \item $\sum b_k$ konvergiert
 \end{enumerate}
 Dann konvergiert $\sum\limits_{k = 1}^\infty  {{a_k}} $
 
 \begin{beweis}{}
 Sei $\varepsilon>0$ und $N(\varepsilon) > k_0$, so dass
-\[\sum\limits_{k = m}^n {{b_k}}  = \left| {\sum\limits_{k = m}^n {{b_k}} } \right| \le \varepsilon\hspace{10mm} \forall n,m > N(\varepsilon ) > {k_0}\]
+\[\sum\limits_{k = m}^n {{b_k}}  = \abs{ {\sum\limits_{k = m}^n {{b_k}} } } \le \varepsilon\hspace{10mm} \forall n,m > N(\varepsilon ) > {k_0}\]
 Dann folgt aus 1.
-\[\left| {\sum\limits_{k = m}^n {{a_k}} } \right| \le \sum\limits_{k = m}^n {\left| {{a_k}} \right|}  \le \sum\limits_{k = m}^n {{b_k}}  \le \varepsilon \]
+\[\abs{ {\sum\limits_{k = m}^n {{a_k}} } } \le \sum\limits_{k = m}^n {\abs{ {{a_k}} }}  \le \sum\limits_{k = m}^n {{b_k}}  \le \varepsilon \]
 Der Satz folgt aus dem Cauchy-Kriterium
 \end{beweis}
 \subsubsection*{Beispiel}
@@ -757,45 +757,45 @@ $\sum {\frac{1}{{{{\left( {k + 1} \right)}^2}}}} $ konvergiert.
 Sei $a_k\not=0$, $\forall k\geq 1$
 
 \begin{enumerate}[(i)]
-\item \label{satz3.37}Falls \[\mathop {\lim }\limits_{k \to \infty } \sup \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| < 1\] so ist $\sum a_k$ konvergent
-\item Falls \[\mathop {\lim }\limits_{k \to \infty } \inf \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| > 1\] so ist $\sum a_k$ divergent
+\item \label{satz3.37}Falls \[\mathop {\lim }\limits_{k \to \infty } \sup \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } < 1\] so ist $\sum a_k$ konvergent
+\item Falls \[\mathop {\lim }\limits_{k \to \infty } \inf \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } > 1\] so ist $\sum a_k$ divergent
 \end{enumerate}
 
 \begin{beweis}{}
 \begin{enumerate}[(i)]
-\item Sei ${q_0}: = \lim \sup \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|$ \[\mathop {\lim }\limits_{k \to \infty } \left( {\sup \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|} \right) = \mathop {\lim }\limits_{n \to \infty } \left( {\mathop {\sup }\limits_{k \ge n} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|} \right)\]
+\item Sei ${q_0}: = \lim \sup \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} }$ \[\mathop {\lim }\limits_{k \to \infty } \left( {\sup \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} }} \right) = \mathop {\lim }\limits_{n \to \infty } \left( {\mathop {\sup }\limits_{k \ge n} \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} }} \right)\]
 Wähle $q\in\R$ mit $q_0<q<1$. Dann gilt für genügend grosse $n_0\in\N$
 \begin{align*}
-\forall n \ge {n_0}:&\left| {\mathop {\sup }\limits_{k \ge n} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| - {q_0}} \right| \le \underbrace {\left( {q - {q_0}} \right)}_\varepsilon\\
-{\text{d.h. }}&\text{ }\mathop {\sup }\limits_{k \ge n} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| \le q\hspace{5mm}\forall n \ge {n_0}
+\forall n \ge {n_0}:&\left| {\mathop {\sup }\limits_{k \ge n} \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } - {q_0}} \right| \le \underbrace {\left( {q - {q_0}} \right)}_\varepsilon\\
+{\text{d.h. }}&\text{ }\mathop {\sup }\limits_{k \ge n} \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } \le q\hspace{5mm}\forall n \ge {n_0}
 \end{align*}
 Insbesondere bei der Wahl von $n=n_0$
-\[\forall k \ge {n_0}\hspace{10mm}\left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| \le q\]
+\[\forall k \ge {n_0}\hspace{10mm}\abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } \le q\]
 Es folgt für $k\geq n_0$ die Abschätzung
 \begin{align*}
-\left| {{a_k}} \right|&= \left| {\frac{{{a_k}}}{{{a_{k - 1}}}} \cdot \frac{{{a_{k - 1}}}}{{{a_{k - 2}}}} \cdot  \ldots  \cdot \frac{{{a_{{n_0} + 1}}}}{{{a_{{n_0}}}}} \cdot {a_{{n_0}}}} \right|\\
-&\le {q^{k - {n_0}}}\left| {{a_{{n_0}}}} \right| = \underbrace {{q^n}\left| {{a_{{n_0}}}} \right|}_C{q^k} = C{q^k}
+\abs{ {{a_k}} }&= \abs{ {\frac{{{a_k}}}{{{a_{k - 1}}}} \cdot \frac{{{a_{k - 1}}}}{{{a_{k - 2}}}} \cdot  \ldots  \cdot \frac{{{a_{{n_0} + 1}}}}{{{a_{{n_0}}}}} \cdot {a_{{n_0}}}} }\\
+&\le {q^{k - {n_0}}}\abs{ {{a_{{n_0}}}} } = \underbrace {{q^n}\abs{ {{a_{{n_0}}}} }}_C{q^k} = C{q^k}
 \end{align*}
-Wir können nun $b_k=Cq^k$ setzen und Satz 3.36 (s.~\pageref{satz3.36}) anwenden. Da $\sum b_k$ konvergiert (da $\left| q\right| < 1$), konvergiert $\sum a_k$.
+Wir können nun $b_k=Cq^k$ setzen und Satz 3.36 (s.~\pageref{satz3.36}) anwenden. Da $\sum b_k$ konvergiert (da $\abs{ q} < 1$), konvergiert $\sum a_k$.
 \item Sei
-\[{q_0}: = \mathop {\lim }\limits_{k \to \infty } \inf \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| = \mathop {\lim }\limits_{n \to \infty } \mathop {\inf }\limits_{k \ge n} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|\]
-(falls es existiert). Wähle $q\in\R$ mit $q_0>q>1$. Dann existiert $n_0$ mit \[\forall k > {n_0}:\left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| > \mathop {\inf }\limits_{k > {n_0}} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| \ge q\]
+\[{q_0}: = \mathop {\lim }\limits_{k \to \infty } \inf \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } = \mathop {\lim }\limits_{n \to \infty } \mathop {\inf }\limits_{k \ge n} \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} }\]
+(falls es existiert). Wähle $q\in\R$ mit $q_0>q>1$. Dann existiert $n_0$ mit \[\forall k > {n_0}:\abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } > \mathop {\inf }\limits_{k > {n_0}} \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } \ge q\]
 \[\left( \begin{array}{l}
-\hspace{4mm}\left| {\mathop {\inf }\limits_{k \ge n} \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| - {q_0}} \right| < \underbrace {q - {q_0}}_\varepsilon \hspace{4mm}\forall k > {n_0}\\
- \Rightarrow  - {q_0} + q < \inf \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| - {q_0}\hspace{5mm}\forall k > {n_0}
+\hspace{4mm}\left| {\mathop {\inf }\limits_{k \ge n} \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } - {q_0}} \right| < \underbrace {q - {q_0}}_\varepsilon \hspace{4mm}\forall k > {n_0}\\
+ \Rightarrow  - {q_0} + q < \inf \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } - {q_0}\hspace{5mm}\forall k > {n_0}
 \end{array} \right)\]
 Dann folgt analog wie in (i), dass
 \begin{align*}
-\left| {{a_k}} \right|&= \left| {\frac{{{a_k}}}{{{a_{k - 1}}}} \cdot \frac{{{a_{k - 1}}}}{{{a_{k - 2}}}} \cdot  \ldots  \cdot \frac{{{a_{{n_0} + 1}}}}{{{a_{{n_0}}}}} \cdot {a_{{n_0}}}} \right|\\
-&> {q^{k - {n_0}}}\left| {{a_{{n_0}}}} \right| > C{q^k}, \forall k>k_0
+\abs{ {{a_k}} }&= \abs{ {\frac{{{a_k}}}{{{a_{k - 1}}}} \cdot \frac{{{a_{k - 1}}}}{{{a_{k - 2}}}} \cdot  \ldots  \cdot \frac{{{a_{{n_0} + 1}}}}{{{a_{{n_0}}}}} \cdot {a_{{n_0}}}} }\\
+&> {q^{k - {n_0}}}\abs{ {{a_{{n_0}}}} } > C{q^k}, \forall k>k_0
 \end{align*}
-Insbesondere ist $\left\{ {\left| {{a_k}} \right|:k \ge 1} \right\}$ nicht beschränkt $\Rightarrow$ $\lim a_k\not\to 0\Rightarrow\sum a_k$ divergent.\\
-Falls $\lim \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|$ existiert, dann \[\lim \inf \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| = \lim \sup \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| = \lim \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| = L\]
+Insbesondere ist $\left\{ {\abs{ {{a_k}} }:k \ge 1} \right\}$ nicht beschränkt $\Rightarrow$ $\lim a_k\not\to 0\Rightarrow\sum a_k$ divergent.\\
+Falls $\lim \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} }$ existiert, dann \[\lim \inf \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } = \lim \sup \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } = \lim \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } = L\]
 \end{enumerate}
 \end{beweis}
 
 \subsubsection*{Satz 3.36'}
-Sei $a_k\not=0$, $\forall k\in\N$ und sei $L = \mathop {\lim }\limits_{k \to \infty } \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right|$
+Sei $a_k\not=0$, $\forall k\in\N$ und sei $L = \mathop {\lim }\limits_{k \to \infty } \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} }$
 \begin{enumerate}[(i)]
 \item Falls $L<1$, so ist $\sum a_k$ konvergent
 \item Falls $L>1$, so ist $\sum a_k$ divergent
@@ -805,18 +805,18 @@ Sei $a_k\not=0$, $\forall k\in\N$ und sei $L = \mathop {\lim }\limits_{k \to \in
 \begin{enumerate}
 \item $\sum\limits_1^\infty  {\frac{{n!}}{{{n^n}}}} $ konvergiert. Da
 \begin{align*}
-\left| {\frac{{(n + 1)!}}{{{{\left( {n + 1} \right)}^{n + 1}}}} \cdot \frac{{{n^n}}}{{n!}}} \right|&= \left( {n + 1} \right) \cdot \frac{{{n^n}}}{{{{\left( {n + 1} \right)}^{n + 1}}}} = {\left( {\frac{n}{{n + 1}}} \right)^n}\\
+\abs{ {\frac{{(n + 1)!}}{{{{\left( {n + 1} \right)}^{n + 1}}}} \cdot \frac{{{n^n}}}{{n!}}} }&= \left( {n + 1} \right) \cdot \frac{{{n^n}}}{{{{\left( {n + 1} \right)}^{n + 1}}}} = {\left( {\frac{n}{{n + 1}}} \right)^n}\\
 &={\left( {\frac{1}{{1 + \frac{1}{n}}}} \right)^n} \to \frac{1}{e} < 1
 \end{align*}
 Insbesondere $\frac{n!}{n^n}\to 0$ falls $n\to\infty$, d.h. $n^n$ wächst schneller als $n!$ (schon gesehen). \todo{Maybe add where?? page 104 top}
-\item Wir haben schon gesehen, dass $\sum\frac{1}{n^2}$ konvergiert. Aber Quotientenkriterium gibt keine Information, dass \[\left| {\frac{{{a_{n + 1}}}}{{{a_n}}}} \right| = \left| {\frac{{{{\left( {n + 1} \right)}^2}}}{{{n^2}}}} \right| \to 1\]
-\item Wir haben auch schon gesehen dass $\sum\frac{1}{n}$ divergiert. In diesem fall auch \[\left| {\frac{{{a_{n + 1}}}}{{{a_n}}}} \right| = {\frac{{{{ {k + 1} }}}}{{{k}}}}  \to 1\] d.h. das Quotientenkriterium ist nicht anwendbar.
+\item Wir haben schon gesehen, dass $\sum\frac{1}{n^2}$ konvergiert. Aber Quotientenkriterium gibt keine Information, dass \[\abs{ {\frac{{{a_{n + 1}}}}{{{a_n}}}} } = \abs{ {\frac{{{{\left( {n + 1} \right)}^2}}}{{{n^2}}}} } \to 1\]
+\item Wir haben auch schon gesehen dass $\sum\frac{1}{n}$ divergiert. In diesem fall auch \[\abs{ {\frac{{{a_{n + 1}}}}{{{a_n}}}} } = {\frac{{{{ {k + 1} }}}}{{{k}}}}  \to 1\] d.h. das Quotientenkriterium ist nicht anwendbar.
 \item Exponentialreihen
 \[\exp(z):=\sum\limits_{k=0}^\infty\frac{z^k}{k!}\]
 konvergiert für jedes $z\in\C$. Sei $a_k:=\frac{z^k}{k!}$.
 \[\frac{{{a_{k + 1}}}}{{{a_k}}} = \frac{{{z^{k + 1}}}}{{\left( {k + 1} \right)!}} \cdot \frac{{k!}}{{{z^k}}} = \frac{z}{{k + 1}}\]
 Also
-\[\mathop {\lim }\limits_{k \to \infty } \left| {\frac{{{a_{k + 1}}}}{{{a_k}}}} \right| = \mathop {\lim }\limits_{k \to \infty } \left| {\frac{z}{{k + 1}}} \right| = 0 < 1\hspace{5mm}\forall z \in\C \]
+\[\mathop {\lim }\limits_{k \to \infty } \abs{ {\frac{{{a_{k + 1}}}}{{{a_k}}}} } = \mathop {\lim }\limits_{k \to \infty } \abs{ {\frac{z}{{k + 1}}} } = 0 < 1\hspace{5mm}\forall z \in\C \]
 Nach Satz 3.37 (i) (s.~\pageref{satz3.37}) ist $\sum {\frac{{{z^k}}}{{k!}}} $ konvergent. Wir werden darauf züruckkommen.
 \item Bestimme, für welche $z\in\C$ konvergiert \[\sum\limits_{k = 1}^\infty  {\frac{{{z^k}k!}}{{{k^k}}}} \]
 Sei ${a_n} = \frac{{{z^k}k!}}{{{k^k}}}$
@@ -824,7 +824,7 @@ Sei ${a_n} = \frac{{{z^k}k!}}{{{k^k}}}$
 \frac{{{a_{k + 1}}}}{{{a_k}}}&= \frac{{{z^{k + 1}}\left( {k + 1} \right)!}}{{{{\left( {k + 1} \right)}^{k + 1}}}} \cdot \frac{{{k^k}}}{{k!{z^k}}}\\
 &= z\frac{{\left( {k + 1} \right)}}{{\left( {k + 1} \right)}}{\left( {\frac{k}{{k + 1}}} \right)^k} = z\frac{1}{{{{\left( {1 + \frac{1}{k}} \right)}^k}}}
 \end{align*}
-Dann ist $\lim\left|\frac{a_{k+1}}{a_k}\right|=\frac{\abs{z}}{e}$.
+Dann ist $\lim\abs{\frac{a_{k+1}}{a_k}}=\frac{\abs{z}}{e}$.
 Somit folgt die Konvergenz für $\abs{z}<e$ und die Divergenz für $\abs{z}>e$. $\abs{z}<e$ ist der ``Konvergenzkreis'' für $\sum {\frac{{{z^k}k!}}{{{k^k}}}} $
 \end{enumerate}
 Beispiele 4., 5. sind die erste Einführung des Begriffs des Konvergenzkreises. Das Quotientenkriterium versagt, wenn unendlich viele $a_k$ verschwinden oder falls $\lim\abs{\frac{a_{k+1}}{a_k}}=1$
@@ -849,11 +849,11 @@ Sei $\left( c_k\right)_{k\in\N}$ eine Folge in $\R$ oder $\C$. Betrachte die Pot
 \end{definition}
 Mit Satz 3.39 (Wurzelkriterium, s.~\pageref{satz3.39}) erhalten wir die folgende Charakterisierung des Konvergenzbereichs von $p(z)$
 \subsubsection*{Satz 3.40}
-Die Potenzreihe \[p(z): = \sum\limits_{k = 0}^\infty  {{c_k}{z^k}} \] ist konvergent $\forall z\in\C$, mit \[\left| z \right| < \rho : = \frac{1}{{\lim \sup \sqrt[k]{{\left| {{c_k}} \right|}}}} \in \left[ {0,\infty } \right]\] Sie ist divergent für alle $\abs{z}>\rho$\\
+Die Potenzreihe \[p(z): = \sum\limits_{k = 0}^\infty  {{c_k}{z^k}} \] ist konvergent $\forall z\in\C$, mit \[\abs{ z } < \rho : = \frac{1}{{\lim \sup \sqrt[k]{{\abs{ {{c_k}} }}}}} \in \left[ {0,\infty } \right]\] Sie ist divergent für alle $\abs{z}>\rho$\\
 
 \noindent\underline{Konvention:} Falls $\left\{ \sqrt[k]{\abs{c_k}},k>1\right\}$ \underline{nicht} beschränkt ist, setzen wir
-\[\lim \sup \sqrt[k]{{\left| {{c_k}} \right|}} =  + \infty {\text{  und  }}\rho  = 0\]
-Falls $\left\{ \sqrt[k]{\abs{c_k}},k\geq 1\right\}$ beschränkt ist und zudem $\lim \sup \sqrt[k]{{\left| {{c_k}} \right|}} =0$, setzen wir $\rho= +\infty$ d.h. die Reihe $\rho(z)$ konvergiert für alle $z\in\C$.
+\[\lim \sup \sqrt[k]{{\abs{ {{c_k}} }}} =  + \infty {\text{  und  }}\rho  = 0\]
+Falls $\left\{ \sqrt[k]{\abs{c_k}},k\geq 1\right\}$ beschränkt ist und zudem $\lim \sup \sqrt[k]{{\abs{ {{c_k}} }}} =0$, setzen wir $\rho= +\infty$ d.h. die Reihe $\rho(z)$ konvergiert für alle $z\in\C$.
 
 \subsubsection*{Bemerkung}
 Insbesondere ist der Konvergenzbereich von $p(z)$ ein Kreis
@@ -868,21 +868,21 @@ Dann gilt \[\frac{{{c_{k + 1}}{z^{k + 1}}}}{{{c_k}{z^k}}} = \left\{ {\begin{arra
 {zk}&{k{\text{ ungerade}}}
 \end{array}} \right.\]
 \begin{align*}
-\lim \inf \left| {\frac{{{c_{k + 1}}{z^{k + 1}}}}{{{c_k}{z^k}}}} \right|&= \left| z \right|\left( {\lim \inf {a_k}} \right){\text{ mit }}{a_k} = \left\{ {\begin{array}{*{20}{c}}
+\lim \inf \abs{ {\frac{{{c_{k + 1}}{z^{k + 1}}}}{{{c_k}{z^k}}}} }&= \abs{ z }\left( {\lim \inf {a_k}} \right){\text{ mit }}{a_k} = \left\{ {\begin{array}{*{20}{c}}
 {\frac{1}{{(k + 1)}}}\\
 k
 \end{array}} \right.\\
-&= \left| z \right|\mathop {\lim }\limits_k \mathop {\inf }\limits_{n \ge k} {a_n} = 0 < 1
+&= \abs{ z }\mathop {\lim }\limits_k \mathop {\inf }\limits_{n \ge k} {a_n} = 0 < 1
 \end{align*}
 und
-\[\left| z \right|\lim \sup \left| {\frac{{{c_{k + 1}}}}{{{c_k}}}} \right| = \left| z \right|\lim \sup {a_k} = \left| z \right|k\]
+\[\abs{ z }\lim \sup \abs{ {\frac{{{c_{k + 1}}}}{{{c_k}}}} } = \abs{ z }\lim \sup {a_k} = \abs{ z }k\]
 unbeschränkt für $\abs{z}\not=0$. Das Quotientenkriterium gibt also keine Information. Das Wurzelkriterium dagegen gibt
-\[\left| z \right|\sqrt[k]{{\left| {{c_k}} \right|}} = \left| k \right|\left\{ {\begin{array}{*{20}{c}}
+\[\abs{ z }\sqrt[k]{{\abs{ {{c_k}} }}} = \abs{ k }\left\{ {\begin{array}{*{20}{c}}
 1&{k{\text{ gerade}}}\\
 {\frac{1}{{\sqrt[k]{k}}}}&{k{\text{ ungerade}}}
 \end{array}} \right.\]
 Also
-\[\rho  = \lim \sqrt[k]{{\left| {{c_k}} \right|}} = 1{\text{  }}\left( {\mathop {\lim }\limits_{n \to \infty } \sqrt[n]{n} = 1} \right)\]
+\[\rho  = \lim \sqrt[k]{{\abs{ {{c_k}} }}} = 1{\text{  }}\left( {\mathop {\lim }\limits_{n \to \infty } \sqrt[n]{n} = 1} \right)\]
 Somit konvergiert $\sum c_kz^k$ für $\abs{z}<1$ und divergiert für $\abs{z}>1$.
 
 \subsubsection*{Bemerkung}
@@ -892,30 +892,30 @@ Das Wurzelkriterium ist ``stärker'' als das Quotientenkriterium.
 
 \subsubsection*{Lemma }
 Sei $\left( a_n\right) \subset\R$ eine Folge. Dann
-\[\lim \inf \left| {\frac{{{a_{n + 1}}}}{{{a_n}}}} \right|\mathop  \le \limits_{\mycirc{3}} \lim \inf {\left| {{a_n}} \right|^{\frac{1}{n}}}\mathop  \le \limits_{\mycirc{1}} \lim \sup {\left| {{a_n}} \right|^{\frac{1}{n}}}\mathop  \le \limits_{\mycirc{2}} \lim \sup \left| {\frac{{{a_{n + 1}}}}{{{a_n}}}} \right|\]
+\[\lim \inf \abs{ {\frac{{{a_{n + 1}}}}{{{a_n}}}} }\mathop  \le \limits_{\mycirc{3}} \lim \inf {\abs{ {{a_n}} }^{\frac{1}{n}}}\mathop  \le \limits_{\mycirc{1}} \lim \sup {\abs{ {{a_n}} }^{\frac{1}{n}}}\mathop  \le \limits_{\mycirc{2}} \lim \sup \abs{ {\frac{{{a_{n + 1}}}}{{{a_n}}}} }\]
 \begin{beweis}{}
 \begin{enumerate}
-\item $\lim \inf {\left| {{a_n}} \right|^{\frac{1}{n}}} \le \lim \sup {\left| {{a_n}} \right|^{\frac{1}{n}}}$ gilt immer
-\item Sei $\sigma  = \lim \sup \sqrt[n]{{\left| {{a_n}} \right|}}$, ${q_0} = \lim \sup \left| {\frac{{{a_{n + 1}}}}{{{a_n}}}} \right|$. Wir möchten zeigen, dass $\sigma \leq q_0$. Sei $q>q_0$. $\exists n_0$ genügend gross, so dass
-\[\left| {\frac{{{a_{n + 1}}}}{{{a_n}}}} \right| < q\hspace{5mm}\forall n > {n_0}\hspace{5mm}\left(\text{wie im Beweis des Quot. krit}\right)\]
+\item $\lim \inf {\abs{ {{a_n}} }^{\frac{1}{n}}} \le \lim \sup {\abs{ {{a_n}} }^{\frac{1}{n}}}$ gilt immer
+\item Sei $\sigma  = \lim \sup \sqrt[n]{{\abs{ {{a_n}} }}}$, ${q_0} = \lim \sup \abs{ {\frac{{{a_{n + 1}}}}{{{a_n}}}} }$. Wir möchten zeigen, dass $\sigma \leq q_0$. Sei $q>q_0$. $\exists n_0$ genügend gross, so dass
+\[\abs{ {\frac{{{a_{n + 1}}}}{{{a_n}}}} } < q\hspace{5mm}\forall n > {n_0}\hspace{5mm}\left(\text{wie im Beweis des Quot. krit}\right)\]
 Dann
 \begin{align*}
-\left| {{a_{n + k}}} \right| &\le \left| {\frac{{{a_{n + k}}}}{{{a_{n + k - 1}}}}} \right|\left| {\frac{{{a_{n + k - 1}}}}{{{a_{n + k - 2}}}}} \right| \ldots \left| {\frac{{{a_{n + 1}}}}{{{a_n}}}} \right|\left| {{a_n}} \right|\\
- &\le {q^k}\left| {{a_n}} \right| = {q^{n + k}}\frac{{\left| {{a_n}} \right|}}{{{q^n}}}\\
- \Rightarrow \left| {{a_{n + k}}} \right| &\le {q^{n + k}}\left| {\frac{{{a_n}}}{{{q^n}}}} \right|\\
- \Rightarrow a_{n + k}^{\frac{1}{{n + k}}} &\le q{\left| {\frac{{{a_n}}}{{{q^n}}}} \right|^{\frac{1}{{n + k}}}}\hspace{5mm}\forall n \ge {n_0}
+\abs{ {{a_{n + k}}} } &\le \abs{ {\frac{{{a_{n + k}}}}{{{a_{n + k - 1}}}}} }\abs{ {\frac{{{a_{n + k - 1}}}}{{{a_{n + k - 2}}}}} } \ldots \abs{ {\frac{{{a_{n + 1}}}}{{{a_n}}}} }\abs{ {{a_n}} }\\
+ &\le {q^k}\abs{ {{a_n}} } = {q^{n + k}}\frac{{\abs{ {{a_n}} }}}{{{q^n}}}\\
+ \Rightarrow \abs{ {{a_{n + k}}} } &\le {q^{n + k}}\abs{ {\frac{{{a_n}}}{{{q^n}}}} }\\
+ \Rightarrow a_{n + k}^{\frac{1}{{n + k}}} &\le q{\abs{ {\frac{{{a_n}}}{{{q^n}}}} }^{\frac{1}{{n + k}}}}\hspace{5mm}\forall n \ge {n_0}
 \end{align*}
 Für beliebige $n$ ($n$ ist fix), gilt
-\[\mathop {\lim }\limits_{k \to \infty } {\left| {\frac{{{a_n}}}{{{q^n}}}} \right|^{\frac{1}{{n + k}}}} = 1 \Rightarrow \lim \sup a_k^{\frac{1}{k}} \le q \cdot 1 \Rightarrow \sigma  \le q \le {q_0}\]
+\[\mathop {\lim }\limits_{k \to \infty } {\abs{ {\frac{{{a_n}}}{{{q^n}}}} }^{\frac{1}{{n + k}}}} = 1 \Rightarrow \lim \sup a_k^{\frac{1}{k}} \le q \cdot 1 \Rightarrow \sigma  \le q \le {q_0}\]
 \item ASK FOR BEWEIS\todo{Ask for beweis, page 110.2 middle}
 \end{enumerate}
 \end{beweis}
 
 \subsubsection*{Korollar}
 \begin{enumerate}
-\item Wurzelkriterium ist stärker als das Quotientenkriterium, d.h. liefert bei einer Reihe das Quotientenkriterium eine Enstcheidung (d.h. $\lim\sup\left| \frac{a_{n+1}}{a_n}\right|<1$ im Falle der Konvergenz, $\lim\inf\left| \frac{a_{n+1}}{a_n}\right|>1$ im Falle der Divergenz), so liefert auch das Wurzelkriterium eine Entscheidung (d.h. $\lim\sup\sqrt[n]{a_n}<1$ im Fall der Konvergenz, $\lim\inf\sqrt[n]{a_n}>1$ im Fall der Divergenz)
+\item Wurzelkriterium ist stärker als das Quotientenkriterium, d.h. liefert bei einer Reihe das Quotientenkriterium eine Enstcheidung (d.h. $\lim\sup\abs{ \frac{a_{n+1}}{a_n}}<1$ im Falle der Konvergenz, $\lim\inf\abs{ \frac{a_{n+1}}{a_n}}>1$ im Falle der Divergenz), so liefert auch das Wurzelkriterium eine Entscheidung (d.h. $\lim\sup\sqrt[n]{a_n}<1$ im Fall der Konvergenz, $\lim\inf\sqrt[n]{a_n}>1$ im Fall der Divergenz)
 \item Gibt das Wurzelkriterium keine Information $\Rightarrow$ Gibt das Quotientenkriterium keine Information
-\[\left( {\lim \sup \sqrt[n]{{{a_n}}} = 1 \Rightarrow \lim \inf \left| {\frac{{{a_{n + 1}}}}{{{a_n}}}} \right| \le 1} \right)\]
+\[\left( {\lim \sup \sqrt[n]{{{a_n}}} = 1 \Rightarrow \lim \inf \abs{ {\frac{{{a_{n + 1}}}}{{{a_n}}}} } \le 1} \right)\]
 \end{enumerate}
 \noindent\underline{Frage:} Warum benutzen wir Quotientenkriterium?\\
 \noindent\underline{Antwort:} Manchmal ist es einfacher anzuwenden!
@@ -926,7 +926,7 @@ Das Wurzelkriterium liefert eine Entscheidung über die Divergenz auch wenn $\li
 da
 \[\lim \sup \sqrt[n]{{{a_n}}} > 1 \Rightarrow \lim {a_n}\not  = 0\]
 \begin{beweis}{}
-\[\lim \sup \sqrt[n]{{{a_n}}} > 1 \Rightarrow \forall {k_0} \in \N\mathop {\sup }\limits_{k \ge {k_0}} \sqrt[k]{{\left| {{a_k}} \right|}} > 1\]
+\[\lim \sup \sqrt[n]{{{a_n}}} > 1 \Rightarrow \forall {k_0} \in \N\mathop {\sup }\limits_{k \ge {k_0}} \sqrt[k]{{\abs{ {{a_k}} }}} > 1\]
 $\Rightarrow\forall k_0\in\N$ gibt es dann ein $k\geq k_0$ mit $\sqrt[k]{\abs{a_k}}\geq 1\Rightarrow\abs{a_k}\geq 1\Rightarrow\lim a_k\not=0\Rightarrow\sum a_k$ divergent.\\
 
 D.h., dass das Wurzelkriterium eine Entscheidung über die Divergenz liefert, ist es hinreichend, dass $\lim\sup\sqrt[n]{\abs{a_n}}>1$.
@@ -1017,18 +1017,18 @@ d.h. die umgeordnete alternierende harmonische Reihe ist divergent! Der stärker
 $\sum\abs{a_n}$ konv. Sei $b_n=a_n+\abs{a_n}$
 \[{b_n} = \left\{ {\begin{array}{*{20}{l}}
 0&{{\text{falls }}{a_n} \le 0}\\
-{2{a_n} = 2\left| {{a_n}} \right|}&{{\text{falls }}{a_n} \ge 0}
+{2{a_n} = 2\abs{ {{a_n}} }}&{{\text{falls }}{a_n} \ge 0}
 \end{array}} \right.\]
 $\Rightarrow 0\leq b_n\leq 2\abs{a_n}\Rightarrow\sum b_n$ konv.\\
 $a_n=b_n-\abs{a_n}$ und beide Reihen konv. $\Rightarrow\sum a_n=\sum b_n-\sum\abs{a_n}$ konv.
 \end{beweis}
 \item Wurzel- und Quotientenkriterium sind Kriterien für absolute Konvergenz.
-\item Da \[{S_n}: = \sum\limits_{k = 1}^n {\left| {{a_k}} \right|}  < {S_{n + 1}} = {S_n} + \left| {{a_n}} \right|\] ist, ist die Folge $\left( S_n\right)_{n\geq 1}$ monoton wachsend; Absolute Konvergenz ist somit äquivalent zur Beschänkheit von $\left( S_n\right)_{n\geq 1}$
-\item Falls $\sum a_k$ absolut konvergiert, dann konvergiert natürlich auch $\sum\limits_{k = j}^\infty  {\left| {{a_n}} \right|} $ für jedes $j$ und $\forall \varepsilon > 0$, $\exists j(\varepsilon)$, so dass
-\[\sum\limits_{k = j}^\infty  {\left| {{a_n}} \right|}  < \varepsilon\hspace{5mm} \forall j > j(\varepsilon )\]
+\item Da \[{S_n}: = \sum\limits_{k = 1}^n {\abs{ {{a_k}} }}  < {S_{n + 1}} = {S_n} + \abs{ {{a_n}} }\] ist, ist die Folge $\left( S_n\right)_{n\geq 1}$ monoton wachsend; Absolute Konvergenz ist somit äquivalent zur Beschänkheit von $\left( S_n\right)_{n\geq 1}$
+\item Falls $\sum a_k$ absolut konvergiert, dann konvergiert natürlich auch $\sum\limits_{k = j}^\infty  {\abs{ {{a_n}} }} $ für jedes $j$ und $\forall \varepsilon > 0$, $\exists j(\varepsilon)$, so dass
+\[\sum\limits_{k = j}^\infty  {\abs{ {{a_n}} }}  < \varepsilon\hspace{5mm} \forall j > j(\varepsilon )\]
 \end{enumerate}
 \begin{framed}
-\[\text{\underline{Notation:}}\hspace{3mm}\sum\limits_{k = 1}^\infty  {\left| {{a_n}} \right|}  < \infty  = \sum\limits_{k = 1}^\infty  {\left| {{a_k}} \right|} {\text{ konvergiert}}\]\vspace{-2mm}
+\[\text{\underline{Notation:}}\hspace{3mm}\sum\limits_{k = 1}^\infty  {\abs{ {{a_n}} }}  < \infty  = \sum\limits_{k = 1}^\infty  {\abs{ {{a_k}} }} {\text{ konvergiert}}\]\vspace{-2mm}
 \end{framed}
 
 \subsubsection*{Satz 3.46}\label{satz3.46}
@@ -1036,18 +1036,18 @@ Sei $\sum\limits_1^\infty  {{a_k}} $ absolut konvergent und $\varphi :\N\to\N$ e
 
 \begin{beweis}{}
 \todo[inline]{It says Übung, maybe want to add something?? page 117 bottom}
-Sei $\varepsilon>0$ vorgegeben. Da $\sum\limits_1^\infty  {\left| {{a_k}} \right|} $ konvergiert, gibt es $n_0(\varepsilon)$ mit $\sum\limits_{k = {n_0}}^\infty  {\left| {{a_k}} \right|}  < \varepsilon $. Sei \[n_1(\varepsilon):=\max\left\{ \varphi^{-1}(1),\varphi^{-1}(2),\dots,\varphi^{-1}(n_0)\right\}\]
+Sei $\varepsilon>0$ vorgegeben. Da $\sum\limits_1^\infty  {\abs{ {{a_k}} }} $ konvergiert, gibt es $n_0(\varepsilon)$ mit $\sum\limits_{k = {n_0}}^\infty  {\abs{ {{a_k}} }}  < \varepsilon $. Sei \[n_1(\varepsilon):=\max\left\{ \varphi^{-1}(1),\varphi^{-1}(2),\dots,\varphi^{-1}(n_0)\right\}\]
 Falls $k>n_1(\varepsilon)$, dann folgt $\varphi(k)>n_0$ ($\varphi$ injektiv). Also $\forall n,m\geq n_1(\varepsilon)$
-\[\left| {\sum\limits_{k = m}^n {{a_{\varphi (k)}}} } \right| \le \sum\limits_{k = m}^n {\left| {{a_{\varphi (k)}}} \right|}  \le \sum\limits_{k = {n_0}}^\infty  {\left| {{a_k}} \right|}  < \varepsilon \]
+\[\abs{ {\sum\limits_{k = m}^n {{a_{\varphi (k)}}} } } \le \sum\limits_{k = m}^n {\abs{ {{a_{\varphi (k)}}} }}  \le \sum\limits_{k = {n_0}}^\infty  {\abs{ {{a_k}} }}  < \varepsilon \]
 Insbesondere konvergiert $\sum\limits_{k = 1}^\infty  {{a_{\varphi (k)}}} $ absolut und
 \begin{align*}
-\left| {\sum\limits_{k = 1}^\infty  {{a_k}}  - \sum\limits_{k = 1}^\infty  {{a_{\varphi (k)}}} } \right| &\le \left| {\sum\limits_{k = 1}^{{n_0}} {{a_k}}  - \sum\limits_{k = 1}^{{n_1}} {{a_{\varphi (k)}}} } \right| + \left| {\sum\limits_{{n_1} + 1}^\infty  {{a_{\varphi (k)}}} } \right| + \left| {\sum\limits_{k = {n_0} + 1}^\infty  {{a_k}} } \right|\\
-&\le 3\sum\limits_{k = {n_0}}^\infty  {\left| {{a_k}} \right|}  \le 3\varepsilon
+\abs{ {\sum\limits_{k = 1}^\infty  {{a_k}}  - \sum\limits_{k = 1}^\infty  {{a_{\varphi (k)}}} } } &\le \abs{ {\sum\limits_{k = 1}^{{n_0}} {{a_k}}  - \sum\limits_{k = 1}^{{n_1}} {{a_{\varphi (k)}}} } } + \abs{ {\sum\limits_{{n_1} + 1}^\infty  {{a_{\varphi (k)}}} } } + \abs{ {\sum\limits_{k = {n_0} + 1}^\infty  {{a_k}} } }\\
+&\le 3\sum\limits_{k = {n_0}}^\infty  {\abs{ {{a_k}} }}  \le 3\varepsilon
 \end{align*}
 \end{beweis}
 
 \subsubsection*{Beispiel 3.47}
-$\sum\limits_{k = 1}^\infty  {k{q^k}} $ ist für $\left| q\right| < 1$ absolut konvergent (z.B. Quotientenkriterium)
+$\sum\limits_{k = 1}^\infty  {k{q^k}} $ ist für $\abs{ q} < 1$ absolut konvergent (z.B. Quotientenkriterium)
 
 \begin{align*}
 \sum\limits_{k = 1}^\infty  {k{q^k}}  = q + {q^2} + {q^3} + {q^4}&\dots\\
@@ -1132,7 +1132,7 @@ Zum Abschluss behandeln wir noch den Zusammenhang von ``$e$'' und ``$e^x$''.
 \begin{enumerate}
 \item \[\exp \left( 1 \right) = \sum\limits_{k = 0}^\infty  {\frac{1}{{k!}}} \]
 \begin{align*}
-&\Rightarrow\forall\varepsilon >0, \exists n_0=n_0(\varepsilon),\text{mit }\left| {\exp \left( 1 \right) - \sum\limits_{k = 0}^\infty  {\frac{1}{{k!}}}  < \varepsilon } \right|\\
+&\Rightarrow\forall\varepsilon >0, \exists n_0=n_0(\varepsilon),\text{mit }\abs{ {\exp \left( 1 \right) - \sum\limits_{k = 0}^\infty  {\frac{1}{{k!}}}  < \varepsilon } }\\
 &\Leftrightarrow - \varepsilon  < \sum\limits_0^{{n_0}} {\frac{1}{{k!}}}  - \exp \left( 1 \right) < \varepsilon \\
 &\Leftrightarrow  - \varepsilon  + \exp \left( 1 \right) < \sum\limits_0^{n_0} {\frac{1}{{k!}}}  < \varepsilon  + \exp \left( 1 \right)
 \end{align*}
@@ -1176,7 +1176,7 @@ $\forall x\in\R$
 \todo[inline]{Start of additional content, page 125. This has to be reviewed for layout issues (it's pretty much a mess)}
 \subsubsection*{Satz}
 \[\exp (x) = \sum {\frac{x}{{k!}}}  \Rightarrow \forall \varepsilon  > 0,\exists {n_0}(\varepsilon )\]
-\[\forall n > {n_0}\hspace{5mm}\left| {\exp (x) - \sum\limits_0^{{n_0}} {\frac{x}{{k!}}} } \right| < \varepsilon \]
+\[\forall n > {n_0}\hspace{5mm}\abs{ {\exp (x) - \sum\limits_0^{{n_0}} {\frac{x}{{k!}}} } } < \varepsilon \]
 \begin{align*}
 & \Leftrightarrow  - \varepsilon  < \sum {\frac{x}{{k!}}}  - \exp (x) < \varepsilon \\
 \mycirc{1}& \Leftrightarrow \exp (x) - \varepsilon  < \sum\limits_0^{{n_0}} {\frac{x}{{k!}}}  < \varepsilon  + \exp (x)

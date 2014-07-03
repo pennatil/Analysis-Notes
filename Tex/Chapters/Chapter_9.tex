@@ -75,7 +75,7 @@ a_2&=y_0 < y_1\dots <y_m=b_2
 \end{align*}
 \begin{enumerate}
 \item WHERE IS NUMBER 1??
-\item Die Feinheit einer Zerlegung $Z\in Z\left( D\right)$ ist \[\left\| Z \right\|: = \mathop {\max }\limits_{i,j} \left\{ {\left| {{x_{i + 1}} - {x_i}} \right|,\left| {{y_{j + 1}} - {y_j}} \right|} \right\}\]
+\item Die Feinheit einer Zerlegung $Z\in Z\left( D\right)$ ist \[\left\| Z \right\|: = \mathop {\max }\limits_{i,j} \left\{ {\abs{ {{x_{i + 1}} - {x_i}} },\abs{ {{y_{j + 1}} - {y_j}} }} \right\}\]
 \item Für eine vorgegebene Zerlegung $Z$, nennt man die Mengen \[{Q_{ij}}: = \left[ {{x_i},{x_{i + 1}}} \right] \times \left[ {{y_j},{y_{j + 1}}} \right]\] die Teilquader der Zerlegung $Z$. Das Volumen des Teilquaders $Q_{ij}$ ist \[\text{vol}\left( {{Q_{ij}}} \right): = \left( {{x_{i + 1}} - {x_i}} \right)\left( {{y_{j + 1}} - {y_j}} \right)\]
 \item Für beliebige Punkte $\xi_{ij}\in Q_{ij}$ der jeweiligen Teilquader nennt man \[{R_f}\left( Z \right): = \sum\limits_{i,j} {f\left( {{\xi _{ij}}} \right){\text{vol}}\left( {{Q_i}j} \right)} \] eine Riemannsche Summe zur Zerlegung $Z$
 \item Analog zum Integral einer Variablen heissen für eine Zerlegung $Z$
@@ -165,7 +165,7 @@ oder
 \[\int\limits_D {\left( {\alpha f + \beta g} \right)d\mu  = \alpha \int\limits_D {fd\mu }  + \beta \int\limits_D {gd\mu } } \]
 \item \underline{Monotonie:} Gilt $f(x)\leq g(x)$, $\forall x\in D$, so folgt \[\int\limits_D {fd\mu }  \le \int\limits_D {gd\mu } \]
 \item\underline{Positivität:} Gilt für alle $x\in D$, $f(x)\geq 0$ (d.h. $f(x)$ ist nicht negativ), so folgt \[\int\limits_D {fd\mu }  \ge 0\]
-\item \underline{Abschätzung} \[\left| {\int\limits_D {f(x)d\mu } } \right| \le \mathop {\sup }\limits_{x \in D} \left| {f(x)} \right|{\text{vol}}\left( D \right)\]
+\item \underline{Abschätzung} \[\abs{ {\int\limits_D {f(x)d\mu } } } \le \mathop {\sup }\limits_{x \in D} \abs{ {f(x)} }{\text{vol}}\left( D \right)\]
 \item Sind $D_1,d_2,D$ Quader, $D=D_1\cup D_2$ und $\text{vol}\left( D_1\cap D_2\right)=0$, so ist $f$ genau dann über $D$ integrierbar, falls $f$ über $D_1$ und über $D_2$ integrierbar ist und es gilt \[\int\limits_D {fd\mu }  = \int\limits_{{D_1}} {fd\mu }  + \int\limits_{{D_2}} {fd\mu } \](Gebietsadditivität)
 \end{enumerate}
 
@@ -630,7 +630,7 @@ Das Bild des Einheitsquadrats/-würfels unter der linearen Abbildung
 \Phi:\R^n&\to\R^n\\
 \vec x&\to A\vec x\hspace{5mm}A\in\R^{n\times n}
 \end{align*}
-ist ein Parallelogramm mit Fläche $\left| \det A\right|$
+ist ein Parallelogramm mit Fläche $\abs{ \det A}$
 
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
@@ -647,7 +647,7 @@ ist ein Parallelogramm mit Fläche $\left| \det A\right|$
 \draw[->] (10+0,-0.5)--(10+0,5);
 \draw[->,very thick] (10+0,0)--(10+2,4) node [anchor=east]{$Ae_2$};
 \draw[->,very thick] (10+0,0)--(10+4,2) node [anchor=north]{$Ae_1$};
-\draw (13,2.5) node [anchor=south]{$\left| \det A\right|$};
+\draw (13,2.5) node [anchor=south]{$\abs{ \det A}$};
 
 \end{tikzpicture}
 \end{center}
@@ -677,8 +677,8 @@ Dies bleibt wahr, wenn man zur affin-linearen Abbildung $\Phi\left(\vec{x}\right
 \end{center}
 Nun betrachten wir eine differenzierbare nichtlineare Transformation $\Phi:\R^n \to\R^n$. Dann gilt, zumindest nahe eines festen Punktes $\vec x\in\R^n$:
 \[ \Phi\left( x\right)\approx\Phi\left( x_0\right) + d\Phi\left( x_0\right) \left( \vec{x}-\vec{x_0}\right)\]
-Die rechte Seite stellt gerade eine Abbildung vom Typ $A\vec x+\vec b$ dar, wobei die Jacobi-Matrix $d\Phi\left( x_0\right)\in\R^n\times\R^n$ die Rolle von $A$ (und $\Phi\left( x_0\right)$ von $\vec b$) übernimmt. Damit ist der lokale Flächenverzerrungsfaktor von $\Phi$ gegeben durch $\left| \det d\Phi\left( x_0\right)\right|$ d.h. den Betrag der Jacobi- oder Funktionaldeterminante. Die lokale Flächenverzerrung muss bei der Substitution in Integralen berücksichtigt werden und zwar in der Form
-\[``d\vec x = \left| {\det d\Phi \left( {\vec y} \right)} \right|d\vec{y} \text{ ''},{\text{ falls }}\vec x = \Phi \left( y \right)\]
+Die rechte Seite stellt gerade eine Abbildung vom Typ $A\vec x+\vec b$ dar, wobei die Jacobi-Matrix $d\Phi\left( x_0\right)\in\R^n\times\R^n$ die Rolle von $A$ (und $\Phi\left( x_0\right)$ von $\vec b$) übernimmt. Damit ist der lokale Flächenverzerrungsfaktor von $\Phi$ gegeben durch $\abs{ \det d\Phi\left( x_0\right)}$ d.h. den Betrag der Jacobi- oder Funktionaldeterminante. Die lokale Flächenverzerrung muss bei der Substitution in Integralen berücksichtigt werden und zwar in der Form
+\[``d\vec x = \abs{ {\det d\Phi \left( {\vec y} \right)} }d\vec{y} \text{ ''},{\text{ falls }}\vec x = \Phi \left( y \right)\]
 Geometrische Darstellung in $\R^2$
 
 \begin{center}
@@ -757,11 +757,11 @@ Geometrische Darstellung in $\R^2$
 \end{tikzpicture}
 \end{center}
 
-Die Flächen der einander entsprechenden markierten Vierecke unterscheiden sich gerade um den Faktor $\left|\det d\Phi\left( x_1\right)\right|$ bzw. $\left|\det d\Phi\left( x_2\right)\right|$
+Die Flächen der einander entsprechenden markierten Vierecke unterscheiden sich gerade um den Faktor $\abs{\det d\Phi\left( x_1\right)}$ bzw. $\abs{\det d\Phi\left( x_2\right)}$
 \subsection*{Substitutionsregel}
 \subsubsection*{Satz 9.17}
 Sei $U,V\subset\R^n$ offen, $\Phi:U\to V$ bijektiv, stetig diff., $\det d\Phi\left( \vec y\right)\not=0$ $\forall\vec y\in U$, sowie $f: V\to\R$ stetig. Dann gilt
-\[\int\limits_V {f\left( {\vec x} \right)d\mu \left( {\vec x} \right)}  = \int\limits_{\Phi \left( U \right) = V} {f\left( {\Phi \left( {\vec y} \right)} \right)\left| {\det d\phi \left( y \right)} \right|} d\mu \]
+\[\int\limits_V {f\left( {\vec x} \right)d\mu \left( {\vec x} \right)}  = \int\limits_{\Phi \left( U \right) = V} {f\left( {\Phi \left( {\vec y} \right)} \right)\abs{ {\det d\phi \left( y \right)} }} d\mu \]
 
 \subsubsection*{Beispiel 9.18}
 \begin{enumerate}

@@ -43,7 +43,7 @@ und $\frac{m}{1+m^2}\not=0$, falls $m\not=0$. Eine Funktion $f(x,y)$ an der Stel
 \begin{definition}{8.1}
 Sei $\Omega\subset\R^n$, $f:\Omega \to\R$, $a\in\Omega$
 \begin{enumerate}
-\item $f$ hat den Grenzwert $c\in\R$, d.h \[\lim\limits_{x\to a} f(x)=c\] wenn es zu jeder (beliebig kleinen) Schranke $\varepsilon>0$, eine $\delta$-umgebung \[{B_\delta }(a): = \left\{ {x \in \R^n}\mid\left| {x - a} \right| < \delta  \right\}\] gibt, so dass $\left| {f(x) - a} \right| < \varepsilon$ für alle $x\in\Omega\cap B_\delta (a), x\not=a$ gilt.
+\item $f$ hat den Grenzwert $c\in\R$, d.h \[\lim\limits_{x\to a} f(x)=c\] wenn es zu jeder (beliebig kleinen) Schranke $\varepsilon>0$, eine $\delta$-umgebung \[{B_\delta }(a): = \left\{ {x \in \R^n}\mid\abs{ {x - a} } < \delta  \right\}\] gibt, so dass $\abs{ {f(x) - a} } < \varepsilon$ für alle $x\in\Omega\cap B_\delta (a), x\not=a$ gilt.
 \item $f$ heisst in $a\in\Omega$ stetig, wenn $\mathop {\lim }\limits_{x \to a} f'(x) = f(a)$ gilt.
 \item $f$ heisst in $\Omega$ stetig, wenn $f$ in allen $a\in\Omega$ stetig ist.
 \end{enumerate}
@@ -55,7 +55,7 @@ $f$ besitzt keinen Grenzwert in $x_0$ wenn sich bei Annäherungen an $x_0$ auf v
 \subsection*{Sandwichlemma}
 Seien $f,g,h$ Funktionen, wobei $g<f<h$. Wenn $\mathop {\lim }\limits_{x \to a} g = L = \mathop {\lim }\limits_{x \to a} h$ gilt, dann ergibt $\lim\limits_{x\to a}f=L$.\\
 
-\noindent Da $\mathop {\lim }\limits_{(x,y) \to (0,0)} \left| y \right| = 0$ gilt, $\mathop {\lim }\limits_{(x,y) \to (0,0)} f(x,y) = 0 \Rightarrow f$ ist in (0,0) stetig.\\
+\noindent Da $\mathop {\lim }\limits_{(x,y) \to (0,0)} \abs{ y } = 0$ gilt, $\mathop {\lim }\limits_{(x,y) \to (0,0)} f(x,y) = 0 \Rightarrow f$ ist in (0,0) stetig.\\
 
 \noindent \textbf{\underline{Oder}}\\
 
@@ -78,7 +78,7 @@ sind stetig, da sie aus steigen Funktionen zusammengesetzt sind.
 {\frac{{{x^2}y}}{{{x^2} + {y^2}}}}&{{\text{für}}}&{{\text{(x,y)}}\not  = (0,0)}\\
 0&{{\text{für}}}&{{\text{(x,y)}}= (0,0)}
 \end{array}} \right.\]
-Für $(x,y)\not=(0,0)$ ist $f$ als Quotient von stetigen Funktionen stetig. Es verbleibt $f$ im Punkt $(0,0)$ zu untersuchen. Da \[\left| {\frac{{{x^2}}}{{{x^2} + {y^2}}}} \right| \le 1\] \[ 0<\left| f(x,y)\right| <\left| y\right|\] \[f(x,y) = \frac{{{x^2}y}}{{{x^2} + {y^2}}} = \frac{{\left( {{r^2}{{\cos }^2}\theta } \right)\left( {r\sin \theta } \right)}}{{{r^2}\left( {{{\cos }^2}\theta  + {{\sin }^2}\theta } \right)}} = r{\cos ^2}\theta \sin \theta \]
+Für $(x,y)\not=(0,0)$ ist $f$ als Quotient von stetigen Funktionen stetig. Es verbleibt $f$ im Punkt $(0,0)$ zu untersuchen. Da \[\abs{ {\frac{{{x^2}}}{{{x^2} + {y^2}}}} } \le 1\] \[ 0<\abs{ f(x,y)} <\abs{ y}\] \[f(x,y) = \frac{{{x^2}y}}{{{x^2} + {y^2}}} = \frac{{\left( {{r^2}{{\cos }^2}\theta } \right)\left( {r\sin \theta } \right)}}{{{r^2}\left( {{{\cos }^2}\theta  + {{\sin }^2}\theta } \right)}} = r{\cos ^2}\theta \sin \theta \]
 \[\mathop {\lim }\limits_{r \to 0} f(r,\theta ) = \mathop {\lim }\limits_{r \to 0} r{\cos ^2}\theta \sin \theta  = 0\]
 \item Wir können nochmals die Stetigkeit der Funktion
 \[f(x,y) = \left\{ {\begin{array}{*{20}{c}}
@@ -213,9 +213,9 @@ $A=\left( A_1,\dots,A_n\right)$ für die Darstellung einer linearen Abbildung $A
 \end{array}} \right) = \sum {{A_i}{x^i}} \]
 
 \begin{definition}{8.4}
-Die Funktion $f:\Omega\to\R$ heisst an der Stelle $x_0\in\Omega\subset\R^n$ differenzierbar, falls es eine lineare Abbildung $A:\R^n\to\R$ gibt, so dass \[f(x) = f\left( {{x_0}} \right) + A\left( {x - {x_0}} \right) + R\left( {{x_0},x} \right)\] wobei $\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} = 0$
+Die Funktion $f:\Omega\to\R$ heisst an der Stelle $x_0\in\Omega\subset\R^n$ differenzierbar, falls es eine lineare Abbildung $A:\R^n\to\R$ gibt, so dass \[f(x) = f\left( {{x_0}} \right) + A\left( {x - {x_0}} \right) + R\left( {{x_0},x} \right)\] wobei $\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\abs{ {x - {x_0}} }}} = 0$
 \end{definition}
-In diesem Fall heisst $A$ das Differential an der Stelle $x_0$ und wird mit $\mathop {df}\limits_{{x_0}} $ bezeichnet, d.h. $f$ ist total differenzierbar in $x_0=\left( x_0^1,\dots,x_0^n\right)$, falls reelle Zahlen $A_1,\dots,A_n$ existieren, so dass gilt \[f(x) = f\left( {{x_0}} \right) + {A_1}\left( {{x^1} - x_0^1} \right) + {A_2}\left( {{x^2} - x_0^2} \right) +  \ldots  + {A_n}\left( {{x^n} - x_0^n} \right) + R\left( {x,{x_0}} \right)\] mit $\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} = 0$
+In diesem Fall heisst $A$ das Differential an der Stelle $x_0$ und wird mit $\mathop {df}\limits_{{x_0}} $ bezeichnet, d.h. $f$ ist total differenzierbar in $x_0=\left( x_0^1,\dots,x_0^n\right)$, falls reelle Zahlen $A_1,\dots,A_n$ existieren, so dass gilt \[f(x) = f\left( {{x_0}} \right) + {A_1}\left( {{x^1} - x_0^1} \right) + {A_2}\left( {{x^2} - x_0^2} \right) +  \ldots  + {A_n}\left( {{x^n} - x_0^n} \right) + R\left( {x,{x_0}} \right)\] mit $\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\abs{ {x - {x_0}} }}} = 0$
 
 \subsubsection*{Bemerkung: Geometrische Interpretation}
 Sei $f:\Omega \to\R$, $\Omega\in\R^2$. Wir können die differenzierbare Funktion nahe dem Punkt $x_0=\left( x_0^1,x_0^2\right)$ mit Hilfe der linearen Funktion \[P\left( x \right) = P\left( {{x^1},{x^2}} \right) = f\left( {x_0^1,x_0^2} \right) + \underbrace {{A_1}\left( {{x^1} - x_0^1} \right) + {A_2}\left( {{x^2} - x_0^2} \right)}_{{d_x}_{_0}f\left( {x - {x_0}} \right)}\] approximieren. \\
@@ -298,12 +298,12 @@ mit
  R\left( {x,y} \right) = &\left[ {\frac{{\partial f}}{{\partial x}}\left( {\xi ,y} \right) - \frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right)} \right]\left( {x - {x_0}} \right) \\
  + &\left[ {\frac{{\partial f}}{{\partial y}}\left( {{x_0},\eta } \right) - \frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)} \right]\left( {y - {y_0}} \right)
 \end{align*}
-Wegen der Stetigkeit der Funktionen \[\frac{{\partial f}}{{\partial x}}\left( {x,y} \right) = {e^y}\hspace{5mm}\text{und}\hspace{5mm}\frac{{\partial f}}{{\partial y}}\left( {x,y} \right) = x{e^y}\] können wir den ``Fehler'' $R\left( x,y\right)$ leicht abschätzen \[\frac{{\left| {R\left( {x,y} \right)} \right|}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}} \le \mathop {\sup }\limits_{\begin{array}{*{20}{c}}
-{\left| {\xi  - {x_0}} \right| < \left| {x - {x_0}} \right|}\\
-{\left| {\eta  - {y_0}} \right| < \left| {y - {y_0}} \right|}
-\end{array}} \left( {\left| {{e^y} - {e^{{y_0}}}} \right| + \left| {{x_0}} \right|\left| {{e^\eta } - {e^{{y_0}}}} \right|} \right)\]
-Für $\left( x,y\right)\to\left( x_0,y_0\right)$, $\left( x,y\right)\not=\left( x_0,y_0\right)$: d.h. es gilt \[\frac{{R\left( {x,y} \right)}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}} \to 0\]
-d.h. es gilt \[\frac{{f\left( {x,y} \right) - f\left( {{x_0},{y_0}} \right) - \frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right)\left( {x - {x_0}} \right) - \frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)\left( {y - {y_0}} \right)}}{{\left| {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} \right|}}\mathop  \to \limits_{\left( {x,y} \right) \to \left( {{x_0},{y_0}} \right)} 0\]
+Wegen der Stetigkeit der Funktionen \[\frac{{\partial f}}{{\partial x}}\left( {x,y} \right) = {e^y}\hspace{5mm}\text{und}\hspace{5mm}\frac{{\partial f}}{{\partial y}}\left( {x,y} \right) = x{e^y}\] können wir den ``Fehler'' $R\left( x,y\right)$ leicht abschätzen \[\frac{{\abs{ {R\left( {x,y} \right)} }}}{{\abs{ {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} }}} \le \mathop {\sup }\limits_{\begin{array}{*{20}{c}}
+{\abs{ {\xi  - {x_0}} } < \abs{ {x - {x_0}} }}\\
+{\abs{ {\eta  - {y_0}} } < \abs{ {y - {y_0}} }}
+\end{array}} \left( {\abs{ {{e^y} - {e^{{y_0}}}} } + \abs{ {{x_0}} }\abs{ {{e^\eta } - {e^{{y_0}}}} }} \right)\]
+Für $\left( x,y\right)\to\left( x_0,y_0\right)$, $\left( x,y\right)\not=\left( x_0,y_0\right)$: d.h. es gilt \[\frac{{R\left( {x,y} \right)}}{{\abs{ {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} }}} \to 0\]
+d.h. es gilt \[\frac{{f\left( {x,y} \right) - f\left( {{x_0},{y_0}} \right) - \frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right)\left( {x - {x_0}} \right) - \frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)\left( {y - {y_0}} \right)}}{{\abs{ {\left( {x,y} \right) - \left( {{x_0},{y_0}} \right)} }}}\mathop  \to \limits_{\left( {x,y} \right) \to \left( {{x_0},{y_0}} \right)} 0\]
  d.h. $f\left( x,y\right)$ ist \todo{can't read, page 130 bottom} differenzierbar und
 \[df\left( {{x_0},{y_0}} \right) = \left( {\frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right),\frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)} \right)\]
 \item Die Funktion \[f\left( {x,y} \right) = \left\{ {\begin{array}{*{20}{c}}
@@ -311,11 +311,11 @@ d.h. es gilt \[\frac{{f\left( {x,y} \right) - f\left( {{x_0},{y_0}} \right) - \f
 0&{\left( {x,y} \right) = \left( {0,0} \right)}
 \end{array}} \right.\] ist in $\left( 0,0\right)$ differenzierbar. \\
 
-Wir haben schon gesehen, dass $\frac{\partial f}{\partial x}\left( 0,0\right)=0$ und $\frac{\partial f}{\partial y}\left( 0,0\right)=0$. Dann gilt \[\frac{{\left| R \right|}}{{\left| {\left( {x,y} \right)} \right|}} = \frac{{\left| {f\left( {x,y} \right) - f\left( {0,0} \right) - \frac{{\partial f}}{{\partial x}}\left( {0,0} \right)\left( {x - 0} \right) - \frac{{\partial f}}{{\partial y}}\left( {0,0} \right)\left( {y - 0} \right)} \right|}}{{\left| {\left( {x - 0,y - 0} \right)} \right|}}\] \[ = \frac{{\left| {f\left( {x,y} \right) - 0 - 0 - 0} \right|}}{{\left| {\left( {x,y} \right)} \right|}} = \frac{{\left| {f\left( {x,y} \right)} \right|}}{{\left| {\left( {x,y} \right)} \right|}}\]
+Wir haben schon gesehen, dass $\frac{\partial f}{\partial x}\left( 0,0\right)=0$ und $\frac{\partial f}{\partial y}\left( 0,0\right)=0$. Dann gilt \[\frac{{\abs{ R }}}{{\abs{ {\left( {x,y} \right)} }}} = \frac{{\abs{ {f\left( {x,y} \right) - f\left( {0,0} \right) - \frac{{\partial f}}{{\partial x}}\left( {0,0} \right)\left( {x - 0} \right) - \frac{{\partial f}}{{\partial y}}\left( {0,0} \right)\left( {y - 0} \right)} }}}{{\abs{ {\left( {x - 0,y - 0} \right)} }}}\] \[ = \frac{{\abs{ {f\left( {x,y} \right) - 0 - 0 - 0} }}}{{\abs{ {\left( {x,y} \right)} }}} = \frac{{\abs{ {f\left( {x,y} \right)} }}}{{\abs{ {\left( {x,y} \right)} }}}\]
 Zu untersuchen ist
-\[\mathop {\lim }\limits_{\left( {x,y} \right) \to \left( {0,0} \right)}  \frac{{\left| {R\left( {\left( {x,y} \right),\left( {0,0} \right)} \right)} \right|}}{{\left( {x,y} \right) - \left( {0,0} \right)}} = \mathop {\lim }\limits_{\left( {x,y} \right) \to \left( {0,0} \right)} \frac{{\left| {f\left( {x,y} \right)} \right|}}{{\left| {\left( {x,y} \right)} \right|}}\]
+\[\mathop {\lim }\limits_{\left( {x,y} \right) \to \left( {0,0} \right)}  \frac{{\abs{ {R\left( {\left( {x,y} \right),\left( {0,0} \right)} \right)} }}}{{\left( {x,y} \right) - \left( {0,0} \right)}} = \mathop {\lim }\limits_{\left( {x,y} \right) \to \left( {0,0} \right)} \frac{{\abs{ {f\left( {x,y} \right)} }}}{{\abs{ {\left( {x,y} \right)} }}}\]
 Mittels Polarkoordinaten ist dies noch offensichtlicher
-\[\mathop {\lim }\limits_{\left( {x,y} \right) \to \left( {0,0} \right)} \frac{{\left| {f\left( {x,y} \right)} \right|}}{{{x^2} + {y^2}}} = \mathop {\lim }\limits_{r \to 0} \frac{{{r^4}{{\cos }^3}\theta \sin \theta }}{{{r^2}}} = \mathop {\lim }\limits_{r \to 0} {r^2}{\cos ^3}\theta \sin \theta  = 0\] \[\Rightarrow f\text{ in }\left( 0,0\right)\text{ differenzierbar}\]
+\[\mathop {\lim }\limits_{\left( {x,y} \right) \to \left( {0,0} \right)} \frac{{\abs{ {f\left( {x,y} \right)} }}}{{{x^2} + {y^2}}} = \mathop {\lim }\limits_{r \to 0} \frac{{{r^4}{{\cos }^3}\theta \sin \theta }}{{{r^2}}} = \mathop {\lim }\limits_{r \to 0} {r^2}{\cos ^3}\theta \sin \theta  = 0\] \[\Rightarrow f\text{ in }\left( 0,0\right)\text{ differenzierbar}\]
 \end{enumerate}
 
 \noindent Gibt es eine Beziehung zwischen dem Differential und den partiellen Ableitungen?
@@ -371,12 +371,12 @@ R\left( {{x_0},x} \right) = &\left( {\frac{{\partial f}}{{\partial {x^1}}}\left(
  + &\left( {\frac{{\partial f}}{{\partial {x^3}}}\left( {{x^1},{x^2},{\xi ^3}} \right) - \frac{{\partial f}}{{\partial {x^3}}}\left( {x_0^1,x_0^2,x_0^3} \right)} \right)\left( {{x^3} - x_0^3} \right)
 \end{align*}
 Also
-\[\left| {R\left( {x,{x_0}} \right)} \right| < \left| {x - {x_0}} \right|\underbrace {\left\{ {\left| {\left(  \ldots  \right)} \right| + \left| {\left(  \ldots  \right)} \right| + \left| {\left(  \ldots  \right)} \right|} \right\}}_{\scriptstyle \to 0{\text{ mit }}x \to {x_0}\hfill\atop
+\[\abs{ {R\left( {x,{x_0}} \right)} } < \abs{ {x - {x_0}} }\underbrace {\left\{ {\abs{ {\left(  \ldots  \right)} } + \abs{ {\left(  \ldots  \right)} } + \abs{ {\left(  \ldots  \right)} }} \right\}}_{\scriptstyle \to 0{\text{ mit }}x \to {x_0}\hfill\atop
 \scriptstyle{\text{weil }}\frac{{\partial f}}{{\partial {x^i}}}{\text{ stetig sind}}\hfill}\]
 Also ist $\lim\frac{R\left( x,x_0\right)}{\left( x-x_0\right)}=0$ und $f(x)$ ist differenzierbar.
 
 \subsubsection*{Beispiel 8.10}
-Polynome auf $\R^n$ sind von der Klasse $C!$. Für jeden Multiindex $\alpha=\left(\alpha_0,\dots , \alpha_n\right)\in\N^n$ definieren wir die Monomialfunktion \[{x^\alpha }: = {\left( {{x^0}} \right)^{{\alpha _0}}}{\left( {{x^1}} \right)^{{\alpha _1}}} \ldots {\left( {{x^n}} \right)^{{\alpha _n}}}\] Ein Polynom von Grad $\leq N$ ist dann gegeben durch \[p(x) = \sum\limits_{\left| \alpha  \right| \le N} {{a_\alpha }{x^\alpha }} \] wobei $\left| \alpha  \right| = {\alpha _0} +  \ldots  + {\alpha _n}$
+Polynome auf $\R^n$ sind von der Klasse $C!$. Für jeden Multiindex $\alpha=\left(\alpha_0,\dots , \alpha_n\right)\in\N^n$ definieren wir die Monomialfunktion \[{x^\alpha }: = {\left( {{x^0}} \right)^{{\alpha _0}}}{\left( {{x^1}} \right)^{{\alpha _1}}} \ldots {\left( {{x^n}} \right)^{{\alpha _n}}}\] Ein Polynom von Grad $\leq N$ ist dann gegeben durch \[p(x) = \sum\limits_{\abs{ \alpha  } \le N} {{a_\alpha }{x^\alpha }} \] wobei $\abs{ \alpha  } = {\alpha _0} +  \ldots  + {\alpha _n}$
 \todo[inline]{Pages 135.1 - 135.2 are a zusammenfassung, not sure if needed to be included}
 \section{Differentiationsregeln}
 Ganz analog zum eindimensionalen Fall gelten folgende Differentiationsregeln
@@ -438,7 +438,7 @@ Sei $g:\Omega\to\R$ in $x_0\in\Omega\subset\R^n$ differenzierbar, sowie $f\R\to\
 \subsubsection*{Beweis}
 Sei $g$ an der Stelle $x_0$ differenzierbar
 \[ \Rightarrow g\left( x \right) - g\left( {{x_0}} \right)\mathop  = \limits^A dg\left( {{x_0}} \right)\left( {x - {x_0}} \right) + {R_g}\left( {x - {x_0}} \right)\]
-mit \[\frac{{{R_g}\left( {x - {x_0}} \right)}}{{\left( {x - {x_0}} \right)}}\mathop  \to \limits_{x \to {x_0}} 0 \Rightarrow \frac{{g\left( x \right) - g\left( {{x_0}} \right)}}{{\left| {x - {x_0}} \right|}}\mathop  \le \limits^B C = \max \left[ {\frac{{\partial g}}{{\partial {x^i}}}\left( {{x_0}} \right)} \right]\] $f$ in $g\left( x_0\right)$ differenzierbar
+mit \[\frac{{{R_g}\left( {x - {x_0}} \right)}}{{\left( {x - {x_0}} \right)}}\mathop  \to \limits_{x \to {x_0}} 0 \Rightarrow \frac{{g\left( x \right) - g\left( {{x_0}} \right)}}{{\abs{ {x - {x_0}} }}}\mathop  \le \limits^B C = \max \left[ {\frac{{\partial g}}{{\partial {x^i}}}\left( {{x_0}} \right)} \right]\] $f$ in $g\left( x_0\right)$ differenzierbar
 \[f\left( {g\left( x \right)} \right) - f\left( {g\left( {{x_0}} \right)} \right)\mathop  = \limits^C f'\left( {g\left( {{x_0}} \right)} \right)\left[ {g(x) - g\left( {{x_0}} \right)} \right] + {R_f}\left( {g\left( x \right),g\left( {{x_0}} \right)} \right)\]
 Woraus folgt:
 \begin{align*}
@@ -446,10 +446,10 @@ f\left( {g\left( x \right)} \right) - f\left( {g\left( {{x_0}} \right)} \right) 
 \end{align*}
 
 Aus B folgt:
-\[\frac{{{R_f}\left( {g\left( {{x_0}} \right),g\left( x \right)} \right)}}{{x - {x_0}}} = \underbrace {\underbrace {\frac{{{R_f}\left( {g\left( {{x_0}} \right) - g\left( x \right)} \right)}}{{\left| {g\left( x \right) - g\left( {{x_0}} \right)} \right|}}}_{\begin{array}{*{20}{c}}
+\[\frac{{{R_f}\left( {g\left( {{x_0}} \right),g\left( x \right)} \right)}}{{x - {x_0}}} = \underbrace {\underbrace {\frac{{{R_f}\left( {g\left( {{x_0}} \right) - g\left( x \right)} \right)}}{{\abs{ {g\left( x \right) - g\left( {{x_0}} \right)} }}}}_{\begin{array}{*{20}{c}}
  \downarrow \\
 0
-\end{array}} \cdot \underbrace {\frac{{\left| {g\left( x \right) - g\left( {{x_0}} \right)} \right|}}{{\left| {x - {x_0}} \right|}}}_{\mathop  \le \limits^B C}}_{\begin{array}{*{20}{c}}
+\end{array}} \cdot \underbrace {\frac{{\abs{ {g\left( x \right) - g\left( {{x_0}} \right)} }}}{{\abs{ {x - {x_0}} }}}}_{\mathop  \le \limits^B C}}_{\begin{array}{*{20}{c}}
  \downarrow \\
 0
 \end{array}}\]
@@ -574,7 +574,7 @@ und
 \end{align*}
 
 \subsubsection*{Beispiel 8.18}
-Sei $f:\Omega\to\R$ differenzierbar an der Stelle $x_0\in\Omega$ und sei $e\in\R^n\backslash\{ 0\}$; mit $\left| e\right|=1$. Betrachte die Gerade $g(t)=x_0+te$, $t\in\R$ durch $x_0$ mit Richtungsvektor
+Sei $f:\Omega\to\R$ differenzierbar an der Stelle $x_0\in\Omega$ und sei $e\in\R^n\backslash\{ 0\}$; mit $\abs{ e}=1$. Betrachte die Gerade $g(t)=x_0+te$, $t\in\R$ durch $x_0$ mit Richtungsvektor
 
 \begin{figure}[H]
 \begin{minipage}[b]{0.45\linewidth}
@@ -877,14 +877,14 @@ Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\R^n$ folgt die Darstellung
 \centerline{(Oben nehmen wir $\lambda (x): = df(x) = \sum {\frac{{\partial f}}{{\partial {x^i}}}{r^i}{x^i}} $, Bemerkung 8.29, 2.)}
 \end{definition}
 \subsubsection*{Satz 8.31}
-Sei $f\in\subset '\left(\Omega\right)$ und $x_0\in\Omega$. Dann gibt $\nabla f\left(x_0\right)$ die Richtung und $\left| \nabla f\left(x_0\right)\right|$ den Betrag des steilsten Anstieges von $f$ an der Stelle $x_0$ an.
+Sei $f\in\subset '\left(\Omega\right)$ und $x_0\in\Omega$. Dann gibt $\nabla f\left(x_0\right)$ die Richtung und $\abs{ \nabla f\left(x_0\right)}$ den Betrag des steilsten Anstieges von $f$ an der Stelle $x_0$ an.
 \begin{beweis}{}
 Aus der Definition des Gradientenfeld folgt $\forall e\in\R^n$, Einheitsvektor $\mid\mid e\mid\mid =1$ \[df\left(x_0\right)\left( e\right)=< \nabla f\left( x_0\right) ,e >\]
 
 Mit Cauchy-Schwarz folgt
 \[<\nabla f\left( x_0\right)>\leq\norm{\nabla f\left( x_0\right)}\norm{ e} = \norm{ \nabla f\left( x_0\right)}\]
-mit Gleichkeit genau dann, wenn $e$ ein positives Vielfaches von $\nabla f\left( x_0\right)$ ist, nämlich \[e=\frac{\nabla f\left( x_0\right)}{\left| \nabla f\left( x_0\right)\right|}\] \[\Rightarrow df\left( x_0\right) e \leq \left| \nabla f\left( x_0\right)\right|\]
-mit Gleicheit für $e=\frac{\nabla f\left( x_0\right)}{\left| \nabla f\left( x_0\right)\right|}$
+mit Gleichkeit genau dann, wenn $e$ ein positives Vielfaches von $\nabla f\left( x_0\right)$ ist, nämlich \[e=\frac{\nabla f\left( x_0\right)}{\abs{ \nabla f\left( x_0\right)}}\] \[\Rightarrow df\left( x_0\right) e \leq \abs{ \nabla f\left( x_0\right)}\]
+mit Gleicheit für $e=\frac{\nabla f\left( x_0\right)}{\abs{ \nabla f\left( x_0\right)}}$
 %END BEWEIS
 $\nabla f\left( x_0\right)\not= 0\Rightarrow \nabla f\left( x_0\right)$ zeigt die Richtung an, in der $f$ am schnellsten wächst.\\
 \end{beweis}
@@ -932,7 +932,7 @@ df\left( {\gamma (t)} \right) \cdot \gamma '(t) = 0 =  < \nabla f\left( {\gamma 
 \end{array}\]
 Insbesondere $0=df\left(\gamma (0)\right)\cdot\gamma'(0)= < \nabla f\left( x_0\right),\gamma'(0) >$ d.h. $\nabla f\left( x_0\right)$ steht senkrecht zur Niveauflache von $f$ durch $x_0$
 \subsubsection*{Beispiel}
-Sei $f(x,y)=\frac{x^2-y^2}{2}$, $x,y\in\R^2$ \[\nabla f(x,y)=(x,-y)\] Sei $\left( x_0,y_0\right) = (1,-1)$ \[\nabla f(1,-1)=(1,1)\hspace{10mm} \left( \nabla f(1,-1)\right) = \sqrt{2}\] \[\frac{\nabla f}{\left| \nabla f\right|}(1,-1)=\frac{1}{\sqrt{2}}(1,1)\]
+Sei $f(x,y)=\frac{x^2-y^2}{2}$, $x,y\in\R^2$ \[\nabla f(x,y)=(x,-y)\] Sei $\left( x_0,y_0\right) = (1,-1)$ \[\nabla f(1,-1)=(1,1)\hspace{10mm} \left( \nabla f(1,-1)\right) = \sqrt{2}\] \[\frac{\nabla f}{\abs{ \nabla f}}(1,-1)=\frac{1}{\sqrt{2}}(1,1)\]
 \item Im Punkt $P$ biegt der Bergweg ab; nach Südosten geht er mit 25\% Steigung bergauf, nach Süden mit 20\% Gefälle bergab. Der wanderer im Nebel möchte über die Wiese möglichst rascht zum Gipfel. In welche Richtung muss er gehen und wie steil ist es dorthin?\\
 
 Wir legen das Koordinatensystem so, dass die $x-$Achse nach Osten und die $y-$Achse nach Norden zeigt, und setzen voraus, dass die Höhenfunktion $h$ differenzierbar ist. Wir wollen ihren Gradienten in $P$ $\nabla h(P)$ bestimmen. Nach Voraussetzung hat $h$ die beiden Richtungsableitungen \[dh\left( P\right)\left( v_1\right)=0.25\hspace{10mm}dh\left( P\right)\left(  v_2\right)=-0.2\] wobei \[v_1=\left( \frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\right)\hspace{10mm}v_2=(0,-1)\]
@@ -956,7 +956,7 @@ Durch Lösen des linearen Gleichungssystem folgen wir:
 \[\frac{\partial h}{\partial x}\left( P\right) = \frac{\sqrt{2}}{4}+\frac{1}{5}, \frac{\partial h}{\partial y}\left( P\right) = \frac{1}{5}\]
 Die Richtung des Gradients ist somit \[ \arg\nabla h\left( P \right) = \arctan{\frac{\frac{1}{5}}{\frac{\sqrt{2}}{4}+ \frac{1}{5}}}\cong 19.86\text{\textdegree} \]
 und die Steigung in diese Richtung ist
-\[\left| \nabla h\left( P\right) \right| = \sqrt{\left( \frac{\sqrt{2}}{4}+\frac{1}{5}\right)^2 + \left( \frac{1}{5}\right)^2} \cong 0.59 = 59\%\] 
+\[\abs{ \nabla h\left( P\right) } = \sqrt{\left( \frac{\sqrt{2}}{4}+\frac{1}{5}\right)^2 + \left( \frac{1}{5}\right)^2} \cong 0.59 = 59\%\] 
 \end{enumerate}
 
 \section{Wegintegrale}
@@ -1365,7 +1365,7 @@ Dann ist $f$ nach Annahme (2) wohl definiert (d.h. unabhängig vom Weg von $p_0$
 
 \subsubsection*{Behauptung}
 $f\in C'\left( \Omega\right)$ und $df=\lambda$. Um zu zeigen, dass $df=\lambda$ müssen wir zeigen, dass für $x,x_0\in\Omega$
-\[f\left(x\right)-f\left(x_0\right)=\lambda\left(x_0\right)\left( x-x_0\right)+R\left( x,x_0\right)\] mit $\frac{R\left( x,x_0\right)}{\left| x-x_0\right|}\to 0$.\\
+\[f\left(x\right)-f\left(x_0\right)=\lambda\left(x_0\right)\left( x-x_0\right)+R\left( x,x_0\right)\] mit $\frac{R\left( x,x_0\right)}{\abs{ x-x_0}}\to 0$.\\
 
 \noindent Sei $x_0\in\R$. Sei $\gamma_1:\lbrack -1,0\rbrack\to\Omega$ ein Weg von $p_0$ nach $x_0$. Dann gilt \[\int\limits_{{\gamma _1}} \lambda   = f\left( {{x_0}} \right)\]
 Sei
@@ -1425,12 +1425,12 @@ Nun ist
 Sei $\lambda  = \sum {{\lambda ^i}d{x^i}} $ dann ist obiges Integral gleich
 \begin{align*}
 &\sum {\int\limits_0^1 {\left[ {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right]\left( {{x^i} - x_0^i} \right)dt} }\\
- \le &\sum {{{\left( {\int\limits_0^1 {{{\left[ {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right]}^2}} } \right)}^{\frac{1}{2}}}} \left| {x - {x_0}} \right|
+ \le &\sum {{{\left( {\int\limits_0^1 {{{\left[ {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right]}^2}} } \right)}^{\frac{1}{2}}}} \abs{ {x - {x_0}} }
 \end{align*}
 Also $f\left( x \right) - f\left( {{x_0}} \right) = \lambda \left( {{x_0}} \right)\left( {x - {x_0}} \right) + R\left( {x,{x_0}} \right)$, wobei
-\[\frac{{R\left( {x - {x_0}} \right)}}{{\left| {x - {x_0}} \right|}} \le {\left( {\sum\limits_{i = 1}^n {{{\left( {\int\limits_0^1 {\left( {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right)dt} } \right)}^2}} } \right)^{\frac{1}{2}}}\]
+\[\frac{{R\left( {x - {x_0}} \right)}}{{\abs{ {x - {x_0}} }}} \le {\left( {\sum\limits_{i = 1}^n {{{\left( {\int\limits_0^1 {\left( {{\lambda _i}\left( {{\gamma ^x}\left( t \right)} \right) - {\lambda _i}\left( {{x_0}} \right)} \right)dt} } \right)}^2}} } \right)^{\frac{1}{2}}}\]
 Aus der Stetigkeit der \todo{Can't read, page 179 bottom} folgt, dass
-\[\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\left| {x - {x_0}} \right|}} \to 0\]
+\[\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\abs{ {x - {x_0}} }}} \to 0\]
 
 \subsubsection*{Beispiel 8.31}
 \begin{enumerate}
@@ -1617,7 +1617,7 @@ f\left( {{x_1}} \right) = & f\left( {{x_0}} \right) + \nabla f\left( {{x_0}} \ri
  + &\frac{1}{2}\sum\limits_{i,j = 1}^2 {\frac{{{\partial ^2}f}}{{\partial {x^i}\partial {x^j}}}\left( {{x_0}} \right)\left( {x_1^i - x_0^i} \right)} \left( {x_1^j - x_0^j} \right) + {r_2}\left( {f,{x_1},{x_0}} \right)
 \end{align*}
 mit Fehler
-\[\frac{r_2\left( f,y_1,x_0\right)}{\left| x_1-x_0\right|}\to 0, \left( x_1\to x_0\right)\]
+\[\frac{r_2\left( f,y_1,x_0\right)}{\abs{ x_1-x_0}}\to 0, \left( x_1\to x_0\right)\]
 
 \begin{definition}{8.53}
 Die Matrix der zweiten partiellen Ableitungen heisst Hesse - Matrix von $f$ und wird mit $\Hess(f)$ oder $\nabla^2 f$ bezeichnet
@@ -1775,7 +1775,7 @@ Kritische Punkte: $\left( \pi l,\pi k\right)\hspace{5mm}k,l\in\mathbb{Z}$
 \frac{{{\partial ^2}f}}{{\partial {y^2}}} =&- 4\cos \left( {x + 2y} \right) - 9\cos \left( {2x + 3y} \right)
 \end{align*}
 \[\left( 0,0\right):\frac{{{\partial ^2}f}}{{\partial {x^2}}}=-5<0\]
-\[\left| {{\nabla ^2}f\left( {0,0} \right)} \right| = \left| {\begin{array}{*{20}{c}}
+\[\abs{ {{\nabla ^2}f\left( {0,0} \right)} } = \left| {\begin{array}{*{20}{c}}
 { - 5}&{ - 8}\\
 { - 8}&{ - 13}
 \end{array}} \right| = 13 \cdot 5 - 64 = 1 < 0\]
@@ -1810,7 +1810,7 @@ die Darstellung
 \end{array}} \right)\]
 Die $l\times n$ matrix $df\left( x_0\right) = {\left( \frac{\partial f^i}{\partial x^j}\left( x_0\right)\right)}_{1\leq i\leq l, 1\leq j\leq n}$ heisst Jacobi- oder Funktionalmatrix von $f$ an der Stelle $x_0$.
 \item Auch im vektorwertigen Fall ist die Funktion $f$ genau dann differenzierbar in $x_0$, wenn eine lineare Abbildung $A:\R^n\to\R^l$ existiert mit
-\[\mathop {\lim }\limits_{x \to {x_0}} \frac{{f\left( x \right) - f\left( {{x_0}} \right) - A\left( {x - {x_0}} \right)}}{{\left| {x - {x_0}} \right|}} = 0\]
+\[\mathop {\lim }\limits_{x \to {x_0}} \frac{{f\left( x \right) - f\left( {{x_0}} \right) - A\left( {x - {x_0}} \right)}}{{\abs{ {x - {x_0}} }}} = 0\]
 \end{enumerate}
 
 \subsubsection*{Beispiel 8.59}

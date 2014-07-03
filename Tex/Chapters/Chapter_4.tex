@@ -325,7 +325,7 @@ $\norm{x}_{2} = \sqrt{\sum{x_{i}^{2}}} \leq 1$
 \draw[color=white] (-2.5,2.9) node {$\sqrt{x_1^2+x_2^2}\leq 1$};
 \end{tikzpicture}
 \end{center}
-$\mathop {\max }\limits_i \left\{ {\left| {{x_i}} \right|} \right\}=\norm{x}_{\infty} \leq 1$
+$\mathop {\max }\limits_i \left\{ {\abs{ {{x_i}} }} \right\}=\norm{x}_{\infty} \leq 1$
 \begin{center}
 \begin{tikzpicture}[scale=0.6]
 \draw[fill=black!10] (-2,-2) rectangle(2,2);
@@ -378,10 +378,10 @@ Sei $f:\Omega\to\R^{n}$, $\Omega\subset\R^{d}$ eine Abbildung, $x_{0} \in\Omega$
 \item[$(1)\Rightarrow (2)$] (Indirekt)\\
 Wir nehmen also an, dass (2) nicht gilt, d.h. es gibt $\varepsilon>0$, so dass für jedes $\delta >0$ einem Punkt $x_\delta$ gibt mit
 \[\left\| {{x_\delta } - {x_0}} \right\| < \delta {\text{ und }}\left\| {f\left( {{x_\delta }} \right) - f\left( {{x_0}} \right)} \right\| > \varepsilon \]
-\[\left( \begin{array}{l}\begin{array}{*{20}{l}}{\neg \left( {\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \Omega :\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)}\\{ = \left( {\exists \varepsilon  > 0,\forall \delta  > 0,\exists x \in \Omega :\left| {x - {x_0}} \right| < \delta {\text{ }}\not  \Rightarrow {\text{ }}\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon } \right)\hspace{-5mm}}%A bit hacked together, but it works\end{array}\\{\text{\hspace{48mm}d.h.}}\\\exists \varepsilon  > 0,\forall \delta  > 0,\exists {x_\delta } \in \Omega :\left| {{x_\delta } - {x_0}} \right| < \delta {\text{  und  }}\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| > \varepsilon \end{array} \right)\]
-Sei $\varepsilon>0$. Wir wählen jetzt $\delta_n=\frac{1}{n}$, dann gibt es $x_n:=\left(x_{\delta_n}\right)_{n\in\N}$, eine Folge in $\Omega$, mit $\lim x_n=x_0$. Aber die Folge $\left( f\left( x_n\right)\right)$ kann offensichtlich nicht gegen $f\left( x_0\right)$ konvergieren (Da $\left| {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} \right| > \varepsilon $), d.h. $f$ ist nicht stetig in $x_0$.
+\[\left( \begin{array}{l}\begin{array}{*{20}{l}}{\neg \left( {\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \Omega :\abs{ {x - {x_0}} } < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon } \right)}\\{ = \left( {\exists \varepsilon  > 0,\forall \delta  > 0,\exists x \in \Omega :\abs{ {x - {x_0}} } < \delta {\text{ }}\not  \Rightarrow {\text{ }}\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon } \right)\hspace{-5mm}}%A bit hacked together, but it works\end{array}\\{\text{\hspace{48mm}d.h.}}\\\exists \varepsilon  > 0,\forall \delta  > 0,\exists {x_\delta } \in \Omega :\abs{ {{x_\delta } - {x_0}} } < \delta {\text{  und  }}\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } > \varepsilon \end{array} \right)\]
+Sei $\varepsilon>0$. Wir wählen jetzt $\delta_n=\frac{1}{n}$, dann gibt es $x_n:=\left(x_{\delta_n}\right)_{n\in\N}$, eine Folge in $\Omega$, mit $\lim x_n=x_0$. Aber die Folge $\left( f\left( x_n\right)\right)$ kann offensichtlich nicht gegen $f\left( x_0\right)$ konvergieren (Da $\abs{ {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} } > \varepsilon $), d.h. $f$ ist nicht stetig in $x_0$.
 \item[$(2)\Rightarrow (1)$] Sei $\left( x_n\right)_{n\geq 1}$ eine Folge in $\Omega$ mit Grenzwert $x_0$. Wir möchten zeigen, dass $f\left( {{x_n}} \right) \to f\left( {{x_0}} \right)$. Sei $\varepsilon>0$, nach (2) sei $\delta_{\varepsilon}>0$, so dass $\forall x\in\Omega$ mit
-\[\left| {x - {x_0}} \right| < {\delta _\varepsilon } \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+\[\abs{ {x - {x_0}} } < {\delta _\varepsilon } \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
 Da $\mathop {\lim }\limits_{n \to \infty } {x_n} = {x_0}$, gibt es $N\geq 1$, so dass
 \[\left\| {{x_n} - {x_0}} \right\| < \delta\hspace{5mm} \forall n \ge {N_\delta }\]
 (Hier hängt $N$ von $\delta$ und also im Endeffekt von $\varepsilon$ ab). Aus (2) folgt
@@ -393,25 +393,25 @@ Dies zeigt $\lim f\left( {{x_n}} \right) = f\left( {{x_0}} \right)$
 \subsubsection*{Beispiel}
 \begin{enumerate}
 \item $f:\R\to\R$, $f(x)=3x+8$. Dann $f$ ist stetig auf $\R$. Sei $\varepsilon>0$, sei $x_0\in\R$
-\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {\left( {3x + 8} \right) - \left( {3{x_0} + 8} \right)} \right| = 3\left| {\left( {x - {x_0}} \right)} \right|\hspace{5mm}\forall x \in \R\]
+\[\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } = \abs{ {\left( {3x + 8} \right) - \left( {3{x_0} + 8} \right)} } = 3\abs{ {\left( {x - {x_0}} \right)} }\hspace{5mm}\forall x \in \R\]
 Sei $\varepsilon>0$. Wenn wir $\delta=\frac{\varepsilon}{3}$ wählen, dann
-\todo{week9p156-1}\[ \text{CAN'T READ}, \left| {x - {x_0}} \right| < {\delta _\varepsilon } = \frac{\varepsilon }{3} \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+\todo{week9p156-1}\[ \text{CAN'T READ}, \abs{ {x - {x_0}} } < {\delta _\varepsilon } = \frac{\varepsilon }{3} \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
 In diesem Beispiel hängt $\delta$ nur von $\varepsilon$ ab. Das nächste Beispiel zeigt, dass $\delta$ nicht nur von $\varepsilon$, sondern auch von $x_0$ abhängen kann.
 \item \begin{align*}
 f:\left( 0,\infty\right)\to&\left( 0,\infty\right)\\
 x\to&\frac{1}{x}
 \end{align*}
 ist stetig auf $\left( 0,\infty\right)$. Sei $x_0\in\left( 0,\infty\right)$
-\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {\frac{1}{x} - \frac{1}{{{x_0}}}} \right| = \left| {\frac{{{x_0} - x}}{{x \cdot {x_0}}}} \right|\]
-\[\left| {x - {x_0}} \right| < \delta  \Rightarrow  - \delta  < x - {x_0} < \delta  \Rightarrow x > {x_0} - \delta \]
-\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \frac{{\left| {{x_0} - x} \right|}}{{\left| x \right|\left| {{x_0}} \right|}} < \frac{{\left| {x - {x_0}} \right|}}{{\left| {{x_0}} \right|\left| {{x_0} - \delta } \right|}}\]
+\[\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } = \abs{ {\frac{1}{x} - \frac{1}{{{x_0}}}} } = \abs{ {\frac{{{x_0} - x}}{{x \cdot {x_0}}}} }\]
+\[\abs{ {x - {x_0}} } < \delta  \Rightarrow  - \delta  < x - {x_0} < \delta  \Rightarrow x > {x_0} - \delta \]
+\[\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } = \frac{{\abs{ {{x_0} - x} }}}{{\abs{ x }\abs{ {{x_0}} }}} < \frac{{\abs{ {x - {x_0}} }}}{{\abs{ {{x_0}} }\abs{ {{x_0} - \delta } }}}\]
 Sei $\delta<\frac{x_0}{2}$, dann folgt
 \[\delta  < \frac{{{x_0}}}{2} \Rightarrow {x_0} - \delta  > {x_0} - \frac{{{x_0}}}{2} > \frac{{{x_0}}}{2}\]
-\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \frac{{\left| {{x_0} - x} \right|}}{{\left| x \right|\left| {{x_0} - \delta } \right|}} \le \frac{{\left| {x - {x_0}} \right| \cdot 2}}{{{{\left| {{x_0}} \right|}^2}}} \le \frac{{2\delta }}{{\left| {{x_0}} \right|}}\]
+\[\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \frac{{\abs{ {{x_0} - x} }}}{{\abs{ x }\abs{ {{x_0} - \delta } }}} \le \frac{{\abs{ {x - {x_0}} } \cdot 2}}{{{{\abs{ {{x_0}} }}^2}}} \le \frac{{2\delta }}{{\abs{ {{x_0}} }}}\]
 Sei
-\[{\delta _{\varepsilon ;{x_0}}} = \min \left\{ {\frac{{{x_0}}}{2},\frac{{\varepsilon {{\left| {{x_0}} \right|}^2}}}{2}} \right\}\]
+\[{\delta _{\varepsilon ;{x_0}}} = \min \left\{ {\frac{{{x_0}}}{2},\frac{{\varepsilon {{\abs{ {{x_0}} }}^2}}}{2}} \right\}\]
 Dann
-\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \frac{{\varepsilon {{\left| {{x_0}} \right|}^2}}}{2} \cdot \frac{2}{{{{\left| {{x_0}} \right|}^2}}} = \varepsilon \]
+\[\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \frac{{\varepsilon {{\abs{ {{x_0}} }}^2}}}{2} \cdot \frac{2}{{{{\abs{ {{x_0}} }}^2}}} = \varepsilon \]
 \end{enumerate}
 
 \section{Zwischenwertsatz}
@@ -507,13 +507,13 @@ Nun unterscheiden wir wieder zwei Fälle\\
 dann definieren wir $a_{k+1}=\frac{a_k+b_k}{2}$ und $b_{k+1}=b_k$. Dann ist immer
 \begin{enumerate}
 \item $a_k\leq a_{k+1}<b_{k+1}\leq b_k$
-\item ${b_{k + 1}} - {a_{k + 1}} = \frac{1}{2}\left( {{b_k} - {a_k}} \right) = \frac{1}{{{2^k}}}\left| {{b_1} - {a_1}} \right|$
+\item ${b_{k + 1}} - {a_{k + 1}} = \frac{1}{2}\left( {{b_k} - {a_k}} \right) = \frac{1}{{{2^k}}}\abs{ {{b_1} - {a_1}} }$
 \item $f\left( a_{k+1}\right) < y \leq f\left( b_{k+1}\right)$
 \end{enumerate}
 Nach dem Prinzip der vollständigen Induktion erhalten wir zwei Folgen $\left( a_n\right)_{n\geq 1}$, $\left( b_n\right)_{n\geq 1}$, die die Eigenschaften 1., 2. und 3. erfüllen. $\left( a_n\right)$, $\left( b_n\right)$ sind monoton und beschränkt $\Rightarrow$ gibt es
 \[\overline{a}=\lim a_k\leq\overline{b}=\lim b_k \]
 Wegen 2.
-\[\lim \left| {{a_k} - {b_k}} \right| = \lim \left| {\frac{{{b_1} - {a_1}}}{{{2^k}}}} \right| = 0\]
+\[\lim \abs{ {{a_k} - {b_k}} } = \lim \abs{ {\frac{{{b_1} - {a_1}}}{{{2^k}}}} } = 0\]
 d.h. $\lim a_k=\lim b_k$. Sei $c\in\lbrack a,b\rbrack$ dieser Wert. Aus stetigkeit von $f$ folgt
 \[f\left( c \right) = \lim f\left( {{a_n}} \right) = \lim f\left( {{b_n}} \right)\]
 Aus 3. folgt
@@ -623,7 +623,7 @@ Falls $x<y$, so ist $\exp\left(y-x\right)>1$ und somit $\exp\left(y\right)>\exp\
 \item Zur Stetigkeit: Sei $x=x_0+h$, $0<h<1$
 \[\exp \left( x \right) - \exp \left( {{x_0}} \right) = \exp \left( {{x_0}} \right)\left( {\exp \left( h \right) - 1} \right)\]
 da
-\[\left| {\exp \left( h \right) - 1} \right| = \mathop {\left| {\sum\limits_{k = 1}^\infty  {\frac{{{h^k}}}{{k!}}} } \right|}\limits^{ \to 0}  \le \mathop {\left| {\sum\limits_{k = 1}^\infty  {\left| {{h^k}} \right|} } \right|}\limits^{h \to 0}  = \frac{{\left| h \right|}}{{1 - \left| h \right|}} \to 0\]
+\[\abs{ {\exp \left( h \right) - 1} } = \mathop {\abs{ {\sum\limits_{k = 1}^\infty  {\frac{{{h^k}}}{{k!}}} } }}\limits^{ \to 0}  \le \mathop {\left| {\sum\limits_{k = 1}^\infty  {\abs{ {{h^k}} }} } \right|}\limits^{h \to 0}  = \frac{{\abs{ h }}}{{1 - \abs{ h }}} \to 0\]
 Also für $x=x_0+h\to x_0$, $\exp\left( x \right)-\left( x_0 \right)\to 0$ und die Funktion $\exp$ ist stetig
 \[\exp \left( x \right) \to \infty \left( {x \to \infty } \right){\text{ und }}\exp \left( x \right) \to 0\left( {x \to  - \infty } \right)\]
 \end{enumerate}
@@ -639,7 +639,7 @@ Also für $x=x_0+h\to x_0$, $\exp\left( x \right)-\left( x_0 \right)\to 0$ und d
 
 \section{Gleichmässige Stetigkeit}
 Sei $f:\Omega\to\R$ eine stetige Funktion auf $\Omega$, d.h.
-\[\forall {x_0} \in \Omega ,\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \R :\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+\[\forall {x_0} \in \Omega ,\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \R :\abs{ {x - {x_0}} } < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
 \[
 \sbox{\tempbox}{%
 $\displaystyle
@@ -657,13 +657,13 @@ $
 \begin{definition}{4.24}
 \underline{Gleichmässig stetig:} \vspace{2mm}\\
 $f:\Omega\to\R^n$ heisst gleichmässig stetig, falls für jedes $\varepsilon>0$ es ein $\delta>0$ gibt, so dass $\forall x,x_0\in\Omega$
-\[\left\| {x - {x_0}} \right\| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+\[\left\| {x - {x_0}} \right\| < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
 \underline{Stetig:} \vspace{2mm}\\
 $\forall x_0\in\omega$, $\forall \varepsilon>0$, $\exists\delta_{x_0,\varepsilon}>0$, $\forall x\in\Omega$:
-\[\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+\[\abs{ {x - {x_0}} } < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
 \underline{Gleich stetig:} \vspace{2mm}\\
 $\forall \varepsilon>0$, $\exists\delta_{\varepsilon}>0$, $\forall x,x_0\in\Omega$:
-\[\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+\[\abs{ {x - {x_0}} } < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
 Stetig: $\delta$ ist abhängig von $\varepsilon$ und $x_0$.\\
 Gleichmässig stetig:$\delta$ ist abhängig von $\varepsilon$, aber unabhängig von $x_0$.
 \end{definition}
@@ -679,8 +679,8 @@ x&\to 2x+5
 \end{align*}
 Dann ist $f$ gleichmässig stetig
 \begin{beweis}{}
-Sei $\varepsilon>0$, $x_0,x\in\R$. Dann \[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {2x + 5 - 2{x_0} + 5} \right| = 2\left| {x - {x_0}} \right|\]
-$\Rightarrow$ Wenn wir $\delta=\frac{\varepsilon}{2}$ wählen, dann \[\left| {x - {x_0}} \right| < \frac{\varepsilon }{2} \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+Sei $\varepsilon>0$, $x_0,x\in\R$. Dann \[\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } = \abs{ {2x + 5 - 2{x_0} + 5} } = 2\abs{ {x - {x_0}} }\]
+$\Rightarrow$ Wenn wir $\delta=\frac{\varepsilon}{2}$ wählen, dann \[\abs{ {x - {x_0}} } < \frac{\varepsilon }{2} \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
 \end{beweis}
 \item \begin{align*}
 f:\Omega&\to\Omega\hspace{5mm}\Omega=\left( 0,\infty\right)\\
@@ -688,13 +688,13 @@ x&\to x^2
 \end{align*}
 $f$ ist stetig, aber nicht gleichmässig stetig.
 \begin{enumerate}[i)]
-\item $f$ stetig: Sei $x_0\in\R$, $\varepsilon>0$\[\left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| = \left| {{x^2} - x_0^2} \right| = \left| {\left( {x - {x_0}} \right)\left( {x + {x_0}} \right)} \right|\] Sei $\abs{x-x_0}<\varepsilon<1$. Dann, $x<x_0+1:=a$. Dann $x,x_0+1<a$
-\[\left| {{x^2} - x_0^2} \right| = \left| {x - {x_0}} \right|\left| {x + {x_0}} \right| < 2a\left| {x - {x_0}} \right|\]
-Wenn wir $\delta=\min\left(1,\frac{\varepsilon}{2a}\right)$ wählen, dann \[\left| {x - x_0^2} \right| < 2a\left| {x - {x_a}} \right| \le \varepsilon \]
+\item $f$ stetig: Sei $x_0\in\R$, $\varepsilon>0$\[\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } = \abs{ {{x^2} - x_0^2} } = \abs{ {\left( {x - {x_0}} \right)\left( {x + {x_0}} \right)} }\] Sei $\abs{x-x_0}<\varepsilon<1$. Dann, $x<x_0+1:=a$. Dann $x,x_0+1<a$
+\[\abs{ {{x^2} - x_0^2} } = \abs{ {x - {x_0}} }\abs{ {x + {x_0}} } < 2a\abs{ {x - {x_0}} }\]
+Wenn wir $\delta=\min\left(1,\frac{\varepsilon}{2a}\right)$ wählen, dann \[\abs{ {x - x_0^2} } < 2a\abs{ {x - {x_a}} } \le \varepsilon \]
 \subsubsection*{Bemerkung}
 $f$ ist abhängig von $\varepsilon$, und $a$ ist $x_0+1$ abhängig von $x_0$.
 \item $f$ ist nicht gleichmässig stetig, d.h. \[\exists \varepsilon  > 0, \forall\delta>0, \exists x_0\in\Omega, \exists x\in\Omega:\abs{x-x_0}<\delta \text{ und }\abs{x^2-x_0^2}\geq \varepsilon\]
-Sei $\varepsilon=1$, $\delta>0$, $x_0=\frac{1}{\delta}$ und $x=x_0+\frac{\delta}{2}$. Dann $\abs{x-x_0}<\frac{\delta}{2}<\delta$ aber \[\left| {{x^2} - x_0^2} \right| = \left| {{{\left( {\frac{1}{\delta } + \frac{\delta }{2}} \right)}^2} - \frac{1}{{{\delta ^2}}}} \right| = 1 + \frac{{{\delta ^2}}}{4} > 1 = \varepsilon \]
+Sei $\varepsilon=1$, $\delta>0$, $x_0=\frac{1}{\delta}$ und $x=x_0+\frac{\delta}{2}$. Dann $\abs{x-x_0}<\frac{\delta}{2}<\delta$ aber \[\abs{ {{x^2} - x_0^2} } = \abs{ {{{\left( {\frac{1}{\delta } + \frac{\delta }{2}} \right)}^2} - \frac{1}{{{\delta ^2}}}} } = 1 + \frac{{{\delta ^2}}}{4} > 1 = \varepsilon \]
 \end{enumerate}
 \item \begin{align*}
 f:\Omega&\to\Omega\hspace{5mm}\Omega=\lbrack 0,4\rbrack\\
@@ -704,11 +704,11 @@ Dann ist $f$ gleichmässig stetig
 \begin{beweis}{}
 Sei $\varepsilon>0$ gegeben. Sei $x_0,x\in\Omega=\lbrack 0,4\rbrack$, $0\leq x,x_0\leq 4\Rightarrow 0\leq x+x_0\leq 8$
 \begin{align*}
-\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| &= \left| {{x^2} - x_0^2} \right|\\
- &= \left| {x - {x_0}} \right|\left| {x + {x_0}} \right| \le \left( {4 + 4} \right)\delta
+\abs{ {x - {x_0}} } < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } &= \abs{ {{x^2} - x_0^2} }\\
+ &= \abs{ {x - {x_0}} }\abs{ {x + {x_0}} } \le \left( {4 + 4} \right)\delta
 \end{align*}
 Sei $\delta=\frac{\varepsilon}{8}$, dann
-\[\left| {x - {x_0}} \right| < \delta  \Rightarrow \left| {f\left( x \right) - f\left( {{x_0}} \right)} \right| < \varepsilon \]
+\[\abs{ {x - {x_0}} } < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
 \end{beweis}
 \item  \begin{align*}
 f:\left( 0,\infty\right)&\to\left( 0,\infty\right)\\
@@ -736,12 +736,12 @@ ist gleichmässig stetig. Was ist der Unterschied? $\lbrack 0,4\rbrack$ ist komp
 Sei $K\subset\R^d$ kompakt und $f:K\to\R^n$ stetig. Dann ist $f$ gleichmässig stetig.
 
 \begin{beweis}{(Indirekt)}
-Sonst gibt es $\varepsilon>0$, so dass für jedes $\delta>0$ Punkte $x,y\in k$ gibt mit \[\left\| {x - y} \right\| < \delta \hspace{5mm}\left| {f\left( x \right) - f\left( y \right)} \right| > \varepsilon \]
-Sei $\forall k\geq 1$, mit $\delta=\frac{1}{k}$, ein Paar $\left( x_k,y_k\right)$ gewählt, so dass\[\left| {{x_k} - {y_k}} \right| < \frac{1}{k}{\text{ und }}\left| {f\left( {{x_k}} \right) - f\left( {{y_k}} \right)} \right| > \varepsilon \]
+Sonst gibt es $\varepsilon>0$, so dass für jedes $\delta>0$ Punkte $x,y\in k$ gibt mit \[\left\| {x - y} \right\| < \delta \hspace{5mm}\abs{ {f\left( x \right) - f\left( y \right)} } > \varepsilon \]
+Sei $\forall k\geq 1$, mit $\delta=\frac{1}{k}$, ein Paar $\left( x_k,y_k\right)$ gewählt, so dass\[\abs{ {{x_k} - {y_k}} } < \frac{1}{k}{\text{ und }}\abs{ {f\left( {{x_k}} \right) - f\left( {{y_k}} \right)} } > \varepsilon \]
 Da $k$ kompakt ist, gibt es eine konvergente Teilfolge $x_{l(k)}\to z$. Aus $\abs{x_k-y_k}<\frac{1}{k}$ folgt dass $y_{l(k)}\to z$. Sei nun $k_0$ so dass
 \[\mathop {\left\| {f\left( {{x_{l\left( {{k_0}} \right)}}} \right) - f\left( z \right)} \right\|}\limits_{f{\text{ stetig}}} < \frac{\varepsilon }{2}\hspace{5mm}\forall k > {k_0}\]
 Dann folgt $\forall k>k_0$:
-\[\left\| {f\left( {{y_{l\left( {{k_0}} \right)}}} \right) - f\left( z \right)} \right\| \ge \left| {\underbrace {f\left( {{y_{l\left( k \right)}}} \right) - f\left( {{x_{l\left( k \right)}}} \right)}_{ > \varepsilon }} \right| - \left| {\underbrace {f\left( {{x_{l\left( k \right)}}} \right) - f\left( z \right)}_{ < \varepsilon /2}} \right| \ge \frac{\varepsilon }{2}\]
+\[\left\| {f\left( {{y_{l\left( {{k_0}} \right)}}} \right) - f\left( z \right)} \right\| \ge \abs{ {\underbrace {f\left( {{y_{l\left( k \right)}}} \right) - f\left( {{x_{l\left( k \right)}}} \right)}_{ > \varepsilon }} } - \abs{ {\underbrace {f\left( {{x_{l\left( k \right)}}} \right) - f\left( z \right)}_{ < \varepsilon /2}} } \ge \frac{\varepsilon }{2}\]
 \end{beweis}
 
 \section{Punktweise und Gleichmässige Konvergenz}
@@ -768,7 +768,7 @@ Insbesondere ist $f\left( x\right)$ nicht stetig.
 \[{f_n}\left( x \right) = \frac{{n{x^2} + 1}}{{nx + 1}},\Omega  = \left[ {0,1} \right]\]
 \[\mathop {\lim }\limits_{n \to \infty } \frac{{n{x^2} + 1}}{{nx + 1}} = \mathop {\lim }\limits_{n \to \infty } \frac{{{x^2} + \frac{1}{n}}}{{x + \frac{1}{n}}} = \frac{{{x^2}}}{x} = x\]
 $f_n(x)\to f(x)=x$ und $f(x)=x$ ist stetig
-\[\left| {{f_n}(x) - x} \right| = \left| {\frac{{n{x^2} + 1}}{{nx + 1}} - x} \right| = \left| {\frac{{1 - x}}{{nx + 1}}} \right| \le \frac{{1 + \left| x \right|}}{{\left| {nx + 1} \right|}} \le \frac{3}{{1 + n}}\]
+\[\abs{ {{f_n}(x) - x} } = \abs{ {\frac{{n{x^2} + 1}}{{nx + 1}} - x} } = \abs{ {\frac{{1 - x}}{{nx + 1}}} } \le \frac{{1 + \abs{ x }}}{{\abs{ {nx + 1} }}} \le \frac{3}{{1 + n}}\]
 Da $x\in\lbrack 1,2\rbrack$, $\abs{nx+1}\geq n+1$ und $1+\abs{x}\leq 3$
 \[\frac{3}{{1 + n}} \le \varepsilon  \Rightarrow \frac{3}{\varepsilon } - 1 \le n\]
 d.h. $\forall\varepsilon>0$, $\exists N_\varepsilon$ s.d. für $n>N_{\varepsilon}=\frac{3}{\varepsilon}-1$
@@ -793,18 +793,18 @@ gleichmässig auf $\overline{B_r(0)}$ gegen $p(z)$
 \begin{beweis}{}
 Sei $z\in\overline{B_r(0)}$ und $r<s<\rho$
 \begin{align*}
-\left| {p(z) - {p_n}(z)} \right| &= \left| {\sum\limits_{k = n + 1}^\infty  {{a_k}{z^k}} } \right|\\
-&\hspace{-3mm}\mathop  \le \limits_{z \in \overline {{B_r}(0)} } \sum\limits_{n + 1}^\infty  {\left| {{a_n}} \right|{r^k}} \\
-& = \sum\limits_{k = n + 1}^\infty  {\left( {{a_k}} \right){{\left| {\frac{r}{s}} \right|}^k}{s^k}} \\
+\abs{ {p(z) - {p_n}(z)} } &= \abs{ {\sum\limits_{k = n + 1}^\infty  {{a_k}{z^k}} } }\\
+&\hspace{-3mm}\mathop  \le \limits_{z \in \overline {{B_r}(0)} } \sum\limits_{n + 1}^\infty  {\abs{ {{a_n}} }{r^k}} \\
+& = \sum\limits_{k = n + 1}^\infty  {\left( {{a_k}} \right){{\abs{ {\frac{r}{s}} }}^k}{s^k}} \\
 &\mathop  \le \limits^{{\left( \text{\textasteriskcentered} \right)}}
-{\left( {\frac{r}{s}} \right)^{n + 1}}\sum\limits_{n + 1}^\infty  {\left| {{a_k}} \right|{s^k}} \\
+{\left( {\frac{r}{s}} \right)^{n + 1}}\sum\limits_{n + 1}^\infty  {\abs{ {{a_k}} }{s^k}} \\
  &\le {\left( {\frac{r}{s}} \right)^{n + 1}}{C_s}
 \end{align*}
 wobei
-\[{C_s}: = \sum\limits_0^\infty  {\left| {{a_k}} \right|{s^k} < \infty } \]
-\[\Rightarrow\left| {p(z) - {p_n}(z)} \right|\mathop  \to \limits_{n \to \infty } 0\]
+\[{C_s}: = \sum\limits_0^\infty  {\abs{ {{a_k}} }{s^k} < \infty } \]
+\[\Rightarrow\abs{ {p(z) - {p_n}(z)} }\mathop  \to \limits_{n \to \infty } 0\]
 mit
-\[\left| {\frac{r}{s}} \right| < 1,k > n + 1 \Rightarrow {\left( {\frac{r}{s}} \right)^k} < {\left( {\frac{r}{s}} \right)^{n + 1}}\tag{\text{\textasteriskcentered}}\]
+\[\abs{ {\frac{r}{s}} } < 1,k > n + 1 \Rightarrow {\left( {\frac{r}{s}} \right)^k} < {\left( {\frac{r}{s}} \right)^{n + 1}}\tag{\text{\textasteriskcentered}}\]
 \end{beweis}
 Die Bedeutung dieses Konvergenzbegriffs ist
 \subsubsection*{Satz 4.31}
@@ -817,13 +817,13 @@ Folgt aus Satz 4.31 und Beispiel 4.30
 
 \begin{beweis}{4.31}
 Sei $x_0\in\Omega$, und $\left( x_n\right)_{n>1}$ eine Folge in $\Omega$ mit Grenzwert $x_0$. Sei $\varepsilon>0$. Wir wählen ein k, so dass
-\[\mathop {\sup }\limits_{x \in \Omega } \left| {{f_k}(x) - f(x)} \right| < \varepsilon \]
+\[\mathop {\sup }\limits_{x \in \Omega } \abs{ {{f_k}(x) - f(x)} } < \varepsilon \]
 Da $f_k$ stetig ist, sei nun $N\geq 1$ mit
-\[\left| {{f_k}\left( {{x_n}} \right) - {f_k}\left( x \right)} \right| \le \varepsilon \hspace{5mm}\forall n > N\]
+\[\abs{ {{f_k}\left( {{x_n}} \right) - {f_k}\left( x \right)} } \le \varepsilon \hspace{5mm}\forall n > N\]
 Dann gilt
 \begin{align*}
-\left\| {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} \right\| &= \left| {f\left( {{x_n}} \right) - {f_k}\left( {{x_n}} \right) + {f_k}\left( {{x_n}} \right) + {f_k}\left( {{x_0}} \right) - {f_k}\left( {{x_0}} \right) - f\left( {{x_0}} \right)} \right|\\
- &\le \left| {f\left( {{x_n}} \right) - {f_k}\left( {{x_n}} \right)} \right| + \left| {{f_k}\left( {{x_n}} \right) - {f_k}\left( {{x_0}} \right)} \right| + \left| {{f_k}\left( {{x_0}} \right) - f\left( {{x_0}} \right)} \right|\\
+\left\| {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} \right\| &= \abs{ {f\left( {{x_n}} \right) - {f_k}\left( {{x_n}} \right) + {f_k}\left( {{x_n}} \right) + {f_k}\left( {{x_0}} \right) - {f_k}\left( {{x_0}} \right) - f\left( {{x_0}} \right)} }\\
+ &\le \abs{ {f\left( {{x_n}} \right) - {f_k}\left( {{x_n}} \right)} } + \abs{ {{f_k}\left( {{x_n}} \right) - {f_k}\left( {{x_0}} \right)} } + \abs{ {{f_k}\left( {{x_0}} \right) - f\left( {{x_0}} \right)} }\\
  &\le 3\varepsilon
 \end{align*}
 \end{beweis}

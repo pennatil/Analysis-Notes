@@ -377,7 +377,7 @@ Aus (b) folgt das $\forall\varepsilon>0$ \[0 < \int\limits_a^{\overline{b}} {f(x
 \subsubsection*{Beweis}
 \begin{enumerate}
 \item $f:I\to\R$ stetig, $I=\lbrack a,b\rbrack$ kompakt, $\Rightarrow f$ gleichmässig stetig.\\
-d.h. zu jedem $\varepsilon >0$ gibt es $\delta >0$ mit \[\left| {x - y} \right| < \delta  \Rightarrow \left| {f(x) - f(y)} \right| < \frac{\varepsilon }{{b - a}}\]
+d.h. zu jedem $\varepsilon >0$ gibt es $\delta >0$ mit \[\abs{ {x - y} } < \delta  \Rightarrow \abs{ {f(x) - f(y)} } < \frac{\varepsilon }{{b - a}}\]
 Für ein $P\in P(I)$ mit Feinheit $\delta(P)<\delta$ gilt dann
 \begin{align*}
 O(f,P)-U(f,P)&=\sum\limits_{i = 1}^n {(\mathop {\sup f}\limits_{[{x_{i - 1}},{x_i}]}  - \mathop {\inf f}\limits_{[{x_{i - 1}},{x_i}]} )} ({x_{i - 1}} - {x_i}) \\
@@ -399,7 +399,7 @@ Für jedes $\varepsilon>0$, haben wir $\frac{{(b - a)(f(b) - f(a))}}{n} < \varep
 Sei $f:I\to \R$ eine beschränkte Funktion. Folgende Aussagen sind äquivalent.
 \begin{enumerate}[\indent I)]
 \item $f$ ist Riemann integrierbar und $A: = \int\limits_a^b {f(x)dx} $
-\item Für jedes $\varepsilon>0$ existiert eine Zahl $\xi>0$, so dass für jede Partition $P_i=\{x_0,x_1,\dots,x_N\}$ von $I$ und alle $\xi_i,\dots,\xi_N \in \R$ gilt \[\mathop {\delta (P) < \delta }\limits_{{x_{k - 1}} \le {\xi _k} \le {x_k},\forall k}  \Rightarrow \left| {A - \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} } \right| < \varepsilon \]
+\item Für jedes $\varepsilon>0$ existiert eine Zahl $\xi>0$, so dass für jede Partition $P_i=\{x_0,x_1,\dots,x_N\}$ von $I$ und alle $\xi_i,\dots,\xi_N \in \R$ gilt \[\mathop {\delta (P) < \delta }\limits_{{x_{k - 1}} \le {\xi _k} \le {x_k},\forall k}  \Rightarrow \abs{ {A - \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} } } < \varepsilon \]
 \end{enumerate}
 Dieser Satz lässt sich auch so formulieren: Eine beschränkte Funktion $f:I\to\R$ ist genau dann Riemann integrierbar wenn der Grenzwert \[\mathop {\mathop {\lim }\limits_{\delta (P) \to 0} }\limits_{{\xi _k} \in [{x_{k - 1}},{x_k}]} \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} \] und dann haben wir \[A=\int\limits_a^b {f(x)dx = \mathop {\lim }\limits_{\delta (P) \to 0} } S(f,P,\delta )\]
 
@@ -409,10 +409,10 @@ Seien $f:\lbrack a,b\rbrack\to\R$ eine beschränkte und integrierbare Funktion, 
 \[\int\limits_a^b {f(x)dx = \mathop {\lim }\limits_{n \to \infty } S(f,{P^{(n)}},{\xi ^{(n)}})} \]
 \subsubsection*{Beweis}
 Wegen Satz 6.8 existiert zu jedem $\varepsilon>0$, ein $\delta>0$ derart, das für alle Partitionen $\delta(P)<\delta$ die Ungleichung
-\[\left| {S(f,P,\xi ) - \int\limits_a^b {f(x)dx} } \right| < \varepsilon \]
+\[\abs{ {S(f,P,\xi ) - \int\limits_a^b {f(x)dx} } } < \varepsilon \]
 gilt und zwar bei beliebiger Wahl der Zwischenpunkte.\\
 Wegen  $\delta(P^{(n)})\to 0$ existiert ein $N\in\N$ mit $\delta(P^{(n)})<\delta$ für alle $n\geq N$.
-Für jedes $n\geq N$ ist daher \[\left| {S(f,{P^{(n)}},\xi ) - \int\limits_a^b {f(x)dx} } \right| < \varepsilon \] woraus sich die Behauptung unmittelbar ergibt.
+Für jedes $n\geq N$ ist daher \[\abs{ {S(f,{P^{(n)}},\xi ) - \int\limits_a^b {f(x)dx} } } < \varepsilon \] woraus sich die Behauptung unmittelbar ergibt.
 \subsubsection*{Beispiel}
 \[\int\limits_0^1 {({x^2} - x)dx = ?} \]
 $$f(x) = {x^2} - x \text{ stetig }\Rightarrow\text{ $f$ integrierbar}$$
@@ -438,7 +438,7 @@ Seien $a<c<b$ und $\alpha, \beta \in \R$ und $f,g:I=\lbrack a,b \rbrack\to\R$ zw
 \begin{enumerate}
 \item Die Funktion $\alpha f + \beta g$ ist integrierbar mit \[\int\limits_a^b {(\alpha f + \beta g)dx = \alpha \int\limits_a^b {f(x)dx + \beta \int\limits_a^b {g(x)dx} } } \]
 \item Wenn $f,g$ die Ungleichung $f(x)\leq g(x), \forall x\in\lbrack a,b\rbrack$ erfüllen, dann gilt \[\int\limits_a^b {f(x)dx \le \int\limits_a^b {g(x)dx} } \]
-\item $\left| f \right|$ ist R. integrierbar und \[\left| {\int\limits_a^b {f(x)dx} } \right| \le \int\limits_a^b {\left| {f(x)} \right|dx} \]
+\item $\abs{ f }$ ist R. integrierbar und \[\abs{ {\int\limits_a^b {f(x)dx} } } \le \int\limits_a^b {\abs{ {f(x)} }dx} \]
 \item Das Produkt $fg$ ist integrierbar.
 \end{enumerate}
 
@@ -448,7 +448,7 @@ Wir bezeichnen die Menge aller Riemann integrierbaren Funktionen $f:I\to \R$ mit
 ist ein Unterraum von $R(I)$ \[C(I)\subset R(I)\subset F(I)\]
 \subsubsection*{Beweis 6.9}
 \begin{enumerate}
-\item Setze $h:=\alpha f + \beta g$ und sei $\varepsilon>0$ beliebig gegeben. Da $f$ und $g$ integrierbar sind, existieren wegen Riem. Kriterium (Satz 6.6).\\ Partitionen $P_1$ und $P_2 \in P(I)$ mit \[O(f,{P_1}) - U(f,{P_1}) < \frac{\varepsilon }{{(\left| \alpha  \right| + \left| \beta  \right|)}}\] und  \[O(g,{P_2}) - U(g,{P_2}) < \frac{\varepsilon }{{(\left| \alpha  \right| + \left| \beta  \right|)}}\] Aus der Definition von $h$ folgt zunächst \[\left| {h(x) - h(y)} \right| \le \left| \alpha  \right|\left| {f(x) - f(y)} \right| + \left| \beta  \right|\left| {g(x) - g(y)} \right|\] Mit der verfeinerten Partition $P:=P_1\cup P_2$ ergibt sich unter Verwendung von (\textasteriskcentered), wobei
+\item Setze $h:=\alpha f + \beta g$ und sei $\varepsilon>0$ beliebig gegeben. Da $f$ und $g$ integrierbar sind, existieren wegen Riem. Kriterium (Satz 6.6).\\ Partitionen $P_1$ und $P_2 \in P(I)$ mit \[O(f,{P_1}) - U(f,{P_1}) < \frac{\varepsilon }{{(\abs{ \alpha  } + \abs{ \beta  })}}\] und  \[O(g,{P_2}) - U(g,{P_2}) < \frac{\varepsilon }{{(\abs{ \alpha  } + \abs{ \beta  })}}\] Aus der Definition von $h$ folgt zunächst \[\abs{ {h(x) - h(y)} } \le \abs{ \alpha  }\abs{ {f(x) - f(y)} } + \abs{ \beta  }\abs{ {g(x) - g(y)} }\] Mit der verfeinerten Partition $P:=P_1\cup P_2$ ergibt sich unter Verwendung von (\textasteriskcentered), wobei
 
 
 \[
@@ -458,18 +458,18 @@ ist ein Unterraum von $R(I)$ \[C(I)\subset R(I)\subset F(I)\]
 Für beschränkte Funktion $h$ auf einen Intervall $I$ gilt
 \begin{align*}
 O(h,P) - U(h,P)&=\sum\limits_{k = 1}^n {(\mathop {\sup h}\limits_{[{x_{k - 1}},{x_k}]}  - \mathop {\inf h}\limits_{[{x_{k + 1}},{x_k}]} )({x_k} - {x_{k - 1}})} \\
-&\mathop  =\limits^ *  \sum\limits_{x,y \in {I_k}} {\sup \left| {h(x) - h(y)} \right|({x_k} - {x_{k - 1}})}\\
-&\le \left| \alpha  \right|\sum {\mathop {\sup }\limits_{x,y \in {I_k}} \left| {f(x) - f(y)} \right|({x_k} - {x_{k - 1}})}\\
-&+ \left| \beta  \right|\sum {\mathop {\sup }\limits_{x,y \in {I_k}} \left| {g(x) - g(y)} \right|({x_k} - {x_{k - 1}})} \\
-&= \left| \alpha  \right|\sum\limits_{k = 1}^n {(\sup f - \inf f)({x_k} - {x_{k - 1}})} \\
-&+ \left| \beta  \right|\sum\limits_{k = 1}^n {(\sup g - \inf g)({x_k} - {x_{k - 1}})} \\
-&=\left| \alpha  \right|[O(f,P) - U(f,P)] + \left| \beta  \right|[O(g,P) - U(g,P)]\\
-&< \left| \alpha  \right|\frac{\varepsilon }{{(\left| \alpha  \right| + \left| \beta  \right|)}} + \left| \beta  \right|\frac{\varepsilon }{{(\left| \alpha  \right| + \left| \beta  \right|)}} = \varepsilon
+&\mathop  =\limits^ *  \sum\limits_{x,y \in {I_k}} {\sup \abs{ {h(x) - h(y)} }({x_k} - {x_{k - 1}})}\\
+&\le \abs{ \alpha  }\sum {\mathop {\sup }\limits_{x,y \in {I_k}} \abs{ {f(x) - f(y)} }({x_k} - {x_{k - 1}})}\\
+&+ \abs{ \beta  }\sum {\mathop {\sup }\limits_{x,y \in {I_k}} \abs{ {g(x) - g(y)} }({x_k} - {x_{k - 1}})} \\
+&= \abs{ \alpha  }\sum\limits_{k = 1}^n {(\sup f - \inf f)({x_k} - {x_{k - 1}})} \\
+&+ \abs{ \beta  }\sum\limits_{k = 1}^n {(\sup g - \inf g)({x_k} - {x_{k - 1}})} \\
+&=\abs{ \alpha  }[O(f,P) - U(f,P)] + \abs{ \beta  }[O(g,P) - U(g,P)]\\
+&< \abs{ \alpha  }\frac{\varepsilon }{{(\abs{ \alpha  } + \abs{ \beta  })}} + \abs{ \beta  }\frac{\varepsilon }{{(\abs{ \alpha  } + \abs{ \beta  })}} = \varepsilon
 \end{align*}
 
 Nach Bmk. 6.2 $P_1\subset P$
 \[\Rightarrow U(f,P_1)<U(f,P)\] und \[O(f,P)<O(f,P_1)\]
-dann \[-U(f,P)<-U(f,P_1)\] und \[O(f,P)-U(f,P)<O(f,P_1)-U(f,P_1)<\frac{\varepsilon}{(\left| \alpha  \right| + \left| \beta  \right|)}\]
+dann \[-U(f,P)<-U(f,P_1)\] und \[O(f,P)-U(f,P)<O(f,P_1)-U(f,P_1)<\frac{\varepsilon}{(\abs{ \alpha  } + \abs{ \beta  })}\]
 
 \item Seien $f,g:I\to\R$ integrierbar mit $f(x)\leq g(x), \forall x \in I$.\\
 Die Funktion $h:=g-f$ ist wegen (1.) integrierbar. Sei nur $P=\{x_0,x_1,\dots,x_n\}$ eine beliebige Partition von $\lbrack a,b\rbrack$. Dann folgt $\inf h(x) \ge 0,\forall k = 0,1, \ldots ,n$ und daher \[U(h,P) = \sum\limits_P {(\inf h)({x_k} - {x_{k - 1}}) \ge 0} \]
@@ -477,13 +477,13 @@ Was wiederum $\int\limits_{\underline{a}}^b {h(x)dx = \sup U(h,P) \ge 0} $ impli
 Da $h$ aber integrierbar ist, folgt hieraus \[0 \le \int\limits_{\underline{a}}^b {h(x)dx = \int\limits_a^b {h(x)dx} } \]
 \[ = \int\limits_a^b {(g(x) - f(x))dx = \int\limits_a^b {g(x)dx - \int\limits_a^b {f(x)dx} } }\geq 0 \]
 Dies liefert die Behauptung
-\item Nun gilt $ - \left| {f(x)} \right| \le f(x) \le \left| {f(x)} \right|$, $\forall x\in I$\\
+\item Nun gilt $ - \abs{ {f(x)} } \le f(x) \le \abs{ {f(x)} }$, $\forall x\in I$\\
 Nach (2) folgt daraus die Ungleichung
-\[ - \int\limits_a^b {\left| {f(x)} \right|dx}  \le \int\limits_a^b {f(x)dx}  \le \int\limits_a^b {\left| {f(x)dx} \right|} \]
+\[ - \int\limits_a^b {\abs{ {f(x)} }dx}  \le \int\limits_a^b {f(x)dx}  \le \int\limits_a^b {\abs{ {f(x)dx} }} \]
 Diese Ungleichung ist äquivalent zu
-\[\left| {\int\limits_a^b {f(x)dx} } \right| < \int\limits_a^b {\left| {f(x)} \right|dx} \]
+\[\abs{ {\int\limits_a^b {f(x)dx} } } < \int\limits_a^b {\abs{ {f(x)} }dx} \]
 \item Als integrierbare Funktionen sind $f$ und $g$ beschränkt. Also existieren die Konstanten
-\[\alpha : = \mathop {\sup }\limits_{x \in [a,b]} \left| {f(x)} \right|{\text{ und }}\beta : = \mathop {\sup }\limits_{x \in [a,b]} \left| {g(x)} \right|\]
+\[\alpha : = \mathop {\sup }\limits_{x \in [a,b]} \abs{ {f(x)} }{\text{ und }}\beta : = \mathop {\sup }\limits_{x \in [a,b]} \abs{ {g(x)} }\]
 Wegen dem Riem. Kriterium (Satz 6.6) gibt es Partitionen $P_1,P_2$ mit
 \begin{align*}
 O(f,P_1)-U(f,P_1)&<\frac{\varepsilon}{(\alpha + \beta)}\\
@@ -491,20 +491,20 @@ O(f,P_1)-U(f,P_1)&<\frac{\varepsilon}{(\alpha + \beta)}\\
 \end{align*}
 Setzen wir $h:=fg$ so gilt
 \begin{align*}
-\left| {h(x) - h(y)} \right| &\le \left| {f(x)} \right|\left| {g(x) - g(y)} \right| + \left| {g(y)} \right|\left| {f(x) - f(y)} \right|\\
- &\le \alpha \left| {g(x) - g(y)} \right| + \beta \left| {f(x) - f(y)} \right|, \forall x,y\in \lbrack a,b\rbrack
+\abs{ {h(x) - h(y)} } &\le \abs{ {f(x)} }\abs{ {g(x) - g(y)} } + \abs{ {g(y)} }\abs{ {f(x) - f(y)} }\\
+ &\le \alpha \abs{ {g(x) - g(y)} } + \beta \abs{ {f(x) - f(y)} }, \forall x,y\in \lbrack a,b\rbrack
 \end{align*}
 Sei $P=P_1\cup P_2$.\\
-Wie im Beweis von (1.) ergibt sich unter Verwendung von \[\mathop {\sup }\limits_{x \in I} h - \mathop {\inf }\limits_{x \in I} h = \sup \left\{ {\left| {h(x) - h(y)} \right|x,y \in I} \right\}\]
+Wie im Beweis von (1.) ergibt sich unter Verwendung von \[\mathop {\sup }\limits_{x \in I} h - \mathop {\inf }\limits_{x \in I} h = \sup \left\{ {\abs{ {h(x) - h(y)} }x,y \in I} \right\}\]
 dann
 \begin{align*}
 O(h,P)-U(h,P) =&\sum\limits_{k = 1}^n {(\sup h - \inf h)({x_k} - {x_{k - 1}})} \\
- =&\sum\limits_{k = 1}^n {\mathop {\sup }\limits_{x,y \in {I_k}} \left| {h(x) - h(y)} \right|({x_k} - {x_{k - 1}})} \\
-\le&\left| \beta  \right|\sum {\mathop {\mathop {\sup }\limits_{{I_k}} \left| {f(x) - f(y)} \right|({x_k} - {x_{k - 1}}) }}\\
-+&\left| \alpha  \right|\sum {\mathop {\mathop {\sup }\limits_{{I_k}} \left| {g(x) - g(y)} \right|({x_k} - {x_{k - 1}})} } \\
-=&\left| \beta  \right|\sum {(\mathop {\sup }\limits_{{I_k}} f - \mathop {\inf }\limits_{{I_k}} f)({x_k} - {x_{k - 1}})} \\
-+&\left| \alpha  \right|\sum {(\mathop {\sup }\limits_{{I_k}} g - \mathop {\inf }\limits_{{I_k}} g)({x_k} - {x_{k - 1}})} \\
-=&\left| \beta  \right|[O(f,P) - U(f,P)] + \left| \alpha  \right|[O(g,P) - U(g,P)] < \varepsilon
+ =&\sum\limits_{k = 1}^n {\mathop {\sup }\limits_{x,y \in {I_k}} \abs{ {h(x) - h(y)} }({x_k} - {x_{k - 1}})} \\
+\le&\abs{ \beta  }\sum {\mathop {\mathop {\sup }\limits_{{I_k}} \abs{ {f(x) - f(y)} }({x_k} - {x_{k - 1}}) }}\\
++&\abs{ \alpha  }\sum {\mathop {\mathop {\sup }\limits_{{I_k}} \abs{ {g(x) - g(y)} }({x_k} - {x_{k - 1}})} } \\
+=&\abs{ \beta  }\sum {(\mathop {\sup }\limits_{{I_k}} f - \mathop {\inf }\limits_{{I_k}} f)({x_k} - {x_{k - 1}})} \\
++&\abs{ \alpha  }\sum {(\mathop {\sup }\limits_{{I_k}} g - \mathop {\inf }\limits_{{I_k}} g)({x_k} - {x_{k - 1}})} \\
+=&\abs{ \beta  }[O(f,P) - U(f,P)] + \abs{ \alpha  }[O(g,P) - U(g,P)] < \varepsilon
 \end{align*}
 \end{enumerate}
 
@@ -653,7 +653,7 @@ Insbesondere spielt es keine Rolle, welche Werte die Stammfunktion im Inneren de
 \hline
     Definitions Bereich & Funktion $f$                          & Stammfunktion $F$                                                      \\\hline\hline
     $(0,\infty)$        & $x^\alpha,\text{ }\alpha\in\R$ & $\frac{{{x^{\alpha  + 1}}}}{{\alpha  + 1}} + c,{\rm{ }}\alpha  \ne  - 1$ \\ [1.5ex]
-    ~                   & ~                                     & $\log \left| x \right| + c,{\rm{ }}\alpha  =  - 1$                       \\[1.5ex]\hline
+    ~                   & ~                                     & $\log \abs{ x } + c,{\rm{ }}\alpha  =  - 1$                       \\[1.5ex]\hline
     $\R$        & $x^n, n\in\N$                 & $\frac{{{x^{n + 1}}}}{{n + 1}} + c,{\rm{ }}n \in \N$             \\[1.5ex]\hline
     $\R$        & ${e^x}$                             & ${e^x}+c$                                                                \\ [1.5ex]\hline
     $\R$        & $\sin{x}$                             & $-\cos{x}+c$                                                                \\ [1.5ex]\hline
@@ -661,8 +661,8 @@ $\R$        & $\cos{x}$                             & $\sin{x}+c$               
 $(-1,1)$        & $\frac{1}{\sqrt{1-x^2}}$                             & $\arcsin{x}+c$                                                                \\ [1.5ex]\hline
 $(-1,1)$        & $\frac{-1}{\sqrt{1-x^2}}$                             & $\arccos{x}+c$                                                                \\ [1.5ex]\hline
 $\R$        & $\frac{1}{{1+x^2}}$                             & $\arctan{x}+c$                                                                \\ [1.5ex]\hline
-$(-\frac{\pi}{2},\frac{\pi}{2})$        & $\tan{x}$                             & $- \ln \left| {\cos x} \right| + c$                                                                \\ [1.5ex]\hline
-$(0,\pi)$        & $\cot{x}$                             & $\ln \left| {\sin x} \right| + c$                                                                \\[1.5ex]\hline
+$(-\frac{\pi}{2},\frac{\pi}{2})$        & $\tan{x}$                             & $- \ln \abs{ {\cos x} } + c$                                                                \\ [1.5ex]\hline
+$(0,\pi)$        & $\cot{x}$                             & $\ln \abs{ {\sin x} } + c$                                                                \\[1.5ex]\hline
 %Hello \\
 $\R$ & $\sinh x$ & $\cosh x + c$\\[1.5ex]\hline
 $\R$ & $\cosh x$ & $\sinh x + c$\\[1.5ex]\hline
@@ -672,7 +672,7 @@ $\lbrack -1,1\rbrack$ & $\frac{1}{1-x^2}$ & $\arctanh x + c$ \\[1.5ex]\hline
  \end{tabularx}
 
 \subsubsection*{Beispiel}
-\[F(x)=-\ln\left| \cos x \right| = -\frac{1}{2}\ln\left(\cos x\right)^2\]
+\[F(x)=-\ln\abs{ \cos x } = -\frac{1}{2}\ln\left(\cos x\right)^2\]
 und die Ableitung ist (nach Kettenregel):
 \[F'(x) =  - \frac{1}{2}\frac{1}{{\cos {{(x)}^2}}}(2\cos x)( - \sin x) = \frac{{\sin x}}{{\cos x}} = \tan x\]
 
@@ -772,7 +772,7 @@ Also:
 \end{align*}
 
 \subsubsection*{Beispiel 6.24 (Stirlingsche Formel)}
-Für $n\geq 2$ sei $\ln (n!) = \sum\limits_{k = 2}^n {\ln (k)} $. Wir zeigen dass man $\ln\left| k\right|$ sehr gut durch $\int\limits_{k - 1/2}^{k + 1/2} {\ln xdx} $ approximieren kann.\\
+Für $n\geq 2$ sei $\ln (n!) = \sum\limits_{k = 2}^n {\ln (k)} $. Wir zeigen dass man $\ln\abs{ k}$ sehr gut durch $\int\limits_{k - 1/2}^{k + 1/2} {\ln xdx} $ approximieren kann.\\
 
 \noindent Da \[x\ln x-x\] Stammfunktion von $\ln(x)$ ist, folgt \[\int\limits_{k - 1/2}^{k + 1/2} {\ln xdx}  = \left. {x\ln x - x} \right|_{k - 1/2}^{k + 1/2}\] Darin kommen also $\ln\left(k+\frac{1}{2}\right)$ sowie $\ln\left(k-\frac{1}{2}\right)$ vor. Wir benutzen nun Taylor:\\
 
@@ -784,18 +784,18 @@ Für $n\geq 2$ sei $\ln (n!) = \sum\limits_{k = 2}^n {\ln (k)} $. Wir zeigen das
 \end{array}} \right\}$ angewendet ergibt:
 \[\ln \left( {k + \frac{1}{2}} \right) = \ln k + \frac{1}{{2k}} - \frac{1}{{8{k^2}}} + {t_k}\]
 wobei \[{t_k} = \frac{2}{{{\xi ^3}}}\frac{1}{{3!}}{\left( {\frac{1}{2}} \right)^3} = \frac{1}{{24{\xi ^3}}}\]
-\[\left| {{t_k}} \right| \le \frac{1}{{24{k^3}}}\text{\hspace{10mm}}\xi  \in \left[ {k,k + \frac{1}{2}} \right]\]
+\[\abs{ {{t_k}} } \le \frac{1}{{24{k^3}}}\text{\hspace{10mm}}\xi  \in \left[ {k,k + \frac{1}{2}} \right]\]
 
 \noindent Analog:
 \[\ln \left( {k - \frac{1}{2}} \right) = \ln k - \frac{1}{{2k}} - \frac{1}{{8{k^2}}} + {t'_k}\]
 
-\[\left| {{t'_k}} \right| \le \frac{1}{{24{\left(k-\frac{1}{2}\right)^3}}}\]
+\[\abs{ {{t'_k}} } \le \frac{1}{{24{\left(k-\frac{1}{2}\right)^3}}}\]
 Also:
 \begin{align*}
 \int\limits_{k - 1/2}^{k + 1/2} x\ln  - xdx =& \left( {k + \frac{1}{2}} \right)\left( {\ln k + \frac{1}{{2k}} - \frac{1}{{8{k^2}}} + {t_k}} \right) - \left( {k + \frac{1}{2}} \right)\\
 -&\left[ {\left( {k - \frac{1}{2}} \right)\left( {\ln k - \frac{1}{2k} - \frac{1}{8{k^2}} + t{'_k}} \right) - \left( {k - \frac{1}{2}} \right)} \right]\\
 =&\ln k - \frac{1}{8{k^2}} + \left( {k + \frac{1}{2}} \right){t_k} - \left( {k - \frac{1}{2}} \right)t{'_k}\\
-=&\ln k + {r_k}\hspace{10mm}\left| {r_k} \right| \le \frac{c}{k^2}
+=&\ln k + {r_k}\hspace{10mm}\abs{ {r_k} } \le \frac{c}{k^2}
 \end{align*}
 
 \noindent Mit
@@ -821,7 +821,7 @@ Ersetzen wir $\ln \left( {n + \frac{1}{2}} \right) = \ln n + \frac{1}{{2n}} - \f
 \[\ln (n!) = n\ln n + \frac{1}{2}\ln n - n + {a_n}\]
 wobei
 \[{a_n} = {\frac{1}{{4n}} + \left( {n + \frac{1}{2}} \right)\left( { - \frac{1}{{8{n^2}}} + {t_n}} \right)} + \sum\limits_{k = 2}^n {{r_k} - \int\limits_1^{\frac{3}{2}} {\ln xdx} } \]
-und $\left| {{r_k}} \right| \le \frac{c}{{{k^2}}} \Rightarrow \sum\limits_{k = 2}^n {{r_k}} $ konvergiert.\\
+und $\abs{ {{r_k}} } \le \frac{c}{{{k^2}}} \Rightarrow \sum\limits_{k = 2}^n {{r_k}} $ konvergiert.\\
 
 \noindent Sei $a:=\lim a_n$, $b=e^a$ und $b_n=e^{a_n}$. Also:
 \[\log n! = \left( {n + \frac{1}{2}} \right)\log n - n + {a_n} = \log {n^{n + \frac{1}{2}}} - n + {a_n}\]
@@ -904,8 +904,8 @@ Die Substitution $x=\cos t$ $\frac{dx}{dt}=-\sin t, dx=-\sin t dt$
 
 \begin{align*}
 \int\tan tdt =&- \int {\frac{1}{{\cos t}}( - \sin t)dt}\\
- = &- \int {\frac{1}{x}}   dx= - \log \left| x \right| + C\\
-=& - \log \left| {\cos t} \right| + C
+ = &- \int {\frac{1}{x}}   dx= - \log \abs{ x } + C\\
+=& - \log \abs{ {\cos t} } + C
 \end{align*}
 
 \end{enumerate}
@@ -1025,7 +1025,7 @@ Partialbruchzerlegung:
 \begin{itemize}
 \item \underline{Typ O:} Polynom:\[\int \sum a_{n}x^{n}dx=\sum a_{n}\dfrac {x^{n+1}}{n+1}+c\]
 \item \underline{Typ I:} Inverse Potenzen \[\int {\frac{{dx}}{{(x - {x_0})}^r}}  = \left\{ {\begin{array}{*{20}{c}}
-{\log \left| {x - {x_0}} \right| + c}&{{\text{für = 1}}}\\
+{\log \abs{ {x - {x_0}} } + c}&{{\text{für = 1}}}\\
 {\frac{1}{{(1 - r)}}\frac{1}{{{{(x - {x_0})}^{r - 1}}}}}&{{\text{für}} \ge {\rm{2}}}
 \end{array}} \right.\]
 
@@ -1035,10 +1035,10 @@ Substitution: $x-\alpha =\beta t$, $dx=\beta dt$ ergibt \[\int {\dfrac {b\lbrack
 \[\int{\frac{t}{(t^2 +1)^m}dt}\text{\hspace{10mm} mit }t^2+1=u, 2t dt=du\]
 $$=\frac{1}{2}\int{\frac{du}{u^m}} = \left\{ {\begin{array}{*{20}{c}}
 {\frac{{{u^{ - m + 1}}}}{{2(1 - m)}}}&{{\rm{, }}m \ge 2}\\
-{\frac{1}{2}\ln \left| u \right|}&{\text{, }m = 1}
+{\frac{1}{2}\ln \abs{ u }}&{\text{, }m = 1}
 \end{array}} \right. = \left\{ {\begin{array}{*{20}{c}}
 {\frac{1}{{2(1 - m)}}\frac{1}{{({t^2} + 1)}}(1 - m)}&{{\rm{, }}m \ge 2}\\
-{\frac{1}{2}\ln \left| {1 + {t^2}} \right|}&{\text{, }m = 1}
+{\frac{1}{2}\ln \abs{ {1 + {t^2}} }}&{\text{, }m = 1}
 \end{array}} \right.$$
 Sei
 \[I_m :=\int{\frac{dt}{(t^2 +1)^m}}\]
@@ -1071,7 +1071,7 @@ I_2=&\int{\frac{dt}{(t^2 +1)^2}}=\frac{1}{2}\left[ \frac{t}{(t^2 +1)}+\frac{1}{2
 \[\Rightarrow A(x+1)+B(x-4)=1\]
 \[x=4\Rightarrow A\cdot 5=1\Rightarrow A=\frac{1}{5}\]
 \[x=-1\Rightarrow B\cdot (-5)=1\Rightarrow B=-\frac{1}{5}\]
-\[\int {\frac{1}{{{x^2} - 3x - 4}}dx = \frac{1}{5}\int {\left( {\frac{1}{{x - 4}} - \frac{1}{{x + 1}}} \right)dx = \frac{1}{5}} } \ln \left| {\frac{{x - 4}}{{x + 1}}} \right| + c\]
+\[\int {\frac{1}{{{x^2} - 3x - 4}}dx = \frac{1}{5}\int {\left( {\frac{1}{{x - 4}} - \frac{1}{{x + 1}}} \right)dx = \frac{1}{5}} } \ln \abs{ {\frac{{x - 4}}{{x + 1}}} } + c\]
 \item \[\frac{9}{{{x^3} - 3x - 2}} = \frac{9}{{(x - 2){{(x + 1)}^2}}} = \frac{A}{{x - 2}} + \frac{{Bx + C}}{{{{(x + 1)}^2}}}\]
 \[A{(x + 1)^2} + (Bx + C)(x - 2) = 9\]
 
@@ -1082,8 +1082,8 @@ I_2=&\int{\frac{dt}{(t^2 +1)^2}}=\frac{1}{2}\left[ \frac{t}{(t^2 +1)}+\frac{1}{2
 \[\Rightarrow \frac{9}{x^3-3x-2}=\frac{1}{x-2}+\frac{-x-4}{(x+1)^2}\]
 \begin{align*}
 \int \frac{9}{{{x^3} - 3x - 2}}dx =&\int {\left( {\frac{1}{{x - 2}} + \frac{{ - x - 1}}{{{{(x + 1)}^2}}} - \frac{3}{{{{(x + 1)}^2}}}} \right)dx} \\
- =&\ln \left| {x - 2} \right| - \ln \left| {x + 1} \right| + \frac{3}{{x + 1}} + c\\
- =&\ln \left| {\frac{{x - 2}}{{x + 1}}} \right| + \frac{3}{{x + 1}} + c
+ =&\ln \abs{ {x - 2} } - \ln \abs{ {x + 1} } + \frac{3}{{x + 1}} + c\\
+ =&\ln \abs{ {\frac{{x - 2}}{{x + 1}}} } + \frac{3}{{x + 1}} + c
 \end{align*}
 \end{enumerate}
 \section{Das Uneigentliche Integral}
@@ -1163,7 +1163,7 @@ Aus (\textasteriskcentered) folgt: \[0<f(n) \le \sum\limits_{k = 1}^\infty  {f(k
 \begin{enumerate}
 \item $\sum {(s) = \sum\limits_{k = 1}^\infty  {\frac{1}{{{k^s}}}} } $ existiert für alle $s>1$
 $$\int\limits_1^\infty  {\frac{1}{{{x^s}}}dx}  = \mathop {\lim }\limits_{b \to \infty } \int\limits_1^b {{x^{ - s}}dx}  = \lim \left\{ {\begin{array}{*{20}{c}}
-{\log \left| b \right|}&{s = 1}\\
+{\log \abs{ b }}&{s = 1}\\
 {\left. {\frac{{{x^{ - s + 1}}}}{{1 - s}}} \right|_1^b}&{s > 1}
 \end{array}} \right. $$
 $$= \left\{ {\begin{array}{*{20}{c}}
@@ -1173,10 +1173,10 @@ $$= \left\{ {\begin{array}{*{20}{c}}
 und
 \[0 \le \sum\limits_{n = 1}^\infty  {{n^{ - s}}}  - \int\limits_1^\infty  {f(x)dx}  \le f(1) = 1\]
 \[ \Rightarrow \frac{1}{{s - 1}}\sum\limits_{n = 1}^\infty  {{n^{ - s}}}  \le 1 + \frac{1}{{s - 1}} = \frac{s}{{s - 1}}\]
-\item \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx}  =  - \int\limits_{ - \infty }^0 {x{e^{ - {x^2}}}dx}  + \int\limits_0^\infty  {x{e^{ - {x^2}}}dx}  = 2\int\limits_0^\infty  {x{e^{ - {x^2}}}dx} \]
+\item \[\int\limits_{ - \infty }^\infty  {\abs{ x }{e^{ - {x^2}}}dx}  =  - \int\limits_{ - \infty }^0 {x{e^{ - {x^2}}}dx}  + \int\limits_0^\infty  {x{e^{ - {x^2}}}dx}  = 2\int\limits_0^\infty  {x{e^{ - {x^2}}}dx} \]
 \[\int\limits_0^b {x{e^{ - {x^2}}}dx = \frac{1}{2}\int\limits_0^{{b^2}} {{e^{ - u}}du} }\text{\hspace{10mm} mit }u=x^2, du=2xdx \]
 \[ = \frac{1}{2}\left( {1 - {e^{ - {b^2}}}} \right) \to \frac{1}{2}\text{ für }b\to \infty\]
-Somit gilt \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx = 1} \]
+Somit gilt \[\int\limits_{ - \infty }^\infty  {\abs{ x }{e^{ - {x^2}}}dx = 1} \]
 \item Wir haben die folgende einfachen aber wichtigen Beispiele
 \begin{enumerate}
 \item \[\int\limits_{ a }^\infty  {\frac{{dx}}{{{x^s}}}}  = \left\{ {\begin{array}{*{20}{c}}
@@ -1200,7 +1200,7 @@ Somit gilt \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx 
 \end{enumerate}
 \subsubsection*{Satz 6.32 (Majorantenkriterium)}
 \begin{enumerate}[\indent a)]
-\item Sei $f:\lbrack a,\infty )\to\R$ stetig. Dann gilt \[\forall x:\left| f(x)\right| <g(x)\] und $\int\limits_a^\infty  {g(x)}$ konvergent $\Rightarrow \int {f(x)dx} $ (absolut) konvergent.
+\item Sei $f:\lbrack a,\infty )\to\R$ stetig. Dann gilt \[\forall x:\abs{ f(x)} <g(x)\] und $\int\limits_a^\infty  {g(x)}$ konvergent $\Rightarrow \int {f(x)dx} $ (absolut) konvergent.
 \item Weiterhin gilt folgende Umkehrung: $\forall x:0\leq g(x)\leq f(x)$ und $\int\limits_a^\infty  {g(x)}$ divergent $\Rightarrow \int\limits_a^\infty  {f(x)}$ divergent.
 \end{enumerate}
 
@@ -1213,5 +1213,5 @@ Somit gilt \[\int\limits_{ - \infty }^\infty  {\left| x \right|{e^{ - {x^2}}}dx 
 \[\Rightarrow\int\limits_0^\infty  {\frac{{{t^2}}}{{{{\left( {1 + 6{t^2}} \right)}^{5/2}}}}} dt\text{ divergiert weil }\int\limits_0^\infty  {\frac{c}{t}} dt\text{ divergiert}\]
 \item Exponentialintegral:
 \[{E_i}(x): = \int\limits_{ - \infty }^x  {\frac{{{e^t}}}{t}dt} \text{ für }x<0\]
-Da $\mathop {\lim }\limits_{t \to  - \infty } t{e^t} = 0$, gibt es $c>0$ mit $\left| {t{e^t}} \right| \le c$, $\forall t\in\lbrack -\infty ,x\rbrack$, und somit gilt \[\left| {\frac{{{e^t}}}{t}} \right| = \left| {\frac{{t{e^t}}}{{{t^2}}}} \right| \le \frac{c}{{{t^2}}}\] Mit der Konvergenz des Integrals $\int\limits_{ - \infty }^x {\frac{1}{{{t^2}}}dt} $ folgt die (absolute) Konvergenz von $E_i(x)$ für alle $x<0$
+Da $\mathop {\lim }\limits_{t \to  - \infty } t{e^t} = 0$, gibt es $c>0$ mit $\abs{ {t{e^t}} } \le c$, $\forall t\in\lbrack -\infty ,x\rbrack$, und somit gilt \[\abs{ {\frac{{{e^t}}}{t}} } = \abs{ {\frac{{t{e^t}}}{{{t^2}}}} } \le \frac{c}{{{t^2}}}\] Mit der Konvergenz des Integrals $\int\limits_{ - \infty }^x {\frac{1}{{{t^2}}}dt} $ folgt die (absolute) Konvergenz von $E_i(x)$ für alle $x<0$
 \end{enumerate}

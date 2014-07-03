@@ -57,7 +57,7 @@ Beim Beispiel 2., haben wir schon letztes Semester gesehen dass \[\frac{df(t)}{d
 \begin{align*}
 f'=-\alpha f\Rightarrow \frac{f'}{f}&=-\alpha\\
 \int{\frac{f'(t)}{f(t)}dt}&=-\int{\alpha dt}\\
-\ln\left| f(t)\right|&=-\alpha t+C\\
+\ln\abs{ f(t)}&=-\alpha t+C\\
 \Rightarrow f(t)&=Ke^{-\alpha t}\text{ mit }K={e^C}
 \end{align*}
 
@@ -383,7 +383,7 @@ d.h. $\left( \ln y(x)\right)'=a(x)$. Sei $A(x)$ eine Stammfunktion von $a(x)$, s
 Die allgemeine Lösung von $y'=ay$ ist $y(x)=Ke^{A(x)}$ wobei $K\in\R$ und $A'(x)=a(x)$
 \subsubsection*{Beispiel}
 \[xy'-2y=0\]
-\[y'=\frac{2}{x}y\Rightarrow a(x)=\frac{2}{x}, A(x)=2\ln\left|x\right|=\ln x^2\]
+\[y'=\frac{2}{x}y\Rightarrow a(x)=\frac{2}{x}, A(x)=2\ln\abs{x}=\ln x^2\]
 \[e^{A(x)}=e^{\ln x^2}=x^2\]
 \[\Rightarrow\text{ Lösung von }y'(x)=\frac{2}{x}y \Rightarrow y(x)=Kx^2\]
 Jetzt suchen wir eine spezielle Lösung von $y'=a(x)y+b(x)$
@@ -403,7 +403,7 @@ Die Allgemeine Lösung der LDGL $y'=ay+b$ ist durch $y(x)=e^{A(x)}\int{b(x)e^{-A
 \begin{enumerate}
 \item \[xy'-2y=2x^4\]
 \[\Rightarrow y' = \underbrace {\frac{2}{x}}_{a(x)}y + \underbrace {2{x^3}}_{b(x)}\]
-\[A(x)=2\ln\left| x \right|=\ln x^2\]
+\[A(x)=2\ln\abs{ x }=\ln x^2\]
 \[Ke^{A(x)}=Kx^2\text{ ist die Lösung der homogenen DGL }y'=ay\]
 Wir bestimmen jetzt die Stammfunktion von \[b(x)\cdot e^{-A(x)}=2x^3e^{-\ln (x)^2}=2x^3 x^{-2}=2x\]
 \[2\frac{x^3}{x^2}=2x\]
@@ -448,7 +448,7 @@ Ein einfaches Verfahren, die so genannte ``Separation der Variablen'', lässt si
 {\text{trennen formel }}x{\text{ bzw }}y{\text{ - Terme}}
 \end{array}\]
 Jetzt integrieren wir auf beiden Seiten \[\int{\frac{dy}{y}}=\int{2xdx}\]
-\[\ln\left| y\right|=x^2+c\]Da wir an der Lösung $y$ interessiert sind und nicht am Logarithmus davon, wenden wir die Exponentialfunktion an \[\left| y\right|=e^{x^2+c}=e^ce^{x^2}\]
+\[\ln\abs{ y}=x^2+c\]Da wir an der Lösung $y$ interessiert sind und nicht am Logarithmus davon, wenden wir die Exponentialfunktion an \[\abs{ y}=e^{x^2+c}=e^ce^{x^2}\]
 Links und rechts stehen nur positive Grössen. Wenn wir aber auf der rechten Seite nicht nur positive konstante $e^c>0$ zulassen, sondern irgendwelche Konstanten $K\in\R$ erhalten wir \[y(x)=Ke^{x^2}\]
 \item \[y'=1+y^2\text{ ist separierbar}\]
 \[\int{\frac{dy}{1+y^2}=\int{dx}}\]
@@ -457,7 +457,7 @@ Links und rechts stehen nur positive Grössen. Wenn wir aber auf der rechten Sei
 \subsubsection*{Bemerkung 7.18}
 $y'=f(x)g(x)$ hat die konstanten Lösungen $y=y_0$ für alle $y_0$ mit $g(y_0)=0$. Der Fall $g(y)=0$ muss gesondert betrachtet werden.
 \begin{enumerate}
-\item[3.] \[\left| x\right|, \left| y\right|<1,y'=\sqrt{\frac{1-y^2}{1-x^2}}\]
+\item[3.] \[\abs{ x}, \abs{ y}<1,y'=\sqrt{\frac{1-y^2}{1-x^2}}\]
 hat keine konstanten Lösungen
 \[\frac{{dy}}{{\sqrt {1 - {y^2}} }} = \frac{{dx}}{{\sqrt {1 - {x^2}} }} \Rightarrow \int {\frac{{dy}}{{\sqrt {1 - {y^2}} }}}  = \int {\frac{{dx}}{{\sqrt {1 - {x^2}} }}} \]
 \[\Rightarrow \arcsin y=\arcsin x+c\]

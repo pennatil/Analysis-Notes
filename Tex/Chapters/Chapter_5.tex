@@ -108,9 +108,9 @@ und besitzt also keinen Grenzwert für $x\to 0$, $x\not=0$
 \end{align*}
 Also
 \begin{align*}
-\left| {\frac{{\exp \left( h \right) - 1}}{h} - 1} \right|&\le \left| h \right|\left[ {\frac{1}{{2!}} + \frac{{\left| h \right|}}{{3!}} + \frac{{{{\left| h \right|}^2}}}{{4!}} +  \ldots } \right]\\
-&\le \left| h \right|\left[ {1 + \left| h \right| + \frac{{{{\left| h \right|}^2}}}{{2!}} +  \ldots } \right]\\
-&\le \left| h \right|\exp \left( h \right)
+\abs{ {\frac{{\exp \left( h \right) - 1}}{h} - 1} }&\le \abs{ h }\left[ {\frac{1}{{2!}} + \frac{{\abs{ h }}}{{3!}} + \frac{{{{\abs{ h }}^2}}}{{4!}} +  \ldots } \right]\\
+&\le \abs{ h }\left[ {1 + \abs{ h } + \frac{{{{\abs{ h }}^2}}}{{2!}} +  \ldots } \right]\\
+&\le \abs{ h }\exp \left( h \right)
 \end{align*}
 Woraus
 \[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
@@ -197,7 +197,7 @@ Das folgende Beispiel zeigt, dass es stetige Funktionen $f:\R\to\R$ gibt, die an
 \noindent Sei für $x\in\R$
 \begin{align*}
 <x> =&\text{Distanz von $x$ zur nächsten ganzen Zahl}\\
-=&\min\left\{ \left| x-m\right|:m\in\mathbb{Z}\right\}
+=&\min\left\{ \abs{ x-m}:m\in\mathbb{Z}\right\}
 \end{align*}
 Der Graph von $<x>$ sieht so aus
 \begin{center}
@@ -267,7 +267,7 @@ Da
 folgt absolute Konvergenz. Ausserdem sei
 \[{f_k}\left( x \right) = \sum\limits_{n = 0}^k {\frac{{ < {{10}^n}x > }}{{{{10}^n}}}} \]
 Dann ist
-\[\left| {f\left( x \right) - {f_k}\left( x \right)} \right| = \left| {\sum\limits_{n = k + 1}^\infty  {\frac{{ < {{10}^n}x > }}{{{{10}^n}}}} } \right| \le \frac{1}{2}\left| {\sum\limits_{n = k + 1}^\infty  {\frac{1}{{{{10}^n}}}} } \right| = \frac{1}{2} \cdot \frac{{{{10}^{ - k}}}}{9}\]
+\[\abs{ {f\left( x \right) - {f_k}\left( x \right)} } = \abs{ {\sum\limits_{n = k + 1}^\infty  {\frac{{ < {{10}^n}x > }}{{{{10}^n}}}} } } \le \frac{1}{2}\abs{ {\sum\limits_{n = k + 1}^\infty  {\frac{1}{{{{10}^n}}}} } } = \frac{1}{2} \cdot \frac{{{{10}^{ - k}}}}{9}\]
 $\forall k\geq 1$ ist $f_k:\R\to\R$ stetig. \\
 
 Da die Folge $\left( f_k\right)_{k\geq 1}$ gleichmässig gegen $f$ konvergiert, ist $f$ stetig. Man kann zeigen, dass $f$ in keinem Punkt von $\R$ differenzierbar ist. \todo{End of beweis is put here, I think it is better if it stays up when the bsp begins. Page 192 middle}
@@ -878,41 +878,41 @@ Da ${f_n}\mathop  \to \limits^{\text{glm.}} f$ und ${f'_n}\mathop  \to \limits^{
 \underline{Zu Zeigen:} $f$ ist differenzierbar und $f'=g$.\\
 
 Seien $x\not=x_0$ in $\Omega$. Aus ${f_n}\mathop  \to \limits^{\text{glm.}} f$ folgt, $\mathop {\lim }\limits_{n \to \infty } {f_n}\left( x \right) = f\left( x \right)$ und $\mathop {\lim }\limits_{n \to \infty } {f_n}\left( {{x_0}} \right) = f\left( {{x_0}} \right)$
-\[\left| {\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} \right| = \mathop {\lim }\limits_{n \to \infty } \left| {\frac{{{f_n}\left( x \right) - {f_n}\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} \right|\]
+\[\abs{ {\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} } = \mathop {\lim }\limits_{n \to \infty } \abs{ {\frac{{{f_n}\left( x \right) - {f_n}\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} }\]
 \underline{Mittelwertsatz:} $\exists\xi_n$ zwischen $x$ und $x_0$, so dass
 \[\frac{{{f_n}\left( x \right) - {f_n}\left( {{x_0}} \right)}}{{x - {x_0}}} = f{'_n}\left( {{\xi _n}} \right)\]
 Nun
 \begin{align*}
-\left| {f{'_n}\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right| &\le \left| {f{'_n}\left( {{\xi _n}} \right) - g\left( {{\xi _n}} \right)} \right| + \left| {g\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right|\\
- &\le \mathop {\sup }\limits_{\xi  \in \Omega } \mathop {\left| {f{'_n}\left( \xi  \right) - g\left( \xi  \right)} \right|}\limits_{\begin{array}{*{20}{c}}
+\abs{ {f{'_n}\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} } &\le \abs{ {f{'_n}\left( {{\xi _n}} \right) - g\left( {{\xi _n}} \right)} } + \abs{ {g\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} }\\
+ &\le \mathop {\sup }\limits_{\xi  \in \Omega } \mathop {\abs{ {f{'_n}\left( \xi  \right) - g\left( \xi  \right)} }}\limits_{\begin{array}{*{20}{c}}
  \downarrow &{{\text{Da }}f{'_n} \to g}\\
 0&{}
-\end{array}}  + \mathop {\left| {g\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} \right|}\limits_{\begin{array}{*{20}{c}}
+\end{array}}  + \mathop {\abs{ {g\left( {{\xi _n}} \right) - g\left( {{x_0}} \right)} }}\limits_{\begin{array}{*{20}{c}}
  \downarrow &{\scriptstyle{\text{falls }}x \to {x_0}\hfill\atop
 \scriptstyle\left( {{\xi _n} \to {x_0}} \right)\hfill}\\
 0&{({\text{Stet. von }}g)}
 \end{array}}
 \end{align*}
 Folglich
-\[\mathop {\lim }\limits_{x \to {x_0}} \left| {\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} \right| = 0 \Rightarrow f' = g\]
+\[\mathop {\lim }\limits_{x \to {x_0}} \abs{ {\frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} - g\left( {{x_0}} \right)} } = 0 \Rightarrow f' = g\]
 \end{beweis}
 
 \subsubsection*{Beispiel 5.28}
 Die gleichmässige Konvergenz von $f'_n\to g$ ist notwendig: Sei
 \[{f_n}\left( x \right) = \sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}} ,x \in \left( { - 1,1} \right)\]
 \subsubsection*{Behauptung}
-${f_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} f = \left| x \right|$ für $\abs{x}<1$
+${f_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} f = \abs{ x }$ für $\abs{x}<1$
 \begin{beweis}{}
 \begin{align*}
-\left| {{f_n}\left( x \right) - \left| x \right|} \right| = &\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  - \left| x \right|} \right|\\
- = &\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  - \left| x \right|} \right| \cdot \frac{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}\\
- = &\frac{{{{\left( {\frac{1}{n}} \right)}^2} + {x^2} - {{\left( {\left| x \right|} \right)}^2}}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}} = \frac{{{{\left( {\frac{1}{n}} \right)}^2}}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \left| x \right|} \right|}}\le \frac{{{{\left( {\frac{1}{n}} \right)}^2}}}{{\left( {\frac{1}{n}} \right)}}\mathop  \to \limits^{n \to \infty } 0
+\left| {{f_n}\left( x \right) - \abs{ x }} \right| = &\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  - \abs{ x }} \right|\\
+ = &\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  - \abs{ x }} \right| \cdot \frac{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \abs{ x }} \right|}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \abs{ x }} \right|}}\\
+ = &\frac{{{{\left( {\frac{1}{n}} \right)}^2} + {x^2} - {{\left( {\abs{ x }} \right)}^2}}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \abs{ x }} \right|}} = \frac{{{{\left( {\frac{1}{n}} \right)}^2}}}{{\left| {\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {x^2}}  + \abs{ x }} \right|}}\le \frac{{{{\left( {\frac{1}{n}} \right)}^2}}}{{\left( {\frac{1}{n}} \right)}}\mathop  \to \limits^{n \to \infty } 0
 \end{align*}
-d.h. ${f_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} \left| x \right|$ \\
+d.h. ${f_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} \abs{ x }$ \\
 \underline{Nun:}$\abs{x}$ ist stetig aber nicht differenzierbar
 \begin{align*}
-f{'_n}\left( x \right) =&\frac{x}{{\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {{\left| x \right|}^2}} }}\mathop  \to \limits_{n \to \infty } \left\{ {\begin{array}{*{20}{c}}
-{\frac{x}{{\left| x \right|}}}&{x\not  = 0}\\
+f{'_n}\left( x \right) =&\frac{x}{{\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {{\abs{ x }}^2}} }}\mathop  \to \limits_{n \to \infty } \left\{ {\begin{array}{*{20}{c}}
+{\frac{x}{{\abs{ x }}}}&{x\not  = 0}\\
 0&{x = 0}
 \end{array}} \right.\\
 g\left( x \right) = &\left\{ {\begin{array}{*{20}{c}}
@@ -925,7 +925,7 @@ $f'_n(x)\to g(x)$ konvergiert nicht gleichmässig ($g$ nicht stetig in $x=0$)
 \end{beweis}
 
 Eine sehr wichtige Anwendung von Satz 5.26 (s.~\pageref{satz5.26}) ist auf die Eigenschaften von Funktionen, die Summe von Potenzreihen sind. Sei $\left( a_n\right)_{n\geq 0}\in\R$. Wir nehmen an
-\[\rho : = \frac{1}{{\lim \sup \sqrt[n]{{\left| {{a_n}} \right|}}}} > 0\]
+\[\rho : = \frac{1}{{\lim \sup \sqrt[n]{{\abs{ {{a_n}} }}}}} > 0\]
 \subsubsection*{Satz 5.29}
 Sei $x\in\left( -\rho,\rho\right)=\Omega$ \[f\left( x \right) = \sum\limits_{n = 0}^\infty  {{a_n}{x^n}}\] die Summe der absolut konvergenten Potenzreihe. Dann ist $f\in C'\left( \Omega\right)$ und
 \[f'\left( x \right) = \sum\limits_{n = 0}^\infty  {n{a_n}{x^{n - 1}}} \]
@@ -935,11 +935,11 @@ mit dem selben Konvergenzradius
 Sei
 \[{f_k}\left( x \right) = \sum\limits_{n = 0}^\infty  {{a_n}{x^n}} \]
 Sei $0<r<\rho$. Dann gilt, $\forall x\in\left( -r,r\right)$:
-\[\left| {{f_k}\left( x \right) - f\left( x \right)} \right| \le \sum\limits_{n = k + 1}^\infty  {\left| {{a_n}} \right|{r^n}} \mathop  \to \limits^{n \to \infty } 0\]
+\[\abs{ {{f_k}\left( x \right) - f\left( x \right)} } \le \sum\limits_{n = k + 1}^\infty  {\abs{ {{a_n}} }{r^n}} \mathop  \to \limits^{n \to \infty } 0\]
 Also $f_k\to f$ gleichmässig auf $\left( -r,r\right)$. Da
 \begin{align*}
-\lim \sup \sqrt[n]{{\left| {n{a_n}} \right|}} = &\lim \sup \left( {\sqrt[n]{n} \cdot \sqrt[n]{{\left| {{a_n}} \right|}}} \right)\\
-\left( {{\text{Da }}\lim \sqrt[n]{n} = 1} \right) = &\lim \sup \sqrt[n]{{\left| {{a_n}} \right|}} = \rho
+\lim \sup \sqrt[n]{{\abs{ {n{a_n}} }}} = &\lim \sup \left( {\sqrt[n]{n} \cdot \sqrt[n]{{\abs{ {{a_n}} }}}} \right)\\
+\left( {{\text{Da }}\lim \sqrt[n]{n} = 1} \right) = &\lim \sup \sqrt[n]{{\abs{ {{a_n}} }}} = \rho
 \end{align*}
  konvergiert
 \[\sum\limits_{n = 0}^\infty  {n{a_n}{x^{n - 1}}}  = :g\left( x \right)\]
@@ -955,7 +955,7 @@ und es folgt wie oben $f{'_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}
 {\mathop{\rm exp'}\nolimits} \left( x \right) = &\sum\limits_{n = 0}^\infty  {\frac{{n{x^{n - 1}}}}{{n!}}}  = \sum\limits_{n = 0}^\infty  {\frac{{{x^{n - 1}}}}{{\left( {n - 1} \right)!}}} \\
  = &\sum\limits_{k = 0}^\infty  {\frac{{{x^k}}}{{k!}}}  = \exp \left( x \right)
 \end{align*}
-\item \[f\left( x \right) = \sum\limits_{k = 0}^\infty  {{x^k}}  = \frac{1}{{1 - x}}\hspace{5mm}\left| x \right| < 1\]
+\item \[f\left( x \right) = \sum\limits_{k = 0}^\infty  {{x^k}}  = \frac{1}{{1 - x}}\hspace{5mm}\abs{ x } < 1\]
 Daraus folgt
 \[\sum\limits_{k = 0}^\infty  {k{x^{k - 1}}} \mathop  = \limits_{\begin{array}{*{20}{c}}
  \downarrow \\
