@@ -1,5 +1,9 @@
 #!/bin/bash
-cd "../Tex/MAINs" || echo -e "\n\n#### CALL ME FROM THE SCRIPTS DIRECTORY ####\n\n" && exit 1
+{
+	cd "../Tex/MAINs" 
+} || {
+	echo -e "\n\n#### CALL ME FROM THE SCRIPTS DIRECTORY ####\n\n" && exit 1
+}
 for i in {1..3}
 do
    pdflatex --synctex=-1 --interaction nonstopmode --shell-escape --file-line-error main.tex
