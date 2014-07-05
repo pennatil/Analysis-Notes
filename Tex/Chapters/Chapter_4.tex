@@ -134,7 +134,10 @@ und $f$ ist stetig an der Stelle $x_{0}$ genau dann, wenn $f(x_{0}^{-})=f(x_{0}^
 \subsubsection*{Beweis}
 Wir behaupten, dass für jede Folge $(y_{n})_{n\geq 1}$ mit $\{y_{n}:n\geq 1\} \subset (a,x_{0})$ und $\lim{y_{n}} = x_{0}$ die Folge $(f(y_{n}))_{n\geq 1}$ kovergent und der linksseitige Limes $l_{-}(x_{0})$ unabhängig von der Wahl der Folge ist.
 
-\[l\_\left( {{x_0}} \right): = {\text{linkseitiges Limes}} = \mathop {\lim }\limits_{\begin{array}{*{20}{c}}{x \to {x_0}}\\{x < {x_0}}\end{array}} f(x)\]
+\[l\_\left( {{x_0}} \right): = {\text{linkseitiges Limes}} = \mathop {\lim }\limits_{\begin{array}{*{20}{c}}
+{x \to {x_0}}\\
+{x < {x_0}}
+\end{array}} f(x)\]
 \begin{center}
 \begin{tikzpicture}
 \draw (-2,0) --(2,0);
@@ -378,7 +381,14 @@ Sei $f:\Omega\to\R^{n}$, $\Omega\subset\R^{d}$ eine Abbildung, $x_{0} \in\Omega$
 \item[$(1)\Rightarrow (2)$] (Indirekt)\\
 Wir nehmen also an, dass (2) nicht gilt, d.h. es gibt $\varepsilon>0$, so dass für jedes $\delta >0$ einem Punkt $x_\delta$ gibt mit
 \[\left\| {{x_\delta } - {x_0}} \right\| < \delta {\text{ und }}\left\| {f\left( {{x_\delta }} \right) - f\left( {{x_0}} \right)} \right\| > \varepsilon \]
-\[\left( \begin{array}{l}\begin{array}{*{20}{l}}{\neg \left( {\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \Omega :\abs{ {x - {x_0}} } < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon } \right)}\\{ = \left( {\exists \varepsilon  > 0,\forall \delta  > 0,\exists x \in \Omega :\abs{ {x - {x_0}} } < \delta {\text{ }}\not  \Rightarrow {\text{ }}\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon } \right)\hspace{-5mm}}%A bit hacked together, but it works\end{array}\\{\text{\hspace{48mm}d.h.}}\\\exists \varepsilon  > 0,\forall \delta  > 0,\exists {x_\delta } \in \Omega :\abs{ {{x_\delta } - {x_0}} } < \delta {\text{  und  }}\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } > \varepsilon \end{array} \right)\]
+\[\left( \begin{array}{l}
+\begin{array}{*{20}{l}}
+{\neg \left( {\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \Omega :\abs{ {x - {x_0}} } < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon } \right)}\\
+{ = \left( {\exists \varepsilon  > 0,\forall \delta  > 0,\exists x \in \Omega :\abs{ {x - {x_0}} } < \delta {\text{ }}\not  \Rightarrow {\text{ }}\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon } \right)\hspace{-5mm}}%A bit hacked together, but it works
+\end{array}\\
+{\text{\hspace{48mm}d.h.}}\\
+\exists \varepsilon  > 0,\forall \delta  > 0,\exists {x_\delta } \in \Omega :\abs{ {{x_\delta } - {x_0}} } < \delta {\text{  und  }}\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } > \varepsilon 
+\end{array} \right)\]
 Sei $\varepsilon>0$. Wir wählen jetzt $\delta_n=\frac{1}{n}$, dann gibt es $x_n:=\left(x_{\delta_n}\right)_{n\in\N}$, eine Folge in $\Omega$, mit $\lim x_n=x_0$. Aber die Folge $\left( f\left( x_n\right)\right)$ kann offensichtlich nicht gegen $f\left( x_0\right)$ konvergieren (Da $\abs{ {f\left( {{x_n}} \right) - f\left( {{x_0}} \right)} } > \varepsilon $), d.h. $f$ ist nicht stetig in $x_0$.
 \item[$(2)\Rightarrow (1)$] Sei $\left( x_n\right)_{n\geq 1}$ eine Folge in $\Omega$ mit Grenzwert $x_0$. Wir möchten zeigen, dass $f\left( {{x_n}} \right) \to f\left( {{x_0}} \right)$. Sei $\varepsilon>0$, nach (2) sei $\delta_{\varepsilon}>0$, so dass $\forall x\in\Omega$ mit
 \[\abs{ {x - {x_0}} } < {\delta _\varepsilon } \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
@@ -833,10 +843,7 @@ Es gibt einen sehr allgemeines Satz von Stone - Weierstrass, der insbesondere ei
 Mann kann jede stetige Funktion auf einem kompakten Intervall durch Polynome approximieren. \\
 
 Ein explizites Approximationsverfahren für auf $\lbrack 0,1\rbrack$ stetige Funktionen mittels Polynomen wurde von S.Bernstein gefunden (1911). Sei
-\[{B_{i,n}}(x) = \left( {\begin{array}{*{20}{c}}
-n\\
-i
-\end{array}} \right){x^i}{\left( {1 - x} \right)^{n - i}},0 \le i \le n\]
+\[{B_{i,n}}(x) = {n \choose i}{x^i}{\left( {1 - x} \right)^{n - i}},0 \le i \le n\]
 
 \begin{center}
 \begin{tikzpicture}[domain=0:1, scale=5] 
