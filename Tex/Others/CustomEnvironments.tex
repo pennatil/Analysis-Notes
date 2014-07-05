@@ -15,7 +15,7 @@
 \newcommand{\N}{\mathbb{N}} % set N with \N
 \newcommand{\C}{\mathbb{C}} % set C with \C
 
-
+% Shamelessly copied from http://tex.stackexchange.com/questions/43008/absolute-value-symbols
 \DeclarePairedDelimiter\abs{\lvert}{\rvert} % nice |x|
 \DeclarePairedDelimiter\norm{\lVert}{\rVert} % nice ||x||
 % Swap the definition of \abs* and \norm*, so that \abs
@@ -27,9 +27,6 @@
 \let\oldnorm\norm
 \def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
 \makeatother
-
-% Shamelessly copied from http://tex.stackexchange.com/questions/43008/absolute-value-symbols
-
 
 %Put a circle around a character
 \newcommand*\mycirc[1]{%
