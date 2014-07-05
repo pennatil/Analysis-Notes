@@ -126,7 +126,8 @@ gilt \[\abs{ a_n+b_n-(a+b)} <\varepsilon\]
  \le&  \varepsilon \abs{ {{b_n}} } + \abs{ a }\varepsilon  \le \varepsilon \left( {C + \abs{ a }} \right)
 \end{align*}
 
-Also folgt aus \[\forall n \ge N(\varepsilon ): = \max \left( {{N_1}\left( {\frac{\varepsilon }{{C + \abs{ a }}}} \right),{N_2}\left( {\frac{\varepsilon }{{\abs{ C } + a}}} \right)} \right)\],dass $\abs{ a_nb_n-ab} < \varepsilon$
+Aus \[\forall n \ge N(\varepsilon ): = \max \left( {{N_1}\left( {\frac{\varepsilon }{{C + \abs{ a }}}} \right),{N_2}\left( {\frac{\varepsilon }{{\abs{ C } + a}}} \right)} \right)\]
+folgt, dass $\abs{ a_nb_n-ab} < \varepsilon$
 \item Wegen (ii) genügt es, den Fall $a=a_n=1$, $\forall n\in\N$ zu betrachten
 \[\abs{ {{b_n}} } = \abs{ {{b_n} - b + b} } \ge \abs{ b } - \abs{ {{b_n} - b} } \ge \abs{ b } - \varepsilon \]
 Sei $0 < \varepsilon < \frac{\abs{ b}}{2}$, dann gilt $\abs{ b_n} > \frac{\abs{ b}}{2}$. Es folgt
@@ -139,8 +140,9 @@ Also folgt $\forall n > N(\varepsilon):=n_0\left( \frac{\varepsilon\abs{ b}^2}{2
 2\varepsilon&= b-a\\
 \Rightarrow b-\varepsilon&= a+\varepsilon\\
 b_n\to b\Rightarrow&b_n < b+\varepsilon\hspace{5mm}\forall n>n_0(\varepsilon)\\
-a_n\to a\Rightarrow&-\varepsilon < a_n -a<\varepsilon\Rightarrow a-\varepsilon < a_n\hspace{5mm}\forall n>TODO
+a_n\to a\Rightarrow&-\varepsilon < a_n -a<\varepsilon\Rightarrow a-\varepsilon < a_n\hspace{5mm}\forall n> ??
 \end{align*}
+\todo{unreadble}
 Jedoch steht dann die Ungleichung
 \[b_n < b+\varepsilon = a-\varepsilon < a_n\hspace{5mm}\forall n\geq n_0\]
 im Widerspruch zur Annahme $a_n\leq b_n$, $\forall n\in\N$
@@ -377,7 +379,7 @@ Aber wir werden werden zwei monotone Teilfolgen finden
 &= \frac{2 + \frac{1}{g_{n}}}{1 + \frac{1}{{{g_{n}}}}} = \frac{2{g_{n} + 1}}{g_{n}+1} = 2 - \frac{1}{{{g_n} + 1}}
 \end{align*}
 Daraus folgt
-\[{g_{n + 2}} - {g_n} = \frac{1}{{{g_{n - 2}} + 1}} - \frac{1}{{{g_n} + 1}} = \frac{{{g_n} - {g_n} - 2}}{{\left( {{g_{n - 2}} + 1} \right)\left( {{g_n} + 1} \right)}}\]
+\[{g_{n + 2}} - {g_n} = \frac{1}{{{g_{n - 2}} + 1}} - \frac{1}{{g_n} + 1} = \frac{g_{n} - g_{n - 2}}{{\left( {{g_{n - 2}} + 1} \right)\left( {{g_n} + 1} \right)}}\]
 Nun ist: $g_3-g_1 = \frac{3}{2}-1>0$ und somit ist $g_{2k+3}-g_{2k+1}>0$, $\forall k$ d.h. die Teilfolge $\left( g_{2k+1}\right)_{k\geq 0}$ ist monotone wachsend.\\
 
 \noindent$g_4-g_2=\frac{5}{3}-2<0$ woraus folgt, dass $\left( g_{2k}\right)_{k\geq 1}$ monoton fallend ist. Seien also
