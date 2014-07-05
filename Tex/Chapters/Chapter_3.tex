@@ -48,10 +48,7 @@ Da $M(\varepsilon)$ endlich ist, ist es nach oben beschränkt. Es  gibt also $N(
 Seien $a$ und $b$ Grenzwerte von $(a_n)_{n\geq 1}$. Sei $\varepsilon = \abs{ \frac{b-a}{3}}>0$, dann gibt es $N_1,N_2$, so dass \[\abs{ a_n-a} <\varepsilon\hspace{10mm}\forall n>N_1\]\[\abs{ a_n-b} <\varepsilon\hspace{10mm}\forall n>N_2\]
 Also $\forall n\geq \max\{ N_1,N_2\}$ \[(a-b)\cong\abs{ (a-a_n)+(a_n-b)} < 2\varepsilon=\frac{2}{3}\abs{b-a}\]
 \subsection*{Binomischer Lehrsatz}
-Für beliebige Zahlen $a,b$ und $n\in\N$ ist \[{\left( {a + b} \right)^n} = \sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}
-n\\
-k
-\end{array}} \right){a^{n - k}}{b^k}} \]
+Für beliebige Zahlen $a,b$ und $n\in\N$ ist \[{\left( {a + b} \right)^n} = \sum\limits_{k = 0}^n { {n \choose k} {a^{n - k}}{b^k}} \]
 \item Falls $(a_n)_{n\geq 1}$ konvergent ist, $\{a_n:n\geq 1\}$ beschränkt: Sei $\varepsilon=1$, $\lim a_n=a$ und $N_0$ mit \[\abs{ a_n-a} \leq 1\hspace{10mm} \forall n>N_0\] Dann ist $\forall n$ $\abs{ a_n} \geq \max\{\abs{ a} +1,\abs{ a_j}, 1\leq j\leq N_0  \}$
 \end{enumerate}
 \subsubsection*{Beispiel 3.6}
@@ -66,28 +63,16 @@ Dann gilt für alle $n\geq n_0$, $\frac{1}{\varepsilon}<n_0\leq n \Rightarrow \a
 Zu beweisen \[\forall \varepsilon > 0, \exists N_0=N_0(\varepsilon)\in \N\]
 \[\forall n\geq N_0:q^n <\varepsilon\]
 Die Idee ist, zu zeigen, dass $\frac{1}{q^n}$ sehr gross wird und deswegen $q^n$ sehr klein wird. Setzen wir $\frac{1}{q}=1+\delta$ mit $\delta>0$ $\left( q<1\Rightarrow \frac{1}{q}>1\right)$%CHECK FROM HERE
- $$\frac{1}{q^n}=\left( \frac{1}{q}\right)^n=\left( 1+\delta\right)^n=1+n\delta +\left( {\begin{array}{*{20}{c}}
-n\\
-2
-\end{array}} \right) \delta^2+\dots+\delta^n\geq 1+n\delta>n\delta, \forall n\in\N$$
+ $$\frac{1}{q^n}=\left( \frac{1}{q}\right)^n=\left( 1+\delta\right)^n=1+n\delta + {n \choose 2} \delta^2+\dots+\delta^n\geq 1+n\delta>n\delta, \forall n\in\N$$
 also \[0<q^n<\frac{1}{n\delta}, \forall n\in\N\]
 Sei jetzt $\varepsilon >0$, wähle $N_0=N_0(\varepsilon)$ mit $\frac{1}{\varepsilon\delta}<N_0\Rightarrow \frac{1}{N_0\delta}<\varepsilon$
 \[\forall n>N_0\hspace{5mm}0<q^n\leq\frac{1}{n\delta}<\frac{1}{N_0\delta}<\varepsilon\]
 \item $\sqrt[n]{n}$, $\lim a_n=1$. Klar: $n\geq 1$ also $\sqrt[n]{n}\geq 1$\\
-Gegeben ein $\varepsilon>0$, wollen wir $n$ so gross wählen, dass \[\sqrt[n]{n}-1 <\varepsilon\] das heisst, $n<\left( 1+\varepsilon \right)^n$. Wir entwickeln \[\left( 1+\varepsilon\right)^n=1+n\varepsilon+\left( {\begin{array}{*{20}{c}}
-n\\
-2
-\end{array}} \right) \varepsilon^2 + \dots +\varepsilon^n\]
+Gegeben ein $\varepsilon>0$, wollen wir $n$ so gross wählen, dass \[\sqrt[n]{n}-1 <\varepsilon\] das heisst, $n<\left( 1+\varepsilon \right)^n$. Wir entwickeln \[\left( 1+\varepsilon\right)^n=1+n\varepsilon+{n \choose 2} \varepsilon^2 + \dots +\varepsilon^n\]
 $\varepsilon$ ist klein aber fixiert.\\
 
-Für sehr grosse $n$ wird $1+n\varepsilon$ nie grösser als $n$ sein. Wir versuchen unser Glück mit \[\left( {\begin{array}{*{20}{c}}
-n\\
-2
-\end{array}} \right){\varepsilon ^2}{\text{ term}}\]
-\[\left( {\begin{array}{*{20}{c}}
-n\\
-2
-\end{array}} \right){\varepsilon ^2} = \frac{{n(n - 1)}}{2}\varepsilon^2 \] Wir benutzen also $( 1+\varepsilon )^n\geq \frac{n(n-1)}{2}\varepsilon^2$. Wir wollen $n$ so wählen, dass \[\frac{{n(n - 1)}}{2}{\varepsilon ^2} > n\] d.h. $n-1>\frac{2}{\varepsilon^2}$ oder $n>1+\frac{2}{\varepsilon^2}$\\
+Für sehr grosse $n$ wird $1+n\varepsilon$ nie grösser als $n$ sein. Wir versuchen unser Glück mit \[{n \choose 2} {\varepsilon ^2}{\text{ term}}\]
+\[{n \choose 2} {\varepsilon ^2} = \frac{{n(n - 1)}}{2}\varepsilon^2 \] Wir benutzen also $( 1+\varepsilon )^n\geq \frac{n(n-1)}{2}\varepsilon^2$. Wir wollen $n$ so wählen, dass \[\frac{{n(n - 1)}}{2}{\varepsilon ^2} > n\] d.h. $n-1>\frac{2}{\varepsilon^2}$ oder $n>1+\frac{2}{\varepsilon^2}$\\
 
 Setzen wir $N_0:=\left( 1+\frac{2}{\varepsilon^2}\right)+1$. Dann gilt für $\forall n>N_0$ \[(1+\varepsilon)^n > n \geq 1\]
 \[\Rightarrow 1\leq \sqrt[n]{n}\leq 1+\varepsilon\]
@@ -631,22 +616,16 @@ $\forall x=\left( x^1,x^2,\dots,x^d\right) \in\R^d$ gilt
 Jede beschränkte Folge $\left( a_n\right)_{n\geq 1}$ in $\R^d$ besitzt eine konvergente Teilfolge
 \subsubsection*{Beispiel}
 \begin{enumerate}
-\item\begin{align*} \left( {{a_n}} \right)&= \left( {\begin{array}{*{20}{c}}
+\item\begin{align*} ({a_n}) &= \left( {\begin{array}{*{20}{c}}
 {{\raise0.7ex\hbox{$1$} \!\mathord{\left/
- {\vphantom {1 n}}\right.\kern-\nulldelimiterspace}
+{\vphantom {1 n}}\right.\kern-\nulldelimiterspace}
 \!\lower0.7ex\hbox{$n$}}}\\
 {{\raise0.7ex\hbox{$2$} \!\mathord{\left/
- {\vphantom {2 n}}\right.\kern-\nulldelimiterspace}
+{\vphantom {2 n}}\right.\kern-\nulldelimiterspace}
 \!\lower0.7ex\hbox{$n$}}}
-\end{array}} \right) \subset\R^2\\
-\lim a_n&=\left( {\begin{array}{*{20}{c}}
-0\\
-0
-\end{array}} \right) \end{align*}
-\item \[\left( {{a_n}} \right) = \left( {\begin{array}{*{20}{c}}
-{\frac{{{n^2} + n + 1}}{{2{n^2} + n + 1}}}\\
-n
-\end{array}} \right)\]
+\end{array}} \right) \subset\R^2 \\
+\lim{a_n}&={0 \choose 0} \end{align*}
+\item \[ ({a_n}) = {\frac{{n^2} + n + 1}{2{n^2} + n + 1} \choose n} \]
 $\left( a_n\right)$ ist divergent
 \[\lim \frac{{{n^2} + n + 1}}{{2{n^2} + n + 1}} \to \frac{1}{2}\] aber $\lim n=\infty$
 \end{enumerate}
@@ -1140,10 +1119,7 @@ Zum Abschluss behandeln wir noch den Zusammenhang von ``$e$'' und ``$e^x$''.
 Insbesondere
 \[\exp \left( 1 \right) < \sum\limits_{k = 0}^{{n_0}} {\frac{1}{{k!}}}  + \varepsilon \]
 \item\begin{align*}
-{\left( {1 + \frac{1}{n}} \right)^n}& =\sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}
-n\\
-k
-\end{array}} \right)} \frac{1}{{{n^k}}}\\
+{\left( {1 + \frac{1}{n}} \right)^n}& =\sum\limits_{k = 0}^n {n \choose k } \frac{1}{{{n^k}}}\\
 & =\sum\limits_{k = 0}^n {\frac{{n!}}{{k!\left( {n - k} \right)!}}}  \cdot \frac{1}{{{n^k}}}\\
 &\mathop  =\limits^{(\text{\textasteriskcentered})} \sum\limits_{k = 0}^n {\frac{1}{{k!}}} \underbrace {\left( {\frac{{n\left( {n - 1} \right) \ldots \left( {n - k + 1} \right)}}{{{n^k}}}} \right)}_{a_k^{(n)}}\\
  &=\sum\limits_{k = 0}^n {\frac{1}{{k!}}} a_k^{(n)}
@@ -1183,10 +1159,7 @@ $\forall x\in\R$
 \mycirc{1}& \Leftrightarrow \exp (x) - \varepsilon  < \sum\limits_0^{{n_0}} {\frac{x}{{k!}}}  < \varepsilon  + \exp (x)
 \end{align*}
 \begin{align*}
-\mycirc{2}\hspace{2mm}{\left( {1 + \frac{x}{n}} \right)^n}&= \sum\limits_0^n {\left( {\begin{array}{*{20}{c}}
-n\\
-k
-\end{array}} \right)} \frac{{{x^n}}}{{{n^k}}}\\
+\mycirc{2}\hspace{2mm}{\left( {1 + \frac{x}{n}} \right)^n}&= \sum\limits_0^n {n \choose k} \frac{{{x^n}}}{{{n^k}}}\\
  &= \sum\limits_{k = 0}^n {\frac{{n!}}{{k!\left( {n - k} \right)!}} \cdot } \frac{{{x^k}}}{{{n^k}}}\\
  &= \sum\limits_0^n {\frac{1}{{k!}} \cdot \frac{{n!}}{{\left( {n - k} \right)!}}}  \cdot \frac{{{x^k}}}{{{n^k}}}\\
 &\mathop  = \limits^{\mycirc{2}} \sum {\frac{1}{{k!}}}  \cdot \underbrace {\frac{{n\left( {n - 1} \right) \ldots \left( {n - k + 1} \right)}}{{{n^k}}}}_{a_k^{(n)}} \cdot {x^k}\\
