@@ -72,30 +72,49 @@ Since these documents are still a very early version, they might contain a few (
 
 I will not take into consideration emails containing corrections. Please use the "Issues" tab so to keep track of every change.
 
+
 <a name="Building"></a>
 Building
 ========
 This is only recommended to people with experience with LaTex, since the files might still contain bugs and errors that have to be ironed out. I will not answer emails asking for help if the files do not build! If you are not sure, just use the PDFs inside the .zip archive (Take a look at [Getting the material](#Getting the material)). If you are installing LaTex from scratch, make sure you install the full release with all the packages!
 
-1. Make sure you have a working Tex distribution installed on your system. If you don't:
-	* Mac OS: [MacteX](http://tug.org/mactex/)
-    * Windows: [MikTeX](http://miktex.org/download) or [TexLive](https://www.tug.org/texlive/acquire-netinstall.html) (Recommended)
-    * Linux: [TexLive](https://www.tug.org/texlive/quickinstall.html) (Ubuntu: <code>sudo apt-get install texlive-full</code>)
-2. Make sure you have gnuplot installed. If you don't, a quick google search will help you! (On OSX, you can `brew install gnuplot`. If you get errors about lua, make sure you have lua5.15 (the one brew installs)).
-3. Download the master Branch [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip)
-4. Generate the files
-	* If you want to use a program with a GUI:
-	  1. Navigate to the "Tex/MAINs" folder, and open "main.tex" using TexWorks (Right-click->open with...)
-	  2. On the top left, select "pdfLaTex" from the dropdown menu
-	  3. Click on the green arrow, this will start the building process. Repeat this step at least 2 times!!
-	  4. You should now have a "main.pdf" file in your "MAINs" Folder.
-    * If you want to use the terminal (Linux and Mac only):
-	    1. <code>cd path/to/Scripts/folder/</code> (e.g. <code>cd /Users/Waldo/Desktop/Analysis-Notes-master/Scripts/</code>)
-   	    2. There are 2 scripts that take care of building the files, and cleaning up. <code>BuildAll.sh</code> builds 1 pdf with all the notes, while <code>BuildChapterByChapter.sh</code> builds a file for each chapter. choose which one you want to use.
-		3. If it is the first time that you run this script, type <code>sudo chmod 755 nameOfScript.sh</code> (Where <code>nameOfScript.sh</code> is either <code>BuildAll.sh</code> or <code>BuildChapterByChapter.sh</code>. This command grants permission to the script to run)
-		4. Afterwards, type <code>./nameOfScript.sh</code> and press enter.
-		5. Wait until the process is done.
-		6. You will find a folder called "PDF" inside the Notes folder, with the output file(s).
+1. First of all, make sure you have the following programs installed:
+	* Latex
+		* Mac OS: [MacteX](http://tug.org/mactex/)
+		* Windows: [TexLive](https://www.tug.org/texlive/acquire-netinstall.html)
+		* Linux: [TexLive](https://www.tug.org/texlive/quickinstall.html)
+	* Gnuplot
+		* Mac OS: [Tutorial](http://www.maclife.com/article/columns/terminal_101_graphing_gnuplot). Take a look at the "Installing gnuplot" section.
+		* Windows: [Setup file](http://sourceforge.net/projects/gnuplot/files/latest/download?source=files)
+		* Linux: Depends on your distro, a quick google search should help
+2. Download the master Branch [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip) and unzip it. 
+3. Build the files:
+	* Using a program with a GUI:
+		2. Navigate to the "Tex/MAINs" folder, and open "main.tex" using TexWorks (Right-click->open with... or similar depending on your OS)
+		3. On the top left, select "pdfLaTex" from the dropdown menu
+		4. Click on the green arrow, this will start the building process. Repeat this step at least 2 times!!
+		5. You should now have a "main.pdf" file in your "MAINs" Folder.
+		6. You can delete the other files, like the aux and log files. 
+	* Using the terminal: 
+	There are 2 different files located in the "Scripts" folder. <code>BuildAll.sh</code>: This builds 1 file with all the notes, while <code>BuildChapterByChapter.sh</code>: Builds a file for each chapter. In the following instructions, replace <code>scriptName.sh</code> with the one you choose:
+		* Mac and Linux:
+			1. <code>cd path/to/Scripts/folder/</code> (i.e. <code>cd /Users/Waldo/Desktop/Analysis-Notes-master/Scripts/</code>)
+			2. If it is the first time that you run this script, type <code>sudo chmod 755 scriptnName.sh</code>, and hit enter.
+			4. Afterwards, type <code>./scriptName.sh</code> and press enter.
+			5. Wait until the process is done.
+			6. You will find a folder called "PDF" inside the Notes folder, with the output file(s).
+		* Windows: Although this method is in no way supported, it should work on most systems. Just make sure you have TexLive installed and not MikTeX!
+			1. If you haven't already, install Git from [here](http://msysgit.github.io/)
+			2. Once done, open the "Git Bash" program
+			3. <code>cd path/to/Scripts/folder/</code> (i.e. <code>/c/Users/Waldo/Desktop/Analysis-Notes-master/Scripts</code>)
+			4. Type <code>./scriptName.sh</code>
+			5. Wait until the process is done
+			6. You will find a folder called "PDF" inside the Notes folder, with the output file(s).
+
+
+
+
+
 
 Disclaimer
 ==========
