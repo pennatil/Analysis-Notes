@@ -362,7 +362,71 @@ Kreise und Rechtecke sind Normalbereiche bzgl. beider Achsen
 \null\vfill
 \end{multicols}
 Über Normalbereiche lässt sich sehr bequem integrieren
-\missingfigure{Page 220 bottom}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\draw[fill=black!20,color=black!20] (6.75,2.98) -- (6.75,6.725) -- (5,5) -- (5,1.04) --cycle;
+\draw[fill=black!20,color=black!20] (5,5) -- (4.85,5) -- (4.85,1.04) -- (5,1) --cycle;
+\draw[fill=black!20,color=black!20] (6.6,6.725) -- (6.75,6.725) -- (4.95,5)--cycle;
+\draw[fill=black!20,color=black!20] (5,5) -- (4.85,5) -- (6,6.1)--cycle;
+		\node [] (0) at (3, 1) {};
+		\node [] (1) at (0, 0) {};
+		\node [] (2) at (3.5, 3.5) {};
+		\node [] (3) at (0, 7) {};
+		\node [] (4) at (8, 0) {};
+		\node [] (5) at (5, 3) {};
+		\node [] (6) at (7, 1) {};
+		\node [] (7) at (9, 2.5) {};
+		\node [] (8) at (3, 5) {};
+		\node [] (9) at (5, 6.5) {};
+		\node [] (10) at (9, 6.5) {};
+		\node [] (11) at (7, 5) {};
+		\node [] (12) at (2, 0) {};
+		\node [] (13) at (6, 0) {};
+		\node [] (14) at (5, 1) {};
+		\node [] (15) at (4.85, 1.04) {};
+		\node [] (16) at (6.75, 2.98) {};
+		\node [] (17) at (5, 5) {};
+		\node [] (18) at (4.85, 5) {};
+		\node [] (19) at (6.75, 6.725) {};
+		\node [] (20) at (6.6, 6.725) {};
+		\draw [fill=black!20, bend right=15] (20.center) to (18.center);
+		\draw [->] (1.center) to (4.center);
+		\draw [->] (1.center) to (3.center);
+		\draw [->] (1.center) to (2.center);
+		\draw [, in=-165, out=15] (0.center) to (6.center);
+		\draw [, looseness=0.1] (6.center) to (7.center);
+		\draw [, in=180, out=15] (5.center) to (7.center);
+		\draw [, looseness=0.1] (5.center) to (0.center);
+		\draw [, in=-165, out=15] (8.center) to (11.center);
+		\draw [, bend left=15] (11.center) to (10.center);
+		\draw [, bend right=15, looseness=0.75] (10.center) to (9.center);
+		\draw [, bend right] (9.center) to (8.center);
+		\draw [] (8.center) to (0.center);
+		\draw [] (9.center) to (5.center);
+		\draw [] (11.center) to (6.center);
+		\draw [] (10.center) to (7.center);
+		\draw [] (0.center) to (12.center);
+		\draw [] (6.center) to (13.center);
+		\draw [] (14.center) to (16.center);
+		\draw [] (14.center) to (17.center);
+		\draw [] (15.center) to (18.center);
+		\draw [] (16.center) to (19.center);
+		\draw [fill=black!20, bend left=15] (17.center) to (19.center);
+
+\draw[fill=black!20,color=black!20] (6.73,2.96) -- (6.73,3.5) -- (5.015,3.5) -- (5.015,3) -- cycle;
+\draw[fill=black!20,color=black!20] (4.865,2.8) -- (4.865,3.5) -- (4.985,3.5) -- (4.985,2.8) -- cycle;
+
+\draw (2,0) node [anchor=north]{$a$};
+\draw (6,0) node [anchor=north]{$b$};
+\draw (4.5,0.5) node [anchor=center]{$x$};
+
+\draw[->] (6,0.88) parabola bend (4,-0.7)(4,-0.7) node [anchor=east]{$y=g(x)$};
+\draw[->] (8,2.612) parabola bend (10,3.5)(10,3.5) node [anchor=west]{$y=h(x)$};
+\draw[<-] (4.2,6) parabola bend (3.2,7) (3.2,7) node [anchor=east]{$z=f(x,y)$};
+\end{tikzpicture}
+\end{center}
+
 Die markierte Scheibe bei $y=$const. mit kleiner Dicke $dx$ besitzt näherungsweise das Volumen
 \[V(x) = \left( {\int\limits_{g(x)}^{f(x)} {f\left( {x,y} \right)dy} } \right)dx\]
 Nun braucht man $V(x)$ nur noch über $\lbrack a,b\rbrack$ zu integrieren\[V = \int\limits_a^b {\left( {\int\limits_{g(x)}^{h(x)} {f\left( {x,y} \right)dy} } \right)dx} \]
@@ -643,7 +707,81 @@ Eine Teilmenge $D\subset\R^3$ heisst Normalbereich, falls es eine Darstellung
 
 \subsubsection*{Satz 9.15}
 Sei $D\subset\R^3$ ein Normalbereich mit Darstellung wie oben, und $f:D\to\R$ stetig. Dann gilt \[\int\limits_D {fd\mu }  = \int\limits_a^b {\int\limits_{g(x)}^{h(x)} {\int\limits_{\varphi \left( {x,y} \right)}^{\psi \left( {x,y} \right)} {f\left( {x,y,z} \right)dzdydx} } } \]
-\missingfigure{Page 228, middle}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+
+		\node [] (0) at (3, 1) {};
+		\node [] (1) at (0, 0) {};
+		\node [] (2) at (3.5, 3.5) {};
+		\node [] (3) at (0, 7) {};
+		\node [] (4) at (8, 0) {};
+		\node [] (5) at (5, 3) {};
+		\node [] (6) at (7, 1) {};
+		\node [] (7) at (9, 2.5) {};
+		\node [] (8) at (3, 5) {};
+		\node [] (9) at (5, 6.5) {};
+		\node [] (10) at (9, 6.5) {};
+		\node [] (11) at (7, 5) {};
+		\node [] (12) at (2, 0) {};
+		\node [] (13) at (6, 0) {};
+		\node [] (14) at (5, 1) {};
+		\node [] (15) at (4.85, 1.04) {};
+		\node [] (16) at (6.75, 2.98) {};
+		\node [] (17) at (5, 5) {};
+		\node [] (18) at (4.85, 5) {};
+		\node [] (19) at (6.75, 6.725) {};
+		\node [] (20) at (6.6, 6.725) {};
+		\draw [->] (1.center) to (4.center);
+		\draw [->] (1.center) to (3.center);
+		\draw [->] (1.center) to (2.center);
+		\draw [, in=-165, out=15] (0.center) to (6.center);
+		\draw [, looseness=0.1] (6.center) to (7.center);
+		\draw [, bend right] (9.center) to (8.center);
+		\draw [] (8.center) to (0.center);
+		\draw [] (9.center) to (5.center);
+		\draw [] (11.center) to (6.center);
+		\draw [] (10.center) to (7.center);
+		\draw [] (0.center) to (12.center);
+		\draw [] (6.center) to (13.center);
+		\draw [, looseness=0.1] (5.center) to (0.center);
+		
+		\draw [, bend right=15, looseness=0.75] (10.center) to (9.center);
+		\draw [ in=180, out=15] (5.center) to (7.center);
+		\draw[fill=black!20] (7,5) -- (7,7) -- (3,7) -- (3,5) -- cycle;
+		\draw [fill=white, in=-165, out=15] (8.center) to (11.center);
+		\draw[fill=black!20,color=black!20] (5,5.02) parabola bend(6.15,4.9) (7,5.02);
+		
+		
+		\draw[fill=black!20] (9,8.5) -- (7,7) -- (7,5) -- (9,6.5) -- cycle;
+		\draw [fill=white, bend left=15] (11.center) to (10.center);
+		\draw [color=white,thick] (11.center) to (10.center);
+		\draw[white, thick] (4.95,4.99)-- (3.05,4.99);
+
+
+
+\draw (2,0) node [anchor=north]{$a$};
+\draw (6,0) node [anchor=north]{$b$};
+
+\draw[->] (6,0.88) parabola bend (4,-0.7)(4,-0.7) node [anchor=east]{$y=g(x)$};
+\draw[->] (8,2.612) parabola bend (10,3.5)(10,3.5) node [anchor=west]{$y=h(x)$};
+
+
+\draw (9,6.5) -- (9,8.5);
+
+\draw (7,5) -- (7,7);
+
+
+
+\draw[fill=black!20] (9,8.5) -- (7,7) -- (3,7) -- (5,8.5) -- cycle;
+
+\draw (6,2) node {$A$};
+\draw[<-] (7,8) parabola bend (10,9)(10,9) node [anchor=west]{$z=\psi(x,y)$};
+\draw[->] (8,7) parabola bend (10,8)(10,8) node [anchor=west]{$D$};
+\draw[<-] (8,5.5) parabola bend (9,5)(10,5.5) node [anchor=west]{$z=\varphi(x,y)$};
+\end{tikzpicture}
+\end{center}
+
 $z=\varphi \left( {x,y} \right)$ und $z=\psi \left( {x,y} \right)$ stellen die ``Grund-'' und Deckelfläche von $D$ dar. \\
 
 Der Normalbereich $A$ ist die senkrechte Projektion von $D$ in die $x-y$ Ebene. Dessen ``Grund-'' und ``Deckelkurve'' sind durch $y=g(x)$ und $y=h(x)$ gegeben.
@@ -881,6 +1019,58 @@ und es gilt schliesslich
 \[\mathop {\lim }\limits_{R \to \infty } {I_R} = \frac{\pi }{4}\]
 d.h. \[{I^2} = \mathop {\lim }\limits_{R \to \infty } {I_R} = \frac{\pi }{4}\]
 d.h. \[I = \frac{{\sqrt \pi  }}{2} = \int\limits_0^\infty  {{e^{ - {x^2}}}dx} \]
+\item \[\int\limits_D e^{\frac{(y-x)}{(y+x)}}d\mu(x,y)\]
+wobei 
+\begin{center}
+\begin{tikzpicture}
+\draw[->](0,-0.5) -- (0,2.5);
+\draw[->](-0.5,0) -- (2.5,0);
+\draw[color=black,fill=black!20] (0,0) -- (2,0) -- (0,2) -- cycle; 
+\draw(0.75,0.75) node {$D$};
+\draw(0,2) node [anchor=east]{$2$};
+\draw(2,0) node [anchor=north]{$2$};
+\draw(2,1) node [anchor=south]{$x+y=2$};
+\end{tikzpicture}
+\end{center}
+Wir setzen 
+\[\left. {\begin{array}{*{20}{c}}{u = y - x}& \to &{x = \frac{1}{2}(v - u)}\vspace{2mm}\\{v = y + x}& \to &{y = \frac{1}{2}(v + u)}\end{array}} \right\}\left( {\begin{array}{*{20}{c}}x\\y\end{array}} \right) = \emptyset \left( {\begin{array}{*{20}{c}}u\\v\end{array}} \right)\]
+\[\det \left( {\Phi (u,v)} \right) = \left| {\begin{array}{*{20}{c}}{\frac{{\partial x}}{{\partial u}}}&{\frac{{\partial x}}{{\partial v}}}\vspace{2mm}\\{\frac{{\partial y}}{{\partial u}}}&{\frac{{\partial y}}{{\partial u}}}\end{array}} \right| = \left| {\begin{array}{*{20}{c}}{ - \frac{1}{2}}&{\frac{1}{2}}\vspace{2mm}\\{\frac{1}{2}}&{\frac{1}{2}}\end{array}} \right|\]
+
+\begin{align*}
+x=0&\Rightarrow v=u\\
+y=0&\Rightarrow v=-u\\
+x+y=2&\Rightarrow v=2
+\end{align*}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+\draw[->](0,-0.5) -- (0,2.5) node [anchor=west]{$y$};
+\draw[->](-0.5,0) -- (2.5,0) node [anchor=west]{$x$};
+\draw[color=black,fill=black!20] (0,0) -- (2,0) -- (0,2) -- cycle; 
+\draw(0.75,0.75) node {$D$};
+\draw(0,2) node [anchor=east]{$2$};
+\draw(2,0) node [anchor=north]{$2$};
+
+\newcommand{\anOffset}{9}
+\draw[color=black,fill=black!20] (0+\anOffset,0) -- (2+\anOffset,2) -- (-2+\anOffset,2) -- cycle; 
+\draw[->](0+\anOffset,-0.5) -- (0+\anOffset,2.5) node [anchor=west]{$v$};
+\draw[->](-2.5+\anOffset,0) -- (2.5+\anOffset,0) node [anchor=west]{$u$};;
+
+\draw[dashed] (-2+\anOffset,2) --  (-2+\anOffset,0) node [anchor=north]{$-2$};
+\draw[dashed] (2+\anOffset,2) --  (2+\anOffset,0) node [anchor=north]{$2$};
+
+\draw[->] (3.5,1.5) parabola bend (4.5,1.75) (5.5,1.5);
+\draw[<-] (3.5,1) parabola bend (4.5,0.75) (5.5,1);
+\draw (4.5,0.75) node [anchor=north]{$\varphi$};
+\end{tikzpicture}
+\end{center}
+\begin{align*}
+\int\limits_D e^{\frac{(y-x)}{(y+x)}}d\mu(x,y)=&\iint\limits_{T} e^{\frac{u}{v}}\abs{-\frac{1}{2}}d\mu(u,v)\\
+=&\frac{1}{2}\int\limits_0^2\left(\int\limits_{-v}^v e^{\frac{u}{v}} du \right) dv\\
+=&\frac{1}{2}\int\limits_0^2 {\left( {\left. {v{e^{\frac{u}{v}}}} \right|_{ - v}^v} \right)} dv\\=& \frac{1}{2}\int\limits_0^2 {v\left( {e - \frac{1}{e}} \right)dv} \\=& \left( {e - \frac{1}{e}} \right)\left( {\left. {\frac{1}{2} \cdot \frac{{{v^2}}}{2}} \right|_0^2} \right) = e - \frac{1}{e}
+\end{align*}
+
+
 \end{enumerate}
 
 \section{Der Satz von Green}
@@ -890,7 +1080,7 @@ wobei
 \[\rot\left( v\left( x,y\right)\right)=\frac{\partial v_2}{\partial x}\left( x,y\right) -\frac{\partial v_1}{\partial y}\left( x,y\right)\]
 so ist
 \[\rot v=\frac{\partial v_2}{\partial x} -\frac{\partial v_1}{\partial y}=0 \]
-in wei Dimensionen eine notwendige Bedingung für die Existenz eines Potentials.\\
+in zwei Dimensionen eine notwendige Bedingung für die Existenz eines Potentials.\\
 
 Die Bedingung $\rot(v)=0$ ist sogar eine hinreichende Bedingung, falls das Gebiet $\Omega$ einfach zusammenhängend ist. In diesem Fall
 \[\oint\limits_\gamma  v  = \int\limits_\gamma  {\nabla fds = f\left( {\gamma \left( 1 \right)} \right) - } f\left( {\gamma \left( 0 \right)} \right) = 0\]
