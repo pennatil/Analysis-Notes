@@ -1076,7 +1076,8 @@ Die dabei verrichtete Arbeit ist definitionsgemäss das Skalarprodukt aus dem Kr
 \draw(2,1) node [anchor=west]{$F$};
 \draw(0,0) node [anchor=north]{$s$};
 \draw(2,0) node [anchor=west]{$s+ds$};
-\draw(1,0) node [anchor=north]{$\mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}\over \Delta } s$};
+\draw(1,0) node [anchor=north]{$\mathord{\buildrel{\lower3pt\hbox{$\scriptscriptstyle\rightharpoonup$}}
+\over \Delta } s$};
 \draw(6,1) node [anchor=north]{$W=\vec F\cdot \vec s=F\cdot s\cdot\cos\theta$};
 \end{tikzpicture}
 \end{center}
@@ -1337,7 +1338,7 @@ Sei $\Omega$ ``offen'' und $C^1-$wegzusammenhängend. Sei $f\in C'\left(\Omega\r
 \subsubsection*{Beweis}
 Wenn $\Omega$ wegzusammenhängend ist, heisst das, dass zu je zwei Punkten $x,y\in\Omega$ gibt es in $C'-$Weg $\gamma :\lbrack 0,1\rbrack\to\gamma$ mit $\gamma(0)=x$ und $\gamma(1)=y$, $\gamma\left(\lbrack 0,1\rbrack\right)\subset\Omega$. Dann folgt
 \begin{align*}
-f(y)-f(x)=& f\left(\gamma(1)\right)-f\left(\gamma(0)\right)\\
+f(y)-f(x)&= f\left(\gamma(1)\right)-f\left(\gamma(0)\right)\\
 = &\int\limits_{\gamma} df = 0
 \end{align*}
 $\Rightarrow f(y)=f(x)$, $\forall x,y\in\Omega\Rightarrow f$ ist konstant.\\
@@ -1748,7 +1749,7 @@ f \in & \text{ }C^2\left(\Omega\right); x_0\in\Omega
 \item \begin{align*}
 f\left( x,y,z\right)= & \left(x-1\right)^2+\left(y+2\right)^2+\left(z+1\right)^2\\
 \nabla f= & \left( 2\left(x-1\right),2\left(y+2\right),2\left(z+1\right)\right)\\
-\nabla f\left( x_0\right)=&\left( 0,0,0\right)\Rightarrow x_0=\left( 1,-2,-1\right)
+\nabla f\left( x_0\right)&=\left( 0,0,0\right)\Rightarrow x_0=\left( 1,-2,-1\right)
 \end{align*}
 \[{H_f}\left( {{x_0}} \right) = \left( {\begin{array}{*{20}{c}}
 2&0&0\\
@@ -1770,9 +1771,9 @@ f\left( x,y\right)= & \cos\left(x+2y\right)+\cos\left(2x+3y\right)\\
 \end{array}} \right\} \Rightarrow y = k\pi {\text{ und }}x = l\pi \]
 Kritische Punkte: $\left( \pi l,\pi k\right)\hspace{5mm}k,l\in\mathbb{Z}$
 \begin{align*}
-\frac{{\partial f}}{{\partial y\partial x}} =&\frac{{\partial f}}{{\partial x\partial y}} =  - 2\cos \left( {x + 2y} \right) - 6\cos \left( {2x + 3y} \right)\\
-\frac{{{\partial ^2}f}}{{\partial {x^2}}} =&- \cos \left( {x + 2y} \right) - 4\cos \left( {2x + 3y} \right)\\
-\frac{{{\partial ^2}f}}{{\partial {y^2}}} =&- 4\cos \left( {x + 2y} \right) - 9\cos \left( {2x + 3y} \right)
+\frac{{\partial f}}{{\partial y\partial x}} &=\frac{{\partial f}}{{\partial x\partial y}} =  - 2\cos \left( {x + 2y} \right) - 6\cos \left( {2x + 3y} \right)\\
+\frac{{{\partial ^2}f}}{{\partial {x^2}}} &=- \cos \left( {x + 2y} \right) - 4\cos \left( {2x + 3y} \right)\\
+\frac{{{\partial ^2}f}}{{\partial {y^2}}} &=- 4\cos \left( {x + 2y} \right) - 9\cos \left( {2x + 3y} \right)
 \end{align*}
 \[\left( 0,0\right):\frac{{{\partial ^2}f}}{{\partial {x^2}}}=-5<0\]
 \[\abs{ {{\nabla ^2}f\left( {0,0} \right)} } = \left| {\begin{array}{*{20}{c}}
@@ -1993,12 +1994,12 @@ z
 {{f^2}}\\
 {{f^3}}
 \end{array}} \right)\\
-df(r,\theta ,z) =&\left[ {\begin{array}{*{20}{c}}
+df(r,\theta ,z) &=\left[ {\begin{array}{*{20}{c}}
 {\cos \theta }&{ - r\sin \theta }&0\\
 {\sin \theta }&{r\cos \theta }&0\\
 0&0&1
 \end{array}} \right] \leftarrow {\text{Jacobi Matrix}}\\
-\det \left( {df(r,\theta ,z)} \right) =&r\left( {{{\cos }^2}\theta  + si{n^2}\theta } \right) = r
+\det \left( {df(r,\theta ,z)} \right) &=r\left( {{{\cos }^2}\theta  + si{n^2}\theta } \right) = r
 \end{align*}
 \centerline{(Rotationssymmetrie bezüglich $z$ Achse)}
 \item Kugelkoordinaten
@@ -2036,7 +2037,7 @@ f\left( {\begin{array}{*{20}{c}}
 r\\
 \theta \\
 \psi
-\end{array}} \right) =&\left( {\begin{array}{*{20}{c}}
+\end{array}} \right) &=\left( {\begin{array}{*{20}{c}}
 {r\cos \theta \cos \psi }\\
 {r\sin \theta \cos \psi }\\
 {r\sin \psi }
@@ -2045,12 +2046,12 @@ r\\
 {\sin \theta \cos \psi }\\
 {\sin \psi }
 \end{array}} \right)\\
-df\left( {r,\theta ,\psi } \right) =&\left( {\begin{array}{*{20}{c}}
+df\left( {r,\theta ,\psi } \right) &=\left( {\begin{array}{*{20}{c}}
 {\cos \theta \cos \psi }&{ - r\sin \theta \cos \psi }&{ - r\cos \theta \sin \psi }\\
 {\sin \theta \cos \psi }&{r\cos \theta \cos \psi }&{ - r\sin \theta {\mathop{\rm sin?}\nolimits} }\\
 {\sin \psi }&0&{r\cos \psi }
 \end{array}} \right)\\
-\det\left( df\right)=&r^2cos\psi
+\det\left( df\right)&=r^2cos\psi
 \end{align*}
 \todo{Check question mark, chopped content, page 205.3}
 

@@ -196,8 +196,8 @@ Das folgende Beispiel zeigt, dass es stetige Funktionen $f:\R\to\R$ gibt, die an
 
 \noindent Sei für $x\in\R$
 \begin{align*}
-<x> =&\text{Distanz von $x$ zur nächsten ganzen Zahl}\\
-=&\min\left\{ \abs{ x-m}:m\in\mathbb{Z}\right\}
+<x> &=\text{Distanz von $x$ zur nächsten ganzen Zahl}\\
+&=\min\left\{ \abs{ x-m}:m\in\mathbb{Z}\right\}
 \end{align*}
 Der Graph von $<x>$ sieht so aus
 \begin{center}
@@ -287,7 +287,7 @@ Da $f$ und $g$ in $x_0$ differenzierbar sind, folgt, dass $af+bg$ in $x_0$ diffe
 \item \[f\left( x \right)g\left( x \right) - f\left( {{x_0}} \right)g\left( {{x_0}} \right) = g\left( x \right)\left[ {f\left( x \right) - f\left( {{x_0}} \right)} \right] + f\left( {{x_0}} \right)\left[ {g\left( x \right) - g\left( {{x_0}} \right)} \right]\]
 Durch $\left( x-x_0\right)$ dividiert
 \begin{align*}
-\frac{{f\left( x \right)g\left( x \right) - f\left( {{x_0}} \right)g\left( {{x_0}} \right)}}{{x - {x_0}}} =& \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}} \cdot g\left( {{x_0}} \right)\\
+\frac{{f\left( x \right)g\left( x \right) - f\left( {{x_0}} \right)g\left( {{x_0}} \right)}}{{x - {x_0}}} &= \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}} \cdot g\left( {{x_0}} \right)\\
  &+ \frac{{g\left( x \right) - g\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}} \cdot f\left( {{x_0}} \right)
 \end{align*}
 Da $g$ in $x_0$ differenzierbar ist, ist $g$ in $x_0$ stetig und (Satz 5.5, s.~\pageref{satz5.5})
@@ -311,8 +311,8 @@ Induktion: $f_0\left( x\right) = 1$ $\forall x$ \[f'_0\left( x\right) = 0 \left(
 \end{itemize}
 Sei $n\geq 2$. Wir nehmen an, dass die Formel für $n-1$ gilt, i.e.
 \begin{align*}
-f{'_{n - 1}}\left( x \right) =& \left( {{x^{n - 1}}} \right)' = \left( {n - 1} \right){x^{n - 2}}\\
-{f_n}\left( x \right) =&  {x^n} = x \cdot {x^{n - 1}} = x \cdot {f_{n - 1}}\left( x \right)
+f{'_{n - 1}}\left( x \right) &= \left( {{x^{n - 1}}} \right)' = \left( {n - 1} \right){x^{n - 2}}\\
+{f_n}\left( x \right) &=  {x^n} = x \cdot {x^{n - 1}} = x \cdot {f_{n - 1}}\left( x \right)
 \end{align*}
 Nach 2., Satz 5.7 (s.~\pageref{satz5.7,2.})
 \begin{align*}
@@ -595,7 +595,7 @@ Wiederspruch zur Annahme $g'(x)\not=0$, $\forall x\in\left( a,b\right)$. Also $g
 \[h\left( x \right): = \frac{{f\left( s \right)}}{{g\left( s \right)}} \cdot g\left( x \right) - f\left( x \right)\hspace{5mm}x \in \left[ {a,s} \right]\]
 Dann gilt, $h(a)=0$ und $h(s)=0$, es gibt also $x_s\in\left( a,s\right)$ mit $h'\left( x_s\right)=0$, d.h.
 \begin{align*}
-0 =& h'\left( {{x_s}} \right) = \frac{{f\left( s \right)}}{{g\left( s \right)}} \cdot g'\left( {{x_s}} \right) - f'\left( {{x_s}} \right)\\
+0 &= h'\left( {{x_s}} \right) = \frac{{f\left( s \right)}}{{g\left( s \right)}} \cdot g'\left( {{x_s}} \right) - f'\left( {{x_s}} \right)\\
  \Rightarrow& \frac{{f'\left( {{x_s}} \right)}}{{g'\left( {{x_s}} \right)}} = \frac{{f\left( s \right)}}{{g\left( s \right)}}\tag{\textasteriskcentered}
 \end{align*}
 Sei nun $s_n\in\left( a,b\right)$ beliebig mit $\lim s_n=a$. Da $a<x_{s_n}<s_n$ folgt, $\lim x_{s_n}=a$, und aus (\textasteriskcentered)
@@ -911,7 +911,7 @@ ${f_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} f = \abs{ x }$ für $
 d.h. ${f_n}\left( x \right)\mathop  \to \limits^{{\text{glm.}}} \abs{ x }$ \\
 \underline{Nun:}$\abs{x}$ ist stetig aber nicht differenzierbar
 \begin{align*}
-f{'_n}\left( x \right) =&\frac{x}{{\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {{\abs{ x }}^2}} }}\mathop  \to \limits_{n \to \infty } \left\{ {\begin{array}{*{20}{c}}
+f{'_n}\left( x \right) &=\frac{x}{{\sqrt {{{\left( {\frac{1}{n}} \right)}^2} + {{\abs{ x }}^2}} }}\mathop  \to \limits_{n \to \infty } \left\{ {\begin{array}{*{20}{c}}
 {\frac{x}{{\abs{ x }}}}&{x\not  = 0}\\
 0&{x = 0}
 \end{array}} \right.\\

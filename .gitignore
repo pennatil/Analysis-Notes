@@ -9,6 +9,8 @@ TSWLatexianTemp*
 *.out
 
 *.synctex.gz
+*.synctex
+
 
 *.toc
 
