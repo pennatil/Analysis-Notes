@@ -371,7 +371,7 @@ g_1&=1, g_2=2, g_3=\frac{3}{2}, g_4=\frac{5}{3}
 \node[circle,fill=black,inner sep=0.5mm] (a) at (4,0) {};
 \end{tikzpicture}
 \end{center}
-So die Folge ist nicht monoton. Offensichtlich gilt $g_n\geq 1$ und damit auch $g_n\leq 2$ d.h. $g_n$ ist beschränkt.\\
+Die Folge ist nicht monoton. Offensichtlich gilt $g_n\geq 1$ und damit auch $g_n\leq 2$ d.h. $g_n$ ist beschränkt.\\
 
 Aber wir werden werden zwei monotone Teilfolgen finden
 \begin{align*}
@@ -380,7 +380,7 @@ Aber wir werden werden zwei monotone Teilfolgen finden
 \end{align*}
 Daraus folgt
 \[{g_{n + 2}} - {g_n} = \frac{1}{{{g_{n - 2}} + 1}} - \frac{1}{{g_n} + 1} = \frac{g_{n} - g_{n - 2}}{{\left( {{g_{n - 2}} + 1} \right)\left( {{g_n} + 1} \right)}}\]
-Nun ist: $g_3-g_1 = \frac{3}{2}-1>0$ und somit ist $g_{2k+3}-g_{2k+1}>0$, $\forall k$ d.h. die Teilfolge $\left( g_{2k+1}\right)_{k\geq 0}$ ist monotone wachsend.\\
+Nun ist: $g_3-g_1 = \frac{3}{2}-1>0$ und somit ist $g_{2k+3}-g_{2k+1}>0$, $\forall k$ d.h. die Teilfolge $\left( g_{2k+1}\right)_{k\geq 0}$ ist monoton wachsend.\\
 
 \noindent$g_4-g_2=\frac{5}{3}-2<0$ woraus folgt, dass $\left( g_{2k}\right)_{k\geq 1}$ monoton fallend ist. Seien also
 \begin{align*}
@@ -443,7 +443,7 @@ Sei $\left( a_n\right)_{n\geq 1}\subset\R$ eine Folge. Die folgenden Aussagen si
 \begin{beweis}{}
 \begin{enumerate}[align=left]
 \item[$(2)\Rightarrow(1)$]\checkmark
-\item[$(1)\Rightarrow(2)$] Wegen das Satzes von Bolzano - Weierstrass besitzt jede beschränkte Folge eine konvergente Teilfolge  \\
+\item[$(1)\Rightarrow(2)$] Wegen des Satzes von Bolzano-Weierstrass besitzt jede beschränkte Folge eine konvergente Teilfolge  \\
 
 \underline{Strategie:}
 \begin{enumerate}[I)]
@@ -457,16 +457,15 @@ Sei $\lim a_{l(n)}=a$, $\left( a_n\right)$ Cauchy.
 \end{align*}
 
 \begin{enumerate}[I)]
-\item $\left(a_n\right)$ ist beschränkt: Sei $\varepsilon=1$. Sei $n(1)$, so dass $\abs{ a_n-a_m}<1$, $\forall n,m\geq n(1)$, insbesondere $\abs{ a_n-a_m}<1$. Woraus $\abs{ a_n} < a_{n(1)}+1$, $\forall n\geq n(1)$ folgt und somit $\forall n\geq 1$
+\item $\left(a_n\right)$ ist beschränkt: Sei $\varepsilon=1$. Sei $n(1)$, so dass $\abs{ a_n-a_m}<1$, $\forall n,m\geq n(1)$, insbesondere $\abs{ a_n-a_{n(1)}}<1$. Woraus $\abs{ a_n} < a_{n(1)}+1$, $\forall n\geq n(1)$ folgt und somit $\forall n\geq 1$
 \[\abs{ {{a_n}} } \le \max \left\{ {\abs{ {{a_1}} }, \ldots ,\abs{ {{a_{n(1)}}} },\abs{ {{a_{n(1)}}} } + 1} \right\}\]
 d.h. $\left( a_n\right)$ ist beschränkt
-\item Sei $a$ ein Häufungspunkt von $\left( a_n\right)$ (Bolzano - Weierstrass) und $l:\N\to\N$ strikt monoton mit
+\item Sei $a$ ein Häufungspunkt von $\left( a_n\right)$ (Bolzano-Weierstrass) und $l:\N\to\N$ strikt monoton mit
 \[\mathop {\lim }\limits_{n \to \infty } {a_{l(n)}} = a\hspace{10mm}\left( {{\text{Bem.: }}l(n) \ge n} \right)\]
 \end{enumerate}
 Sei $\varepsilon>0$ und $n_0(\varepsilon)$, so dass
 \[\abs{ {{a_{l(n)}} - a} } < \varepsilon \hspace{10mm}\forall n > {n_0}(\varepsilon )\]
-Sowie $n_1(\varepsilon)$ mit \\\todo{Can't understand, page 83 bottom}
-
+Sowie $n_1(\varepsilon)$ mit $\abs{a_n-a_r} < \varepsilon \quad \forall n,r\geq n_1(\varepsilon)$ \quad ($(a_n)$ Cauchy) \\
 $\forall n \ge \max \left\{ {{n_0}(\varepsilon ),{n_1}(\varepsilon )} \right\}$ gilt:
 \begin{align*}
 \abs{ {{a_n} - a} } &\le \abs{ {{a_n} - {a_{l(n)}}} } + \abs{ {{a_{l(n)}} - a} }\\
