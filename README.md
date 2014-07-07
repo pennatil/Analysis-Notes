@@ -81,7 +81,7 @@ This is only recommended to people with experience with LaTex, since the files m
 	* Mac OS: [MacteX](http://tug.org/mactex/)
     * Windows: [MikTeX](http://miktex.org/download) or [TexLive](https://www.tug.org/texlive/acquire-netinstall.html) (Recommended)
     * Linux: [TexLive](https://www.tug.org/texlive/quickinstall.html) (Ubuntu: <code>sudo apt-get install texlive-full</code>)
-2. Make sure you have gnuplot installed. If you don't, a quick google search will help you! (On OSX, you can `brew install gnuplot`. If you get errors about lua, make sure you have lua5.15 (the one brew installs).
+2. Make sure you have gnuplot installed. If you don't, a quick google search will help you! (On OSX, you can `brew install gnuplot`. If you get errors about lua, make sure you have lua5.15 (the one brew installs)).
 3. Download the master Branch [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip)
 4. Generate the files
 	* If you want to use a program with a GUI:
