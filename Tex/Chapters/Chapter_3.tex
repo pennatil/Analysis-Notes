@@ -300,7 +300,7 @@ Offensichtlich gilt $\lim\inf a_n\geq \lim\sup a_n$
 Sei $\left( a_n\right)_{n\geq 1}$ beschränkt. Dann sind $\lim\sup a_n$ und $\lim\inf a_n$ Häufungspunkte von $\left( a_n\right)_{n\geq 1}$
 
 \begin{beweis}{}
-Sei $\displaystyle\lim_{n \to \infty }{\sup {a_n}} = a$. Wir möchten zeigen, dass eine Teilfolge $a_{l(n)}$ gibt mit $\lim a_{l(n)}=a$. Wir definieren $l:\N\setminus\{ 0\}\to\N\setminus\{ 0\}$ induktiv wie folgt:\\
+Sei $\displaystyle\lim_{n \to \infty }{\sup {a_n}} = a$. Wir möchten zeigen, dass eine Teilfolge $a_{l(n)}$ mit $\lim a_{l(n)}=a$ existiert. Wir definieren $l:\N\setminus\{ 0\}\to\N\setminus\{ 0\}$ induktiv wie folgt:\\
 
 \noindent $l(1)\geq 1$ sei so gewählt, dass $M_1-1\leq a_{l(1)}\leq M_1=\sup A_1=\{ a_1,a_2,\dots\}$
 \begin{framed}
@@ -311,13 +311,14 @@ Sei $h\in\R$, $h>0$
 \end{enumerate}
 Sei $E=\{ a_1,\dots\}=A_1$, $h=1$
 \end{framed}
-Sei $l(2)\in\{ k\in\N\mid k>l(1)+1\}$, so dass \[M_{l(1)+1}\leq a_{l(2)}\leq M_{l(1)+1}\]
-(Sei $E=\{ a_{l(1)+1},a_{l(1)+2},\dots\}$, $h=\frac{1}{2}$). Falls $l(1),l(2),\dots,l(n-1)$ definiert ist, wählen wir $l(n)$, so dass:
+Sei $l(2)\in\{ k\in\N\mid k>l(1)+1\}$, so dass \[M_{l(1)+1}-\frac{1}{2}\leq a_{l(2)}\leq M_{l(1)+1}\]
+(Sei $E=\{ a_{l(1)+1},a_{l(1)+2},\dots\}$, $h=\frac{1}{2}$). Falls $l(1),l(2),\dots,l(n-1)$ definiert sind, wählen wir $l(n)$, so dass:
 \[ l(n)\in\{ k\in\N : k>l(n-1)+1\}\]
 und
 \[
 M_{l(n-1)+1}-\frac{1}{n}\leq a_{l(n)}\leq M_{l(n-1)+1}\tag{\text{\textasteriskcentered}}
 \]
+Es gilt zu bemerken, dass $l(n)\geq	n$.
 \[ \abs{ M_{l(n-1)+1}-a_{l(n)}} < \frac{1}{n}\]
 Dann ist $l(n)$ strikt monoton steigend und
 \[ \abs{ a_{l(n)} -M_{l(n-1)+1}}\leq\frac{1}{n}\]
