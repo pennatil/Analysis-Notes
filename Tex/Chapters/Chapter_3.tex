@@ -186,9 +186,9 @@ Wir werden beweisen, dass $a_n$ monoton wachsend und beschränkt ist. Dieser Lim
 \[a_n={\left( {1 + \frac{1}{n}} \right)^n}\]
 Wir möchten den binomischen Lehrsatz anwenden
 \begin{align*}
-{a_n} =&{\left( {1 + \frac{1}{n}} \right)^n}\\
-=&1 + n\left( {\frac{1}{n}} \right) + \frac{{n(n - 1)}}{{2!}}{\left( {\frac{1}{n}} \right)^2} + \frac{{n(n - 1)(n - 2)}}{{3!}}{\left( {\frac{1}{n}} \right)^3} +  \ldots  + {\left( {\frac{1}{n}} \right)^n}\\
-=&1 + 1 + \frac{1}{{2!}}\left( {1 - \frac{1}{n}} \right) + \frac{1}{{3!}}\left( {1 - \frac{1}{n}} \right)\left( {1 - \frac{2}{n}} \right)\\
+{a_n} &={\left( {1 + \frac{1}{n}} \right)^n}\\
+&=1 + n\left( {\frac{1}{n}} \right) + \frac{{n(n - 1)}}{{2!}}{\left( {\frac{1}{n}} \right)^2} + \frac{{n(n - 1)(n - 2)}}{{3!}}{\left( {\frac{1}{n}} \right)^3} +  \ldots  + {\left( {\frac{1}{n}} \right)^n}\\
+&=1 + 1 + \frac{1}{{2!}}\left( {1 - \frac{1}{n}} \right) + \frac{1}{{3!}}\left( {1 - \frac{1}{n}} \right)\left( {1 - \frac{2}{n}} \right)\\
 &+\ldots  + \frac{1}{{k!}}\left( {1 - \frac{1}{n}} \right)\left( {1 - \frac{2}{n}} \right) \ldots \left( {1 - \frac{{k - 1}}{n}} \right) +  \ldots
 \end{align*}
 Nun ist aber
@@ -209,19 +209,19 @@ d.h. $a_n$ ist monoton wachsend.\\
 d.h. $a_n$ ist beschränkt. Monotone Konvergenz $\Rightarrow \left( a_n\right)_{n\geq 1}$ konvergiert
 \end{beweis}
 \item Rekursive Definitionen\\
-Sei $c \in\R$, $c > 1$, $a_1=c$, ${a_{n + 1}} = \frac{1}{2}\left( {{a_n} + \frac{c}{{{a_n}}}} \right)$, $n\geq 1$. Dann ist $\lim a_n=\sqrt{c}$
+Sei $c \in\R$, $c > 1$, $a_1=c$, ${a_{n + 1}} = \frac{1}{2}\left( {{a_n} + \frac{c}{{{a_n}}}} \right)$, $n\geq 1$. Dann ist $\lim a_n=\sqrt{c}$.
 \begin{beweis}{}
 Dies ist ein wichtiges Beispiel. Hier wird vorgeführt wie man aus der a priori Existenz des Limes dessen Wert schliessen kann.\\
 
-\noindent\underline{1. Schnitt:}
+\noindent\underline{1. Schritt:}
 \[a_{n + 1}^2 \ge c\hspace{5mm}\forall n\geq 1\]
 $a_n$ ist (nach unten) beschränkt.
 \begin{align*}
-{a_{n + 1}} =&\frac{{c + a_n^2}}{{2an}} = {a_n} + \frac{{c - a_n^2}}{{2{a_n}}}\\
- \Rightarrow a_{n + 1}^2 =&a_n^2 + \left( {c - a_n^2} \right) + {\left( {\frac{{c - a_n^2}}{{2{a_n}}}} \right)^2}\\
- =&c + {\left( {\frac{{c - a_n^2}}{{2{a_n}}}} \right)^2} \ge c\hspace{2mm}\text{(\textasteriskcentered)}
+{a_{n + 1}} &= \frac{{c + a_n^2}}{{2a_n}} = {a_n} + \frac{{c - a_n^2}}{{2{a_n}}}\\
+ \Rightarrow a_{n + 1}^2 &= a_n^2 + \left( {c - a_n^2} \right) + {\left( {\frac{{c - a_n^2}}{{2{a_n}}}} \right)^2}\\
+ &= c + {\left( {\frac{{c - a_n^2}}{{2{a_n}}}} \right)^2} \ge c\hspace{2mm}\text{(\textasteriskcentered)}
 \end{align*}
-\noindent\underline{2. Schnitt:}
+\noindent\underline{2. Schritt:}
 \[a_{n+1}\leq a_n\]
 d.h. $a_n$ ist monoton fallend.
 \begin{align*}
@@ -248,8 +248,8 @@ und wir definieren eine neue Folge mit einigen Elementen von $\left( a_n\right)$
 \subsubsection*{Beispiele}
 \begin{enumerate}
 \item \begin{align*}
-{a_n} =&\left\{ {1,0, - 1,1,0, - 1,1,0, - 1, \ldots } \right\}\\
- =&\left\{ {\begin{array}{*{20}{c}}
+{a_n} &=\left\{ {1,0, - 1,1,0, - 1,1,0, - 1, \ldots } \right\}\\
+ &=\left\{ {\begin{array}{*{20}{c}}
 0&{{\text{falls}}}&{n = 3k + 2}\\
 1&{{\text{falls}}}&{n = 3k + 1}\\
 { - 1}&{{\text{falls}}}&{n = 3k + 3}
@@ -981,13 +981,13 @@ Die Reihe $\sum\frac{\left( -1\right)^k}{k}$ konvergiert, hingegen ist $\sum\lim
 \[\sum\limits_{k = 1}^{{k_l}} {\frac{1}{{2k}}}  > l + \sum\limits_{k = 1}^l {\frac{1}{{2k - 1}}} \]
 und ordnet man die Folge $\sum\frac{\left( -1\right)^k}{k}$ nun so um, dass auf die ersten $k_j$ positiven Folgengleider jeweils das $j-$te negative Glied folgt, $j\in\N$, dann erhält man für die so umgeordnete harmonische Reihe
 \begin{align*}
-\sum {\frac{{{{\left( { - 1} \right)}^k}}}{k}}  =& \frac{1}{2} +  \ldots  + \frac{1}{{2{k_1}}} - 1\\
+\sum {\frac{{{{\left( { - 1} \right)}^k}}}{k}}  &= \frac{1}{2} +  \ldots  + \frac{1}{{2{k_1}}} - 1\\
  &\hspace{15mm}\vdots \\
  +& \frac{1}{{2\left( {{k_1} + 1} \right)}} +  \ldots  + \frac{1}{{2{k_1}}} - \frac{1}{3}\\
 &\hspace{15mm} \vdots \\
  +& \frac{1}{{2\left( {{k_{l - 1}} + 1} \right)}} +  \ldots  + \frac{1}{{2{k_l}}} - \frac{1}{{2l - 1}}\\
  &\hspace{15mm}\vdots \\
- =& \sum\limits_{l = 1}^\infty  {\underbrace {\left( {\sum\limits_{k = 1}^{{k_l}} {\frac{1}{{2k}}}  - \sum\limits_{k = 1}^l {\frac{1}{{2k - 1}}} } \right)}_{ > l}} \\
+ &= \sum\limits_{l = 1}^\infty  {\underbrace {\left( {\sum\limits_{k = 1}^{{k_l}} {\frac{1}{{2k}}}  - \sum\limits_{k = 1}^l {\frac{1}{{2k - 1}}} } \right)}_{ > l}} \\
  >& \sum\limits_{l = 1}^\infty  l
 \end{align*}
 d.h. die umgeordnete alternierende harmonische Reihe ist divergent! Der stärkere Konvergenzbegriff, die absolute Konvergenz, schliesst solche pathologische\\ Verhältnisse aus. Falls die Reihe absolut konvergent ist, ist die Konvergenz sehr stabil und sehr robust.
@@ -1186,10 +1186,10 @@ Dann $\forall n>\max\{ n_0,n_1\}$
 \noindent Satz 3.49 $\Rightarrow \exp(1)=e^1$
 \[\exp \left( {x + y} \right) =\left( {\exp \left( x \right)} \right)\left( {\exp \left( y \right)} \right)\]
 \begin{align*}
- \Rightarrow \exp \left( n \right) =&\exp \left( 1 \right)\exp \left( {n - 1} \right)\\
- =&\exp \left( 1 \right)\exp \left( 1 \right)\exp \left( {n - 2} \right)\\
+ \Rightarrow \exp \left( n \right) &=\exp \left( 1 \right)\exp \left( {n - 1} \right)\\
+ &=\exp \left( 1 \right)\exp \left( 1 \right)\exp \left( {n - 2} \right)\\
  \vdots \\
- =&e \cdot e \cdot  \ldots  \cdot e = {e^n}, \forall n\in\N
+ &=e \cdot e \cdot  \ldots  \cdot e = {e^n}, \forall n\in\N
 \end{align*}
 \[1=\exp(0)=\exp(n)\exp(-n)\]
 \[\Rightarrow\exp(-n)=\frac{1}{\exp(n)}=\frac{1}{e^n}=e^{-n}\]

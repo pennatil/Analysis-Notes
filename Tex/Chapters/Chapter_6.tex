@@ -282,8 +282,8 @@ Also folgt aus der Definition der Infimums als grösste untere Schranke, dass di
 
 \item Für beschränktes $f=\lbrack a,b \rbrack\rightarrow \R$ bezeichnen
 \begin{align*}
-\int\limits_{\underline{a}}^b fdx =&\sup \{ U(f,P):P \in P(I)\}\\
-\int\limits_{a}^{\overline{b}} fdx =&\inf \{ O(f,P):P \in P(I)\}
+\int\limits_{\underline{a}}^b fdx &=\sup \{ U(f,P):P \in P(I)\}\\
+\int\limits_{a}^{\overline{b}} fdx &=\inf \{ O(f,P):P \in P(I)\}
 \end{align*}
 
 das untere und obere Integral von $f$.
@@ -388,9 +388,9 @@ Somit ist $f$ nach dem Riemannschen Kriterium integrierbar.
 
 \item Sei $f$ monoton wachsend, $P\in P(I)$ eine uniforme Partition mit \[x_i = a+\left(\frac{b-a}{n}\right)i, 0\leq i \leq n\]
 \begin{align*}
-O(f,P) - U(f,P) =&\sum\limits_{i = 0}^{n - 1} {(f({x_{i + 1}}) - f({x_i}))({x_{i + 1}} - {x_i})} \\
-=&\frac{{b - a}}{n}\sum\limits_{i = 0}^{n - 1} {(f({x_{i + 1}}) - f({x_i}))} \\
-=&\frac{{b - a}}{n}(f(b) - f(a)) < \varepsilon
+O(f,P) - U(f,P) &=\sum\limits_{i = 0}^{n - 1} {(f({x_{i + 1}}) - f({x_i}))({x_{i + 1}} - {x_i})} \\
+&=\frac{{b - a}}{n}\sum\limits_{i = 0}^{n - 1} {(f({x_{i + 1}}) - f({x_i}))} \\
+&=\frac{{b - a}}{n}(f(b) - f(a)) < \varepsilon
 \end{align*}
 Für jedes $\varepsilon>0$, haben wir $\frac{{(b - a)(f(b) - f(a))}}{n} < \varepsilon$. Nach dem Riemannschen Kriterium ist $f$ integrierbar. (monoton fallend ist analog)
 \end{enumerate}
@@ -423,10 +423,10 @@ Dann $\delta(P^{(n)})=\frac{1}{n}\to 0$ für $n\to\infty$. Wir wählen die Zwisc
 Die $\xi _k^{(n)}$ sind die rechten Endpunkte der Teilintervalle $I_{k-1}:=\lbrack \frac{k-1}{n},\frac{k}{n}\rbrack$. Hiermit folgt
 
 \begin{align*}
-S(f,{P^{(n)}},{\xi ^{(n)}}) =&\sum\limits_{k = 1}^n {f(\xi _k^{(n)})(x_k^{(n)} - x_{k - 1}^{(n)}} )\\
-=&\sum\limits_{k = 1}^n {\left( {\frac{{{k^2}}}{{{n^2}}} - \frac{k}{n}} \right)\left( {\frac{k}{n} - \frac{{k - 1}}{n}} \right)} \\
-=&\frac{1}{n}\sum\limits_{k = 1}^n {\left( {\frac{{{k^2}}}{{{n^2}}} - \frac{k}{n}} \right)} = \frac{1}{{{n^3}}}\sum\limits_{k = 1}^n {{k^2}}  - \frac{1}{{{n^2}}}\sum\limits_{k = 1}^n k \\
-=&\frac{1}{{{n^3}}}\left( {\frac{{n(n + 1)(2n + 1)}}{6}} \right) - \frac{1}{{{n^2}}}\left( {\frac{{n(n + 1)}}{2}} \right)\\
+S(f,{P^{(n)}},{\xi ^{(n)}}) &=\sum\limits_{k = 1}^n {f(\xi _k^{(n)})(x_k^{(n)} - x_{k - 1}^{(n)}} )\\
+&=\sum\limits_{k = 1}^n {\left( {\frac{{{k^2}}}{{{n^2}}} - \frac{k}{n}} \right)\left( {\frac{k}{n} - \frac{{k - 1}}{n}} \right)} \\
+&=\frac{1}{n}\sum\limits_{k = 1}^n {\left( {\frac{{{k^2}}}{{{n^2}}} - \frac{k}{n}} \right)} = \frac{1}{{{n^3}}}\sum\limits_{k = 1}^n {{k^2}}  - \frac{1}{{{n^2}}}\sum\limits_{k = 1}^n k \\
+&=\frac{1}{{{n^3}}}\left( {\frac{{n(n + 1)(2n + 1)}}{6}} \right) - \frac{1}{{{n^2}}}\left( {\frac{{n(n + 1)}}{2}} \right)\\
 \to&\frac{2}{6} - \frac{1}{2} =  - \frac{1}{6}\\
 \Rightarrow&\int\limits_0^1 {({x^2} - x)dx =  - \frac{1}{6}}
 \end{align*}
@@ -498,13 +498,13 @@ Sei $P=P_1\cup P_2$.\\
 Wie im Beweis von (1.) ergibt sich unter Verwendung von \[\mathop {\sup }\limits_{x \in I} h - \mathop {\inf }\limits_{x \in I} h = \sup \left\{ {\abs{ {h(x) - h(y)} }x,y \in I} \right\}\]
 dann
 \begin{align*}
-O(h,P)-U(h,P) =&\sum\limits_{k = 1}^n {(\sup h - \inf h)({x_k} - {x_{k - 1}})} \\
- =&\sum\limits_{k = 1}^n {\mathop {\sup }\limits_{x,y \in {I_k}} \abs{ {h(x) - h(y)} }({x_k} - {x_{k - 1}})} \\
+O(h,P)-U(h,P) &=\sum\limits_{k = 1}^n {(\sup h - \inf h)({x_k} - {x_{k - 1}})} \\
+ &=\sum\limits_{k = 1}^n {\mathop {\sup }\limits_{x,y \in {I_k}} \abs{ {h(x) - h(y)} }({x_k} - {x_{k - 1}})} \\
 \le&\abs{ \beta  }\sum {\mathop {\mathop {\sup }\limits_{{I_k}} \abs{ {f(x) - f(y)} }({x_k} - {x_{k - 1}}) }}\\
 +&\abs{ \alpha  }\sum {\mathop {\mathop {\sup }\limits_{{I_k}} \abs{ {g(x) - g(y)} }({x_k} - {x_{k - 1}})} } \\
-=&\abs{ \beta  }\sum {(\mathop {\sup }\limits_{{I_k}} f - \mathop {\inf }\limits_{{I_k}} f)({x_k} - {x_{k - 1}})} \\
+&=\abs{ \beta  }\sum {(\mathop {\sup }\limits_{{I_k}} f - \mathop {\inf }\limits_{{I_k}} f)({x_k} - {x_{k - 1}})} \\
 +&\abs{ \alpha  }\sum {(\mathop {\sup }\limits_{{I_k}} g - \mathop {\inf }\limits_{{I_k}} g)({x_k} - {x_{k - 1}})} \\
-=&\abs{ \beta  }[O(f,P) - U(f,P)] + \abs{ \alpha  }[O(g,P) - U(g,P)] < \varepsilon
+&=\abs{ \beta  }[O(f,P) - U(f,P)] + \abs{ \alpha  }[O(g,P) - U(g,P)] < \varepsilon
 \end{align*}
 \end{enumerate}
 
@@ -524,8 +524,8 @@ Wegen Bmk. 6.2 haben wir \[O(f,P'')-U(f,P'')<\varepsilon\]
 Sei nun $P:=P''\cap \lbrack c,d\rbrack$ die Restriktion der Partition $P''$ auf $\lbrack c,d\rbrack$. Dann gilt mit $g:=f\vline _{\left[ c,d\right] }$ die Abschätzung
 
 \begin{align*}
-O(g,P) - U(g,P) =&\sum\limits_P {({M_k}(g) - {m_k}(g))({x_k} - {x_{k - 1}})} \\
-=&\sum\limits_P {({M_k}(f) - {m_k}(f))({x_k} - {x_{k - 1}})} \\
+O(g,P) - U(g,P) &=\sum\limits_P {({M_k}(g) - {m_k}(g))({x_k} - {x_{k - 1}})} \\
+&=\sum\limits_P {({M_k}(f) - {m_k}(f))({x_k} - {x_{k - 1}})} \\
 \le&\sum\limits_{P''} {(M'{'_k}(f) - m'{'_k}(f))({x_k} - {x_{k - 1}})} \\
 O(f,P'')-U(f,P'')<& \varepsilon
 \end{align*}
@@ -598,8 +598,8 @@ Geometrisch:
 \subsubsection*{Beweis}
 Wir setzen
 \begin{align*}
-m: =&\min \{ f(x)\mid x \in [a,b]\}  = f({x_ - })\\
-M: =&\max \{ f(x)\mid x \in [a,b]\}  = f({x_ + })
+m: &=\min \{ f(x)\mid x \in [a,b]\}  = f({x_ - })\\
+M: &=\max \{ f(x)\mid x \in [a,b]\}  = f({x_ + })
 \end{align*}
 Wegen Satz 6.10
 \[m(b - a) \le \int\limits_a^b {f(x)dx \le M(b - a)} \]
@@ -705,10 +705,10 @@ Manchmal muss man dazu den Integranden erst künstlich als Produkt schreiben
 
 \item Manchmal führt wiederholte partielle Integration auf den ursprünglichen Ausdruck zurück. Mit Glück kann man dann nach diesem auflösen
 \begin{align*}
-\int {{{\sin }^2}xdx} =&\int {\underbrace {(\sin x)}_u\underbrace {(\sin x)}_{v'}dx}  \\
- =&- \sin x\cos x + \int {{{\cos }^2}xdx}\\
- =&- \sin x\cos x + \int {(1 - {{\sin }^2}x)dx}\\
- =&- \sin x\cos x + x - \int {{{\sin }^2}xdx} \\
+\int {{{\sin }^2}xdx} &=\int {\underbrace {(\sin x)}_u\underbrace {(\sin x)}_{v'}dx}  \\
+ &=- \sin x\cos x + \int {{{\cos }^2}xdx}\\
+ &=- \sin x\cos x + \int {(1 - {{\sin }^2}x)dx}\\
+ &=- \sin x\cos x + x - \int {{{\sin }^2}xdx} \\
 \Rightarrow&2\int {{{\sin }^2}xdx = x - \sin x\cos x} \\
 \Rightarrow&\int {{{\sin }^2}xdx = \frac{1}{2}\left( {x - \sin x\cos x}  \right)}
 \end{align*}
@@ -716,37 +716,37 @@ Manchmal muss man dazu den Integranden erst künstlich als Produkt schreiben
 
 Andere Möglichkeit:
 \begin{align*}
-\cos 2x = 1-2\sin^2x=&\cos^2x-\sin^2x=2\cos^2x-1\\
-\sin^2x=&\frac{1}{2}(1-\cos 2x)
+\cos 2x = 1-2\sin^2x&=\cos^2x-\sin^2x=2\cos^2x-1\\
+\sin^2x&=\frac{1}{2}(1-\cos 2x)
 \end{align*}
 mit
 \[\cos 2x=\left(\frac{\sin 2x}{2} \right)'\]
 Dann:
 \begin{align*}
-\int{\sin^2 x}=&\frac{1}{2}\int{1-\cos 2x dx}\\
-=&\frac{1}{2}\left[ x-\int{\cos 2x dx}\right]\\
-=&\frac{1}{2}\left[ x-\frac{\sin 2x}{2}\right] +c\\
-\sin 2x=&2\sin x\cos x
+\int{\sin^2 x}&=\frac{1}{2}\int{1-\cos 2x dx}\\
+&=\frac{1}{2}\left[ x-\int{\cos 2x dx}\right]\\
+&=\frac{1}{2}\left[ x-\frac{\sin 2x}{2}\right] +c\\
+\sin 2x&=2\sin x\cos x
 \end{align*}
 \end{enumerate}
 
 \subsubsection*{Beispiel 6.23}
 
 \begin{align*}
-\int\limits_0^{\pi /2} {(\sin x)^{k + 1}dx} =&\int\limits_0^{\pi /2} {\underbrace {{{(\sin x)}^k}}_u\underbrace {(\sin x)}_{v'}dx}  \\
-=&\left. {\underbrace {{{(\sin x)}^k}}_u\underbrace {( - \cos x)}_v} \right|_0^{\pi /2} - \int\limits_0^{\pi /2} {\underbrace {k{{(\sin x)}^{k - 1}}(\cos x)}_{u'}} \underbrace {( - \cos x)}_vdx\\
-=&0 + k\int\limits_0^{\pi /2} {{{(\sin x)}^{k - 1}}} \left[ {1 - {{\sin }^2}x} \right]dx\\
- =&k\int\limits_0^{\pi /2} {{{(\sin x)}^{k - 1}} - k\int\limits_0^{\pi /2} {{{(\sin x)}^{k + 1}}} dx}
+\int\limits_0^{\pi /2} {(\sin x)^{k + 1}dx} &=\int\limits_0^{\pi /2} {\underbrace {{{(\sin x)}^k}}_u\underbrace {(\sin x)}_{v'}dx}  \\
+&=\left. {\underbrace {{{(\sin x)}^k}}_u\underbrace {( - \cos x)}_v} \right|_0^{\pi /2} - \int\limits_0^{\pi /2} {\underbrace {k{{(\sin x)}^{k - 1}}(\cos x)}_{u'}} \underbrace {( - \cos x)}_vdx\\
+&=0 + k\int\limits_0^{\pi /2} {{{(\sin x)}^{k - 1}}} \left[ {1 - {{\sin }^2}x} \right]dx\\
+ &=k\int\limits_0^{\pi /2} {{{(\sin x)}^{k - 1}} - k\int\limits_0^{\pi /2} {{{(\sin x)}^{k + 1}}} dx}
 \end{align*}
 
 Also:
 \[\int\limits_0^{\pi /2} {{{(\sin x)}^{k + 1}}dx = \frac{k}{{(1 + k)}}\int\limits_0^{\pi /2} {{{(\sin x)}^{k - 1}}dx} } \]
 Falls $k+1=2n$:
 \begin{align*}
-\int\limits_0^{\pi /2} {(\sin x)}^{2n}dx =&\frac{2n - 1}{2n}\int\limits_0^{\pi /2} {{(\sin x)}^{2(n - 1)}}dx\\
- =&\frac{{2n - 1}}{{2n}}\frac{{2n - 3}}{{2n - 2}} \ldots \frac{1}{2}\int\limits_0^{\pi /2} {1dx} \\
- =&\frac{{(2n)(2n - 1)(2n - 2) \ldots 1}}{{{{\left[ {(2n)(2n - 2) \ldots 2} \right]}^2}}}\frac{\pi }{2}\\
- =&\frac{{(2n)!}}{{{{({2^n}n!)}^2}}}\frac{\pi }{2}
+\int\limits_0^{\pi /2} {(\sin x)}^{2n}dx &=\frac{2n - 1}{2n}\int\limits_0^{\pi /2} {{(\sin x)}^{2(n - 1)}}dx\\
+ &=\frac{{2n - 1}}{{2n}}\frac{{2n - 3}}{{2n - 2}} \ldots \frac{1}{2}\int\limits_0^{\pi /2} {1dx} \\
+ &=\frac{{(2n)(2n - 1)(2n - 2) \ldots 1}}{{{{\left[ {(2n)(2n - 2) \ldots 2} \right]}^2}}}\frac{\pi }{2}\\
+ &=\frac{{(2n)!}}{{{{({2^n}n!)}^2}}}\frac{\pi }{2}
 \end{align*}
 
 \noindent Analog:
@@ -792,10 +792,10 @@ wobei \[{t_k} = \frac{2}{{{\xi ^3}}}\frac{1}{{3!}}{\left( {\frac{1}{2}} \right)^
 \[\abs{ {{t'_k}} } \le \frac{1}{{24{\left(k-\frac{1}{2}\right)^3}}}\]
 Also:
 \begin{align*}
-\int\limits_{k - 1/2}^{k + 1/2} x\ln  - xdx =& \left( {k + \frac{1}{2}} \right)\left( {\ln k + \frac{1}{{2k}} - \frac{1}{{8{k^2}}} + {t_k}} \right) - \left( {k + \frac{1}{2}} \right)\\
+\int\limits_{k - 1/2}^{k + 1/2} x\ln  - xdx &= \left( {k + \frac{1}{2}} \right)\left( {\ln k + \frac{1}{{2k}} - \frac{1}{{8{k^2}}} + {t_k}} \right) - \left( {k + \frac{1}{2}} \right)\\
 -&\left[ {\left( {k - \frac{1}{2}} \right)\left( {\ln k - \frac{1}{2k} - \frac{1}{8{k^2}} + t{'_k}} \right) - \left( {k - \frac{1}{2}} \right)} \right]\\
-=&\ln k - \frac{1}{8{k^2}} + \left( {k + \frac{1}{2}} \right){t_k} - \left( {k - \frac{1}{2}} \right)t{'_k}\\
-=&\ln k + {r_k}\hspace{10mm}\abs{ {r_k} } \le \frac{c}{k^2}
+&=\ln k - \frac{1}{8{k^2}} + \left( {k + \frac{1}{2}} \right){t_k} - \left( {k - \frac{1}{2}} \right)t{'_k}\\
+&=\ln k + {r_k}\hspace{10mm}\abs{ {r_k} } \le \frac{c}{k^2}
 \end{align*}
 
 \noindent Mit
@@ -803,18 +803,18 @@ Also:
 \noindent folgt, dass:
 
 \begin{align*}
-\ln n! =&\sum\limits_{k = 2}^n {\ln k\mathop {{\text{  }} = }\limits^{(*)} \sum\limits_{k = 2}^n {\int\limits_{k - \frac{1}{2}}^{k + \frac{1}{2}} {\ln xdx} }  - \sum\limits_{k = 2}^n {{r_k}} } \\
- =&\underbrace {\int\limits_1^{n + \frac{1}{2}} {\ln xdx} }_{( * )} - \int\limits_1^{\frac{3}{2}} {\ln xdx - \sum\limits_{k = 2}^n {{r_k}} } \\
-( * ) =&\int\limits_1^{n + \frac{1}{2}} {\ln xdx = \left. {x\ln x - x} \right|_1^{n + \frac{1}{2}}}\\
- =&\left( {n + \frac{1}{2}} \right)\ln \left( {n + \frac{1}{2}} \right) - \left( {n + \frac{1}{2}} \right) + 1\\
- =&\left( {n + \frac{1}{2}} \right)\ln \left( {n + \frac{1}{2}} \right) - n + \frac{1}{2}
+\ln n! &=\sum\limits_{k = 2}^n {\ln k\mathop {{\text{  }} = }\limits^{(*)} \sum\limits_{k = 2}^n {\int\limits_{k - \frac{1}{2}}^{k + \frac{1}{2}} {\ln xdx} }  - \sum\limits_{k = 2}^n {{r_k}} } \\
+ &=\underbrace {\int\limits_1^{n + \frac{1}{2}} {\ln xdx} }_{( * )} - \int\limits_1^{\frac{3}{2}} {\ln xdx - \sum\limits_{k = 2}^n {{r_k}} } \\
+( * ) &=\int\limits_1^{n + \frac{1}{2}} {\ln xdx = \left. {x\ln x - x} \right|_1^{n + \frac{1}{2}}}\\
+ &=\left( {n + \frac{1}{2}} \right)\ln \left( {n + \frac{1}{2}} \right) - \left( {n + \frac{1}{2}} \right) + 1\\
+ &=\left( {n + \frac{1}{2}} \right)\ln \left( {n + \frac{1}{2}} \right) - n + \frac{1}{2}
 \end{align*}
 
 Ersetzen wir $\ln \left( {n + \frac{1}{2}} \right) = \ln n + \frac{1}{{2n}} - \frac{1}{{8{n^2}}} + {t_n}$, so folgt:
 \begin{align*}
-(*) =&\left( {n + \frac{1}{2}} \right)\ln n - n + \left( {n + \frac{1}{2}} \right)\left\{ {\frac{1}{{2n}} - \frac{1}{{8{n^2}}} + {t_n}} \right\} + \frac{1}{2}\\
- =&\left( {n + \frac{1}{2}} \right)\ln n - n + \frac{1}{2} - \frac{1}{{8{n^2}}} + n{t_n} + \frac{1}{{4n}} - \frac{1}{{16{n^2}}} + \frac{1}{2}{t_n} + \frac{1}{2}\\
- =&\left( {n + \frac{1}{2}} \right)\ln n - n + 1 + \frac{1}{{8n}} + n{t_n} - \frac{1}{{16{n^2}}} + \frac{1}{2}{t_n}
+(*) &=\left( {n + \frac{1}{2}} \right)\ln n - n + \left( {n + \frac{1}{2}} \right)\left\{ {\frac{1}{{2n}} - \frac{1}{{8{n^2}}} + {t_n}} \right\} + \frac{1}{2}\\
+ &=\left( {n + \frac{1}{2}} \right)\ln n - n + \frac{1}{2} - \frac{1}{{8{n^2}}} + n{t_n} + \frac{1}{{4n}} - \frac{1}{{16{n^2}}} + \frac{1}{2}{t_n} + \frac{1}{2}\\
+ &=\left( {n + \frac{1}{2}} \right)\ln n - n + 1 + \frac{1}{{8n}} + n{t_n} - \frac{1}{{16{n^2}}} + \frac{1}{2}{t_n}
 \end{align*}
 
 \noindent Also:
@@ -830,9 +830,9 @@ folgt
 
 \noindent Wir möchten jetzt $b:=e^a$ bestimmen:
 \begin{align*}
-b =&\lim {b_n} = \mathop {\lim }\limits_{n \to \infty } \frac{{{b_n}^2}}{{{b_{2n}}}} = \lim {\left( {\frac{{n!}}{{\sqrt n {n^n}{e^{ - n}}}}} \right)^2}\left( {\frac{{\sqrt {2n} {{(2n)}^{2n}}{e^{2n}}}}{{(2n)!}}} \right)\\
-=&\mathop {\lim }\limits_{n \to \infty } \frac{{{{(n!)}^2}}}{{(2n)!}}\sqrt {\frac{2}{n}} \frac{{{{(2n)}^{2n}}}}{{{n^{2n}}}} = \mathop {\lim }\limits_{n \to \infty } \frac{{{{(n!)}^2}}}{{(2n)!}}\sqrt {\frac{2}{n}} {2^{2n}} = \mathop {\lim }\limits_{n \to \infty } \frac{{{{({2^n}n!)}^n}}}{{(2n)!}} \cdot \frac{{\sqrt 2 }}{{\sqrt n }}\\
-=&\sqrt {2\pi}
+b &=\lim {b_n} = \mathop {\lim }\limits_{n \to \infty } \frac{{{b_n}^2}}{{{b_{2n}}}} = \lim {\left( {\frac{{n!}}{{\sqrt n {n^n}{e^{ - n}}}}} \right)^2}\left( {\frac{{\sqrt {2n} {{(2n)}^{2n}}{e^{2n}}}}{{(2n)!}}} \right)\\
+&=\mathop {\lim }\limits_{n \to \infty } \frac{{{{(n!)}^2}}}{{(2n)!}}\sqrt {\frac{2}{n}} \frac{{{{(2n)}^{2n}}}}{{{n^{2n}}}} = \mathop {\lim }\limits_{n \to \infty } \frac{{{{(n!)}^2}}}{{(2n)!}}\sqrt {\frac{2}{n}} {2^{2n}} = \mathop {\lim }\limits_{n \to \infty } \frac{{{{({2^n}n!)}^n}}}{{(2n)!}} \cdot \frac{{\sqrt 2 }}{{\sqrt n }}\\
+&=\sqrt {2\pi}
 \end{align*}
 \noindent Also $b=\sqrt{2\pi}$ womit
 
@@ -841,11 +841,11 @@ b =&\lim {b_n} = \mathop {\lim }\limits_{n \to \infty } \frac{{{b_n}^2}}{{{b_{2n
 \subsubsection*{Beispiel: Der Satz von Taylor}
 Die Taylorentwicklung einer Funktion $f\in C^{n+1}$ um $x_0$ erhält man durch $n-$fache partielle Integration:
 \begin{align*}
-f(x) - f({x_0}) =&\int\limits_{{x_0}}^x {f'(t)dt = } \int\limits_{{x_0}}^x {\underbrace {{{(x - t)}^0}}_{v'}\underbrace {f'(t)}_udt}\\
- =&(x - {x_0})f'({x_0}) + \int\limits_{{x_0}}^x {\underbrace {(x - t)'}_{v'}} \underbrace {f''(t)}_udt\\
- =&(x - {x_0})f'({x_0}) + \frac{{{{(x - {x_0})}^2}}}{2}f''({x_0}) + \frac{1}{2}\int\limits_{{x_0}}^x {{{(x - t)}^2}f'''(t)dt} \\
+f(x) - f({x_0}) &=\int\limits_{{x_0}}^x {f'(t)dt = } \int\limits_{{x_0}}^x {\underbrace {{{(x - t)}^0}}_{v'}\underbrace {f'(t)}_udt}\\
+ &=(x - {x_0})f'({x_0}) + \int\limits_{{x_0}}^x {\underbrace {(x - t)'}_{v'}} \underbrace {f''(t)}_udt\\
+ &=(x - {x_0})f'({x_0}) + \frac{{{{(x - {x_0})}^2}}}{2}f''({x_0}) + \frac{1}{2}\int\limits_{{x_0}}^x {{{(x - t)}^2}f'''(t)dt} \\
 &\hspace{40mm}\vdots\\
-=&\sum\limits_{k = 1}^n {{{(x - {x_0})}^k}\frac{{{f^{(k)}}({x_0})}}{{k!}}}  + \frac{1}{{n!}}\int\limits_{{x_0}}^x {{{(x - t)}^n}{f^{(n + 1)}}(t)dt}
+&=\sum\limits_{k = 1}^n {{{(x - {x_0})}^k}\frac{{{f^{(k)}}({x_0})}}{{k!}}}  + \frac{1}{{n!}}\int\limits_{{x_0}}^x {{{(x - t)}^n}{f^{(n + 1)}}(t)dt}
 \end{align*}
 Aus dem Mittelwertsatz der Integralrechnung bekommt man die Lagrange Restgliedformel.
 \[\frac{1}{{n!}}\int\limits_{{x_0}}^x {{{(x - t)}^n}{f^{(n + 1)}}(t)dt}  = \frac{1}{{(n + 1)!}}{f^{n + 1}}(\xi ){(x - {x_0})^{n + 1}}\text{ für ein }\xi\in\lbrack x_0,x\rbrack\]
@@ -869,17 +869,17 @@ Mit der Kettenregel haben wir
 \[(F \circ g)'(t) = F'(g(t))g'(t) = f(g(t))g'(t)\]
 d.h. $F\circ g$ ist eine Stammfunktion für $f(g(t))g'(t)$. Woraus mit dem Hauptsatz B folgt
 \begin{align*}
-\int\limits_{{t_0}}^{{t_1}} {f\left( {g(t)} \right)} g'(t)dt =&\left( {F \circ g} \right)({t_1}) - \left( {F \circ g} \right)({t_0})\\
- =&F\left( {g({t_1})} \right) - F\left( {g({t_0})} \right)\\
- =&\int\limits_{g({t_0})}^{g({t_1})} {f(x)dx}
+\int\limits_{{t_0}}^{{t_1}} {f\left( {g(t)} \right)} g'(t)dt &=\left( {F \circ g} \right)({t_1}) - \left( {F \circ g} \right)({t_0})\\
+ &=F\left( {g({t_1})} \right) - F\left( {g({t_0})} \right)\\
+ &=\int\limits_{g({t_0})}^{g({t_1})} {f(x)dx}
 \end{align*}
 
 \subsubsection*{Korollar 6.26}
 \[\int {f(x)dx = \int {f\left( {g(t)} \right)} g'(t)dt + C} \]
 Dies Formel bedeutet folgendes: Die linke Seite als Funktion von $x$ ist gleich der rechten Seite als Funktion von $t$ vermöge der Relation
 \begin{align*}
-x=&g(t)\\
-dx=&g'(t)dt
+x&=g(t)\\
+dx&=g'(t)dt
 \end{align*}
 Für die Substitutionsregel
 \[\int\limits_{{t_0}}^{{t_1}} {f\left( {g(t)} \right)g'(t)dt = \int\limits_{g({t_0})}^{g({t_1})} {f(x)dx} } \]
@@ -893,9 +893,9 @@ Liegt ein Integral explizit in der Form \[\int\limits_{{t_0}}^{{t_1}} {f\left( {
 \item \[\int\limits_0^1 {{{(1 + {t^2})}^4}(2t)dt} \] Setzt man $f(x):=x^4$ und $g(t):=1+t^2$, so folgt:
 
 \begin{align*}
-\int\limits_0^1 {{{(1 + {t^2})}^4}(2t)dt}  =&\int\limits_0^1 {f\left( {g(t)} \right)g'(t)dt} \\
-=&\int\limits_{g(0)}^{g(1)} {f(x)dx = } \int\limits_1^2 {{x^4}dx = \left[ {\frac{1}{5}{x^5}} \right]_1^2} \\
-=&\frac{{32}}{5} - \frac{1}{5} = \frac{{31}}{5}
+\int\limits_0^1 {{{(1 + {t^2})}^4}(2t)dt}  &=\int\limits_0^1 {f\left( {g(t)} \right)g'(t)dt} \\
+&=\int\limits_{g(0)}^{g(1)} {f(x)dx = } \int\limits_1^2 {{x^4}dx = \left[ {\frac{1}{5}{x^5}} \right]_1^2} \\
+&=\frac{{32}}{5} - \frac{1}{5} = \frac{{31}}{5}
 \end{align*}
 
 \item \[\int {{{\sin }^3}t\cos t dt} \] Die Substitution $x=\sin t$ mit $\frac{dx}{dt}=\cos t \Rightarrow dx=\cos t dt$ liefert \[\int {{x^3}dx = \frac{{{x^4}}}{4} + C = \frac{{{{\sin }^4}t}}{4}}  + C\]
@@ -903,9 +903,9 @@ Liegt ein Integral explizit in der Form \[\int\limits_{{t_0}}^{{t_1}} {f\left( {
 Die Substitution $x=\cos t$ $\frac{dx}{dt}=-\sin t, dx=-\sin t dt$
 
 \begin{align*}
-\int\tan tdt =&- \int {\frac{1}{{\cos t}}( - \sin t)dt}\\
+\int\tan tdt &=- \int {\frac{1}{{\cos t}}( - \sin t)dt}\\
  = &- \int {\frac{1}{x}}   dx= - \log \abs{ x } + C\\
-=& - \log \abs{ {\cos t} } + C
+&= - \log \abs{ {\cos t} } + C
 \end{align*}
 
 \end{enumerate}
@@ -936,7 +936,7 @@ mit
 \end{array}\]
 
 \begin{align*}
-\int {\frac{x}{{\sqrt {2x - 3} }}dx}  =&\int {\left( {\frac{{{u^2} + 3}}{2}} \right)} du = \frac{1}{2}\int {({u^2} + 3)du} \\
+\int {\frac{x}{{\sqrt {2x - 3} }}dx}  &=\int {\left( {\frac{{{u^2} + 3}}{2}} \right)} du = \frac{1}{2}\int {({u^2} + 3)du} \\
 &= \frac{1}{2}\left( {\frac{{{u^3}}}{3} + 3u} \right) = \frac{u}{2}\left( {\frac{{{u^2}}}{3} + 3} \right)\\
 &= \frac{{\sqrt {2x - 3} }}{2}\left[ {\frac{{2x - 3}}{3} + 3} \right] + C\\
 &= \sqrt {2x - 3} \left( {\frac{x}{3} + 1} \right) + C
@@ -971,8 +971,8 @@ mit
 \[F=4\int ^{a}_{0}b\sqrt {1-\dfrac {x^{2}}{a^{2}}}dx\]
 mit $x=au$, $dx=adu$
 \begin{align*}
-F=&4\int ^{1}_{0}b\sqrt {1-u^2}adu\\
-=&4ab\int ^{1}_{0}\sqrt {1-u^2}du
+F&=4\int ^{1}_{0}b\sqrt {1-u^2}adu\\
+&=4ab\int ^{1}_{0}\sqrt {1-u^2}du
 \end{align*}
 mit $u=\sin t$, $du=\cos tdt$
 \begin{align*}
@@ -1011,7 +1011,7 @@ Diese Parameter werden durch Koeffizientenvergleich berechnet, die rechte Seite 
 $R(x)=\frac{1-x}{x^2(x^2+1)}$
 Ansatz:
 \begin{align*}
-R(x)=&\frac{a_1}{x}+\frac{a_2}{x^2}+\frac{b_1x+d_1}{x^2+1}\\
+R(x)&=\frac{a_1}{x}+\frac{a_2}{x^2}+\frac{b_1x+d_1}{x^2+1}\\
 \Rightarrow 1-x= &x(x^2+1)a_1+a_2(x^2+1)+x^2(b_1x+d_1)
 \end{align*}
 
@@ -1049,10 +1049,10 @@ Sei
 
 Partielle Integration ergibt:
 \begin{align*}
-{I_m}:=&\int {\underbrace 1_{v'} \cdot \frac{1}{{\underbrace {{{({t^2} + 1)}^m}}_u}}dt}  = \frac{t}{{{{({t^2} + 1)}^m}}} + \int {\frac{{t \cdot 2m \cdot t}}{{{{({t^2} + 1)}^{m + 1}}}}dt} \\
-=&\frac{t}{(t^2 +1)^m} + 2m\int{\frac{t^2 +1-1}{(t^2 +1)^{m+1}}dt}\\
-=&\frac{t}{(t^2 +1)^m}+2m\int{\frac{1}{(t^2 +1)^m}dt}-2m\int{\frac{1}{(t^2 +1)^{m+1}}dt}\\
-\Rightarrow I_m=&\frac{t}{(t^2 +1)^m}+2m\{ I_m - I_{m+1} \}
+{I_m}:&=\int {\underbrace 1_{v'} \cdot \frac{1}{{\underbrace {{{({t^2} + 1)}^m}}_u}}dt}  = \frac{t}{{{{({t^2} + 1)}^m}}} + \int {\frac{{t \cdot 2m \cdot t}}{{{{({t^2} + 1)}^{m + 1}}}}dt} \\
+&=\frac{t}{(t^2 +1)^m} + 2m\int{\frac{t^2 +1-1}{(t^2 +1)^{m+1}}dt}\\
+&=\frac{t}{(t^2 +1)^m}+2m\int{\frac{1}{(t^2 +1)^m}dt}-2m\int{\frac{1}{(t^2 +1)^{m+1}}dt}\\
+\Rightarrow I_m&=\frac{t}{(t^2 +1)^m}+2m\{ I_m - I_{m+1} \}
 \end{align*}
 
 
@@ -1060,8 +1060,8 @@ Partielle Integration ergibt:
 woraus \[I_{m+1}=\frac{1}{2m}\left[\frac{t}{(t^2 +1)^m} + \left(\frac{2m-1}{2m}\right)I_m\right]\]
 z.B.
 \begin{align*}
-I_2=&\int{\frac{dt}{(t^2 +1)^2}}=\frac{1}{2}\left[ \frac{t}{(t^2 +1)}+\frac{1}{2}I_1\right]\\
-=&\frac{1}{2}\left[ \frac{t}{(t^2 +1)^2}+\frac{1}{2}\arctan t\right] + C
+I_2&=\int{\frac{dt}{(t^2 +1)^2}}=\frac{1}{2}\left[ \frac{t}{(t^2 +1)}+\frac{1}{2}I_1\right]\\
+&=\frac{1}{2}\left[ \frac{t}{(t^2 +1)^2}+\frac{1}{2}\arctan t\right] + C
 \end{align*}
 
 \end{itemize}
@@ -1081,9 +1081,9 @@ I_2=&\int{\frac{dt}{(t^2 +1)^2}}=\frac{1}{2}\left[ \frac{t}{(t^2 +1)}+\frac{1}{2
 \[(-B+C)=-3\Rightarrow B=C+3=-1\]
 \[\Rightarrow \frac{9}{x^3-3x-2}=\frac{1}{x-2}+\frac{-x-4}{(x+1)^2}\]
 \begin{align*}
-\int \frac{9}{{{x^3} - 3x - 2}}dx =&\int {\left( {\frac{1}{{x - 2}} + \frac{{ - x - 1}}{{{{(x + 1)}^2}}} - \frac{3}{{{{(x + 1)}^2}}}} \right)dx} \\
- =&\ln \abs{ {x - 2} } - \ln \abs{ {x + 1} } + \frac{3}{{x + 1}} + c\\
- =&\ln \abs{ {\frac{{x - 2}}{{x + 1}}} } + \frac{3}{{x + 1}} + c
+\int \frac{9}{{{x^3} - 3x - 2}}dx &=\int {\left( {\frac{1}{{x - 2}} + \frac{{ - x - 1}}{{{{(x + 1)}^2}}} - \frac{3}{{{{(x + 1)}^2}}}} \right)dx} \\
+ &=\ln \abs{ {x - 2} } - \ln \abs{ {x + 1} } + \frac{3}{{x + 1}} + c\\
+ &=\ln \abs{ {\frac{{x - 2}}{{x + 1}}} } + \frac{3}{{x + 1}} + c
 \end{align*}
 \end{enumerate}
 \section{Das Uneigentliche Integral}
@@ -1103,8 +1103,8 @@ Sei $f$ eine Funktion auf einem offenen Intervall $(a,b)$, deren Einschränkung 
 \subsubsection*{Beispiel}
 
 \begin{align*}
-\int\limits_{ - b}^b xdx =& 0 \text{\hspace{10mm}}\forall b>0\text{, und daher}\\
-\mathop {\lim }\limits_{b \to \infty } \int\limits_{ - b}^b xdx =&\lim \left( {\frac{{{b^2}}}{2} - \frac{{{b^2}}}{2}} \right) = \mathop {\lim }\limits_{b \to \infty } 0 = 0
+\int\limits_{ - b}^b xdx &= 0 \text{\hspace{10mm}}\forall b>0\text{, und daher}\\
+\mathop {\lim }\limits_{b \to \infty } \int\limits_{ - b}^b xdx &=\lim \left( {\frac{{{b^2}}}{2} - \frac{{{b^2}}}{2}} \right) = \mathop {\lim }\limits_{b \to \infty } 0 = 0
 \end{align*}
 Die einzelnen Grenzwerte von $\int\limits_a^b {xdx} $ für $b\rightarrow \infty$ und $a\rightarrow -\infty$ existieren hingegen nicht \[\left( {\int\limits_a^b {xdx = \left. {\frac{{{x^2}}}{2}} \right|_a^b = \frac{{{b^2}}}{2} - \frac{{{a^2}}}{2}} } \right)\] und somit auch nicht das uneigentliche Integral $\int\limits_{ - \infty }^\infty  {xdx} $
 

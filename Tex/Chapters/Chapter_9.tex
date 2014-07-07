@@ -80,8 +80,8 @@ a_2&=y_0 < y_1\dots <y_m=b_2
 \item Für beliebige Punkte $\xi_{ij}\in Q_{ij}$ der jeweiligen Teilquader nennt man \[{R_f}\left( Z \right): = \sum\limits_{i,j} {f\left( {{\xi _{ij}}} \right){\text{vol}}\left( {{Q_i}j} \right)} \] eine Riemannsche Summe zur Zerlegung $Z$
 \item Analog zum Integral einer Variablen heissen für eine Zerlegung $Z$
 \begin{align*}
-{U_f}\left( Z \right): =&\sum\limits_{i,j} {\mathop {\inf }\limits_{\Romanbar{X}\in Q_{ij}} } f\left(\Romanbar{X}\right){\text{vol}}\left( {{Q_i}j} \right)\\
-{O_f}\left( Z \right): =&\sum\limits_{i,j} {\mathop {\sup }\limits_{\Romanbar{X}\in Q_{ij}} } f\left(\Romanbar{X}\right){\text{vol}}\left( {{Q_i}j} \right)
+{U_f}\left( Z \right): &=\sum\limits_{i,j} {\mathop {\inf }\limits_{\Romanbar{X}\in Q_{ij}} } f\left(\Romanbar{X}\right){\text{vol}}\left( {{Q_i}j} \right)\\
+{O_f}\left( Z \right): &=\sum\limits_{i,j} {\mathop {\sup }\limits_{\Romanbar{X}\in Q_{ij}} } f\left(\Romanbar{X}\right){\text{vol}}\left( {{Q_i}j} \right)
 \end{align*}
 die Riemannsche Untersumme bzw. Riemannsche Obersumme von $f\left( x\right)$
 \end{enumerate}
@@ -181,28 +181,28 @@ d.h. das Integral von $f$ über $Q$ kann iterativ durch $1-$dimensionale Integra
 \begin{enumerate}
 \item Sei $f\left( x,y\right)=2x+2yx$, $Q=\lbrack 0,1\rbrack\times\lbrack -2,2\rbrack$
 \begin{align*}
-\int\limits_Q {fd\mu }  =&\int\limits_{ - 2}^2 {\left( {\int\limits_0^1 {\left( {2x + 2yx} \right)dx} } \right)dy} \\
-=&\int\limits_{ - 2}^2 {\left( {\left. {{x^2} + y{x^2}} \right|_0^1} \right)dy} \\
-=&\int\limits_{ - 2}^2 {\left( {1 + y} \right)dy}  = \left. {y + \frac{{{y^2}}}{2}} \right|_{ - 2}^2 = 4
+\int\limits_Q {fd\mu }  &=\int\limits_{ - 2}^2 {\left( {\int\limits_0^1 {\left( {2x + 2yx} \right)dx} } \right)dy} \\
+&=\int\limits_{ - 2}^2 {\left( {\left. {{x^2} + y{x^2}} \right|_0^1} \right)dy} \\
+&=\int\limits_{ - 2}^2 {\left( {1 + y} \right)dy}  = \left. {y + \frac{{{y^2}}}{2}} \right|_{ - 2}^2 = 4
 \end{align*}
 \underline{Oder:}
 \begin{align*}
 &\int\limits_0^1 {\left( {\int\limits_{ - 2}^2 {\left( {2x + 2yx} \right)dy} } \right)dx} \\
- =&\int\limits_0^1 {\left( {\left. {2xy + {y^2}x} \right|_{ - 2}^2} \right)dx} \\
- =&\int\limits_0^1 {\left[ {\left( {4x + 4x} \right) - \left( { - 4x + 4x} \right)} \right]dx} \\
- =&\int\limits_0^1 {8xdx}  = \left. {4{x^2}} \right|_0^1 = 4
+ &=\int\limits_0^1 {\left( {\left. {2xy + {y^2}x} \right|_{ - 2}^2} \right)dx} \\
+ &=\int\limits_0^1 {\left[ {\left( {4x + 4x} \right) - \left( { - 4x + 4x} \right)} \right]dx} \\
+ &=\int\limits_0^1 {8xdx}  = \left. {4{x^2}} \right|_0^1 = 4
 \end{align*}
 \item \begin{align*}
 &\int\limits_0^1 {\int\limits_0^{2\pi } {\left( {{e^x}\sin y} \right)dy} dx} \\
-=&\int\limits_0^1 {\left( {\left. { - {e^x}\cos y} \right|_0^{2\pi }} \right)dx} \\
-=&\int\limits_0^1 0 dx = 0
+&=\int\limits_0^1 {\left( {\left. { - {e^x}\cos y} \right|_0^{2\pi }} \right)dx} \\
+&=\int\limits_0^1 0 dx = 0
 \end{align*}
 \underline{Oder:}
 \begin{align*}
 &\int\limits_0^{2\pi } {\left( {\int\limits_0^1 {{e^x}\sin ydx} } \right)dy} \\
-=&\int\limits_0^{2\pi } {\left( {\left. {\sin y{e^x}} \right|_0^1} \right)dy} \\
-=&\int\limits_0^{2\pi } {\left( {e - 1} \right)\sin ydy} \\
-=&\left. { - \left( {e - 1} \right)\cos y} \right|_0^{2\pi } = 0
+&=\int\limits_0^{2\pi } {\left( {\left. {\sin y{e^x}} \right|_0^1} \right)dy} \\
+&=\int\limits_0^{2\pi } {\left( {e - 1} \right)\sin ydy} \\
+&=\left. { - \left( {e - 1} \right)\cos y} \right|_0^{2\pi } = 0
 \end{align*}
 \end{enumerate}
 
@@ -362,11 +362,11 @@ so gilt
 \end{center}
 
 \begin{align*}
-\int\limits_D fd\mu =&\int\limits_{x=0}^{x=1}\int\limits_{y=0}^{y=\sqrt{1-x^2}}\left( x-y\right) dy dx\\
- =&\int\limits_0^1 {\left( {\left. {xy - \frac{{{y^2}}}{2}} \right|_0^{\sqrt {1 - {x^2}} }} \right)} dx\\
-=&\int\limits_0^1 {\left( {x\sqrt {1 - {x^2}}  - \frac{{1 - {x^2}}}{2}} \right)dx}\\
-=&\int\limits_0^1 {x\sqrt {1 - {x^2}} } dx - \frac{1}{2}\int\limits_0^1 {1 - {x^2}dx}\\
- =&\frac{1}{2} - \frac{2}{3} = \frac{1}{3}
+\int\limits_D fd\mu &=\int\limits_{x=0}^{x=1}\int\limits_{y=0}^{y=\sqrt{1-x^2}}\left( x-y\right) dy dx\\
+ &=\int\limits_0^1 {\left( {\left. {xy - \frac{{{y^2}}}{2}} \right|_0^{\sqrt {1 - {x^2}} }} \right)} dx\\
+&=\int\limits_0^1 {\left( {x\sqrt {1 - {x^2}}  - \frac{{1 - {x^2}}}{2}} \right)dx}\\
+&=\int\limits_0^1 {x\sqrt {1 - {x^2}} } dx - \frac{1}{2}\int\limits_0^1 {1 - {x^2}dx}\\
+ &=\frac{1}{2} - \frac{2}{3} = \frac{1}{3}
 \end{align*}
 \begin{align*}
 &\int\limits_0^1 {x\sqrt {1 - {x^2}} dx} \begin{array}{*{20}{c}}
@@ -407,11 +407,11 @@ Schnittpunkte:
 \end{align*}
 Zu Berechnung des Doppelintegrals zerlegen wir das Gebiet in Streifen parallel zur $y-$Achse. Für festes $x$ variiert $y$ von $g(x)=x+2$ bis $h(x)=4-x^2$
 \begin{align*}
-\int\limits_D xd\mu  =&\int\limits_{ - 2}^1 {\left( {\int\limits_{x + 2}^{4 - {x^2}} {xdy} } \right)dx} \\
- =&\int\limits_{ - 1}^2 {x\left( {4 - {x^2} - x + 2} \right)dx}\\
- =&\int\limits_{ - 1}^2 {\left( {2x - {x^3} - {x^2}} \right)dx} \\
- =&\left. {{x^2} - \frac{{{x^4}}}{4} - \frac{{{x^3}}}{3}} \right|_{ - 1}^2\\
- =&\left( {4 - 4 - \frac{8}{3}} \right) - \left( {1 - \frac{1}{4} + \frac{1}{9}} \right) =  - \frac{{127}}{{36}}
+\int\limits_D xd\mu  &=\int\limits_{ - 2}^1 {\left( {\int\limits_{x + 2}^{4 - {x^2}} {xdy} } \right)dx} \\
+ &=\int\limits_{ - 1}^2 {x\left( {4 - {x^2} - x + 2} \right)dx}\\
+ &=\int\limits_{ - 1}^2 {\left( {2x - {x^3} - {x^2}} \right)dx} \\
+ &=\left. {{x^2} - \frac{{{x^4}}}{4} - \frac{{{x^3}}}{3}} \right|_{ - 1}^2\\
+ &=\left( {4 - 4 - \frac{8}{3}} \right) - \left( {1 - \frac{1}{4} + \frac{1}{9}} \right) =  - \frac{{127}}{{36}}
 \end{align*}
 \item Sei $D:$
 
@@ -477,9 +477,9 @@ Zerlegung des Gebiets in Streifen parallel zur $y-$Achse
 \[\int\limits_D {xd\mu  = \int\limits_0^1 {\left( {\int\limits_{ - 2\sqrt x }^{2\sqrt x } {xdy} } \right)dx} }  + \int\limits_1^4 {\left( {\int\limits_{y = 2x - 4}^{2\sqrt x } {xdy} } \right)} dx =  \ldots  = 14.4\]
 Wenn wir von aussen nach $y$ integrieren, brauchen wir keine Unterteilung
 \begin{align*}
-\int\limits_D xd\mu  =&\int\limits_{y =  - 2}^{y = 4} {\left( {\int\limits_{y = \frac{{{y^2}}}{4}}^{\frac{y}{2} + 2} {xdx} }\right)dy} \\
- =&\int\limits_{ - 2}^4 {\left( {\left. {\frac{{{x^2}}}{2}} \right|_{\frac{{{y^2}}}{4}}^{\frac{y}{2} + 2}} \right)dy}\\
-=&\frac{1}{2}\int\limits_{ - 2}^4 {\left( {{{\left( {\frac{y}{2} + 2} \right)}^2} - \frac{{{y^4}}}{{16}}} \right)dy}
+\int\limits_D xd\mu  &=\int\limits_{y =  - 2}^{y = 4} {\left( {\int\limits_{y = \frac{{{y^2}}}{4}}^{\frac{y}{2} + 2} {xdx} }\right)dy} \\
+ &=\int\limits_{ - 2}^4 {\left( {\left. {\frac{{{x^2}}}{2}} \right|_{\frac{{{y^2}}}{4}}^{\frac{y}{2} + 2}} \right)dy}\\
+&=\frac{1}{2}\int\limits_{ - 2}^4 {\left( {{{\left( {\frac{y}{2} + 2} \right)}^2} - \frac{{{y^4}}}{{16}}} \right)dy}
 \end{align*}
 \end{enumerate}
 
@@ -777,23 +777,23 @@ Sei $U,V\subset\R^n$ offen, $\Phi:U\to V$ bijektiv, stetig diff., $\det d\Phi\le
 Die Transformation $\Phi$ ist auf ganz $\R^3$ definiert und mit \[U = \left[ {0,1} \right] \times \left[ {0,\frac{\pi }{2}} \right] \times \left[ {0,\frac{\pi }{2}} \right]\]
 gilt
 \begin{align*}
-\Phi\left( U\right) =&V\\
-\det\left( d\Phi\right)=&r^2\cos\psi\\
-\text{vol}\left(V\right)=&\int\limits_{V} d\mu\left( \vec x\right)=\int\limits_0^1\int\limits_0^{\frac{\pi}{2}}\int\limits_0^{\frac{\pi}{2}} r^2\cos\psi d\psi d\theta dr=\frac{\pi}{2}
+\Phi\left( U\right) &=V\\
+\det\left( d\Phi\right)&=r^2\cos\psi\\
+\text{vol}\left(V\right)&=\int\limits_{V} d\mu\left( \vec x\right)=\int\limits_0^1\int\limits_0^{\frac{\pi}{2}}\int\limits_0^{\frac{\pi}{2}} r^2\cos\psi d\psi d\theta dr=\frac{\pi}{2}
 \end{align*}
 \item Berechne das Integral
 \[ \iint\limits_D x dx dy\text{ wobei $D=$Viertelkreis}\]
 \begin{align*}
-\int\limits_{x = 0}^1 {\int\limits_{y = 0}^{\sqrt {1 - {x^2}} } x } dydx =&\int\limits_0^1 {\left( {\left. {xu} \right|_0^{\sqrt {1 - {x^2}} }} \right)dx} \\
-=&\int\limits_0^1 x\sqrt{1-x^2}dx\\
-=&\int\limits_0^1 {\frac{{{u^{{1 \mathord{\left/
+\int\limits_{x = 0}^1 {\int\limits_{y = 0}^{\sqrt {1 - {x^2}} } x } dydx &=\int\limits_0^1 {\left( {\left. {xu} \right|_0^{\sqrt {1 - {x^2}} }} \right)dx} \\
+&=\int\limits_0^1 x\sqrt{1-x^2}dx\\
+&=\int\limits_0^1 {\frac{{{u^{{1 \mathord{\left/
  {\vphantom {1 2}} \right.
  \kern-\nulldelimiterspace} 2}}}}}{2}} du =  - \frac{1}{2} \cdot \left. {\frac{{{u^{{3 \mathord{\left/
  {\vphantom {3 2}} \right.
  \kern-\nulldelimiterspace} 2}}}}}{{{3 \mathord{\left/
  {\vphantom {3 2}} \right.
  \kern-\nulldelimiterspace} 2}}}} \right|_0^1\\
-=&-\frac{1}{3}
+&=-\frac{1}{3}
 \end{align*}
 mit $1-x^2=u$, $-2xdx=du$\\
 \underline{Oder:}\\
@@ -806,14 +806,14 @@ y
 \end{array}} \right)}\limits_{dxdy = rdrd\theta } \]
 
 \begin{align*}
-\int\limits_0^{\pi /2} {\int\limits_0^1 {{r^2}\cos \theta drd\theta } }  =&\int\limits_0^{\pi /2} {\cos \theta \left( {\left. {\frac{{{r^3}}}{3}} \right|_0^1} \right)d\theta } \\
- =&\frac{1}{3}\int\limits_0^{\pi /2} {\cos \theta d\theta }  = \left. { - \frac{1}{3}\sin \theta } \right|_0^{\pi /2} =  - \frac{1}{3}
+\int\limits_0^{\pi /2} {\int\limits_0^1 {{r^2}\cos \theta drd\theta } }  &=\int\limits_0^{\pi /2} {\cos \theta \left( {\left. {\frac{{{r^3}}}{3}} \right|_0^1} \right)d\theta } \\
+ &=\frac{1}{3}\int\limits_0^{\pi /2} {\cos \theta d\theta }  = \left. { - \frac{1}{3}\sin \theta } \right|_0^{\pi /2} =  - \frac{1}{3}
 \end{align*}
 \item Die Substitutionsregel in mehreren Variablen ist manchmal auch nützlich zur Berechnung von Integralen in einer Variable. Zunächst möchten wir das Integral \[ I=\int\limits_0^\infty e^{-x^2} dx\] berechnen. Wir berechnen $I$ durch Berechnung eines Flächenintegrals wie folgt. Es gilt
 \begin{align*}
-{I^2} =&{\left( {\int\limits_0^\infty  {{e^{ - {x^2}}}dx} } \right)^2}\\
- =&\mathop {\lim }\limits_{R \to \infty } \left( {\int\limits_0^R {{e^{ - {x^2}}}dx} } \right)\left( {\int\limits_0^R {{e^{ - {y^2}}}dy} } \right)\\
- =&\mathop {\lim }\limits_{R \to \infty } {I_R}
+{I^2} &={\left( {\int\limits_0^\infty  {{e^{ - {x^2}}}dx} } \right)^2}\\
+ &=\mathop {\lim }\limits_{R \to \infty } \left( {\int\limits_0^R {{e^{ - {x^2}}}dx} } \right)\left( {\int\limits_0^R {{e^{ - {y^2}}}dy} } \right)\\
+ &=\mathop {\lim }\limits_{R \to \infty } {I_R}
 \end{align*}
 für \[{I_R} = \int\limits_{\left[ {0,R} \right] \times \left[ {0,R} \right]} {{e^{ - \left( {{x^2} + {y^2}} \right)}}dxdy} \]
 Bezeichnet $K_\rho$ den Viertelkreis im 1. Quadrant mit Radius $r$, so gilt
@@ -919,11 +919,11 @@ Bevor wir die Idee des Beweises geben, geben wir einige Beispiele und Anwendunge
 \item Wir betrachten das Vektorfeld \[ F\left( x,y\right) = \left( y+3x,y-2x\right) \]
 und wir möchten dieses Kraftfeldes entlang der im Gegenuhrzeigersinn durchlaufenen Ellipse $\gamma: 4x^2+y^2=4$ bestimmen. Die Arbeit ist
 \begin{align*}
-\int\limits_\gamma  {Fd\vec s}  =&\int\limits_\gamma  {Pdx + Qdy} \\
- =&\int\limits_\gamma  {\left( {y + 3x} \right)dx + \left( {2y - x} \right)dy} \\
-{\text{Green }} \to {\text{ }} =&\iint\limits_\Omega\frac{{\partial \left( {2y - x} \right)}}{{\partial x}} - \frac{{\partial \left( {y + 3x} \right)}}{{\partial y}}\\
-=&\iint -1-1d\mu=-2\iint\limits_\Omega d\mu\\
-=&-2\cdot\text{(Flächeninhalt von Ellipse $4x^2+y^2=4$)}\\
+\int\limits_\gamma  {Fd\vec s}  &=\int\limits_\gamma  {Pdx + Qdy} \\
+ &=\int\limits_\gamma  {\left( {y + 3x} \right)dx + \left( {2y - x} \right)dy} \\
+{\text{Green }} \to {\text{ }} &=\iint\limits_\Omega\frac{{\partial \left( {2y - x} \right)}}{{\partial x}} - \frac{{\partial \left( {y + 3x} \right)}}{{\partial y}}\\
+&=\iint -1-1d\mu=-2\iint\limits_\Omega d\mu\\
+&=-2\cdot\text{(Flächeninhalt von Ellipse $4x^2+y^2=4$)}\\
 \end{align*}
 \todo[inline]{Can't understand the result, page 242 top}
 
@@ -948,24 +948,24 @@ und wir möchten dieses Kraftfeldes entlang der im Gegenuhrzeigersinn durchlaufe
 \item Berechne das Wegintegral \[\int\limits_{\partial \Omega } {\left( {5 - xy - {y^2}} \right)dx - \left( {2xy - {x^2}} \right)dy} \] wobei $\Omega$ das Quadrat mit Eckpunkten $(0,0),(0,1),(1,1),(1,0)$ im Gegenuhrzeigersinn ist
 \begin{align*}
 &\int\limits_{\partial A} {\left( {5 - xy - {y^2}} \right)dx - \left( {2xy - {x^2}} \right)dy} \\
-=&\iint\limits_\Omega\left[ {\frac{\partial }{{\partial x}}\left( {2xy - {x^2}} \right) - \frac{\partial }{{\partial y}}\left( {5 - xy - {y^2}} \right)} \right]d\mu \\
-=&\iint\limits_\Omega\left(  2y-2x\right) - \left( -x-2y\right) d\mu\\
-=&3\iint\limits_\Omega d\mu=\int\limits_0^1\int\limits_0^1 x dx dy=\frac{3}{2}
+&=\iint\limits_\Omega\left[ {\frac{\partial }{{\partial x}}\left( {2xy - {x^2}} \right) - \frac{\partial }{{\partial y}}\left( {5 - xy - {y^2}} \right)} \right]d\mu \\
+&=\iint\limits_\Omega\left(  2y-2x\right) - \left( -x-2y\right) d\mu\\
+&=3\iint\limits_\Omega d\mu=\int\limits_0^1\int\limits_0^1 x dx dy=\frac{3}{2}
 \end{align*}
 \item Mittels des Satzes von Green können wir den Flächeninhalt eines Gebiets mithilfe eines Wegintegrals berechnen. Und zwar
 \[ \text{Flächeninhalt$\left( \Omega\right)$}=\iint\limits_\Omega d\mu=\iint\left( \frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) d\mu\]
 wobei $P$ und $Q$ Funktionen mit $\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1$ sind. Zum Beispiel können wir
 \begin{align*}
-Q\left( x,y\right)=&\frac{1}{2}x\\
-P\left( x,y\right)=&-\frac{1}{2}x
+Q\left( x,y\right)&=\frac{1}{2}x\\
+P\left( x,y\right)&=-\frac{1}{2}x
 \end{align*}
 nehmen. Daraus folgt, dass \[ F\left( \Omega\right) = \frac{1}{2}\int\limits_{\partial\Omega}-y dx+xdy\]
 Als ein Beispiel können wir verifizieren dass der Flächeninhalt des Kreises $x^2+y^2\leq 4$ gleich $4\pi$ ist. \\
 
 Betrachte die Parameterdarstellung $\gamma\left(\theta\right)=\left( 2\cos\theta,2\sin\theta\right)$, $\theta\in\lbrack 0,2\pi\rbrack$ des Randes $\partial\Omega$
 \begin{align*}
-F\left(\Omega\right)=&\iint\limits_\Omega d\mu = \frac{1}{2}\int\limits_{\partial\Omega} -ydx+xdy\\
-=&\frac{1}{2}\int\limits_0^{2\pi}\left( -2\sin\theta\right)\left( -2\sin\theta\right) + \left( 2\cos\theta\right)\left( 2\cos\theta\right) d\theta\\
-=&\frac{1}{2}\int\limits_0^{2\pi}4\left( \sin^2\theta+\cos^2\theta\right)d\theta=2\cdot 2\pi=4\pi
+F\left(\Omega\right)&=\iint\limits_\Omega d\mu = \frac{1}{2}\int\limits_{\partial\Omega} -ydx+xdy\\
+&=\frac{1}{2}\int\limits_0^{2\pi}\left( -2\sin\theta\right)\left( -2\sin\theta\right) + \left( 2\cos\theta\right)\left( 2\cos\theta\right) d\theta\\
+&=\frac{1}{2}\int\limits_0^{2\pi}4\left( \sin^2\theta+\cos^2\theta\right)d\theta=2\cdot 2\pi=4\pi
 \end{align*}
 \end{enumerate}
