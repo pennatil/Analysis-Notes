@@ -278,7 +278,44 @@ In der Skizze ergibt sich als Volumen der markierten Schicht bei festem $x$ und 
 Bis jetzt können wir nur Integrale über achsenparallel rechteckige bzw. quaderförmige Bereiche berechnen.\\
 
 Das reicht für viele praktische Aufgaben nicht aus. Meist ist der Integrationsbereich $D$ verbogen oder zumindest anders begrenzt.
-\missingfigure{Page 219 middle}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+		\node [] (0) at (3, 1) {};
+		\node [] (1) at (0, 0) {};
+		\node [] (2) at (4, 3) {};
+		\node [] (3) at (0, 7) {};
+		\node [] (4) at (8, 0) {};
+		\node [] (5) at (5, 2.5) {};
+		\node [] (6) at (7, 1) {};
+		\node [] (7) at (9, 2.5) {};
+		\node [] (8) at (3, 5) {};
+		\node [] (9) at (5, 6.5) {};
+		\node [] (10) at (9, 6.5) {};
+		\node [] (11) at (7, 5) {};
+		\draw [->] (1.center) to (4.center);
+		\draw [->] (1.center) to (3.center);
+		\draw [->] (1.center) to (2.center);
+		\draw [, in=165, out=0] (0.center) to (6.center);
+		\draw [, in=-165, out=15] (6.center) to (7.center);
+		\draw [, in=180, out=15] (5.center) to (7.center);
+		\draw [, in=15, out=-165, looseness=1.25] (5.center) to (0.center);
+		\draw [, in=-150, out=15] (8.center) to (11.center);
+		\draw [, bend left=15] (11.center) to (10.center);
+		\draw [, bend right=15] (10.center) to (9.center);
+		\draw [, bend right] (9.center) to (8.center);
+		\draw [] (8.center) to (0.center);
+		\draw [] (9.center) to (5.center);
+		\draw [] (11.center) to (6.center);
+		\draw [] (10.center) to (7.center);
+\draw (6,2) node {$D$};
+\draw (10.5,7) node {$f(x,y)$};
+\draw[->] (9.4,7) parabola bend (9.4,7)(8,6.5);
+
+\end{tikzpicture}
+\end{center}
+\todo[inline]{shading for the D plane still to do}
+
 Die meisten praktischen Aufgaben lassen sich auf die Integration über sogenannte Normalbereiche zurückführen.
 
 \begin{definition}{9.10}
@@ -292,37 +329,38 @@ bzw.
 
 \subsubsection*{Beispiel}
 Kreise und Rechtecke sind Normalbereiche bzgl. beider Achsen
-\missingfigure{page 220 top; ALREADY STARTED, PICTURE ON THE RIGHT GETS PUSHED DOWN FOR SOME REASON, STILL TO FIX!}
-%\begin{multicols}{2}
-%\begin{tikzpicture}[scale=0.6]
-%\draw[->] (-0.5,0)--(7,0) node [anchor=west] {$x$};
-%\draw[->] (0,-0.5)--(0,6) node [anchor=south] {$y$};
-%\draw[fill=black!20] (1,1)parabola bend (1,1)(6,5) parabola bend (1,3)(1,3) -- (1,1);
-%\draw (3.1,3.7) node [anchor=south] {$y=h(x)$};
-%\draw (4.2,1) node [anchor=south] {$y=g(x)$};
-%\draw[dashed] (6,5) -- (6,0) node [anchor=north] {$b$};
-%\draw[dashed] (1,1) -- (1,0) node [anchor=north] {$a$};
-%\end{tikzpicture}
-%\columnbreak
-%\begin{tikzpicture}[scale=0.5]
-%		\node [] (0) at (1, 1) {};
-%		\node [] (1) at (1, 5) {};
-%		\node [] (2) at (6, 5) {};
-%		\node [] (3) at (6, 3.5) {};
-%		\node [] (4) at (6, 1) {};
-%		\draw[fill=black!20]  (0.center) .. controls (2,3) and (2,3) .. (1.center) -- (2.center) .. controls (5.5,4.25) and (5.5,4.25) .. (3.center) .. controls (6.75,2.25) and (6.75,2.25) .. (4.center)--cycle;
-%\draw[->] (-0.5,0) -- (8,0) node [anchor=west] {$x$};
-%\draw[->] (0,-0.5) -- (0,7.15) node [anchor=south] {$y$};
-%\draw[dashed] (0,1)--(1,1);
-%\draw[dashed] (1,5) -- (0,5);
-%\draw (0,1) node[anchor=east] {$\overline{a}$};
-%\draw (0,5) node[anchor=east] {$\overline{b}$};
-%\draw (0.4,4) node[anchor=west]{$x$};
-%\draw (0.3,3.5) node[anchor=west]{$=$};
-%\draw (0.1,2.9) node[anchor=west]{$\overline{g}(y)$};
-%\draw (6.5,3) node[anchor=west]{$x=\overline{h}(y)$};
-%\end{tikzpicture}
-%\end{multicols}
+\begin{multicols}{2}
+\begin{tikzpicture}[scale=0.6]
+\draw[->] (-0.5,0)--(7,0) node [anchor=west] {$x$};
+\draw[->] (0,-0.5)--(0,6) node [anchor=south] {$y$};
+\draw[fill=black!20] (1,1)parabola bend (1,1)(6,5) parabola bend (1,3)(1,3) -- (1,1);
+\draw (3.1,3.7) node [anchor=south] {$y=h(x)$};
+\draw (4.2,1) node [anchor=south] {$y=g(x)$};
+\draw[dashed] (6,5) -- (6,0) node [anchor=north] {$b$};
+\draw[dashed] (1,1) -- (1,0) node [anchor=north] {$a$};
+\end{tikzpicture}
+\columnbreak
+\null\vfill
+\begin{tikzpicture}[scale=0.5]
+		\node [] (0) at (1, 1) {};
+		\node [] (1) at (1, 5) {};
+		\node [] (2) at (6, 5) {};
+		\node [] (3) at (6, 3.5) {};
+		\node [] (4) at (6, 1) {};
+		\draw[fill=black!20]  (0.center) .. controls (2,3) and (2,3) .. (1.center) -- (2.center) .. controls (5.5,4.25) and (5.5,4.25) .. (3.center) .. controls (6.75,2.25) and (6.75,2.25) .. (4.center)--cycle;
+\draw[->] (-0.5,0) -- (8,0) node [anchor=west] {$x$};
+\draw[->] (0,-0.5) -- (0,7.15) node [anchor=south] {$y$};
+\draw[dashed] (0,1)--(1,1);
+\draw[dashed] (1,5) -- (0,5);
+\draw (0,1) node[anchor=east] {$\overline{a}$};
+\draw (0,5) node[anchor=east] {$\overline{b}$};
+\draw (0.4,4) node[anchor=west]{$x$};
+\draw (0.3,3.5) node[anchor=west]{$=$};
+\draw (0.1,2.9) node[anchor=west]{$\overline{g}(y)$};
+\draw (6.5,3) node[anchor=west]{$x=\overline{h}(y)$};
+\end{tikzpicture}
+\null\vfill
+\end{multicols}
 Über Normalbereiche lässt sich sehr bequem integrieren
 \missingfigure{Page 220 bottom}
 Die markierte Scheibe bei $y=$const. mit kleiner Dicke $dx$ besitzt näherungsweise das Volumen
