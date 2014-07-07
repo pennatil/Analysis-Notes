@@ -479,7 +479,7 @@ $\forall n \ge \max \left\{ {{n_0}(\varepsilon ),{n_1}(\varepsilon )} \right\}$ 
 \begin{enumerate}
 \item Sei \[{a_n}: = 1 + \frac{1}{2} +  \ldots  + \frac{1}{n} = \sum\limits_{k = 1}^n {\frac{1}{k}} \] Dann ist also $1\leq a_n\leq a_{n+1}\dots$ monoton wachsend, aber divergent. Dann:
 \[{a_{2n}} - {a_n} = \frac{1}{{n + 1}} +  \ldots  + \frac{1}{{2n}} \ge \frac{n}{{2n}} = \frac{1}{2}\hspace{5mm}\forall n \ge 1\]
-Es erfüllt also das Cauchy - Kriterium nicht.
+Es erfüllt also das Cauchy-Kriterium nicht.
 \item Sei ${b_n}: = 1 - \frac{1}{2} + \frac{1}{3} +  \ldots  + {\left( { - 1} \right)^{n + 1}}\frac{1}{n}$ die alternierende harmonische Reihe. Insbesondere:
 \begin{align*}
 {b_{2k - 2}}&= \left( {1 - \frac{1}{2}} \right) + \left( {\frac{1}{3} - \frac{1}{4}} \right) +  \ldots  + \left( {\frac{1}{{2k - 3}} - \frac{1}{{2k - 2}}} \right)\\
@@ -493,7 +493,7 @@ und
 \end{align*}
 Woraus: $b_{2k+1}<b_{2k-1}$. Zudem
 \begin{align*}
-b_{2k}&=b_{2k-1}-\frac{1}{2k}
+b_{2k}&=b_{2k-1}-\frac{1}{2k} \\
 b_{2k}&<b_{2k-1}
 \end{align*}
 $\forall k\in\N$
@@ -511,8 +511,8 @@ Von diesem Standpunkt identifiziert sich $\C$ mit $\R^2$, so dass wir von jetzt 
 \begin{definition}{}
 Eine Folge in $\R^d$ ist eine Abbildung
 \begin{align*}
-a:\N\backslash\{ 0\}&\to\R^d\\
-n&\to a_n
+a:\N\setminus\{ 0\}&\to\R^d\\
+n&\mapsto a_n
 \end{align*}
 \end{definition}
 \begin{definition}{3.24}
@@ -547,7 +547,7 @@ der das Intervall $\left[ a-r,a+r\right]$ verallgemeinert.
 
 \begin{definition}{3.25}
 Eine Folge $\left( a_n\right)_{n\geq 1}\subset\R^d$ konvergiert gegen $a\in\R^d$ falls für jedes $\varepsilon>0$ die Menge der Indizes $n\geq 1$, für welche $a_n\not\in B_{<\varepsilon}(a)$, endlich ist. Falls das zutrifft, schreibt man
-\[\mathop {\lim }\limits_{n \to \infty } {a_n} = a{\text{ oder }}{a_n}\mathop  \to \limits^{n \to \infty } a\]
+\[\mathop {\lim }\limits_{n \to \infty } {a_n} = a{\text{ oder }}{a_n}\underset{n\to\infty}{\to} a\]
 \end{definition}
 
 \subsubsection*{Bemerkung}
@@ -565,21 +565,18 @@ Der Konvergenzbegriff verträgt sich auch sehr gut mit der Struktur eines Vektor
 \subsubsection*{Satz 3.27}
 Seien $\left( a_n\right)_{n\geq 1}$, $\left( b_n\right)_{n\geq 1}$ konvergente Folgen in $\R^d$, sowie $\lambda\in\R$. Sei $a=\lim a_n$, $b=\lim b_n$. Dann sind $\left( a_n\pm b_n\right)_{n\geq 1}$ und $\left( \lambda a_n\right)_{n\geq 1}$ konvergent und es gilt
 \[\lim\left( a_n\pm b_n\right) = a\pm b\text{, }\lim\lambda a_n=\lambda a\]
-Folgender Satz ist dann grundlegend um Bolzano - Weierstrass sowie das Cauchy-Kriterium auf $\R^d$ zu verallgemeinern. \\
+Folgender Satz ist dann grundlegend um Bolzano-Weierstrass sowie das Cauchy-Kriterium auf $\R^d$ zu verallgemeinern. \\
 
-Für eine Folge $\left( a_n\right)$ von Vektoren in $\R^d$ ist es Zweckmässig folgende Notation für die Koordinaten von $a_n$ zu benutzen \[a_n=\left( a_n^{(1)},a_n^{(2)},a_n^{(3)}\right)\]
-Dann gilt
+Für eine Folge $\left( a_n\right)$ von Vektoren in $\R^d$ ist es zweckmässig, folgende Notation für die Koordinaten von $a_n$ zu benutzen: \[a_n=\left( a_n^{(1)},a_n^{(2)},a_n^{(3)}\right)\]
 \subsubsection*{Satz 3.28}
 Folgende Aussagen sind äquivalent
 \begin{enumerate}[\hspace{2mm}(i)]
 \item $\left( a_n\right)_{n\geq 1}$ konvergiert in $\R^d$
 \item Jede der Folgen $\left( a_n^i\right)$ konvergiert in $\R$
 \end{enumerate}
-Falls diese zuteffen seien $a = \mathop {\lim }\limits_{n \to \infty } {a_n}$ sowie ${a^i} = \mathop {\lim }\limits_{n \to \infty } a_n^{(i)}$, dann gilt $a=\left( a^1,a^2,\dots,a^d\right)$
-\begin{beweis}{}
-Dazu brauchen wir folgendes geometrisches Lemma:
-\end{beweis}
-\todo{limenet: above beweis is finished too early, IMO}
+Falls diese zutreffen sei $a = \mathop {\lim }\limits_{n \to \infty } {a_n}$ sowie ${a^i} = \mathop {\lim }\limits_{n \to \infty } a_n^{(i)}$. Dann gilt \[ a=\left( a^1,a^2,\dots,a^d\right) \]
+
+\noindent Für den nachfolgenden Beweis brauchen wir das folgende geometrische Lemma.
 \subsubsection*{Lemma 3.29}
 $\forall x=\left( x^1,x^2,\dots,x^d\right) \in\R^d$ gilt
 \[\mathop {\max }\limits_{1 \le i \le d} \abs{ {{x^i}} } \le \mathop {\left\| x \right\|}\limits_{\begin{array}{*{20}{c}}
@@ -613,7 +610,7 @@ $\forall x=\left( x^1,x^2,\dots,x^d\right) \in\R^d$ gilt
 \end{enumerate}
 \end{beweis}
 
-\subsubsection*{Satz 3.29 (Bolzano - Weierstrasse)}
+\subsubsection*{Satz 3.29 (Bolzano-Weierstrass für $\R^{d}$)}
 Jede beschränkte Folge $\left( a_n\right)_{n\geq 1}$ in $\R^d$ besitzt eine konvergente Teilfolge
 \subsubsection*{Beispiel}
 \begin{enumerate}
