@@ -318,7 +318,7 @@ und
 \[
 M_{l(n-1)+1}-\frac{1}{n}\leq a_{l(n)}\leq M_{l(n-1)+1}\tag{\text{\textasteriskcentered}}
 \]
-Es gilt zu bemerken, dass $l(n)\geq	n$.
+Es gilt zu bemerken, dass $l(n)\geq n$.
 \[ \abs{ M_{l(n-1)+1}-a_{l(n)}} < \frac{1}{n}\]
 Dann ist $l(n)$ strikt monoton steigend und
 \[ \abs{ a_{l(n)} -M_{l(n-1)+1}}\leq\frac{1}{n}\]
@@ -331,10 +331,10 @@ und
 (\textasteriskcentered) und (\textasteriskcentered\textasteriskcentered) $\Rightarrow\abs{ a_{l(n)}-a} < \varepsilon$ d.h. $\lim a_{l(n)}=a.$
 \end{beweis}
 Wir schliessen aus Lemma 3.16 den folgenden wichtigen Satz
-\subsubsection*{Satz 3.18 (Bolzano - Weierstrass)}
-Jede Beschränkte Folge $\left( a_n\right)_{n\geq 1}$ besitzt eine konvergente Teilfolge.
-\todo[inline]{MISSING CONTENT: Can't really understand the layout of this part, page 76 middle}
-Folgende Aussagen sind direkte Konsequenzen
+\subsubsection*{Satz 3.18 (Bolzano-Weierstrass)}
+Jede beschränkte Folge $\left( a_n\right)_{n\geq 1}$ besitzt eine konvergente Teilfolge. \\
+Von Lemma 3.16 wissen wir, dass $\lim{\sup a_n}$ und $\lim{\inf a_n}$ Häufungspunkte sind. Das heisst, es existieren Teilfolgen $a_{l(n)}$ und $a_{m(n)}$ für die gilt $\lim{a_{l(n)}}=\lim{\sup a_n}$ und $\lim{a_{m(n)}}=\lim{\inf a_n}$. $a_{l(n)}$ und $a_{m(n)}$ sind konvergente Teilfolgen von $a_n$. \\
+Folgende Aussagen sind direkte Konsequenzen von Bolzano-Weierstrass:
 \subsubsection*{Satz 3.19}
 Sei $\left( a_n\right)_{n\geq 1}\subset\R$ beschränkt. $a_{-}:=\lim\inf a_n$, $a_+:=\lim\sup a_n$
 \begin{enumerate}
