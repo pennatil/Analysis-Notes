@@ -1,6 +1,6 @@
 Analysis I/II Notes
 ===================
-If you're just here for the PFD, [here](https://github.com/pennatil/Analysis-Notes/raw/master/PDF/Work%20in%20Progress/Notizen%20-%20Analysis%20I%26II.pdf) you go. Be advised, however, that the PDF is constantly changing. It is not finished yet, and is likely to contain many mistakes. If you see anything fishy, please file an issue.
+If you're just here for the PDF, [here](https://github.com/pennatil/Analysis-Notes/raw/master/PDF/Work%20in%20Progress/Notizen%20-%20Analysis%20I%26II.pdf) you go. Be advised, however, that the PDF is constantly changing. It is not finished yet, and is likely to contain many mistakes. If you see anything fishy, please file an issue.
 
 This repo contains all the handwritten notes from Professor Imamoglu's Analysis I/II class for CS at ETHZ. Although this page should clarify most of your doubts, you can <a href="mailto:pennatil@student.ethz.ch">email me</a> and I will try to help you. Please avoid questions regarding LaTex (installation, usage, can't compile) as the sections below are pretty self explanatory.
 
