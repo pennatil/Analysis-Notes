@@ -10,7 +10,6 @@ do
 done
 rm -f *.out *.log *.aux *.synctex *.x.gnuplot *.x.table
 
-
 #Activate them individually once a certain file is final!
 mkdir -p "../../PDF/Final Documents"
 # cp mainMult1.pdf "../../PDF/Final Documents/Kapitel 1 - Logik und Unterlagen - Analysis I.pdf"

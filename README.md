@@ -77,7 +77,8 @@ Building
 ========
 This is only recommended to people with experience with LaTex, since the files might still contain bugs and errors that have to be ironed out. I will not answer emails asking for help if the files do not build! If you are not sure, just use the PDFs inside the .zip archive (Take a look at [Getting the material](#Getting the material)). If you are installing LaTex from scratch, make sure you install the full release with all the packages!
 
-1. First of all, make sure you have the following programs installed:
+1. Linux users, make sure you <code>sudo apt-get update</code> and <code>sudo apt-get upgrade</code> before you start
+1. Make sure you have the following programs installed:
 	* Latex
 		* Mac OS: [MacteX](http://tug.org/mactex/)
 		* Windows: [TexLive](https://www.tug.org/texlive/acquire-netinstall.html)
@@ -98,15 +99,15 @@ This is only recommended to people with experience with LaTex, since the files m
 	There are 2 different files located in the "Scripts" folder. <code>BuildAll.sh</code>: This builds 1 file with all the notes, while <code>BuildChapterByChapter.sh</code>: Builds a file for each chapter. In the following instructions, replace <code>scriptName.sh</code> with the one you choose:
 		* Mac and Linux:
 			1. <code>cd path/to/Scripts/folder/</code> (i.e. <code>cd /Users/Waldo/Desktop/Analysis-Notes-master/Scripts/</code>)
-			2. If it is the first time that you run this script, type <code>sudo chmod 755 scriptnName.sh</code>, and hit enter.
+			2. If it is the first time that you run this script, type <code>sudo chmod 755 scriptName.sh</code>, and hit enter.
 			4. Afterwards, type <code>./scriptName.sh</code> and press enter.
 			5. Wait until the process is done.
 			6. You will find a folder called "PDF" inside the Notes folder, with the output file(s).
 		* Windows: Although this method is in no way supported, it should work on most systems. Just make sure you have TexLive installed and not MikTeX!
 			1. If you haven't already, install Git from [here](http://msysgit.github.io/)
 			2. Once done, open the "Git Bash" program
-			3. <code>cd path/to/Scripts/folder/</code> (i.e. <code>/c/Users/Waldo/Desktop/Analysis-Notes-master/Scripts</code>)
-			4. Type <code>./scriptName.sh</code>
+			3. <code>cd path/to/Scripts/folder/</code> (i.e. <code>cd /c/Users/Waldo/Desktop/Analysis-Notes-master/Scripts</code>, here <code>/c/</code> stands for your drive)
+			4. Type <code>./scriptName.sh</code>, and hit enter
 			5. Wait until the process is done
 			6. You will find a folder called "PDF" inside the Notes folder, with the output file(s).
 
