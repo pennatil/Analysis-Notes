@@ -1,4 +1,16 @@
 #!/bin/bash
+#Check if pdflatex is installed
+{
+	command -v pdflatex >/dev/null 2>&1
+} || { 
+	echo >&2 "pdflatex (LaTex) is required, but it is not installed. Please look on the README for instructions. Aborting."; exit 1; 
+}
+#Check if gnuplot is installed
+{
+	command -v gnuplot >/dev/null 2>&1
+} || { 
+	echo >&2 "gnuplot is required, but it is not installed. Please look on the README for instructions. Aborting."; exit 1; 
+}
 {
 	cd "../Tex/MAINs"
 } || {
