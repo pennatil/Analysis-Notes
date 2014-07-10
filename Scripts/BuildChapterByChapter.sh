@@ -1,4 +1,16 @@
 #!/bin/bash
+#Check if pdflatex is installed
+{
+	command -v pdflatex >/dev/null 2>&1
+} || { 
+	echo -e >&2 "\n\n ### ERROR ###\n\npdflatex (LaTex) is required, but it is not installed. Please read the README for instructions. Aborting.\n\n"; exit 1; 
+}
+#Check if gnuplot is installed
+{
+	command -v gnuplot >/dev/null 2>&1
+} || { 
+	echo -e >&2 "\n\n ### ERROR ###\n\ngnuplot is required, but it is not installed. Please read the README for instructions. Aborting.\n\n"; exit 1; 
+}
 {
 	cd "../Tex/MAINs"
 } || {
@@ -10,6 +22,7 @@ do
 done
 rm -f *.out *.log *.aux *.synctex *.x.gnuplot *.x.table
 
+<<<<<<< HEAD
 #Adding the warning page
 mv mainMult1.pdf mainTemp1.pdf
 pdftk ../Others/warningTex.pdf mainTemp1.pdf cat output mainMult1.pdf
@@ -49,6 +62,8 @@ rm -f mainTemp9.pdf
 
 
 
+=======
+>>>>>>> ec2fcb2b54df975f7835859538af1c445c8670c1
 #Activate them individually once a certain file is final!
 mkdir -p "../../PDF/Final Documents"
 # cp mainMult1.pdf "../../PDF/Final Documents/Kapitel 1 - Logik und Unterlagen - Analysis I.pdf"
