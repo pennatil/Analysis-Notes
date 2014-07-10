@@ -303,11 +303,11 @@ Eine \emph{Norm} auf $\R^{d}$ ist eine Abbildung \[ \norm{.}: \R^{d} \to \R \] m
 
 \subsubsection*{Beispiel 4.14}
 \begin{enumerate}
-\item \[ \norm{x}_{2} = \Big(\sum_{i = 1}^{d} \abs{x_{i}}\Big)^{\frac{1}{2}}\quad\quad x=(x_{1}, \dots, x_{d})  \] kommt vom Skalarprodukt.
+\item \[ \norm{x}_{2} = \Big(\sum_{i = 1}^{d} \abs{x_{i}^{2}}\Big)^{\frac{1}{2}}\quad\quad x=(x_{1}, \dots, x_{d})  \] kommt vom Skalarprodukt.
 \item Für $1\leq p<\infty$ sei \[ \norm{x}_{p} \defeq \Big( \sum_{i=1}^{d}\abs{x_{i}^{p}}\Big)^{\frac{1}{p}}\] und $\norm{x}_{\infty} = \max{\{\abs{x_{i}} : 1\leq i \leq d \}}$, dann sind $\norm{.}_{p}, 1\leq p \leq \infty$ Normen auf $\R^{d}$.
 \end{enumerate}
 Zwischen diesen verschiedenen Normen haben wir die folgenden Verhältnisse:
- \[ \norm{x}_{\infty} = \max{\abs{x_{i}}} \leq \norm{x}_{p} = \sqrt[d]{\sum_{i=1}^{d}{\abs{x_{i}}^{p}}} \leq d\norm{x}_{\infty} \quad\quad (\ast)\]
+ \[ \norm{x}_{\infty} = \max{\abs{x_{i}}} \leq \norm{x}_{p} = \sqrt[p]{\sum_{i=1}^{d}{\abs{x_{i}}^{p}}} \leq d\norm{x}_{\infty} \quad\quad (\ast)\]
 Bild von $\norm{x}_{1} = \sum_{i=1}^{d}\abs{x_{i}} \leq 1$
 \begin{center}
 \begin{tikzpicture}[scale=0.6]
