@@ -87,10 +87,6 @@ This is only recommended to people with experience with LaTex, since the files m
 		* Mac OS: [Tutorial](http://www.maclife.com/article/columns/terminal_101_graphing_gnuplot). Take a look at the "Installing gnuplot" section.
 		* Windows: [Setup file](http://sourceforge.net/projects/gnuplot/files/latest/download?source=files)
 		* Linux: Depends on your distro, a quick google search should help
-  	* pdftk
-  	   	* Mac OS: [Setup file](http://www.pdflabs.com/tools/pdftk-server/). Scroll down to "Apple Mac OS X". (If you have brew, open the terminal and type <code>brew cask install pdftk</code>)
-  	   	* Windows: [Setup file](http://www.pdflabs.com/tools/pdftk-server/). Scroll down to "Microsoft Windows"	 
-		* Linux: Usually <code>sudo apt-get install pdftk</code>, check for your specific distro
 2. Download the master Branch [here](https://github.com/pennatil/Analysis-Notes/archive/master.zip) and unzip it. 
 3. Build the files:
 	* Using a program with a GUI:

@@ -23,9 +23,6 @@ done
 
 rm -f *.out *.log *.aux *.toc *.synctex *.x.gnuplot *.x.table
 
-mv main.pdf mainTemp.pdf
-pdftk ../Others/warningTex.pdf mainTemp.pdf cat output main.pdf
-rm -f mainTemp.pdf
 
 #Activate these lines once the document is final!
 # mkdir -p "../Final Documents"

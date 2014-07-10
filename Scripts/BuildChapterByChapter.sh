@@ -22,48 +22,7 @@ do
 done
 rm -f *.out *.log *.aux *.synctex *.x.gnuplot *.x.table
 
-<<<<<<< HEAD
-#Adding the warning page
-mv mainMult1.pdf mainTemp1.pdf
-pdftk ../Others/warningTex.pdf mainTemp1.pdf cat output mainMult1.pdf
-rm -f mainTemp1.pdf
 
-mv mainMult2.pdf mainTemp2.pdf
-pdftk ../Others/warningTex.pdf mainTemp2.pdf cat output mainMult2.pdf
-rm -f mainTemp2.pdf
-
-mv mainMult3.pdf mainTemp3.pdf
-pdftk ../Others/warningTex.pdf mainTemp3.pdf cat output mainMult3.pdf
-rm -f mainTemp3.pdf
-
-mv mainMult4.pdf mainTemp4.pdf
-pdftk ../Others/warningTex.pdf mainTemp4.pdf cat output mainMult4.pdf
-rm -f mainTemp4.pdf
-
-mv mainMult5.pdf mainTemp5.pdf
-pdftk ../Others/warningTex.pdf mainTemp5.pdf cat output mainMult5.pdf
-rm -f mainTemp5.pdf
-
-mv mainMult6.pdf mainTemp6.pdf
-pdftk ../Others/warningTex.pdf mainTemp6.pdf cat output mainMult6.pdf
-rm -f mainTemp6.pdf
-
-mv mainMult7.pdf mainTemp7.pdf
-pdftk ../Others/warningTex.pdf mainTemp7.pdf cat output mainMult7.pdf
-rm -f mainTemp7.pdf
-
-mv mainMult8.pdf mainTemp8.pdf
-pdftk ../Others/warningTex.pdf mainTemp8.pdf cat output mainMult8.pdf
-rm -f mainTemp8.pdf
-
-mv mainMult9.pdf mainTemp9.pdf
-pdftk ../Others/warningTex.pdf mainTemp9.pdf cat output mainMult9.pdf
-rm -f mainTemp9.pdf
-
-
-
-=======
->>>>>>> ec2fcb2b54df975f7835859538af1c445c8670c1
 #Activate them individually once a certain file is final!
 mkdir -p "../../PDF/Final Documents"
 # cp mainMult1.pdf "../../PDF/Final Documents/Kapitel 1 - Logik und Unterlagen - Analysis I.pdf"
