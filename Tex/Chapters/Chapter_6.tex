@@ -338,7 +338,7 @@ Dann gilt $U(f,P)=0$ und $O(f,P)=1, \forall P\in P(I)$\\
 $\Rightarrow f$ ist nicht integrierbar. (f ist beschränkt aber nicht integrierbar)
 \end{enumerate}
 
-\subsubsection*{Satz 6.6 (Riemannsches Kriterium für integrierbarkeit)}
+\subsubsection*{Satz 6.6 (Riemannsches Kriterium für Integrierbarkeit)}
 Sei $f:I\to\R$ eine beschränkte Funktion. Dann sind folgende Aussagen äquivalent
 \begin{enumerate}
 \item $f(x)$ ist integrierbar über $\lbrack a,b\rbrack$
@@ -399,11 +399,11 @@ Für jedes $\varepsilon>0$, haben wir $\frac{{(b - a)(f(b) - f(a))}}{n} < \varep
 Sei $f:I\to \R$ eine beschränkte Funktion. Folgende Aussagen sind äquivalent.
 \begin{enumerate}[\indent I)]
 \item $f$ ist Riemann integrierbar und $A: = \int\limits_a^b {f(x)dx} $
-\item Für jedes $\varepsilon>0$ existiert eine Zahl $\xi>0$, so dass für jede Partition $P_i=\{x_0,x_1,\dots,x_N\}$ von $I$ und alle $\xi_i,\dots,\xi_N \in \R$ gilt \[\mathop {\delta (P) < \delta }\limits_{{x_{k - 1}} \le {\xi _k} \le {x_k},\forall k}  \Rightarrow \abs{ {A - \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} } } < \varepsilon \]
+\item Für jedes $\varepsilon>0$ existiert eine Zahl $\delta>0$, so dass für jede Partition $P_i=\{x_0,x_1,\dots,x_N\}$ von $I$ und alle $\xi_i,\dots,\xi_N \in \R$ gilt \[\mathop {\delta (P) < \delta }\limits_{{x_{k - 1}} \le {\xi _k} \le {x_k},\forall k}  \Rightarrow \abs{ {A - \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} } } < \varepsilon \]
 \end{enumerate}
 Dieser Satz lässt sich auch so formulieren: Eine beschränkte Funktion $f:I\to\R$ ist genau dann Riemann integrierbar wenn der Grenzwert \[\mathop {\mathop {\lim }\limits_{\delta (P) \to 0} }\limits_{{\xi _k} \in [{x_{k - 1}},{x_k}]} \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} \] und dann haben wir \[A=\int\limits_a^b {f(x)dx = \mathop {\lim }\limits_{\delta (P) \to 0} } S(f,P,\delta )\]
 
-\subsubsection*{Beweis} Siehe D. Salomon: Das Riemannsche Integrale (Satz 3.1).
+\subsubsection*{Beweis} Siehe D. Salomon: Das Riemannsche Integral (Satz 3.1).
 \subsubsection*{Korollar 6.8}
 Seien $f:\lbrack a,b\rbrack\to\R$ eine beschränkte und integrierbare Funktion, $\{ P^{(n)}\}$ eine Folge von Partitionen der Intervalls $\lbrack a,b\rbrack$ mit $\delta(P^{(n)})\to 0$ für $n\to\infty$ und $\{\xi^{(n)}\}$ eine Feste Wahl von Zwischenpunkten zur Partition $P^{(n)}$. Dann ist
 \[\int\limits_a^b {f(x)dx = \mathop {\lim }\limits_{n \to \infty } S(f,{P^{(n)}},{\xi ^{(n)}})} \]
@@ -434,7 +434,7 @@ S(f,{P^{(n)}},{\xi ^{(n)}}) &=\sum\limits_{k = 1}^n {f(\xi _k^{(n)})(x_k^{(n)} -
 %%%%%%%%%%%%%%%%%%%%
 \subsection*{Eigenschaften des Integrals}
 \subsubsection*{Satz 6.9}
-Seien $a<c<b$ und $\alpha, \beta \in \R$ und $f,g:I=\lbrack a,b \rbrack\to\R$ zwei Reimann integrierbare Funktionen. Dann gilt folgendes:
+Seien $a<c<b$ und $\alpha, \beta \in \R$ und $f,g:I=\lbrack a,b \rbrack\to\R$ zwei Riemann integrierbare Funktionen. Dann gilt folgendes:
 \begin{enumerate}
 \item Die Funktion $\alpha f + \beta g$ ist integrierbar mit \[\int\limits_a^b {(\alpha f + \beta g)dx = \alpha \int\limits_a^b {f(x)dx + \beta \int\limits_a^b {g(x)dx} } } \]
 \item Wenn $f,g$ die Ungleichung $f(x)\leq g(x), \forall x\in\lbrack a,b\rbrack$ erfüllen, dann gilt \[\int\limits_a^b {f(x)dx \le \int\limits_a^b {g(x)dx} } \]
