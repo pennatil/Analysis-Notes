@@ -564,7 +564,7 @@ Sei $f:\lbrack a,b\rbrack\to\R$ eine stetige Funktion. Dann existiert ein $\xi\i
   ymax=10,
   axis y line=left,
   axis x line=bottom,
-  xtick={-1.2,2,4.5},
+  xtick={-1.2,1.84,4.5},
   xticklabels={$a$,$\xi$,$b$},
   ytick={3},
   yticklabels={$f(\xi)$},
@@ -581,7 +581,7 @@ Sei $f:\lbrack a,b\rbrack\to\R$ eine stetige Funktion. Dann existiert ein $\xi\i
 \addplot+[mark=none,fill=black!60,draw=black,domain=-1.2:4.5,stack plots=y] {min(3-(poly),0)} \closedcycle;
 
 \draw[help lines] (axis cs:-1.2,-5) -- (axis cs:-1.2,3);
-\draw[help lines] (axis cs:2,-5) -- (axis cs:2,3);
+\draw[help lines] (axis cs:1.84,-5) -- (axis cs:1.84,3);
 \draw[help lines] (axis cs:4.5,-5) -- (axis cs:4.5,3);
 \end{axis}
 
