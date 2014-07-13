@@ -548,15 +548,15 @@ In diesem Kapitel wird der Zusammenhang zwischen Differentiation und Integration
 \subsubsection*{Satz 6.14 (Mittelwertsatz der Integralrechnung)}
 Sei $f:\lbrack a,b\rbrack\to\R$ eine stetige Funktion. Dann existiert ein $\xi\in\lbrack a,b\rbrack$ mit \[\int\limits_a^b {f(x)dx = f(\xi )(b - a)} \]
 
-Geometrisch:
+\noindent Geometrisch:
 
 \begin{center}
 \pgfmathdeclarefunction{poly}{0}{%
-      \pgfmathparse{-x^3+5*(x^2)-3*x-3}%
+      \pgfmathparse{-x^3+5.25*(x^2)-3*x-3}%
     }
 
-\begin{tikzpicture}
-\filldraw[draw=black!15, fill=black!15] (0.79,0) rectangle ++(5.27,3.035);
+\begin{tikzpicture}[scale=1.1]
+\filldraw[draw=black!15, fill=black!15] (0.79,0) rectangle ++(5.58,3.035);
 \begin{axis}[
   xmin=-2,
   xmax=5,
@@ -564,31 +564,31 @@ Geometrisch:
   ymax=10,
   axis y line=left,
   axis x line=bottom,
-  xtick={-1.2,2,4.2},
+  xtick={-1.2,2,4.5},
   xticklabels={$a$,$\xi$,$b$},
   ytick={3},
   yticklabels={$f(\xi)$},
   samples=160
 ]
 
-\addplot[mark=none,help lines,domain=-2:4.2] {3};
+\addplot[mark=none,help lines,domain=-2:4.5] {3};
 
 % draw graph for the first function f
-\addplot+[black,thick,mark=none,domain=-1.2:4.2,stack plots=y] {poly};
+\addplot+[black,thick,mark=none,domain=-1.2:4.5,stack plots=y] {poly};
 % draw graph of max(g-f, 0) and stack
-\addplot+[mark=none,fill=gray!70,draw=black,domain=-1.2:4.2,stack plots=y] {max(3-(poly),0)} \closedcycle;
+\addplot+[mark=none,fill=gray!70,draw=black,domain=-1.2:4.5,stack plots=y] {max(3-(poly),0)} \closedcycle;
 % draw graph of min(g-f, 0) and stack
-\addplot+[mark=none,fill=black!60,draw=black,domain=-1.2:4.2,stack plots=y] {min(3-(poly),0)} \closedcycle;
+\addplot+[mark=none,fill=black!60,draw=black,domain=-1.2:4.5,stack plots=y] {min(3-(poly),0)} \closedcycle;
 
 \draw[help lines] (axis cs:-1.2,-5) -- (axis cs:-1.2,3);
 \draw[help lines] (axis cs:2,-5) -- (axis cs:2,3);
-\draw[help lines] (axis cs:4.2,-5) -- (axis cs:4.2,3);
+\draw[help lines] (axis cs:4.5,-5) -- (axis cs:4.5,3);
 \end{axis}
 
 \draw	(0.95,3.6) node[anchor=north] {D}
 		(2.3,2.5) node[anchor=north] {A}
 		(4.9,3.8) node[anchor=north] {C}
-		(5.92,3.1) node[anchor=north] {B}
+		(6.23,3.1) node[anchor=north] {\footnotesize B}
 		;
 \end{tikzpicture}
 \end{center}
