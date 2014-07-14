@@ -342,7 +342,7 @@ $\Rightarrow f$ ist nicht integrierbar. (f ist beschränkt aber nicht integrierb
 Sei $f:I\to\R$ eine beschränkte Funktion. Dann sind folgende Aussagen äquivalent
 \begin{enumerate}[\hspace{3mm}(a)]
 \item $f(x)$ ist Riemann-integrierbar über $\lbrack a,b\rbrack$
-\item Für jedes $\varepsilon>0$ existiert eine Partition $Q\in P(I)$ mit \[O(f,Q)-U(f,Q)<\varepsilon\]
+\item Für jedes $\varepsilon>0$ existiert eine Partition $Q\in P(I)$ mit \[O(f,Q)-U(f,Q)\leq\varepsilon\]
 \end{enumerate}
 \subsubsection*{Beweis}
 
@@ -365,7 +365,7 @@ Nach Bemerkung 6.2b) folgt
 (i),(ii),(iii)&\Rightarrow A-\frac{\varepsilon}{2}<U(f,Q)\leq O(f,Q)<A+\frac{\varepsilon}{2}\\
 &\Rightarrow O(f,Q)-U(f,Q) < \varepsilon
 \end{align*}
-\item[(b)$\Rightarrow$(a)] Für alle $P\in P(I)$ \[0 \le \underbrace {\int\limits_{\underline{a}}^b {f(x)dx} }_{\inf O(f,P)} - \underbrace {\int\limits_a^{\overline{b}} {f(x)dx} }_{\sup U(f,P)} \le O(f,P) - U(f,P)\]
+\item[(b)$\Rightarrow$(a)] Für alle $P\in P(I)$ \[0 \le \underbrace {\int\limits_{a}^{\overline{b}} {f(x)dx} }_{\inf O(f,P)} - \underbrace {\int\limits_{\underline{a}}^{{b}} {f(x)dx} }_{\sup U(f,P)} \le O(f,P) - U(f,P)\]
 Aus (b) folgt das $\forall\varepsilon>0$ \[0 < \int\limits_a^{\overline{b}} {f(x)dx - \int\limits_{\underline{a}}^b {f(x)dx < \varepsilon } } \Rightarrow \int\limits_a^{\overline{b}} {f(x)dx = \int\limits_{\underline{a}}^b {f(x)dx} } \] $\Rightarrow f$ ist integrierbar.
 \end{enumerate}
 
