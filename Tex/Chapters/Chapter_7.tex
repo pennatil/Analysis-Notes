@@ -176,7 +176,7 @@ Wie kann man eine spezielle Lösung finden?
 \subsubsection*{Antwort:}
 Zur Lösung der inhomogenen DGL kann man in vielen Fällen einen so genannten ``Ansatz vom Typ der rechten Seite'' wählen. Hier geht man davon aus, dass die Lösung die gleiche Gestalt wie die Störfunktion haben wird.\\
 
-\noindent Ist die Störfunktion z.B. ein Polynom, so nimmt man an, dass die spezielle Lösung auch ein Polynom sein wird. Ist die Störfunktion eine Exponentialfunktion so nimmt man an, dass die Lösung auch eine Exponentialfunktion sein wird.
+\noindent z.B.: ist die Störfunktion ein Polynom, so nimmt man an, dass die spezielle Lösung auch ein Polynom sein wird. Ist die Störfunktion eine Exponentialfunktion so nimmt man an, dass die Lösung auch eine Exponentialfunktion sein wird.
 
 \subsubsection*{Beispiel 7.8}
 \begin{enumerate}
@@ -263,8 +263,8 @@ wobei $P_n,Q_n,S_n,R_n$ Polynome von Grad $n$ sind.
 \subsubsection*{Superpositionsprinzip:}
 Ist $y_1(c)$ eine spezielle Lösung der lineraren Differentialgleichung \[y^{(n)}(x)+a_{n-1}(x)y^{(n-1)}(x)+\dots +a_0(x)y=b_1(x)\] und $y_2(x)$ eine spezielle Lösung der LDGL \[y^n(x)+\dots +a_0(x)y=b_2(x)\] dann ist $y_1(x)+y_2(x)$ eine spezielle Lösung der DGL \[y^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\dots+a_0(x)y=b_1(x)+b_2(x)\]
 \subsubsection*{Beispiel}
-Die DGL $y''+y'-6y=50\sin x$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x\] und die DGL $y''+y'-6y=10e^{2x}$ hat die spezielle Lösung \[y_s(x)=2xe^{2x}\]Die DGL $y''+y'-6y=50\sin x+10e^{2x}$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x+2xe^{2x}\] Die allgemenine Lösung ist \[y(x)=-7\sin x -\cos x+2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\]
-\item Falls $\lambda=\alpha +i\beta$ ($\beta$ kann null sein) eine $m-$fache Nullstelle der charakteristichen Polynoms von (Resonanzfall) \[(H)\hspace{10mm}y^n(x)+a_ny^{(n-1)}+\dots +a_0=0\]ist, so muss man der Ansatz für $y_s(x)$ mit dem Faktor $x^m$ multipliziert werden.
+Die DGL $y''+y'-6y=50\sin x$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x\] und die DGL $y''+y'-6y=10e^{2x}$ hat die spezielle Lösung \[y_s(x)=2xe^{2x}\]Die DGL $y''+y'-6y=50\sin x+10e^{2x}$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x+2xe^{2x}\] Die allgemeine Lösung ist \[y(x)=-7\sin x -\cos x+2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\]
+\item Falls $\lambda=\alpha +i\beta$ ($\beta$ kann null sein) eine $m-$fache Nullstelle der charakteristischen Polynoms von \[(H)\hspace{10mm}y^n(x)+a_ny^{(n-1)}+\dots +a_0=0\]ist (Resonanzfall) , so muss man der Ansatz für $y_s(x)$ mit dem Faktor $x^m$ multipliziert werden.
 \subsubsection*{Beispiel}
 $y''+y=\sin x$ hat die spezielle Lösung $y_s=-\frac{1}{2}x\cos x$
 
