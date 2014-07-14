@@ -372,9 +372,8 @@ Wenn wir die folgenden Zusatzbedingungen haben
 Also $x_p(t)=\cos\omega t+\sin\omega t$
 \end{enumerate}
 
-\section{Lineare DGL erster Ordnung (mit allgemeinen koeffizienten)}
-Die LDGL hat die allgemeine Form \[y'(x)=a(x)y+b(x)\] $b(x)$ - inhomogener Term.\\
-
+\section{Lineare DGL erster Ordnung (mit allgemeinen Koeffizienten)}
+Die LDGL hat die allgemeine Form (mit $b(x)$ als inhomogener Term) \[y'(x)=a(x)y+b(x)\]
 \noindent Und $y'(x)=a(x)y$ ist die zugehörige homogene Gleichung. \\
 
 \noindent Lösung von $y'(x)=a(x)y$: \[\frac{y'(x)}{y(x)}=a(x)\]
@@ -394,7 +393,7 @@ $y=uv$ wobei $u,v$ Funktionen sind. Dann ist \[y'=u'v+uv'\] und \[a(x)y+b(x)=ay+
 Jetzt wählen wir $v$, so dass \[v'-av=0\]d.h. \[v=e^{A(x)}\] Dann ist $u'v=b$ d.h. $u'=be^{-A(x)}$ d.h. $u$ ist eine Stammfunktion von $be^{-A(x)}$
 
 \subsubsection*{Satz 7.13}
-Seien $A(x)$ eine Stammfunktion von $a(x)$ und $U(x)$ ein Stammfunktion von $be^{-A(x)}$. Dann ist $y(x)=e^{A(x)}$. $U$ Lösung von $y'=a(x)y+b(x)$
+Seien $A(x)$ eine Stammfunktion von $a(x)$ und $U(x)$ ein Stammfunktion von $be^{-A(x)}$. Dann ist $y(x)=e^{A(x)}* U$ Lösung von $y'=a(x)y+b(x)$
 
 \subsubsection*{Korollar 7.14}
 Die Allgemeine Lösung der LDGL $y'=ay+b$ ist durch $y(x)=e^{A(x)}\int{b(x)e^{-A(x)} dx}+Ke^{A(x)}$ gegeben, wobei $K\in\R$, $A(x)$ eine Stammfunktion von $a(x)$ ist.
