@@ -180,7 +180,7 @@ Für alle $\left( x_0,y_0\right) \in\R^2$ ist $f$ in beiden Richtungen partiell 
 \[\frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right) = {\left. {\frac{{x\left( {{x^2} + {y^2}} \right) - 2x{y^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}}} \right|_{(x,y)\not  = \left( {{x_0},{y_0}} \right)}} = \frac{{{x^2} - x{y^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}}\]
 \item Für $\left(x_0,y_0\right)=\left( 0,0\right)$\[\frac{{\partial f}}{{\partial x}}(0,0) = \mathop {\lim }\limits_{h \to 0} \frac{{\overbrace {f\left( {0 + h,0} \right) - f\left( {0,0} \right)}^{f({x_0} + h{e_1}) - f(x_0)}}}{h} = \lim \frac{0}{h} = 0\]\[\frac{{\partial f}}{{\partial y}}(0,0) = \mathop {\lim }\limits_{h \to 0} \frac{{\overbrace {f\left( {0,0 + h} \right) - f\left( {0,0} \right)}^{f({x_0} + h{e_2}) - f({x_0})}}}{h} = \lim \frac{0}{h} = 0\]
 \end{itemize}
-Im Ursprung besitzt $f$ beide partielle Ableitungen, sie ist aber nicht stetig. Der Grund ist, dass die partielle Ableitungen nur partielle Informationen geben. Wir müssen die Differenzierbarkeit in irgendeiner anderen Weise verallgemeinen.\\
+Im Ursprung besitzt $f$ beide partielle Ableitungen, sie ist aber nicht stetig. Der Grund ist, dass die partielle Ableitungen nur partielle Informationen geben. Wir müssen die Differenzierbarkeit in irgendeiner anderen Weise verallgemeinern.\\
 
 Die Lösung dieses Problem ist, dass man eine Approximationseigenschaft durch eine lineare Abbildung postuliert. \\
 
@@ -374,7 +374,7 @@ Also ist $\lim\frac{R\left( x,x_0\right)}{\left( x-x_0\right)}=0$ und $f(x)$ ist
 
 \subsubsection*{Beispiel 8.10}
 Polynome auf $\R^n$ sind von der Klasse $C^1$. Für jeden Multiindex $\alpha=\left(\alpha_0,\dots , \alpha_n\right)\in\N^n$ definieren wir die Monomialfunktion \[{x^\alpha }: = {\left( {{x^0}} \right)^{{\alpha _0}}}{\left( {{x^1}} \right)^{{\alpha _1}}} \ldots {\left( {{x^n}} \right)^{{\alpha _n}}}\] Ein Polynom von Grad $\leq N$ ist dann gegeben durch \[p(x) = \sum\limits_{\abs{ \alpha  } \le N} {{a_\alpha }{x^\alpha }} \] wobei $\abs{ \alpha  } = {\alpha _0} +  \ldots  + {\alpha _n}$
-\todo[inline]{Pages 135.1 - 135.2 are a zusammenfassung, not sure if needed to be included}
+\todo[inline]{Pages 135.1 - 135.2 are a Zusammenfassung, not sure if needed to be included}
 \section{Differentiationsregeln}
 Ganz analog zum eindimensionalen Fall gelten folgende Differentiationsregeln
 
@@ -704,7 +704,7 @@ Sei $\Omega\subset\R^n$ konvex $f:\Omega\to\R$ differenzierbar, $x_0,x_1\in\Omeg
 \subsubsection*{Beweis}
 Sei $g\left( t\right) = \left( 1-t\right) x_0+tx_1=x_t$. Dann ist $t\to \left( f\circ g\right)(t)$ auf $\left[ 0,1\right]$ stetig und in $\left( 0,1\right)$ differenzierbar. Also gibt es $\vartheta\in\left( 0,1\right)$ mit (nach MWS der DR einer Variable) \[f\left( {{x_i}} \right) - f\left( {{x_0}} \right) = \left( {f \circ g} \right)(1) - \left( {f \circ g} \right)(0) = \left( {f \circ g} \right)'\left( \vartheta  \right)\left( {1 - 0} \right)\] Nun ist \[\left( {f \circ g} \right)'\left( \vartheta  \right) = df\left( {g\left( \vartheta  \right) \cdot \frac{{dg}}{{dt}}\left( \vartheta  \right)} \right)\] \todo{Is the formula done or does it continue on a new line, page 146 top}
 %\[\left( {df} \right)\left( {{x_\vartheta }} \right)\left( { - {x_0} + {x_1}} \right)\]
-Die Kettenregel wird auch angewandelt um Integrale mit Parametern zu studieren. Ein Beispiel davon ist:
+Die Kettenregel wird auch abgewandelt um Integrale mit Parametern zu studieren. Ein Beispiel davon ist:
 
 \subsubsection*{Beispiel}
 Sei $h:\R^2\to\R$, $\left( s,t\right)\to h\left(s,t \right)$. Wir nehmen an, $h$ ist stetig, $\frac{\partial h}{\partial t}$ existiert und ist auf ganz $\R^2$ stetig. Sei
@@ -880,8 +880,8 @@ Aus der Definition des Gradientenfeld folgt $\forall e\in\R^n$, Einheitsvektor $
 
 Mit Cauchy-Schwarz folgt
 \[<\nabla f\left( x_0\right)>\leq\norm{\nabla f\left( x_0\right)}\norm{ e} = \norm{ \nabla f\left( x_0\right)}\]
-mit Gleichkeit genau dann, wenn $e$ ein positives Vielfaches von $\nabla f\left( x_0\right)$ ist, nämlich \[e=\frac{\nabla f\left( x_0\right)}{\abs{ \nabla f\left( x_0\right)}}\] \[\Rightarrow df\left( x_0\right) e \leq \abs{ \nabla f\left( x_0\right)}\]
-mit Gleicheit für $e=\frac{\nabla f\left( x_0\right)}{\abs{ \nabla f\left( x_0\right)}}$
+mit Gleichheit genau dann, wenn $e$ ein positives Vielfaches von $\nabla f\left( x_0\right)$ ist, nämlich \[e=\frac{\nabla f\left( x_0\right)}{\abs{ \nabla f\left( x_0\right)}}\] \[\Rightarrow df\left( x_0\right) e \leq \abs{ \nabla f\left( x_0\right)}\]
+mit Gleichheit für $e=\frac{\nabla f\left( x_0\right)}{\abs{ \nabla f\left( x_0\right)}}$
 %END BEWEIS
 $\nabla f\left( x_0\right)\not= 0\Rightarrow \nabla f\left( x_0\right)$ zeigt die Richtung an, in der $f$ am schnellsten wächst.\\
 \end{beweis}
@@ -930,7 +930,7 @@ df\left( {\gamma (t)} \right) \cdot \gamma '(t) = 0 =  < \nabla f\left( {\gamma 
 Insbesondere $0=df\left(\gamma (0)\right)\cdot\gamma'(0)= < \nabla f\left( x_0\right),\gamma'(0) >$ d.h. $\nabla f\left( x_0\right)$ steht senkrecht zur Niveauflache von $f$ durch $x_0$
 \subsubsection*{Beispiel}
 Sei $f(x,y)=\frac{x^2-y^2}{2}$, $x,y\in\R^2$ \[\nabla f(x,y)=(x,-y)\] Sei $\left( x_0,y_0\right) = (1,-1)$ \[\nabla f(1,-1)=(1,1)\hspace{10mm} \left( \nabla f(1,-1)\right) = \sqrt{2}\] \[\frac{\nabla f}{\abs{ \nabla f}}(1,-1)=\frac{1}{\sqrt{2}}(1,1)\]
-\item Im Punkt $P$ biegt der Bergweg ab; nach Südosten geht er mit 25\% Steigung bergauf, nach Süden mit 20\% Gefälle bergab. Der wanderer im Nebel möchte über die Wiese möglichst rascht zum Gipfel. In welche Richtung muss er gehen und wie steil ist es dorthin?\\
+\item Im Punkt $P$ biegt der Bergweg ab; nach Südosten geht er mit 25\% Steigung bergauf, nach Süden mit 20\% Gefälle bergab. Der wanderer im Nebel möchte über die Wiese möglichst rasch zum Gipfel. In welche Richtung muss er gehen und wie steil ist es dorthin?\\
 
 Wir legen das Koordinatensystem so, dass die $x-$Achse nach Osten und die $y-$Achse nach Norden zeigt, und setzen voraus, dass die Höhenfunktion $h$ differenzierbar ist. Wir wollen ihren Gradienten in $P$ $\nabla h(P)$ bestimmen. Nach Voraussetzung hat $h$ die beiden Richtungsableitungen \[dh\left( P\right)\left( v_1\right)=0.25\hspace{10mm}dh\left( P\right)\left(  v_2\right)=-0.2\] wobei \[v_1=\left( \frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\right)\hspace{10mm}v_2=(0,-1)\]
 
@@ -1080,7 +1080,7 @@ Die dabei verrichtete Arbeit ist definitionsgemäss das Skalarprodukt aus dem Kr
 \end{center}
 
 \noindent\underline{Allgemeiner Fall}\\
-Verschiebungs längs einer Kurve $\gamma$ in einem Kraftfeld $F=\left( P(x,y),Q(x,y)\right)$
+Verschiebung längs einer Kurve $\gamma$ in einem Kraftfeld $F=\left( P(x,y),Q(x,y)\right)$
 \begin{center}
 \begin{tikzpicture}
 \draw[->] (0,0) -- (10,0);
@@ -1113,7 +1113,7 @@ Verschiebungs längs einer Kurve $\gamma$ in einem Kraftfeld $F=\left( P(x,y),Q(
 \end{tikzpicture}
 \end{center}
 
-$\Delta W= F\cdot \Delta (\gamma)=$ Kraftkomponente entlang des Weges mal züruckgelegter Weg. \\
+$\Delta W= F\cdot \Delta (\gamma)=$ Kraftkomponente entlang des Weges mal zurückgelegter Weg. \\
 
 Da sich Betrag und Richtung der Kraft sowie der jeweilige Winkel zum Weg vom Punkt zu Punkt ändern, gilt das zur Berechnung notwendige Skalarprodukt näherungsweise jeweils nur für ein Wegelement $\overrightarrow\Delta r$. Die Berechnung der Arbeit erfolgt daher in folgender Weise:
 \begin{enumerate}[\indent a)]
@@ -1121,7 +1121,7 @@ Da sich Betrag und Richtung der Kraft sowie der jeweilige Winkel zum Weg vom Pun
 \item Ermittlung der Arbeit \todo{can't read, page 167 middle; limenet: plus, grammar is totally wrong} Kraft: \[F\left( {\gamma \left( {{t_i}} \right)} \right) = F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right)\]
 \item Berechnen der Arbeit je Teilabschnitt-Skalarprodukt \[\Delta {W_i} = F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right) \cdot \Delta {\gamma _i}\]
 \item Aufsummieren der Teil-Arbeit \[W \approx \sum {\Delta {W_i} = \sum {F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right)} }  \cdot \underbrace {\Delta \gamma }_{\frac{{\Delta \gamma }}{{\Delta t}} \cdot \Delta t}\]
-\item Durch Verkleinerung des Wegelementes erthält man den exakten Wert der geleisteten Arbeit
+\item Durch Verkleinerung des Wegelementes enthält man den exakten Wert der geleisteten Arbeit
 \begin{align*}
 W = &\int\limits_a^b {F\left( {\gamma \left( t \right)} \right)}  \cdot \gamma '\left( t \right)dt\\
  = &\int\limits_a^b { < F\left( {\gamma \left( t \right)} \right)} ,\gamma '\left( t \right) > dt
@@ -1250,7 +1250,7 @@ Bild eines stückweise $C^1-$Weges
 
 Dann definiert man
 \[\int\limits_\gamma  \lambda  : = \sum\limits_{t = 0}^{n - 1} {\int\limits_{{{\left. \gamma  \right|}_{\left[ {{a_i},{a_{i + 1}}} \right]}}} \lambda  } \]
-Jetzt werden wir die einzige grundlegendee Eigenschaften des Wegintegrals herleiten.
+Jetzt werden wir die einzige grundlegende Eigenschaften des Wegintegrals herleiten.
 \end{enumerate}
 
 \subsubsection*{Satz 8.38 (Eigenschaften des Wegintegrals)}
@@ -1291,7 +1291,7 @@ Wir definieren $\gamma_1+\gamma_2$ als Weg, der durch aneinanderhängen von $\ga
 {{\gamma _2}\left( {t - {b_1} + {a_2}} \right)}&{t \in \left[ {{b_1},{b_1} + {b_2} - {a_2}} \right]}
 \end{array}} \right.\]
 Dann gilt \[\int\limits_{{\gamma _1} + {\gamma _2}} \lambda   = \int\limits_{{\gamma _1}} \lambda   + \int\limits_{{\gamma _2}} \lambda  \]
-\item Sei $\gamma:\lbrack a,b\rbrack\to\Omega$ ein Weg. Dann sei $-\gamma:\lbrack a,b\rbrack\to\Omega$ der gleiche Weg aber im entgegengesetzen Durchlaufsinn, d.h. $\left( -\gamma\right) (t)=\gamma\left( -t+a+b\right)$
+\item Sei $\gamma:\lbrack a,b\rbrack\to\Omega$ ein Weg. Dann sei $-\gamma:\lbrack a,b\rbrack\to\Omega$ der gleiche Weg aber im entgegengesetzten Durchlaufsinn, d.h. $\left( -\gamma\right) (t)=\gamma\left( -t+a+b\right)$
 
 \begin{center}
 \begin{tikzpicture}[scale=0.75]
@@ -1537,7 +1537,7 @@ t&\in(0,2\pi]
 \end{align*}
 Jetzt betrachten wir $\Omega'=\left\{ \left( x,y\right) \mid x>0 \right\}$ \todo{can't understand image on page 187, top} und führen Polarkoordinaten ein \[x=r\cos\theta, y=r\sin\theta\hspace{10mm} -\frac{\pi}{2}<\theta <\frac{\pi}{2}\]
 Dann ist $\tan\theta = \frac{y}{x}$ und \[\theta=\arctan\frac{y}{x}\]
-Wir betrachten $\theta:\Omega'\to\R$ als ein Funktion der Variabeln $x,y$ und berechnen
+Wir betrachten $\theta:\Omega'\to\R$ als ein Funktion der Variablen $x,y$ und berechnen
 \begin{align*}
 \frac{{\partial \theta }}{{\partial x}} = & \frac{1}{{1 + {{\left( {\frac{y}{x}} \right)}^2}}}\left( { - \frac{y}{{{x^2}}}} \right) =  - \frac{y}{{{x^2} + {y^2}}}\\
 \frac{{\partial \theta }}{{\partial x}} = & \frac{x}{{{x^2} + {y^2}}}
@@ -1969,7 +1969,7 @@ df\left( {r,\theta } \right) &= \left( {\begin{array}{*{20}{c}}
 \end{tikzpicture}
 \columnbreak
 \null\vfill
-Die $x,y$ Anteile werde in Polarkoordinaten transformiert und die $z$ koordinate beibehalten
+Die $x,y$ Anteile werde in Polarkoordinaten transformiert und die $z$-Koordinate beibehalten
 \null\vfill
 \end{multicols}
 \begin{align*}
