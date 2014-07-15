@@ -744,7 +744,7 @@ t
 1
 \end{array}} \right)\]
 Dann \[u(t) = \left( {f \circ g} \right)(t) = f\left( {b(t),t} \right) = \int\limits_a^{b(t)} {h(s,t)ds} \]
-Nach dem Hauptsatz der Integralrechnung $f$ ist nach $x$ partielle differenzierbar und $\frac{\partial f}{\partial x}=h(x,y)$. Man muss zeigen, dass $f$ ist nach $y$ partiell differenzierbar mit \[\frac{{\partial f}}{{\partial y}}(x,y) = \int\limits_a^x {\frac{{\partial h(s,y)}}{{\partial x}}ds} \]
+Nach dem Hauptsatz der Integralrechnung $f$ ist nach $x$ partiell differenzierbar und $\frac{\partial f}{\partial x}=h(x,y)$. Man muss zeigen, dass $f$ ist nach $y$ partiell differenzierbar mit \[\frac{{\partial f}}{{\partial y}}(x,y) = \int\limits_a^x {\frac{{\partial h(s,y)}}{{\partial x}}ds} \]
 Dann ergibt die Kettenregel
 \begin{align*}
 u'(t) = &\frac{d}{{dt}}\left( {f \circ g} \right)(t) = \left( {\frac{{\partial f}}{{\partial x}}\left( {g(t)} \right),\frac{{\partial f}}{{\partial y}}\left( {g(t)} \right)} \right) \cdot \frac{{dg}}{{dt}}\\
@@ -762,7 +762,7 @@ u'(t) = &\frac{d}{{dt}}\left( {f \circ g} \right)(t) = \left( {\frac{{\partial f
 Sei $L\left(\R^n,\R\right)$ der Raum der linearen Abbildungen von $\R^n$ nach $\R$. Falls $f:\Omega\subset\R^n\to\R$ eine Funktion ist, die in jedem Punkt differenzierbar ist, dann ist $df(x)\in L\left(\R^n,\R\right)$ und man erhält eine Abbildung
 \begin{align*}
 \Omega &\to L\left(\R^n,\R\right)\\
-x_0 &\to df\left(x_0\right) = \left( {\frac{{\partial f}}{{\partial {x^1}}}\left( {{x_0}} \right), \ldots ,\frac{{\partial f}}{{\partial {x^n}}}\left( {{x_0}} \right)} \right)\\
+x_0 &\mapsto df\left(x_0\right) = \left( {\frac{{\partial f}}{{\partial {x^1}}}\left( {{x_0}} \right), \ldots ,\frac{{\partial f}}{{\partial {x^n}}}\left( {{x_0}} \right)} \right)\\
 & \hspace{16mm}=  \frac{{\partial f}}{{\partial {x^1}}}\left( {{x_0}} \right)d{x^1} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}\left( {{x_0}} \right)d{x^n}
 \end{align*}
 Dies ist ein Beispiel der $1-$Form
@@ -775,7 +775,7 @@ Eine Differentialform von Grad 1 (auch ``$1-$Form'') auf $\Omega$ ist eine Abbil
 \item Seien $x^i:\R^n\to\R$ die Koordinatenfunktion, $1\leq i\leq n$. Für jedes $x_0\in\R^n$ ist $dx^i\left(x_0\right)\in L\left( \R^n,\R\right)$; dies führt zur $1-$Form
 \begin{align*}
 dx^i:\R^n&\to L\left( \R^n,\R\right)\\
-x_0 &\to dx^i\left( x_0\right)
+x_0 &\mapsto dx^i\left( x_0\right)
 \end{align*}
 Für jedes $x_0\in\R^n$ gilt $dx^i\left(e_j\right)=\delta_{ij}$, also bilden $dx^1\left( x_0\right),\dots,dx^n\left( x_0\right)$ eine Basis für $L\left(\R^n,\R\right)$, $\forall x\in\R^n$.\\
 
