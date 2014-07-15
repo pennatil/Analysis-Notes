@@ -1033,8 +1033,23 @@ wobei
 \end{tikzpicture}
 \end{center}
 Wir setzen 
-\[\left. {\begin{array}{*{20}{c}}{u = y - x}& \to &{x = \frac{1}{2}(v - u)}\vspace{2mm}\\{v = y + x}& \to &{y = \frac{1}{2}(v + u)}\end{array}} \right\}\left( {\begin{array}{*{20}{c}}x\\y\end{array}} \right) = \emptyset \left( {\begin{array}{*{20}{c}}u\\v\end{array}} \right)\]
-\[\det \left( {\Phi (u,v)} \right) = \left| {\begin{array}{*{20}{c}}{\frac{{\partial x}}{{\partial u}}}&{\frac{{\partial x}}{{\partial v}}}\vspace{2mm}\\{\frac{{\partial y}}{{\partial u}}}&{\frac{{\partial y}}{{\partial u}}}\end{array}} \right| = \left| {\begin{array}{*{20}{c}}{ - \frac{1}{2}}&{\frac{1}{2}}\vspace{2mm}\\{\frac{1}{2}}&{\frac{1}{2}}\end{array}} \right|\]
+\[\left. {\begin{array}{*{20}{c}}
+{u = y - x}& \to &{x = \frac{1}{2}(v - u)}\vspace{2mm}\\
+{v = y + x}& \to &{y = \frac{1}{2}(v + u)}
+\end{array}} \right\}\left( {\begin{array}{*{20}{c}}
+x\\
+y
+\end{array}} \right) = \emptyset \left( {\begin{array}{*{20}{c}}
+u\\
+v
+\end{array}} \right)\]
+\[\det \left( {\Phi (u,v)} \right) = \left| {\begin{array}{*{20}{c}}
+{\frac{{\partial x}}{{\partial u}}}&{\frac{{\partial x}}{{\partial v}}}\vspace{2mm}\\
+{\frac{{\partial y}}{{\partial u}}}&{\frac{{\partial y}}{{\partial u}}}
+\end{array}} \right| = \left| {\begin{array}{*{20}{c}}
+{ - \frac{1}{2}}&{\frac{1}{2}}\vspace{2mm}\\
+{\frac{1}{2}}&{\frac{1}{2}}
+\end{array}} \right|\]
 
 \begin{align*}
 x=0&\Rightarrow v=u\\
@@ -1067,14 +1082,16 @@ x+y=2&\Rightarrow v=2
 \begin{align*}
 \int\limits_D e^{\frac{(y-x)}{(y+x)}}d\mu(x,y)=&\iint\limits_{T} e^{\frac{u}{v}}\abs{-\frac{1}{2}}d\mu(u,v)\\
 =&\frac{1}{2}\int\limits_0^2\left(\int\limits_{-v}^v e^{\frac{u}{v}} du \right) dv\\
-=&\frac{1}{2}\int\limits_0^2 {\left( {\left. {v{e^{\frac{u}{v}}}} \right|_{ - v}^v} \right)} dv\\=& \frac{1}{2}\int\limits_0^2 {v\left( {e - \frac{1}{e}} \right)dv} \\=& \left( {e - \frac{1}{e}} \right)\left( {\left. {\frac{1}{2} \cdot \frac{{{v^2}}}{2}} \right|_0^2} \right) = e - \frac{1}{e}
+=&\frac{1}{2}\int\limits_0^2 {\left( {\left. {v{e^{\frac{u}{v}}}} \right|_{ - v}^v} \right)} dv\\
+=& \frac{1}{2}\int\limits_0^2 {v\left( {e - \frac{1}{e}} \right)dv} \\
+=& \left( {e - \frac{1}{e}} \right)\left( {\left. {\frac{1}{2} \cdot \frac{{{v^2}}}{2}} \right|_0^2} \right) = e - \frac{1}{e}
 \end{align*}
 
 
 \end{enumerate}
 
 \section{Der Satz von Green}
-Wir erinnern uns: Sei $\Omega\subset\R^2$, ist $V:\Omega\to\R^2$ ein $C'-$Vektorfeld mit Potential $f$, so folgt
+Wir erinnern uns: Sei $\Omega\subset\R^2$, ist $V:\Omega\to\R^2$ ein $C^1-$Vektorfeld mit Potential $f$, so folgt
 \[\rot\left( v(x)\right)=\rot\left( \nabla f(x)\right)=0\hspace{10mm}\forall x\in\R^2 \]
 wobei
 \[\rot\left( v\left( x,y\right)\right)=\frac{\partial v_2}{\partial x}\left( x,y\right) -\frac{\partial v_1}{\partial y}\left( x,y\right)\]
@@ -1130,15 +1147,15 @@ Gibt es auch Fälle wo ein zweidimensionales Integral mithilfe einer eindimensio
 \noindent Die Antwort ist genau der Inhalt des Satzes von Green
 
 \subsubsection*{Satz 9.19 (Green)}
-Sei $\Omega \in\R^2$ ein Gebiet, dessen Rand $\partial\Omega$ eine stückweise $C'$ Parameterdarstellung hat. Sei $U$ eine offene Menge mit $\Omega\subset U$ und sei
+Sei $\Omega \in\R^2$ ein Gebiet, dessen Rand $\partial\Omega$ eine stückweise $C^1$ Parameterdarstellung hat. Sei $U$ eine offene Menge mit $\Omega\subset U$ und sei
 \[ f=\frac{\partial Q}{\partial x}\left( x,y\right) -\frac{\partial P}{\partial y}\left( x,y\right) \]
-wobei $P,Q\in C'\left( U\right)$. Dann gilt
+wobei $P,Q\in C^1\left( U\right)$. Dann gilt
 \[ \iint\limits_\Omega \left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)d\mu = \int\limits_{\partial \Omega } {Pdx + Qdy} \]
 wobei $\partial \Omega$ so parametrisiert wird, dass $\Omega$ zur Linken des Randes liegt. \\
 
 \noindent\underline{Anders gesagt:}\\
 
-\noindent Sei $V=\left( P,Q\right)$ ein $C'$ Vektorfeld auf dem Gebiet $U$. Sei $\Omega\subset U$ ein Gebiet, dessen rand $\partial\Omega$ ein Stückweise $C'$ Parameterdarstellung hat. Die parametrisierung von $\Omega$ sei so gewählt dass $\Omega$ stets links zur Durchlaufrichtung liegt. Dann gilt
+\noindent Sei $V=\left( P,Q\right)$ ein $C^1$ Vektorfeld auf dem Gebiet $U$. Sei $\Omega\subset U$ ein Gebiet, dessen rand $\partial\Omega$ ein Stückweise $C^1$ Parameterdarstellung hat. Die parametrisierung von $\Omega$ sei so gewählt dass $\Omega$ stets links zur Durchlaufrichtung liegt. Dann gilt
 \[\int\limits_{\partial \Omega } {Vds}  = \int\limits_{\partial \Omega } {Pdx + Qdy}  = \iint\limits_\Omega \rot\left( V \right)d\mu \]
 Bevor wir die Idee des Beweises geben, geben wir einige Beispiele und Anwendungen
 

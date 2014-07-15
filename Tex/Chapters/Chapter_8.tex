@@ -290,7 +290,7 @@ Da $d{x^i}\left( {{e_j}} \right) = \left\{ {\begin{array}{*{20}{c}}
 1&{i = j}\\
 0&{i\not  = j}
 \end{array}} \right.$ gilt, ist ${\left( {d{x^i}} \right)_{1 \le i \le n}}$ die duale Basis von $L\left( \R^n:\R\right)$ zur Standardbasis ${\left( {e_i} \right)_{1 \le i \le n}}$ des $\R^n$.
-\item Jedes $f:\R\to\R\in C'\left(\R\right)$ besitzt das Differential \[df\left( {{x_0}} \right) = \frac{{df}}{{dx}}\left( {{x_0}} \right)dx = f'\left( {{x_0}} \right)dx\] d.h. $f'\left(x_0\right)$ ist die Darstellung von $df\left(x_0\right)$ bezüglich der Basis $dx$ von $L\left(\R:\R\right)$
+\item Jedes $f:\R\to\R\in C^1\left(\R\right)$ besitzt das Differential \[df\left( {{x_0}} \right) = \frac{{df}}{{dx}}\left( {{x_0}} \right)dx = f'\left( {{x_0}} \right)dx\] d.h. $f'\left(x_0\right)$ ist die Darstellung von $df\left(x_0\right)$ bezüglich der Basis $dx$ von $L\left(\R:\R\right)$
 \item $f\left(x,y\right)=xe^y$, $\R^2\to\R$ ist an jeder Stelle $\left(x_0,y_0\right)\in\R^2$ differenzierbar und es gilt \[df\left( {{x_0},{y_0}} \right) = \left( {\frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right),\frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)} \right) = \left( {{e^{{y_0}}},x{e^{{y_0}}}} \right)\] \[f\left( {x,y} \right) - f\left( {{x_0},{y_0}} \right) = \underbrace {f\left( {x,y} \right) - f\left( {{x_0},y} \right)}_ \swarrow  + f\left( {{x_0},y} \right) - f\left( {{x_0},{y_0}} \right)\] \[ = \frac{{\partial f}}{{\partial x}}\left( {\xi ,y} \right)\left( {x - {x_0}} \right) + \frac{{\partial f}}{{\partial y}}\left( {{x_0},\eta } \right)\left( {y - {y_0}} \right)\]
 Nach dem Mittelwertsatz der Differentialrechnung, mit geeigneten Zwischenstellen $\xi=\xi (y)$ und $\eta$ \[ = \frac{{\partial f}}{{\partial x}}\left( {{x_0},{y_0}} \right)\left( {x - {x_0}} \right) + \frac{{\partial f}}{{\partial y}}\left( {{x_0},{y_0}} \right)\left( {y - {y_0}} \right) + R\left( {x,y} \right)\]
 mit
@@ -338,10 +338,10 @@ Falls $f:\Omega\to\R$ in $x_0\in\Omega\subset\R$ differenzierbar ist, ist sie in
 \subsubsection*{Beweis}
 Folgt aus der Definition
 \begin{definition}{8.8}
-$f:\Omega\to\R$ heisst von der Klasse $C'$, $\left( f\in C'\left(\Omega\right)\right)$, falls $f$ an jeder Stelle $x_0\in\Omega$ und in jede Richtung $e_i$ partiell differenzierbar ist und die Funktionen $x\to\frac{\partial f}{\partial x^i}\left(x\right)$ für jedes $1\leq i\leq n$ auf $\Omega$ stetig sind.
+$f:\Omega\to\R$ heisst von der Klasse $C^1$, $\left( f\in C^1\left(\Omega\right)\right)$, falls $f$ an jeder Stelle $x_0\in\Omega$ und in jede Richtung $e_i$ partiell differenzierbar ist und die Funktionen $x\to\frac{\partial f}{\partial x^i}\left(x\right)$ für jedes $1\leq i\leq n$ auf $\Omega$ stetig sind.
 \end{definition}
 \subsubsection*{Satz 8.9}
-Sei $f\in C'\left(\Omega\right)$. Dann ist $f$ an jeder Stelle $x_0\in\Omega$ differenzierbar.
+Sei $f\in C^1\left(\Omega\right)$. Dann ist $f$ an jeder Stelle $x_0\in\Omega$ differenzierbar.
 
 \subsubsection*{Beweis}
 Für $n=3$ seien $x=\left( x^1,x^2,x^3\right)$, $x_0=\left( x_0^1,x_0^2,x_0^3\right)$. Dann ist
@@ -373,7 +373,7 @@ Also
 Also ist $\lim\frac{R\left( x,x_0\right)}{\left( x-x_0\right)}=0$ und $f(x)$ ist differenzierbar.
 
 \subsubsection*{Beispiel 8.10}
-Polynome auf $\R^n$ sind von der Klasse $C'$. Für jeden Multiindex $\alpha=\left(\alpha_0,\dots , \alpha_n\right)\in\N^n$ definieren wir die Monomialfunktion \[{x^\alpha }: = {\left( {{x^0}} \right)^{{\alpha _0}}}{\left( {{x^1}} \right)^{{\alpha _1}}} \ldots {\left( {{x^n}} \right)^{{\alpha _n}}}\] Ein Polynom von Grad $\leq N$ ist dann gegeben durch \[p(x) = \sum\limits_{\abs{ \alpha  } \le N} {{a_\alpha }{x^\alpha }} \] wobei $\abs{ \alpha  } = {\alpha _0} +  \ldots  + {\alpha _n}$
+Polynome auf $\R^n$ sind von der Klasse $C^1$. Für jeden Multiindex $\alpha=\left(\alpha_0,\dots , \alpha_n\right)\in\N^n$ definieren wir die Monomialfunktion \[{x^\alpha }: = {\left( {{x^0}} \right)^{{\alpha _0}}}{\left( {{x^1}} \right)^{{\alpha _1}}} \ldots {\left( {{x^n}} \right)^{{\alpha _n}}}\] Ein Polynom von Grad $\leq N$ ist dann gegeben durch \[p(x) = \sum\limits_{\abs{ \alpha  } \le N} {{a_\alpha }{x^\alpha }} \] wobei $\abs{ \alpha  } = {\alpha _0} +  \ldots  + {\alpha _n}$
 \todo[inline]{Pages 135.1 - 135.2 are a zusammenfassung, not sure if needed to be included}
 \section{Differentiationsregeln}
 Ganz analog zum eindimensionalen Fall gelten folgende Differentiationsregeln
@@ -708,12 +708,12 @@ Die Kettenregel wird auch angewandelt um Integrale mit Parametern zu studieren. 
 
 \subsubsection*{Beispiel}
 Sei $h:\R^2\to\R$, $\left( s,t\right)\to h\left(s,t \right)$. Wir nehmen an, $h$ ist stetig, $\frac{\partial h}{\partial t}$ existiert und ist auf ganz $\R^2$ stetig. Sei
-\[u(t) = \int\limits_a^{b(t)} {h(s,t)ds} {\text{, }}b(t) \in C'\left( \R \right){\text{, }}a \in\R\]\todo{Is it $C'$ or $\subset '$?? page 146 middle; limenet: it is $C^1$}
+\[u(t) = \int\limits_a^{b(t)} {h(s,t)ds} {\text{, }}b(t) \in C^1\left( \R \right){\text{, }}a \in\R\]
 
 \subsubsection*{Satz 8.21}
 Sei $h(s,t)$ eine stetige differenzierbare Funktion von zwei Variablen und $b(t)$ differenzierbare Funktion einer Variable. Dann ist die Funktion \[u(t): = \int\limits_a^{b(t)} {h(s,t)ds} \] wo definiert, differenzierbar mit der Ableitung \[u'(t): = h\left( {b(t),t} \right) \cdot b'(t) + \int\limits_a^{b(t)} {\frac{{\partial h}}{{\partial t}}\left( {s,t} \right)ds} \]
 \subsubsection*{Korollar 8.22}
-Sei $h=h\left( s,t\right) :\R^2\to\R$ stetig, und $\frac{\partial h}{\partial t}$ existiert und auf ganz $\R^2$ stetig. Sei \[u(t) = \int\limits_0^t {h\left( {s,t} \right)ds} \] Dann \[u(t) \in  \subset '\left( \R\right)\text{ und }u'(t) = h\left( {t,t} \right) + \int\limits_0^t {\frac{{\partial h}}{{\partial t}}\left( {s,t} \right)ds} \]
+Sei $h=h\left( s,t\right) :\R^2\to\R$ stetig, und $\frac{\partial h}{\partial t}$ existiert und auf ganz $\R^2$ stetig. Sei \[u(t) = \int\limits_0^t {h\left( {s,t} \right)ds} \] Dann \[u(t) \in C^1\left( \R\right)\text{ und }u'(t) = h\left( {t,t} \right) + \int\limits_0^t {\frac{{\partial h}}{{\partial t}}\left( {s,t} \right)ds} \]
 
 \subsubsection*{Beweis}
 Setze $b(t)=t$, $a=0$ in Satz 8.21.
@@ -780,7 +780,7 @@ x_0 &\to dx^i\left( x_0\right)
 Für jedes $x_0\in\R^n$ gilt $dx^i\left(e_j\right)=\delta_{ij}$, also bilden $dx^1\left( x_0\right),\dots,dx^n\left( x_0\right)$ eine Basis für $L\left(\R^n,\R\right)$, $\forall x\in\R^n$.\\
 
 Eine beliebige $1-$Form $\lambda :\R^n\to L\left(\R^n,\R\right)$ lässt sich dann eindeutig wie folgt darstellen \[\lambda \left( {{x_0}} \right) = \sum\limits_{i = 1}^n {{\lambda _i}\left( {{x_0}} \right)d{x^i}\left( {{x_0}} \right)} \] wobei $\lambda_i:\R^n\to\R$ Funktionen sind.
-\item Für jedes $f\in\subset'\left(\Omega\right)$\todo{Is it $C'$ or $\subset'$?? page 152.1 top; limenet: $C^1$} ist das Differential $df$ eine $1-Form$ \[df = \frac{{\partial f}}{{\partial {x^1}}}d{x^1} + \frac{{\partial f}}{{\partial {x^2}}}d{x^2} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}d{x^n}\]
+\item Für jedes $f\in C^1\left(\Omega\right)$ ist das Differential $df$ eine $1-Form$ \[df = \frac{{\partial f}}{{\partial {x^1}}}d{x^1} + \frac{{\partial f}}{{\partial {x^2}}}d{x^2} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}d{x^n}\]
 \item Der Ausdruck $\lambda\left(x,y,z\right)=3dx+5zdy+xdz$ definiert eine $1-$Form auf $\R^3$ mit
 \begin{align*}
 & \lambda_1\left(x,y,z\right)=3\\
@@ -863,7 +863,7 @@ Diese Diskussion können wir auf das Differential einer Funktion anwenden
 \end{enumerate}
 
 \begin{definition}{8.30}
-Sei $f\in\subset'\left(\Omega\right)$. Das durch \[< v(x),\omega >:=df(x)(\omega ), \omega\in\R^n\] definierte Vektorfeld heisst Gradientenfeld von $f$ und wird mit $v(x)=\nabla f(x)$ oder grad$f$ bezeichnet. \\
+Sei $f\in C^1\left(\Omega\right)$. Das durch \[< v(x),\omega >:=df(x)(\omega ), \omega\in\R^n\] definierte Vektorfeld heisst Gradientenfeld von $f$ und wird mit $v(x)=\nabla f(x)$ oder grad$f$ bezeichnet. \\
 
 Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\R^n$ folgt die Darstellung
 \[\nabla f(x) = \left( {\begin{array}{*{20}{c}}
@@ -874,7 +874,7 @@ Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\R^n$ folgt die Darstellung
 \centerline{(Oben nehmen wir $\lambda (x): = df(x) = \sum {\frac{{\partial f}}{{\partial {x^i}}}{r^i}{x^i}} $, Bemerkung 8.29, 2.)}
 \end{definition}
 \subsubsection*{Satz 8.31}
-Sei $f\in\subset '\left(\Omega\right)$ und $x_0\in\Omega$. Dann gibt $\nabla f\left(x_0\right)$ die Richtung und $\abs{ \nabla f\left(x_0\right)}$ den Betrag des steilsten Anstieges von $f$ an der Stelle $x_0$ an.
+Sei $f\in C^1\left(\Omega\right)$ und $x_0\in\Omega$. Dann gibt $\nabla f\left(x_0\right)$ die Richtung und $\abs{ \nabla f\left(x_0\right)}$ den Betrag des steilsten Anstieges von $f$ an der Stelle $x_0$ an.
 \begin{beweis}{}
 Aus der Definition des Gradientenfeld folgt $\forall e\in\R^n$, Einheitsvektor $\mid\mid e\mid\mid =1$ \[df\left(x_0\right)\left( e\right)=< \nabla f\left( x_0\right) ,e >\]
 
@@ -888,7 +888,7 @@ $\nabla f\left( x_0\right)\not= 0\Rightarrow \nabla f\left( x_0\right)$ zeigt di
 
 
 \subsubsection*{Geometrische Interpretation}
-Sei $f:\R^n\to\R, C'$. Für jedes $s\in\R$ wird $f^{-1}(s)=\left\{ x\in\R^n\mid f(x)=s\right\}$ Niveaufläche genannt.
+Sei $f:\R^n\to\R, C^1$. Für jedes $s\in\R$ wird $f^{-1}(s)=\left\{ x\in\R^n\mid f(x)=s\right\}$ Niveaufläche genannt.
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
@@ -1148,7 +1148,7 @@ Sei
 \gamma :\lbrack a,b\rbrack &\to\Omega\\
 t &\to\left( \gamma^1 (t), \gamma^2 (t),\dots ,\gamma^n (t) \right)
 \end{align*}
-ein $C'-$Weg. Dann ist
+ein $C^1-$Weg. Dann ist
 \begin{align*}
 \lbrack a,b\rbrack \to &\R\\
 t\to &\lambda\left( \gamma (t)\right)\left( \gamma' (t)\right)\\
@@ -1162,7 +1162,7 @@ Das Wegintegral von $\gamma\in L\left( \R^n,\R\right)$ längs $\gamma$ ist \[\in
 
 \subsubsection*{Beispiel 8.37}
 \begin{enumerate}
-\item Sei $\gamma\in C'\left(\lbrack 0,2\pi\rbrack =\R^2\right)$ mit
+\item Sei $\gamma\in C^1\left(\lbrack 0,2\pi\rbrack =\R^2\right)$ mit
 \[\begin{array}{*{20}{c}}
 {\gamma (t) = \left( {\begin{array}{*{20}{c}}
 {\cos t}\\
@@ -1223,9 +1223,9 @@ Dann gilt
 \end{align*}
 \subsubsection*{Bemerkung}\todo{is  this inside the enumerated list or out?? page 170 bottom}
 Sei $f(x,y)=x^3y+y$. Dann ist  \[df(x+y)=3x^2ydx+\left( x^3+1\right) dy\] und \[f(1,1)-f(0,0)=(1+1)-(0,0)=2\]
-Wir können den Begriff des Wegintegrals auf Wege erweitern, die stückweise $C'$ sind. Ein stückweiser $C'-$Weg ist eine stetige Abbildung $\gamma :\lbrack a,b\rbrack\to\R^n$ mit einer Unterteilung des Intervalls
+Wir können den Begriff des Wegintegrals auf Wege erweitern, die stückweise $C^1$ sind. Ein stückweiser $C^1-$Weg ist eine stetige Abbildung $\gamma :\lbrack a,b\rbrack\to\R^n$ mit einer Unterteilung des Intervalls
 \[a=a_0 < a_1 < a_2 < \dots <a_n = b\]
-so dass \[{\left. \gamma  \right|_{\left[ {{a_i},{a_{i + 1}}} \right]}} = \left[ {{a_i},{a_{i + 1}}} \right] \to \R^n \] $C'$ ist.\\
+so dass \[{\left. \gamma  \right|_{\left[ {{a_i},{a_{i + 1}}} \right]}} = \left[ {{a_i},{a_{i + 1}}} \right] \to \R^n \] $C^1$ ist.\\
 
 \noindent d.h. $t\to\gamma'(t)$ ist auf $\left( a_i, a_{i+1}\right)$ stetig und erweitert sich stetig auf $\lbrack a_i, a_{i+1}\rbrack$
 \subsubsection*{Beispiel}\todo{is  this inside the enumerated list or out?? page 171 middle}
@@ -1245,7 +1245,7 @@ so dass \[{\left. \gamma  \right|_{\left[ {{a_i},{a_{i + 1}}} \right]}} = \left[
 \end{center}
 \columnbreak
 \null\vfill
-Bild eines stückweise $C'-$Weges
+Bild eines stückweise $C^1-$Weges
 \end{multicols}
 
 Dann definiert man
@@ -1256,7 +1256,7 @@ Jetzt werden wir die einzige grundlegendee Eigenschaften des Wegintegrals herlei
 \subsubsection*{Satz 8.38 (Eigenschaften des Wegintegrals)}
 \begin{enumerate}[\indent E1)]
 \item Das Wegintegral $\int\limits_\gamma  \lambda  $ ist unabhängig von einer orientierungserhaltenden Umparametrisierung. \\
-D.h. Sei $\gamma :\lbrack a,b\rbrack\to\Omega$, $C'$ und $\varphi :\lbrack a',b'\rbrack\to\lbrack a,b\rbrack$, $C'$ mit $\varphi\left( a'\right)=a$, $\varphi\left( b'\right)=b$, $\varphi'\left( t\right) >0$ $\forall t\in\lbrack a', b'\rbrack$. Dann ist
+D.h. Sei $\gamma :\lbrack a,b\rbrack\to\Omega$, $C^1$ und $\varphi :\lbrack a',b'\rbrack\to\lbrack a,b\rbrack$, $C^1$ mit $\varphi\left( a'\right)=a$, $\varphi\left( b'\right)=b$, $\varphi'\left( t\right) >0$ $\forall t\in\lbrack a', b'\rbrack$. Dann ist
 \begin{align*}
 \int\limits_{\gamma  \circ \varphi } \lambda   = &\int\limits_{a'}^{b'} {\lambda \left( {\gamma \left( {\varphi (t)} \right)} \right)\left( {\gamma  \circ \varphi } \right)'(t)dt} \\
  = &\int\limits_{a'}^{b'} {\lambda \left( {\gamma \left( {\varphi (t)} \right)} \right)\gamma '\left( {\varphi (t)} \right)\varphi '(t)dt} \\
@@ -1319,21 +1319,21 @@ Dann gilt \[\int\limits_{{\gamma _1} + {\gamma _2}} \lambda   = \int\limits_{{\g
 \end{center}
 
 Dann gilt \[\int\limits_{ - \gamma } \lambda   =  - \int\limits_\gamma  \lambda  \]
-\item Sei $f:\Omega\to\R$ eine $C'-$Funktion, sowie $\gamma:\lbrack a,b\rbrack\to\Omega$ stückweise $C'$. Dann gilt \[\int\limits_\gamma  {df}  = f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)\]
-$\gamma$ ist $C'$, dann ist
+\item Sei $f:\Omega\to\R$ eine $C^1-$Funktion, sowie $\gamma:\lbrack a,b\rbrack\to\Omega$ stückweise $C^1$. Dann gilt \[\int\limits_\gamma  {df}  = f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)\]
+$\gamma$ ist $C^1$, dann ist
 \begin{align*}
 \int\limits_\gamma  {df}  = & \int\limits_a^b {df\left( {\gamma \left( t \right)} \right)\gamma '\left( t \right)dt} \\
 \mathop  = & \int\limits_a^b {\frac{d}{{dt}}\left( {f \circ \gamma } \right)\left( t \right)dt}\\
  = &\left( {f \circ \gamma } \right)\left( b \right) - \left( {f \circ \gamma } \right)\left( a \right)\\
  = & f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)
 \end{align*}
-Mittels des Wegintegrals können wir die $C'-$Funktionen charakterisieren, deren Differentiale verschwinden.
+Mittels des Wegintegrals können wir die $C^1-$Funktionen charakterisieren, deren Differentiale verschwinden.
 \end{enumerate}
 
 \subsubsection*{Satz 8.39}
-Sei $\Omega$ ``offen'' und $C^1-$wegzusammenhängend. Sei $f\in C'\left(\Omega\right)$. Falls $df(x)=0$, $\forall x\in\Omega$, so ist $f$ konstant.
+Sei $\Omega$ ``offen'' und $C^1-$wegzusammenhängend. Sei $f\in C^1\left(\Omega\right)$. Falls $df(x)=0$, $\forall x\in\Omega$, so ist $f$ konstant.
 \subsubsection*{Beweis}
-Wenn $\Omega$ wegzusammenhängend ist, heisst das, dass zu je zwei Punkten $x,y\in\Omega$ gibt es in $C'-$Weg $\gamma :\lbrack 0,1\rbrack\to\gamma$ mit $\gamma(0)=x$ und $\gamma(1)=y$, $\gamma\left(\lbrack 0,1\rbrack\right)\subset\Omega$. Dann folgt
+Wenn $\Omega$ wegzusammenhängend ist, heisst das, dass zu je zwei Punkten $x,y\in\Omega$ gibt es in $C^1-$Weg $\gamma :\lbrack 0,1\rbrack\to\gamma$ mit $\gamma(0)=x$ und $\gamma(1)=y$, $\gamma\left(\lbrack 0,1\rbrack\right)\subset\Omega$. Dann folgt
 \begin{align*}
 f(y)-f(x)&= f\left(\gamma(1)\right)-f\left(\gamma(0)\right)\\
 = &\int\limits_{\gamma} df = 0
@@ -1347,22 +1347,22 @@ Wenn es ein $f:\Omega\to\R$ gibt, so dass $df=\lambda$, heisst $f$ ein Potential
 \subsubsection*{Satz 8.30}
 Sei $\lambda\in\Omega\to L\left( \R^n,\R\right)$ eine stetige $1-$Form. Folgende Aussagen sind äquivalent
 \begin{enumerate}
-\item Es gibt $f\in C'\left( \Omega\right)$ mit $df=\Omega$
-\item Für je zwei stückweise $C'-$Wege $\gamma_i=\lbrack a_i,b_i\rbrack\to\Omega$ mit den selben Anfangs- und Endpunkten (d.h. $\gamma_1\left( a_1\right)=\gamma_2\left(a_2\right)$, $\gamma_1\left( b_1\right)=\gamma_2\left(b_2\right)$), gilt \[\int\limits_{{\gamma _1}} \lambda   = \int\limits_{{\gamma _2}} \lambda  \]
-\item Für jeden geschlossenen $C'$Weg $\gamma$ gilt \[\int\limits_\gamma  \lambda   = 0\]
+\item Es gibt $f\in C^1\left( \Omega\right)$ mit $df=\Omega$
+\item Für je zwei stückweise $C^1-$Wege $\gamma_i=\lbrack a_i,b_i\rbrack\to\Omega$ mit den selben Anfangs- und Endpunkten (d.h. $\gamma_1\left( a_1\right)=\gamma_2\left(a_2\right)$, $\gamma_1\left( b_1\right)=\gamma_2\left(b_2\right)$), gilt \[\int\limits_{{\gamma _1}} \lambda   = \int\limits_{{\gamma _2}} \lambda  \]
+\item Für jeden geschlossenen $C^1$Weg $\gamma$ gilt \[\int\limits_\gamma  \lambda   = 0\]
 \end{enumerate}
 
 \subsubsection*{Beweis}
 \begin{enumerate}[align=left]
 \item[$(1)\Rightarrow (2)$:] Folgt aus E4)
 \item[$(2)\Leftrightarrow (3)$:] Klar
-\item[$(2)\Rightarrow (1)$:] Sei $p_0\in\Omega$; für jedes $x\in\Omega$. Sei $\gamma:\lbrack 0,1\rbrack\to\Omega$ stückweise $C'$ mit $\gamma(0)=p_0$, $\gamma(1)=x$. Definiere $f(x): = \int\limits_\gamma  \lambda $.\\
+\item[$(2)\Rightarrow (1)$:] Sei $p_0\in\Omega$; für jedes $x\in\Omega$. Sei $\gamma:\lbrack 0,1\rbrack\to\Omega$ stückweise $C^1$ mit $\gamma(0)=p_0$, $\gamma(1)=x$. Definiere $f(x): = \int\limits_\gamma  \lambda $.\\
 
 Dann ist $f$ nach Annahme (2) wohl definiert (d.h. unabhängig vom Weg von $p_0$ nach $x$) (Wir können $f$ auch mit $\int\limits_{{p_0}}^x \lambda  $ bezeichnen)
 \end{enumerate}
 
 \subsubsection*{Behauptung}
-$f\in C'\left( \Omega\right)$ und $df=\lambda$. Um zu zeigen, dass $df=\lambda$ müssen wir zeigen, dass für $x,x_0\in\Omega$
+$f\in C^1\left( \Omega\right)$ und $df=\lambda$. Um zu zeigen, dass $df=\lambda$ müssen wir zeigen, dass für $x,x_0\in\Omega$
 \[f\left(x\right)-f\left(x_0\right)=\lambda\left(x_0\right)\left( x-x_0\right)+R\left( x,x_0\right)\] mit $\frac{R\left( x,x_0\right)}{\abs{ x-x_0}}\to 0$.\\
 
 \noindent Sei $x_0\in\R$. Sei $\gamma_1:\lbrack -1,0\rbrack\to\Omega$ ein Weg von $p_0$ nach $x_0$. Dann gilt \[\int\limits_{{\gamma _1}} \lambda   = f\left( {{x_0}} \right)\]
@@ -1460,18 +1460,18 @@ Aus Satz 8.30 folgt
 Für ein stetiges Vektorfeld $v:\Omega\to\R^n$ sind folgende Aussagen äquivalent
 \begin{enumerate}
 \item $v$ ist konservativ
-\item Es gibt $f\in C'\left( \Omega\right)$ mit $v=\nabla f$. In diesem Fall heisst $v$ Potentialfeld mit dem Potential $f$.
+\item Es gibt $f\in C^1\left( \Omega\right)$ mit $v=\nabla f$. In diesem Fall heisst $v$ Potentialfeld mit dem Potential $f$.
 \end{enumerate}
 
 Im nächsten Kapitel, mittels höheren partiellen Ableitungen, erhalten wir eine einfache zu \todo{can't understand, page 182 top} notwendige Bedingung für ein konservatives Vektorfeld. Wir werden sehen, dass
-\[v = {\left( {{v^i}} \right)_{1 \le i \le n}} \in C'\left( {\Omega ,\R^n} \right)\text{ konservative }\]
+\[v = {\left( {{v^i}} \right)_{1 \le i \le n}} \in C^1\left( {\Omega ,\R^n} \right)\text{ konservative }\]
 \[\Rightarrow \frac{\partial v^i}{\partial x^j}=\frac{\partial v^j}{\partial x^i}\hspace{5mm}1\leq i,j\leq n\]
 
 \section{Höhere Ableitungen}
 \begin{definition}{8.44}
-$f:\Omega\to\R$, $\Omega\subset\R^n$ $f\in C'\left( \Omega\right)$ heisst von Klasse $C^2$ falls $\frac{\partial f}{\partial x^i}\in C'{\left( \Omega\right)}_{1\leq i\leq n}$
+$f:\Omega\to\R$, $\Omega\subset\R^n$ $f\in C^1\left( \Omega\right)$ heisst von Klasse $C^2$ falls $\frac{\partial f}{\partial x^i}\in C^1{\left( \Omega\right)}_{1\leq i\leq n}$
 \end{definition}\todo{Where does the definition end? page 183 top}
-Für ein beliebiges $m$, heisst die Funktion $f\in C'\left( \omega\right)$ heisst von der Klasse $C^m$, $f\in C^m\left( \omega\right)$, falls $\frac{\partial f}{\partial x^i}\in C^{m-1}\left( \Omega\right)$, $1\leq i\leq n$\\
+Für ein beliebiges $m$, heisst die Funktion $f\in C^1\left( \omega\right)$ heisst von der Klasse $C^m$, $f\in C^m\left( \omega\right)$, falls $\frac{\partial f}{\partial x^i}\in C^{m-1}\left( \Omega\right)$, $1\leq i\leq n$\\
 
 Für ein $f\in C^2\left( \Omega\right)$, heissen die Funktionen \[\frac{{{\partial ^2}f}}{{\partial {x^i}\partial {x^j}}}: = \frac{\partial }{{\partial {x^i}}}\left( {\frac{{\partial f}}{{\partial {x^j}}}} \right)\] die zweiten partiellen Ableitungen von $f$.\\
 
@@ -1488,11 +1488,11 @@ Im Allgemeinen
 Für jede $C^k-$Funktion sind alle partiellen Ableitungen vom Grad $\leq k$ von der Reihenfolge der Ableitungen unabhängig. Von Satz 8.35 erhalten wir folgende notwendige Bedingung für die Konservativität
 
 \subsubsection*{Korollar 8.47}
-Sei $v:\Omega\to\R^n$, $v={\left( v^i\right)}_{1\leq i \leq n}$ ein $C'-$Vektorfeld. Falls $v$ konservativ ist, folgt
+Sei $v:\Omega\to\R^n$, $v={\left( v^i\right)}_{1\leq i \leq n}$ ein $C^1-$Vektorfeld. Falls $v$ konservativ ist, folgt
 \[\frac{{\partial {v^i}}}{{\partial {x^j}}} = \frac{{\partial {v^j}}}{{\partial {x^i}}}\hspace{5mm}1 \le i,j \le n\]
 
 \subsubsection*{Beweis}
-Nach Voraussetzung gibt es $f\in C'\left( \Omega\right)$ mit $v^i(x)=\frac{\partial f}{\partial x^i}$. Da nun $v^i \in C'$, $1\leq i\leq n$ folgt $f\in C^2\left( \Omega\right)$. Woraus
+Nach Voraussetzung gibt es $f\in C^1\left( \Omega\right)$ mit $v^i(x)=\frac{\partial f}{\partial x^i}$. Da nun $v^i \in C^1$, $1\leq i\leq n$ folgt $f\in C^2\left( \Omega\right)$. Woraus
 \[\frac{{\partial {v^i}}}{{\partial {x^j}}} = \frac{\partial }{{\partial {x^j}}}\left( {\frac{{\partial f}}{{\partial {x^i}}}} \right) = \frac{\partial }{{\partial {x^i}}}\left( {\frac{{\partial f}}{{\partial {x^j}}}} \right) = \frac{\partial }{{\partial {x^i}}}{v^j}\]
 folgt.
 
@@ -1503,7 +1503,7 @@ folgt.
 {2y}
 \end{array}} \right)\]
 Es gilt $\frac{\partial v'}{\partial y}=8xy$, $\frac{\partial v^2}{dx}=2$. Also ist $v$ nicht konservativ
-\item Sei $\Omega = \left\{ \left( x,y\right) \in\R^2:\left( x,y\right) \not= (0,0) \right\} = \R^2\backslash\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \to\R^2$ mindestens $C'$. Ausserdem \[\frac{{\partial v'}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C:
+\item Sei $\Omega = \left\{ \left( x,y\right) \in\R^2:\left( x,y\right) \not= (0,0) \right\} = \R^2\backslash\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \to\R^2$ mindestens $C^1$. Ausserdem \[\frac{{\partial v'}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C:
 
 \begin{multicols}{2}
 \begin{center}
@@ -1527,7 +1527,7 @@ t&\in(0,2\pi]
 
 
 \begin{align*}
-\int\limits_C vds  = & \int\limits_0^{2\pi } { < v\left( {C\left( t \right)} \right),C'\left( t \right) > dt} \\
+\int\limits_C vds  = & \int\limits_0^{2\pi } { < v\left( {C\left( t \right)} \right),C^1\left( t \right) > dt} \\
 = & \int\limits_0^{2\pi } \left( -\sin t,\cos t\right)\cdot  \left( {\begin{array}{*{20}{c}}
 { - \sin t}\\
 {\cos t}
@@ -1552,14 +1552,14 @@ Das heisst die Konservativität ist eine Eigenschaft zugleich des Vektorfeldes $
 \begin{definition}{8.49}
 Eine offene Menge $\Omega\subset\R^n$ heisst einfach zusammenhängend, falls
 \begin{enumerate}
-\item $\Omega$ ist stückweise $C'-$wegzusammenhängend
-\item Jeder stückweise $C'-$Weg in $\Omega$ kann stetig innerhalb $\Omega$ auf einen Punkt zusammengezogen werden
+\item $\Omega$ ist stückweise $C^1-$wegzusammenhängend
+\item Jeder stückweise $C^1-$Weg in $\Omega$ kann stetig innerhalb $\Omega$ auf einen Punkt zusammengezogen werden
 \end{enumerate}
 Die Region $\Omega=\R\backslash\{ 0\}$ ist nicht einfach zu $\Omega' = \left\{ \left( x,y\right) \mid x>0\right\}$ ist es aber.\todo[inline]{limenet: This sentence doesn't make any sense at all}%DO NOT MODIFY THIS TODO AS IT MESSES UP FLOATS WHEN BUILDING
 \end{definition}
 
 \subsubsection*{Satz 8.50}
-Sei $\Omega\in\R^2$ beschränkt zusammenhängend sowie einfachzusammenhängend, sei $v\in C'\left( \Omega:\R^2\right)$ Vektorfeld. Dann sind folgende Aussagen äquivalent
+Sei $\Omega\in\R^2$ beschränkt zusammenhängend sowie einfachzusammenhängend, sei $v\in C^1\left( \Omega:\R^2\right)$ Vektorfeld. Dann sind folgende Aussagen äquivalent
 \begin{enumerate}
 \item $v$ ist konservativ
 \item $\frac{\partial v_1}{\partial y}=\frac{\partial v_2}{\partial x}$

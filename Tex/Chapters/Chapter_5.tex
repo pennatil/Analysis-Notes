@@ -834,14 +834,14 @@ mit der Beziehung $\cosh^2+\sinh^2+1$ folgt
 \section{Funktionen der Klasse $C^m$}
 Sei $\Omega\subset\R$, $f:\Omega\to\R$ differenzierbar
 \begin{definition}{5.23}
-$f:\Omega\to\R$ heisst $C'$ (von der Klasse $C'$), falls $f$ auf $\Omega$ differenzierbar ist und $x\to f'(x)$ auf $\Omega$ stetig ist.\\
+$f:\Omega\to\R$ heisst $C^1$ (von der Klasse $C^1$), falls $f$ auf $\Omega$ differenzierbar ist und $x\to f'(x)$ auf $\Omega$ stetig ist.\\
 
-\noindent\underline{Notation:}$C'\left( \Omega\right)=$ Vektorraum der auf $\Omega$ $C'-$Funktionen
+\noindent\underline{Notation:}$C^1\left( \Omega\right)=$ Vektorraum der auf $\Omega$ $C^1-$Funktionen
 \end{definition}
 
 \subsubsection*{Beispiel 5.24}
 \begin{enumerate}
-\item $\exp,\cos,\sin,\text{Polynom}\in C'\left( \R\right)$
+\item $\exp,\cos,\sin,\text{Polynom}\in C^1\left( \R\right)$
 \item $f:\R\to\R$
 \[f\left( x \right) = \left\{ {\begin{array}{*{20}{c}}
 {{x^2}\sin \left( {\frac{1}{x}} \right)}&{x\not  = 0}\\
@@ -858,10 +858,10 @@ $\lim x_n=0$, $\lim f'\left( x_n\right)$ (insbesondere $\not=f'(0)$) nicht exist
 \end{enumerate}
 Wir haben einen Konvergenzbegriff auf $C^0\left( \Omega\right)$ gesehen: Gleichmässige Konvergenz
 \[{f_n}\mathop  \to \limits^{\text{glm.}} f{\text{ falls }}\mathop {\sup }\limits_{x \in \Omega } \left\| {{f_n} - f} \right\| \to 0\]
-Falls alle $f_n$ stetig sind, folgt, dass $f$ stetig ist. Für $C'\left( \Omega\right)$ haben wir
+Falls alle $f_n$ stetig sind, folgt, dass $f$ stetig ist. Für $C^1\left( \Omega\right)$ haben wir
 
 \subsubsection*{Satz 5.26}\label{satz5.26}
-Sei $\left( f_n\right)_{n\geq 1}$ eine Folge in $C'\left( \Omega\right)$. Wir nehmen an, dass ${f_n}\mathop  \to \limits^{\text{glm.}} f$ und ${f'_n}\mathop  \to \limits^{\text{glm.}} g$. Dann gilt $f\in C'\left( \Omega\right)$ und $g=f'$
+Sei $\left( f_n\right)_{n\geq 1}$ eine Folge in $C^1\left( \Omega\right)$. Wir nehmen an, dass ${f_n}\mathop  \to \limits^{\text{glm.}} f$ und ${f'_n}\mathop  \to \limits^{\text{glm.}} g$. Dann gilt $f\in C^1\left( \Omega\right)$ und $g=f'$
 
 \begin{beweis}{}
 Da ${f_n}\mathop  \to \limits^{\text{glm.}} f$ und ${f'_n}\mathop  \to \limits^{\text{glm.}} g$, sind $f$ und $g$ stetig\\
@@ -917,7 +917,7 @@ $f'_n(x)\to g(x)$ konvergiert nicht gleichmässig ($g$ nicht stetig in $x=0$)
 Eine sehr wichtige Anwendung von Satz 5.26 (s.~\pageref{satz5.26}) ist auf die Eigenschaften von Funktionen, die Summe von Potenzreihen sind. Sei $\left( a_n\right)_{n\geq 0}\in\R$. Wir nehmen an
 \[\rho : = \frac{1}{{\lim \sup \sqrt[n]{{\abs{ {{a_n}} }}}}} > 0\]
 \subsubsection*{Satz 5.29}
-Sei $x\in\left( -\rho,\rho\right)=\Omega$ \[f\left( x \right) = \sum\limits_{n = 0}^\infty  {{a_n}{x^n}}\] die Summe der absolut konvergenten Potenzreihe. Dann ist $f\in C'\left( \Omega\right)$ und
+Sei $x\in\left( -\rho,\rho\right)=\Omega$ \[f\left( x \right) = \sum\limits_{n = 0}^\infty  {{a_n}{x^n}}\] die Summe der absolut konvergenten Potenzreihe. Dann ist $f\in C^1\left( \Omega\right)$ und
 \[f'\left( x \right) = \sum\limits_{n = 0}^\infty  {n{a_n}{x^{n - 1}}} \]
 mit dem selben Konvergenzradius
 
