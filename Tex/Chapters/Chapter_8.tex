@@ -387,7 +387,7 @@ Sei $\Omega\subset\R^n$, sowie $f,g:\Omega\to\R$ an der Stelle $x_0\in\Omega$ di
 Beweis ist der Selbe wie im eindimensionalen Fall. Für die Kettenregel gibt es mehrere Variationen
 
 \subsubsection*{Satz 8.12 (Kettenregel, 1. Version)}
-Sei $g:\Omega\to\R$ in $x_0\in\Omega\subset\R^n$ differenzierbar, sowie $f\R\to\R$ an der Stelle $g\left( x_0\right)\in\R$ differenzierbar. Dann gilt \[d\left( {f \circ g} \right)\left( {{x_0}} \right) = f'\left( {g\left( {{x_0}} \right)} \right) \cdot dg\left( {{x_0}} \right)\]
+Sei $g:\Omega\to\R$ in $x_0\in\Omega\subset\R^n$ differenzierbar, sowie $f:\R\to\R$ an der Stelle $g\left( x_0\right)\in\R$ differenzierbar. Dann gilt \[d\left( {f \circ g} \right)\left( {{x_0}} \right) = f'\left( {g\left( {{x_0}} \right)} \right) \cdot dg\left( {{x_0}} \right)\]
 
 \begin{center}
 \begin{tikzpicture}[scale=0.75]
@@ -470,11 +470,11 @@ Sei $\Omega \subset\R$ und $f=\left( f_1,\dots,f_n\right):\Omega\to\R^n$ eine Ab
 $f'\left( x_0\right)$ kann als Geschwindigkeitsvektor im Punkt $f\left( x_0\right)$ aufgefasst werden.
 
 \subsubsection*{Satz 8.16 (Kettenregel, 2. Version)}
-Sei $\Omega\subset\R^n$,$I\subset\R$. Sei $g:I\to\Omega$, $t\to\left( g_1(t), g_2(t),\dots, g_n(t)\right)$, an der Stelle $t_0\in I$ differenzierbar sowie $f:\Omega\to\R$ an der Stelle $g\left( t_0\right)$ differenzierbar. Dann gilt:
+Sei $\Omega\subset\R^n,I\subset\R$. Sei $g:I\to\Omega$, $t\to\left( g_1(t), g_2(t),\dots, g_n(t)\right)$, an der Stelle $t_0\in I$ differenzierbar sowie $f:\Omega\to\R$ an der Stelle $g\left( t_0\right)$ differenzierbar. Dann gilt:
 \[\frac{d}{{dt}}\left( {f \circ g} \right)\left( {{t_0}} \right) = df\left( {g\left( {{t_0}} \right)} \right) \cdot g'\left( {{t_0}} \right)\]
 \begin{align*}
-d\left( {f \circ g} \right)\left( {{t_0}} \right) = &df\left( {g\left( {{t_0}} \right)} \right) \cdot dg\left( {{t_0}} \right)\\
- = &\frac{{\partial f}}{{\partial {x^1}}}\left( {g\left( {{t_0}} \right)} \right) \cdot \frac{{d{g_1}}}{{dt}}\left( {{t_0}} \right) + \frac{{\partial f}}{{\partial {x^2}}}\left( {g\left( {{t_0}} \right)} \right) \cdot \frac{{d{g_2}}}{{dt}}\left( {{t_0}} \right)\\ & + \ldots  + \frac{{\partial f}}{{\partial {x^n}}}\left( {g\left( {{t_0}} \right)} \right) \cdot \frac{{d{g_n}}}{{dt}}\left( {{t_0}} \right)
+d\left( {f \circ g} \right)\left( {{t_0}} \right) =& df\left( {g\left( {{t_0}} \right)} \right) \cdot dg\left( {{t_0}} \right)\\
+ =& \frac{{\partial f}}{{\partial {x^1}}}\left( {g\left( {{t_0}} \right)} \right) \cdot \frac{{d{g_1}}}{{dt}}\left( {{t_0}} \right) + \frac{{\partial f}}{{\partial {x^2}}}\left( {g\left( {{t_0}} \right)} \right) \cdot \frac{{d{g_2}}}{{dt}}\left( {{t_0}} \right)\\ & + \ldots  + \frac{{\partial f}}{{\partial {x^n}}}\left( {g\left( {{t_0}} \right)} \right) \cdot \frac{{d{g_n}}}{{dt}}\left( {{t_0}} \right)
 \end{align*}
 
 
@@ -571,7 +571,7 @@ und
 \end{align*}
 
 \subsubsection*{Beispiel 8.18}
-Sei $f:\Omega\to\R$ differenzierbar an der Stelle $x_0\in\Omega$ und sei $e\in\R^n\backslash\{ 0\}$; mit $\abs{ e}=1$. Betrachte die Gerade $g(t)=x_0+te$, $t\in\R$ durch $x_0$ mit Richtungsvektor
+Sei $f:\Omega\to\R$ differenzierbar an der Stelle $x_0\in\Omega$ und sei $e\in\R^n\setminus\{ 0\}$; mit $\abs{ e}=1$. Betrachte die Gerade $g(t)=x_0+te$, $t\in\R$ durch $x_0$ mit Richtungsvektor
 
 \begin{figure}[H]
 \begin{minipage}[b]{0.45\linewidth}
@@ -601,7 +601,7 @@ Sei $f:\Omega\to\R$ differenzierbar an der Stelle $x_0\in\Omega$ und sei $e\in\R
 \[\frac{dg}{dt}\left( t_0\right)=\R\hspace{5mm}\forall t_0\in\R\]
 \begin{align*}
 g:\R&\to\R^2\\
-t&\to x_0+te
+t&\mapsto x_0+te
 \end{align*}
 
 \end{minipage}
@@ -699,7 +699,7 @@ Konvex
 \end{multicols}
 \end{definition}
 \subsubsection*{Satz 8.20}
-Sei $\Omega\subset\R^n$ konvex $f:\Omega\to\R$ differenzierbar, $x_0,x_1\in\Omega$ sowie $x_t:=\left( 1-t\right) x_0+tx_1$\todo{is it $tx_1$ or $tx$, ?? page 145 middle}. Dann gibt es $\vartheta\in\lbrack 0,1\rbrack$ mit \[f\left( {{x_1}} \right) - f\left( {{x_0}} \right) = df\left( {{x_{i\vartheta }}} \right)\left( {{x_1} - {x_0}} \right)\]
+Sei $\Omega\subset\R^n$ konvex $f:\Omega\to\R$ differenzierbar, $x_0,x_1\in\Omega$ sowie ${x_t:=\left( 1-t\right) x_0+tx_1}$ mit ${t \in [0,1]}$. Dann gibt es $\vartheta\in\lbrack 0,1\rbrack$ mit \[f\left( {{x_1}} \right) - f\left( {{x_0}} \right) = df\left( {{x_{i\vartheta }}} \right)\left( {{x_1} - {x_0}} \right)\]
 
 \subsubsection*{Beweis}
 Sei $g\left( t\right) = \left( 1-t\right) x_0+tx_1=x_t$. Dann ist $t\to \left( f\circ g\right)(t)$ auf $\left[ 0,1\right]$ stetig und in $\left( 0,1\right)$ differenzierbar. Also gibt es $\vartheta\in\left( 0,1\right)$ mit (nach MWS der DR einer Variable) \[f\left( {{x_i}} \right) - f\left( {{x_0}} \right) = \left( {f \circ g} \right)(1) - \left( {f \circ g} \right)(0) = \left( {f \circ g} \right)'\left( \vartheta  \right)\left( {1 - 0} \right)\] Nun ist \[\left( {f \circ g} \right)'\left( \vartheta  \right) = df\left( {g\left( \vartheta  \right) \cdot \frac{{dg}}{{dt}}\left( \vartheta  \right)} \right)\] \todo{Is the formula done or does it continue on a new line, page 146 top}
@@ -708,7 +708,7 @@ Die Kettenregel wird auch angewandelt um Integrale mit Parametern zu studieren. 
 
 \subsubsection*{Beispiel}
 Sei $h:\R^2\to\R$, $\left( s,t\right)\to h\left(s,t \right)$. Wir nehmen an, $h$ ist stetig, $\frac{\partial h}{\partial t}$ existiert und ist auf ganz $\R^2$ stetig. Sei
-\[u(t) = \int\limits_a^{b(t)} {h(s,t)ds} {\text{, }}b(t) \in\subset '\left( \R \right){\text{, }}a \in\R\]\todo{Is it $C'$ or $\subset '$?? page 146 middle; limenet: it is $C^1$}
+\[u(t) = \int\limits_a^{b(t)} {h(s,t)ds} {\text{, }}b(t) \in C'\left( \R \right){\text{, }}a \in\R\]\todo{Is it $C'$ or $\subset '$?? page 146 middle; limenet: it is $C^1$}
 
 \subsubsection*{Satz 8.21}
 Sei $h(s,t)$ eine stetige differenzierbare Funktion von zwei Variablen und $b(t)$ differenzierbare Funktion einer Variable. Dann ist die Funktion \[u(t): = \int\limits_a^{b(t)} {h(s,t)ds} \] wo definiert, differenzierbar mit der Ableitung \[u'(t): = h\left( {b(t),t} \right) \cdot b'(t) + \int\limits_a^{b(t)} {\frac{{\partial h}}{{\partial t}}\left( {s,t} \right)ds} \]
