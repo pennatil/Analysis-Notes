@@ -6,7 +6,7 @@ Funktionen in mehreren Variablen sind ein \emph{bisschen} komplizierter als Funk
 \subsubsection*{Beispiel}
 \begin{enumerate}
 \item $f(x)=x^2+5$ ist im Ursprung stetig, da $\lim\limits_{x\to 0}f(x)=f(0)$. Aber $f:\R^2\to\R$ \[f(x,y) = \left\{ {\begin{array}{*{20}{c}}
-{\frac{{xy}}{{{x^2} + {y^2}}}}&{(x,y)\not  = (0,0)}\\
+{\frac{xy}{{x^2} + {y^2}}}&{(x,y)\not  = (0,0)}\\
 0&{(x,y) = (0,0)}
 \end{array}} \right.\] ist im Ursprung nicht stetig. %page 114 top
 \todo{Where is number 2 of the beispiel??}
@@ -15,18 +15,12 @@ Funktionen in mehreren Variablen sind ein \emph{bisschen} komplizierter als Funk
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
-{x \to 0}\\
-{y = 0}
-\end{array}} \frac{{x \cdot y}}{{{x^2} + {y^2}}} = 0 = f(0,0)\]
+\[\lim_{\substack{x \to 0 \\ y = 0}}{\frac{x \cdot y}{x^2 + y^2}} = 0 = f(0,0)\]
 \end{minipage}
 \hspace{0.5cm}
 \begin{minipage}[b]{0.45\linewidth}
 \centering
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
-{y \to 0}\\
-{x = 0}
-\end{array}} \frac{{x \cdot y}}{{{x^2} + {y^2}}} = 0 = f(0,0)\]
+\[\lim_{\substack{y \to 0 \\ x = 0}}{\frac{x \cdot y}{x^2 + y^2} = 0 = f(0,0)}\]
 \end{minipage}
 \end{figure}
 
@@ -93,24 +87,20 @@ Eine trickreiche Variante Grenzwerte zu berechnen, ergibt sich durch Substitutio
 \subsubsection*{Beispiel}
 \[\mathop {\lim }\limits_{(x,y) \to (4,0)} \frac{{\sin xy}}{{xy}}\] Hier ist $g(x,y)=xy$, $\mathop {\lim }\limits_{(x,y) \to (4,0)} g(x,y) = 0$. Somit \[\mathop {\lim }\limits_{(x,y) \to (4,0)} \frac{{\sin xy}}{{xy}} = \mathop {\lim }\limits_{t \to 0} \frac{{\sin t}}{t} = 1\] Wir werden auch sehen, dass die Existenz der Ableitungen in einigen Richtungen ungenügend für die Differenzierbarkeit der Funktion ist. \\
 
-\noindent\textbf{\underline{Was bedeutet die Ableitung in einingen Richtungen?}}
+\noindent\textbf{\underline{Was bedeutet die Ableitung in einzelne Richtungen?}}
 \subsubsection*{Beispiel}
 Sei \[f:\R^2\to \R\]\[(x,y)\to \left(x^2+xy\right)\cos(xy)\]Man kann für jedes $y$, die Funktion \[\R\to\R\]\[x\to \left( x^2+xy\right)\left(\cos xy\right)\]als Funktion einer Variablen $x$ auffassen und die Ableitung davon berechnen. Das Resultat wird mit $\frac{\partial f}{\partial x}$ bezeichnet und ist die erste partielle Ableitung von $f$ nach $x$. In diesem Fall ist es durch \[\frac{{\partial f}}{{\partial x}}(x,y) = (2x + y)(\cos xy) - ({x^2} + xy)y\sin (xy)\] gegeben. \\
 
-\noindent Analog definiert man $\frac{\partial f}{\partial y}$\[\frac{{\partial f}}{{\partial y}}(x,y) = x(\cos xy) - ({x^2} + xy)x\sin (xy)\] Die allgemeine Definition nimmt folgende Gestalt an. Sei $\Omega \subset\R^n$. In zukunft  bezeichnen wir die $i-$te Koordinate eines Vektors $x\in\R^n$ mit $x^i$; also ist $x=\left( x^1,x^2,\dots,x^n\right)$.\\
+\noindent Analog definiert man $\frac{\partial f}{\partial y}$
+\[\frac{{\partial f}}{{\partial y}}(x,y) = x(\cos xy) - ({x^2} + xy)x\sin (xy)\]
+Die allgemeine Definition nimmt folgende Gestalt an. Sei $\Omega \subset\R^n$. In Zukunft  bezeichnen wir die $i-$te Koordinate eines Vektors $x\in\R^n$ mit $x^i$; also ist $x=\left( x^1,x^2,\dots,x^n\right)$.\\
 
 \noindent Sei $e_i:=\left( 0,\dots,0,1,0,\dots,0\right)$ der $i-$te Basisvektor von $\R^n$
 
 \begin{definition}{8.2}
-Die Funktion $f:\Omega\subset\R^n\to\R$ heisst an der Stelle $x_0\in\Omega$ in Richtung $e_i$ (oder nach $x^i$) partiell differenzierbar, falls der Limes \[\frac{{\partial f}}{{\partial {x^i}}}({x_0}) = {f_{{x^i}}}({x_0}): =  - \mathop {\lim }\limits_{\begin{array}{*{20}{c}}
-{h \to 0}\\
-{h\not  = 0}
-\end{array}} \frac{{f({x_0} + h{e_i}) - f({x_0})}}{h}\]
-\[ = \mathop {\lim }\limits_{\begin{array}{*{20}{c}}
-{h \to 0}\\
-{h\not  = 0}
-\end{array}} \frac{{f\left( {{x_0}^1,{x_0}^2, \ldots ,{x_0}^i + h,{x_0}^{i + 1}, \ldots ,{x_0}^n} \right) - f\left( {{x_0}^1, \ldots ,{x_0}^n} \right)}}{h}\]
-existiert
+Die Funktion $f:\Omega\subset\R^n\to\R$ heisst an der Stelle $x_0\in\Omega$ in Richtung $e_i$ (oder nach $x^i$) partiell differenzierbar, falls der Limes \[\frac{{\partial f}}{{\partial {x^i}}}({x_0}) = {f_{{x^i}}}({x_0}): =  \lim_{\substack{h \to 0 \\ h\not = 0}}{\frac{{f({x_0} + h{e_i}) - f({x_0})}}{h}} \]
+\[ = \lim_{\substack{h \to 0 \\ h\not = 0}}{\frac{{f\left( {{x_0}^1,{x_0}^2, \ldots ,{x_0}^i + h,{x_0}^{i + 1}, \ldots ,{x_0}^n} \right) - f\left( {{x_0}^1, \ldots ,{x_0}^n} \right)}}{h}}\]
+existiert.
 \end{definition}
 \subsubsection*{Bemerkung 8.3}
 
@@ -155,7 +145,13 @@ existiert
 \end{tikzpicture}
 \end{center}
 
-Sei $f:\R^2\to\R, \left(x_0^1,x_0^2\right)\in\R^2$. Wir betrachten die Scharen von $f$ \[f(\cdot ,x_0^2):\R\to \R\] und \[f(x_0^1,\cdot ):\R\to\R\] $\frac{\partial f}{\partial x^1}$, $\frac{\partial f}{\partial x^2}$ sind die zu dem Anstieg der Tangente entsprechenden Schnittkurven.
+Sei $f:\R^2\to\R, \left(x_0^1,x_0^2\right)\in\R^2$. Wir betrachten die Scharen von $f$
+\[f(\cdot ,x_0^2):\R\to \R \]
+und
+\[f(x_0^1,\cdot ):\R\to\R \]
+$\frac{\partial f}{\partial x^1}$, $\frac{\partial f}{\partial x^2}$ sind die zu dem Anstieg der Tangente entsprechenden Schnittkurven.
+
+Der Graph von $f: \R^{2}\to\R$ ist eine Fläche im Raum.
 
 \subsubsection*{Beispiel}
 \begin{enumerate}

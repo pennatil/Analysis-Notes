@@ -4,10 +4,7 @@
 Sei $f:\Omega\to\R$, $\Omega\subset\R$, und $x_0\in\Omega$
 \begin{enumerate}
 \item $f$ heisst differenzierbar an der Stelle $x_0$, falls
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
-{x \to {x_0}}\\
-{x\not  = {x_0}}
-\end{array}} \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}\]
+\[\lim_{\substack{x \to {x_0} \\ x\not  = {x_0}}}{\frac{f\left( x \right) - f\left( {{x_0}} \right)}{{x - {x_0}}}}\]
 existiert. Dieser Grenzwert wird dann mit $f'\left( x_0\right)$ oder $\frac{df}{dx}\left( x_0\right)$ bezeichnet. Die Zahl $f'\left( x_0\right)$ heisst die Ableitung oder das Differential von $f$ an der Stelle $x_0$.
 \item $f$ heisst in $\Omega$ differenzierbar, falls sie an jeder Stelle $x_0\in\Omega$ differenzierbar ist. In diesem Fall, nennt sich die Funktion $x\to f'(x)$ Ableitung von $f$.
 \end{enumerate}
@@ -40,16 +37,13 @@ Sei
 \[f\left( x \right)= f'\left( {{x_0}} \right)\left( {x - {x_0}} \right) + f\left( {{x_0}} \right) + {R_{{x_0}}}\left( x \right) = T\left( x \right) + {R_{{x_0}}}\left( x \right)\]
 \[ \Rightarrow \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}} = \frac{{f'\left( {{x_0}} \right)\left( {x - {x_0}} \right)}}{{x - {x_0}}} + \frac{{R\left( x \right)}}{{x - {x_0}}}\]
 Dann folgt
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
-{x \to {x_0}}\\
-{x\not  = {x_0}}
-\end{array}} \frac{{R\left( x \right)}}{{x - {x_0}}} = 0\]
+\[ \lim_{\substack{x \to {x_0} \\ x\not  = {x_0}}}{\frac{{R\left( x \right)}}{x - {x_0}}} = 0\]
 Die lineare Funktion $f\left( {{x_0}} \right) + f'\left( {{x_0}} \right)\left( {x - {x_0}} \right)$ stellt eine gute Approximation der Funktion $f(x)$ dar:\\
 
 \noindent Es gilt
-\[f\left( x \right) = f\left( {{x_0}} \right) + f'\left( {{x_0}} \right)\left( {x - {x_0}} \right) + {R_{{x_0}}}\left( x \right)\]
+\[ f \left( x \right) = f \left( {x_0} \right) + f' \left( {x_0} \right) \left( {x - {x_0}} \right) + {R_{x_0}}\left( x \right)\]
 mit
-\[\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( x \right)}}{{x - {x_0}}} = 0\]
+\[\lim_{x \to {x_0}} \frac{R\left( x \right)}{x - {x_0}} = 0\]
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
 \draw[->](-0.5,0) -- (6,0);
@@ -79,6 +73,7 @@ mit
 
 \end{tikzpicture}
 \end{center}
+
 \subsubsection*{Beispiel 5.4}
 \begin{enumerate}
 \item \begin{align*}
@@ -88,7 +83,7 @@ x&\to mx+b
 ist überall differenzierbar mit $f'\left( x\right)=m$, $\forall x\in\R$
 \begin{align*}
 f\left( x \right) - f\left( {{x_0}} \right)&= m\left( {x - {x_0}} \right)\\
-\mathop {\lim }\limits_{x \to {x_0}} \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}}&= m
+\lim_{x \to {x_0}} \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{\left( {x - {x_0}} \right)}}&= m
 \end{align*}
 \item $f\left( x\right)=\abs{x}$ ist für alle $x_0\not=0$ differenzierbar, aber nicht für $x_0=0$
 \[f\left( x \right) - f\left( 0 \right) = \left\{ {\begin{array}{*{20}{c}}
@@ -108,23 +103,17 @@ und besitzt also keinen Grenzwert für $x\to 0$, $x\not=0$
 \end{align*}
 Also
 \begin{align*}
-\abs{ {\frac{{\exp \left( h \right) - 1}}{h} - 1} }&\le \abs{ h }\left[ {\frac{1}{{2!}} + \frac{{\abs{ h }}}{{3!}} + \frac{{{{\abs{ h }}^2}}}{{4!}} +  \ldots } \right]\\
-&\le \abs{ h }\left[ {1 + \abs{ h } + \frac{{{{\abs{ h }}^2}}}{{2!}} +  \ldots } \right]\\
-&\le \abs{ h }\exp \left( h \right)
+\abs{\frac{\exp \left(h\right) - 1}{h} - 1} &\le \abs{h} \left[ \frac{1}{2!} + \frac{\abs{h}}{3!} + \frac{\abs{h}^2}{4!} + \ldots \right] \\
+&\le \abs{h}\left[ {1 + \abs{h} + \frac{\abs{h}^2}{2!} + \ldots} \right] \\
+&\le \abs{h}\exp \left(h\right)
 \end{align*}
 Woraus
-\[\mathop {\lim }\limits_{\begin{array}{*{20}{c}}
-{h \to 0}\\
-{h\not  = 0}
-\end{array}} \frac{{\exp \left( h \right) - 1}}{h} = 1\]
+\[\lim_{\substack{h \to 0 \\ h\not  = 0}}{\frac{\exp \left( h \right) - 1}{h}} = 1\]
 und somit
 \begin{align*}
-{\mathop{\rm exp'}\nolimits} \left( {{x_0}} \right)&= \mathop {\lim }\limits_{\begin{array}{*{20}{c}}
-{h \to 0}\\
-{h\not  = 0}
-\end{array}} \frac{{\exp \left( {{x_0} + h} \right) - \exp \left( {{x_0}} \right)}}{h}\\
-&= \mathop {\lim }\limits_{h \to 0} \exp \left( {{x_0}} \right)\left( {\frac{{\exp \left( h \right) - 1}}{h}} \right)\\
-&= \exp \left( {{x_0}} \right)
+\exp' \left( {x_0} \right) &= \lim_{\substack{h \to 0 \\ h \not  = 0}}{\frac{\exp \left( {{x_0} + h} \right) - \exp \left( {x_0} \right)}{h}} \\
+&= \lim_{h \to 0}{\exp \left( {x_0}\right)} \left( {\frac{\exp \left( h \right) - 1}{h}} \right) \\
+&= \exp \left( {x_0} \right)
 \end{align*}
 folgt
 \item $\sin(x)$ und $\cos(x)$ sind überall differenzierbar und
@@ -172,9 +161,10 @@ Sei $\Omega\subseteq\R$, $x_0\in\Omega$ und $f:\Omega\to\R$ in $x_0$ differenzie
 \begin{beweis}{}
 $f$ differenzierbar in $x_0$. Sei
 \begin{align*}
-T:\Omega \backslash \left\{ {{x_0}} \right\}&\to\R\\
- x &\to \frac{{f\left( x \right) - f\left( {{x_0}} \right)}}{{x - {x_0}}}
+T:\Omega \setminus \left\{ {x_0} \right\} & \to\R \\
+x & \mapsto \frac{f\left( x \right) - f\left( {{x_0}} \right)}{x - {x_0}}
 \end{align*}
+
 Da $f$ differenzierbar in $x_0$ ist, hat $T$ ein Grenzwert in $x_0$, und
 \[\mathop {\lim }\limits_{x \to {x_0}} T\left( x \right) = f'\left( x \right)\]
 Für $x\not=x_0$
