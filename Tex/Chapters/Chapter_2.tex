@@ -11,12 +11,11 @@ Rationale Zahlen & $\mathbb{Q}$&$=$& $\left\{ {\left. {\frac{p}{q}} \right|p,q \
 Viele Gleichungen haben keine Lösung in $\mathbb{Q}$.
 \subsubsection*{Satz 2.1}
 Sei $p\in\N$ eine Primzahl. Dann hat $x^2=p$ keine Lösung in $\mathbb{Q}$.
-\subsubsection*{Beweis}
-
+\begin{beweis}{}
 Zur Erinnerung: Zwei Natürlichen Zahlen $a$ und $b$ sind teilerfremd (oder relativ prim) wenn es keine natürliche Zahl ausser der Eins gibt, die beide Zahlen teilt. \[ ggT(a,b)=1 \;\; \text{ (grösster gemeinsamer Teiler = 1)}\]
-
 \subsubsection*{Indirekter Beweis}
 Wir nehmen an, dass es $x=\frac{a}{b}\in \mathbb{Q}$ gibt mit $x^2 =p$, wobei $a,b$ teilerfremd und $\geq 1$ sind. Dann gilt \[a^2=pb^2\] woraus folgt, dass $p$ $a$ teilt, also ist $a=pk$, $k\in\mathbb{N}$ und somit \[a^2=p^2k^2=pb^2\Rightarrow pk^2=b^2\] woraus folgt, dass $p$ $b$ teilt.
+\end{beweis}
 
 \section{Die Reellen Zahlen}
 Wir werden jetzt das System von Axiomen beschreiben, das die Menge der reellen Zahlen ``eindeutig'' charakterisiert. \\
@@ -87,7 +86,7 @@ Das bzgl. der Multiplikation neutrale Element 1 ist eindeutig, d.h. falls $x\in\
 \item[viii)] $\forall a\in\R$, $a\cdot 0=0$
 \item[ix)] Falls $ab=0$, dann folgt $a=0$ oder $b=0$
 \end{enumerate}
-\subsubsection*{Beweis 2.3}
+\begin{beweis}{2.3}
 \begin{enumerate}[i)]
 \item Sei $a+b=a+c$\\ A4 $\Rightarrow\exists y\in\R:a+y=0$\\$a+b=a+c\Rightarrow y+(a+b)=y+(a+c)$\\$\mathop  \Rightarrow \limits^{A2} (y+a)+b=(y+a)+c$\\$\Rightarrow 0+b=0+c \mathop  \Rightarrow \limits^{A3} b=c$\\
 Nehmen wir an, dass es $0'\in\R$ gibt, so dass $x+0'=x$, $\forall x\in\R$, d.h. es gibt ein zweites neutrales Element für $+$.\\
@@ -110,6 +109,7 @@ $a\cdot 0=a(0+0)=a\cdot 0+a\cdot 0\Rightarrow a\cdot 0=0$
 \item $ab=0\Rightarrow a=0$ oder $b=0$\\
 Wir nehmen an: $a\not=0$ mit multiplikativem Inversem $a^{-1}$, ( $a^{-1}$ existiert mittels M4). So folgt $b=1\cdot b=\left( a^{-1}\cdot a\right)b=a^{-1}(a\cdot b)=a^{-1}\cdot 0=0$
 \end{enumerate}
+\end{beweis}
 \item \textbf{Ordnungsaxiome} $\leq$\\
 Auf $\R$ gibt es eine Relation $\leq$, genante Ordnung, die folgenden Eigenschaften genügt
 \begin{enumerate}
@@ -160,11 +160,13 @@ Wir definieren jetzt für $x,y\in\R$ \[\max \{ x,y\}  = \left\{ {\begin{array}{*
 \item $\abs{ {x + y} } \le \abs{ x } + \abs{ y }$ (Dreiecksungleichung)
 \item $\abs{ {xy} } = \abs{ x }\abs{ y }$
 \end{enumerate}
-\subsubsection*{Beweis 2.7}
+\begin{beweis}{2.7}
 \begin{enumerate}[i)]
 \item $x \le \abs{ x }, - x \le \abs{ x }$\\$y \le \abs{ y }, - y \le \abs{ y }$\\und $x+y\leq  \abs{ x } +  \abs{ y }, - (x + y) \le \abs{ x } + \abs{ y }$ \\ woraus $\abs{ {x + y} } \le \abs{ x } + \abs{ y }$ folgt
 \item ASK FOR BEWEIS\todo{ASK FOR BEWEIS}
 \end{enumerate}
+\end{beweis}
+
 
 \subsubsection*{Satz (Youngsche Ungleichung)}
 Für alle $a,b\in\R$, $\delta >0$ gilt $2\abs{ {ab} } \le \delta {a^2} + \frac{{{b^2}}}{\delta }$
@@ -200,14 +202,14 @@ Folgender Satz ist von zentraler Bedeutung und eine Folgerung des Ordnungsvollst
 \end{enumerate}
 \subsubsection*{Beweis}
 \begin{enumerate}[i)]
-\item Sei $\emptyset\not=A\subset B$ nach oben beschränkt. Sei $B:=\{b\in\R\mid b$ ist eine obere Schranke für $A\}$. Es folgt $B\not=\emptyset$ und $a\leq b$, $\forall a\in A$ $b\in B$\\
+\item Sei $\varnothing\not=A\subset B$ nach oben beschränkt. Sei $B:=\{b\in\R\mid b$ ist eine obere Schranke für $A\}$. Es folgt $B\not=\varnothing$ und $a\leq b$, $\forall a\in A$ $b\in B$\\
 
 Mit dem Ordnungsvollständigkeitsaxiom folgt die Existenz einer Zahl $c\in\R$ mit $a\leq c\leq b$ $\forall a\in A$, $b\in B$.\\
 
 Es ist klar, dass $c$ eine obere Schranke für $A$ ist. Also $c\in B$. Da $c\leq b$ $\forall b\in B$, ist $c$ die kleinste obere Schranke für $A$. Hiermit ist  $c$ eindeutig bestimmt.\\
 
 (Seien $c$ und $c'$ zwei Suprema von $A$, $c$ ist die kleinste obere Schranke und $c'$ ist eine obere Schranke $\Rightarrow c\leq c'$. Das gleiche Argument mit $c$,$c'$ vertauscht liefert $c'\leq c$)
-\item Sei $A$ eine nach unten beschränkte, nicht leere Menge. Sei $-A:=\{ -x\mid x\in A\}$ die Menge der additiven Inversen von $A$. Dann $-A\not=\emptyset$ und nach oben beschränkt. i) $\Rightarrow \exists s=\sup (-A)\Rightarrow -s$ ist das Infimum von $A$
+\item Sei $A$ eine nach unten beschränkte, nicht leere Menge. Sei $-A:=\{ -x\mid x\in A\}$ die Menge der additiven Inversen von $A$. Dann $-A\not=\varnothing$ und nach oben beschränkt. i) $\Rightarrow \exists s=\sup (-A)\Rightarrow -s$ ist das Infimum von $A$
 \end{enumerate}
 
 \subsubsection*{Korollar 2.11}
@@ -215,7 +217,7 @@ Es ist klar, dass $c$ eine obere Schranke für $A$ ist. Also $c\in B$. Da $c\leq
 \item Falls $E\subset F$ und $F$ nach oben beschränkt ist, gilt $\sup E\leq \sup F$
 \item Falls $E\subset F$ und $F$ nach unten beschränkt ist, gilt $\inf F\leq \inf E$
 \item Falls $\forall x\in E$, $\forall y\in F$ gilt $x\leq y$, dann folgt $\sup E\leq\inf F$
-\item Seien $E,F\not=\emptyset$, \hspace{5pt} $E,F\subset\R$,\hspace{5pt} $h\in\R$,\hspace{5pt} $h>0$
+\item Seien $E,F\not=\varnothing$, \hspace{5pt} $E,F\subset\R$,\hspace{5pt} $h\in\R$,\hspace{5pt} $h>0$
 \begin{enumerate}[(i)]
 \item Falls $E$ ein Supremum besitzt $\Rightarrow \exists x\in E$ mit $x>\sup E - h$
 \item Falls $E$ ein Infimum besitzt $\Rightarrow \exists y\in : y<\inf E+h$. \\
@@ -291,7 +293,7 @@ $\sup A=2.718\dots =: e $ (die Eulersche Zahl per \underline{\smash{Vereinbarung
 
 \vspace{-10pt}
 
-Für nach oben unbeschränkte Mengen $A\not=\emptyset$ setzen wir $\sup A=\infty$. Analog für nach unten unbeschränkte Menge $\emptyset\not= A$ setzen wir $\inf A=-\infty$.
+Für nach oben unbeschränkte Mengen $A\not=\varnothing$ setzen wir $\sup A=\infty$. Analog für nach unten unbeschränkte Menge $\varnothing\not= A$ setzen wir $\inf A=-\infty$.
 \\
 Der folgende Satz zeigt, wie die Ordnungsvollständigkeit von $\R$ die Lösbarkeit gewisser Gleichungen in $\R$ garantiert.
 
@@ -300,7 +302,7 @@ Für jedes $x>0$ gibt es genau ein $y>0$ mit $y^2=x$. Diese Lösung wird mit $\s
 
 (Im Allgemeinen: Für jedes $x>0$ und $n\geq 1$, $n\in\R$ gibt es genau ein $y>0$ mit $y^n=0$. Diese Lösung wird mit $\sqrt[n]{x}$ bezeichnet)
 \subsubsection*{Beweis}
-Sei $x>1$, und $A:=\{ z\in\R\mid z>0$ mit $z^2\leq x\}$. Dann ist $A$ nach oben beschränkt und $A\not=\emptyset$ (da mindestens $1\in A$). \\
+Sei $x>1$, und $A:=\{ z\in\R\mid z>0$ mit $z^2\leq x\}$. Dann ist $A$ nach oben beschränkt und $A\not=\varnothing$ (da mindestens $1\in A$). \\
 $\Rightarrow A$ besitzt ein Supremum. \\
 Sei $y:=\sup A$. Wir zeigen, dass $y^2=x$
 \begin{itemize}
