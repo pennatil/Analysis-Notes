@@ -1502,8 +1502,8 @@ folgt.
 {4x{y^2}}\\
 {2y}
 \end{array}} \right)\]
-Es gilt $\frac{\partial v'}{\partial y}=8xy$, $\frac{\partial v^2}{dx}=2$. Also ist $v$ nicht konservativ
-\item Sei $\Omega = \left\{ \left( x,y\right) \in\R^2:\left( x,y\right) \not= (0,0) \right\} = \R^2\backslash\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \to\R^2$ mindestens $C^1$. Ausserdem \[\frac{{\partial v'}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C:
+Es gilt $\frac{\partial v^1}{\partial y}=8xy$, $\frac{\partial v^2}{dx}=2$. Also ist $v$ nicht konservativ
+\item Sei $\Omega = \left\{ \left( x,y\right) \in\R^2:\left( x,y\right) \not= (0,0) \right\} = \R^2\backslash\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \to\R^2$ mindestens $C^1$. Ausserdem \[\frac{{\partial v^1}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C:
 
 \begin{multicols}{2}
 \begin{center}
@@ -1622,10 +1622,10 @@ Die Matrix der zweiten partiellen Ableitungen heisst Hesse - Matrix von $f$ und 
 \begin{align*}
 \Hess(f)= & \nabla^2 f:=\left( \frac{\partial^2 f}{\partial x^i\cdot\partial x^j}\right)_{i,j=1\dots n}\\
  = & \left( {\begin{array}{*{20}{c}}
-{\frac{{{\partial ^2}f}}{{\partial x'\partial x'}}}&{\frac{{{\partial ^2}f}}{{\partial x'\partial {x^2}}}}& \ldots &{\frac{{{\partial ^2}f}}{{\partial x'\partial {x^n}}}}\\
-{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial x'}}}&{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial {x^2}}}}& \ldots &{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial {x^n}}}}\\
+{\frac{{{\partial ^2}f}}{{\partial x^1\partial x^1}}}&{\frac{{{\partial ^2}f}}{{\partial x^1\partial {x^2}}}}& \ldots &{\frac{{{\partial ^2}f}}{{\partial x^1\partial {x^n}}}}\\
+{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial x^1}}}&{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial {x^2}}}}& \ldots &{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial {x^n}}}}\\
  \vdots & \vdots & \ddots & \vdots \\
-{\frac{{{\partial ^2}f}}{{\partial {x^n}\partial x'}}}& \ldots & \ldots &{\frac{{{\partial ^2}f}}{{\partial {x^n}\partial {x^n}}}}
+{\frac{{{\partial ^2}f}}{{\partial {x^n}\partial x^1}}}& \ldots & \ldots &{\frac{{{\partial ^2}f}}{{\partial {x^n}\partial {x^n}}}}
 \end{array}} \right)
 \end{align*}
 \end{definition}
