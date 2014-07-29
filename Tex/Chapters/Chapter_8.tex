@@ -1502,8 +1502,8 @@ folgt.
 {4x{y^2}}\\
 {2y}
 \end{array}} \right)\]
-Es gilt $\frac{\partial v'}{\partial y}=8xy$, $\frac{\partial v^2}{dx}=2$. Also ist $v$ nicht konservativ
-\item Sei $\Omega = \left\{ \left( x,y\right) \in\R^2:\left( x,y\right) \not= (0,0) \right\} = \R^2\backslash\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \to\R^2$ mindestens $C^1$. Ausserdem \[\frac{{\partial v'}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C:
+Es gilt $\frac{\partial v^1}{\partial y}=8xy$, $\frac{\partial v^2}{dx}=2$. Also ist $v$ nicht konservativ
+\item Sei $\Omega = \left\{ \left( x,y\right) \in\R^2:\left( x,y\right) \not= (0,0) \right\} = \R^2\backslash\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \to\R^2$ mindestens $C^1$. Ausserdem \[\frac{{\partial v^1}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C:
 
 \begin{multicols}{2}
 \begin{center}
@@ -1622,10 +1622,10 @@ Die Matrix der zweiten partiellen Ableitungen heisst Hesse - Matrix von $f$ und 
 \begin{align*}
 \Hess(f)= & \nabla^2 f:=\left( \frac{\partial^2 f}{\partial x^i\cdot\partial x^j}\right)_{i,j=1\dots n}\\
  = & \left( {\begin{array}{*{20}{c}}
-{\frac{{{\partial ^2}f}}{{\partial x'\partial x'}}}&{\frac{{{\partial ^2}f}}{{\partial x'\partial {x^2}}}}& \ldots &{\frac{{{\partial ^2}f}}{{\partial x'\partial {x^n}}}}\\
-{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial x'}}}&{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial {x^2}}}}& \ldots &{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial {x^n}}}}\\
+{\frac{{{\partial ^2}f}}{{\partial x^1\partial x^1}}}&{\frac{{{\partial ^2}f}}{{\partial x^1\partial {x^2}}}}& \ldots &{\frac{{{\partial ^2}f}}{{\partial x^1\partial {x^n}}}}\\
+{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial x^1}}}&{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial {x^2}}}}& \ldots &{\frac{{{\partial ^2}f}}{{\partial {x^2}\partial {x^n}}}}\\
  \vdots & \vdots & \ddots & \vdots \\
-{\frac{{{\partial ^2}f}}{{\partial {x^n}\partial x'}}}& \ldots & \ldots &{\frac{{{\partial ^2}f}}{{\partial {x^n}\partial {x^n}}}}
+{\frac{{{\partial ^2}f}}{{\partial {x^n}\partial x^1}}}& \ldots & \ldots &{\frac{{{\partial ^2}f}}{{\partial {x^n}\partial {x^n}}}}
 \end{array}} \right)
 \end{align*}
 \end{definition}
@@ -1783,13 +1783,14 @@ Auch alle Punkte $\left( -2\pi k,2\pi l\right)$ sind lokale Maxima. Analog, bis 
 \end{enumerate}
 
 \section{Vektorwertige Funktionen}
-Sei $\Omega\in\R^n$, $f=\left( f^i\right)_{1 < i < l}\Omega\to\R^l$
+Sei $\Omega\subset\R^n$, $f=\left( f^i\right)_{1 < i < l}\Omega\to\R^l$
 \begin{definition}{8.57}
 \begin{enumerate}
-\item Die Funktion \todo[inline]{can,t understand the function, page 203 top} heisst an der Stelle $x_0\in\Omega$ differenzierbar, falls jede Komponente $f^i$, $1 < i < l$ an der stelle $x_0$ differenzierbar ist.\\
+\item Die Funktion $f:\Omega\subset\R^n\to\R^l$ heisst an der Stelle $x_0\in\Omega$ differenzierbar, falls jede Komponente $f^i$, $1 < i < l$ an der stelle $x_0$ differenzierbar ist.\\
 
 Das Differential $df\left( x_0\right)$ hat die Gestalt \[df\left( {{x_0}} \right) = \left( {\begin{array}{*{20}{c}}
-{df'\left( {{x_0}} \right)}\\
+{d{f^1}\left( {{x_0}} \right)}\\
+{\vdots}\\
 {d{f^n}\left( {{x_0}} \right)}
 \end{array}} \right)\]
 \item $f$ heisst auf $\Omega$ differenzierbar (bzw. von der Klasse $C^m$, $m\geq 1$) falls jedes $f^i$ differenzierbar ist (bzw. $f^i\in C^m\left( \Omega\right)$) $1\leq i \leq l$
@@ -2116,7 +2117,7 @@ f:\R^2 & \to\R^2\\
 \end{array}} \right)
 \end{align*}
 \begin{align*}
-g:\R^3 & \to\R^3\\
+g:\R^3 & \to\R^2\\
 \left( x,y,z\right) & \to\left( {\begin{array}{*{20}{c}}
 {{x^2} +{y^2}+{z^2}}\\
 {xyz}
