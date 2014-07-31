@@ -101,7 +101,7 @@ mkdir -p "../../PDF/Final Documents"
 # cp mainMult4.pdf "../../PDF/Final Documents/Kapitel 4 - Stetigkeit - Analysis I.pdf"
 # cp mainMult5.pdf "../../PDF/Final Documents/Kapitel 5 - Differentialrechnung auf R - Analysis I.pdf"
 cp mainMult6.pdf "../../PDF/Final Documents/Kapitel 6 - Integration - Analysis II.pdf"
-# cp mainMult7.pdf "../../PDF/Final Documents/Kapitel 7 - Gewoehnliche Differenzialgleichungen - Analysis II.pdf"
+# cp mainMult7.pdf "../../PDF/Final Documents/Kapitel 7 - Gewoehnliche Differentialgleichungen - Analysis II.pdf"
 # cp mainMult8.pdf "../../PDF/Final Documents/Kapitel 8 - Differentialrechnung in R^n - Analysis II.pdf"
 # cp mainMult9.pdf "../../PDF/Final Documents/Kapitel 9 - Integration in R^n - Analysis II.pdf"
 
@@ -113,7 +113,7 @@ mv mainMult3.pdf "../../PDF/Work in Progress/Kapitel 3 - Folgen und Reihen (Der 
 mv mainMult4.pdf "../../PDF/Work in Progress/Kapitel 4 - Stetigkeit - Analysis I.pdf"
 mv mainMult5.pdf "../../PDF/Work in Progress/Kapitel 5 - Differentialrechnung auf R - Analysis I.pdf"
 mv mainMult6.pdf "../../PDF/Work in Progress/Kapitel 6 - Integration - Analysis II.pdf"
-mv mainMult7.pdf "../../PDF/Work in Progress/Kapitel 7 - Gewoehnliche Differenzialgleichungen - Analysis II.pdf"
+mv mainMult7.pdf "../../PDF/Work in Progress/Kapitel 7 - Gewoehnliche Differentialgleichungen - Analysis II.pdf"
 mv mainMult8.pdf "../../PDF/Work in Progress/Kapitel 8 - Differentialrechnung in R^n - Analysis II.pdf"
 mv mainMult9.pdf "../../PDF/Work in Progress/Kapitel 9 - Integration in R^n - Analysis II.pdf"
 
