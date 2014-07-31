@@ -37,7 +37,7 @@ Mittels den Resultaten aus dem dritten Kapitel haben wir wichtige Beispiele von 
 \begin{align*}f:\R\times\R&\to\R \\ (a,b)&\mapsto ab \end{align*}
 \item Diese Funktion ist auf $\R\times\R^{x}$ stetig:
 \begin{align*}f:\R\times\R^{x}&\to\R \\ (a,b)&\mapsto a/b \end{align*}
-\item Aus wiederholter Anwendung von 1. und 2. ergibt sich die \emph{polynomielle Funktion\todo{heisst die wirklich so?}}:
+\item Aus wiederholter Anwendung von 1. und 2. ergibt sich die Polynomfunktion:
 \[\text{Sei } n \geq 0,\: a_{0}, \dots, a_{n}\in\R: p(x)\defeq a_{0} + a_{1}x + \dots + a_{n}x^{n} \]
 Die polynomielle Funktion ist stetig auf ganz $\R$.
 \item Die folgenden beiden Abbildungen sind stetig auf ihrem Definitionsbereich.
@@ -62,7 +62,7 @@ Die polynomielle Funktion ist stetig auf ganz $\R$.
 \begin{align*} \mathbb{C}\times\mathbb{C}^{x} &\to \mathbb{C} \\ (z,w) &\mapsto z/w \end{align*}
 \end{minipage}
 \end{figure}
-\item Die folgenden Funktionen sind auf [...] \todo{what goes there? p130 (week8sem1)} stetig:
+\item Die folgenden Funktionen sind auf ihrem Definitionsbereich stetig:
 \begin{figure}[htpb]
 \begin{minipage}[t][1cm]{0.5\textwidth}
 \begin{align*} \R^{d}&\to\R \\ x&\mapsto \norm{x} \end{align*}
@@ -101,7 +101,7 @@ $f: \begin{cases} x &x < 1 \\x &x>1 \end{cases}$
 \todo{no ozlem number...}
 \end{itemize}
 \begin{definition}{(Struwe 4.1.3 (ii))}
-$\Omega \subset \R^{d}, f:\Omega\to\R^{n}, x_{0}\in\R^{d}\backslash\mathbb{Q}$ so dass $\exists (x_{k})\in\Omega$ mit $\lim{x_{k}=x_{0}}$. \\
+$\Omega \subset \R^{d}, f:\Omega\to\R^{n}, x_{0}\in\R^{d}\setminus\Omega$ so dass $\exists (x_{k})\in\Omega$ mit $\lim{x_{k}=x_{0}}$. \\
 
 Dann ist $f$ an der Stelle $x_{0}$ \emph{stetig ergänzbar}, falls $a=\lim{f(x_{k})}$ existiert. In diesem Fall setzen wir \[ f(x_{0}) = a\]
 Die durch $f(x_{0})=a$ ergänzte Funktion $f$ ist offenbar stetig an der Stelle $x_{0}$.
@@ -168,7 +168,7 @@ Insbesondere $\lim{f(y_{n})} = l_{-}$. \\
 \noindent Nun zur Stetigkeit: Es gilt immer \[ l_{-}(x_{0})\leq f(x_{0}) \leq l_{+}(x_{0}) \]
 Falls $l_{-}(x_{0}) < l_{+}(x_{0})$, sei $(t_{n})_{n \geq 1}$ wie folgt definiert:
 \[ t_{n}=\begin{cases}x_{0}-\frac{1}{n} &n\text{ gerade} \\ x_{0}+\frac{1}{n} &n\text{ ungerade} \end{cases} \]
-Dann gilt $\lim{t_{n}} = x_{0}$. Aber $f(t_{2n+1})-f(t_{n}) \geq l_{+}(x_{0})-l_{+}(x_{0}) >0$, woraus folgt dest \todo{dest? p 135 bottom} $(f(t_{n}))_{n\geq1}$ nicht konvergent. \\
+Dann gilt $\lim{t_{n}} = x_{0}$. Aber $f(t_{2n+1})-f(t_{n}) \geq l_{+}(x_{0})-l_{-}(x_{0}) >0$, woraus folgt dest \todo{dest? p 135 bottom} $(f(t_{n}))_{n\geq1}$ nicht konvergent. \\
 Falls $l_{-}(x_{0})=l_{+}(x_{0})$ folgt die Stetigkeit sofort.
 
 \subsubsection*{Satz 4.3}
@@ -198,7 +198,7 @@ Sei $(t_{n})_{n\geq1}$ in $\Omega$ mit $\lim{t_{n}} = x_{0}$. Da $f$ stetig ist,
 \subsubsection*{Korollar 4.8}
 Falls $f:\Omega \to \R^{d}, f(\Omega) \subset \Gamma$ und $g:\Gamma \to \R^{m}$, auf $\Omega$ bzw auf $\Gamma$ stetig sind, so folgt, dass $g\circ f:\Omega\to\R^{m}$ auf $\Omega$ stetig ist.
 \section{Stetige Funktionen}
-In diesem Abschnitt behandeln wir die erste der fundamentalen Eigenschaften von stetigen Funktionen, nämlich, dass eine auf einem endlichen Intervall $[a,b]$ (Endpunkte eingeschlossen) stetige Funktion immer ein Maximum und Minimum besitzt. Dies verallgemeinern wir dann auf Abbildungen von $\Omega\subseteq\R^{d}$ nach $\R{n}$, wobei $\Omega$ eine spezielle Eigenschaft haben muss (Kompaktheit).
+In diesem Abschnitt behandeln wir die erste der fundamentalen Eigenschaften von stetigen Funktionen, nämlich, dass eine auf einem endlichen Intervall $[a,b]$ (Endpunkte eingeschlossen) stetige Funktion immer ein Maximum und Minimum besitzt. Dies verallgemeinern wir dann auf Abbildungen von $\Omega\subseteq\R^{d}$ nach $\R^{n}$, wobei $\Omega$ eine spezielle Eigenschaft haben muss (Kompaktheit).
 
 \subsubsection*{Satz 4.9}
 Seien $-\infty < a \leq b < \infty$ und $f:[a,b] \to \R$ stetig. \\
@@ -208,7 +208,7 @@ Seien $-\infty < a \leq b < \infty$ und $f:[a,b] \to \R$ stetig. \\
 \begin{enumerate}
 \item $f([a,b])$ ist nach oben beschränkt (Indirekter Beweis) \\
 
-Falls nicht, so gibt es $\forall n \in \N$ ein $t_{t}\in [a,b]$ mit $f(t_{n}) \geq n$. \\
+Falls nicht, so gibt es $\forall n \in \N$ ein $t_{n}\in [a,b]$ mit $f(t_{n}) \geq n$. \\
 $(t_{n})_{n\geq 1}$ ist beschränkt, nach Bolzano-Weierstrass. Sei $(t_{l(n)})$ eine konvergente Teilfolge mit $\lim{t_{l(n)}}=x$. \\
 Dann ist $x\in [a,b]$, da $a\leq t_{n}\leq b$ \\
 (Satz: $(a_{n}), (b_{n})$ konvergente Folgen mit $\lim{a_{n}} = a, \lim{b_{n}} = b$. Falls $a_{n} \leq b_{n}$, folgt $a \leq b$.) \\
@@ -303,11 +303,11 @@ Eine \emph{Norm} auf $\R^{d}$ ist eine Abbildung \[ \norm{.}: \R^{d} \to \R \] m
 
 \subsubsection*{Beispiel 4.14}
 \begin{enumerate}
-\item \[ \norm{x}_{2} = \Big(\sum_{i = 1}^{d} \abs{x_{i}}\Big)^{\frac{1}{2}}\quad\quad x=(x_{1}, \dots, x_{d})  \] kommt vom Skalarprodukt.
+\item \[ \norm{x}_{2} = \Big(\sum_{i = 1}^{d} \abs{x_{i}^{2}}\Big)^{\frac{1}{2}}\quad\quad x=(x_{1}, \dots, x_{d})  \] kommt vom Skalarprodukt.
 \item Für $1\leq p<\infty$ sei \[ \norm{x}_{p} \defeq \Big( \sum_{i=1}^{d}\abs{x_{i}^{p}}\Big)^{\frac{1}{p}}\] und $\norm{x}_{\infty} = \max{\{\abs{x_{i}} : 1\leq i \leq d \}}$, dann sind $\norm{.}_{p}, 1\leq p \leq \infty$ Normen auf $\R^{d}$.
 \end{enumerate}
 Zwischen diesen verschiedenen Normen haben wir die folgenden Verhältnisse:
- \[ \norm{x}_{\infty} = \max{\abs{x_{i}}} \leq \norm{x}_{p} = \sqrt[d]{\sum_{i=1}^{d}{\abs{x_{i}}^{p}}} \leq d\norm{x}_{\infty} \quad\quad (\ast)\]
+ \[ \norm{x}_{\infty} = \max{\abs{x_{i}}} \leq \norm{x}_{p} = \sqrt[p]{\sum_{i=1}^{d}{\abs{x_{i}}^{p}}} \leq d\norm{x}_{\infty} \quad\quad (\ast)\]
 Bild von $\norm{x}_{1} = \sum_{i=1}^{d}\abs{x_{i}} \leq 1$
 \begin{center}
 \begin{tikzpicture}[scale=0.6]
@@ -373,7 +373,7 @@ Sei $f:\Omega\to\R^{n}$, $\Omega\subset\R^{d}$ eine Abbildung, $x_{0} \in\Omega$
 \begin{enumerate}
 \item $f$ ist stetig an der Stelle $x_{0}$. \\ D.h. für jede gegen $x_{0}$ konvergierende Folge $(x_{n})\subset\Omega$ konvergiert die Folge $f(x_{n})$ gegen $f(x_{0})$.
 \item Für jedes $\varepsilon>0$ gibt es $\delta>0$, so dass für alle $x\in\Omega$ mit $\abs{x-x_{0}}<\delta$ gilt:\[ \abs{\delta(x)-\delta(x_{0})}<\varepsilon \]
-\[ \forall\varepsilon>0\;\exists\delta>0: \forall x\in\Omega,\norm{x-x_{0}}<\delta \implies \norm{\delta(x)-\delta(x_{0})}<\varepsilon\]
+\[ \forall\varepsilon>0\;\exists\delta>0: \forall x\in\Omega,\norm{x-x_{0}}<\delta \implies \norm{f(x)-f(x_{0})}<\varepsilon\]
 \end{enumerate}
 
 \begin{beweis}{4.18}
@@ -405,7 +405,7 @@ Dies zeigt $\lim f\left( {{x_n}} \right) = f\left( {{x_0}} \right)$
 \item $f:\R\to\R$, $f(x)=3x+8$. Dann $f$ ist stetig auf $\R$. Sei $\varepsilon>0$, sei $x_0\in\R$
 \[\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } = \abs{ {\left( {3x + 8} \right) - \left( {3{x_0} + 8} \right)} } = 3\abs{ {\left( {x - {x_0}} \right)} }\hspace{5mm}\forall x \in \R\]
 Sei $\varepsilon>0$. Wenn wir $\delta=\frac{\varepsilon}{3}$ wählen, dann
-\todo{week9p156-1}\[ \text{CAN'T READ}, \abs{ {x - {x_0}} } < {\delta _\varepsilon } = \frac{\varepsilon }{3} \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
+\[\forall x\in\R, \abs{ {x - {x_0}} } < {\delta _\varepsilon } = \frac{\varepsilon }{3} \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
 In diesem Beispiel hängt $\delta$ nur von $\varepsilon$ ab. Das nächste Beispiel zeigt, dass $\delta$ nicht nur von $\varepsilon$, sondern auch von $x_0$ abhängen kann.
 \item \begin{align*}
 f:\left( 0,\infty\right)\to&\left( 0,\infty\right)\\
@@ -650,19 +650,8 @@ Also für $x=x_0+h\to x_0$, $\exp\left( x \right)-\left( x_0 \right)\to 0$ und d
 \section{Gleichmässige Stetigkeit}
 Sei $f:\Omega\to\R$ eine stetige Funktion auf $\Omega$, d.h.
 \[\forall {x_0} \in \Omega ,\forall \varepsilon  > 0,\exists \delta  > 0,\forall x \in \R :\abs{ {x - {x_0}} } < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
-\[
-\sbox{\tempbox}{%
-$\displaystyle
-   \Omega\Leftrightarrow\exists x_0\in\Omega,\exists\varepsilon>0,\forall>0,\exists\in\Omega:\abs{x-x_0}<\delta\text{ und }\abs{f\left( x\right)-f\left( x_0\right)}\geq\varepsilon
-$
-}
-\begin{pmatrix}
-\,\parbox[b]{\wd\tempbox}{$f$ ist nicht stetig auf }\hfill\, % left alignment
-\\[\abovedisplayskip]
-\,\usebox{\tempbox}\,
-\vspace{2mm}
-\end{pmatrix}
-\]
+Die logische Negation, $f$ ist \emph{nicht} stetig auf $\Omega$:
+\[ \exists x_0\in\Omega,\exists\varepsilon>0,\forall\delta>0,\exists x\in\Omega:\abs{x-x_0}<\delta\text{ und }\abs{f\left( x\right)-f\left( x_0\right)}\geq\varepsilon \]
 
 \begin{definition}{4.24}
 \underline{Gleichmässig stetig:} \vspace{2mm}\\
@@ -671,46 +660,46 @@ $f:\Omega\to\R^n$ heisst gleichmässig stetig, falls für jedes $\varepsilon>0$ 
 \underline{Stetig:} \vspace{2mm}\\
 $\forall x_0\in\omega$, $\forall \varepsilon>0$, $\exists\delta_{x_0,\varepsilon}>0$, $\forall x\in\Omega$:
 \[\abs{ {x - {x_0}} } < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
-\underline{Gleich stetig:} \vspace{2mm}\\
+\underline{Gleichmässig stetig:} \vspace{2mm}\\
 $\forall \varepsilon>0$, $\exists\delta_{\varepsilon}>0$, $\forall x,x_0\in\Omega$:
 \[\abs{ {x - {x_0}} } < \delta  \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
 Stetig: $\delta$ ist abhängig von $\varepsilon$ und $x_0$.\\
-Gleichmässig stetig:$\delta$ ist abhängig von $\varepsilon$, aber unabhängig von $x_0$.
+Gleichmässig stetig: $\delta$ ist abhängig von $\varepsilon$, aber \emph{unabhängig} von $x_0$.
 \end{definition}
 
 \subsubsection*{Beispiel 4.25}
 \begin{enumerate}[I)]
 \item $\exp:\R\to\R$ ist nicht gleichmässig stetig \[\abs{\exp(x)-\exp\left( x_0\right)}=\abs{\exp\left( x-x_0\right)-1}\exp\left( x_0\right)\]
-Falls $x-x_0=\pm\delta$, $\delta\not=0$ und $x_0\to\infty$ dann
+Falls $x-x_0=\pm\delta$, $\delta\not=0$ und $x_0\to\infty$ dann gilt
 \[\abs{\exp(x)-\exp\left( x_0\right)}\to\infty\]
 \item \begin{align*}
 f(x):\R&\to\R\\
-x&\to 2x+5
+x&\mapsto 2x+5
 \end{align*}
-Dann ist $f$ gleichmässig stetig
+Dann ist $f$ gleichmässig stetig.
 \begin{beweis}{}
 Sei $\varepsilon>0$, $x_0,x\in\R$. Dann \[\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } = \abs{ {2x + 5 - 2{x_0} + 5} } = 2\abs{ {x - {x_0}} }\]
 $\Rightarrow$ Wenn wir $\delta=\frac{\varepsilon}{2}$ wählen, dann \[\abs{ {x - {x_0}} } < \frac{\varepsilon }{2} \Rightarrow \abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } < \varepsilon \]
 \end{beweis}
 \item \begin{align*}
 f:\Omega&\to\Omega\hspace{5mm}\Omega=\left( 0,\infty\right)\\
-x&\to x^2
+x&\mapsto x^2
 \end{align*}
 $f$ ist stetig, aber nicht gleichmässig stetig.
 \begin{enumerate}[i)]
-\item $f$ stetig: Sei $x_0\in\R$, $\varepsilon>0$\[\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } = \abs{ {{x^2} - x_0^2} } = \abs{ {\left( {x - {x_0}} \right)\left( {x + {x_0}} \right)} }\] Sei $\abs{x-x_0}<\varepsilon<1$. Dann, $x<x_0+1:=a$. Dann $x,x_0+1<a$
+\item $f$ stetig: Sei $x_0\in\R$, $\varepsilon>0$\[\abs{ {f\left( x \right) - f\left( {{x_0}} \right)} } = \abs{ {{x^2} - x_0^2} } = \abs{ {\left( {x - {x_0}} \right)\left( {x + {x_0}} \right)} }\] Sei $\abs{x-x_0}<\delta<1$. Dann, $x<x_0+1:=a$. Dann $x,x_0+1<a$
 \[\abs{ {{x^2} - x_0^2} } = \abs{ {x - {x_0}} }\abs{ {x + {x_0}} } < 2a\abs{ {x - {x_0}} }\]
 Wenn wir $\delta=\min\left(1,\frac{\varepsilon}{2a}\right)$ wählen, dann \[\abs{ {x - x_0^2} } < 2a\abs{ {x - {x_a}} } \le \varepsilon \]
-\subsubsection*{Bemerkung}
-$f$ ist abhängig von $\varepsilon$, und $a$ ist $x_0+1$ abhängig von $x_0$.
+\paragraph{Bemerkung}
+$\delta$ ist abhängig von $\varepsilon$, und $a$ ist $x_0+1$, abhängig von $x_0$.
 \item $f$ ist nicht gleichmässig stetig, d.h. \[\exists \varepsilon  > 0, \forall\delta>0, \exists x_0\in\Omega, \exists x\in\Omega:\abs{x-x_0}<\delta \text{ und }\abs{x^2-x_0^2}\geq \varepsilon\]
 Sei $\varepsilon=1$, $\delta>0$, $x_0=\frac{1}{\delta}$ und $x=x_0+\frac{\delta}{2}$. Dann $\abs{x-x_0}<\frac{\delta}{2}<\delta$ aber \[\abs{ {{x^2} - x_0^2} } = \abs{ {{{\left( {\frac{1}{\delta } + \frac{\delta }{2}} \right)}^2} - \frac{1}{{{\delta ^2}}}} } = 1 + \frac{{{\delta ^2}}}{4} > 1 = \varepsilon \]
 \end{enumerate}
 \item \begin{align*}
 f:\Omega&\to\Omega\hspace{5mm}\Omega=\lbrack 0,4\rbrack\\
-x&\to x^2
+x&\mapsto x^2
 \end{align*}
-Dann ist $f$ gleichmässig stetig
+Dann ist $f$ gleichmässig stetig.
 \begin{beweis}{}
 Sei $\varepsilon>0$ gegeben. Sei $x_0,x\in\Omega=\lbrack 0,4\rbrack$, $0\leq x,x_0\leq 4\Rightarrow 0\leq x+x_0\leq 8$
 \begin{align*}
@@ -722,25 +711,26 @@ Sei $\delta=\frac{\varepsilon}{8}$, dann
 \end{beweis}
 \item  \begin{align*}
 f:\left( 0,\infty\right)&\to\left( 0,\infty\right)\\
-x&\to \sqrt{x}
+x&\mapsto\sqrt{x}
 \end{align*}
 ist gleichmässig stetig auf $\left( 0,\infty\right)$
 \begin{beweis}{}
 \todo[inline]{Ask for beweis! page 172 bottom}
+\todo[inline]{This thread has a pretty decent one: \href{http://matheplanet.com/default3.html?call=viewtopic.php?topic=41756}{Matheplanet Thread}}
 \end{beweis}
 \end{enumerate}
 
 Wir haben gesehen, dass
  \begin{align*}
 f:\left( 0,\infty\right)&\to\left( 0,\infty\right)\\
-x&\to x^2
+x&\mapsto x^2
 \end{align*}
-nicht gleichmässig stetig ist, aber
+nicht gleichmässig stetig ist, aber auch, dass
  \begin{align*}
 f:\left[ 0,4\right]&\to\left[ 0,4\right]\\
-x&\to x^2
+x&\mapsto x^2
 \end{align*}
-ist gleichmässig stetig. Was ist der Unterschied? $\lbrack 0,4\rbrack$ ist kompakt, $\left( 0,\infty\right)$ nicht.
+gleichmässig stetig ist. Was ist der Unterschied? $\lbrack 0,4\rbrack$ ist kompakt, $\left( 0,\infty\right)$ nicht.
 
 \subsubsection*{Satz 4.26}
 Sei $K\subset\R^d$ kompakt und $f:K\to\R^n$ stetig. Dann ist $f$ gleichmässig stetig.
@@ -788,7 +778,7 @@ $N_\varepsilon$ hängt nur von $\varepsilon$ ab und nicht von $x\in\lbrack 1,2\r
 \begin{definition}{4.29}
 $\left( f_k\right)$ konvergiert gleichmässig gegen $f$, falls
 \[\mathop {\sup }\limits_{x \in \Omega } \left\| {{f_k}(x) - f(x)} \right\| \to 0,k \to \infty \]
-d-h- $\forall\varepsilon>0$, $\exists k_\varepsilon$, so dass $\forall k>k_\varepsilon$
+d.h. $\forall\varepsilon>0$, $\exists k_\varepsilon$, so dass $\forall k>k_\varepsilon$
 \[\forall x \in \Omega :\left\| {{f_k}(x) - f(x)} \right\| < \varepsilon \]
 \end{definition}
 

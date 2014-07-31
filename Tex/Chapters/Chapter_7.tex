@@ -106,7 +106,7 @@ Sei $p(\lambda ) = \prod\limits_{i = 1}^l {{{(\lambda  - {\lambda _i})}^{{m_i}}}
 \begin{enumerate}
 \item Falls das charakteristische Polynom $n$ verschiedene reelle Nullstellen $\lambda_1,\dots,\lambda_n$ besitzt, so bilden ${e^{{\lambda _1}x}},{e^{{\lambda _2}x}}, \ldots ,{e^{{\lambda _n}x}}$ eine Basis des Vektorraums der Lösungen, das heisst für jede Lösung $y(x)$ gibt es $c_1,c_2,\dots,c_n$, so dass \[y(x)={c_1}{e^{{\lambda _1}x}} + {c_2}{e^{{\lambda _2}x}} +  \ldots  + {c_n}{e^{{\lambda _n}x}}\]
 
-\item Sei $\lambda$ eine $k-$fache reelle Nullstelle das charakteristisches polynoms. Dann sind \[e^{\lambda x},xe^{\lambda x},\dots ,x^{k-1}e^{\lambda x}\] $k$ linear unabhängige Lösungen.
+\item Sei $\lambda$ eine $k-$fache reelle Nullstelle des charakteristischen Polynoms. Dann sind \[e^{\lambda x},xe^{\lambda x},\dots ,x^{k-1}e^{\lambda x}\] $k$ linear unabhängige Lösungen.
 \item Sind $\lambda=\alpha+i\beta$, $\overline{\lambda}=\alpha-i\beta$, ein Paar konjugiert komplexer $k-$ facher Nullstellen, so sind die Funktionen\\\begin{center}
 \begin{tabular}{c c c}
 $e^{\alpha x}\cos\left(\beta x\right)$&\hspace{10mm}&$e^{\alpha x}\sin\left(\beta x\right)$\\
@@ -127,7 +127,7 @@ y(x)&=c_1e^x+c_2e^{-x}
 \item 
 \begin{align*}
 y''+y&=0\\
-p(\lambda)&=\lambda^2+1=(\lambda+1)(\lambda-1)\\
+p(\lambda)&=\lambda^2+1=(\lambda+i)(\lambda-i)\\
 y(x)&=c_1\cos x+c_2\sin x
 \end{align*}
 \item 
@@ -135,7 +135,7 @@ y(x)&=c_1\cos x+c_2\sin x
 y^{(4)}+2y^{(2)}+y&=0\\
 p(\lambda)=\lambda^4+2\lambda^2+1&=0=(\lambda^2+1)^2=(\lambda-i)^2(\lambda+i)^2
 \end{align*}
-Also sinds $\cos x, \sin x, x\cos x,x\sin x$ Lösungen. \[y(x)=c_1\cos x+c_2 x\cos x+c_3\sin x+c_4 x\sin x\]
+Also sind $\cos x, \sin x, x\cos x,x\sin x$ Lösungen. \[y(x)=c_1\cos x+c_2 x\cos x+c_3\sin x+c_4 x\sin x\]
 \item \begin{align*}
 y^{(4)}-y&=0\\
 p(\lambda)&=t^4-1=(t^2-1)(t^2+1)=(t+1)(t-1)(t+i)(t-i)\\
@@ -263,8 +263,8 @@ wobei $P_n,Q_n,S_n,R_n$ Polynome von Grad $n$ sind.
 \subsubsection*{Superpositionsprinzip:}
 Ist $y_1(c)$ eine spezielle Lösung der lineraren Differentialgleichung \[y^{(n)}(x)+a_{n-1}(x)y^{(n-1)}(x)+\dots +a_0(x)y=b_1(x)\] und $y_2(x)$ eine spezielle Lösung der LDGL \[y^n(x)+\dots +a_0(x)y=b_2(x)\] dann ist $y_1(x)+y_2(x)$ eine spezielle Lösung der DGL \[y^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\dots+a_0(x)y=b_1(x)+b_2(x)\]
 \subsubsection*{Beispiel}
-Die DGL $y''+y'-6y=50\sin x$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x\] und die DGL $y''+y'-6y=10e^{2x}$ hat die spezielle Lösung \[y_s(x)=2xe^{2x}\]Die DGL $y''+y'-6y=50\sin x+10e^{2x}$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x+2xe^{2x}\] Die allgemenine Lösung ist \[y(x)=-7\sin x -\cos x+2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\]
-\item Falls $\lambda=\alpha +i\beta$ ($\beta$ kann null sein) eine $m-$fache Nullstelle der charakteristichen Polynoms von (Resonanzfall) \[(H)\hspace{10mm}y^n(x)+a_ny^{(n-1)}+\dots +a_0=0\]ist, so muss man der Ansatz für $y_s(x)$ mit dem Faktor $x^m$ multipliziert werden.
+Die DGL $y''+y'-6y=50\sin x$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x\] und die DGL $y''+y'-6y=10e^{2x}$ hat die spezielle Lösung \[y_s(x)=2xe^{2x}\]Die DGL $y''+y'-6y=50\sin x+10e^{2x}$ hat die spezielle Lösung \[y_s(x)=-7\sin x-\cos x+2xe^{2x}\] Die allgemeine Lösung ist \[y(x)=-7\sin x -\cos x+2xe^{2x}+c_1e^{-3x}+c_2e^{2x}\]
+\item Falls $\lambda=\alpha +i\beta$ ($\beta$ kann null sein) eine $m-$fache Nullstelle der charakteristischen Polynoms von \[(H)\hspace{10mm}y^n(x)+a_ny^{(n-1)}+\dots +a_0=0\]ist (Resonanzfall) , so muss man der Ansatz für $y_s(x)$ mit dem Faktor $x^m$ multipliziert werden.
 \subsubsection*{Beispiel}
 $y''+y=\sin x$ hat die spezielle Lösung $y_s=-\frac{1}{2}x\cos x$
 
@@ -372,9 +372,8 @@ Wenn wir die folgenden Zusatzbedingungen haben
 Also $x_p(t)=\cos\omega t+\sin\omega t$
 \end{enumerate}
 
-\section{Lineare DGL erster Ordnung (mit allgemeinen koeffizienten)}
-Die LDGL hat die allgemeine Form \[y'(x)=a(x)y+b(x)\] $b(x)$ - inhomogener Term.\\
-
+\section{Lineare DGL erster Ordnung (mit allgemeinen Koeffizienten)}
+Die LDGL hat die allgemeine Form (mit $b(x)$ als inhomogener Term) \[y'(x)=a(x)y+b(x)\]
 \noindent Und $y'(x)=a(x)y$ ist die zugehörige homogene Gleichung. \\
 
 \noindent Lösung von $y'(x)=a(x)y$: \[\frac{y'(x)}{y(x)}=a(x)\]
@@ -394,7 +393,7 @@ $y=uv$ wobei $u,v$ Funktionen sind. Dann ist \[y'=u'v+uv'\] und \[a(x)y+b(x)=ay+
 Jetzt wählen wir $v$, so dass \[v'-av=0\]d.h. \[v=e^{A(x)}\] Dann ist $u'v=b$ d.h. $u'=be^{-A(x)}$ d.h. $u$ ist eine Stammfunktion von $be^{-A(x)}$
 
 \subsubsection*{Satz 7.13}
-Seien $A(x)$ eine Stammfunktion von $a(x)$ und $U(x)$ ein Stammfunktion von $be^{-A(x)}$. Dann ist $y(x)=e^{A(x)}$. $U$ Lösung von $y'=a(x)y+b(x)$
+Seien $A(x)$ eine Stammfunktion von $a(x)$ und $U(x)$ ein Stammfunktion von $be^{-A(x)}$. Dann ist $y(x)=e^{A(x)}* U$ Lösung von $y'=a(x)y+b(x)$
 
 \subsubsection*{Korollar 7.14}
 Die Allgemeine Lösung der LDGL $y'=ay+b$ ist durch $y(x)=e^{A(x)}\int{b(x)e^{-A(x)} dx}+Ke^{A(x)}$ gegeben, wobei $K\in\R$, $A(x)$ eine Stammfunktion von $a(x)$ ist.

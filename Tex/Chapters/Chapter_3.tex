@@ -277,7 +277,7 @@ Sei $\left( a_n\right)_{n\geq 1}$ beschränkt und $C$ eine obere Schranke für $
 \[A_k:=\left\{ a_n:n\geq k\right\} = \left\{ a_k,a_{k+1},\dots\right\} \] beschränkt und zudem gilt \[A_{k+1}\subset A_k\text{, }\forall k\geq 1\]
 Sei also
 \begin{itemize}
-\item $m_k:=\inf A_k \nearrow\left( \inf A_k < \inf A_{k+1}\right)$
+\item $m_k:=\inf A_k\nearrow\left( \inf A_k < \inf A_{k+1}\right)$
 \item $M_k:=\sup A_k\searrow\left( \sup A_{k+1} < \sup A_k\right)$
 \end{itemize}
 Dann folgt aus Korollar 2.11
@@ -300,24 +300,25 @@ Offensichtlich gilt $\lim\inf a_n\geq \lim\sup a_n$
 Sei $\left( a_n\right)_{n\geq 1}$ beschränkt. Dann sind $\lim\sup a_n$ und $\lim\inf a_n$ Häufungspunkte von $\left( a_n\right)_{n\geq 1}$
 
 \begin{beweis}{}
-Sei $\mathop {\lim }\limits_{n \to \infty } \sup {a_n} = a$. Wir möchten zeigen, dass eine Teilfolge $a_{l(n)}$ gibt mit $\lim a_{l(n)}=a$. Wir definieren $l:\N\backslash\{ 0\}\to\N\backslash\{ 0\}$ Induktive wie folgt:\\
+Sei $\displaystyle\lim_{n \to \infty }{\sup {a_n}} = a$. Wir möchten zeigen, dass eine Teilfolge $a_{l(n)}$ mit $\lim a_{l(n)}=a$ existiert. Wir definieren $l:\N\setminus\{ 0\}\to\N\setminus\{ 0\}$ induktiv wie folgt:\\
 
-\noindent $l(1)\geq 1$ sei so gewählt, dass $M_1-1\leq a_{l(1)}\leq M_1=\sup A_1=\{ a_1,a_2,\dots\}$
+\noindent $l(1)\geq 1$ sei so gewählt, dass $M_1-1\leq a_{l(1)}\leq M_1=\sup A_1= \sup \,\{ a_1,a_2,\dots\}$
 \begin{framed}
 \noindent\textbf{Korollar 2.11}\\
 Sei $h\in\R$, $h>0$
 \begin{enumerate}
-\item[4.] Falls $E$ ein $\sup$ besitzt $\Rightarrow\exists x\in E$ mit $x>\sup E-h$
+\item[4.] Falls $E$ ein $\sup$ besitzt $\implies\exists x\in E$ mit $x>\sup E-h$
 \end{enumerate}
 Sei $E=\{ a_1,\dots\}=A_1$, $h=1$
 \end{framed}
-Sei $l(2)\in\{ k\in\N\mid k>l(1)+1\}$, so dass \[M_{l(1)+1}\leq a_{l(2)}\leq M_{l(1)+1}\]
-(Sei $E=\{ a_{l(1)+1},a_{l(1)+2},\dots\}$, $h=\frac{1}{2}$). Falls $l(1),l(2),\dots,l(n-1)$ definiert ist, wählen wir $l(n)$, so dass:
+Sei $l(2)\in\{ k\in\N\mid k>l(1)+1\}$, so dass \[M_{l(1)+1}-\frac{1}{2}\leq a_{l(2)}\leq M_{l(1)+1}\]
+(Sei $E=\{ a_{l(1)+1},a_{l(1)+2},\dots\}$, $h=\frac{1}{2}$). Falls $l(1),l(2),\dots,l(n-1)$ definiert sind, wählen wir $l(n)$, so dass:
 \[ l(n)\in\{ k\in\N : k>l(n-1)+1\}\]
 und
 \[
 M_{l(n-1)+1}-\frac{1}{n}\leq a_{l(n)}\leq M_{l(n-1)+1}\tag{\text{\textasteriskcentered}}
 \]
+Es gilt zu bemerken, dass $l(n)\geq n$.
 \[ \abs{ M_{l(n-1)+1}-a_{l(n)}} < \frac{1}{n}\]
 Dann ist $l(n)$ strikt monoton steigend und
 \[ \abs{ a_{l(n)} -M_{l(n-1)+1}}\leq\frac{1}{n}\]
@@ -330,10 +331,10 @@ und
 (\textasteriskcentered) und (\textasteriskcentered\textasteriskcentered) $\Rightarrow\abs{ a_{l(n)}-a} < \varepsilon$ d.h. $\lim a_{l(n)}=a.$
 \end{beweis}
 Wir schliessen aus Lemma 3.16 den folgenden wichtigen Satz
-\subsubsection*{Satz 3.18 (Bolzano - Weierstrass)}
-Jede Beschränkte Folge $\left( a_n\right)_{n\geq 1}$ besitzt eine konvergente Teilfolge.
-\todo[inline]{MISSING CONTENT: Can't really understand the layout of this part, page 76 middle}
-Folgende Aussagen sind direkte Konsequenzen
+\subsubsection*{Satz 3.18 (Bolzano-Weierstrass)}
+Jede beschränkte Folge $\left( a_n\right)_{n\geq 1}$ besitzt eine konvergente Teilfolge. \\
+Von Lemma 3.16 wissen wir, dass $\lim{\sup a_n}$ und $\lim{\inf a_n}$ Häufungspunkte sind. Das heisst, es existieren Teilfolgen $a_{l(n)}$ und $a_{m(n)}$ für die gilt $\lim{a_{l(n)}}=\lim{\sup a_n}$ und $\lim{a_{m(n)}}=\lim{\inf a_n}$. $a_{l(n)}$ und $a_{m(n)}$ sind konvergente Teilfolgen von $a_n$. \\
+Folgende Aussagen sind direkte Konsequenzen von Bolzano-Weierstrass:
 \subsubsection*{Satz 3.19}
 Sei $\left( a_n\right)_{n\geq 1}\subset\R$ beschränkt. $a_{-}:=\lim\inf a_n$, $a_+:=\lim\sup a_n$
 \begin{enumerate}
@@ -370,7 +371,7 @@ g_1&=1, g_2=2, g_3=\frac{3}{2}, g_4=\frac{5}{3}
 \node[circle,fill=black,inner sep=0.5mm] (a) at (4,0) {};
 \end{tikzpicture}
 \end{center}
-So die Folge ist nicht monoton. Offensichtlich gilt $g_n\geq 1$ und damit auch $g_n\leq 2$ d.h. $g_n$ ist beschränkt.\\
+Die Folge ist nicht monoton. Offensichtlich gilt $g_n\geq 1$ und damit auch $g_n\leq 2$ d.h. $g_n$ ist beschränkt.\\
 
 Aber wir werden werden zwei monotone Teilfolgen finden
 \begin{align*}
@@ -379,7 +380,7 @@ Aber wir werden werden zwei monotone Teilfolgen finden
 \end{align*}
 Daraus folgt
 \[{g_{n + 2}} - {g_n} = \frac{1}{{{g_{n - 2}} + 1}} - \frac{1}{{g_n} + 1} = \frac{g_{n} - g_{n - 2}}{{\left( {{g_{n - 2}} + 1} \right)\left( {{g_n} + 1} \right)}}\]
-Nun ist: $g_3-g_1 = \frac{3}{2}-1>0$ und somit ist $g_{2k+3}-g_{2k+1}>0$, $\forall k$ d.h. die Teilfolge $\left( g_{2k+1}\right)_{k\geq 0}$ ist monotone wachsend.\\
+Nun ist: $g_3-g_1 = \frac{3}{2}-1>0$ und somit ist $g_{2k+3}-g_{2k+1}>0$, $\forall k$ d.h. die Teilfolge $\left( g_{2k+1}\right)_{k\geq 0}$ ist monoton wachsend.\\
 
 \noindent$g_4-g_2=\frac{5}{3}-2<0$ woraus folgt, dass $\left( g_{2k}\right)_{k\geq 1}$ monoton fallend ist. Seien also
 \begin{align*}
@@ -442,7 +443,7 @@ Sei $\left( a_n\right)_{n\geq 1}\subset\R$ eine Folge. Die folgenden Aussagen si
 \begin{beweis}{}
 \begin{enumerate}[align=left]
 \item[$(2)\Rightarrow(1)$]\checkmark
-\item[$(1)\Rightarrow(2)$] Wegen das Satzes von Bolzano - Weierstrass besitzt jede beschränkte Folge eine konvergente Teilfolge  \\
+\item[$(1)\Rightarrow(2)$] Wegen des Satzes von Bolzano-Weierstrass besitzt jede beschränkte Folge eine konvergente Teilfolge  \\
 
 \underline{Strategie:}
 \begin{enumerate}[I)]
@@ -456,16 +457,15 @@ Sei $\lim a_{l(n)}=a$, $\left( a_n\right)$ Cauchy.
 \end{align*}
 
 \begin{enumerate}[I)]
-\item $\left(a_n\right)$ ist beschränkt: Sei $\varepsilon=1$. Sei $n(1)$, so dass $\abs{ a_n-a_m}<1$, $\forall n,m\geq n(1)$, insbesondere $\abs{ a_n-a_m}<1$. Woraus $\abs{ a_n} < a_{n(1)}+1$, $\forall n\geq n(1)$ folgt und somit $\forall n\geq 1$
+\item $\left(a_n\right)$ ist beschränkt: Sei $\varepsilon=1$. Sei $n(1)$, so dass $\abs{ a_n-a_m}<1$, $\forall n,m\geq n(1)$, insbesondere $\abs{ a_n-a_{n(1)}}<1$. Woraus $\abs{ a_n} < a_{n(1)}+1$, $\forall n\geq n(1)$ folgt und somit $\forall n\geq 1$
 \[\abs{ {{a_n}} } \le \max \left\{ {\abs{ {{a_1}} }, \ldots ,\abs{ {{a_{n(1)}}} },\abs{ {{a_{n(1)}}} } + 1} \right\}\]
 d.h. $\left( a_n\right)$ ist beschränkt
-\item Sei $a$ ein Häufungspunkt von $\left( a_n\right)$ (Bolzano - Weierstrass) und $l:\N\to\N$ strikt monoton mit
+\item Sei $a$ ein Häufungspunkt von $\left( a_n\right)$ (Bolzano-Weierstrass) und $l:\N\to\N$ strikt monoton mit
 \[\mathop {\lim }\limits_{n \to \infty } {a_{l(n)}} = a\hspace{10mm}\left( {{\text{Bem.: }}l(n) \ge n} \right)\]
 \end{enumerate}
 Sei $\varepsilon>0$ und $n_0(\varepsilon)$, so dass
 \[\abs{ {{a_{l(n)}} - a} } < \varepsilon \hspace{10mm}\forall n > {n_0}(\varepsilon )\]
-Sowie $n_1(\varepsilon)$ mit \\\todo{Can't understand, page 83 bottom}
-
+Sowie $n_1(\varepsilon)$ mit $\abs{a_n-a_r} < \varepsilon \quad \forall n,r\geq n_1(\varepsilon)$ \quad ($(a_n)$ Cauchy) \\
 $\forall n \ge \max \left\{ {{n_0}(\varepsilon ),{n_1}(\varepsilon )} \right\}$ gilt:
 \begin{align*}
 \abs{ {{a_n} - a} } &\le \abs{ {{a_n} - {a_{l(n)}}} } + \abs{ {{a_{l(n)}} - a} }\\
@@ -479,7 +479,7 @@ $\forall n \ge \max \left\{ {{n_0}(\varepsilon ),{n_1}(\varepsilon )} \right\}$ 
 \begin{enumerate}
 \item Sei \[{a_n}: = 1 + \frac{1}{2} +  \ldots  + \frac{1}{n} = \sum\limits_{k = 1}^n {\frac{1}{k}} \] Dann ist also $1\leq a_n\leq a_{n+1}\dots$ monoton wachsend, aber divergent. Dann:
 \[{a_{2n}} - {a_n} = \frac{1}{{n + 1}} +  \ldots  + \frac{1}{{2n}} \ge \frac{n}{{2n}} = \frac{1}{2}\hspace{5mm}\forall n \ge 1\]
-Es erfüllt also das Cauchy - Kriterium nicht.
+Es erfüllt also das Cauchy-Kriterium nicht.
 \item Sei ${b_n}: = 1 - \frac{1}{2} + \frac{1}{3} +  \ldots  + {\left( { - 1} \right)^{n + 1}}\frac{1}{n}$ die alternierende harmonische Reihe. Insbesondere:
 \begin{align*}
 {b_{2k - 2}}&= \left( {1 - \frac{1}{2}} \right) + \left( {\frac{1}{3} - \frac{1}{4}} \right) +  \ldots  + \left( {\frac{1}{{2k - 3}} - \frac{1}{{2k - 2}}} \right)\\
@@ -493,7 +493,7 @@ und
 \end{align*}
 Woraus: $b_{2k+1}<b_{2k-1}$. Zudem
 \begin{align*}
-b_{2k}&=b_{2k-1}-\frac{1}{2k}
+b_{2k}&=b_{2k-1}-\frac{1}{2k} \\
 b_{2k}&<b_{2k-1}
 \end{align*}
 $\forall k\in\N$
@@ -511,8 +511,8 @@ Von diesem Standpunkt identifiziert sich $\C$ mit $\R^2$, so dass wir von jetzt 
 \begin{definition}{}
 Eine Folge in $\R^d$ ist eine Abbildung
 \begin{align*}
-a:\N\backslash\{ 0\}&\to\R^d\\
-n&\to a_n
+a:\N\setminus\{ 0\}&\to\R^d\\
+n&\mapsto a_n
 \end{align*}
 \end{definition}
 \begin{definition}{3.24}
@@ -547,11 +547,11 @@ der das Intervall $\left[ a-r,a+r\right]$ verallgemeinert.
 
 \begin{definition}{3.25}
 Eine Folge $\left( a_n\right)_{n\geq 1}\subset\R^d$ konvergiert gegen $a\in\R^d$ falls für jedes $\varepsilon>0$ die Menge der Indizes $n\geq 1$, für welche $a_n\not\in B_{<\varepsilon}(a)$, endlich ist. Falls das zutrifft, schreibt man
-\[\mathop {\lim }\limits_{n \to \infty } {a_n} = a{\text{ oder }}{a_n}\mathop  \to \limits^{n \to \infty } a\]
+\[\mathop {\lim }\limits_{n \to \infty } {a_n} = a{\text{ oder }}{a_n}\underset{n\to\infty}{\to} a\]
 \end{definition}
 
 \subsubsection*{Bemerkung}
-Die Konvergenz von $\left( a_n\right)_{n\geq 1}\subset\R^d$ ist gleichbedeutend mit der Existenz eines Vektors $a\in\R^d$, so dass die Folge in $\R$, $\left( \norm{a_n-a}\right)_{n\geq 1}$ gegen 0 konvergiert \\
+Die Konvergenz von $\left( a_n\right)_{n\geq 1}\subset\R^d$ ist gleichbedeutend mit der Existenz eines Vektors $a\in\R^d$, so dass die Folge in $\R$, $\left( \norm{a_n-a}\right)_{n\geq 1}$ gegen 0 konvergiert. \\
 
 \noindent Es gilt dann wieder:
 \subsubsection*{Lemma 3.26}
@@ -565,21 +565,18 @@ Der Konvergenzbegriff verträgt sich auch sehr gut mit der Struktur eines Vektor
 \subsubsection*{Satz 3.27}
 Seien $\left( a_n\right)_{n\geq 1}$, $\left( b_n\right)_{n\geq 1}$ konvergente Folgen in $\R^d$, sowie $\lambda\in\R$. Sei $a=\lim a_n$, $b=\lim b_n$. Dann sind $\left( a_n\pm b_n\right)_{n\geq 1}$ und $\left( \lambda a_n\right)_{n\geq 1}$ konvergent und es gilt
 \[\lim\left( a_n\pm b_n\right) = a\pm b\text{, }\lim\lambda a_n=\lambda a\]
-Folgender Satz ist dann grundlegend um Bolzano - Weierstrass sowie das Cauchy-Kriterium auf $\R^d$ zu verallgemeinern. \\
+Folgender Satz ist dann grundlegend um Bolzano-Weierstrass sowie das Cauchy-Kriterium auf $\R^d$ zu verallgemeinern. \\
 
-Für eine Folge $\left( a_n\right)$ von Vektoren in $\R^d$ ist es Zweckmässig folgende Notation für die Koordinaten von $a_n$ zu benutzen \[a_n=\left( a_n^{(1)},a_n^{(2)},a_n^{(3)}\right)\]
-Dann gilt
+Für eine Folge $\left( a_n\right)$ von Vektoren in $\R^d$ ist es zweckmässig, folgende Notation für die Koordinaten von $a_n$ zu benutzen: \[a_n=\left( a_n^{(1)},a_n^{(2)},a_n^{(3)}\right)\]
 \subsubsection*{Satz 3.28}
 Folgende Aussagen sind äquivalent
 \begin{enumerate}[\hspace{2mm}(i)]
 \item $\left( a_n\right)_{n\geq 1}$ konvergiert in $\R^d$
 \item Jede der Folgen $\left( a_n^i\right)$ konvergiert in $\R$
 \end{enumerate}
-Falls diese zuteffen seien $a = \mathop {\lim }\limits_{n \to \infty } {a_n}$ sowie ${a^i} = \mathop {\lim }\limits_{n \to \infty } a_n^{(i)}$, dann gilt $a=\left( a^1,a^2,\dots,a^d\right)$
-\begin{beweis}{}
-Dazu brauchen wir folgendes geometrisches Lemma:
-\end{beweis}
-\todo{limenet: above beweis is finished too early, IMO}
+Falls diese zutreffen sei $a = \mathop {\lim }\limits_{n \to \infty } {a_n}$ sowie ${a^i} = \mathop {\lim }\limits_{n \to \infty } a_n^{(i)}$. Dann gilt \[ a=\left( a^1,a^2,\dots,a^d\right) \]
+
+\noindent Für den nachfolgenden Beweis brauchen wir das folgende geometrische Lemma.
 \subsubsection*{Lemma 3.29}
 $\forall x=\left( x^1,x^2,\dots,x^d\right) \in\R^d$ gilt
 \[\mathop {\max }\limits_{1 \le i \le d} \abs{ {{x^i}} } \le \mathop {\left\| x \right\|}\limits_{\begin{array}{*{20}{c}}
@@ -613,18 +610,12 @@ $\forall x=\left( x^1,x^2,\dots,x^d\right) \in\R^d$ gilt
 \end{enumerate}
 \end{beweis}
 
-\subsubsection*{Satz 3.29 (Bolzano - Weierstrasse)}
+\subsubsection*{Satz 3.29 (Bolzano-Weierstrass für $\R^{d}$)}
 Jede beschränkte Folge $\left( a_n\right)_{n\geq 1}$ in $\R^d$ besitzt eine konvergente Teilfolge
 \subsubsection*{Beispiel}
 \begin{enumerate}
-\item\begin{align*} ({a_n}) &= \left( {\begin{array}{*{20}{c}}
-{{\raise0.7ex\hbox{$1$} \!\mathord{\left/
-{\vphantom {1 n}}\right.\kern-\nulldelimiterspace}
-\!\lower0.7ex\hbox{$n$}}}\\
-{{\raise0.7ex\hbox{$2$} \!\mathord{\left/
-{\vphantom {2 n}}\right.\kern-\nulldelimiterspace}
-\!\lower0.7ex\hbox{$n$}}}
-\end{array}} \right) \subset\R^2 \\
+\item\begin{align*}
+(a_n) &={\nicefrac{1}{2} \choose \nicefrac{2}{n}} \\
 \lim{a_n}&={0 \choose 0} \end{align*}
 \item \[ ({a_n}) = {\frac{{n^2} + n + 1}{2{n^2} + n + 1} \choose n} \]
 $\left( a_n\right)$ ist divergent
@@ -642,7 +633,7 @@ Es sind äquivalent
 \item $\left( a_n\right)_{n\geq 1}$ konvergiert
 \item $\left( a_n\right)$ ist eine Cauchy-Folge
 \end{enumerate}
-Für $\C$ haben wir zusätzlich, dass sich die Körperstruktur mit der Konvergenz gut verträgt. Nämlich
+Für $\C$ haben wir zusätzlich, dass sich die Körperstruktur mit der Konvergenz gut verträgt.
 \subsubsection*{Satz 3.32}
 Seien $\left( z_n\right)$, $\left( w_n\right)$ zwei konvergente Folgen in $\C$ mit $z=\lim z_n$, $w=\lim w_n$. Dann
 \begin{enumerate}[(i)]
@@ -830,7 +821,7 @@ Sei $\left( c_k\right)_{k\in\N}$ eine Folge in $\R$ oder $\C$. Betrachte die Pot
 \end{definition}
 Mit Satz 3.39 (Wurzelkriterium, s.~\pageref{satz3.39}) erhalten wir die folgende Charakterisierung des Konvergenzbereichs von $p(z)$
 \subsubsection*{Satz 3.40}
-Die Potenzreihe \[p(z): = \sum\limits_{k = 0}^\infty  {{c_k}{z^k}} \] ist konvergent $\forall z\in\C$, mit \[\abs{ z } < \rho : = \frac{1}{{\lim \sup \sqrt[k]{{\abs{ {{c_k}} }}}}} \in \left[ {0,\infty } \right]\] Sie ist divergent für alle $\abs{z}>\rho$\\
+Die Potenzreihe \[p(z): = \sum\limits_{k = 0}^\infty  {{c_k}{z^k}} \] ist konvergent $\forall z\in\C$, mit \[\abs{ z } < \rho : = \frac{1}{{\lim \sup \sqrt[k]{{\abs{ {{c_k}} }}}}} \in [{0,\infty } ) \] Sie ist divergent für alle $\abs{z}>\rho$\\
 
 \noindent\underline{Konvention:} Falls $\left\{ \sqrt[k]{\abs{c_k}},k>1\right\}$ \underline{nicht} beschränkt ist, setzen wir
 \[\lim \sup \sqrt[k]{{\abs{ {{c_k}} }}} =  + \infty {\text{  und  }}\rho  = 0\]

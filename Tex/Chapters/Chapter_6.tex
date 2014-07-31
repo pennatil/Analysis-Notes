@@ -14,7 +14,7 @@ Ist die Kraft f jedoch örtlich variabel, d.h. $f:\lbrack a,b\rbrack \to \R$ ist
 
 Zerlege das Intervall $\lbrack a,b\rbrack$ in kleine Teilintervalle $I_{1},\dots, I_{n}$. Wähle in jedem Intervall $I_{k}:=\lbrack x_{k-1}, x_{k}\rbrack$ einen Punkt $\xi$ aus. Man wird dann die ``Riemannsche Summe'' \[A \sim  \sum\limits_{k = 1}^n {f({\xi_k})({x_k} - {x_{k - 1}})} \]  als Näherung für die gesuchte Arbeit $A$ ansehen. Hierzu wird man insbesondere dann berechtigt sein, wenn man mit jeder genügend feinen Zerlegung des Intervalls $I$, einem festen Wert $A$ beliebig nahe kommt.
 
-\item Sei $f: \lbrack a,b\rbrack \to \lbrack 0,\infty\rbrack$ eine (stetige) Funktion. Gesucht ist eine vernünftige Definition des Flächeninhalts A des Gebietes zwischen der $x$-Achse und dem Graphen von $f$
+\item Sei $f: \lbrack a,b\rbrack \to \lbrack 0,\infty)$ eine (stetige) Funktion. Gesucht ist eine vernünftige Definition des Flächeninhalts A des Gebietes zwischen der $x$-Achse und dem Graphen von $f$
 \begin{center}
 \begin{tikzpicture}
 
@@ -338,11 +338,11 @@ Dann gilt $U(f,P)=0$ und $O(f,P)=1, \forall P\in P(I)$\\
 $\Rightarrow f$ ist nicht integrierbar. (f ist beschränkt aber nicht integrierbar)
 \end{enumerate}
 
-\subsubsection*{Satz 6.6 (Riemannsches Kriterium für integrierbarkeit)}
+\subsubsection*{Satz 6.6 (Riemannsches Kriterium für Integrierbarkeit)}
 Sei $f:I\to\R$ eine beschränkte Funktion. Dann sind folgende Aussagen äquivalent
-\begin{enumerate}
-\item $f(x)$ ist integrierbar über $\lbrack a,b\rbrack$
-\item Für jedes $\varepsilon>0$ existiert eine Partition $Q\in P(I)$ mit \[O(f,Q)-U(f,Q)<\varepsilon\]
+\begin{enumerate}[\hspace{3mm}(a)]
+\item $f(x)$ ist Riemann-integrierbar über $\lbrack a,b\rbrack$
+\item Für jedes $\varepsilon>0$ existiert eine Partition $Q\in P(I)$ mit \[O(f,Q)-U(f,Q)\leq\varepsilon\]
 \end{enumerate}
 \subsubsection*{Beweis}
 
@@ -365,7 +365,7 @@ Nach Bemerkung 6.2b) folgt
 (i),(ii),(iii)&\Rightarrow A-\frac{\varepsilon}{2}<U(f,Q)\leq O(f,Q)<A+\frac{\varepsilon}{2}\\
 &\Rightarrow O(f,Q)-U(f,Q) < \varepsilon
 \end{align*}
-\item[(b)$\Rightarrow$(a)] Für alle $P\in P(I)$ \[0 \le \underbrace {\int\limits_{\underline{a}}^b {f(x)dx} }_{\inf O(f,P)} - \underbrace {\int\limits_a^{\overline{b}} {f(x)dx} }_{\sup U(f,P)} \le O(f,P) - U(f,P)\]
+\item[(b)$\Rightarrow$(a)] Für alle $P\in P(I)$ \[0 \le \underbrace {\int\limits_{a}^{\overline{b}} {f(x)dx} }_{\inf O(f,P)} - \underbrace {\int\limits_{\underline{a}}^{{b}} {f(x)dx} }_{\sup U(f,P)} \le O(f,P) - U(f,P)\]
 Aus (b) folgt das $\forall\varepsilon>0$ \[0 < \int\limits_a^{\overline{b}} {f(x)dx - \int\limits_{\underline{a}}^b {f(x)dx < \varepsilon } } \Rightarrow \int\limits_a^{\overline{b}} {f(x)dx = \int\limits_{\underline{a}}^b {f(x)dx} } \] $\Rightarrow f$ ist integrierbar.
 \end{enumerate}
 
@@ -399,11 +399,11 @@ Für jedes $\varepsilon>0$, haben wir $\frac{{(b - a)(f(b) - f(a))}}{n} < \varep
 Sei $f:I\to \R$ eine beschränkte Funktion. Folgende Aussagen sind äquivalent.
 \begin{enumerate}[\indent I)]
 \item $f$ ist Riemann integrierbar und $A: = \int\limits_a^b {f(x)dx} $
-\item Für jedes $\varepsilon>0$ existiert eine Zahl $\xi>0$, so dass für jede Partition $P_i=\{x_0,x_1,\dots,x_N\}$ von $I$ und alle $\xi_i,\dots,\xi_N \in \R$ gilt \[\mathop {\delta (P) < \delta }\limits_{{x_{k - 1}} \le {\xi _k} \le {x_k},\forall k}  \Rightarrow \abs{ {A - \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} } } < \varepsilon \]
+\item Für jedes $\varepsilon>0$ existiert eine Zahl $\delta>0$, so dass für jede Partition $P_i=\{x_0,x_1,\dots,x_N\}$ von $I$ und alle $\xi_i,\dots,\xi_N \in \R$ gilt \[\mathop {\delta (P) < \delta }\limits_{{x_{k - 1}} \le {\xi _k} \le {x_k},\forall k}  \Rightarrow \abs{ {A - \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} } } < \varepsilon \]
 \end{enumerate}
 Dieser Satz lässt sich auch so formulieren: Eine beschränkte Funktion $f:I\to\R$ ist genau dann Riemann integrierbar wenn der Grenzwert \[\mathop {\mathop {\lim }\limits_{\delta (P) \to 0} }\limits_{{\xi _k} \in [{x_{k - 1}},{x_k}]} \sum\limits_{k = 1}^N {f({\xi _k})({x_k} - {x_{k - 1}})} \] und dann haben wir \[A=\int\limits_a^b {f(x)dx = \mathop {\lim }\limits_{\delta (P) \to 0} } S(f,P,\delta )\]
 
-\subsubsection*{Beweis} Siehe D. Salomon: Das Riemannsche Integrale (Satz 3.1).
+\subsubsection*{Beweis} Siehe D. Salomon: Das Riemannsche Integral (Satz 3.1).
 \subsubsection*{Korollar 6.8}
 Seien $f:\lbrack a,b\rbrack\to\R$ eine beschränkte und integrierbare Funktion, $\{ P^{(n)}\}$ eine Folge von Partitionen der Intervalls $\lbrack a,b\rbrack$ mit $\delta(P^{(n)})\to 0$ für $n\to\infty$ und $\{\xi^{(n)}\}$ eine Feste Wahl von Zwischenpunkten zur Partition $P^{(n)}$. Dann ist
 \[\int\limits_a^b {f(x)dx = \mathop {\lim }\limits_{n \to \infty } S(f,{P^{(n)}},{\xi ^{(n)}})} \]
@@ -434,7 +434,7 @@ S(f,{P^{(n)}},{\xi ^{(n)}}) &=\sum\limits_{k = 1}^n {f(\xi _k^{(n)})(x_k^{(n)} -
 %%%%%%%%%%%%%%%%%%%%
 \subsection*{Eigenschaften des Integrals}
 \subsubsection*{Satz 6.9}
-Seien $a<c<b$ und $\alpha, \beta \in \R$ und $f,g:I=\lbrack a,b \rbrack\to\R$ zwei Reimann integrierbare Funktionen. Dann gilt folgendes:
+Seien $a<c<b$ und $\alpha, \beta \in \R$ und $f,g:I=\lbrack a,b \rbrack\to\R$ zwei Riemann integrierbare Funktionen. Dann gilt folgendes:
 \begin{enumerate}
 \item Die Funktion $\alpha f + \beta g$ ist integrierbar mit \[\int\limits_a^b {(\alpha f + \beta g)dx = \alpha \int\limits_a^b {f(x)dx + \beta \int\limits_a^b {g(x)dx} } } \]
 \item Wenn $f,g$ die Ungleichung $f(x)\leq g(x), \forall x\in\lbrack a,b\rbrack$ erfüllen, dann gilt \[\int\limits_a^b {f(x)dx \le \int\limits_a^b {g(x)dx} } \]
@@ -548,15 +548,15 @@ In diesem Kapitel wird der Zusammenhang zwischen Differentiation und Integration
 \subsubsection*{Satz 6.14 (Mittelwertsatz der Integralrechnung)}
 Sei $f:\lbrack a,b\rbrack\to\R$ eine stetige Funktion. Dann existiert ein $\xi\in\lbrack a,b\rbrack$ mit \[\int\limits_a^b {f(x)dx = f(\xi )(b - a)} \]
 
-Geometrisch:
+\noindent Geometrisch:
 
 \begin{center}
 \pgfmathdeclarefunction{poly}{0}{%
-      \pgfmathparse{-x^3+5*(x^2)-3*x-3}%
+      \pgfmathparse{-x^3+5.25*(x^2)-3*x-3}%
     }
 
-\begin{tikzpicture}
-\filldraw[draw=black!15, fill=black!15] (0.79,0) rectangle ++(5.27,3.035);
+\begin{tikzpicture}[scale=1.1]
+\filldraw[draw=black!15, fill=black!15] (0.79,0) rectangle ++(5.58,3.035);
 \begin{axis}[
   xmin=-2,
   xmax=5,
@@ -564,31 +564,31 @@ Geometrisch:
   ymax=10,
   axis y line=left,
   axis x line=bottom,
-  xtick={-1.2,2,4.2},
+  xtick={-1.2,1.84,4.5},
   xticklabels={$a$,$\xi$,$b$},
   ytick={3},
   yticklabels={$f(\xi)$},
   samples=160
 ]
 
-\addplot[mark=none,help lines,domain=-2:4.2] {3};
+\addplot[mark=none,help lines,domain=-2:4.5] {3};
 
 % draw graph for the first function f
-\addplot+[black,thick,mark=none,domain=-1.2:4.2,stack plots=y] {poly};
+\addplot+[black,thick,mark=none,domain=-1.2:4.5,stack plots=y] {poly};
 % draw graph of max(g-f, 0) and stack
-\addplot+[mark=none,fill=gray!70,draw=black,domain=-1.2:4.2,stack plots=y] {max(3-(poly),0)} \closedcycle;
+\addplot+[mark=none,fill=gray!70,draw=black,domain=-1.2:4.5,stack plots=y] {max(3-(poly),0)} \closedcycle;
 % draw graph of min(g-f, 0) and stack
-\addplot+[mark=none,fill=black!60,draw=black,domain=-1.2:4.2,stack plots=y] {min(3-(poly),0)} \closedcycle;
+\addplot+[mark=none,fill=black!60,draw=black,domain=-1.2:4.5,stack plots=y] {min(3-(poly),0)} \closedcycle;
 
 \draw[help lines] (axis cs:-1.2,-5) -- (axis cs:-1.2,3);
-\draw[help lines] (axis cs:2,-5) -- (axis cs:2,3);
-\draw[help lines] (axis cs:4.2,-5) -- (axis cs:4.2,3);
+\draw[help lines] (axis cs:1.84,-5) -- (axis cs:1.84,3);
+\draw[help lines] (axis cs:4.5,-5) -- (axis cs:4.5,3);
 \end{axis}
 
 \draw	(0.95,3.6) node[anchor=north] {D}
 		(2.3,2.5) node[anchor=north] {A}
 		(4.9,3.8) node[anchor=north] {C}
-		(5.92,3.1) node[anchor=north] {B}
+		(6.23,3.1) node[anchor=north] {\footnotesize B}
 		;
 \end{tikzpicture}
 \end{center}
@@ -643,7 +643,7 @@ Sei $f:I\to\R$ eine stetige Funktion und $F$ eine beliebige Stammfunktion von $f
 \subsubsection*{Beweis}
 Für $x\in I$ definieren wir \[F_0(x):=\int\limits_a^x {f(t)dt} \]
 
-Dann ist $F_0:I\to\R$ wegen Satz 6.15 eine (spezielle) Stammfunktion von $f$ mit \[{F_0}(0) = 0\text{\indent}{F_0}(b) = \int\limits_c^b {f(t)dt} \]
+Dann ist $F_0:I\to\R$ wegen Satz 6.15 eine (spezielle) Stammfunktion von $f$ mit \[{F_0}(a) = 0\text{\indent}{F_0}(b) = \int\limits_c^b {f(t)dt} \]
 Für die beliebige Stammfunktion $F$ gilt somit $F-F_0=c$ für eine Konstante $c\in\R$. Deshalb ist \[F(b) - F(a) = {F_0}(b) - {F_0}(a) = {F_0}(b) = \int\limits_a^b {f(t)dt} \] womit alles bewiesen ist. Der Satz 6.19 ist das zentrale Ergebnis und zur Berechnung konkreter Integrale\todo{limenet: A verb is missing here. Ideas??}. Man Benötigt nur eine Stammfunktion und hat von dieser lediglich die Differenz der Funktionswerte zwischen den beiden Endpunkten des Intervalls $\lbrack a,b\rbrack$ zu bilden.
 Insbesondere spielt es keine Rolle, welche Werte die Stammfunktion im Inneren des Intervalls  $\lbrack a,b\rbrack$ annimmt.
 \subsection*{Beispiele von Stammfunktionen}
@@ -651,7 +651,7 @@ Insbesondere spielt es keine Rolle, welche Werte die Stammfunktion im Inneren de
 \renewcommand{\arraystretch}{1.5}
 \begin{tabularx}{\textwidth}{|Y|Y|Y|}
 \hline
-    Definitions Bereich & Funktion $f$                          & Stammfunktion $F$                                                      \\\hline\hline
+    Definitionsbereich & Funktion $f$                          & Stammfunktion $F$                                                      \\\hline\hline
     $(0,\infty)$        & $x^\alpha,\text{ }\alpha\in\R$ & $\frac{{{x^{\alpha  + 1}}}}{{\alpha  + 1}} + c,{\rm{ }}\alpha  \ne  - 1$ \\ [1.5ex]
     ~                   & ~                                     & $\log \abs{ x } + c,{\rm{ }}\alpha  =  - 1$                       \\[1.5ex]\hline
     $\R$        & $x^n, n\in\N$                 & $\frac{{{x^{n + 1}}}}{{n + 1}} + c,{\rm{ }}n \in \N$             \\[1.5ex]\hline
@@ -856,7 +856,7 @@ Methode der Substitution ist eine Umkehrung der Kettenregel.
 Sei
 \begin{itemize}
 \item $f:\lbrack a,b\rbrack\to\R$ stetig
-\item $g:\lbrack\alpha,\beta\rbrack\to\R$ der Klasse $C'$
+\item $g:\lbrack\alpha,\beta\rbrack\to\R$ der Klasse $C^1$
 \end{itemize}
 Sowie $t_0\leq t_1$ in $\lbrack\alpha,\beta\rbrack$, so dass $g\left(\lbrack t_0, t_1\rbrack\right)\subset\lbrack a,b\rbrack$.
 Dann gilt

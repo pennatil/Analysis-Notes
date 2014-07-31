@@ -1,7 +1,7 @@
-\chapter{Logik und Unterlagen}
-Im Laufenden Semester werden wir viele mathematische Beweise einführen. Heute werden wir uns mit der Mathematische Logik beschäftigen. \\
+\chapter{Logik und Grundlagen}
+Im laufenden Semester werden wir viele mathematische Beweise einführen. Heute werden wir uns mit der mathematischen Logik beschäftigen. \\
 
-In der Mathematik stossen wir auf gewisse Grundannahmen, ``Axiome'', die wir als gegeben ansehen. Eine dieser Annahmen ist der 
+In der Mathematik stützen wir uns auf gewisse Grundannahmen, ``Axiome'', die wir als gegeben ansehen. Eine dieser Annahmen ist der 
 \subsection*{Satz vom ausgeschlossenen Dritten}
 Eine zulässige mathematische Aussage ist entweder wahr oder falsch, jedoch nie beides zugleich.
 \subsubsection*{Beispiel}
@@ -20,7 +20,7 @@ Seien $A,B$ Aussagen
 \end{itemize}
 \subsubsection*{Folgerung (eine wahre Implikation)}
 \begin{itemize}
-\item Aus $A$ folgt $B$ wird mit $\to$ bezeichnet
+\item Aus $A$ folgt $B$ wird mit $\Rightarrow$ bezeichnet
 \item Wenn $A$, dann auch $B$
 \item Die Negation der Aussage $A$ wird mit $\lnot A$ bezeichnet
 \item $A$ ist äquivalent zu $B$ wird mit $A\Leftrightarrow B$ bezeichnet
@@ -32,7 +32,7 @@ Die Folgerung ist transitiv. Wenn wir wissen, dass $A\to B$ und $B\to C$, dann w
 
 
 \subsection*{Prinzip des Mathematischen Beweises}
-Wir können aus einer Kette von Folgerungen \[A\to B \to C \dots \to S\]
+Wir können aus einer Kette von Folgerungen \[A\to B \to C \to\dots \to S\]
 einen mathematischen ``Satz'' $S$ aus einen Annahme $A$ herleiten. (Ein Beweis ist eine Folge von Implikationen von Aussagen). 
 \subsubsection*{Kontraposition (Umkehrschluss)}
 
@@ -49,8 +49,8 @@ Man fügt $\lnot B$ als Annahme hinzu und kommt nach einer Kette von erlaubten S
 
 \subsubsection*{Beispiel 1.1}
 \begin{itemize}
-\item $A=\text{''jede natürliche Zahl } n \text{ hat einen Nachfolger } n+1\text{''}$
-\item $B=\text{''es gibt keine grösste natürliche Zahl''}$
+\item $A=\text{``jede natürliche Zahl } n \text{ hat einen Nachfolger } n+1\text{''}$
+\item $B=\text{``es gibt keine grösste natürliche Zahl''}$
 \end{itemize}
 
 \noindent Wir beweisen dass $B$ aus $A$ folgt . Nehmen wir an, dass $A$ wahr und $B$ falsch ist. \\
@@ -65,11 +65,11 @@ Die Objekte werden Elemente der Menge genannt.
 \end{definition}
 
 Sei $A$ eine Menge, dann wird ``$a$ ist element von $A$'' mit ``$a\in A$'' bezeichnet.\\
-Seien $A,B$ Mengen, dann wird ``jedes Element von $A$ ist ein Element von $B$'' mit ``$A\subset B$`` bezeichnet, und man sagt ``$A$ ist in $B$ enthalten'' (oder $A$ ist eine Teilmenge von $B$). \\
+Seien $A,B$ Mengen, dann wird ``jedes Element von $A$ ist ein Element von $B$'' mit ``$A\subset B$'' bezeichnet, und man sagt ``$A$ ist in $B$ enthalten'' (oder $A$ ist eine Teilmenge von $B$). \\
 
 Falls zugleich $A\subset B$ und $B\subset A$ gilt, so sind $A$ und $B$ gleich und man schreibt $A=B$. 
 
-\subsubsection*{Beispiele 1.2}
+\subsubsection*{Beispiel 1.2}
 \begin{enumerate}
 	\item Die Menge $\N=\{0,1,2,\dots\}$ der natürlichen Zahlen.
 	\item Die leere Menge mit ``$\varnothing$'' bezeichnet. Sie ist in jeder Menge enthalten.
@@ -99,9 +99,9 @@ Sie stellen alle Dominosteine  auf, einen nach dem anderen. Falls der erste Domi
 
 \subsubsection*{Beispiel 1.3 (Induktion)}
 \begin{enumerate}
-\item Für alle $n\geq 1$ gilt: \[A(n): \quad 1+3+5+\dots (2n-1)=n^2\] Beweis mittels vollständiger Induktion
+\item Für alle $n\geq 1$ gilt: \[A(n): \quad 1+3+5+\dots +(2n-1)=n^2\] Beweis mittels vollständiger Induktion
 \begin{enumerate}[i)]
-\item $A(i)$ lautet $1=1^2$ und gilt.
+\item $A(1)$ lautet $1=1^2$ und gilt.
 \item Sei $n\geq 1$. Annahme: $A(n)$ gilt. Die linke Seite der Identität $A(n+1)$ ist \[1+3+\dots +(2n-1)+(2n+1)=n^{2}+(2n+1)=(n+1)^2\] womit $A(n+1)$ bewiesen ist.
 \end{enumerate}
 \item Als zweites Beispiel der vollständigen Induktion beweisen wir den Fundamentalsatz von Euklid:
@@ -185,17 +185,17 @@ Zunächst erinnern wir kurz an die Definitionen der elementaren Operationen auf 
 \item Symmetrische Differenz: $A\bigtriangleup B=\left(A\backslash B\right) \cap \left(B\backslash A\right)=\left(A\cup B\right)\backslash\left(A\cap B\right)$
 \end{itemize}
 
-Wir haben dann folgende Eignschaften
+\noindent Wir haben dann folgende Eigenschaften
 \subsubsection*{Satz 1.6}
 Seien $A,B,C$ Mengen. 
 \begin{enumerate}
 \item $A\cap B=B\cap A$; $A\cup B=B\cup A$\\
-$A\cap \emptyset=\emptyset$; $A\cup \emptyset=A$\vspace{-4mm}
+$A\cap \varnothing=\varnothing$; $A\cup \varnothing=A$\vspace{-4mm}
 \subsubsection*{Bemerkung}
 \begin{itemize}
     \item $\cup$ verhält sich wie $+$
     \item $\cap$ verhält sich wie die Multiplikation
-    \item $\emptyset$ verhält sich wie das Nullelement
+    \item $\varnothing$ verhält sich wie das Nullelement
 \end{itemize}
     \item $\left( A\cup B\right)\cup C=A\cup\left( B\cup C\right)$\\
     $\left( A\cap B\right)\cap C=A\cap\left( B\cap C\right)$
@@ -342,9 +342,11 @@ und
 \noindent (Siehe Analysis Serie 1, 1. Semester, Aufgabe 2.e)
 \begin{enumerate}[($\ast$)]
 \item Wir haben gesehen, dass wir manchmal eine Aussage verneinen müssen. Deshalb müssen wir lernen wie man Aussagen mit Quantoren verneinen kann.
-\[\neg\left(\forall n:A(n)\right)\Leftrightarrow\left(\exists n:\neg A(n)\right)\]
-\[\neg\left(\exists n:A(n)\right)\Leftrightarrow\left(\forall n:\neg A(n)\right)\]
-\[\neg\left(\forall x\in \R:x^2\geq 0\right)\Leftrightarrow\exists x\in\R:x^2<0\]
+\begin{align*}
+\neg\left(\forall n:A(n)\right)&\Leftrightarrow\left(\exists n:\neg A(n)\right)\\
+\neg\left(\exists n:A(n)\right)&\Leftrightarrow\left(\forall n:\neg A(n)\right)\\
+\neg\left(\forall x\in \R:x^2\geq 0\right)&\Leftrightarrow\exists x\in\R:x^2<0
+\end{align*}
 \end{enumerate}
 \section{Abbildungen}
 Seien $X,Y$ Mengen. 
@@ -655,7 +657,7 @@ x&\mapsto 2x+3 \end{align*}
 Die Funktion is bijektiv. \\
 Die Umkehrfunktion ist gegeben durch \begin{align*}f^{-1}:\R&\to\R \\
 x&\mapsto\frac{x-3}{2}\end{align*}
-\item Sei $\R^+=\lbrack 0,\infty\rbrack$ die Menge der nichtnegativen reellen Zahlen und \begin{align*}f:\R^+&\to\R^+ \\
+\item Sei $\R^+=\lbrack 0,\infty)$ die Menge der nichtnegativen reellen Zahlen und \begin{align*}f:\R^+&\to\R^+ \\
 x&\mapsto x^2\end{align*}
 Dann ist $f$ bijektiv und die Umkehrfunktion  ist gegeben durch \begin{align*}f^{-1}:\R^+&\to\R^+ \\
 x&\mapsto\sqrt{x}\end{align*}
