@@ -2,11 +2,11 @@ Analysis I/II Notes
 ===================
 If you're just here for the PDF, [here](https://github.com/pennatil/Analysis-Notes/raw/master/PDF/Work%20in%20Progress/Notizen%20-%20Analysis%20I%26II.pdf) you go. Be advised, however, that the PDF is constantly changing. It is not finished yet, and is likely to contain many mistakes. If you see anything fishy, please file an issue.
 
-This repo contains all the handwritten notes from Professor Imamoglu's Analysis I/II class for CS at ETHZ. Although this page should clarify most of your doubts, you can <a href="mailto:pennatil@student.ethz.ch">email me</a> and I will try to help you. Please avoid questions regarding LaTex (installation, usage, can't compile) as the sections below are pretty self explanatory.
+This repo contains all the handwritten notes from Professor Imamoglu's Analysis I/II class for CS at ETHZ. Although this page should clarify most of your doubts, you can <a href="mailto:pennatil@student.ethz.ch">email me</a> and I will try to help you. Please avoid questions regarding LaTeX (installation, usage, can't compile) as the sections below are pretty self explanatory.
 
-This repository will always contain the latest files (PDFs as well), which will be updated when progress is made. As of right now, i do NOT recommend you print out things in a final form (booklet, color,...) since they might change from one day to another. Once I am done, you will receive an email with the final files.
+This repository will always contain the latest files (PDFs as well), which will be updated when progress is made. As of right now, I do NOT recommend you print out things in a final form (booklet, color,...) since they might change from one day to another. Once I am done, you will receive an email with the final files.
 
-Although (almost) everything has been typed up, you can still report errors, and propose corections or improvements. Take a look at the [Contributing](#Contributing) section below to find how.
+Although (almost) everything has been typed up, you can still report errors, and propose corections or improvements. Take a look at the [Contributing](#Contributing) section below to find out how.
 
 <a name="Status"></a>
 Status
@@ -41,7 +41,7 @@ In order to get the material, there are two ways:
   5. Get the files you need
 * Typeset (Build) it yourself from source. Take a look at the [Building](#Building) section
 
-New PDFs are generated on an (almost) daily basis, so if you are not familiar with LaTex, just get the files from the "PDF" folder.
+New PDFs are generated on an (almost) daily basis, so if you are not familiar with LaTeX, just get the files from the "PDF" folder.
 
 UPDATE: As of 21.05.2014 new PDFs are generated on a daily basis (at around 2:30 AM), so this page always contains the latest ones.
 
@@ -50,7 +50,7 @@ Contributing
 ============
 
 Since these documents are still a very early version, they might contain a few (if not more) mistakes. In order to report an error:
-* If you have no experience with LaTex or GitHub:
+* If you have no experience with LaTeX or GitHub:
     1. Make sure you have a GitHub account, otherwise create one [here](https://github.com/join). Please use the same name as your ETHZ account, makes my life much easier if I have to contact you.
     2. On the right side of this page, click on the ["Issues"](https://github.com/pennatil/Analysis-Notes/issues) tab
     3. Check if no one else has posted the same Issue. If no one has, open a new issue, stating:
@@ -59,23 +59,23 @@ Since these documents are still a very early version, they might contain a few (
         * Tag: Add a tag that best classifies the issue
         * If you are not sure, take a look at the sample [here](https://github.com/pennatil/Analysis-Notes/issues/4)
     4. Post the issue, it will be corrected ASAP.
-* If you are familiar with Latex and GitHub:
+* If you are familiar with LaTeX and GitHub:
     1. First, check if someone has posted the same issue. If yes, mention it in your merge request (point 4.)
     2. Fork the repo. Help [here](https://help.github.com/articles/fork-a-repo)
     3. Make the changes, and commit them to your forked repo. Make sure to add detailed comments explaining what you changed, makes my life a lot easier when merging!
     4. Once you are done, request a Merge. Help [here](https://help.github.com/articles/using-pull-requests)
 
-I will not take into consideration emails containing corrections. Please use the "Issues" tab so to keep track of every change.
+I will not take into consideration emails containing corrections. Please use the "Issues" tab so I can keep track of every change.
 
 
 <a name="Building"></a>
 Building
 ========
-This is only recommended to people with experience with LaTex, since the files might still contain bugs and errors that have to be ironed out. I will not answer emails asking for help if the files do not build! If you are not sure, just use the PDFs inside the .zip archive (Take a look at [Getting the material](#Getting the material)). If you are installing LaTex from scratch, make sure you install the full release with all the packages!
+This is only recommended to people with experience with LaTeX, since the files might still contain bugs and errors that have to be ironed out. I will not answer emails asking for help if the files do not build! If you are not sure, just use the PDFs inside the .zip archive (Take a look at [Getting the material](#Getting the material)). If you are installing LaTeX from scratch, make sure you install the full release with all the packages!
 
 1. Linux users, make sure you <code>sudo apt-get update</code> and <code>sudo apt-get upgrade</code> before you start
 1. Make sure you have the following programs installed:
-	* Latex
+	* LaTeX
 		* Mac OS: [MacteX](http://tug.org/mactex/)
 		* Windows: [TexLive](https://www.tug.org/texlive/acquire-netinstall.html)
 		* Linux: [TexLive](https://www.tug.org/texlive/quickinstall.html)
