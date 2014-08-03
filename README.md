@@ -60,10 +60,11 @@ Since these documents are still a very early version, they might contain a few (
         * If you are not sure, take a look at the sample [here](https://github.com/pennatil/Analysis-Notes/issues/4)
     4. Post the issue, it will be corrected ASAP.
 * If you are familiar with LaTeX and GitHub:
-    1. First, check if someone has posted the same issue. If yes, mention it in your merge request (point 4.)
+    1. First, check if someone has posted the same issue. If yes, mention it in your merge request (point v.)
     2. Fork the repo. Help [here](https://help.github.com/articles/fork-a-repo)
     3. Make the changes, and commit them to your forked repo. Make sure to add detailed comments explaining what you changed, makes my life a lot easier when merging!
-    4. Once you are done, request a Merge. Help [here](https://help.github.com/articles/using-pull-requests)
+    4. Pull changes from the original branch. If there are major conflicts when you request a merge, your changes will NOT be merged. Make sure you are always up to date with the original branch.
+    5. Once you are done, request a Merge. Help [here](https://help.github.com/articles/using-pull-requests)
 
 I will not take into consideration emails containing corrections. Please use the "Issues" tab so I can keep track of every change.
 
