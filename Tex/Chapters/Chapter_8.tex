@@ -1134,12 +1134,12 @@ W = &\int\limits_a^b {F\left( {\gamma \left( t \right)} \right)}  \cdot \gamma '
 Wir können das Wegintegral auch mit Differentialformen formulieren. Sei
 \begin{align*}
 v:\Omega &\to\R^n\\
-x &\to\left( v^i(x)\right)_{i=1}^n
+x &\mapsto\left( v^i(x)\right)_{i=1}^n
 \end{align*}
-ein stetiges Vektorfeld ($v^i(x):\R^n\to\R$ stetig) dann ist durch $\lambda (x)(\omega):=< v(x),\omega >$ eine $1-$Form $\lambda (x)\in L\left( \R^n,\R\right)$ definiert
+ein stetiges Vektorfeld ($v^i(x):\R^n\to\R$ stetig) dann ist durch $\lambda (x)(\omega)\defeq {< v(x),\omega >}$ eine $1-$Form $\lambda (x)\in L\left( \R^n,\R\right)$ definiert
 \begin{align*}
-\int\limits_\gamma  {vd\vec s}  = &\int\limits_a^b { < v\left( {\gamma (t)} \right),\gamma '(t) > dt}\\
- = &\int\limits_a^b {\lambda \left( {\gamma \left( t \right)} \right)\left( {\gamma '\left( t \right)} \right)dt}
+\int\limits_\gamma  {vd\vec s}  &= \int\limits_a^b { < v\left( {\gamma (t)} \right),\gamma '(t) > dt}\\
+ &= \int\limits_a^b {\lambda \left( {\gamma \left( t \right)} \right)\left( {\gamma '\left( t \right)} \right)dt}
 \end{align*}
 
 \noindent\underline{Umgekehrt}\\
@@ -1149,41 +1149,29 @@ ein stetiges Vektorfeld ($v^i(x):\R^n\to\R$ stetig) dann ist durch $\lambda (x)(
 Sei
 \begin{align*}
 \gamma :\lbrack a,b\rbrack &\to\Omega\\
-t &\to\left( \gamma^1 (t), \gamma^2 (t),\dots ,\gamma^n (t) \right)
+t &\mapsto\left( \gamma^1 (t), \gamma^2 (t),\dots ,\gamma^n (t) \right)
 \end{align*}
 ein $C^1-$Weg. Dann ist
 \begin{align*}
-\lbrack a,b\rbrack \to &\R\\
-t\to &\lambda\left( \gamma (t)\right)\left( \gamma' (t)\right)\\
-& = \sum{\lambda_i\left(\gamma(t)\right)\cdot\frac{d\gamma^i}{dt}(t)}
+\lbrack a,b\rbrack &\to \R\\
+t&\mapsto \lambda\left( \gamma (t)\right)\left( \gamma' (t)\right) = \sum{\lambda_i\left(\gamma(t)\right)\cdot\frac{d\gamma^i}{dt}(t)}
 \end{align*}
-eine stetige Funktion. Somit ist das Integral $\int\limits_a^b {\lambda \left( {\gamma \left( t \right)} \right)\left( {\gamma '\left( t \right)} \right)dt} $ wohl definiert.
+eine stetige Funktion. Somit ist das Integral $\int\limits_a^b {\lambda \left( {\gamma \left( t \right)} \right)\left( {\gamma '\left( t \right)} \right)dt} $ wohldefiniert.
 
 \begin{definition}{8.36}
-Das Wegintegral von $\gamma\in L\left( \R^n,\R\right)$ längs $\gamma$ ist \[\int\limits_\gamma  \lambda  : = \int\limits_a^b {\lambda \left( {\gamma (t)} \right)\left( {\gamma '(t)} \right)dt} \]
+Das Wegintegral von $\lambda\in L\left( \R^n,\R\right)$ längs $\gamma$ ist \[\int\limits_\gamma  \lambda  : = \int\limits_a^b {\lambda \left( {\gamma (t)} \right)\left( {\gamma '(t)} \right)dt} \]
 \end{definition}
 
 \subsubsection*{Beispiel 8.37}
 \begin{enumerate}
 \item Sei $\gamma\in C^1\left(\lbrack 0,2\pi\rbrack =\R^2\right)$ mit
-\[\begin{array}{*{20}{c}}
-{\gamma (t) = \left( {\begin{array}{*{20}{c}}
-{\cos t}\\
-{\sin t}
-\end{array}} \right)}&{}\\
-{}&{0 \le t \le 2\pi }\\
-{\gamma '(t) = \left( {\begin{array}{*{20}{c}}
-{ - \sin t}\\
-{\cos t}
-\end{array}} \right)}&{}
-\end{array}\]
-eine Parametrisierung des Einheitskreises $\lambda = \lambda (x,y)$ die $1-$Form mit \[\lambda (x,y)=-ydx+xdy\hspace{10mm}(x,y)\in\R^2\]
+\[ \gamma (t) = \begin{pmatrix} {\cos t}\\ {\sin t} \end{pmatrix} \]
+\[0 \le t \le 2\pi \]
+\[ \gamma '(t) = \begin{pmatrix} -\sin t \\ \cos t \end{pmatrix} \]
+eine Parametrisierung des Einheitskreises und $\lambda = \lambda (x,y)$ die $1-$Form mit \[\lambda (x,y)=-ydx+xdy\hspace{10mm}(x,y)\in\R^2\]
 Dann gilt
 \begin{align*}
-\int\limits_\gamma  \lambda   = &\int\limits_0^{2\pi } {\underbrace {\left( { - \sin t,\cos t} \right)}_{\lambda (\gamma (t))} \cdot \underbrace {\left( {\begin{array}{*{20}{c}}
-{ - \sin t}\\
-{\cos t}
-\end{array}} \right)}_{\gamma '(t)}dt} \\
+\int\limits_\gamma  \lambda   = &\int\limits_0^{2\pi } {\underbrace {\left( { - \sin t,\cos t} \right)}_{\lambda (\gamma (t))} \cdot \underbrace {\begin{pmatrix} -\sin t \\ \cos t \end{pmatrix}}_{\gamma '(t)}dt} \\
 = &\int\limits_0^{2\pi } {\left( {{{\sin }^2}t + {{\cos }^2}t} \right)dt}  = 2\pi
 \end{align*}
 \item Sei $\lambda (x,y)=3x^2ydx + \left( x^3+1\right)dy$. Wir betrachten das Kurvenintegral längs verschiedener Wege
@@ -1325,21 +1313,21 @@ Dann gilt \[\int\limits_{ - \gamma } \lambda   =  - \int\limits_\gamma  \lambda 
 \item Sei $f:\Omega\to\R$ eine $C^1-$Funktion, sowie $\gamma:\lbrack a,b\rbrack\to\Omega$ stückweise $C^1$. Dann gilt \[\int\limits_\gamma  {df}  = f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)\]
 $\gamma$ ist $C^1$, dann ist
 \begin{align*}
-\int\limits_\gamma  {df}  = & \int\limits_a^b {df\left( {\gamma \left( t \right)} \right)\gamma '\left( t \right)dt} \\
-\mathop  = & \int\limits_a^b {\frac{d}{{dt}}\left( {f \circ \gamma } \right)\left( t \right)dt}\\
- = &\left( {f \circ \gamma } \right)\left( b \right) - \left( {f \circ \gamma } \right)\left( a \right)\\
- = & f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)
+\int\limits_\gamma  {df}  &= \int\limits_a^b {df\left( {\gamma \left( t \right)} \right)\gamma '\left( t \right)dt} \\
+ &=  \int\limits_a^b {\frac{d}{{dt}}\left( {f \circ \gamma } \right)\left( t \right)dt}\\
+ &= \left( {f \circ \gamma } \right)\left( b \right) - \left( {f \circ \gamma } \right)\left( a \right)\\
+ &= f\left( {\gamma \left( b \right)} \right) - f\left( {\gamma \left( a \right)} \right)
 \end{align*}
 Mittels des Wegintegrals können wir die $C^1-$Funktionen charakterisieren, deren Differentiale verschwinden.
 \end{enumerate}
 
 \subsubsection*{Satz 8.39}
-Sei $\Omega$ ``offen'' und $C^1-$wegzusammenhängend. Sei $f\in C^1\left(\Omega\right)$. Falls $df(x)=0$, $\forall x\in\Omega$, so ist $f$ konstant.
+Sei $\Omega$ ``offen'' und $(C^1-)$wegzusammenhängend. Sei $f\in C^1\left(\Omega\right)$. Falls $df(x)=0$, $\forall x\in\Omega$, so ist $f$ konstant.
 \subsubsection*{Beweis}
 Wenn $\Omega$ wegzusammenhängend ist, heisst das, dass zu je zwei Punkten $x,y\in\Omega$ gibt es in $C^1-$Weg $\gamma :\lbrack 0,1\rbrack\to\gamma$ mit $\gamma(0)=x$ und $\gamma(1)=y$, $\gamma\left(\lbrack 0,1\rbrack\right)\subset\Omega$. Dann folgt
 \begin{align*}
 f(y)-f(x)&= f\left(\gamma(1)\right)-f\left(\gamma(0)\right)\\
-= &\int\limits_{\gamma} df = 0
+&= \int\limits_{\gamma} df = 0
 \end{align*}
 $\Rightarrow f(y)=f(x)$, $\forall x,y\in\Omega\Rightarrow f$ ist konstant.\\
 
@@ -1372,7 +1360,7 @@ $f\in C^1\left( \Omega\right)$ und $df=\lambda$. Um zu zeigen, dass $df=\lambda$
 Sei
 \begin{align*}
 \gamma_x:\lbrack 0,1\rbrack &\to\Omega\\
-t &\to (1-t)x_0+tx
+t &\mapsto (1-t)x_0+tx
 \end{align*}
 
 \begin{center}
@@ -1434,16 +1422,15 @@ Aus der Stetigkeit der \todo{Can't read, page 179 bottom} folgt, dass
 \[\mathop {\lim }\limits_{x \to {x_0}} \frac{{R\left( {x,{x_0}} \right)}}{{\abs{ {x - {x_0}} }}} \to 0\]
 
 \subsubsection*{Beispiel 8.31}
-\begin{enumerate}
-\item Sei $\lambda = 2xy^2dx+2x^2ydy$. \\
+Sei $\lambda = 2xy^2dx+2x^2ydy$. \\
 
 \noindent\underline{Ansatz:} \[f\left(x,y\right)=\int\limits_{\gamma_{\left( x,y\right)}}\lambda\]
-wobei $\gamma_{\left( x,y\right)}\left(t\right)=\left(t_x,t_y\right)$, $t\in\left( 0,1\right)$. Dann ist
+wobei $\gamma_{\left( x,y\right)}\left(t\right)=\left(tx,ty\right)$, $t\in\left( 0,1\right)$. Dann ist
 
 \begin{align*}
-\int\limits_\gamma  \lambda   = &\int\limits_0^1 {\lambda \left( {tx,ty} \right)\left( {x,y} \right)dt} \\
-= &\int\limits_0^1 {\left[ {2\left( {tx} \right){{\left( {ty} \right)}^2} \cdot x + 2{{\left( {tx} \right)}^2}\left( {ty} \right) \cdot y} \right]dt} \\
-= & 4{x^2}{y^2}\int\limits_0^1 {{t^3}} dt = {x^2}{y^2}
+\int\limits_\gamma  \lambda &= \int\limits_0^1 {\lambda \left( {tx,ty} \right)\left( {x,y} \right)dt} \\
+&= \int\limits_0^1 {\left[ {2\left( {tx} \right){{\left( {ty} \right)}^2} \cdot x + 2{{\left( {tx} \right)}^2}\left( {ty} \right) \cdot y} \right]dt} \\
+&= 4{x^2}{y^2}\int\limits_0^1 {{t^3}} dt = {x^2}{y^2}
 \end{align*}
 und $df\left( x,y\right)=2xy^2dx+2x^2ydy$.\\
 
@@ -1452,7 +1439,7 @@ und $df\left( x,y\right)=2xy^2dx+2x^2ydy$.\\
 \[\Rightarrow \frac{\partial f}{\partial x}=2xy^2 \Rightarrow f\left( x,y \right) = \int 2xy^2 dx =  x^2y^2+C\left( y\right)\]
 \[\Rightarrow\frac{\partial f}{\partial y}=2x^2y+\frac{d}{dy}C\left(y\right)=2x^2y \Rightarrow \frac{d}{dy}C\left( y\right) =  0 \Rightarrow C\left( y\right) = \text{ Konstant}\]
 \[\Rightarrow f\left( x,y\right)=  x^2y^2+C\]
-\end{enumerate}\todo{Where is number 2?? page 180}
+
 Analog wie für $1-$Formen kann man Satz 8.30 für Vektorfelder formulieren
 
 \begin{definition}{8.32}
@@ -1466,15 +1453,15 @@ Für ein stetiges Vektorfeld $v:\Omega\to\R^n$ sind folgende Aussagen äquivalen
 \item Es gibt $f\in C^1\left( \Omega\right)$ mit $v=\nabla f$. In diesem Fall heisst $v$ Potentialfeld mit dem Potential $f$.
 \end{enumerate}
 
-Im nächsten Kapitel, mittels höheren partiellen Ableitungen, erhalten wir eine einfache zu \todo{can't understand, page 182 top} notwendige Bedingung für ein konservatives Vektorfeld. Wir werden sehen, dass
+Im nächsten Kapitel, mittels höheren partiellen Ableitungen, erhalten wir eine einfache zu handhabende notwendige Bedingung für ein konservatives Vektorfeld. Wir werden sehen, dass
 \[v = {\left( {{v^i}} \right)_{1 \le i \le n}} \in C^1\left( {\Omega ,\R^n} \right)\text{ konservative }\]
 \[\Rightarrow \frac{\partial v^i}{\partial x^j}=\frac{\partial v^j}{\partial x^i}\hspace{5mm}1\leq i,j\leq n\]
 
 \section{Höhere Ableitungen}
 \begin{definition}{8.44}
-$f:\Omega\to\R$, $\Omega\subset\R^n$ $f\in C^1\left( \Omega\right)$ heisst von Klasse $C^2$ falls $\frac{\partial f}{\partial x^i}\in C^1{\left( \Omega\right)}_{1\leq i\leq n}$
+$f:\Omega\to\R$, $\Omega\subset\R^n$, $f\in C^1\left( \Omega\right)$ heisst von Klasse $C^2$ falls $\frac{\partial f}{\partial x^i}\in C^1{\left( \Omega\right)}_{1\leq i\leq n}$
 \end{definition}\todo{Where does the definition end? page 183 top}
-Für ein beliebiges $m$, heisst die Funktion $f\in C^1\left( \omega\right)$ heisst von der Klasse $C^m$, $f\in C^m\left( \omega\right)$, falls $\frac{\partial f}{\partial x^i}\in C^{m-1}\left( \Omega\right)$, $1\leq i\leq n$\\
+Für ein beliebiges $m$, heisst die Funktion $f\in C^1\left( \omega\right)$ von der Klasse $C^m$, $f\in C^m\left( \omega\right)$, falls $\frac{\partial f}{\partial x^i}\in C^{m-1}\left( \Omega\right)$, $1\leq i\leq n$\\
 
 Für ein $f\in C^2\left( \Omega\right)$, heissen die Funktionen \[\frac{{{\partial ^2}f}}{{\partial {x^i}\partial {x^j}}}: = \frac{\partial }{{\partial {x^i}}}\left( {\frac{{\partial f}}{{\partial {x^j}}}} \right)\] die zweiten partiellen Ableitungen von $f$.\\
 
@@ -1486,7 +1473,7 @@ Sei $f\in C^2\left(\Omega\right)$. Dann gilt
 \frac{{{\partial ^2}f}}{{\partial {x^i}\partial {x^j}}} = &\frac{\partial }{{\partial {x^i}}}\left( {\frac{{\partial f}}{{\partial {x^j}}}} \right)\\
  = &\frac{\partial }{{\partial {x^j}}}\left( {\frac{\partial }{{\partial {x^i}}}f} \right) = \frac{{{\partial ^2}f}}{{\partial {x^j}{x^i}}}
 \end{align*}
-Im Allgemeinen
+Im allgemeinen Fall:
 \subsubsection*{Satz 8.46}
 Für jede $C^k-$Funktion sind alle partiellen Ableitungen vom Grad $\leq k$ von der Reihenfolge der Ableitungen unabhängig. Von Satz 8.35 erhalten wir folgende notwendige Bedingung für die Konservativität
 
@@ -1501,12 +1488,9 @@ folgt.
 
 \subsubsection*{Beispiel 8.48}
 \begin{enumerate}
-\item \[v\left( {x,y} \right) = \left( {\begin{array}{*{20}{c}}
-{4x{y^2}}\\
-{2y}
-\end{array}} \right)\]
-Es gilt $\frac{\partial v^1}{\partial y}=8xy$, $\frac{\partial v^2}{dx}=2$. Also ist $v$ nicht konservativ
-\item Sei $\Omega = \left\{ \left( x,y\right) \in\R^2:\left( x,y\right) \not= (0,0) \right\} = \R^2\backslash\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \to\R^2$ mindestens $C^1$. Ausserdem \[\frac{{\partial v^1}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C:
+\item \[v\left( {x,y} \right) = \begin{pmatrix} 4x{y^2} \\ {2y} \end{pmatrix} \]
+Es gilt $\frac{\partial v^1}{\partial y}=8xy$, $\frac{\partial v^2}{\partial x}=0$. Also ist $v$ nicht konservativ.
+\item Sei $\Omega = \left\{ \left( x,y\right) \in\R^2:\left( x,y\right) \not= (0,0) \right\} = \R^2\setminus\left\{ 0,0\right\}$ und \[v(x,y) = \left( {\frac{{ - y}}{{{x^2} + {y^2}}},\frac{x}{{{x^2} + {y^2}}}} \right)\] Dann $v:\Omega \to\R^2$ mindestens $C^1$. Ausserdem \[\frac{{\partial v^1}}{{\partial y}} = \frac{{{y^2} - {x^2}}}{{{{\left( {{x^2} + {y^2}} \right)}^2}}} = \frac{{\partial {v^2}}}{{\partial x}}\] Jetzt berechnen wir $\int\limits_C v ds$, wobei C:
 
 \begin{multicols}{2}
 \begin{center}
