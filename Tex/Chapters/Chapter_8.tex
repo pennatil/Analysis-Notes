@@ -1716,11 +1716,7 @@ f\left( x,y,z\right) &= \left(x-1\right)^2+\left(y+2\right)^2+\left(z+1\right)^2
 \nabla f &= \left( 2\left(x-1\right),2\left(y+2\right),2\left(z+1\right)\right)\\
 \nabla f\left( x_0\right) &=\left( 0,0,0\right)\Rightarrow x_0=\left( 1,-2,-1\right)
 \end{align*}
-\[{H_f}\left( {{x_0}} \right) = \left( {\begin{array}{*{20}{c}}
-2&0&0\\
-0&2&0\\
-0&0&2
-\end{array}} \right)\]
+\[{H_f}\left( {{x_0}} \right) = \begin{pmatrix} 2&0&0 \\ 0&2&0 \\ 0&0&2 \end{pmatrix} \]
 $H_f\left( x_0\right)$ ist positiv definit $\Rightarrow x_0\left( 1,-2,-1\right)$ ist ein lokales Minimum.
 \item \begin{align*}
 f\left( x,y\right)= & \cos\left(x+2y\right)+\cos\left(2x+3y\right)\\
@@ -1767,15 +1763,15 @@ Das Differential $df\left( x_0\right)$ hat die Gestalt \[df\left( {{x_0}} \right
 \subsubsection*{Bemerkung 8.58}
 \begin{enumerate}
 \item Bezüglich der Standardbasis $dx^j$, $1\leq j\leq n$ erhalten wir
-\[d{f^i}\left( {{x_0}} \right) = \sum\limits_{j = 1}^n {\frac{{\partial {f^i}}}{{\partial {x^j}}}\left( {{x_0}} \right)d{x^j} = \left( {\frac{{\partial {f^i}}}{{\partial x'}}\left( {{x_0}} \right), \ldots ,\frac{{\partial {f^i}}}{{\partial {x^n}}}\left( {{x_0}} \right)} \right)} \]
+\[d{f^i}\left( {{x_0}} \right) = \sum\limits_{j = 1}^n {\frac{{\partial {f^i}}}{{\partial {x^j}}}\left( {{x_0}} \right)d{x^j} = \left( {\frac{{\partial {f^i}}}{{\partial x^1}}\left( {{x_0}} \right), \ldots ,\frac{{\partial {f^i}}}{{\partial {x^n}}}\left( {{x_0}} \right)} \right)} \]
 die Darstellung
-\[df\left( {{x_0}} \right) = \left( {\begin{array}{*{20}{c}}
-{\frac{{\partial f'}}{{\partial x'}}\left( {{x_0}} \right)}&{\frac{{\partial f'}}{{\partial {x^2}}}\left( {{x_0}} \right)}& \ldots &{\frac{{\partial f'}}{{\partial {x^n}}}\left( {{x_0}} \right)}\\
-{\frac{{\partial {f^2}}}{{\partial x'}}\left( {{x_0}} \right)}&{\frac{{\partial {f^2}}}{{\partial {x^2}}}\left( {{x_0}} \right)}& \ldots &{\frac{{\partial {f^2}}}{{\partial {x^n}}}\left( {{x_0}} \right)}\\
+\[df\left( {{x_0}} \right) = \begin{pmatrix}
+{\frac{{\partial f^1}}{{\partial x^1}}\left( {{x_0}} \right)}&{\frac{{\partial f^1}}{{\partial {x^2}}}\left( {{x_0}} \right)}& \ldots &{\frac{{\partial f^1}}{{\partial {x^n}}}\left( {{x_0}} \right)}\\
+{\frac{{\partial {f^2}}}{{\partial x^1}}\left( {{x_0}} \right)}&{\frac{{\partial {f^2}}}{{\partial {x^2}}}\left( {{x_0}} \right)}& \ldots &{\frac{{\partial {f^2}}}{{\partial {x^n}}}\left( {{x_0}} \right)}\\
  \vdots & \vdots & \ddots & \vdots \\
-{\frac{{\partial {f^l}}}{{\partial x'}}\left( {{x_0}} \right)}&{\frac{{\partial {f^l}}}{{\partial x'}}\left( {{x_0}} \right)}& \ldots &{\frac{{\partial {f^l}}}{{\partial {x^n}}}\left( {{x_0}} \right)}
-\end{array}} \right)\]
-Die $l\times n$ matrix $df\left( x_0\right) = {\left( \frac{\partial f^i}{\partial x^j}\left( x_0\right)\right)}_{1\leq i\leq l, 1\leq j\leq n}$ heisst Jacobi- oder Funktionalmatrix von $f$ an der Stelle $x_0$.
+{\frac{{\partial {f^l}}}{{\partial x^1}}\left( {{x_0}} \right)}&{\frac{{\partial {f^l}}}{{\partial x^2}}\left( {{x_0}} \right)}& \ldots &{\frac{{\partial {f^l}}}{{\partial {x^n}}}\left( {{x_0}} \right)}
+\end{pmatrix}\]
+Die $l\times n$ Matrix $df\left( x_0\right) = {\left( \frac{\partial f^i}{\partial x^j}\left( x_0\right)\right)}_{1\leq i\leq l, 1\leq j\leq n}$ heisst Jacobi- oder Funktionalmatrix von $f$ an der Stelle $x_0$.
 \item Auch im vektorwertigen Fall ist die Funktion $f$ genau dann differenzierbar in $x_0$, wenn eine lineare Abbildung $A:\R^n\to\R^l$ existiert mit
 \[\mathop {\lim }\limits_{x \to {x_0}} \frac{{f\left( x \right) - f\left( {{x_0}} \right) - A\left( {x - {x_0}} \right)}}{{\abs{ {x - {x_0}} }}} = 0\]
 \end{enumerate}
@@ -1784,36 +1780,15 @@ Die $l\times n$ matrix $df\left( x_0\right) = {\left( \frac{\partial f^i}{\parti
 
 \begin{enumerate}
 \item \[f:\R^2\to\R\]
-\[f\left( {x,y} \right) = \left( {\begin{array}{*{20}{c}}
-{{x^2} - {y^2}}\\
-{2xy}
-\end{array}} \right)\]
-\[f\in C^\infty\left( \R^2:\R^2\right) \text{ mit } df\left( {x,y} \right) = \left( {\begin{array}{*{20}{c}}
-{2x}&{ - 2y}\\
-{2y}&{2x}
-\end{array}} \right) \]
+\[f\left( {x,y} \right) = \begin{pmatrix} {{x^2} - {y^2}} \\ {2xy} \end{pmatrix} \]
+\[f\in C^\infty\left( \R^2:\R^2\right) \text{ mit } df\left( {x,y} \right) = \begin{pmatrix} {2x}&{ - 2y} \\ {2y}&{2x} \end{pmatrix}\]
 \item Polarkoordinaten
 \begin{align*}
 f&:\lbrack 0,\infty)\times\lbrack 0,2\pi\rbrack\to\R^2\\
-\left( {\begin{array}{*{20}{c}}
-r\\
-\theta
-\end{array}} \right) &\to \left( {\begin{array}{*{20}{c}}
-x\\
-y
-\end{array}} \right) = \left( {\begin{array}{*{20}{c}}
-{r\cos \theta }\\
-{r\sin \theta }
-\end{array}} \right) = \left( {\begin{array}{*{20}{c}}
-{f'}\\
-{{f^2}}
-\end{array}} \right)\\
+\begin{pmatrix} r \\ \theta \end{pmatrix} &\to \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} {r\cos \theta} \\ {r\sin \theta } \end{pmatrix} = \begin{pmatrix} {f'} \\ {{f^2}} \end{pmatrix} \\
 df'\left( r,\theta\right)&=\left( \cos\theta, -r\sin\theta\right)\\
 df^2\left( r,\theta\right)&=\left( \sin\theta, r\cos\theta\right)\\
-df\left( {r,\theta } \right) &= \left( {\begin{array}{*{20}{c}}
-{\cos \theta }&{ - r\sin \theta }\\
-{\sin \theta }&{r\cos \theta }
-\end{array}} \right) \leftarrow {\text{Jacobi Matrix}}\\
+df\left( {r,\theta } \right) &= \begin{pmatrix} {\cos \theta }&{ - r\sin \theta } \\ {\sin \theta }&{r\cos \theta} \end{pmatrix} \leftarrow {\text{Jacobi Matrix}}\\
 \det\left( df\left( r,\theta\right)\right)&=r\left( \cos^2\theta + \sin^2\theta\right)=r
 \end{align*}
 
@@ -1943,24 +1918,7 @@ Die $x,y$ Anteile werde in Polarkoordinaten transformiert und die $z$-Koordinate
 \end{multicols}
 \begin{align*}
 f:&\lbrack 0,\infty)\to\lbrack 0,2\pi\rbrack\times\R\to\R^2\\
-\left( {\begin{array}{*{20}{c}}
-r\\
-\theta \\
-z
-\end{array}} \right) \to& \left( {\begin{array}{*{20}{c}}
-x\\
-y\\
-z
-\end{array}} \right) = \left( {\begin{array}{*{20}{c}}
-{r\cos \theta }\\
-{r\sin \theta }\\
-z
-\end{array}} \right) = \left( {\begin{array}{*{20}{c}}
-{f'}\\
-{{f^2}}\\
-{{f^3}}
-\end{array}} \right)\\
-df(r,\theta ,z) &=\left[ {\begin{array}{*{20}{c}}
+\begin{pmatrix} r \\ \theta \\ z \end{pmatrix} &\to \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} {r\cos \theta} \\ {r\sin \theta} \\ z \end{pmatrix} = \begin{pmatrix} {f'} \\ {{f^2}} \\ {{f^3}} \end{pmatrix} \\ df(r,\theta ,z) &=\left[ {\begin{array}{*{20}{c}}
 {\cos \theta }&{ - r\sin \theta }&0\\
 {\sin \theta }&{r\cos \theta }&0\\
 0&0&1
@@ -1998,28 +1956,11 @@ df(r,\theta ,z) &=\left[ {\begin{array}{*{20}{c}}
 
 
 \begin{align*}
-f:&\lbrack 0,\infty)\times\lbrack 0,2\pi\rbrack\times\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\to\R^3\\
-f\left( {\begin{array}{*{20}{c}}
-r\\
-\theta \\
-\psi
-\end{array}} \right) &=\left( {\begin{array}{*{20}{c}}
-{r\cos \theta \cos \psi }\\
-{r\sin \theta \cos \psi }\\
-{r\sin \psi }
-\end{array}} \right) = r\left( {\begin{array}{*{20}{c}}
-{\cos \theta \cos \psi }\\
-{\sin \theta \cos \psi }\\
-{\sin \psi }
-\end{array}} \right)\\
-df\left( {r,\theta ,\psi } \right) &=\left( {\begin{array}{*{20}{c}}
-{\cos \theta \cos \psi }&{ - r\sin \theta \cos \psi }&{ - r\cos \theta \sin \psi }\\
-{\sin \theta \cos \psi }&{r\cos \theta \cos \psi }&{ - r\sin \theta {\mathop{\rm sin?}\nolimits} }\\
-{\sin \psi }&0&{r\cos \psi }
-\end{array}} \right)\\
+f:&\lbrack 0,\infty)\times\lbrack 0,2\pi\rbrack\times\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\to\R^3 \\
+f\begin{pmatrix} r \\ \theta \\ \psi \end{pmatrix} &= \begin{pmatrix} {r\cos \theta \cos \psi }\\ {r\sin \theta \cos \psi } \\ {r\sin \psi } \end{pmatrix} = r \begin{pmatrix} {\cos \theta \cos \psi} \\ {\sin \theta \cos \psi} \\ {\sin \psi } \end{pmatrix} \\ 
+df\left( {r,\theta ,\psi } \right) &= \begin{pmatrix} {\cos \theta \cos \psi }&{ - r\sin \theta \cos \psi }&{ - r\cos \theta \sin \psi } \\ {\sin \theta \cos \psi }&{r\cos \theta \cos \psi }&{ - r\sin \theta \sin \psi} \\ {\sin \psi }&0&{r\cos \psi } \end{pmatrix} \\
 \det\left( df\right)&=r^2cos\psi
 \end{align*}
-\todo{Check question mark, chopped content, page 205.3}
 
 \begin{center}
 \begin{tikzpicture}[scale=0.5]
@@ -2050,8 +1991,6 @@ df\left( {r,\theta ,\psi } \right) &=\left( {\begin{array}{*{20}{c}}
 \draw (12,2) node [anchor=north]{$\theta:$ Längengrad};
 
 \end{tikzpicture}
-\end{center}
-\begin{center}
 (Punktsymmetrie zum Koordinatenursprung)
 \end{center}
 \end{enumerate}
@@ -2076,43 +2015,20 @@ Dann ist die Funktion $f\circ g:\Omega\to\R^m$ an der Stelle $x_0$ differenzierb
 Sei
 \begin{align*}
 f:\R^2 & \to\R^2\\
-\left( x,y\right) & \to\left( {\begin{array}{*{20}{c}}
-{{x^2} - {y^2}}\\
-{2xy}
-\end{array}} \right) \hspace{20mm}df = \left( {\begin{array}{*{20}{c}}
-{2x}&{ - 2y}\\
-{2y}&{2x}
-\end{array}} \right)
+\left( x,y\right) & \mapsto \begin{pmatrix} {{x^2} - {y^2}} \\ {2xy} \end{pmatrix}
+\hspace{20mm}df = \begin{pmatrix} {2x}&{-2y} \\ {2y}&{2x} \end{pmatrix}
 \end{align*}
 \begin{align*}
 g:\R^3 & \to\R^2\\
-\left( x,y,z\right) & \to\left( {\begin{array}{*{20}{c}}
-{{x^2} +{y^2}+{z^2}}\\
-{xyz}
-\end{array}} \right) \hspace{15mm}dg = \left( {\begin{array}{*{20}{c}}
-{2x}&{2y}&{2z}\\
-{yz}&{xz}&{xy}
-\end{array}} \right)
+\left( x,y,z\right) & \mapsto \begin{pmatrix} {{x^2} +{y^2}+{z^2}} \\ {xyz} \end{pmatrix} \hspace{15mm}dg = \begin{pmatrix} {2x}&{2y}&{2z} \\ {yz}&{xz}&{xy} \end{pmatrix}
 \end{align*}
 \begin{align*}
 \left( f\circ g\right):\R^3 & \to\R^2\\
-\left(x,y,z\right)&\to \left( {\begin{array}{*{20}{c}}
-{{{\left( {{x^2} + {y^2} + {z^2}} \right)}^2} - {{\left( {xyz} \right)}^2}}\\
-{2\left( {{x^2} + {y^2} + {z^2}} \right)\left( {xyz} \right)}
-\end{array}} \right)
+\left(x,y,z\right)&\mapsto \begin{pmatrix} {{{\left( {{x^2} + {y^2} + {z^2}} \right)}^2} - {{\left( {xyz} \right)}^2}} \\ {2\left( {{x^2} + {y^2} + {z^2}} \right)\left( {xyz} \right)} \end{pmatrix}
 \end{align*}
 \begin{align*}
 d\left( {f \circ g} \right)\left( {x,y,z} \right)&= df\left( {g\left( {x,y,z} \right)} \right) \cdot dg\left( {x,y,z} \right)\\
-&= \left( {\begin{array}{*{20}{c}}
-{2\left( {{x^2} + {y^2} + {z^2}} \right)}&{ - 2xyz}\\
-{2xyz}&{2\left( {{x^2} + {y^2} + {z^2}} \right)}
-\end{array}} \right)\left( {\begin{array}{*{20}{c}}
-{2x}&{2y}&{2z}\\
-{yz}&{xz}&{xy}
-\end{array}} \right)\\
-&=\left( {\begin{array}{*{20}{c}}
-{4x\left( {{x^2} + {y^2} + {z^2}} \right) - 2x{y^2}{z^2}}& * & * \\
- * & * & * \\
- * & * & *
-\end{array}} \right)
+&= \begin{pmatrix} {2\left( {{x^2} + {y^2} + {z^2}} \right)}&{ - 2xyz} \\ {2xyz}&{2\left( {{x^2} + {y^2} + {z^2}} \right)} \end{pmatrix} \begin{pmatrix} {2x}&{2y}&{2z} \\ {yz}&{xz}&{xy} \end{pmatrix} \\
+&=\begin{pmatrix} {4x\left( {{x^2} + {y^2} + {z^2}} \right) - 2x{y^2}{z^2}}& * & * \\
+ * & * & * \\  * & * & * \end{pmatrix}
 \end{align*}
