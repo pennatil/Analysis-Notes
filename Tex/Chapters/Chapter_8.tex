@@ -769,10 +769,11 @@ Dies ist ein Beispiel der $1-$Form
 
 \begin{definition}{8.26}
 Eine Differentialform von Grad 1 (auch ``$1-$Form'') auf $\Omega$ ist eine Abbildung \[\lambda :\Omega\to L\left(\R^n,\R\right)\]
+die jedem $x\in\Omega$ eine lineare Abbildung $\lambda(x):\R^{n}\to\R$ zuordnet.
 \end{definition}
 \subsubsection*{Beispiel 8.27}
 \begin{enumerate}
-\item Seien $x^i:\R^n\to\R$ die Koordinatenfunktion, $1\leq i\leq n$. Für jedes $x_0\in\R^n$ ist $dx^i\left(x_0\right)\in L\left( \R^n,\R\right)$; dies führt zur $1-$Form
+\item Seien $x^i:\R^n\to\R$ die Koordinatenfunktionen, $1\leq i\leq n$. Für jedes $x_0\in\R^n$ ist $dx^i\left(x_0\right)\in L\left( \R^n,\R\right)$; dies führt zur $1-$Form
 \begin{align*}
 dx^i:\R^n&\to L\left( \R^n,\R\right)\\
 x_0 &\mapsto dx^i\left( x_0\right)
@@ -780,7 +781,7 @@ x_0 &\mapsto dx^i\left( x_0\right)
 Für jedes $x_0\in\R^n$ gilt $dx^i\left(e_j\right)=\delta_{ij}$, also bilden $dx^1\left( x_0\right),\dots,dx^n\left( x_0\right)$ eine Basis für $L\left(\R^n,\R\right)$, $\forall x\in\R^n$.\\
 
 Eine beliebige $1-$Form $\lambda :\R^n\to L\left(\R^n,\R\right)$ lässt sich dann eindeutig wie folgt darstellen \[\lambda \left( {{x_0}} \right) = \sum\limits_{i = 1}^n {{\lambda _i}\left( {{x_0}} \right)d{x^i}\left( {{x_0}} \right)} \] wobei $\lambda_i:\R^n\to\R$ Funktionen sind.
-\item Für jedes $f\in C^1\left(\Omega\right)$ ist das Differential $df$ eine $1-Form$ \[df = \frac{{\partial f}}{{\partial {x^1}}}d{x^1} + \frac{{\partial f}}{{\partial {x^2}}}d{x^2} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}d{x^n}\]
+\item Für jedes $f\in C^1\left(\Omega\right)$ ist das Differential $df$ eine $1-$Form \[df = \frac{{\partial f}}{{\partial {x^1}}}d{x^1} + \frac{{\partial f}}{{\partial {x^2}}}d{x^2} +  \ldots  + \frac{{\partial f}}{{\partial {x^n}}}d{x^n}\]
 \item Der Ausdruck $\lambda\left(x,y,z\right)=3dx+5zdy+xdz$ definiert eine $1-$Form auf $\R^3$ mit
 \begin{align*}
 & \lambda_1\left(x,y,z\right)=3\\
@@ -790,13 +791,13 @@ Eine beliebige $1-$Form $\lambda :\R^n\to L\left(\R^n,\R\right)$ lässt sich dan
 \end{enumerate}
 \begin{definition}{8.28}
 Ein Vektorfeld auf $\Omega\subset\R^n$ ist eine Abbildung $v:\Omega\to\R^n$
-\end{definition}\todo[inline]{Does the definition include the examples? page 153 top}
+\end{definition}
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
 \item \begin{align*}
 v:\R^2 &\to\R^2\\
-\left( x,y\right) &\to\left( 2xy,x^2\right)
+\left( x,y\right) &\mapsto( 2xy,x^2)
 \end{align*}
 
 \begin{center}
@@ -828,17 +829,17 @@ v:\R^2 &\to\R^2\\
 \textcolor{red}{PLEASE SUGGEST SOME COORDINATES, AS I CANNOT REPLICATE YOUR DRAWING!}}
 \end{enumerate}
 \subsubsection*{Bemerkung 8.29}
-Sei $<,>$ das übliche Skalarprodukt auf $\R^n$, d.h. \[ < x,y > : = \sum\limits_{i = 1}^n {{x^i}{y^i}} \]
+Sei $<,>$ das übliche Skalarprodukt auf $\R^n$, d.h. \[ < x,y >\, \defeq \sum\limits_{i = 1}^n {{x^i}{y^i}} \]
 Mittels $<,>$ kann man von $1-$Formen zu Vektorfeldern und umgekehrt übergehen. Dies geht wie folgt:
 \begin{enumerate}
 \item Sei $v:\Omega\to\R^n$ ein Vektorfeld. Dann definieren wir $\forall x\in\Omega$, $\omega\in\R^n$
 \[\lambda (x)(\omega):= < v(x),\omega >\] Offensichtlich $\lambda (x)\in\left( \R^n, \R\right)$ und somit ist
 \begin{align*}
 \lambda : \Omega &\to L\left(\R^n, \R\right) \\
-x &\to\lambda (x): \R^n \to\R\\
-&\hspace{17.5mm}\omega \to <v(x),\omega >
+x &\mapsto\lambda (x): \R^n \to\R\\
+&\hspace{17.5mm}\omega \mapsto <v(x),\omega >
 \end{align*}
-eine $1-$Form auf $\Omega$
+eine $1-$Form auf $\Omega$.
 \end{enumerate}
 \underline{Umgekehrt}
 \begin{enumerate}[\indent 2.]
@@ -847,9 +848,9 @@ eine $1-$Form auf $\Omega$
 Wir definieren
 \begin{align*}
 v:\Omega &\to\R^n\\
-x &\to \left( \lambda _1(x),\lambda _2(x),\dots,\lambda _n(x) \right)
+x &\mapsto \left( \lambda _1(x),\lambda _2(x),\dots,\lambda _n(x) \right)
 \end{align*}
-dann ist $v$ ein Vektorfeld und \[\lambda (x)(\omega)= < v(x),\omega>\] Sei $\omega = \omega^1e_1+\omega^2 e_2 + \dots + \omega^n e_n$. Dann
+dann ist $v$ ein Vektorfeld und \[\lambda (x)(\omega)= \;< v(x),\omega>\] Sei $\omega = \omega^1e_1+\omega^2 e_2 + \dots + \omega^n e_n$. Dann
 \begin{align*}
 \lambda (x)(\omega ) = & \sum\limits_{i = 1}^n {{\lambda _i}(x)d{x^i}(\omega )}\\
 = & \sum\limits_{i = 1}^n {{\lambda _i}(x)d{x^i}\left( {{\omega ^1}{e_1} + {\omega ^2}{e_2} +  \ldots  + {\omega ^n}{e_n}} \right)}\\
@@ -863,7 +864,7 @@ Diese Diskussion können wir auf das Differential einer Funktion anwenden
 \end{enumerate}
 
 \begin{definition}{8.30}
-Sei $f\in C^1\left(\Omega\right)$. Das durch \[< v(x),\omega >:=df(x)(\omega ), \omega\in\R^n\] definierte Vektorfeld heisst Gradientenfeld von $f$ und wird mit $v(x)=\nabla f(x)$ oder grad$f$ bezeichnet. \\
+Sei $f\in C^1\left(\Omega\right)$. Das durch \[< v(x),\omega >\;\defeq df(x)(\omega ),\; \omega\in\R^n\] definierte Vektorfeld heisst Gradientenfeld von $f$ und wird mit $v(x)=\nabla f(x)$ oder $\grad{f}$ bezeichnet. \\
 
 Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\R^n$ folgt die Darstellung
 \[\nabla f(x) = \left( {\begin{array}{*{20}{c}}
@@ -876,34 +877,35 @@ Bezüglich der Standardbasis $e_1,\dots, e_n$ der $\R^n$ folgt die Darstellung
 \subsubsection*{Satz 8.31}
 Sei $f\in C^1\left(\Omega\right)$ und $x_0\in\Omega$. Dann gibt $\nabla f\left(x_0\right)$ die Richtung und $\abs{ \nabla f\left(x_0\right)}$ den Betrag des steilsten Anstieges von $f$ an der Stelle $x_0$ an.
 \begin{beweis}{}
-Aus der Definition des Gradientenfeld folgt $\forall e\in\R^n$, Einheitsvektor $\mid\mid e\mid\mid =1$ \[df\left(x_0\right)\left( e\right)=< \nabla f\left( x_0\right) ,e >\]
+Aus der Definition des Gradientenfeld folgt $\forall e\in\R^n$, Einheitsvektor $\norm{e} =1$ \[df\left(x_0\right)\left( e\right)=< \nabla f\left( x_0\right) ,e >\]
 
 Mit Cauchy-Schwarz folgt
-\[<\nabla f\left( x_0\right)>\leq\norm{\nabla f\left( x_0\right)}\norm{ e} = \norm{ \nabla f\left( x_0\right)}\]
+\[<\nabla f\left( x_0\right)>\; \leq\norm{\nabla f\left( x_0\right)}\norm{e} = \norm{\nabla f\left( x_0\right)}\]
 mit Gleichheit genau dann, wenn $e$ ein positives Vielfaches von $\nabla f\left( x_0\right)$ ist, nämlich \[e=\frac{\nabla f\left( x_0\right)}{\abs{ \nabla f\left( x_0\right)}}\] \[\Rightarrow df\left( x_0\right) e \leq \abs{ \nabla f\left( x_0\right)}\]
 mit Gleichheit für $e=\frac{\nabla f\left( x_0\right)}{\abs{ \nabla f\left( x_0\right)}}$
-%END BEWEIS
-$\nabla f\left( x_0\right)\not= 0\Rightarrow \nabla f\left( x_0\right)$ zeigt die Richtung an, in der $f$ am schnellsten wächst.\\
 \end{beweis}
+
+$\nabla f\left( x_0\right)\not= 0\Rightarrow \nabla f\left( x_0\right)$ zeigt die Richtung an, in der $f$ am schnellsten wächst.\\
 
 
 \subsubsection*{Geometrische Interpretation}
-Sei $f:\R^n\to\R, C^1$. Für jedes $s\in\R$ wird $f^{-1}(s)=\left\{ x\in\R^n\mid f(x)=s\right\}$ Niveaufläche genannt.
+Sei $f:\R^n\to\R, C^1$. Für jedes $s\in\R$ wird $f^{-1}(s)=\left\{ x\in\R^n\mid f(x)=s\right\}$ \emph{Niveaufläche} genannt.
 
 \subsubsection*{Beispiel}
 \begin{enumerate}
     \item \begin{align*}
  f:\R^3 &\to\R\\
- \left( x,y,z\right) &\to x^2 +y^2 +z^2
+ \left( x,y,z\right) &\mapsto x^2 +y^2 +z^2
  \end{align*}
 dann ist $f^{-1}(s)=$ Sphäre mit Zentrum $O$ und Radius $\sqrt{s}$
-\item $f\left( x,y\right) = xy$ ist ein hyperbolischer Parabolid mit Niveaulinien \missingfigure{page 158, bottom, use minipage\\\textcolor{red}{ARE YOU SURE THIS IS NOT $x^2-y^2$?? I CAN'T REPLICATE YOUR DRAWING HERE}} $f:\R^n \to\R$. Nun sei $x_0\in\Omega$ mit $f\left( x_0\right) = s$, i.e. $x_0 \in f^{-1} (s)$. Sei $\gamma :\lbrack -1,1\rbrack\to \R^n$ ein differenzierbare Kurve durch $x_0$ mit $\gamma\lbrack -1,1\rbrack\subset f^{-1}(s)$, $\gamma (0)=x_0$
+\item $f\left( x,y\right) = xy$ ist ein hyperbolischer Parabolid mit Niveaulinien \missingfigure{page 158, bottom, use minipage\\\textcolor{red}{ARE YOU SURE THIS IS NOT $x^2-y^2$? I CAN'T REPLICATE YOUR DRAWING HERE}} \\
+
+$f:\R^n \to\R$. Nun sei $x_0\in\Omega$ mit $f\left( x_0\right) = s$, i.e. $x_0 \in f^{-1} (s)$. Sei $\gamma :\lbrack -1,1\rbrack\to \R^n$ ein differenzierbare Kurve durch $x_0$ mit $\gamma\lbrack -1,1\rbrack\subset f^{-1}(s)$, $\gamma (0)=x_0$
 
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
 \draw[] (-5,0) -- (5,0) -- (3,-4) --(-7,-4) --  (-5,0);
-\draw[<-,very thick] (-4,0) -- (-1,0);
-\draw[<-,very thick] (-4,0) -- (-1,0);
+%\draw[<-,very thick] (-4,0) -- (-1,0);
 
 \draw[] (-4,-3) parabola bend (-2,-2)(-1.5,-2.05);
 
@@ -914,7 +916,7 @@ dann ist $f^{-1}(s)=$ Sphäre mit Zentrum $O$ und Radius $\sqrt{s}$
 \draw (-1.5,-2.25) node[anchor=north] {$x_0=\gamma(0)$};
 \draw (-0.1,-1.85) node[anchor=south] {$\gamma'(0)$};
 \draw (2,-1.5) node[anchor=north] {$\gamma$};
-\draw (-2.5,0) node[anchor=south] {$\nabla f\left( x_0\right)$};
+\draw (-2.5,-1.5) node[anchor=south] {$\nabla f\left( x_0\right)$};
 \draw (5,-0.5) node[anchor=west] {$f^{-1}(s)$};
 \draw [<-] (4.5,0.2) -- (5,1) node[anchor=south]{Niveaufläche};
 
@@ -927,10 +929,10 @@ Dann gilt $f\left( \gamma (t)\right)=s$, $\forall t\in\lbrack -1,1\rbrack$ und e
 \hspace{5mm} \Downarrow \\
 df\left( {\gamma (t)} \right) \cdot \gamma '(t) = 0 =  < \nabla f\left( {\gamma (t)} \right),\gamma '(t) >
 \end{array}\]
-Insbesondere $0=df\left(\gamma (0)\right)\cdot\gamma'(0)= < \nabla f\left( x_0\right),\gamma'(0) >$ d.h. $\nabla f\left( x_0\right)$ steht senkrecht zur Niveauflache von $f$ durch $x_0$
+Insbesondere $0=df\left(\gamma (0)\right)\cdot\gamma'(0)= < \nabla f\left( x_0\right),\gamma'(0) >$ d.h. $\nabla f\left( x_0\right)$ steht senkrecht zur Niveaufläche von $f$ durch $x_0$
 \subsubsection*{Beispiel}
 Sei $f(x,y)=\frac{x^2-y^2}{2}$, $x,y\in\R^2$ \[\nabla f(x,y)=(x,-y)\] Sei $\left( x_0,y_0\right) = (1,-1)$ \[\nabla f(1,-1)=(1,1)\hspace{10mm} \left( \nabla f(1,-1)\right) = \sqrt{2}\] \[\frac{\nabla f}{\abs{ \nabla f}}(1,-1)=\frac{1}{\sqrt{2}}(1,1)\]
-\item Im Punkt $P$ biegt der Bergweg ab; nach Südosten geht er mit 25\% Steigung bergauf, nach Süden mit 20\% Gefälle bergab. Der wanderer im Nebel möchte über die Wiese möglichst rasch zum Gipfel. In welche Richtung muss er gehen und wie steil ist es dorthin?\\
+\item Im Punkt $P$ biegt der Bergweg ab; nach Südosten geht er mit 25\% Steigung bergauf, nach Süden mit 20\% Gefälle bergab. Der Wanderer im Nebel möchte über die Wiese möglichst rasch zum Gipfel. In welche Richtung muss er gehen und wie steil ist es dorthin?\\
 
 Wir legen das Koordinatensystem so, dass die $x-$Achse nach Osten und die $y-$Achse nach Norden zeigt, und setzen voraus, dass die Höhenfunktion $h$ differenzierbar ist. Wir wollen ihren Gradienten in $P$ $\nabla h(P)$ bestimmen. Nach Voraussetzung hat $h$ die beiden Richtungsableitungen \[dh\left( P\right)\left( v_1\right)=0.25\hspace{10mm}dh\left( P\right)\left(  v_2\right)=-0.2\] wobei \[v_1=\left( \frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}}\right)\hspace{10mm}v_2=(0,-1)\]
 
@@ -959,17 +961,17 @@ und die Steigung in diese Richtung ist
 \section{Wegintegrale}
 Wir haben in Bemerkung 8.29 gesehen, dass man mittels dem üblichen Skalarprodukt $<,>$ von $1-$Formen zu Vektorfeldern und umgekehrt übergehen kann. \\
 
-In diesem Kapitel werden wir das ``Wegintegral'' von $1-$Formen oder \todo{can't read, page 162 middle} von Vektorfeldern längs eine Kurve studieren. Dazu untersuchen wir zunächst Kurven in $\R^n$
+In diesem Kapitel werden wir das ``Wegintegral'' von $1-$Formen oder ``Wegintegrale'' von Vektorfeldern längs eine Kurve studieren. Dazu untersuchen wir zunächst Kurven in $\R^n$
 
 \subsection*{Parameterdarstellung einer Kurve}
 Sei $\gamma\subset\R^n$ eine Kurve. Eine Parameterdarstellung (PD) von $\gamma$ ist eine Funktion
 \begin{align*}
 \gamma : I=\lbrack a,b\rbrack &\to\R^n\\
-t &\to \gamma (t)
+t &\mapsto \gamma (t)
 \end{align*}
-wobei $\gamma\left( t\right)$ ein Punkt $\gamma$ ist und jeder Punkt auf $\gamma$ kann als $\gamma\left( t\right)$ dargestellt werden
-\[\gamma\left( t\right) = \left( \gamma_1 (t),\dots,\gamma_n (t)\right)\]
-Die positive Richtung von $\gamma$ ist die Richtung mit der die Kurve durchgelaufen wird
+wobei $\gamma\left( t\right)$ ein Punkt $\gamma$ ist und jeder Punkt auf $\gamma$ als $\gamma\left( t\right)$ dargestellt werden kann:
+\[\gamma\left( t\right) = \left( \gamma_1 (t),\dots,\gamma_n (t)\right) \text{ mit } \gamma'(t)\neq 0,\: t\in [a,b] \]
+Die positive Richtung von $\gamma$ ist die Richtung mit der die Kurve durchgelaufen wird.
 \subsubsection*{Beispiel 8.32}
 \begin{enumerate}
 \item \[\gamma (t)=\left( a_1 +b_1 t,a_2 +b_2 t,a_3 +b_3 t\right)\text{, }t\in\R\]
@@ -1052,9 +1054,10 @@ Der Tangentialvektor zur Kurve an der Stelle $\gamma (t)$ ist $\gamma' (t)$ \[\g
 \end{enumerate}
 
 \begin{definition}{8.33}
-Das Wegintegral von $\vartheta$ längs $\gamma$
-\[\int\limits_\gamma  {vd\vec s}  = \int\limits_\gamma  {v(\gamma )d\gamma : = \int\limits_a^b { < v\left( {\gamma \left( t \right)} \right),\gamma '(t) > dt} } \] ${vd\vec s}=\gamma'(t)dt$ heisst gerichtetes Längenelement
+Das Wegintegral von $v$ längs $\gamma$
+\[\int\limits_\gamma  {vd\vec s}  = \int\limits_\gamma  {v(\gamma )d\gamma : = \int\limits_a^b { < v\left( {\gamma \left( t \right)} \right),\gamma '(t) > dt} } \] ${vd\vec s}=\gamma'(t)dt$ heisst gerichtetes Längenelement.
 \end{definition}
+
 \subsubsection*{Beispiel 8.34}
 Ein einführendes Beispiel: Sei $m$ ein Massenpunkt, der sich unter den Einfluss eines Kraftfeldes $F:\R^2\to\R$ bewegt.\\
 
@@ -1118,7 +1121,7 @@ $\Delta W= F\cdot \Delta (\gamma)=$ Kraftkomponente entlang des Weges mal zurüc
 Da sich Betrag und Richtung der Kraft sowie der jeweilige Winkel zum Weg vom Punkt zu Punkt ändern, gilt das zur Berechnung notwendige Skalarprodukt näherungsweise jeweils nur für ein Wegelement $\overrightarrow\Delta r$. Die Berechnung der Arbeit erfolgt daher in folgender Weise:
 \begin{enumerate}[\indent a)]
 \item Zerlegung des Weges in Teilabschnitte \[\Delta \gamma_1=\gamma (t_{i+1})-\gamma(t_i)=\frac{\Delta \gamma}{\Delta t}\cdot \Delta t\]
-\item Ermittlung der Arbeit \todo{can't read, page 167 middle; limenet: plus, grammar is totally wrong} Kraft: \[F\left( {\gamma \left( {{t_i}} \right)} \right) = F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right)\]
+\item Ermittlung der jeweils wirkenden Kraft: \[F\left( {\gamma \left( {{t_i}} \right)} \right) = F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right)\]
 \item Berechnen der Arbeit je Teilabschnitt-Skalarprodukt \[\Delta {W_i} = F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right) \cdot \Delta {\gamma _i}\]
 \item Aufsummieren der Teil-Arbeit \[W \approx \sum {\Delta {W_i} = \sum {F\left( {x\left( {{t_i}} \right),y\left( {{t_i}} \right)} \right)} }  \cdot \underbrace {\Delta \gamma }_{\frac{{\Delta \gamma }}{{\Delta t}} \cdot \Delta t}\]
 \item Durch Verkleinerung des Wegelementes enthält man den exakten Wert der geleisteten Arbeit
