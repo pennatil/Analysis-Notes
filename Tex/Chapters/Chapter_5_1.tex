@@ -4,16 +4,16 @@
 
 \begin{definition}{5.31}
 \begin{enumerate}
-\item $f:\Omega\to\R$ ist $m-$mal differenzierbar, falls $\underbrace{\left( \left( f'\right)'\dots\right)'}\limits_{m-\text{mal}}$ existiert. Die $m-$te iterierte Ableitung wird mit 
+\item $f:\Omega\to\R$ ist $m-$mal differenzierbar, falls $\underbrace{\left( \left( f'\right)'\dots\right)'}\limits_{m-\text{mal}}$ existiert. Die $m-$te iterierte Ableitung wird mit
 \[f^{(m)}=\frac{\partial^m f}{\partial x^m}:\Omega\to\R\]
 bezeichnet. Es gilt: $\forall k,l\geq 0$, $f^{\left(k+l\right)} = \left( f^{(k)}\right)^{\left(l\right)}$
-\item $f$ ist in $C^m\left( \Omega\right)$ falls $f$ $m-$mal differenzierbar ist, und alle Funktionen $f=f^{(0)},f', f^{(2)}, \dots, f^{(m)}$ stetig sind
-\item $f$ ist in $C^{\infty}\left( \Omega\right)$ falls $f\in C^m \left( \Omega\right)$, $\forall m \geq 0$
+\item $f$ ist in $C^m\left( \Omega\right)$, falls $f$ $m-$mal differenzierbar ist, und alle Funktionen $f=f^{(0)},f', f^{(2)}, \dots, f^{(m)}$ sind stetig
+\item $f$ ist in $C^{\infty}\left( \Omega\right)$, falls $f\in C^m \left( \Omega\right)$, $\forall m \geq 0$
 \end{enumerate}
 \end{definition}
 
 \subsubsection*{Korollar 5.32}
-Unter dem Voraussetzungen von Satz 5.29\todo{Add reference} ist $f(x)=\sum\limits_{n=0}^\infty a_nx^n$ in $C^\infty\left( -\rho, \rho\right)$ und die Ableitungen von $f$ erhält man durch Gliedweises differenzieren. 
+Unter den Voraussetzungen von Satz 5.29\todo{Add reference} ist $f(x)=\sum\limits_{n=0}^\infty a_nx^n$ in $C^\infty\left( -\rho, \rho\right)$ und die Ableitungen von $f$ erhält man durch gliedweises differenzieren.
 \subsubsection*{Formel}
 \begin{align*}
 f(x)&=\sum\limits_{n=0}^\infty a_nx^n, x\in\left( -\rho,\rho\right)\\
@@ -23,8 +23,8 @@ f^{(k)}(x)&=\sum\limits_{n=0}^\infty a_n(n)\cdot(n-1)\dots(n-k+1)\cdot x^{n-k}\\
 \Aboxed{f^{(k)}(x)&=\sum\limits_{n=k}^\infty a_n\frac{n!}{\left( n-k\right)!} x^{n-k}}
 \end{align*}
 
-\section{Taylor Formel}
-Wir beginnen, als Motivation, mit Polynomen. Sei 
+\section{Taylorformel}
+Wir beginnen, als Motivation, mit Polynomen. Sei
 \[P(x)=a_0+a_1x+a_2x^2+\dots+a_nx^n\]
 ein Polynom, grad $P\leq n$. Durch $x=(x-a)+a$ und Umordnen nach Potenzen von $(x-a)$ erhalten wir
 \[p(x)=b_0+b_1(x-a)+b_2(x-a)^2+\dots+b_n(x-a)^n\]
@@ -43,7 +43,7 @@ p(a)&=b_0\\
 p'(x)&=b_1+2b_2(x-a)+\dots+nb_n(x-a)\Rightarrow p'(a)=b_1\\
 p''(x)&=2b_2+6b_3(x-a)+\dots+n(n-1)(x-a)^{n-2}\Rightarrow p''(a)=2b_2\\
 \end{align*}
-Rekursiv: $p^{(j)}(a)=j!b_j$ mit der Konvention $b_j=0$ für $j\geq n+1$ da $p^{(n+1)}=0$. Es folgt 
+Rekursiv: $p^{(j)}(a)=j!b_j$ mit der Konvention $b_j=0$ für $j\geq n+1$ da $p^{(n+1)}=0$. Es folgt:
 \[p(x)=p(a)+p'(a)(x-a)+\frac{p''(a)}{2!}(x-a)^2+\dots+\frac{p^{(n)}(a)}{n!}\left( x-a\right)^n\]
 
 \subsubsection*{Beispiel}
@@ -54,14 +54,14 @@ p''(x)&=6x \hspace{15.2mm} p''(1)=6, \frac{p''(1)}{2!}=3\\
 p'''(x)&=6 \hspace{16mm} p'''(1)=6, \frac{p'''(1)}{3!}=1\\
 \end{align*}
 \[p(x)=3+4(x-1)+3(x-1)^2+(x-1)^3\]
-Folgendes ist dann näheliegend
+Folgendes ist dann naheliegend
 
 \subsubsection*{Satz 5.33}
 Sei $\lbrack a,b\rbrack\subset \Omega\subset\R$ und $f\in C^{m-1}\left( \Omega\right)$, $m-$mal differenzierbar auf $\Omega$. Dann gibt es $c\in(a,b)$:
 \[f(b)=f(a)+f'(a)(b-a)+\dots+f^{m-1}(a)\frac{(b-a)^{m-1}}{(m-1)!}+\frac{f^m(c)}{m!}(b-a)^m\]
 
 \begin{beweis}{}
-Wir betrachten die Funktion 
+Wir betrachten die Funktion
 \[g(x)=f(x)+f'(x)(b-x)+\dots+\frac{f^{m-1}(x)(b-x)^{m-1}}{(m-1)!}+\frac{K(b-x)^m}{m!}-f(b)\]
 die auf $\Omega$ differenzierbar ist. Dann ist $g(b)=0$. Wähle $K$ so dass $g(a)=0$. Dann gibt es $c\in (a,b)$ mit $g'(c)=0$. Wir berechnen jetzt $g'(x)$:
 \[g'(x)=f'(x)+\dots \left( \frac{f^{(j)}(x)(b-x)^j}{j!}\right)'+\dots+K\frac{m(b-x)^{m-1}}{m!}\]
@@ -78,41 +78,41 @@ g'(x)=&f'(x)\\
 &-K\frac{(b-x)^{m-1}}{(m-1)!}
 \end{align*}
 Also: \[g'(x)=\left[ f^{(m)}(x)-K\right]\frac{(b-x)^{m-1}}{(m-1)!}\]
-Aus $g'(c)=0$ folgt $\boxed{f^m(c)=K}$ und $g(a)=0$ nimmt folgendes Form an: 
+Aus $g'(c)=0$ folgt $\boxed{f^m(c)=K}$ und $g(a)=0$ nimmt folgende Form an:
 \[g(a)=0=f(a)+f'(a)(b-a)+\dots+\frac{f^{m-1}(c)(b-a)^{m-1}}{(m-1)!}+\frac{f^m(c)}{m!}(b-a)^m-f(b)\]
 \end{beweis}
 
 \subsubsection*{Korollar 5.34}
-Sei $f:(c,d)\to\R$ $m-$mal differenzierbar, seien $x_0,x\in (c,d)$. Dann gibt es $\xi\in (x_0,x)$ mit 
+Sei $f:(c,d)\to\R$ $m-$mal differenzierbar, seien $x_0,x\in (c,d)$. Dann gibt es $\xi\in (x_0,x)$ mit
 \begin{align*}
 f(x)=&f(x_0)+f'(x_0)(x-x_0)\\
 &\vdots \\
 &+f^{m-1}(x_0)\frac{(x-x_0)^{m-1}}{(m-1)!}\\
 &+\frac{f^m(\xi)(x-x_0)^m}{m!}
 \end{align*}
-Wir führen folgende terminologie ein: 
+Wir führen folgende Terminologie ein:
 \[T_mf(x;x_0) = f(x_0)+\dots+f^{(m)}(x_0)\frac{(x-x_0)^m}{m!}\]
 ist das Taylor Polynom $n-$ter Ordnung. $\left( f\in C^m\right)$ und
 \[R_mf(x;x_0):=f(x)-T_mf(x;x_0)\]
 ist der Restterm. \\
 
-Falls $f(m+1)-$mal differenzierbar ist in $\Omega$, so ist 
+Falls $f(m+1)-$mal differenzierbar in $\Omega$ ist, so ist
 \[R_mf(x;x_0)=f^{(m+1)}(\xi)\frac{\left( x-x_0\right)^{m+1}}{(m+1)!}, \xi\in\left( x_0,x_0\right)\]
 
 \subsubsection*{Bemerkung}
-Bei der Differenzierbarkeit haben wir gesehen, dass die lineare Funktion $f'(a)+f'(a)(x-a)$ im folgenden Sinne eine gute Approximation der Funktionen $f(x)$ darstellt: Es gilt 
+Bei der Differenzierbarkeit haben wir gesehen, dass die lineare Funktion $f'(a)+f'(a)(x-a)$ im folgenden Sinne eine gute Approximation der Funktion $f(x)$ darstellt: Es gilt
 \[f(x)=f(c)+f'(a)(x-a)+R_1f(x;a) = T_1f(x;a)+R_1f(x;a)\]
-und 
+und
 \[\lim\limits_{x\to a}\frac{R_1f(x;a)}{x-a} = \lim\limits_{x\to a}\left(\frac{f(x)-f(a)}{x-a}-f'(a)\right)=0\]
-Die Taylorformel gibt nun an, wie mann diese Approximation doch verbessern kann.
+Die Taylorformel gibt nun an, wie mann diese Approximation noch verbessern kann.
 \[f(x) = \underbrace {{T_m}f(x;a)}_{{\text{Approximation}}} + \underbrace {{R_m}f(x;a)}_{{\text{fehler}}}\]
 Für diesen Fehler gilt:
 \[\lim\limits_{x\to a}\frac{R_mf(x;a)}{(x-a)^m}=0\tag{\textasteriskcentered}\]
-Das bedeutet, dass wenn $x$ nähe bei $a$ ist, $R_mf(x;a)$ klein ist im Vergleich zu der schon sehr kleinen Grösse $(x-a)^m$. Für den Restterm $R_mf(x;a)$, haben wir die abschätzung \todo{not sure where the additional content goes, page 240 middle}
+Das bedeutet, dass wenn $x$ nahe bei $a$ ist, $R_mf(x;a)$ klein ist im Vergleich zu der schon sehr kleinen Grösse $(x-a)^m$. Für den Restterm $R_mf(x;a)$, haben wir die Abschätzung \todo{not sure where the additional content goes, page 240 middle}
 \[R_mf(x;a) = f(x)-T_mf(x;a) = \left[ f^m(\xi) -f^m(a)\right]\frac{(x-a)^m}{m!}\]
 
 \[\abs{R_mf(x;a)}<\sup\limits_{a<\xi<x}\abs{f^{(m)}(\xi)-f^m(a)}\frac{(x-a)^m}{m!}\]
-Falls $f\in C^{m+1}$, können wir Mittelwertsatz anwenden. Dann folgt 
+Falls $f\in C^{m+1}$, können wir denn Mittelwertsatz anwenden. Dann folgt:
 \begin{align*}
 \abs{R_mf(x;a)}&\leq\left( \sup\limits_{a<\xi<x}\abs{f^{(m+1}(\xi)}\right)\abs{x-a}\frac{(x-a)^m}{m!}\\
 &\leq M\frac{(x-a)^{m+1}}{m!}\\
@@ -154,25 +154,25 @@ Also
 T_1(x)&=x=T_2(x)\\
 T_3(x)&=x-\frac{x^3}{3}=T_4(x)
 \end{align*}
-Insbesondere 
+Insbesondere
 \[\abs{\sin(x)-x+\frac{x^3}{3}}\leq \frac{x^5}{5!}\]
-liefert für $\abs{x}$ klein ein sehr gute Approximation von, zum Beispiel, $x=\frac{1}{10}$
+liefert für ein kleines $\abs{x}$ eine sehr gute Approximation von, zum Beispiel, $x=\frac{1}{10}$
 \[\abs{\sin\left( \frac{1}{10}\right)-\frac{1}{10}+\frac{1}{1000}}<\frac{1}{10^5\cdot 5!}\]
 \[\sin\left( \frac{1}{10}\right)\approx \frac{1}{10}-\frac{1}{1000}=0.1-0.001=0.099\]
 
 \subsection*{Lokale Extrema}
-Wir haben schon gesehen die folgende Satz
+Wir haben den folgenden Satz schon gesehen:
 
 \subsubsection*{Satz 5.12}
 Sei $f:\lbrack a,b\rbrack\to\R$ stetig und auf $(a,b)$ differenzierbar. Sei $z_+\in( a,b)$ mit $f(z_+)=\max\left\{ f(x):x\in\lbrack a,b\rbrack\right\}$. Dann gilt $f'(z_+)=0$\\
 
-\noindent Mittels Taylorformel können wir lokale Extrema (Max oder Min) diskutieren. \\
+\noindent Mittels Taylorformel können wir lokale Extrema (Maxima und Minima) diskutieren. \\
 
 \noindent Sei $\Omega\subseteq\R$, $f:\Omega\to\R, x_0\in\Omega$
 
 \begin{definition}{5.38}
 \begin{enumerate}
-\item $x_0\in\Omega\subset\R$ heisst lokale Maximalstelle (bzw. Minimalstelle) von $f$ falls es $r>0$ gibt s.d. $\forall x\in B_r(x_0)$, $f(x)\leq f(x_0)$ (resp. $f(x)\geq f(x_0)$, $\forall x\in B_r(x_0)$). Die lokale Minimalstelle (bzw. Max) ist strikt falls $f(x)>f(x_0)$ (bzw. $f(x)<f(x_0)$)
+\item $x_0\in\Omega\subset\R$ heisst lokale Maximalstelle (bzw. Minimalstelle) von $f$, falls es $r>0$ gibt s.d. $\forall x\in B_r(x_0)$, $f(x)\leq f(x_0)$ (resp. $f(x)\geq f(x_0)$, $\forall x\in B_r(x_0)$). Die lokale Minimalstelle (bzw. Maximalstelle) ist strikt, falls $f(x)>f(x_0)$ (bzw. $f(x)<f(x_0)$)
 \end{enumerate}
 
 \end{definition}
