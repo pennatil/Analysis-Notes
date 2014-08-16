@@ -173,21 +173,21 @@ Sei $f:\lbrack a,b\rbrack\to\R$ stetig und auf $(a,b)$ differenzierbar. Sei $z_+
 \begin{definition}{5.38}
 \begin{enumerate}
 \item $x_0\in\Omega\subset\R$ heisst lokale Maximalstelle (bzw. Minimalstelle) von $f$, falls es $r>0$ gibt s.d. $\forall x\in B_r(x_0)$, $f(x)\leq f(x_0)$ (resp. $f(x)\geq f(x_0)$, $\forall x\in B_r(x_0)$). Die lokale Minimalstelle (bzw. Maximalstelle) ist strikt, falls $f(x)>f(x_0)$ (bzw. $f(x)<f(x_0)$)
-\item Lokale extremalstelle: entweder lokale Minimalstelle oder Maximalstelle\todo[inline]{2 issues with this: Numbering is wrong (according to the handwritten notes) and there is an end indicator like the one for a beweis, page 243 top}
+\item Lokale Extremalstelle: entweder lokale Minimalstelle oder Maximalstelle\todo[inline]{2 issues with this: Numbering is wrong (according to the handwritten notes) and there is an end indicator like the one for a beweis, page 243 top}
 \end{enumerate}
 \end{definition}
-Falls $f$ an einer lokalen Minimalstelle $x_0$ differenzierbar ist, so folgt wie in Beweis von Satz 5.12 \todo{Maybe add a reference?}
+Falls $f$ an einer lokalen Minimalstelle $x_0$ differenzierbar ist, so folgt wie im Beweis von Satz 5.12 \todo{Maybe add a reference?}
 \[0\leq \lim\limits_{x\downarrow x_0}\frac{f(x)-f(x_0)}{x-x_0}=f'(x_0)=\lim\limits_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}\leq 0\]
-Also $f'(x_0)=0$. Allgemein gilt
+Also $f'(x_0)=0$. Allgemein gilt:
 \subsubsection*{Satz 5.39}
-Sei $\Omega\subset\R$, $f:\Omega\to\R$, $f\in C^{\infty}\left( \Omega\right)$, $x_0\in\Omega$. Dann tritt einer der Folgende Fälle ein
+Sei $\Omega\subset\R$, $f:\Omega\to\R$, $f\in C^{\infty}\left( \Omega\right)$, $x_0\in\Omega$. Dann tritt einer der folgenden Fälle ein
 \begin{enumerate}
 \item $f^j(x_0)=0$, $\forall j\geq 1$
 \item $m:=1+\max\left\{ j:f^i(x_0)=0, 1\leq i\leq j \right\} <+\infty $, d.h. $f^m(x_0)\not=0$, und $f^{(1)}(x_0)=0=f^{(2)}(x_0)=\dots=f^{(n-1)}(x_0)=$\todo{Chopped content, page 244 top}
 \begin{enumerate}
 \item[\hspace{4mm}(2.1)] $m$ ist ungerade, dann ist $x_0$ kein Extremalstelle.
-\item[\hspace{4mm}(2.2)] $m$ ist gerade und $f^m(x_0)>0$, dann ist $x_0$ strikte lokale Minimalstelle
-\item[\hspace{4mm}(2.3)] $m$ ist gerade und $f^m(x_0)<0$, dann ist $x_0$ strikte lokale Maximalstelle
+\item[\hspace{4mm}(2.2)] $m$ ist gerade und $f^m(x_0)>0$, dann ist $x_0$ eine strikte lokale Minimalstelle
+\item[\hspace{4mm}(2.3)] $m$ ist gerade und $f^m(x_0)<0$, dann ist $x_0$ eine strikte lokale Maximalstelle
 \end{enumerate}
 \end{enumerate}
 
@@ -195,20 +195,23 @@ Sei $\Omega\subset\R$, $f:\Omega\to\R$, $f\in C^{\infty}\left( \Omega\right)$, $
 Falls (1.) nicht eintritt, so tritt (2.) ein. Also sei \[f^{(1)}(x_0)=f^{(2)}(x_0)=\dots=f^{(m-1)}(x_0)=0\text{ und }f^{(m)}(x_0)\not=0\]
 Jetzt wenden wir Taylorformel an
 \[f(x)=f(x_0)+f'(x_0)(x-x_0)+\dots+\frac{f^{m-1}(x_0)}{m!}(x-x_0)^m+\frac{f^{m}(\xi)}{m!}(x-x_0)^m\]
-für ein $\xi\in(x,x_0)$. Aus $f'(_0)=\dots=f^{m-1}(x_0)=0$ folgt 
+für ein $\xi\in(x,x_0)$. Aus $f'(_0)=\dots=f^{m-1}(x_0)=0$ folgt
 \[f(x)=f(x_0)+f^m(\xi)\frac{(x-x_0)^m}{m!}, \xi\in(x,x_0)\]
 \begin{enumerate}
-\item[\hspace{4mm}(2.1)] $m$ ist ungerade: Falls $f$ an $yx_0$ ein lokales minimum hat, so folgt 
+\item[\hspace{4mm}(2.1)] $m$ ist ungerade: Falls $f$ an $yx_0$ ein lokales Minimum hat, so folgt
 \[{f^m}({x_0})\mathop  = \limits^{{f^m}{\text{ stetig}}} \mathop {\lim }\limits_{\xi  \to {x_0}} {f^m}(\xi ) = \mathop {\lim }\limits_{\xi  \to {x_0}} \frac{{f(x) - f({x_0})}}{{{{(x - {x_0})}^m}}} \cdot m!\]
-Da $m$ ungerade ist 
-\[\begin{array}{*{20}{c}}{{{(x - {x_0})}^m} > 0,x > {x_0}}\\{{{(x - {x_0})}^m} < 0,x < {x_0}}\end{array}=\begin{cases}
+Da $m$ ungerade ist
+\[\begin{array}{*{20}{c}}
+{{{(x - {x_0})}^m} > 0,x > {x_0}}\\
+{{{(x - {x_0})}^m} < 0,x < {x_0}}
+\end{array}=\begin{cases}
 \lim\limits_{x\downarrow x_0}\frac{f(x)-f(x_0)}{(x-x_0)^m}\cdot m! & \geq 0\\
 \lim\limits_{x\uparrow x_0}\frac{f(x)-f(x_0)}{(x-x_0)^m}\cdot m! & \leq 0
 \end{cases}\]
-$\Rightarrow f^m(x_0)=0$ . Widerspruch zur $f^m(x_0)\not=0$. Analog für $x_0$ lokales maximalstelle
-\item[\hspace{4mm}(2.2)] Falls $m$ gerade ist, und $f^m(x_0)>0$ dann folgt aus 
+$\Rightarrow f^m(x_0)=0$ . Widerspruch zur $f^m(x_0)\not=0$. Analog für $x_0$ lokale Maximalstelle
+\item[\hspace{4mm}(2.2)] Falls $m$ gerade ist, und $f^m(x_0)>0$ dann folgt aus
 \[0<f^m(x_0)=\lim\limits_{\xi\to x_0}\frac{f(x)-f(x_0)}{(x-x_0)^m}\cdot m!\]
-dass für $x\in(x_0-\epsilon, x_0+\epsilon)$, $x\not=x_0$, $f(x)-f(x_0)>0\Rightarrow f(x)>f(x_0)$, $x_0$ ein lokales minimum.
+dass für $x\in(x_0-\epsilon, x_0+\epsilon)$, $x\not=x_0$, $f(x)-f(x_0)>0\Rightarrow f(x)>f(x_0)$, $x_0$ ein lokales Minimum.
 \item[\hspace{4mm}(2.3)] $m$ ist gerade,  $f^m(x_0)<0$, analog.
 \end{enumerate}
 \todo[inline]{Not sure where the beweis on page 244 ends}
@@ -268,21 +271,21 @@ $f^{(2)}(x_0)<0$&\begin{tikzpicture}[scale=0.5]
 \end{tikzpicture} & {$f=1-(x-x_0)^2$}
 \end{tabular}\todo{(Clear) problem with layout}
 \end{enumerate}
-Für $m$ ungerade $\geq 3$ spricht man von einem Wendepunkt. 
+Für $m$ ungerade $\geq 3$ spricht man von einem Wendepunkt.
 
 \subsubsection*{Beispiel 5.40}
 \begin{enumerate}
-\item Der Fall (1.) tritt man ein z.B. $f(x)=e^{-\frac{1}{x^2}}$, $x\in\R$ ist auf ganz $\R C^\infty$ und $f^{(j)}(0)=0$, $\forall j\geq 1$
+\item Der Fall (1.) tritt man ein z.B. $f(x)=e^{-\frac{1}{x^2}}$, $x\in\R$ ist auf ganz $\R$ $C^\infty$ und $f^{(j)}(0)=0$, $\forall j\geq 1$
 \item \begin{align*}
 f(x)&=x^4-x^2+1\hspace{5mm} f\left(\pm\frac{1}{\sqrt{2}}\right)=\frac{1}{4}-\frac{1}{2}+1=\frac{3}{4}\\
 f'(x)&=4x^3-2x=2x(2x^2-1)=0 \Leftrightarrow x\in\left\{\pm\frac{1}{\sqrt{2}}, 0\right\}\\
 f''(x)&=12x^2-2\\
-f'''(0)&=-2<0\Rightarrow x_0=0\text{ Lokale st. maximum}\\
-f''''\left(\pm\frac{1}{\sqrt{2}}\right)&=4>0\Rightarrow x_0=\pm\frac{1}{\sqrt{2}}\text{ Lokale st. minimum}
+f'''(0)&=-2<0\Rightarrow x_0=0\text{ Lokale Maximalstelle}\\
+f''''\left(\pm\frac{1}{\sqrt{2}}\right)&=4>0\Rightarrow x_0=\pm\frac{1}{\sqrt{2}}\text{ Lokale Minimalstelle}
 \end{align*}
 \begin{center}
-\begin{tikzpicture}[domain=-1.2:1.2, scale=2] 
-\draw[] plot[id=x,samples=100] function{x**4-x**2+1}; 
+\begin{tikzpicture}[domain=-1.2:1.2, scale=2]
+\draw[] plot[id=x,samples=100] function{x**4-x**2+1};
 \draw[->] (-1.75,0.5)--(1.75,0.5);
 \draw[->] (0,0.2)--(0,1.75);
 \draw[dashed](-0.707,0.75)--(0.707,0.75);
@@ -294,10 +297,10 @@ f''''\left(\pm\frac{1}{\sqrt{2}}\right)&=4>0\Rightarrow x_0=\pm\frac{1}{\sqrt{2}
 \draw (0,0.75) node [anchor=north west]{\tiny$3/4$};
 \end{tikzpicture}
 \end{center}
-\item {Minimierungseigenschaft des arithmetischen Mittel}\\
-Seien $a_1,a_2,\dots,a_n\in\R$. Wir suchen $x_0\in\R$ so dass 
+\item {Minimierungseigenschaft des arithmetischen Mittels:}\\
+Seien $a_1,a_2,\dots,a_n\in\R$. Wir suchen $x_0\in\R$, so dass
 \[f(x_0)=\sum\limits_{i=1}^n\left( x_0-a_i\right)^2\]
-minimal ist. Sei 
+minimal ist. Sei
 \[f(x)=\sum\limits_{i=1}^n\left( x-a_i\right)^2=nx^2-2Ax+B\]
 wobei
 \[A=\sum\limits_{i=1}^n a_i\hspace{10mm}B=\sum\limits_{i=1}^n a_i^2\]
@@ -309,15 +312,15 @@ Nun ist $f''(x)=2n>0$, folglich ist $\frac{1}{n}\sum\limits_{i=1}^n a_i=x_0$ die
 \end{enumerate}
 
 \subsection*{Konvexe Funtionen}
-Eine einfache und geometrische Eigenschaften einer Funktion ist konvexität: für $C^2$ Funktionen kann konvexität mittels der zweiten Ableitung getestet werden
+Eine einfache und geometrische Eigenschaften einer Funktion ist Konvexität: Für $C^2$ Funktionen kann Konvexität mittels der zweiten Ableitung getestet werden
 
 \begin{definition}{5.41}
-$f:(a,b)\to\R$ ist Konvex falls $\forall x_0\leq x_1$ und $t\in\lbrack 0,1\rbrack$
+$f:(a,b)\to\R$ ist konvex, falls $\forall x_0\leq x_1$ und $t\in\lbrack 0,1\rbrack$
 \[f\left( tx_0+(1-t)x_1\right)\leq tf(x_0)+(1-t)f(x_1)\]
 \end{definition}
 \missingfigure{Page 249, rather complex...}
 
-Der Graph der Funktion $f$ liegt unterhalb jeder Verbindungsstrecke zweier seiner Punkte. 
+Der Graph der Funktion $f$ liegt unterhalb jeder Verbindungsstrecke zweier seiner Punkte.
 
 \subsubsection*{Satz 5.42}
 Sei $f:(a,b)\to\R$ der Klasse $C^2$, mit $f''(x_0)\geq 0$, $\forall x\in (a,b)$. Dann ist $f$ konvex.
@@ -336,28 +339,28 @@ Seien $x_0<x_1$ in $(a,b)$
 \draw [->] (2.center) to (3.center);
 \draw [, in=-120, out=-15] (4.center) to (5.center);
 
-\draw[dashed] (1,0) -- (1,0.91); 
+\draw[dashed] (1,0) -- (1,0.91);
 \draw[fill=black] (1,0.91) circle (0.035);
 
-\draw[dashed] (3.75,0) -- (3.75,2.6); 
+\draw[dashed] (3.75,0) -- (3.75,2.6);
 \draw[fill=black] (3.75,2.6) circle (0.035);
 
 \draw (3.75,0) node [anchor=north] {$x_1$};
 \draw (1,0) node [anchor=north] {$x_0$};
 \end{tikzpicture}
 \end{center}
-Wir betrachten 
+Wir betrachten
 \begin{align*}
 g:\lbrack 0,1\rbrack&\to\R\\
 t&\mapsto f\left( tx_0+(1-t)x_1\right) = tf(x_0)-(1-t)f(x_1)
 \end{align*}
-Dann gilt $g(0)=g(1)=0$ und 
+Dann gilt $g(0)=g(1)=0$ und
 \[g''(t)=f\left( tx_0+(1-t)x_1\right)(x_0-x_1)^2\geq 0\]
-(Wir möchten beweisen dass $g\leq 0$). Falls es $t$ gibt mit $g(t)>0$ dann ist $\max\limits_{t\in\lbrack 0,1\rbrack} g(t)>0$\\
+(Wir möchten beweisen, dass $g\leq 0$). Falls es $t$ gibt mit $g(t)>0$, dann ist $\max\limits_{t\in\lbrack 0,1\rbrack} g(t)>0$\\
 
-\noindent Sei $t_0$ so dass 
+\noindent Sei $t_0$ so dass
 \[g(t_0)=\max\limits_{t\in\lbrack 0,1\rbrack} g(t)>0\]
-Offensichtlich ist $g'(t_0)=0$. Nun betrachten wir die lineare Taylor entwicklung von $g$ im Punkte $t_0$, es gibt $\xi\in(t_0,1)$ mit 
+Offensichtlich ist $g'(t_0)=0$. Nun betrachten wir die lineare Taylor entwicklung von $g$ im Punkte $t_0$, es gibt $\xi\in(t_0,1)$ mit
 \[0=g(1)=g(t_0)+g'(t_0)(1-t_0)+\frac{{\overbrace {g''(\xi )}^{ > 0}\overbrace {(1 - {t_0})}^{ > 0}}}{{2!}}\geq g(t_0)>0\]
 Ein Wiederspruch. Also ist $g(t)<0$, $\forall t\in\lbrack 0,1\rbrack$ und $f$ ist konvex
 \end{beweis}
@@ -375,7 +378,7 @@ Sei $f:(a,b)\to\R$ konvex. Für alle $x_1,\dots,x_n\in(a,b)$ und $t_1,\dots,t_n\
 \[f\left( \sum\limits_{i=1}^n t_ix_i\right)\leq  \sum\limits_{i=1}^n t_if(x_i)\]
 
 \subsubsection*{Korollar 5.45}
-Seien $x_1,\dots, x_n\in (0,\infty)$, $\alpha_1,\dots,\alpha_n\in\lbrack 0,1\rbrack$ mit $\sum\alpha_i=1$. Dann gilt 
+Seien $x_1,\dots, x_n\in (0,\infty)$, $\alpha_1,\dots,\alpha_n\in\lbrack 0,1\rbrack$ mit $\sum\alpha_i=1$. Dann gilt
 \[\prod\limits_{i = 1}^n {x_i^{{\alpha _i}}}  \le \sum\limits_{i = 1}^n {{\alpha _i}{x_i}} \]
 Insbesondere $\left( \alpha_i=\frac{1}{n}, i\leq r\leq n\right)$
 \[{\left( {\prod\limits_{i = 1}^n {{x_i}} } \right)^{\frac{1}{n}}} \le \frac{1}{n}\sum\limits_{i = 1}^n {{x_i}} \]
@@ -395,14 +398,14 @@ Die Funktion $\exp$ ist konvex. Nun schreiben wir
 Induktion über $n\geq 1$.\\
 \begin{itemize}
 \item Für $n=1$ steht $f(1\cdot x_1)\leq 1\cdot f(x_1)$ \checkmark
-\item Für $n=2$ ist es die Definition der konvexität.
-\item Sei nun $n\geq 3$. Wir können annehmen dass $t_1\not=1$. (Ansosten sind alle $t_1=0$, $\forall i\geq 2$ und die Ungleichung ist trivial). Nun schreiben wir
+\item Für $n=2$ ist es die Definition der Konvexität.
+\item Sei nun $n\geq 3$. Wir können annehmen dass $t_1\not=1$. (Ansonsten sind alle $t_1=0$, $\forall i\geq 2$ und die Ungleichung ist trivial). Nun schreiben wir
 \[\sum\limits_{k = 1}^n {{t_k}{x_k}}  = {t_1}{x_1} + \left( {1 - {t_1}} \right) \cdot \left( {\frac{{\sum\limits_{k = 2}^n {{t_k}{x_k}} }}{{1 - {t_1}}}} \right)\]
-Aus konvexität folgt dann
+Aus Konvexität folgt dann
 \[f\left( \sum t_kx_k \right)\leq t_1f(x_1)+\left( 1-t_1\right)\cdot f\left( \sum\limits_{k=2}^n \frac{t_k x_k}{1-t_1}\right)\]
-Nun sind $x_2,x_3,\dots, x_n$, $(n-1)$ Punkte. Die Koeffizienten $\frac{t_2}{1-t_1},\frac{t_3}{1-t_1},\dots,\frac{t_n}{1-t_1}$ sind alle $\geq 0$, und deren Summe 
+Nun sind $x_2,x_3,\dots, x_n$, $(n-1)$ Punkte. Die Koeffizienten $\frac{t_2}{1-t_1},\frac{t_3}{1-t_1},\dots,\frac{t_n}{1-t_1}$ sind alle $\geq 0$, und deren Summe
 \[\sum\limits_{k = 2}^n {\frac{{{t_k}}}{{1 - {t_1}}}}  = \frac{1}{{1 - {t_1}}}\sum\limits_{k = 2}^n {{t_k}}  = \frac{{1 - {t_1}}}{{1 - {t_1}}} = 1\]
-Jetzt kann man Induktions-Annahme anwenden 
+Jetzt kann man die Induktionsannahme anwenden
 \begin{align*}
 f\left( \sum\limits_{k = 1}^n {{t_k}{x_k}} \right)&\leq t_1f(x_1)+\left( 1-t_1\right)\cdot f\left( \sum\limits_{k = 2}^n \frac{t_k}{1-t_1}x_k\right)\\
 &\leq t_1f(x_1)+\left( 1-t_1\right)\cdot\sum\limits_{k = 2}^n \left(\frac{t_k}{1-t_1}\right)\cdot f(x_k)\\
@@ -412,16 +415,16 @@ f\left( \sum\limits_{k = 1}^n {{t_k}{x_k}} \right)&\leq t_1f(x_1)+\left( 1-t_1\r
 \end{beweis}
 
 \newpage
-\subsubsection*{Appendix A: Vergleich von arithmetischen und geometrischen mittel}
+\subsubsection*{Appendix A: Vergleich von arithmetischen und geometrischen Mittel}
 Annahme Geometrie \todo{Mean ?? page 253.1}\\
 $n=2:$
 \begin{align*}
 \frac{x_1+x_2}{2}&\geq\sqrt{x_1\cdot x_2}\\
 \Rightarrow 2(x_1+x_2)&\geq 4\sqrt{x_1\cdot x_2}
 \end{align*}
-Ein Rechteck mit dem Seiten $x_1$ und $x_2$ hat den Gesamtumfang $2x_1+2x_2$. Ein quadrat mit dem gleichen Flächeninhalt hat den Umfang $4\sqrt{x_1\cdot x_2}$\\
+Ein Rechteck mit dem Seiten $x_1$ und $x_2$ hat den Gesamtumfang $2x_1+2x_2$. Ein Quadrat mit dem gleichen Flächeninhalt hat den Umfang $4\sqrt{x_1\cdot x_2}$\\
 
-AGM sagt dass unter allen Rechtecken mit Gleichen inhalt $A=x_1\cdot x_2$, das Quadrat die kleinste Umfang hat
+AGM sagt, dass unter allen Rechtecken mit gleichem Inhalt $A=x_1\cdot x_2$, das Quadrat den kleinsten Umfang hat.
 
 
 
