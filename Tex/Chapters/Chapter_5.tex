@@ -1288,7 +1288,37 @@ Eine einfache und geometrische Eigenschaften einer Funktion ist Konvexität: Fü
 $f:(a,b)\to\R$ ist konvex, falls $\forall x_0\leq x_1$ und $t\in\lbrack 0,1\rbrack$
 \[f\left( tx_0+(1-t)x_1\right)\leq tf(x_0)+(1-t)f(x_1)\]
 \end{definition}
-\missingfigure{Page 249, rather complex...}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+\draw[->](-0.5,0) -- (12.5,0);
+\draw[->] (0,-0.5) -- (0,6);
+\draw [ bend right=60, looseness=1.50] (2,4) to (10,6);
+\draw (10,0.2) -- (10,-0.2) node [anchor = north]{$b$}; 
+\draw (2,0.2) -- (2,-0.2) node [anchor = north]{$a$};
+
+\draw[fill=black] (4.45,2.2) circle (0.075);
+\draw[fill=black] (9,3.7) circle (0.075);
+\draw (4.45,2.2) -- (9,3.7);
+\draw[dashed] (4.45,2.2) -- (0,2.2) node [anchor = east]{$f(x_0)$}; 
+\draw[dashed] (4.45,2.2) -- (4.45,0) node [anchor = north] {$x_0$};
+\draw[dashed] (9,3.7) -- (0,3.7) node [anchor = east]{$f(x_1)$};
+\draw[dashed] (9,3.7) -- (9,0) node [anchor = north] {$x_1$};
+
+\draw[fill=black] (6.2,1.85) circle (0.075);
+\draw[dashed] (6.2,1.85) -- (6.2,0) ;
+\draw[->](6.2,0) -- (6.2,-1);
+\draw (6.2,-1) node [anchor = north]{$x_t=tx_0+(1-t)x_1$};
+\draw[fill=black] (6.2,2.775) circle (0.075);
+\draw[dashed] (6.2,2.775) -- (0,2.775) node [anchor = east]{$f(x_t)$};
+
+\draw[<-] (6.27,1.8) parabola bend (10,1.5)(10,1.5) node [anchor=west]{$f\left(tx_0+(1-t)x_1\right)$};
+\draw[<-] (6.2,2.9) -- (6.2,4.25) node [anchor=south]{$tf(x_0) + (1-t)f(x_0)$};
+
+
+
+\end{tikzpicture}
+\end{center}
 
 Der Graph der Funktion $f$ liegt unterhalb jeder Verbindungsstrecke zweier seiner Punkte.
 
