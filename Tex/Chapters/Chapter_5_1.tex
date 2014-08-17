@@ -13,7 +13,7 @@ bezeichnet. Es gilt: $\forall k,l\geq 0$, $f^{\left(k+l\right)} = \left( f^{(k)}
 \end{definition}
 
 \subsubsection*{Korollar 5.32}
-Unter den Voraussetzungen von Satz 5.29\todo{Add reference} ist $f(x)=\sum\limits_{n=0}^\infty a_nx^n$ in $C^\infty\left( -\rho, \rho\right)$ und die Ableitungen von $f$ erhält man durch gliedweises differenzieren.
+Unter den Voraussetzungen von Satz 5.29 \todo{Add reference}ist $f(x)=\sum\limits_{n=0}^\infty a_nx^n$ in $C^\infty\left( -\rho, \rho\right)$ und die Ableitungen von $f$ erhält man durch gliedweises differenzieren.
 \subsubsection*{Formel}
 \begin{align*}
 f(x)&=\sum\limits_{n=0}^\infty a_nx^n, x\in\left( -\rho,\rho\right)\\
@@ -29,7 +29,7 @@ Wir beginnen, als Motivation, mit Polynomen. Sei
 ein Polynom, grad $P\leq n$. Durch $x=(x-a)+a$ und Umordnen nach Potenzen von $(x-a)$ erhalten wir
 \[p(x)=b_0+b_1(x-a)+b_2(x-a)^2+\dots+b_n(x-a)^n\]
 
-\subsubsection*{Beispiel}\todo{Maybe add big brackets around example? page 233 middle}
+\subsubsection*{Beispiel}
 $p(x)=x^3+x+1$. Sei $a=1$:
 \begin{align*}
 p(x)&=\left( \left( x-1\right)+1\right)^3 +\left( x-1\right)+1+1\\
@@ -108,7 +108,16 @@ Die Taylorformel gibt nun an, wie mann diese Approximation noch verbessern kann.
 \[f(x) = \underbrace {{T_m}f(x;a)}_{{\text{Approximation}}} + \underbrace {{R_m}f(x;a)}_{{\text{fehler}}}\]
 Für diesen Fehler gilt:
 \[\lim\limits_{x\to a}\frac{R_mf(x;a)}{(x-a)^m}=0\tag{\textasteriskcentered}\]
-Das bedeutet, dass wenn $x$ nahe bei $a$ ist, $R_mf(x;a)$ klein ist im Vergleich zu der schon sehr kleinen Grösse $(x-a)^m$. Für den Restterm $R_mf(x;a)$, haben wir die Abschätzung \todo{not sure where the additional content goes, page 240 middle}
+Das bedeutet, dass wenn $x$ nahe bei $a$ ist, $R_mf(x;a)$ klein ist im Vergleich zu der schon sehr kleinen Grösse $(x-a)^m$. 
+
+\[f(x) = f(a)+\dots+\frac{f^{m-1}(a)(x-a)^{m-1}}{(m-1)!}+\frac{f^{m}(\xi)(x-a)^{m}}{(m)!}\]
+\begin{align*}
+f(x) + \frac{f^{m}(a)(x-a)^{m}}{(m)!} &= T_m f(x;a)+\frac{f^{m}(\xi)(x-a)^{m}}{(m)!}\\
+\Rightarrow f(x)-T_mf(x;a) &= \frac{f^m (\xi) -f^m(a)}{m!}(x-a)^m
+\end{align*}
+
+Für den Restterm $R_mf(x;a)$, haben wir somit die Abschätzung 
+
 \[R_mf(x;a) = f(x)-T_mf(x;a) = \left[ f^m(\xi) -f^m(a)\right]\frac{(x-a)^m}{m!}\]
 
 \[\abs{R_mf(x;a)}<\sup\limits_{a<\xi<x}\abs{f^{(m)}(\xi)-f^m(a)}\frac{(x-a)^m}{m!}\]
@@ -118,14 +127,6 @@ Falls $f\in C^{m+1}$, können wir denn Mittelwertsatz anwenden. Dann folgt:
 &\leq M\frac{(x-a)^{m+1}}{m!}\\
 \Rightarrow & \abs{\frac{R_mf(x-a)}{(x-a)^m}}\to 0, x\to a
 \end{align*}
-
-\todo[inline]{Begin additional content}
-\[f(x) = f(a)+\dots+\frac{f^{m-1}(a)(x-a)^{m-1}}{(m-1)!}+\frac{f^{m}(\xi)(x-a)^{m}}{(m)!}\]
-\begin{align*}
-f(x) + \frac{f^{m}(a)(x-a)^{m}}{(m)!} &= T_m f(x;a)+\frac{f^{m}(\xi)(x-a)^{m}}{(m)!}\\
-\Rightarrow f(x)-T_mf(x;a) &= \frac{f^m (\xi) -f^m(a)}{m!}(x-a)^m
-\end{align*}
-\todo[inline]{End additional content}
 
 \subsubsection*{Beispiel 5.35}
 \begin{center}
@@ -172,8 +173,9 @@ Sei $f:\lbrack a,b\rbrack\to\R$ stetig und auf $(a,b)$ differenzierbar. Sei $z_+
 
 \begin{definition}{5.38}
 \begin{enumerate}
-\item $x_0\in\Omega\subset\R$ heisst lokale Maximalstelle (bzw. Minimalstelle) von $f$, falls es $r>0$ gibt s.d. $\forall x\in B_r(x_0)$, $f(x)\leq f(x_0)$ (resp. $f(x)\geq f(x_0)$, $\forall x\in B_r(x_0)$). Die lokale Minimalstelle (bzw. Maximalstelle) ist strikt, falls $f(x)>f(x_0)$ (bzw. $f(x)<f(x_0)$)
-\item Lokale Extremalstelle: entweder lokale Minimalstelle oder Maximalstelle\todo[inline]{2 issues with this: Numbering is wrong (according to the handwritten notes) and there is an end indicator like the one for a beweis, page 243 top}
+\item $x_0\in\Omega\subset\R$ heisst lokale Maximalstelle (bzw. Minimalstelle) von $f$, falls es $r>0$ gibt s.d. $\forall x\in B_r(x_0)$, $f(x)\leq f(x_0)$ (resp. $f(x)\geq f(x_0)$, $\forall x\in B_r(x_0)$).
+\item Die lokale Minimalstelle (bzw. Maximalstelle) heisst \emph{strikt}, falls $f(x)>f(x_0)$ (bzw. $f(x)<f(x_0)$)
+\item Eine lokale Extremalstelle ist entweder lokale Minimalstelle oder Maximalstelle.
 \end{enumerate}
 \end{definition}
 Falls $f$ an einer lokalen Minimalstelle $x_0$ differenzierbar ist, so folgt wie im Beweis von Satz 5.12 \todo{Maybe add a reference?}
@@ -214,14 +216,13 @@ $\Rightarrow f^m(x_0)=0$ . Widerspruch zur $f^m(x_0)\not=0$. Analog für $x_0$ l
 dass für $x\in(x_0-\epsilon, x_0+\epsilon)$, $x\not=x_0$, $f(x)-f(x_0)>0\Rightarrow f(x)>f(x_0)$, $x_0$ ein lokales Minimum.
 \item[\hspace{4mm}(2.3)] $m$ ist gerade,  $f^m(x_0)<0$, analog.
 \end{enumerate}
-\todo[inline]{Not sure where the beweis on page 244 ends}
 \end{beweis}
 
 \subsubsection*{Graphen}
 \begin{enumerate}
 \item[\hspace{4mm}(2.1)] $m=3$
 \begin{center}
-\begin{tikzpicture}[scale=0.5]
+\begin{tikzpicture}[scale=0.6]
 \node [] (0) at (0, 4.5) {};
 \node [] (1) at (0, -1) {};
 \node [] (2) at (-1, 0) {};
@@ -247,29 +248,40 @@ dass für $x\in(x_0-\epsilon, x_0+\epsilon)$, $x\not=x_0$, $f(x)-f(x_0)>0\Righta
 \draw [, in=-70, out=120, looseness=1.75] (10.center) to (11.center);
 \end{tikzpicture}
 \end{center}
-\item[\hspace{4mm}(2.2)] $m=2$
-\begin{tabular}{c c c}
-$f^{(2)}(x_0)>0$&\begin{tikzpicture}[scale=0.5]
+
+\item[\hspace{4mm}(2.2)] {$m=2$ 
+\begin{multicols}{2}
+\begin{tikzpicture}[scale=0.75]
 \draw[->](-0.5,0) -- (6,0);
 \draw[->](0,-0.5) -- (0,4);
 \draw (1,3) parabola bend (3,1) (5,3);
 \draw[dashed] (3,1) -- (3,0) node [anchor=north] {$x_0$};
-\end{tikzpicture} & {
-$\begin{aligned}
-f(x)&=(x-x_0)^2+\\
+\draw (1,-0.75) node [anchor=north west]{$f''(x_0)>0$};
+\end{tikzpicture}
+\columnbreak
+\begin{align*}
+f(x)&=(x-x_0)^2+c\\
 f'(x)&=2(x-x_0)\\
-f''(x)&=2>0
-\end{aligned}$}
-\end{tabular}\todo{(Clear) problem with layout}
+f''(x)&=2>0 \\
+\end{align*}
+\end{multicols}}
+
 \item[\hspace{4mm}(2.3)] $m=2$
-\begin{tabular}{c c c}
-$f^{(2)}(x_0)<0$&\begin{tikzpicture}[scale=0.5]
+\begin{multicols}{2}
+\begin{tikzpicture}[scale=0.75]
 \draw[->](-0.5,0) -- (6,0);
 \draw[->](0,-0.5) -- (0,4);
 \draw (1,0) parabola bend (3,2) (5,0);
 \draw[dashed] (3,2) -- (3,0) node [anchor=north] {$x_0$};
-\end{tikzpicture} & {$f=1-(x-x_0)^2$}
-\end{tabular}\todo{(Clear) problem with layout}
+\draw (1,-0.75) node [anchor=north west]{$f''(x_0)<0$};
+\end{tikzpicture} 
+\columnbreak
+\begin{align*}
+f(x) &= 1-(x-x_0)^2 \\
+f'(x) &= 2(x_0 - x) \\
+f''(x) &= -2 < 0
+\end{align*}
+\end{multicols}
 \end{enumerate}
 Für $m$ ungerade $\geq 3$ spricht man von einem Wendepunkt.
 
@@ -416,7 +428,7 @@ f\left( \sum\limits_{k = 1}^n {{t_k}{x_k}} \right)&\leq t_1f(x_1)+\left( 1-t_1\r
 
 \newpage
 \subsubsection*{Appendix A: Vergleich von arithmetischen und geometrischen Mittel}
-Annahme Geometrie \todo{Mean ?? page 253.1}\\
+Arithmetic Geometric Mean (AGM) \\
 $n=2:$
 \begin{align*}
 \frac{x_1+x_2}{2}&\geq\sqrt{x_1\cdot x_2}\\
