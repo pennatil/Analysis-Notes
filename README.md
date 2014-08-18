@@ -93,7 +93,11 @@ This is only recommended to people with experience with LaTeX, since the files m
 		5. You should now have a "main.pdf" file in your "MAINs" Folder.
 		6. You can delete the other files, like the aux and log files. 
 	* Using the terminal: 
-	There are 2 different files located in the "Scripts" folder. <code>BuildAll.sh</code>: This builds 1 file with all the notes, while <code>BuildChapterByChapter.sh</code>: Builds a file for each chapter. In the following instructions, replace <code>scriptName.sh</code> with the one you choose:
+	There are 3 different files located in the "Scripts" folder. 
+		* <code>BuildAll.sh</code>: This builds all of the notes into one PDF
+		* <code>BuildChapterByChapter.sh</code>: Builds a PDF for each chapter
+		* <code>BuildReview.sh</code>: Builds the Review for the second semester  
+   In the following instructions, replace <code>scriptName.sh</code> with the one you choose:
 		* Mac and Linux:
 			1. <code>cd path/to/Scripts/folder/</code> (i.e. <code>cd /Users/Waldo/Desktop/Analysis-Notes-master/Scripts/</code>)
 			2. If it is the first time that you run this script, type <code>sudo chmod 755 scriptName.sh</code>, and hit enter.
