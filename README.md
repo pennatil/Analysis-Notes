@@ -22,6 +22,8 @@ Status
 |    7    |     Yes     |         Yes        |       Yes      | Waiting for corrections |   No  |
 |    8    |     Yes     |          Yes (*)         |       Yes      | Waiting for corrections |   No  |
 |    9    | Yes 		 |          Yes        |       Yes       |            Waiting for corrections            |   No  |
+|    Review 1    | No 	|	No        |       No       |            No            |   No  |
+|    Review 2    | Yes 	|	Yes        |       No       |            No            |   No  |
 
 (*) Might still be missing some content, which will be added once the corrections are made.
 
