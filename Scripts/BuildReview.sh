@@ -15,10 +15,10 @@ else
 	echo -e >&2 "\n\n ### ERROR ###\n\npdflatex (LaTex) is required, but it is not installed. Please read the README for instructions. Aborting.\n\n"; exit 1; 
 fi
 
-
+#Build the second semester review chapter
 for i in {1..3}
 do
-   pdflatex --synctex=-1 --interaction nonstopmode --shell-escape --file-line-error mainReview.tex
+   pdflatex --synctex=-1 --interaction nonstopmode --shell-escape --file-line-error mainReviewII.tex
 done
 rm -f *.out *.log *.aux *.synctex *.x.gnuplot *.x.table
 

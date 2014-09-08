@@ -1,0 +1,20 @@
+\documentclass[a4paper]{article}
+
+\input{../Packages.tex}
+
+
+
+\newcommand{\specialcell}[2][b]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\pagenumbering{gobble}
+\begin{document}
+\null\vfill
+\begin{center}
+\begin{tabular}{lcr}
+\includegraphics[scale=0.09]{warningImage.jpg} &\specialcell{\specialcell{\vspace{4mm}\huge{\color{red}{WARNING!}} \\ \huge{READ}}\\\vspace{2mm}\huge{CAREFULLY!}}& \includegraphics[scale=0.09]{warningImage.jpg}\\
+\end{tabular}
+\end{center}
+\large{The following document has not been checked for mistakes, and although every effort possible has been made to ensure that the information in this document is correct, it might still contain some mistakes. The following document is given ``as is'', without any warranty whatsoever. }
+\null\vfill
+\end{document}
